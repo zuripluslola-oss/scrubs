@@ -28,6 +28,11 @@ decisions; we are the professionals. Build pillar by pillar unless told otherwis
 - **Shape language:** large soft radii (20–28px cards), pill buttons, thin 1px borders at low opacity, soft layered shadows. No harsh lines.
 - **Motion:** slow, soothing. Parallax layers, fade-up on scroll, marquee ticker. Everything honors `prefers-reduced-motion`.
 - **North star (owner-approved Dribbble references):** modern SaaS polish — floating phone mockups showing the product in the hero, Esi represented as a glowing teal→coral gradient orb (like premium AI-assistant shots), glassmorphism cards, bold dark stat/CTA bands with big numbers, mint-teal healthcare palette. Build UI mockups in pure CSS/HTML — no stock screenshots.
+- **North star (owner-approved nurse.com reference):** bright, clean, friendly. Dark-teal + **mint-green** pairing (mint is `--mint-400/300/100`), the signature **mint highlighter swipe behind a key word** (`.hl` class — like nurse.com's "Join Nurse.com!"), rounded cards, uppercase letter-spaced eyebrows, photography/real-nurse warmth. Blend this brightness with the Dribbble polish above.
+
+## Wording rules (IMPORTANT)
+
+- **Never call the 8 sections "pillars" in any user-facing text, nav, heading, URL fragment, or label.** "Pillar" is an internal build term only. To nurses they are simply the parts of the community (Ask Esi, Education, Forum, ScrubTV, Jobs, Store, Nurse Spotlight, Contests). CSS class names like `.pillar-card` may stay (invisible), but visible copy and anchors must not say "pillar."
 
 ## Esi — the AI nurse (Pillar 1, present everywhere)
 

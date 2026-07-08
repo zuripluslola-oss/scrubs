@@ -11,6 +11,9 @@
   --coral-500: #f26b5e;
   --coral-300: #ffa598;
   --coral-100: #ffe3dd;
+  --mint-400: #5fd8b8;
+  --mint-300: #93e8ce;
+  --mint-100: #d6f6ec;
   --cream: #faf6f0;
   --sand: #f0e8dc;
   --ink: #16211f;
@@ -49,6 +52,14 @@ button { font: inherit; cursor: pointer; border: none; background: none; }
 .wrap { width: min(1120px, 100% - 2.5rem); margin-inline: auto; }
 
 h1, h2, h3 { font-family: var(--font-display); font-weight: 600; line-height: 1.12; letter-spacing: -0.01em; }
+
+/* nurse.com-style mint highlighter swipe behind a key word */
+.hl {
+  background: linear-gradient(180deg, transparent 58%, var(--mint-300) 58%);
+  padding: 0 0.08em;
+  border-radius: 2px;
+}
+.hl-solid { background: var(--mint-300); color: var(--teal-900); }
 
 .eyebrow {
   display: inline-block;
@@ -262,6 +273,7 @@ h1, h2, h3 { font-family: var(--font-display); font-weight: 600; line-height: 1.
   border-radius: 36px;
   overflow: hidden;
   background: var(--cream);
+  color: var(--ink); /* the mockup sits inside the white-text hero */
   display: flex;
   flex-direction: column;
 }
@@ -333,7 +345,8 @@ section { padding-block: clamp(4rem, 10vw, 7rem); }
   font-size: 1.3rem;
   margin-bottom: 1rem;
 }
-.pillar-card:nth-child(even) .icon { background: var(--coral-100); }
+.pillar-card:nth-child(3n+2) .icon { background: var(--mint-100); }
+.pillar-card:nth-child(3n+3) .icon { background: var(--coral-100); }
 .pillar-card h3 { font-size: 1.15rem; margin-bottom: 0.45rem; }
 .pillar-card p { font-size: 0.9rem; color: var(--ink-60); }
 .pillar-card .soon { display: inline-block; margin-top: 0.9rem; font-size: 0.72rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--coral-500); }
