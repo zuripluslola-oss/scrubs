@@ -27,6 +27,7 @@ decisions; we are the professionals. Build pillar by pillar unless told otherwis
 - **Type:** Display serif stack (`Georgia, 'Times New Roman', serif` with `font-variation`/weight styling) for headlines; system sans (`-apple-system, 'Segoe UI', Inter, sans-serif`) for UI/body. Fluid sizes via `clamp()`.
 - **Shape language:** large soft radii (20–28px cards), pill buttons, thin 1px borders at low opacity, soft layered shadows. No harsh lines.
 - **Motion:** slow, soothing. Parallax layers, fade-up on scroll, marquee ticker. Everything honors `prefers-reduced-motion`.
+- **North star (owner-approved Dribbble references):** modern SaaS polish — floating phone mockups showing the product in the hero, Esi represented as a glowing teal→coral gradient orb (like premium AI-assistant shots), glassmorphism cards, bold dark stat/CTA bands with big numbers, mint-teal healthcare palette. Build UI mockups in pure CSS/HTML — no stock screenshots.
 
 ## Esi — the AI nurse (Pillar 1, present everywhere)
 
