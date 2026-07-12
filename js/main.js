@@ -1,27 +1,43 @@
-/* Must Love Scrubs — shared page behavior
-   Parallax, fade-up reveals, mobile nav, and the Ask Esi widget. */
+/* Must Love Scrubs — shared behavior (V2)
+   Mega menu, Esi widget routing, parallax, reveals, count-up stats,
+   FAQ accordion, daily points (demo via localStorage until backend). */
 
 (function () {
   'use strict';
 
   var reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-  /* ---------- Mobile nav ---------- */
+  /* ---------- Mega menu ---------- */
 
-  var navToggle = document.querySelector('.nav-toggle');
-  var mobileNav = document.querySelector('.mobile-nav');
-  if (navToggle && mobileNav) {
-    navToggle.addEventListener('click', function () {
-      var open = mobileNav.classList.toggle('open');
-      navToggle.setAttribute('aria-expanded', open);
+  var menuBtn = document.querySelector('.menu-btn');
+  var mega = document.querySelector('.mega');
+  if (menuBtn && mega) {
+    menuBtn.addEventListener('click', function () {
+      var open = mega.classList.toggle('open');
+      menuBtn.setAttribute('aria-expanded', open);
     });
-    mobileNav.addEventListener('click', function (e) {
-      if (e.target.tagName === 'A') {
-        mobileNav.classList.remove('open');
-        navToggle.setAttribute('aria-expanded', 'false');
+    document.addEventListener('click', function (e) {
+      if (mega.classList.contains('open') && !mega.contains(e.target) && !menuBtn.contains(e.target)) {
+        mega.classList.remove('open');
+        menuBtn.setAttribute('aria-expanded', 'false');
       }
     });
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape') mega.classList.remove('open');
+    });
   }
+
+  /* ---------- Esi widget: two-destination routing ----------
+     Not subscribed -> esi.html (subscribe page)
+     Subscribed     -> profile.html (dashboard with Esi)        */
+
+  document.querySelectorAll('[data-esi-launch]').forEach(function (el) {
+    el.addEventListener('click', function (e) {
+      e.preventDefault();
+      var subscribed = localStorage.getItem('esiSubscribed') === 'true';
+      window.location.href = subscribed ? 'profile.html' : 'esi.html';
+    });
+  });
 
   /* ---------- Parallax layers ---------- */
 
@@ -31,9 +47,8 @@
     var update = function () {
       ticking = false;
       layers.forEach(function (layer) {
-        var speed = parseFloat(layer.getAttribute('data-parallax')) || 0.3;
+        var speed = parseFloat(layer.getAttribute('data-parallax')) || 0.25;
         var box = layer.parentElement.getBoundingClientRect();
-        // only move layers whose section is on screen
         if (box.bottom < 0 || box.top > window.innerHeight) return;
         layer.style.transform = 'translateY(' + (-box.top * speed) + 'px)';
       });
@@ -44,72 +59,97 @@
     update();
   }
 
-  /* ---------- Fade-up on scroll ---------- */
+  /* ---------- Fade-up reveals ---------- */
 
-  var observer = new IntersectionObserver(function (entries) {
+  var io = new IntersectionObserver(function (entries) {
     entries.forEach(function (entry) {
       if (entry.isIntersecting) {
         entry.target.classList.add('visible');
-        observer.unobserve(entry.target);
+        io.unobserve(entry.target);
       }
     });
   }, { threshold: 0.12 });
-  document.querySelectorAll('.fade-up').forEach(function (el) { observer.observe(el); });
+  document.querySelectorAll('.fade-up').forEach(function (el) { io.observe(el); });
 
-  /* ---------- Ask Esi widget ---------- */
+  /* ---------- Count-up stats ---------- */
 
-  var fab = document.querySelector('.esi-fab');
-  var panel = document.querySelector('.esi-panel');
-  if (!fab || !panel) return;
-
-  var log = panel.querySelector('.esi-log');
-  var input = panel.querySelector('.esi-input input');
-  var send = panel.querySelector('.esi-send');
-  var close = panel.querySelector('.esi-close');
-
-  function openEsi() {
-    document.body.classList.add('esi-open');
-    setTimeout(function () { input.focus(); }, 400);
-  }
-  function closeEsi() { document.body.classList.remove('esi-open'); }
-
-  fab.addEventListener('click', openEsi);
-  close.addEventListener('click', closeEsi);
-  document.addEventListener('keydown', function (e) {
-    if (e.key === 'Escape') closeEsi();
-  });
-
-  function addMsg(text, who) {
-    var el = document.createElement('div');
-    el.className = 'msg ' + who;
-    el.textContent = text;
-    log.appendChild(el);
-    log.scrollTop = log.scrollHeight;
-  }
-
-  // Placeholder brain until the Claude-powered backend is wired up.
-  function esiReply(question) {
-    var q = question.toLowerCase();
-    if (/(911|emergency|chest pain|can't breathe|cant breathe|overdose|suicide)/.test(q)) {
-      return "If this is an emergency, please call 911 right now — that comes first, always. " +
-        "Once you're safe, I'm here for any follow-up questions. ❤";
+  function countUp(el) {
+    var target = parseInt(el.getAttribute('data-count'), 10);
+    if (reducedMotion) { el.textContent = target.toLocaleString(); return; }
+    var start = null, dur = 1600;
+    function step(ts) {
+      if (!start) start = ts;
+      var p = Math.min((ts - start) / dur, 1);
+      var eased = 1 - Math.pow(1 - p, 3);
+      el.textContent = Math.round(target * eased).toLocaleString();
+      if (p < 1) requestAnimationFrame(step);
     }
-    return "Hi, I'm Esi — your nurse in your pocket. I'm still in training (my full " +
-      "Claude-powered brain is coming soon), but soon I'll answer any medical question, " +
-      "help you study, find you jobs, and even shop for you. Remember: I never diagnose " +
-      "or prescribe, and emergencies always start with 911.";
+    requestAnimationFrame(step);
   }
+  var statIo = new IntersectionObserver(function (entries) {
+    entries.forEach(function (entry) {
+      if (entry.isIntersecting) {
+        countUp(entry.target);
+        statIo.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.6 });
+  document.querySelectorAll('[data-count]').forEach(function (el) { statIo.observe(el); });
 
-  function submit() {
-    var text = input.value.trim();
-    if (!text) return;
-    addMsg(text, 'user');
-    input.value = '';
-    setTimeout(function () { addMsg(esiReply(text), 'esi'); }, 600);
-  }
+  /* ---------- FAQ accordion ---------- */
 
-  send.addEventListener('click', submit);
-  input.addEventListener('keydown', function (e) {
-    if (e.key === 'Enter') submit();
+  document.querySelectorAll('.faq-item').forEach(function (item) {
+    var q = item.querySelector('.faq-q');
+    var a = item.querySelector('.faq-a');
+    if (!q || !a) return;
+    q.addEventListener('click', function () {
+      var isOpen = item.classList.contains('open');
+      document.querySelectorAll('.faq-item.open').forEach(function (other) {
+        other.classList.remove('open');
+        other.querySelector('.faq-a').style.maxHeight = null;
+      });
+      if (!isOpen) {
+        item.classList.add('open');
+        a.style.maxHeight = a.scrollHeight + 'px';
+      }
+    });
   });
+
+  /* ---------- Daily points (demo until backend) ---------- */
+
+  var pointsEls = document.querySelectorAll('[data-points-balance]');
+  function getPoints() { return parseInt(localStorage.getItem('mlsPoints') || '0', 10); }
+  function renderPoints() {
+    pointsEls.forEach(function (el) { el.textContent = getPoints().toLocaleString(); });
+  }
+  renderPoints();
+
+  var claimBtn = document.querySelector('[data-claim-daily]');
+  if (claimBtn) {
+    var today = new Date().toDateString();
+    var claimed = localStorage.getItem('mlsClaimedOn') === today;
+    function setClaimed() {
+      claimBtn.textContent = '✓ Claimed today — come back tomorrow';
+      claimBtn.disabled = true;
+      claimBtn.style.opacity = '0.65';
+    }
+    if (claimed) setClaimed();
+    claimBtn.addEventListener('click', function () {
+      if (localStorage.getItem('mlsClaimedOn') === new Date().toDateString()) return;
+      localStorage.setItem('mlsPoints', String(getPoints() + 5));
+      localStorage.setItem('mlsClaimedOn', new Date().toDateString());
+      renderPoints();
+      setClaimed();
+    });
+  }
+
+  /* demo subscribe toggle on the Esi page */
+  var subBtn = document.querySelector('[data-esi-subscribe]');
+  if (subBtn) {
+    subBtn.addEventListener('click', function (e) {
+      e.preventDefault();
+      localStorage.setItem('esiSubscribed', 'true');
+      window.location.href = 'profile.html';
+    });
+  }
 })();

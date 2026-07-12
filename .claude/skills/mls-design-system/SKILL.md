@@ -1,69 +1,85 @@
 ---
 name: mls-design-system
-description: The Must Love Scrubs design bible. Read before building or changing ANY page, component, or feature on this site. Covers brand, visual system, the 8 pillars, Esi rules, and monetization.
+description: The Must Love Scrubs design bible (Master Prompt V2 — CURRENT). Read before building or changing ANY page, component, or feature. Covers brand, palette, layout system, Esi rules, points economy, and page map.
 ---
 
-# Must Love Scrubs — Design Bible (Master Prompt V1)
+# Must Love Scrubs — Design Bible (Master Prompt V2, owner-locked 2026-07)
 
-Must Love Scrubs is a nurse lifestyle community platform. The owner makes final
-decisions; we are the professionals. Build pillar by pillar unless told otherwise.
+Must Love Scrubs is a **premium mobile-first nursing education ecosystem** —
+Netflix × Duolingo × MasterClass, unique to MLS. The owner makes final
+decisions. **NEVER build new features without owner confirmation** — outline
+and confirm first. V2 supersedes V1 (the 8-pillar lifestyle platform) wherever
+they conflict.
 
-## Non-negotiables (every page, every time)
+## Non-negotiables
 
-1. **Mobile first.** Design at 390px wide first, then scale up. Test every layout at phone width.
-2. **$10,000 quality.** Modern, clean, generous whitespace. Never cluttered.
-3. **Parallax scrolling** on hero/feature sections (transform-based, GPU-friendly, respects `prefers-reduced-motion`).
-4. **Esi ticker** — a scrolling text strip advertising Esi sits ABOVE the header on every page.
-5. **Ask Esi floating widget** — bottom right, always visible on every page. One tap wakes her. Screen splits when active so the user can browse while talking to Esi.
-6. **Legal disclaimer always present** wherever Esi appears: Esi never diagnoses or prescribes; emergencies → call 911 first.
+1. **Mobile first**, fully responsive. $10,000 quality, seamless, never cluttered.
+2. **TWO scrolling tickers above the header** — #1 advertises Esi, #2 advertises courses. Opposite scroll directions.
+3. **Sticky bottom navigation on mobile** — 5 tabs: Home · Courses · **Scrub TV (raised center, coral)** · Store · Profile. Custom stroke SVG icons only, never emoji.
+4. **Esi floating widget on every page.** NO free chat, no "Ask Esi." Tap → non-subscriber goes to the Esi subscribe page; subscriber goes to their Profile Dashboard (study/quiz/learn with Esi). Demo flag: `localStorage.esiSubscribed`.
+5. **Esi's only jobs: tutoring + site navigation help.** Never diagnoses/prescribes; drafted-legal disclaimer wherever she appears. "Always Esi" is scrapped.
+6. Parallax between sections, smooth micro-interactions, everything honors `prefers-reduced-motion`.
+7. **Never use the word "pillar" in user-facing text.**
 
-## Brand & visual system
+## Brand & visual system ("Ecosystem" palette — vibrant, alive, NOT nurse.com)
 
-- **Name:** Must Love Scrubs. Logo is wordmark: "Must Love **Scrubs**" with a heart/pulse accent.
-- **Palette** (defined as CSS custom properties in `css/styles.css` — always use the tokens, never hardcode):
-  - `--teal-900 #0B3B39`, `--teal-700 #10605B`, `--teal-500 #17877F` — scrub teal, the core brand color
-  - `--coral-500 #F26B5E`, `--coral-300 #FFA598` — warm coral accent (CTAs, highlights, Esi)
-  - `--cream #FAF6F0` page background, `--ink #16211F` text, `--sand #F0E8DC` alt-section background
-- **Type:** Display serif stack (`Georgia, 'Times New Roman', serif` with `font-variation`/weight styling) for headlines; system sans (`-apple-system, 'Segoe UI', Inter, sans-serif`) for UI/body. Fluid sizes via `clamp()`.
-- **Shape language:** large soft radii (20–28px cards), pill buttons, thin 1px borders at low opacity, soft layered shadows. No harsh lines.
-- **Motion:** slow, soothing. Parallax layers, fade-up on scroll, marquee ticker. Everything honors `prefers-reduced-motion`.
-- **North star (owner-approved Dribbble references):** modern SaaS polish — floating phone mockups showing the product in the hero, Esi represented as a glowing teal→coral gradient orb (like premium AI-assistant shots), glassmorphism cards, bold dark stat/CTA bands with big numbers, mint-teal healthcare palette. Build UI mockups in pure CSS/HTML — no stock screenshots.
-- **North star (owner-approved nurse.com reference):** bright, clean, friendly. Dark-teal + **mint-green** pairing (mint is `--mint-400/300/100`), the signature **mint highlighter swipe behind a key word** (`.hl` class — like nurse.com's "Join Nurse.com!"), rounded cards, uppercase letter-spaced eyebrows, photography/real-nurse warmth. Blend this brightness with the Dribbble polish above.
+- Tokens in `css/styles.css`; always use tokens: midnight indigo base
+  (`--indigo-950/900/700`), electric coral (`--coral-500/600`) for CTAs and
+  the heartbeat, vivid teal (`--teal-400/600`), warm gold (`--gold-400`) for
+  points/rewards/wins, bright near-white grounds.
+- **Logo (designed in code):** wordmark "Must Love Scrubs" + compact mark **M❤️‍🩹S**. Products in the store carry MLS and M❤️‍🩹S logos.
+- Type: heavy modern sans display (system stack, weight 800, tight tracking), regular sans body. Fluid `clamp()` sizes.
+- Rounded cards, pill buttons, layered soft shadows, gold highlight swipe for key words.
+- Hero photo direction: **instructor training nursing students at a hospital bed** (clinical-sim scene). Currently an SVG placeholder marked swap-ready; owner may supply photo.
 
-## Wording rules (IMPORTANT)
+## Homepage order (locked)
 
-- **Never call the 8 sections "pillars" in any user-facing text, nav, heading, URL fragment, or label.** "Pillar" is an internal build term only. To nurses they are simply the parts of the community (Ask Esi, Education, Forum, ScrubTV, Jobs, Store, Nurse Spotlight, Contests). CSS class names like `.pillar-card` may stay (invisible), but visible copy and anchors must not say "pillar."
+1. Ticker ×2 → 2. Header w/ nurse.com-style **mega menu** (panels with headline, description, subcategory links, CTA, promo tile) → 3. Hero (bedside training scene, Start Learning CTA, NCLEX flagship badge; NO Esi in hero) → 4. **Scrub TV** = 8 category squares w/ icons + featured videos rotated every 2 weeks (each video page = video + quiz + point-earning activities; videos double as TikTok/FB content) → 5. "Wherever you are on your nursing journey… **WELCOME HOME**" → 6. Featured courses (NCLEX flagship; library will grow to nurse.com scale) → 7. Why Choose MLS: ①other sites are generic cookie-cutter clones — MLS is innovative with proven retention systems ②Esi revolutionizes learning ③massive prep library → 8. Store preview (Shopify POD lifestyle: bags/mugs/tees/etc + points-redeemable digital downloads) → 9. Social proof (animated count-up: **1,400+ nurses trained** [real client stat] + 2 true stats; trust badges) → 10. Testimonials carousel (SAMPLE placeholders, owner replaces) → 11. FAQ collapsible accordion → 12. Join Our Community = create free account → 13. nurse.com-caliber mega footer (legal lives here) → sticky bottom nav + Esi widget.
 
-## Esi — the AI nurse (Pillar 1, present everywhere)
+## Scrub TV categories (locked, 8)
 
-Warm, soothing, practical, excellent communicator. Expert in nursing, medicine,
-insurance, administration, elder care. Politely declines non-medical questions.
-Powered by Claude. Tiers: **Ask Esi** (free, limited) → **Esi+** (unlimited
-subscription) → **Always Esi** (elder-care add-on). Planned connectors: Apple
-HealthKit, Google Fit, Google/Apple Calendar, Alexa, Google Home, Twilio SMS,
-Email. Esi can navigate the site, build meal plans, medication schedules,
-insurance explanations, health reports.
+ER/Trauma · Prenatal & L&D · Pediatrics · ICU/Critical Care · Med-Surg · Pharmacology · Mental Health · Geriatrics
 
-## The 8 pillars
+## Store (locked)
 
-1. **Ask Esi** — AI nurse widget + subscription tiers (above).
-2. **Education** — organized by nurse type first (CNA, LPN, LVN, RN, BSN, MSN, NP, CRNA, Student, Travel), then specialty. Courses = study material, flashcards, quizzes, mock exams in real test format, analytics, progress tracking. Free tier samples; paid tier full banks + adaptive testing. Esi is the personal tutor.
-3. **Forum** — Reddit/Twitter hybrid. 12 specialty categories (Critical Care/ICU, Emergency/ER, Pediatrics/NICU, Labor & Delivery, Oncology, Travel Nursing, Mental Health/Psych, Geriatrics/Elder Care, Surgery/OR, Primary Care/Family, Cardiology, New Grad/Students). Upvotes, likes, best/newest sort, verified-nurse badges, anonymous posting (profile required, name hidden).
-4. **ScrubTV** — TikTok meets YouTube. Shorts are the hero feature: full-screen vertical scroll, autoplay, For You algorithm. Likes, follows, comments, saves, shares, duets, stitches, live, trending sounds. Creator dashboard + ad-rev sharing (AdSense, Stripe payouts, minimum threshold). Cloudflare Stream hosting; free accounts 500MB.
-5. **Jobs** — Indeed-style, travel-nurse focused. Scraped listings (Indeed, ZipRecruiter, Travel Nurse Source, LinkedIn, Vivian) + paid employer posts. Searchable nurse profiles, Esi job alerts, filters (specialty, location, salary, shift, experience, travel/perm, contract length), saved jobs, application tracking, sponsored listings.
-6. **Store** — Walmart for nurses. Spocket dropship, Printful merch, Amazon Associates + ShareASale affiliate. 12 categories with subcategories. Search always visible; filters (price, brand, rating, new, sale). Esi is the personal shopper. Curated quality only.
-7. **Nurse Spotlight** — editorial storytelling, owner-submitted. Hero image/video, full story, name, location, specialty, quote. Strategically diverse. Magazine quality, cinematic, scroll-driven — NYT feature meets Instagram. Contest winners auto-featured.
-8. **Contests** — community voting. Types: photo, video, story, meme, best scrub fit, nursing hack. Nurse of the Month; Annual Nurse Awards (Most Inspiring, Rising Star, Travel Nurse of the Year, Unsung Hero, Educator of the Year). Countdown timers, leaderboards, past winners, sponsor branding. Winners get verified badge + Spotlight feature.
+Shopify POD (owner connects Shopify later; storefront built now): mugs, tees,
+totes, tumblers, hoodies, stickers, bags — MLS / M❤️‍🩹S branded, small curated
+lifestyle store. Digital downloads (Etsy-style categories: study guides & cheat
+sheets, report/brain sheets, badge cards, planners, drug cards, care plan
+templates, resume kits, wall art) — redeemable with points.
 
-## Monetization
+## Points economy (locked)
 
-Store revenue · ads · employer job-posting fees · course fees · ScrubTV ad-rev
-share · Esi+ subscription · Always Esi add-on.
+- **Claim Daily Points on Profile Dashboard: 5 pts/day for logging in.**
+- Earn: quizzes, puzzles, video activities, contests.
+- Redeem: digital downloads in the store.
+- Everything syncs to the Profile Dashboard (progress, quiz history, certificates, points, saved content, recommendations). Demo mode uses localStorage until real backend (Phase 2).
 
-## Current tech setup
+## Menu structure (locked)
 
-Static-first site: `index.html` + `css/styles.css` + `js/main.js`. Shared
-pieces (ticker, header, Esi widget) live on every page — keep their markup and
-behavior identical across pages. When the platform needs auth/db/video we will
-migrate to a full-stack framework; until then, do not add build tooling without
-asking the owner.
+Main: Home · Courses · Scrub TV · Esi · Store · Spotlight · Job Search · Blog
+— separator — Secondary: About · Careers · Help Center · Contact · Support · Settings.
+Notifications = header bell dropdown. Search = header icon. Privacy/Terms → footer only.
+FAQ → homepage accordion. **No Post-a-Job page. No Forum.** Every menu item links to a real page.
+
+## Pages
+
+index, courses, scrubtv, esi (subscribe page w/ illustrated Esi preview),
+store, spotlight (beautiful editorial stories), jobs ("small Indeed just for
+nurses" — search UI + public nursing job resources), blog, about, careers,
+help, contact, support, settings, profile (dashboard), join (create free
+account), search, notifications, privacy (DRAFT), terms (DRAFT).
+
+## Pricing (market-anchored placeholders, owner edits later)
+
+NCLEX Complete $129 (or $39/mo) · specialty courses $49–$79 · **Esi tutor add-on +$19/mo** (requires a course). Free account: free content tier, points, dashboard.
+
+## Contact (samples until owner replaces)
+
+hello@mustlovescrubs.com · facebook.com/mustlovescrubs · tiktok.com/@mustlovescrubs
+
+## Build phases
+
+**Phase 1 (current):** design system, homepage, all pages linked, menus, tickers, widget, footer, legal drafts.
+**Phase 2:** real accounts/backend, points engine, quiz engine.
+**Phase 3:** NCLEX flagship course content built into the engine (curriculum from owner's research: teach how to think, not memorize).

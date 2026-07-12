@@ -3,299 +3,451 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Must Love Scrubs — The Home Every Nurse Deserves</title>
-  <meta name="description" content="Must Love Scrubs is the nurse lifestyle community: Ask Esi your AI nurse, education, forum, ScrubTV, jobs, store, spotlight stories, and contests.">
+  <title>Must Love Scrubs — The Ecosystem of Nursing</title>
+  <meta name="description" content="Premium nursing education: NCLEX prep, Scrub TV learning videos, Esi the AI tutor, and a curated nurse lifestyle store.">
   <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
 
-  <!-- Esi ticker — above the header, every page -->
-  <div class="ticker" aria-hidden="true">
-    <div class="ticker-track">
-      <span>✦ Meet <em>Esi</em> — your AI nurse, in your pocket 24/7</span>
-      <span>✦ Ask Esi anything medical — free to start</span>
-      <span>✦ <em>Esi+</em> unlimited: your personal tutor, job scout &amp; shopper</span>
-      <span>✦ <em>Always Esi</em> — gentle daily check-ins for the ones you love</span>
-      <span>✦ Meet <em>Esi</em> — your AI nurse, in your pocket 24/7</span>
-      <span>✦ Ask Esi anything medical — free to start</span>
-      <span>✦ <em>Esi+</em> unlimited: your personal tutor, job scout &amp; shopper</span>
-      <span>✦ <em>Always Esi</em> — gentle daily check-ins for the ones you love</span>
-    </div>
+  <div class="tickers" aria-hidden="true">
+    <div class="ticker ticker-esi"><div class="ticker-track"><span>&#10022; Meet <em>Esi</em> — the AI tutor that revolutionizes how nurses learn</span><span>&#10022; Esi guides you through the site &amp; tutors you 1-on-1</span><span>&#10022; Add <em>Esi</em> to any prep course — study smarter, remember longer</span><span>&#10022; Meet <em>Esi</em> — the AI tutor that revolutionizes how nurses learn</span><span>&#10022; Esi guides you through the site &amp; tutors you 1-on-1</span><span>&#10022; Add <em>Esi</em> to any prep course — study smarter, remember longer</span></div></div>
+    <div class="ticker ticker-courses"><div class="ticker-track"><span>&#9733; <em>NCLEX Complete</em> — our flagship prep course is live</span><span>&#9733; New Scrub TV drops every 2 weeks — watch, quiz, earn points</span><span>&#9733; Pharmacology &middot; Med-Surg &middot; Peds &middot; Mental Health &amp; more</span><span>&#9733; <em>NCLEX Complete</em> — our flagship prep course is live</span><span>&#9733; New Scrub TV drops every 2 weeks — watch, quiz, earn points</span><span>&#9733; Pharmacology &middot; Med-Surg &middot; Peds &middot; Mental Health &amp; more</span></div></div>
   </div>
 
   <header class="site-header">
     <div class="wrap">
-      <a class="logo" href="index.html">Must Love Scrubs<span class="heart"> ♥</span></a>
+      <a class="logo" href="index.html" aria-label="Must Love Scrubs home">
+        <span class="mark">M<b>&#10084;</b>S</span>
+        <span class="word">Must <i>Love</i> Scrubs</span>
+      </a>
       <nav class="main-nav" aria-label="Main">
-        <a href="#esi">Ask Esi</a>
-        <a href="#explore">Learn</a>
-        <a href="#explore">Forum</a>
-        <a href="#explore">ScrubTV</a>
-        <a href="#explore">Jobs</a>
-        <a href="#explore">Store</a>
-        <a href="#spotlight">Spotlight</a>
-        <a href="#explore">Contests</a>
+        <a href="index.html" aria-current="page">Home</a>
+        <a href="courses.html">Courses</a>
+        <a href="scrubtv.html">Scrub TV</a>
+        <a href="esi.html">Esi</a>
+        <a href="store.html">Store</a>
       </nav>
-      <button class="nav-toggle" aria-expanded="false" aria-label="Menu">
-        <span></span><span></span><span></span>
-      </button>
+      <div class="header-actions">
+        <a class="icon-btn" href="search.html" aria-label="Search"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg></a>
+        <a class="icon-btn" href="notifications.html" aria-label="Notifications"><span class="badge"></span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9a6 6 0 0 1 12 0c0 5 2 6 2 6H4s2-1 2-6"/><path d="M10 20a2 2 0 0 0 4 0"/></svg></a>
+        <a class="icon-btn" href="profile.html" aria-label="Profile"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 21c1.5-3.5 4.5-5 8-5s6.5 1.5 8 5"/></svg></a>
+        <button class="menu-btn" aria-expanded="false" aria-label="Menu"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h10"/></svg> Menu</button>
+      </div>
     </div>
   </header>
-  <nav class="mobile-nav" aria-label="Mobile">
-    <a href="#esi">Ask Esi</a>
-    <a href="#explore">Education</a>
-    <a href="#explore">Forum</a>
-    <a href="#explore">ScrubTV</a>
-    <a href="#explore">Jobs</a>
-    <a href="#explore">Store</a>
-    <a href="#spotlight">Nurse Spotlight</a>
-    <a href="#explore">Contests</a>
+
+  <nav class="mega" aria-label="Site menu">
+    <div class="wrap mega-grid">
+      <div>
+        <h4>Learn</h4>
+        <ul class="mega-links">
+          <li><a href="courses.html">Courses <small>NCLEX prep, specialties &amp; more</small></a></li>
+          <li><a href="scrubtv.html">Scrub TV <small>Videos + quizzes, new every 2 weeks</small></a></li>
+          <li><a href="esi.html">Esi <small>Your AI tutor &amp; site guide</small></a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Community</h4>
+        <ul class="mega-links">
+          <li><a href="spotlight.html">Nurse Spotlight <small>Real stories, beautifully told</small></a></li>
+          <li><a href="jobs.html">Job Search <small>A small Indeed, just for nurses</small></a></li>
+          <li><a href="blog.html">Blog <small>News, tips &amp; nurse life</small></a></li>
+          <li><a href="store.html">Store <small>Curated nurse lifestyle goods</small></a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>More</h4>
+        <ul class="mega-links slim">
+          <li><a href="about.html">About</a></li>
+          <li><a href="careers.html">Careers</a></li>
+          <li><a href="help.html">Help Center</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="support.html">Support</a></li>
+          <li><a href="settings.html">Settings</a></li>
+        </ul>
+      </div>
+      <a class="mega-promo" href="courses.html">
+        <span class="art">NCLEX</span>
+        <b>NCLEX Complete</b>
+        <p>The flagship prep course — built on proven retention science.</p>
+        <span class="btn btn-coral" style="padding:0.6rem 1.3rem; font-size:0.85rem;">Start Learning</span>
+      </a>
+    </div>
   </nav>
 
-  <div class="page">
-
-    <!-- Hero -->
+  <main>
     <section class="hero">
-      <div class="hero-layer" data-parallax="0.25" aria-hidden="true">
-        <div class="blob blob-1"></div>
-        <div class="blob blob-2"></div>
+      <div class="hero-layer" data-parallax="0.22" aria-hidden="true">
+        <div class="glow glow-coral"></div><div class="glow glow-teal"></div><div class="glow glow-gold"></div>
       </div>
-      <div class="hero-layer" data-parallax="0.45" aria-hidden="true">
-        <div class="blob blob-3"></div>
-        <span class="hero-plus" style="top:18%; left:8%;  font-size:3rem;">+</span>
-        <span class="hero-plus" style="top:62%; left:78%; font-size:5rem;">+</span>
-        <span class="hero-plus" style="top:78%; left:14%; font-size:2.2rem;">+</span>
-        <span class="hero-plus" style="top:26%; left:64%; font-size:2.6rem;">+</span>
-      </div>
-      <div class="wrap hero-content">
-        <div class="hero-grid">
-          <div>
-            <span class="eyebrow">The Nurse Lifestyle Community</span>
-            <h1>The home every nurse <span class="hl">deserves</span>.</h1>
-            <p class="lede">Learn, laugh, land the job, shop the fit, and share your story — with Esi, your AI nurse, by your side on every page.</p>
-            <div class="hero-cta">
-              <a class="btn btn-coral" href="#esi">Meet Esi</a>
-              <a class="btn btn-ghost" href="#explore">Explore the community</a>
-            </div>
-            <div class="hero-stats">
-              <div class="stat"><b>8</b><span>Ways to belong</span></div>
-              <div class="stat"><b>24/7</b><span>Esi by your side</span></div>
-              <div class="stat"><b>12</b><span>Specialty communities</span></div>
-            </div>
+      <div class="wrap hero-grid">
+        <div>
+          <span class="flag"><svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 3 2.7 5.7 6.3.8-4.6 4.3 1.2 6.2L12 17l-5.6 3 1.2-6.2L3 9.5l6.3-.8z"/></svg> #1 IN NCLEX PREP CONFIDENCE</span>
+          <h1>Train for the nurse you're <span class="hl on-dark">becoming</span>.</h1>
+          <p class="lede">Prep courses built on proven retention science, videos that teach like a great preceptor, and Esi — the AI tutor that makes it stick. This is the ecosystem of nursing.</p>
+          <div class="hero-cta">
+            <a class="btn btn-coral" href="courses.html">Start Learning</a>
+            <a class="btn btn-ghost" href="scrubtv.html">Watch Scrub TV</a>
           </div>
-          <div class="phone" aria-hidden="true">
-            <div class="phone-screen">
-              <div class="phone-head">
-                <span class="orb orb-sm"></span>
-                <div class="who"><b>Esi</b><span>● online for you</span></div>
-              </div>
-              <div class="phone-chat">
-                <div class="pmsg esi">Morning, Amara ☀️ Pharm review at 7 — ready for 10 quick NCLEX questions?</div>
-                <div class="pmsg user">yes!! then find me ICU contracts near Austin 🙏</div>
-                <div class="pmsg esi">Done — 3 new ICU travel contracts, top pay $2,840/wk. Pinned to your saved jobs 💼</div>
-                <div class="pmsg user">you're the best, Esi</div>
-                <div class="pmsg esi typing"><span></span><span></span><span></span></div>
-              </div>
-              <div class="phone-input">Ask Esi anything…</div>
-            </div>
-          </div>
+          <p class="hero-note">Free account &middot; daily points &middot; no card required</p>
+        </div>
+        <div class="hero-visual fade-up">
+          <div class="scene"><svg viewBox="0 0 560 420" role="img" aria-label="Instructor training nursing students at a hospital bed">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#2c2f63"/><stop offset="1" stop-color="#191b3a"/>
+    </linearGradient>
+    <linearGradient id="floor" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#232653"/><stop offset="1" stop-color="#14152e"/>
+    </linearGradient>
+  </defs>
+  <rect width="560" height="420" fill="url(#sky)"/>
+  <rect y="300" width="560" height="120" fill="url(#floor)"/>
+  <rect x="40" y="60" width="120" height="150" rx="10" fill="#1f2247"/>
+  <path d="M60 100h80M60 125h80M60 150h55" stroke="#14d3c0" stroke-width="6" stroke-linecap="round" opacity="0.8"/>
+  <path d="M60 175 h20 l8-16 10 30 9-14h33" stroke="#ff4f5e" stroke-width="5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect x="120" y="250" width="330" height="70" rx="16" fill="#3a3e78"/>
+  <rect x="130" y="230" width="310" height="34" rx="14" fill="#f0f1fa"/>
+  <ellipse cx="175" cy="247" rx="22" ry="14" fill="#ffffff"/>
+  <path d="M205 252 q90 -18 220 -6 l0 18 -220 0z" fill="#14d3c0" opacity="0.92"/>
+  <rect x="135" y="318" width="14" height="70" fill="#2a2d5c"/>
+  <rect x="425" y="318" width="14" height="70" fill="#2a2d5c"/>
+  <circle cx="480" cy="120" r="26" fill="#f4c39a"/>
+  <path d="M462 112a26 26 0 0 1 36-4l4-10a32 32 0 0 0-46 6z" fill="#191b3a"/>
+  <path d="M450 210 q30 -66 60 0 l6 90 h-72z" fill="#0b9f92"/>
+  <path d="M452 170 q-24 34 -40 44l10 14q26 -14 42 -40z" fill="#0b9f92"/>
+  <path d="M420 216 l-16 12 8 10 16 -10z" fill="#f4c39a"/>
+  <circle cx="340" cy="150" r="22" fill="#e8b088"/>
+  <path d="M322 144a22 22 0 0 1 34-6l6-8a30 30 0 0 0-46 8z" fill="#3b2a20"/>
+  <path d="M315 230 q25 -54 50 0 l5 74 h-60z" fill="#ff4f5e"/>
+  <path d="M318 196 q-20 26 -34 34l8 12q22 -10 36 -32z" fill="#ff4f5e"/>
+  <circle cx="255" cy="160" r="21" fill="#8a5a3b"/>
+  <path d="M238 154a21 21 0 0 1 33-6l5-8a29 29 0 0 0-44 8z" fill="#161616"/>
+  <path d="M232 236 q23 -50 46 0 l5 68 h-56z" fill="#14d3c0"/>
+  <path d="M234 202 q-16 22 -28 30l7 11q20 -10 32 -28z" fill="#14d3c0"/>
+  <circle cx="500" cy="60" r="3" fill="#ffc94d"/><circle cx="520" cy="80" r="2" fill="#ffc94d" opacity="0.7"/>
+  <circle cx="60" cy="40" r="2.5" fill="#14d3c0" opacity="0.8"/><circle cx="90" cy="28" r="2" fill="#ff4f5e" opacity="0.8"/>
+</svg></div>
+          <div class="float-chip tl"><span class="ico" style="background:var(--teal-100);color:var(--teal-600);"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="m4 12.5 5 5L20 6.5"/></svg></span> Clinical-judgment focused</div>
+          <div class="float-chip br"><span class="ico" style="background:var(--gold-100);color:var(--gold-600);"><svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 3 2.7 5.7 6.3.8-4.6 4.3 1.2 6.2L12 17l-5.6 3 1.2-6.2L3 9.5l6.3-.8z"/></svg></span> Earn points as you learn</div>
+          <span class="scene-tag">Swap-ready: bedside training photo goes here</span>
         </div>
       </div>
-      <span class="scroll-hint">Scroll</span>
     </section>
 
-    <!-- Pillars -->
-    <section class="pillars" id="explore">
+    <section class="scrubtv" id="scrubtv">
       <div class="wrap">
         <div class="section-head fade-up">
-          <span class="eyebrow">Everything, in one place</span>
-          <h2>Everything a nurse needs, <span class="hl">under one roof</span>.</h2>
-          <p>Made for every nurse — CNA to CRNA, student to travel veteran.</p>
-        </div>
-        <div class="pillar-grid">
-          <article class="pillar-card fade-up">
-            <div class="icon">💬</div>
-            <h3>Ask Esi</h3>
-            <p>Your AI nurse. Any medical question, answered warmly — study help, insurance decoded, elder-care check-ins.</p>
-            <span class="soon">Preview live</span>
-          </article>
-          <article class="pillar-card fade-up">
-            <div class="icon">📚</div>
-            <h3>Education</h3>
-            <p>Question banks, flashcards, and mock exams by nurse type and specialty — with Esi as your personal tutor.</p>
-            <span class="soon">Coming soon</span>
-          </article>
-          <article class="pillar-card fade-up">
-            <div class="icon">🗣️</div>
-            <h3>Forum</h3>
-            <p>Twelve specialty communities. Ask anything, vent everything — verified badges, anonymous when you need it.</p>
-            <span class="soon">Coming soon</span>
-          </article>
-          <article class="pillar-card fade-up">
-            <div class="icon">🎬</div>
-            <h3>ScrubTV</h3>
-            <p>Shorts made by nurses, for nurses. Full-screen scroll, For You feed, and real ad-revenue sharing for creators.</p>
-            <span class="soon">Coming soon</span>
-          </article>
-          <article class="pillar-card fade-up">
-            <div class="icon">💼</div>
-            <h3>Jobs</h3>
-            <p>Travel-first job board with smart filters — and Esi pings you the moment your perfect contract posts.</p>
-            <span class="soon">Coming soon</span>
-          </article>
-          <article class="pillar-card fade-up">
-            <div class="icon">🛍️</div>
-            <h3>Store</h3>
-            <p>Scrubs, shoes, gear, gifts — curated quality only. Esi is your personal shopper, cart to checkout.</p>
-            <span class="soon">Coming soon</span>
-          </article>
-          <article class="pillar-card fade-up">
-            <div class="icon">✨</div>
-            <h3>Nurse Spotlight</h3>
-            <p>Cinematic, magazine-quality stories of real nurses from every specialty, background, and corner of the world.</p>
-            <span class="soon">Coming soon</span>
-          </article>
-          <article class="pillar-card fade-up">
-            <div class="icon">🏆</div>
-            <h3>Contests</h3>
-            <p>Best scrub fit, nursing hacks, Nurse of the Month, and the Annual Nurse Awards — nominated and voted by you.</p>
-            <span class="soon">Coming soon</span>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- Esi feature band -->
-    <section class="esi-band" id="esi">
-      <div class="hero-layer" data-parallax="0.2" aria-hidden="true">
-        <div class="blob blob-2" style="top:-20%; left:60%;"></div>
-        <div class="blob blob-3" style="top:60%; left:-5%;"></div>
-      </div>
-      <div class="wrap">
-        <div class="fade-up">
-          <span class="orb orb-lg" aria-hidden="true"></span>
-          <span class="eyebrow" style="color: var(--mint-300);">Meet Esi</span>
-          <h2>Esi. A nurse in your pocket.</h2>
-          <p class="lede">Warm, brilliant, and always awake. Esi answers any medical question — nursing, medicine, insurance, elder care — and she's woven into every corner of the site.</p>
-          <ul>
-            <li>Splits the screen so you can browse while you chat</li>
-            <li>Tutors you through weak exam areas, question by question</li>
-            <li>Builds meal plans, medication schedules &amp; health reports</li>
-            <li>Connects to Apple Health, Google Fit, calendars, Alexa &amp; SMS</li>
-          </ul>
-        </div>
-        <div class="tier-stack fade-up">
-          <div class="tier">
-            <h3>Ask Esi <span class="price">Free</span></h3>
-            <p>Tap the coral button, ask away. Limited daily questions, unlimited warmth.</p>
-          </div>
-          <div class="tier featured">
-            <h3>Esi+ <span class="price">Subscription</span></h3>
-            <p>Unlimited Esi. Personal tutor, job scout, personal shopper, health reports — the full companion.</p>
-          </div>
-          <div class="tier">
-            <h3>Always Esi <span class="price">Add-on</span></h3>
-            <p>Gentle daily check-ins and medication reminders for the elders you love, with family updates.</p>
-          </div>
-        </div>
-      </div>
-      <div class="wrap">
-        <p class="esi-disclaimer">Esi provides general health information and never diagnoses, prescribes, or replaces your clinician. If you're experiencing an emergency, call 911 first — always.</p>
-      </div>
-    </section>
-
-    <!-- Spotlight teaser -->
-    <section class="spotlight" id="spotlight">
-      <div class="wrap">
-        <div class="section-head fade-up">
-          <span class="eyebrow">Nurse Spotlight</span>
-          <h2>Real nurses. Real stories.</h2>
-          <p>Magazine-quality features on the people who hold healthcare together — your story could be next.</p>
-        </div>
-        <div class="spotlight-card fade-up">
-          <p class="quote">"Twelve-hour shifts taught me everything about people. This community reminds me why I stay."</p>
-          <div class="byline">
-            <div class="avatar">A</div>
+          <div class="row">
             <div>
-              <b>Your story here</b>
-              <span>ICU · Travel · Founding member</span>
+              <span class="eyebrow">Scrub TV</span>
+              <h2>Watch. Quiz. <span class="hl">Remember.</span></h2>
+              <p>Eight specialty channels. Fresh videos every two weeks — each with quizzes and activities that earn you points.</p>
             </div>
+            <a class="btn btn-line" href="scrubtv.html">All channels</a>
           </div>
+        </div>
+        <div class="cat-grid"><a class="cat fade-up" href="scrubtv.html"><span class="ico c1"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2 5 13h5l-1 9 8-11h-5z"/></svg></span><b>ER / Trauma</b><span>Watch &middot; Quiz &middot; Earn</span></a><a class="cat fade-up" href="scrubtv.html"><span class="ico c2"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20s-7-4.3-7-9.5A4.2 4.2 0 0 1 12 7a4.2 4.2 0 0 1 7 3.5C19 15.7 12 20 12 20z"/><circle cx="12" cy="12" r="2"/></svg></span><b>Prenatal &amp; L&amp;D</b><span>Watch &middot; Quiz &middot; Earn</span></a><a class="cat fade-up" href="scrubtv.html"><span class="ico c3"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="9" r="5.5"/><circle cx="7.5" cy="4.5" r="1.8"/><circle cx="16.5" cy="4.5" r="1.8"/><path d="M9.5 15.5 8 21m6.5-5.5L16 21"/><circle cx="10" cy="8.4" r=".6" fill="currentColor"/><circle cx="14" cy="8.4" r=".6" fill="currentColor"/></svg></span><b>Pediatrics</b><span>Watch &middot; Quiz &middot; Earn</span></a><a class="cat fade-up" href="scrubtv.html"><span class="ico c4"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="13" rx="3"/><path d="M6 10.5h3l1.5-3 2.5 5 1.5-2h3.5"/><path d="M9 21h6"/></svg></span><b>ICU / Critical Care</b><span>Watch &middot; Quiz &middot; Earn</span></a><a class="cat fade-up" href="scrubtv.html"><span class="ico c2"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="4" width="14" height="17" rx="3"/><path d="M9 4.5V3h6v1.5"/><path d="M12 9v6M9 12h6"/></svg></span><b>Med-Surg</b><span>Watch &middot; Quiz &middot; Earn</span></a><a class="cat fade-up" href="scrubtv.html"><span class="ico c1"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="3.5" y="9" width="17" height="7" rx="3.5" transform="rotate(-35 12 12.5)"/><path d="m9 8.5 6 7"/></svg></span><b>Pharmacology</b><span>Watch &middot; Quiz &middot; Earn</span></a><a class="cat fade-up" href="scrubtv.html"><span class="ico c4"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 21v-3.2A7 7 0 1 1 19 11l1.5 3H18v3a2 2 0 0 1-2 2h-2v2"/><path d="M11 8.5a2.5 2.5 0 0 1 5 0c0 1.8-2.5 2-2.5 3.5"/><circle cx="13.5" cy="14.6" r=".5" fill="currentColor"/></svg></span><b>Mental Health</b><span>Watch &middot; Quiz &middot; Earn</span></a><a class="cat fade-up" href="scrubtv.html"><span class="ico c3"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7.5-4.6-7.5-10A4.5 4.5 0 0 1 12 7.5 4.5 4.5 0 0 1 19.5 11c0 5.4-7.5 10-7.5 10z"/><path d="M7 12h3l1.5-2.5L14 13l1.5-1.5H19"/></svg></span><b>Geriatrics</b><span>Watch &middot; Quiz &middot; Earn</span></a></div>
+        <div class="video-row"><a class="vid fade-up" href="scrubtv.html">
+          <span class="bg" style="background:linear-gradient(140deg,#2c2f63,#e63e4e);"></span>
+          <span class="play"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="4"/><path d="M10 9.5v5l4.5-2.5z" fill="currentColor" stroke="none"/></svg></span>
+          <span class="meta">ER / TRAUMA</span>
+          <b>Triage in 90 seconds: who do you see first?</b>
+          <span class="pts"><svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 3 2.7 5.7 6.3.8-4.6 4.3 1.2 6.2L12 17l-5.6 3 1.2-6.2L3 9.5l6.3-.8z"/></svg> +25 pts with quiz</span>
+        </a><a class="vid fade-up" href="scrubtv.html">
+          <span class="bg" style="background:linear-gradient(140deg,#12132b,#0b9f92);"></span>
+          <span class="play"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="4"/><path d="M10 9.5v5l4.5-2.5z" fill="currentColor" stroke="none"/></svg></span>
+          <span class="meta">PHARMACOLOGY</span>
+          <b>Beta blockers, explained the way you'll remember</b>
+          <span class="pts"><svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 3 2.7 5.7 6.3.8-4.6 4.3 1.2 6.2L12 17l-5.6 3 1.2-6.2L3 9.5l6.3-.8z"/></svg> +25 pts with quiz</span>
+        </a><a class="vid fade-up" href="scrubtv.html">
+          <span class="bg" style="background:linear-gradient(140deg,#2c2f63,#e0a92c);"></span>
+          <span class="play"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="4"/><path d="M10 9.5v5l4.5-2.5z" fill="currentColor" stroke="none"/></svg></span>
+          <span class="meta">PRENATAL & L&D</span>
+          <b>Decels decoded: early, late &amp; variable</b>
+          <span class="pts"><svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 3 2.7 5.7 6.3.8-4.6 4.3 1.2 6.2L12 17l-5.6 3 1.2-6.2L3 9.5l6.3-.8z"/></svg> +25 pts with quiz</span>
+        </a></div>
+      </div>
+    </section>
+
+    <section class="welcome">
+      <div class="hero-layer" data-parallax="0.14" aria-hidden="true"><div class="glow glow-coral" style="opacity:0.5;"></div></div>
+      <div class="wrap fade-up" style="position:relative;z-index:2;">
+        <p class="kicker">Wherever you are on your nursing journey…</p>
+        <h2>WELCOME <span class="heart">HOME</span>.</h2>
+        <p class="sub">Student, new grad, seasoned RN, or somewhere in between — Must Love Scrubs was built around one belief: nurses deserve tools as excellent as the care they give.</p>
+      </div>
+    </section>
+
+    <section class="courses" id="courses">
+      <div class="wrap">
+        <div class="section-head fade-up">
+          <span class="eyebrow teal">Featured Courses</span>
+          <h2>Prep that teaches you to <span class="hl">think</span>, not memorize.</h2>
+        </div>
+        <div class="course-hero fade-up">
+          <div class="art"><span class="big">NCLEX</span></div>
+          <div class="body">
+            <div class="chip-row"><span class="chip gold">FLAGSHIP</span><span class="chip teal">NGN READY</span><span class="chip">Esi compatible</span></div>
+            <h3>NCLEX Complete</h3>
+            <p>The full journey to test day: adaptive question banks, clinical-judgment case studies, mock exams in real test format, and analytics that show exactly where you're strong and where you're not.</p>
+            <div class="price-line"><span class="price">$129</span><span class="per">one-time &middot; or $39/mo</span></div>
+            <div class="chip-row"><span class="chip">+ Add Esi tutoring &middot; $19/mo</span></div>
+            <a class="btn btn-coral" href="courses.html">Explore the course</a>
+          </div>
+        </div>
+        <div class="course-shelf"><article class="course-card fade-up">
+          <div class="cover" style="background:linear-gradient(140deg,#e63e4e,#2c2f63);">RX</div>
+          <div class="body">
+            <b>Pharmacology Mastery</b><small>220 questions · flashcards · mnemonics</small>
+            <div class="foot"><span class="p">$59</span><a href="courses.html">View course &rarr;</a></div>
+          </div>
+        </article><article class="course-card fade-up">
+          <div class="cover" style="background:linear-gradient(140deg,#0b9f92,#12132b);">MS</div>
+          <div class="body">
+            <b>Med-Surg Essentials</b><small>8 systems · case studies · mock exams</small>
+            <div class="foot"><span class="p">$69</span><a href="courses.html">View course &rarr;</a></div>
+          </div>
+        </article><article class="course-card fade-up">
+          <div class="cover" style="background:linear-gradient(140deg,#e0a92c,#e63e4e);">NGN</div>
+          <div class="body">
+            <b>Prioritization &amp; Delegation</b><small>NGN-style clinical judgment drills</small>
+            <div class="foot"><span class="p">$49</span><a href="courses.html">View course &rarr;</a></div>
+          </div>
+        </article><article class="course-card fade-up">
+          <div class="cover" style="background:linear-gradient(140deg,#2c2f63,#0b9f92);">CALC</div>
+          <div class="body">
+            <b>Dosage Calculation Bootcamp</b><small>Step-by-step method · 300 practice problems</small>
+            <div class="foot"><span class="p">$49</span><a href="courses.html">View course &rarr;</a></div>
+          </div>
+        </article></div>
+      </div>
+    </section>
+
+    <section class="why">
+      <div class="wrap">
+        <div class="section-head fade-up">
+          <span class="eyebrow">Why Must Love Scrubs</span>
+          <h2>Not another <span class="hl">cookie-cutter</span> nursing site.</h2>
+        </div>
+        <div class="why-grid">
+          <article class="why-card fade-up">
+            <span class="num">01</span>
+            <h3>Innovative, proven — not generic</h3>
+            <p>Most nursing sites are clones of each other. Ours is built on proven systems for retaining information — spaced repetition, active recall, and clinical-judgment reasoning — woven into every course and video.</p>
+          </article>
+          <article class="why-card fade-up">
+            <span class="num">02</span>
+            <h3>Esi revolutionizes learning</h3>
+            <p>An AI tutor who knows your weak areas before you do, guides your study plan, and walks you through the site like a friend who works here. No other prep platform has her.</p>
+          </article>
+          <article class="why-card fade-up">
+            <span class="num">03</span>
+            <h3>Massive prep library</h3>
+            <p>NCLEX Complete leads a growing catalog of specialty prep — pharmacology, med-surg, peds, mental health, NGN drills — with new content added constantly.</p>
+          </article>
         </div>
       </div>
     </section>
 
-    <!-- Join CTA -->
+    <section class="store" id="store">
+      <div class="wrap">
+        <div class="section-head fade-up">
+          <div class="row">
+            <div>
+              <span class="eyebrow gold">The Store</span>
+              <h2>Wear the <span class="hl">love</span>.</h2>
+              <p>Small, curated, and made for nurse life — every piece carries the MLS mark.</p>
+            </div>
+            <a class="btn btn-line" href="store.html">Shop all</a>
+          </div>
+        </div>
+        <div class="product-grid"><a class="product fade-up" href="store.html">
+          <div class="shot" style="background:linear-gradient(140deg,#14d3c0,#0b9f92);"><span class="logo-print">M❤S</span></div>
+          <div class="body"><b>Scrub Life Tote Bag</b><span class="p">$24</span></div>
+        </a><a class="product fade-up" href="store.html">
+          <div class="shot" style="background:linear-gradient(140deg,#ff4f5e,#e63e4e);"><span class="logo-print">MLS</span></div>
+          <div class="body"><b>Coffee &amp; Compassion Mug</b><span class="p">$18</span></div>
+        </a><a class="product fade-up" href="store.html">
+          <div class="shot" style="background:linear-gradient(140deg,#191b3a,#2c2f63);"><span class="logo-print">M❤S</span></div>
+          <div class="body"><b>Must Love Scrubs Tee</b><span class="p">$28</span></div>
+        </a><a class="product fade-up" href="store.html">
+          <div class="shot" style="background:linear-gradient(140deg,#ffc94d,#e0a92c);"><span class="logo-print">MLS</span></div>
+          <div class="body"><b>Shift Survival Tumbler</b><span class="p">$26</span></div>
+        </a></div>
+        <div class="points-strip fade-up">
+          <div class="txt">
+            <b>Your points are currency here.</b>
+            <p>Claim 5 free points daily, earn more from quizzes &amp; contests, then redeem for study guides, brain sheets, planners and other digital downloads.</p>
+          </div>
+          <a class="btn btn-dark" href="profile.html">Claim today's points</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="proof">
+      <div class="wrap">
+        <div class="stat-row">
+          <div class="stat-big fade-up"><b><span data-count="1400">0</span><span class="plus">+</span></b><span>Nurses trained with our courses</span></div>
+          <div class="stat-big fade-up"><b><span data-count="8">0</span></b><span>Specialty video channels</span></div>
+          <div class="stat-big fade-up"><b>24/7</b><span>Esi tutoring, whenever you study</span></div>
+        </div>
+        <div class="trust-row fade-up">
+          <span class="trust"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="5" y="10" width="14" height="10" rx="3"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg> Secure checkout</span>
+          <span class="trust"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l8 3v6c0 4.5-3.2 7.6-8 9-4.8-1.4-8-4.5-8-9V6z"/><path d="m8.8 12 2.2 2.2 4.2-4.4"/></svg> SSL encrypted</span>
+          <span class="trust"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="3" y="6" width="18" height="13" rx="3"/><path d="M3 10h18"/></svg> Powered by Stripe &amp; Shopify</span>
+          <span class="trust"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="m4 12.5 5 5L20 6.5"/></svg> 7-day money-back guarantee</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="testis">
+      <div class="wrap">
+        <div class="section-head fade-up">
+          <span class="eyebrow">Nurses talking</span>
+          <h2>Loved by the people who <span class="hl">do the work</span>.</h2>
+        </div>
+        <div class="testi-track"><figure class="testi">
+          <span class="sample-tag">Sample &middot; real reviews coming</span>
+          <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <p>“The videos plus the quizzes right underneath — that combo made things finally stick for me.”</p>
+          <figcaption class="who"><span class="av" style="background:#e63e4e;">J</span><span><b>J.M.</b><span>RN, Med-Surg</span></span></figcaption>
+        </figure><figure class="testi">
+          <span class="sample-tag">Sample &middot; real reviews coming</span>
+          <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <p>“I passed on my first try. The way this course teaches you to THINK through questions changed everything.”</p>
+          <figcaption class="who"><span class="av" style="background:#0b9f92;">A</span><span><b>A.T.</b><span>New Grad RN</span></span></figcaption>
+        </figure><figure class="testi">
+          <span class="sample-tag">Sample &middot; real reviews coming</span>
+          <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <p>“Esi feels like having a tutor in my pocket. She catches my weak areas before I do.”</p>
+          <figcaption class="who"><span class="av" style="background:#2c2f63;">S</span><span><b>S.K.</b><span>Nursing Student</span></span></figcaption>
+        </figure><figure class="testi">
+          <span class="sample-tag">Sample &middot; real reviews coming</span>
+          <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <p>“Finally a nursing site that doesn't look and feel like it was built in 2009.”</p>
+          <figcaption class="who"><span class="av" style="background:#e0a92c;">D</span><span><b>D.R.</b><span>Travel Nurse</span></span></figcaption>
+        </figure></div>
+      </div>
+    </section>
+
+    <section class="faq">
+      <div class="wrap">
+        <div class="section-head fade-up" style="text-align:center;margin-inline:auto;">
+          <span class="eyebrow teal">Questions</span>
+          <h2>Everything you're wondering.</h2>
+        </div>
+        <div class="faq-list"><div class="faq-item">
+          <button class="faq-q">What is Must Love Scrubs? <svg class="chev" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="m6 9 6 6 6-6"/></svg></button>
+          <div class="faq-a"><p>A premium nursing education ecosystem: prep courses built on proven retention science, Scrub TV learning videos with quizzes, a curated nurse lifestyle store, and Esi — an AI tutor that guides your studying and helps you navigate the site.</p></div>
+        </div><div class="faq-item">
+          <button class="faq-q">Is Esi free? <svg class="chev" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="m6 9 6 6 6-6"/></svg></button>
+          <div class="faq-a"><p>Esi is a premium add-on to any prep course. She tutors you one-on-one, targets your weak areas, and helps you find your way around the site. You can preview what she does on the Esi page.</p></div>
+        </div><div class="faq-item">
+          <button class="faq-q">How do points work? <svg class="chev" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="m6 9 6 6 6-6"/></svg></button>
+          <div class="faq-a"><p>Log in and claim 5 free points every day on your Profile Dashboard. Earn more by completing quizzes, puzzles, and video activities. Redeem points for digital downloads in the store — study guides, brain sheets, planners and more.</p></div>
+        </div><div class="faq-item">
+          <button class="faq-q">What courses do you offer? <svg class="chev" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="m6 9 6 6 6-6"/></svg></button>
+          <div class="faq-a"><p>NCLEX Complete is our flagship, alongside specialty courses like Pharmacology Mastery, Med-Surg Essentials, and NGN Prioritization &amp; Delegation. The library grows constantly.</p></div>
+        </div><div class="faq-item">
+          <button class="faq-q">How often does Scrub TV update? <svg class="chev" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="m6 9 6 6 6-6"/></svg></button>
+          <div class="faq-a"><p>Fresh videos drop every two weeks across eight specialty channels — each with quizzes and activities that earn you points.</p></div>
+        </div><div class="faq-item">
+          <button class="faq-q">Can I use Must Love Scrubs on my phone? <svg class="chev" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="m6 9 6 6 6-6"/></svg></button>
+          <div class="faq-a"><p>Absolutely — the entire site is designed mobile-first, with app-style navigation. Study on the bus, in the break room, or on the couch.</p></div>
+        </div></div>
+      </div>
+    </section>
+
     <section class="join">
       <div class="wrap">
         <div class="join-card fade-up">
-          <div class="hero-layer" data-parallax="0.12" aria-hidden="true">
-            <div class="blob blob-2" style="top:-30%; right:-10%; left:auto;"></div>
-            <div class="blob blob-3" style="bottom:-20%; left:-8%; top:auto;"></div>
-          </div>
-          <div class="join-inner">
-            <span class="eyebrow" style="color: var(--mint-300);">Founding members</span>
-            <h2>Made by nurses.<br>Loved by nurses.</h2>
-            <p>Must Love Scrubs is being built right now, and it's better with you in it. Come shape it with us.</p>
-            <div class="join-cta">
-              <a class="btn btn-coral" href="#esi">Say hi to Esi</a>
-              <a class="btn btn-ghost" href="#explore">Take a look around</a>
-            </div>
-            <div class="join-stats">
-              <div class="stat"><b>8</b><span>Ways to belong</span></div>
-              <div class="stat"><b>12</b><span>Specialty communities</span></div>
-              <div class="stat"><b>10</b><span>Nurse paths, CNA→CRNA</span></div>
-              <div class="stat"><b>24/7</b><span>Esi by your side</span></div>
-            </div>
+          <span class="eyebrow" style="color:var(--gold-400);">Join the community</span>
+          <h2>Your journey starts with a free account.</h2>
+          <p>Daily points, progress tracking, saved content, and a front-row seat as the ecosystem grows.</p>
+          <a class="btn btn-coral" href="join.html">Create my free account</a>
+          <div class="perks">
+            <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="m4 12.5 5 5L20 6.5"/></svg> Free forever</span>
+            <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="m4 12.5 5 5L20 6.5"/></svg> 5 points daily</span>
+            <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="m4 12.5 5 5L20 6.5"/></svg> No card required</span>
           </div>
         </div>
       </div>
     </section>
+  </main>
 
-    <footer class="site-footer">
-      <div class="wrap">
-        <a class="logo" href="index.html">Must Love Scrubs<span class="heart"> ♥</span></a>
-        <ul class="footer-links">
-          <li><a href="#esi">Ask Esi</a></li>
-          <li><a href="#explore">Education</a></li>
-          <li><a href="#explore">Forum</a></li>
-          <li><a href="#explore">ScrubTV</a></li>
-          <li><a href="#explore">Jobs</a></li>
-          <li><a href="#explore">Store</a></li>
-          <li><a href="#spotlight">Spotlight</a></li>
-          <li><a href="#explore">Contests</a></li>
+
+  <footer class="site-footer">
+    <div class="wrap footer-main">
+      <div class="footer-brand">
+        <a class="logo" href="index.html">
+          <span class="mark">M<b>&#10084;</b>S</span>
+          <span class="word" style="color:#fff;">Must <i>Love</i> Scrubs</span>
+        </a>
+        <p>The ecosystem of nursing — learn, watch, shop, and grow, wherever you are on your journey.</p>
+        <div class="footer-social">
+          <a href="https://facebook.com/mustlovescrubs" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M14 8.5V7a1.5 1.5 0 0 1 1.5-1.5H17V2h-3a4 4 0 0 0-4 4v2.5H7.5V12H10v10h4V12h2.6l.9-3.5z"/></svg></a>
+          <a href="https://tiktok.com/@mustlovescrubs" aria-label="TikTok"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M16.5 3c.4 2.1 1.7 3.6 3.9 3.9v3.2c-1.5.1-2.8-.3-3.9-1.1v5.8a6.1 6.1 0 1 1-6.1-6.1c.3 0 .7 0 1 .1v3.3a2.9 2.9 0 1 0 2 2.7V3z"/></svg></a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h5>Learn</h5>
+        <ul>
+          <li><a href="courses.html">All Courses</a></li>
+          <li><a href="courses.html">NCLEX Complete</a></li>
+          <li><a href="scrubtv.html">Scrub TV</a></li>
+          <li><a href="esi.html">Meet Esi</a></li>
         </ul>
-        <p class="footer-legal">© 2026 Must Love Scrubs. Esi provides general health information only and never diagnoses, prescribes, or replaces professional medical care. In an emergency, call 911 first. All trademarks belong to their owners.</p>
       </div>
-    </footer>
+      <div class="footer-col">
+        <h5>Community</h5>
+        <ul>
+          <li><a href="spotlight.html">Nurse Spotlight</a></li>
+          <li><a href="jobs.html">Job Search</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="join.html">Create Free Account</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Shop</h5>
+        <ul>
+          <li><a href="store.html">Lifestyle Store</a></li>
+          <li><a href="store.html#digital">Digital Downloads</a></li>
+          <li><a href="profile.html">Redeem Points</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Company</h5>
+        <ul>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="careers.html">Careers</a></li>
+          <li><a href="help.html">Help Center</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="support.html">Support</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="wrap footer-bottom">
+      <span>&copy; 2026 Must Love Scrubs. All rights reserved. &middot; hello@mustlovescrubs.com</span>
+      <div class="legal-links">
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="terms.html">Terms of Use</a>
+      </div>
+    </div>
+  </footer>
 
-  </div><!-- /.page -->
+  <nav class="bottom-nav" aria-label="Quick navigation">
+    <a class="bn-item active" href="index.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11.5 12 4l9 7.5"/><path d="M5 10v10h5v-6h4v6h5V10"/></svg><span>Home</span></a>
+    <a class="bn-item" href="courses.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5a2 2 0 0 1 2-2h13v18H6a2 2 0 0 0-2 2z"/><path d="M4 19a2 2 0 0 1 2-2h13"/><path d="M11 7h4M13 5v4"/></svg><span>Courses</span></a>
+    <a class="bn-item bn-center" href="scrubtv.html"><span class="puck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="4"/><path d="M10 9.5v5l4.5-2.5z" fill="currentColor" stroke="none"/></svg></span><span>Scrub TV</span></a>
+    <a class="bn-item" href="store.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 8h14l-1.2 12H6.2z"/><path d="M9 11V6a3 3 0 0 1 6 0v5"/></svg><span>Store</span></a>
+    <a class="bn-item" href="profile.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 21c1.5-3.5 4.5-5 8-5s6.5 1.5 8 5"/></svg><span>Profile</span></a>
+  </nav>
 
-  <!-- Ask Esi — floating widget, every page -->
-  <button class="esi-fab" aria-label="Ask Esi, your AI nurse">
-    <span class="pulse"></span>
-    <span class="dot">E</span>
-    Ask Esi
+  <button class="esi-fab" data-esi-launch aria-label="Esi — your AI tutor">
+    <span class="orb"></span>
+    <span>Esi<span class="lock">PREMIUM TUTOR</span></span>
   </button>
-
-  <aside class="esi-panel" aria-label="Chat with Esi">
-    <div class="esi-head">
-      <div class="dot">E</div>
-      <div>
-        <b>Esi</b>
-        <span>Your AI nurse · always here</span>
-      </div>
-      <button class="esi-close" aria-label="Close chat">×</button>
-    </div>
-    <div class="esi-log">
-      <div class="msg esi">Hey, I'm Esi 🩺 — your nurse in your pocket. Ask me anything medical: symptoms, meds, insurance, studying, caring for a parent. What's on your mind?</div>
-    </div>
-    <div class="esi-input">
-      <input type="text" placeholder="Ask Esi anything medical…" aria-label="Message Esi">
-      <button class="esi-send" aria-label="Send">➤</button>
-    </div>
-    <p class="esi-legal">Esi never diagnoses or prescribes. In an emergency, call 911 first.</p>
-  </aside>
 
   <script src="js/main.js"></script>
 </body>
