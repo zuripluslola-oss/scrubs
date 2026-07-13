@@ -1048,6 +1048,43 @@ section { padding-block: clamp(3.6rem, 9vw, 6.5rem); position: relative; }
 body.mls-paid .paid-only { display: block; }
 body.mls-paid .gate { display: none; }
 
+/* ---------- Nurse Dictionary ---------- */
+.dict-tools { max-width: 820px; }
+.dict-search { position: relative; }
+.dict-search svg { position: absolute; left: 1.1rem; top: 50%; transform: translateY(-50%); width: 20px; height: 20px; color: var(--ink-60); }
+.dict-search input {
+  width: 100%; padding: 1rem 1.2rem 1rem 3rem;
+  border: 1.5px solid rgba(30,18,51,0.16); border-radius: var(--pill);
+  font: inherit; font-size: 1rem; background: var(--card); outline: none;
+  box-shadow: var(--shadow-1);
+}
+.dict-search input:focus { border-color: var(--coral-500); }
+.dict-chips { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 1.1rem; }
+.chip-filter {
+  padding: 0.45rem 1rem; border-radius: var(--pill);
+  border: 1.5px solid rgba(30,18,51,0.14); font-weight: 700; font-size: 0.82rem;
+  color: var(--ink-60); transition: background 0.18s, color 0.18s, border-color 0.18s;
+}
+.chip-filter:hover { border-color: var(--coral-500); color: var(--coral-500); }
+.chip-filter.on { background: var(--indigo-950); color: #fff; border-color: var(--indigo-950); }
+.dict-count { margin-top: 1.2rem; font-size: 0.82rem; font-weight: 700; color: var(--ink-60); }
+.dict-grid { display: grid; gap: 1rem; grid-template-columns: 1fr; margin-top: 1rem; }
+@media (min-width: 640px)  { .dict-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (min-width: 1000px) { .dict-grid { grid-template-columns: repeat(3, 1fr); } }
+.term-card {
+  background: var(--card); border: 1px solid rgba(30,18,51,0.08);
+  border-radius: var(--radius); padding: 1.3rem 1.4rem; box-shadow: var(--shadow-1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.term-card:hover { transform: translateY(-3px); box-shadow: var(--shadow-2); }
+.term-card .term-top { display: flex; align-items: baseline; justify-content: space-between; gap: 0.6rem; }
+.term-card .term { font-family: var(--font-display); font-weight: 800; font-size: 1.15rem; }
+.term-card .term-cat { font-size: 0.62rem; font-weight: 800; letter-spacing: 0.08em; text-transform: uppercase; color: var(--coral-500); flex-shrink: 0; }
+.term-card p { margin-top: 0.5rem; font-size: 0.9rem; color: var(--ink-60); line-height: 1.5; }
+.term-card .say { display: block; margin-top: 0.35rem; font-size: 0.78rem; color: var(--teal-600); font-style: italic; }
+.dict-empty { display: none; text-align: center; padding: 2.5rem 1rem; color: var(--ink-60); }
+.dict-empty.show { display: block; }
+
 /* fade-up reveal */
 .fade-up { opacity: 0; transform: translateY(26px); transition: opacity 0.65s ease, transform 0.65s ease; }
 .fade-up.visible { opacity: 1; transform: translateY(0); }

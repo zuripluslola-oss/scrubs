@@ -78,6 +78,24 @@ NCLEX Complete $129 (or $39/mo) · specialty courses $49–$79 · **Esi tutor ad
 
 hello@mustlovescrubs.com · facebook.com/mustlovescrubs · tiktok.com/@mustlovescrubs
 
+## Specialties we sell prep for (owner-locked)
+
+RN vs BSN is not a license split (BSN is one path to RN), so we sell **clinical
+specialty prep** — the any-RN list: Medical-Surgical, Emergency/ER, Critical
+Care/ICU, Pediatrics, Labor & Delivery/OB, Neonatal/NICU, Oncology,
+Cardiac/Telemetry, OR/Perioperative, PACU, Psychiatric/Mental Health,
+Geriatrics, Home Health, Hospice/Palliative, Rehabilitation, Dialysis/Nephrology,
+Wound Care, Ambulatory/Clinic, School Nursing, Occupational Health, Long-Term
+Care, Progressive Care. BSN-favored roles (public health, case management,
+management, informatics, research, flight) and graduate/advanced-practice tracks
+(NP, CNS, CRNA, CNM, educator, executive) are a LATER phase, not launch.
+
+## Nurse Dictionary (owner-locked tool)
+
+A searchable index of medical/nursing terms and definitions — free tool at
+`dictionary.html`. Search box + A–Z filter + category chips. Great for SEO and
+daily-return habit. Grows over time.
+
 ## Build phases
 
 **Phase 1 (current):** design system, homepage, all pages linked, menus, tickers, widget, footer, legal drafts.

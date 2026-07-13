@@ -104,10 +104,10 @@ def chrome(fname, title, desc, body, active=""):
       <div>
         <h4>Community</h4>
         <ul class="mega-links">
+          <li><a href="dictionary.html">Nurse Dictionary <small>Every term, in plain language</small></a></li>
           <li><a href="spotlight.html">Nurse Spotlight <small>Real stories, beautifully told</small></a></li>
           <li><a href="jobs.html">Job Search <small>A small Indeed, just for nurses</small></a></li>
           <li><a href="blog.html">Blog <small>News, tips &amp; nurse life</small></a></li>
-          <li><a href="store.html">Store <small>Curated nurse lifestyle goods</small></a></li>
         </ul>
       </div>
       <div>
@@ -157,10 +157,10 @@ def chrome(fname, title, desc, body, active=""):
       <div class="footer-col">
         <h5>Discover</h5>
         <ul>
+          <li><a href="dictionary.html">Nurse Dictionary</a></li>
           <li><a href="spotlight.html">Spotlight</a></li>
           <li><a href="jobs.html">Job Search</a></li>
           <li><a href="blog.html">Blog</a></li>
-          <li><a href="store.html">Store</a></li>
         </ul>
       </div>
       <div class="footer-col">
@@ -1356,6 +1356,139 @@ PREP_BODY = f"""  <div class="page-hero">
 PAGES["nclex.html"] = ("NCLEX Prep (RN &amp; LPN) — Must Love Scrubs",
     "Free NCLEX practice with every Next Gen item type: timed recall, chart-trend, matrix grid, SBAR builder, and select-all. RN and LPN tracks.",
     PREP_BODY, "courses")
+
+# ---------------------------------------------------------------- NURSE DICTIONARY
+TERMS = [
+    ("Afebrile", "Assessment", "Without fever; a normal body temperature."),
+    ("Auscultation", "Assessment", "Listening to internal body sounds (heart, lungs, bowel) with a stethoscope."),
+    ("Baseline", "Assessment", "A patient's normal or usual status, used as the comparison point."),
+    ("Cyanosis", "Assessment", "Bluish discoloration of the skin or lips from low oxygen."),
+    ("Diaphoresis", "Assessment", "Profuse sweating, often a sign of distress or shock."),
+    ("Edema", "Assessment", "Swelling caused by excess fluid trapped in the tissues."),
+    ("Febrile", "Assessment", "Having a fever."),
+    ("Guarding", "Assessment", "Tensing of the abdominal muscles when touched, signaling pain or peritoneal irritation."),
+    ("Jaundice", "Assessment", "Yellowing of the skin and eyes from elevated bilirubin."),
+    ("Lethargy", "Assessment", "Drowsiness or a reduced level of alertness."),
+    ("Malaise", "Assessment", "A general feeling of discomfort or being unwell."),
+    ("Pallor", "Assessment", "Paleness of the skin, often from anemia or poor perfusion."),
+    ("Skin turgor", "Assessment", "The skin's elasticity; poor turgor (tenting) suggests dehydration."),
+    ("Homeostasis", "Assessment", "The body's balanced, stable internal environment."),
+    ("Bradycardia", "Cardiac", "A heart rate under 60 beats per minute."),
+    ("Tachycardia", "Cardiac", "A heart rate over 100 beats per minute."),
+    ("Dysrhythmia", "Cardiac", "An abnormal heart rhythm (also called arrhythmia)."),
+    ("Ischemia", "Cardiac", "Reduced blood flow and oxygen to a tissue."),
+    ("Infarction", "Cardiac", "Tissue death caused by loss of blood supply, as in a heart attack."),
+    ("Perfusion", "Cardiac", "Blood flow that delivers oxygen and nutrients to the tissues."),
+    ("Hypertension", "Cardiac", "High blood pressure."),
+    ("Hypotension", "Cardiac", "Low blood pressure."),
+    ("Orthostatic hypotension", "Cardiac", "A drop in blood pressure on standing that causes dizziness."),
+    ("Edema, pitting", "Cardiac", "Swelling that leaves a temporary indentation when pressed."),
+    ("Dyspnea", "Respiratory", "Difficult or labored breathing; shortness of breath."),
+    ("Apnea", "Respiratory", "The absence of breathing."),
+    ("Tachypnea", "Respiratory", "Abnormally rapid breathing."),
+    ("Bradypnea", "Respiratory", "Abnormally slow breathing."),
+    ("Hypoxia", "Respiratory", "Low oxygen levels in the body's tissues."),
+    ("Hypoxemia", "Respiratory", "Low oxygen levels in the blood."),
+    ("Crackles", "Respiratory", "Popping or crackling lung sounds, often from fluid (also called rales)."),
+    ("Wheezing", "Respiratory", "A high-pitched whistling sound from narrowed airways."),
+    ("Stridor", "Respiratory", "A harsh, high-pitched sound signaling upper-airway obstruction &mdash; an emergency."),
+    ("SpO2", "Respiratory", "Oxygen saturation of the blood, measured by pulse oximetry."),
+    ("Analgesic", "Pharmacology", "A medication that relieves pain."),
+    ("Antipyretic", "Pharmacology", "A medication that reduces fever."),
+    ("Anticoagulant", "Pharmacology", "A blood thinner that prevents or slows clot formation."),
+    ("Diuretic", "Pharmacology", "A medication that increases urine output to remove fluid."),
+    ("Contraindication", "Pharmacology", "A specific reason a medication or treatment should not be used."),
+    ("Titrate", "Pharmacology", "To adjust a dose gradually until the desired effect is reached."),
+    ("Half-life", "Pharmacology", "The time it takes for a drug's blood concentration to fall by half."),
+    ("Loading dose", "Pharmacology", "A larger initial dose given to reach a therapeutic level quickly."),
+    ("Peak and trough", "Pharmacology", "The highest (peak) and lowest (trough) drug levels in the blood."),
+    ("Adverse effect", "Pharmacology", "A harmful, unintended reaction to a medication."),
+    ("Electrolytes", "Labs", "Charged minerals (sodium, potassium, calcium, magnesium) that regulate body function."),
+    ("BUN", "Labs", "Blood urea nitrogen &mdash; a marker of kidney function and hydration."),
+    ("Creatinine", "Labs", "A waste product and a key marker of kidney function; rising values signal failure."),
+    ("INR", "Labs", "A measure of how long blood takes to clot; used to monitor warfarin."),
+    ("Hemoglobin", "Labs", "The oxygen-carrying protein inside red blood cells."),
+    ("Hematocrit", "Labs", "The percentage of blood volume made up of red blood cells."),
+    ("WBC", "Labs", "White blood cell count; rises in response to infection."),
+    ("Platelets", "Labs", "Cell fragments that help the blood clot."),
+    ("ABG", "Labs", "Arterial blood gas &mdash; measures oxygenation and acid-base balance."),
+    ("NPO", "Procedures", "Nothing by mouth (nil per os) &mdash; no food or drink, often before surgery."),
+    ("Indwelling catheter", "Procedures", "A tube (Foley) that drains urine continuously from the bladder."),
+    ("IV", "Procedures", "Intravenous &mdash; delivered into a vein."),
+    ("IM", "Procedures", "Intramuscular &mdash; injected into a muscle."),
+    ("Subcutaneous", "Procedures", "Into the fatty tissue just under the skin (subQ)."),
+    ("Central line", "Procedures", "An IV catheter placed in a large central vein for long-term or high-volume access."),
+    ("Incentive spirometer", "Procedures", "A device that encourages deep breathing to prevent post-op lung complications."),
+    ("Sterile technique", "Procedures", "Practices that keep an area completely free of microorganisms."),
+    ("SBAR", "Abbreviations", "Situation, Background, Assessment, Recommendation &mdash; a structured handoff/communication tool."),
+    ("ADLs", "Abbreviations", "Activities of Daily Living &mdash; bathing, dressing, eating, toileting, mobility."),
+    ("PRN", "Abbreviations", "\"As needed\" (pro re nata) &mdash; given only when required."),
+    ("STAT", "Abbreviations", "Immediately, without delay."),
+    ("I&O", "Abbreviations", "Intake and Output &mdash; tracking fluids in versus out."),
+    ("LOC", "Abbreviations", "Level of Consciousness."),
+    ("DNR", "Abbreviations", "Do Not Resuscitate &mdash; an order to withhold CPR."),
+    ("Hx / Dx / Tx", "Abbreviations", "History / Diagnosis / Treatment."),
+    ("Gravida", "Maternity & Peds", "The number of times a person has been pregnant."),
+    ("Para", "Maternity & Peds", "The number of pregnancies carried to a viable age."),
+    ("Meconium", "Maternity & Peds", "A newborn's first stool, dark green and sticky."),
+    ("Fontanelle", "Maternity & Peds", "A soft spot between the bones of an infant's skull."),
+]
+DICT_CATS = ["Assessment", "Cardiac", "Respiratory", "Pharmacology", "Labs", "Procedures", "Abbreviations", "Maternity & Peds"]
+
+def dict_cards():
+    out = []
+    for term, cat, defn in sorted(TERMS, key=lambda t: t[0].lower()):
+        search = (term + " " + defn).lower().replace('&mdash;', '').replace('"', '')
+        out.append(f"""<div class="term-card" data-cat="{cat}" data-search="{search}">
+          <div class="term-top"><span class="term">{term}</span><span class="term-cat">{cat}</span></div>
+          <p>{defn}</p>
+        </div>""")
+    return "".join(out)
+
+def dict_chips():
+    out = ['<button class="chip-filter on" data-cat="all">All</button>']
+    for c in DICT_CATS:
+        out.append(f'<button class="chip-filter" data-cat="{c}">{c}</button>')
+    return "".join(out)
+
+DICT_BODY = f"""  <div class="page-hero">
+    <div class="wrap inner">
+      <span class="lesson-label" style="color:var(--gold-400);">Free tool</span>
+      <h1 style="margin-top:0.6rem;">The Nurse <span class="em">Dictionary</span>.</h1>
+      <p>Every term, abbreviation, and bit of nurse-speak &mdash; in plain language. Search it, filter it, learn it. Free, forever, and always growing.</p>
+    </div>
+  </div>
+
+  <section style="background:var(--bg);">
+    <div class="wrap">
+      <div class="dict-tools fade-up">
+        <div class="dict-search">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+          <input type="search" placeholder="Search a term or abbreviation&hellip;" aria-label="Search the dictionary">
+        </div>
+        <div class="dict-chips">{dict_chips()}</div>
+        <p class="dict-count">{len(TERMS)} terms</p>
+      </div>
+      <div class="dict-grid">{dict_cards()}</div>
+      <div class="dict-empty">
+        <p><b>No match yet.</b> This dictionary grows every week &mdash; tell us what to add at hello@mustlovescrubs.com.</p>
+      </div>
+    </div>
+  </section>
+
+  <section style="background:var(--card);">
+    <div class="wrap" style="text-align:center;">
+      <div class="section-head fade-up" style="margin-inline:auto;"><span class="lesson-label" style="color:var(--teal-600);">Stuck on a term?</span><h2>Esi can explain <span class="em">anything</span>.</h2><p style="margin-inline:auto;">Every definition here is free. For a term walked through your way &mdash; with examples and a quick check &mdash; Esi is one tap away.</p></div>
+      <a class="btn btn-coral" href="esi.html">Meet Esi</a>
+    </div>
+  </section>
+
+  <script src="js/dictionary.js"></script>
+"""
+
+PAGES["dictionary.html"] = ("Nurse Dictionary &mdash; Must Love Scrubs",
+    "A free, searchable dictionary of nursing and medical terms, abbreviations, and definitions in plain language.",
+    DICT_BODY, "")
 
 # ---------------------------------------------------------------- write out
 for fname, (title, desc, body, *rest) in PAGES.items():
