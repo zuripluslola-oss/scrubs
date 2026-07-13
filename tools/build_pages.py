@@ -1371,17 +1371,46 @@ PREP_BODY = f"""  <div class="page-hero">
       </div>
 
       <div class="paid-only">
-        <div class="section-head fade-up"><span class="lesson-label" style="color:var(--teal-600);">Unlocked</span><h2>Welcome to the full <span class="track-word">RN</span> bank.</h2><p>This is the paid experience. Everything below is unlocked.</p></div>
-        <div class="tile-grid cols-3">
-          <div class="tile"><span class="tag">Question bank</span><h3>2,140 <span class="track-word">RN</span> questions</h3><p>Every NGN type, filterable by clinical area, with full rationales on every option.</p></div>
-          <div class="tile"><span class="tag">Mock exams</span><h3>Real test format</h3><p>75&ndash;145 item CAT-style mocks with a pass-probability score.</p></div>
-          <div class="tile"><span class="tag">Analytics</span><h3>Your weak areas</h3><p>A live map of strong vs weak topics, updated every question.</p></div>
+        <div class="pro-band fade-up">
+          <span class="pro-badge">{I['star']} NCLEX Complete &middot; Unlocked</span>
+          <h2>Welcome to the full <span class="track-word">RN</span> bank.</h2>
+          <p class="sub">This is the paid side &mdash; and it should feel like it. Deeper than anything out there: thousands of questions, real mocks, live analytics, and Esi drilling your exact weak spots.</p>
+          <div class="pro-grid">
+            <div class="pro-tile">
+              <span class="pi">{I['book']}</span>
+              <div class="big-n">2,140</div>
+              <b><span class="track-word">RN</span> questions</b>
+              <p>Every NGN type, filterable by clinical area, full rationales on every option.</p>
+            </div>
+            <div class="pro-tile">
+              <span class="pi">{I['play']}</span>
+              <div class="big-n">CAT</div>
+              <b>Real-format mocks</b>
+              <p>75&ndash;145 item computer-adaptive mock exams that end when you're ready.</p>
+            </div>
+            <div class="pro-tile">
+              <span class="pi">{I['shield']}</span>
+              <b>Weak-area analytics</b>
+              <div class="pro-bars">
+                <div class="pro-bar"><span>Pharm</span><span class="track"><i style="width:58%"></i></span><span>58%</span></div>
+                <div class="pro-bar"><span>Cardiac</span><span class="track"><i style="width:82%"></i></span><span>82%</span></div>
+                <div class="pro-bar"><span>Peds</span><span class="track"><i style="width:41%"></i></span><span>41%</span></div>
+                <div class="pro-bar"><span>Safety</span><span class="track"><i style="width:74%"></i></span><span>74%</span></div>
+              </div>
+            </div>
+            <div class="pro-tile">
+              <span class="pi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M9 10a3 3 0 1 1 4 2.8V15"/><circle cx="12" cy="18" r="0.6" fill="currentColor"/></svg></span>
+              <b>Esi tutoring</b>
+              <p>Your AI tutor turns every miss into a targeted drill and a spaced-review plan. Nobody else has her.</p>
+            </div>
+          </div>
+          <div class="pro-launch">
+            <div class="pass-ring"><b>87%</b></div>
+            <div class="txt"><b>Your pass probability: 87%</b><p>Take a full timed mock and watch it climb. 75 questions, real format, scored instantly. (Demo &mdash; runner lands in Phase 2.)</p></div>
+            <a class="btn btn-coral" href="#">Start a 75-question mock</a>
+          </div>
+          <p style="text-align:center;margin-top:1.6rem;"><a class="relock" href="#" data-relock style="color:rgba(255,255,255,0.55);text-decoration:underline;font-size:0.8rem;">Relock to feel the free side again</a></p>
         </div>
-        <div class="points-strip" style="margin-top:1.4rem;background:linear-gradient(135deg,var(--indigo-900),var(--indigo-700));color:#fff;">
-          <div class="txt"><b style="color:#fff;">Ready for a full mock?</b><p style="color:rgba(255,255,255,0.75);">75 questions, timed, scored with a pass-probability. (Demo &mdash; runner coming in Phase 2.)</p></div>
-          <a class="btn btn-coral" href="#">Start 75-question mock</a>
-        </div>
-        <p style="text-align:center;margin-top:1.6rem;"><a class="relock" href="#" data-relock style="color:var(--ink-60);text-decoration:underline;font-size:0.8rem;">Relock to feel the free side again</a></p>
       </div>
     </div>
   </section>

@@ -1101,6 +1101,44 @@ body.mls-paid .gate { display: none; }
 .dict-empty { display: none; text-align: center; padding: 2.5rem 1rem; color: var(--ink-60); }
 .dict-empty.show { display: block; }
 
+/* ---------- Premium (paid) treatment ---------- */
+.pro-band {
+  position: relative; overflow: hidden; border-radius: 30px;
+  background:
+    radial-gradient(700px 320px at 88% 0%, rgba(255,201,77,0.22), transparent 55%),
+    radial-gradient(600px 320px at 6% 100%, rgba(139,92,255,0.35), transparent 55%),
+    linear-gradient(150deg, #160a33, #2b1055 60%, #3a1f7a);
+  color: #fff; padding: clamp(2rem, 6vw, 3.6rem);
+  box-shadow: var(--shadow-2), inset 0 0 0 1px rgba(255,201,77,0.25);
+}
+.pro-badge { display: inline-flex; align-items: center; gap: 0.4rem; font-size: 0.66rem; font-weight: 800; letter-spacing: 0.12em; text-transform: uppercase; color: var(--indigo-950); background: linear-gradient(90deg, #ffd76b, #ffb038); padding: 0.32rem 0.85rem; border-radius: var(--pill); box-shadow: 0 6px 18px rgba(255,176,56,0.4); }
+.pro-badge svg { width: 13px; height: 13px; flex-shrink: 0; }
+.pro-tile .pi svg { width: 22px; height: 22px; }
+.pro-band h2 { font-size: clamp(1.8rem, 5vw, 2.8rem); margin-top: 0.9rem; }
+.pro-band .sub { margin-top: 0.8rem; max-width: 52ch; color: rgba(255,255,255,0.8); }
+.pro-grid { display: grid; gap: 1rem; margin-top: 1.8rem; grid-template-columns: 1fr; }
+@media (min-width: 680px)  { .pro-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (min-width: 1040px) { .pro-grid { grid-template-columns: repeat(4, 1fr); } }
+.pro-tile { background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.15); border-radius: var(--radius); padding: 1.5rem; backdrop-filter: blur(6px); }
+.pro-tile .pi { width: 44px; height: 44px; border-radius: 12px; display: grid; place-items: center; background: rgba(255,201,77,0.16); color: var(--gold-400); margin-bottom: 0.9rem; }
+.pro-tile .pi svg { width: 22px; height: 22px; }
+.pro-tile .big-n { font-family: var(--font-display); font-size: 1.9rem; font-weight: 800; color: var(--gold-400); line-height: 1; }
+.pro-tile b { display: block; font-size: 1.02rem; margin-top: 0.2rem; }
+.pro-tile p { font-size: 0.83rem; color: rgba(255,255,255,0.72); margin-top: 0.35rem; }
+.pro-bars { display: grid; gap: 0.45rem; margin-top: 0.8rem; }
+.pro-bar { display: grid; grid-template-columns: 58px 1fr 30px; gap: 0.5rem; align-items: center; font-size: 0.7rem; color: rgba(255,255,255,0.75); }
+.pro-bar .track { height: 7px; border-radius: var(--pill); background: rgba(255,255,255,0.14); overflow: hidden; }
+.pro-bar .track i { display: block; height: 100%; border-radius: var(--pill); background: linear-gradient(90deg, var(--teal-400), var(--coral-500)); }
+.pro-launch { margin-top: 1.2rem; display: flex; flex-wrap: wrap; align-items: center; gap: 1.2rem; background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.15); border-radius: var(--radius); padding: 1.4rem clamp(1.2rem,3vw,1.8rem); }
+.pass-ring { width: 78px; height: 78px; border-radius: 50%; flex-shrink: 0; display: grid; place-items: center; background: conic-gradient(var(--teal-400) 0 87%, rgba(255,255,255,0.14) 87% 100%); }
+.pass-ring b { width: 60px; height: 60px; border-radius: 50%; background: var(--indigo-950); display: grid; place-items: center; font-family: var(--font-display); font-size: 1.15rem; font-weight: 800; color: var(--teal-400); }
+.pro-launch .txt { flex: 1; min-width: 220px; }
+.pro-launch .txt b { font-size: 1.1rem; }
+.pro-launch .txt p { font-size: 0.85rem; color: rgba(255,255,255,0.72); margin-top: 0.2rem; }
+
+/* free lessons get a clean, friendly "free" ribbon to contrast the premium look */
+.free-ribbon { display: inline-flex; align-items: center; gap: 0.4rem; font-size: 0.68rem; font-weight: 800; letter-spacing: 0.1em; text-transform: uppercase; color: var(--teal-600); background: var(--teal-100); padding: 0.3rem 0.8rem; border-radius: var(--pill); }
+
 /* fade-up reveal */
 .fade-up { opacity: 0; transform: translateY(26px); transition: opacity 0.65s ease, transform 0.65s ease; }
 .fade-up.visible { opacity: 1; transform: translateY(0); }
