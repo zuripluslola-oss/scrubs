@@ -308,7 +308,7 @@ def testi_track():
 FAQS = [
     ("What is Must Love Scrubs?", "A premium nursing education ecosystem: prep courses built on proven retention science, Scrub TV learning videos with quizzes, a curated nurse lifestyle store, and Esi — an AI tutor that guides your studying and helps you navigate the site."),
     ("Is Esi free?", "Esi is a premium add-on to any prep course. She tutors you one-on-one, targets your weak areas, and helps you find your way around the site. You can preview what she does on the Esi page."),
-    ("How do points work?", "Log in and claim 5 free points every day on your Profile Dashboard. Earn more by completing quizzes, puzzles, and video activities. Redeem points for digital downloads in the store — study guides, brain sheets, planners and more."),
+    ("How do points work?", "Log in and claim 10 free points every day on your Profile Dashboard. Earn more by completing quizzes, puzzles, and video activities. Redeem points for digital downloads in the store — study guides, brain sheets, planners and more."),
     ("What courses do you offer?", "NCLEX Complete is our flagship, alongside specialty courses like Pharmacology Mastery, Med-Surg Essentials, and NGN Prioritization &amp; Delegation. The library grows constantly."),
     ("How often does Scrub TV update?", "Fresh videos drop every two weeks across eight specialty channels — each with quizzes and activities that earn you points."),
     ("Can I use Must Love Scrubs on my phone?", "Absolutely — the entire site is designed mobile-first, with app-style navigation. Study on the bus, in the break room, or on the couch."),
@@ -325,42 +325,50 @@ def faq_list():
     return '<div class="faq-list">' + "".join(out) + '</div>'
 
 # ---------------------------------------------------------------- HOMEPAGE
-HERO_SCENE = """<svg viewBox="0 0 560 420" role="img" aria-label="Instructor training nursing students at a hospital bed">
+def _student(x, top, skin, hair, scrub):
+    # a seated student at a desk taking a test
+    return f"""<g transform="translate({x},{top})">
+      <rect x="-34" y="96" width="108" height="14" rx="4" fill="#3a1f7a"/>
+      <rect x="-20" y="86" width="80" height="14" rx="3" fill="#f6f3ff"/>
+      <path d="M-2 40 q22 -30 44 0 l6 54 h-56z" fill="{scrub}"/>
+      <circle cx="20" cy="20" r="18" fill="{skin}"/>
+      <path d="M4 16a18 18 0 0 1 32-4l3-8a24 24 0 0 0-40 6z" fill="{hair}"/>
+      <path d="M2 60 q-16 14 -22 26l9 8q16 -12 24 -24z" fill="{scrub}"/>
+    </g>"""
+
+HERO_SCENE = f"""<svg viewBox="0 0 560 420" role="img" aria-label="Nursing students taking a test in a classroom">
   <defs>
-    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0" stop-color="#4d2b9e"/><stop offset="1" stop-color="#2b1055"/>
-    </linearGradient>
-    <linearGradient id="floor" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0" stop-color="#4d2b9e"/><stop offset="1" stop-color="#1a0942"/>
-    </linearGradient>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#4d2b9e"/><stop offset="1" stop-color="#2b1055"/></linearGradient>
+    <linearGradient id="floor" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#3a1f7a"/><stop offset="1" stop-color="#1a0942"/></linearGradient>
   </defs>
   <rect width="560" height="420" fill="url(#sky)"/>
-  <rect y="300" width="560" height="120" fill="url(#floor)"/>
-  <rect x="40" y="60" width="120" height="150" rx="10" fill="#3a1f7a"/>
-  <path d="M60 100h80M60 125h80M60 150h55" stroke="#a78bff" stroke-width="6" stroke-linecap="round" opacity="0.8"/>
-  <path d="M60 175 h20 l8-16 10 30 9-14h33" stroke="#8b5cff" stroke-width="5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
-  <rect x="120" y="250" width="330" height="70" rx="16" fill="#14b8a8"/>
-  <rect x="130" y="230" width="310" height="34" rx="14" fill="#f6f3ff"/>
-  <ellipse cx="175" cy="247" rx="22" ry="14" fill="#ffffff"/>
-  <path d="M205 252 q90 -18 220 -6 l0 18 -220 0z" fill="#a78bff" opacity="0.92"/>
-  <rect x="135" y="318" width="14" height="70" fill="#432a8a"/>
-  <rect x="425" y="318" width="14" height="70" fill="#432a8a"/>
-  <circle cx="480" cy="120" r="26" fill="#f4c39a"/>
-  <path d="M462 112a26 26 0 0 1 36-4l4-10a32 32 0 0 0-46 6z" fill="#2b1055"/>
-  <path d="M450 210 q30 -66 60 0 l6 90 h-72z" fill="#14b8a8"/>
-  <path d="M452 170 q-24 34 -40 44l10 14q26 -14 42 -40z" fill="#14b8a8"/>
-  <path d="M420 216 l-16 12 8 10 16 -10z" fill="#f4c39a"/>
-  <circle cx="340" cy="150" r="22" fill="#e8b088"/>
-  <path d="M322 144a22 22 0 0 1 34-6l6-8a30 30 0 0 0-46 8z" fill="#3b2a20"/>
-  <path d="M315 230 q25 -54 50 0 l5 74 h-60z" fill="#8b5cff"/>
-  <path d="M318 196 q-20 26 -34 34l8 12q22 -10 36 -32z" fill="#8b5cff"/>
-  <circle cx="255" cy="160" r="21" fill="#8a5a3b"/>
-  <path d="M238 154a21 21 0 0 1 33-6l5-8a29 29 0 0 0-44 8z" fill="#161616"/>
-  <path d="M232 236 q23 -50 46 0 l5 68 h-56z" fill="#a78bff"/>
-  <path d="M234 202 q-16 22 -28 30l7 11q20 -10 32 -28z" fill="#a78bff"/>
-  <circle cx="500" cy="60" r="3" fill="#ffc23d"/><circle cx="520" cy="80" r="2" fill="#ffc23d" opacity="0.7"/>
-  <circle cx="60" cy="40" r="2.5" fill="#a78bff" opacity="0.8"/><circle cx="90" cy="28" r="2" fill="#8b5cff" opacity="0.8"/>
+  <rect y="312" width="560" height="108" fill="url(#floor)"/>
+  <!-- whiteboard -->
+  <rect x="60" y="40" width="200" height="118" rx="10" fill="#f6f3ff"/>
+  <path d="M78 70h150M78 92h150M78 114h96" stroke="#8b5cff" stroke-width="6" stroke-linecap="round" opacity="0.6"/>
+  <path d="M78 136 h24 l8-14 10 26 9-12h55" stroke="#14b8a8" stroke-width="5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- clock -->
+  <circle cx="330" cy="70" r="24" fill="#2b1055" stroke="#a78bff" stroke-width="3"/>
+  <path d="M330 70 L330 55 M330 70 L342 74" stroke="#ffc23d" stroke-width="3" stroke-linecap="round"/>
+  <!-- three students at desks taking the test -->
+  {_student(70, 210, '#e8b088', '#2a1a12', '#14b8a8')}
+  {_student(240, 210, '#f4c39a', '#3b2a20', '#8b5cff')}
+  {_student(410, 210, '#c98d63', '#161616', '#a78bff')}
+  <circle cx="500" cy="52" r="3" fill="#ffc23d"/><circle cx="524" cy="120" r="2" fill="#a78bff" opacity="0.8"/>
+  <circle cx="40" cy="188" r="2.5" fill="#14b8a8" opacity="0.8"/>
 </svg>"""
+
+HOME_LESSONS = [
+    ("01", "Critical Lab Values", "course-lab-values.html", "linear-gradient(135deg,#4d2b9e,#14b8a8)"),
+    ("02", "Prioritization &amp; Delegation", "course-prioritization.html", "linear-gradient(135deg,#2b1055,#8b5cff)"),
+    ("03", "Medication Safety", "course-med-safety.html", "linear-gradient(135deg,#4d2b9e,#ffb038)"),
+    ("04", "Spot the Deterioration", "course-deterioration.html", "linear-gradient(135deg,#2b1055,#e5484d)"),
+]
+def home_lessons():
+    out = []
+    for num, name, slug, grad in HOME_LESSONS:
+        out.append(f'<a class="course-card fade-up" href="{slug}"><div class="cover" style="background:{grad};">{num}</div><div class="body"><b>{name}</b><small>Audio scene + 4 tests &middot; Free</small><div class="foot"><span class="p" style="color:var(--teal-600);">Free</span><span style="font-size:0.82rem;font-weight:700;color:var(--coral-500);">Start &rarr;</span></div></div></a>')
+    return '<div class="course-shelf">' + "".join(out) + '</div>'
 
 INDEX_BODY = f"""  <main>
     <section class="hero">
@@ -369,20 +377,20 @@ INDEX_BODY = f"""  <main>
       </div>
       <div class="wrap hero-grid">
         <div>
-          <span class="flag">{I['star']} #1 IN NCLEX PREP CONFIDENCE</span>
+          <span class="flag">{I['star']} FREE NCLEX PRACTICE &mdash; NO CARD NEEDED</span>
           <h1>Train for the nurse you're <span class="hl on-dark">becoming</span>.</h1>
-          <p class="lede">Prep courses built on proven retention science, videos that teach like a great preceptor, and Esi — the AI tutor that makes it stick. This is the ecosystem of nursing.</p>
+          <p class="lede">Free NCLEX practice, audio scenes that teach like a great preceptor, and Esi &mdash; the AI tutor that makes it stick. This is the ecosystem of nursing.</p>
           <div class="hero-cta">
-            <a class="btn btn-coral" href="course-lab-values.html">Try a free scene</a>
+            <a class="btn btn-coral" href="course-lab-values.html">Try a free lesson</a>
             <a class="btn btn-ghost" href="courses.html">See all courses</a>
           </div>
-          <p class="hero-note">Free NCLEX practice &middot; daily points &middot; no card required</p>
+          <p class="hero-note">Free practice &middot; 10 points a day &middot; no card required</p>
         </div>
         <div class="hero-visual fade-up">
           <div class="scene">{HERO_SCENE}</div>
           <div class="float-chip tl"><span class="ico" style="background:var(--teal-100);color:var(--teal-600);">{I['check']}</span> Clinical-judgment focused</div>
           <div class="float-chip br"><span class="ico" style="background:var(--gold-100);color:var(--gold-600);">{I['star']}</span> Earn points as you learn</div>
-          <span class="scene-tag">Swap-ready: bedside training photo goes here</span>
+          <span class="scene-tag">Swap-ready: students-in-class photo goes here</span>
         </div>
       </div>
     </section>
@@ -392,15 +400,14 @@ INDEX_BODY = f"""  <main>
         <div class="section-head fade-up">
           <div class="row">
             <div>
-              <span class="eyebrow">Scrub TV</span>
-              <h2>Watch. Quiz. <span class="hl">Remember.</span></h2>
-              <p>Eight specialty channels. Fresh videos every two weeks — each with quizzes and activities that earn you points.</p>
+              <span class="eyebrow">Scrub TV &middot; Free</span>
+              <h2>Four free lessons. <span class="hl">Every month.</span></h2>
+              <p>Each is a curated audio scene plus a full workout — memory game, matrix, chart test, and a clinical quick check.</p>
             </div>
-            <a class="btn btn-line" href="scrubtv.html">All channels</a>
+            <a class="btn btn-line" href="scrubtv.html">All lessons</a>
           </div>
         </div>
-        {cat_grid()}
-        {video_row()}
+        {home_lessons()}
       </div>
     </section>
 
@@ -476,9 +483,38 @@ INDEX_BODY = f"""  <main>
         <div class="points-strip fade-up">
           <div class="txt">
             <b>Your points are currency here.</b>
-            <p>Claim 5 free points daily, earn more from quizzes &amp; contests, then redeem for study guides, brain sheets, planners and other digital downloads.</p>
+            <p>Claim 10 free points daily, earn more from quizzes &amp; contests, then redeem for study guides, brain sheets, planners and other digital downloads.</p>
           </div>
           <a class="btn btn-dark" href="profile.html">Claim today's points</a>
+        </div>
+      </div>
+    </section>
+
+    <section style="background:linear-gradient(150deg,var(--teal-600),var(--indigo-700));color:#fff;">
+      <div class="wrap fade-up">
+        <span class="eyebrow" style="color:var(--gold-400);">Points &amp; rewards</span>
+        <h2 style="font-size:clamp(2rem,6vw,3rem);max-width:16ch;">Study more. <span class="hl">Pay less.</span></h2>
+        <p style="margin-top:1rem;max-width:52ch;color:rgba(255,255,255,0.82);">The more free lessons you crush, the cheaper your paid prep gets. Wild concept, right?</p>
+        <div style="display:grid;gap:1rem;margin-top:2.4rem;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));">
+          <div style="background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.16);border-radius:var(--radius);padding:1.4rem;"><div style="font-family:var(--font-display);font-size:1.6rem;color:var(--gold-400);font-weight:800;">01</div><b style="display:block;margin-top:0.4rem;">Take a free lesson</b><span style="font-size:0.85rem;color:rgba(255,255,255,0.7);">Any Scrub TV lesson or free NCLEX practice.</span></div>
+          <div style="background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.16);border-radius:var(--radius);padding:1.4rem;"><div style="font-family:var(--font-display);font-size:1.6rem;color:var(--gold-400);font-weight:800;">02</div><b style="display:block;margin-top:0.4rem;">Pass the quick check</b><span style="font-size:0.85rem;color:rgba(255,255,255,0.7);">Prove it on the clinical quiz.</span></div>
+          <div style="background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.16);border-radius:var(--radius);padding:1.4rem;"><div style="font-family:var(--font-display);font-size:1.6rem;color:var(--gold-400);font-weight:800;">03</div><b style="display:block;margin-top:0.4rem;">Bank points + streak</b><span style="font-size:0.85rem;color:rgba(255,255,255,0.7);">10 free a day, plus quiz &amp; streak bonuses.</span></div>
+          <div style="background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.16);border-radius:var(--radius);padding:1.4rem;"><div style="font-family:var(--font-display);font-size:1.6rem;color:var(--gold-400);font-weight:800;">04</div><b style="display:block;margin-top:0.4rem;">Redeem the reward</b><span style="font-size:0.85rem;color:rgba(255,255,255,0.7);">Course discounts, store downloads &amp; the Dictionary.</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="store">
+      <div class="wrap">
+        <div class="course-hero fade-up" style="box-shadow:var(--shadow-2);">
+          <div class="art" style="background:radial-gradient(circle at 70% 25%, rgba(255,201,77,0.4), transparent 50%), radial-gradient(circle at 20% 80%, rgba(139,92,255,0.5), transparent 55%), linear-gradient(150deg,#2b1055,#4d2b9e);"><span class="big" style="font-size:3.4rem;">A&ndash;Z</span></div>
+          <div class="body">
+            <div class="chip-row"><span class="chip gold">NEW TOOL</span><span class="chip teal">217+ terms</span></div>
+            <h3>The Nurse Dictionary</h3>
+            <p>Every term, abbreviation, and bit of nurse-speak &mdash; in plain language. <b>Free to search online.</b> Or get the full download: every word with a <b>real clinical example + rationale</b>, so it actually sticks.</p>
+            <div class="price-line"><span class="price">$4.99</span><span class="per">download &middot; or unlock with points &middot; free with any course</span></div>
+            <div class="hero-cta" style="margin-top:0.4rem;"><a class="btn btn-coral" href="dictionary.html">Open the Dictionary</a><a class="btn btn-line" href="dictionary.html#download">Get the download</a></div>
+          </div>
         </div>
       </div>
     </section>
@@ -486,8 +522,8 @@ INDEX_BODY = f"""  <main>
     <section class="proof">
       <div class="wrap">
         <div class="stat-row">
-          <div class="stat-big fade-up"><b><span data-count="1400">0</span><span class="plus">+</span></b><span>Nurses trained with our courses</span></div>
-          <div class="stat-big fade-up"><b><span data-count="8">0</span></b><span>Specialty video channels</span></div>
+          <div class="stat-big fade-up"><b><span data-count="1400">0</span><span class="plus">+</span></b><span>Course users already in</span></div>
+          <div class="stat-big fade-up"><b><span data-count="217">0</span><span class="plus">+</span></b><span>Dictionary terms, free to search</span></div>
           <div class="stat-big fade-up"><b>24/7</b><span>Esi tutoring, whenever you study</span></div>
         </div>
         <div class="trust-row fade-up">
@@ -528,7 +564,7 @@ INDEX_BODY = f"""  <main>
           <a class="btn btn-coral" href="join.html">Create my free account</a>
           <div class="perks">
             <span>{I['check']} Free forever</span>
-            <span>{I['check']} 5 points daily</span>
+            <span>{I['check']} 10 points daily</span>
             <span>{I['check']} No card required</span>
           </div>
         </div>
@@ -652,7 +688,7 @@ PAGES["store.html"] = ("Store — Must Love Scrubs",
         {"".join(f'<div class="tile fade-up"><span class="tag">Digital</span><h3>{d}</h3><p>Instant download &middot; buy or redeem with points.</p></div>' for d in DIGITAL)}
       </div>
       <div class="points-strip fade-up" style="margin-top:2rem;">
-        <div class="txt"><b>5 free points every day.</b><p>Claim daily on your dashboard, stack them up, and cash them in right here.</p></div>
+        <div class="txt"><b>10 free points every day.</b><p>Claim daily on your dashboard, stack them up, and cash them in right here.</p></div>
         <a class="btn btn-dark" href="profile.html">Go to my dashboard</a>
       </div>
     </div>
@@ -841,8 +877,8 @@ PAGES["profile.html"] = ("Profile Dashboard — Must Love Scrubs",
       <div class="tile points-card fade-up">
         <span class="tag" style="color:var(--indigo-950);opacity:0.7;">Points balance</span>
         <div class="balance"><span data-points-balance>0</span> pts</div>
-        <p style="margin:0.3rem 0 1rem;font-size:0.85rem;">Claim 5 free points every day you visit.</p>
-        <button class="btn btn-dark" data-claim-daily>Claim today's 5 points</button>
+        <p style="margin:0.3rem 0 1rem;font-size:0.85rem;">Claim 10 free points every day you visit.</p>
+        <button class="btn btn-dark" data-claim-daily>Claim today's 10 points</button>
       </div>
       <div class="tile span2 fade-up">
         <span class="tag">Course progress</span>
@@ -1358,96 +1394,54 @@ PAGES["nclex.html"] = ("NCLEX Prep (RN &amp; LPN) — Must Love Scrubs",
     PREP_BODY, "courses")
 
 # ---------------------------------------------------------------- NURSE DICTIONARY
-TERMS = [
-    ("Afebrile", "Assessment", "Without fever; a normal body temperature."),
-    ("Auscultation", "Assessment", "Listening to internal body sounds (heart, lungs, bowel) with a stethoscope."),
-    ("Baseline", "Assessment", "A patient's normal or usual status, used as the comparison point."),
-    ("Cyanosis", "Assessment", "Bluish discoloration of the skin or lips from low oxygen."),
-    ("Diaphoresis", "Assessment", "Profuse sweating, often a sign of distress or shock."),
-    ("Edema", "Assessment", "Swelling caused by excess fluid trapped in the tissues."),
-    ("Febrile", "Assessment", "Having a fever."),
-    ("Guarding", "Assessment", "Tensing of the abdominal muscles when touched, signaling pain or peritoneal irritation."),
-    ("Jaundice", "Assessment", "Yellowing of the skin and eyes from elevated bilirubin."),
-    ("Lethargy", "Assessment", "Drowsiness or a reduced level of alertness."),
-    ("Malaise", "Assessment", "A general feeling of discomfort or being unwell."),
-    ("Pallor", "Assessment", "Paleness of the skin, often from anemia or poor perfusion."),
-    ("Skin turgor", "Assessment", "The skin's elasticity; poor turgor (tenting) suggests dehydration."),
-    ("Homeostasis", "Assessment", "The body's balanced, stable internal environment."),
-    ("Bradycardia", "Cardiac", "A heart rate under 60 beats per minute."),
-    ("Tachycardia", "Cardiac", "A heart rate over 100 beats per minute."),
-    ("Dysrhythmia", "Cardiac", "An abnormal heart rhythm (also called arrhythmia)."),
-    ("Ischemia", "Cardiac", "Reduced blood flow and oxygen to a tissue."),
-    ("Infarction", "Cardiac", "Tissue death caused by loss of blood supply, as in a heart attack."),
-    ("Perfusion", "Cardiac", "Blood flow that delivers oxygen and nutrients to the tissues."),
-    ("Hypertension", "Cardiac", "High blood pressure."),
-    ("Hypotension", "Cardiac", "Low blood pressure."),
-    ("Orthostatic hypotension", "Cardiac", "A drop in blood pressure on standing that causes dizziness."),
-    ("Edema, pitting", "Cardiac", "Swelling that leaves a temporary indentation when pressed."),
-    ("Dyspnea", "Respiratory", "Difficult or labored breathing; shortness of breath."),
-    ("Apnea", "Respiratory", "The absence of breathing."),
-    ("Tachypnea", "Respiratory", "Abnormally rapid breathing."),
-    ("Bradypnea", "Respiratory", "Abnormally slow breathing."),
-    ("Hypoxia", "Respiratory", "Low oxygen levels in the body's tissues."),
-    ("Hypoxemia", "Respiratory", "Low oxygen levels in the blood."),
-    ("Crackles", "Respiratory", "Popping or crackling lung sounds, often from fluid (also called rales)."),
-    ("Wheezing", "Respiratory", "A high-pitched whistling sound from narrowed airways."),
-    ("Stridor", "Respiratory", "A harsh, high-pitched sound signaling upper-airway obstruction &mdash; an emergency."),
-    ("SpO2", "Respiratory", "Oxygen saturation of the blood, measured by pulse oximetry."),
-    ("Analgesic", "Pharmacology", "A medication that relieves pain."),
-    ("Antipyretic", "Pharmacology", "A medication that reduces fever."),
-    ("Anticoagulant", "Pharmacology", "A blood thinner that prevents or slows clot formation."),
-    ("Diuretic", "Pharmacology", "A medication that increases urine output to remove fluid."),
-    ("Contraindication", "Pharmacology", "A specific reason a medication or treatment should not be used."),
-    ("Titrate", "Pharmacology", "To adjust a dose gradually until the desired effect is reached."),
-    ("Half-life", "Pharmacology", "The time it takes for a drug's blood concentration to fall by half."),
-    ("Loading dose", "Pharmacology", "A larger initial dose given to reach a therapeutic level quickly."),
-    ("Peak and trough", "Pharmacology", "The highest (peak) and lowest (trough) drug levels in the blood."),
-    ("Adverse effect", "Pharmacology", "A harmful, unintended reaction to a medication."),
-    ("Electrolytes", "Labs", "Charged minerals (sodium, potassium, calcium, magnesium) that regulate body function."),
-    ("BUN", "Labs", "Blood urea nitrogen &mdash; a marker of kidney function and hydration."),
-    ("Creatinine", "Labs", "A waste product and a key marker of kidney function; rising values signal failure."),
-    ("INR", "Labs", "A measure of how long blood takes to clot; used to monitor warfarin."),
-    ("Hemoglobin", "Labs", "The oxygen-carrying protein inside red blood cells."),
-    ("Hematocrit", "Labs", "The percentage of blood volume made up of red blood cells."),
-    ("WBC", "Labs", "White blood cell count; rises in response to infection."),
-    ("Platelets", "Labs", "Cell fragments that help the blood clot."),
-    ("ABG", "Labs", "Arterial blood gas &mdash; measures oxygenation and acid-base balance."),
-    ("NPO", "Procedures", "Nothing by mouth (nil per os) &mdash; no food or drink, often before surgery."),
-    ("Indwelling catheter", "Procedures", "A tube (Foley) that drains urine continuously from the bladder."),
-    ("IV", "Procedures", "Intravenous &mdash; delivered into a vein."),
-    ("IM", "Procedures", "Intramuscular &mdash; injected into a muscle."),
-    ("Subcutaneous", "Procedures", "Into the fatty tissue just under the skin (subQ)."),
-    ("Central line", "Procedures", "An IV catheter placed in a large central vein for long-term or high-volume access."),
-    ("Incentive spirometer", "Procedures", "A device that encourages deep breathing to prevent post-op lung complications."),
-    ("Sterile technique", "Procedures", "Practices that keep an area completely free of microorganisms."),
-    ("SBAR", "Abbreviations", "Situation, Background, Assessment, Recommendation &mdash; a structured handoff/communication tool."),
-    ("ADLs", "Abbreviations", "Activities of Daily Living &mdash; bathing, dressing, eating, toileting, mobility."),
-    ("PRN", "Abbreviations", "\"As needed\" (pro re nata) &mdash; given only when required."),
-    ("STAT", "Abbreviations", "Immediately, without delay."),
-    ("I&O", "Abbreviations", "Intake and Output &mdash; tracking fluids in versus out."),
-    ("LOC", "Abbreviations", "Level of Consciousness."),
-    ("DNR", "Abbreviations", "Do Not Resuscitate &mdash; an order to withhold CPR."),
-    ("Hx / Dx / Tx", "Abbreviations", "History / Diagnosis / Treatment."),
-    ("Gravida", "Maternity & Peds", "The number of times a person has been pregnant."),
-    ("Para", "Maternity & Peds", "The number of pregnancies carried to a viable age."),
-    ("Meconium", "Maternity & Peds", "A newborn's first stool, dark green and sticky."),
-    ("Fontanelle", "Maternity & Peds", "A soft spot between the bones of an infant's skull."),
-]
-DICT_CATS = ["Assessment", "Cardiac", "Respiratory", "Pharmacology", "Labs", "Procedures", "Abbreviations", "Maternity & Peds"]
+import json as _json2
+DICT_DATA = _json2.load(open(os.path.join(ROOT, "data", "nurse-dictionary.json"), encoding="utf-8"))
+
+# map the 32 fine categories to a handful of filter groups
+DICT_GROUP = {
+    "Cardiovascular": "Body systems", "Respiratory": "Body systems", "Neurologic": "Body systems",
+    "Renal": "Body systems", "Gastrointestinal": "Body systems", "Endocrine": "Body systems",
+    "Hematology": "Body systems", "Immunology": "Body systems", "Oncology": "Body systems",
+    "Pharmacology": "Pharmacology", "Medication Administration": "Pharmacology", "Pain Management": "Pharmacology",
+    "Labs & Diagnostics": "Labs & values", "Acid-Base": "Labs & values", "Fluids & Electrolytes": "Labs & values",
+    "Infection Control": "Safety & infection", "Infection": "Safety & infection", "Safety": "Safety & infection",
+    "Assessment": "Fundamentals", "Fundamentals": "Fundamentals", "NCLEX Skills": "Fundamentals",
+    "Communication": "Fundamentals", "Mobility": "Fundamentals", "Nutrition": "Fundamentals",
+    "Anatomy & Physiology": "Fundamentals",
+    "IV Therapy": "Clinical care", "Skin & Wound": "Clinical care", "Emergency": "Clinical care",
+    "Maternal-Newborn": "Clinical care", "Palliative & Hospice": "Clinical care",
+    "Ethics & Legal": "Professional", "Leadership": "Professional",
+}
+DICT_GROUPS = ["Body systems", "Pharmacology", "Labs & values", "Safety & infection", "Fundamentals", "Clinical care", "Professional"]
+
+def _esc(t):
+    return (t or "").replace('"', '&quot;')
 
 def dict_cards():
     out = []
-    for term, cat, defn in sorted(TERMS, key=lambda t: t[0].lower()):
-        search = (term + " " + defn).lower().replace('&mdash;', '').replace('"', '')
-        out.append(f"""<div class="term-card" data-cat="{cat}" data-search="{search}">
+    def g(e, k):
+        v = e.get(k, "")
+        return "" if v is None else str(v).strip()
+    for e in sorted(DICT_DATA, key=lambda x: str(x["Term"]).lower()):
+        term = g(e, "Term"); defn = g(e, "Plain-Language Definition")
+        cat = g(e, "Category") or "Fundamentals"; grp = DICT_GROUP.get(cat, "Fundamentals")
+        abbr = g(e, "Abbreviation / Expansion")
+        rel = g(e, "Related Terms")
+        kw = (g(e, "Search Keywords") + " " + term + " " + defn + " " + cat).lower().replace('"', "")
+        abbr_html = f'<span class="term-abbr">{abbr}</span>' if abbr else ""
+        rel_html = f'<span class="term-rel">Related: {rel}</span>' if rel else ""
+        hi = ' data-hi="1"' if e.get("NCLEX Relevance") == "High" else ""
+        out.append(f"""<div class="term-card" data-cat="{grp}" data-search="{_esc(kw)}"{hi}>
           <div class="term-top"><span class="term">{term}</span><span class="term-cat">{cat}</span></div>
+          {abbr_html}
           <p>{defn}</p>
+          {rel_html}
         </div>""")
     return "".join(out)
 
 def dict_chips():
     out = ['<button class="chip-filter on" data-cat="all">All</button>']
-    for c in DICT_CATS:
+    for c in DICT_GROUPS:
         out.append(f'<button class="chip-filter" data-cat="{c}">{c}</button>')
     return "".join(out)
 
@@ -1455,7 +1449,7 @@ DICT_BODY = f"""  <div class="page-hero">
     <div class="wrap inner">
       <span class="lesson-label" style="color:var(--gold-400);">Free tool</span>
       <h1 style="margin-top:0.6rem;">The Nurse <span class="em">Dictionary</span>.</h1>
-      <p>Every term, abbreviation, and bit of nurse-speak &mdash; in plain language. Search it, filter it, learn it. Free, forever, and always growing.</p>
+      <p>Every term, abbreviation, and bit of nurse-speak &mdash; in plain language. Search it, filter it, learn it. Free to search, forever, and always growing.</p>
     </div>
   </div>
 
@@ -1467,7 +1461,7 @@ DICT_BODY = f"""  <div class="page-hero">
           <input type="search" placeholder="Search a term or abbreviation&hellip;" aria-label="Search the dictionary">
         </div>
         <div class="dict-chips">{dict_chips()}</div>
-        <p class="dict-count">{len(TERMS)} terms</p>
+        <p class="dict-count">{len(DICT_DATA)} terms</p>
       </div>
       <div class="dict-grid">{dict_cards()}</div>
       <div class="dict-empty">
@@ -1476,7 +1470,23 @@ DICT_BODY = f"""  <div class="page-hero">
     </div>
   </section>
 
-  <section style="background:var(--card);">
+  <section id="download" style="background:var(--card);">
+    <div class="wrap">
+      <div class="course-hero fade-up" style="box-shadow:var(--shadow-2);">
+        <div class="art" style="background:radial-gradient(circle at 70% 25%, rgba(255,201,77,0.4), transparent 50%), radial-gradient(circle at 20% 80%, rgba(20,184,168,0.5), transparent 55%), linear-gradient(150deg,#2b1055,#4d2b9e);"><span class="big" style="font-size:3rem;">A&ndash;Z</span></div>
+        <div class="body">
+          <div class="chip-row"><span class="chip gold">Download</span><span class="chip teal">Example + rationale for every term</span></div>
+          <h3>Take the whole dictionary with you.</h3>
+          <p>The download goes deeper than the free search: every word paired with a <b>real clinical example</b> and a <b>rationale</b> &mdash; same lane as a question bank, a different way to learn and retain.</p>
+          <div class="price-line"><span class="price">$4.99</span><span class="per">one-time</span></div>
+          <div class="chip-row"><span class="chip">Unlock with points</span><span class="chip">Free with any course</span></div>
+          <div class="hero-cta" style="margin-top:0.4rem;"><a class="btn btn-coral" href="join.html">Unlock with points</a><a class="btn btn-line" href="store.html">Buy for $4.99</a></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section style="background:var(--bg);">
     <div class="wrap" style="text-align:center;">
       <div class="section-head fade-up" style="margin-inline:auto;"><span class="lesson-label" style="color:var(--teal-600);">Stuck on a term?</span><h2>Esi can explain <span class="em">anything</span>.</h2><p style="margin-inline:auto;">Every definition here is free. For a term walked through your way &mdash; with examples and a quick check &mdash; Esi is one tap away.</p></div>
       <a class="btn btn-coral" href="esi.html">Meet Esi</a>
@@ -1487,7 +1497,7 @@ DICT_BODY = f"""  <div class="page-hero">
 """
 
 PAGES["dictionary.html"] = ("Nurse Dictionary &mdash; Must Love Scrubs",
-    "A free, searchable dictionary of nursing and medical terms, abbreviations, and definitions in plain language.",
+    "A free, searchable dictionary of 217+ nursing and medical terms, abbreviations, and plain-language definitions. Download with examples and rationales.",
     DICT_BODY, "")
 
 # ================================================================ COURSE TEMPLATE

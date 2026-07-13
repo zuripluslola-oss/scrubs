@@ -96,6 +96,39 @@ A searchable index of medical/nursing terms and definitions — free tool at
 `dictionary.html`. Search box + A–Z filter + category chips. Great for SEO and
 daily-return habit. Grows over time.
 
+## Nurse Dictionary = a product (owner-locked)
+
+Data lives in `data/nurse-dictionary.json` (+ .csv); `dictionary.html` is generated
+from it (217+ curated terms, 32 categories mapped to 7 filter groups). No duplicates.
+- **Free** to search online.
+- **Paid download $4.99** — every term with a **real clinical example + rationale**
+  ("same lane as a question bank, different way to learn"). **Unlockable with points**,
+  and **free with any course purchase**. Advertised on the homepage + dictionary page.
+
+## Points — what unlocks with points (owner-locked + roadmap)
+
+Earn: 10/day daily claim + quiz/streak/contest bonuses. Redeemable for:
+Nurse Dictionary download · store digital downloads (brain sheets, planners, drug
+cards) · course discount dollars · (roadmap: mock-exam retakes, streak freezes,
+Esi day-passes, exclusive Scrub TV drops, merch discount codes, spotlight submission boosts).
+
+## Master Question Bank architecture (owner-locked plan — Phase 3 content build)
+
+Separate production asset from the Dictionary; they connect via shared topic +
+specialty tags. Formats: Excel (edit) + CSV (bulk import) + website JSON (`data/`).
+- **NCLEX-RN ~3,000** (Adult Health, Fundamentals, Pharmacology, Mental Health,
+  Maternal/Newborn, Pediatrics, Leadership/Mgmt, Safety & Infection, Clinical Judgment)
+- **NCLEX-PN/LPN ~1,500** (practical scope, care coordination, med admin, procedures, prioritization)
+- **22 specialty banks ~100–250 each (~3,000 total)** — the sellable specialty prep.
+- Every record: id, exam, level, specialty, category, topic, clinical-judgment step,
+  difficulty, type, stem, options, correct, why-correct, why-others-wrong, NCLEX rationale,
+  key concept, memory tip.
+- Types: MC, SATA, matrix/grid, bow-tie, trend, drag-drop, ordered response, case study, prioritization, delegation.
+- **Approach: benchmark-first** — build the taxonomy + DB template, then a 250 RN +
+  100 specialty benchmark batch to lock quality, THEN scale. Don't ship a huge bank that
+  fails when nurses use it. QC gate: verified answer, NCLEX wording, no ambiguity,
+  rationale written, difficulty tagged, dedup checked, specialty placement checked.
+
 ## Build phases
 
 **Phase 1 (current):** design system, homepage, all pages linked, menus, tickers, widget, footer, legal drafts.

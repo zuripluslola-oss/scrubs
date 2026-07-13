@@ -1093,7 +1093,10 @@ body.mls-paid .gate { display: none; }
 .term-card .term-top { display: flex; align-items: baseline; justify-content: space-between; gap: 0.6rem; }
 .term-card .term { font-family: var(--font-display); font-weight: 800; font-size: 1.15rem; }
 .term-card .term-cat { font-size: 0.62rem; font-weight: 800; letter-spacing: 0.08em; text-transform: uppercase; color: var(--coral-500); flex-shrink: 0; }
+.term-card .term-abbr { display: block; margin-top: 0.2rem; font-size: 0.8rem; font-weight: 700; color: var(--teal-600); }
 .term-card p { margin-top: 0.5rem; font-size: 0.9rem; color: var(--ink-60); line-height: 1.5; }
+.term-card .term-rel { display: block; margin-top: 0.6rem; font-size: 0.72rem; color: var(--ink-60); opacity: 0.8; }
+.term-card[data-hi="1"] { border-color: rgba(255,194,61,0.5); }
 .term-card .say { display: block; margin-top: 0.35rem; font-size: 0.78rem; color: var(--teal-600); font-style: italic; }
 .dict-empty { display: none; text-align: center; padding: 2.5rem 1rem; color: var(--ink-60); }
 .dict-empty.show { display: block; }

@@ -136,7 +136,7 @@
     if (claimed) setClaimed();
     claimBtn.addEventListener('click', function () {
       if (localStorage.getItem('mlsClaimedOn') === new Date().toDateString()) return;
-      localStorage.setItem('mlsPoints', String(getPoints() + 5));
+      localStorage.setItem('mlsPoints', String(getPoints() + 10));
       localStorage.setItem('mlsClaimedOn', new Date().toDateString());
       renderPoints();
       setClaimed();
