@@ -44,7 +44,7 @@ TICKER_ESI = "".join(
 
 TICKER_COURSES = "".join(
     '<span>&#9733; <em>NCLEX Complete</em> — our flagship prep course is live</span>'
-    '<span>&#9733; New Scrub TV drops every 2 weeks — watch, quiz, earn points</span>'
+    '<span>&#9733; 4 fresh free Scrub TV lessons every month — watch, quiz, earn points</span>'
     '<span>&#9733; Pharmacology &middot; Med-Surg &middot; Peds &middot; Mental Health &amp; more</span>'
     for _ in range(2))
 
@@ -97,7 +97,7 @@ def chrome(fname, title, desc, body, active=""):
           <li><a href="nclex.html">NCLEX Prep <small>RN &amp; LPN &middot; every NGN item type</small></a></li>
           <li><a href="course-lab-values.html">Free NCLEX Practice <small>Start with a free audio scene</small></a></li>
           <li><a href="courses.html">Courses <small>NCLEX prep, entrance exams &amp; more</small></a></li>
-          <li><a href="scrubtv.html">Scrub TV <small>Audio scenes + quizzes, new every 2 weeks</small></a></li>
+          <li><a href="scrubtv.html">Scrub TV <small>4 free lessons a month, quizzes &amp; more</small></a></li>
           <li><a href="esi.html">Esi <small>Your AI tutor &amp; site guide</small></a></li>
         </ul>
       </div>
@@ -1489,6 +1489,373 @@ DICT_BODY = f"""  <div class="page-hero">
 PAGES["dictionary.html"] = ("Nurse Dictionary &mdash; Must Love Scrubs",
     "A free, searchable dictionary of nursing and medical terms, abbreviations, and definitions in plain language.",
     DICT_BODY, "")
+
+# ================================================================ COURSE TEMPLATE
+# A course is data. Modules: audio scene (+curated video) -> memory game ->
+# matrix memory test -> chart test -> quiz (+SATA). Add a dict = add a course.
+
+def _scene(lines):
+    return "".join(f'<div class="line {w}"><span class="spk">{s}</span><p>{t}</p></div>' for w, s, t in lines)
+
+def _memory(cards):
+    faces = ["f1", "f2", "f3"]
+    out = []
+    for i, (tag, front, back) in enumerate(cards):
+        out.append(f"""<div class="flip fade-up" tabindex="0" role="button" aria-label="Reveal card {i+1}">
+          <div class="flip-inner">
+            <div class="flip-face flip-front {faces[i%3]}"><span class="idx">0{i+1}</span><span class="tag">{tag}</span><h3>{front}</h3><span class="cue">Tap to reveal &rarr;</span></div>
+            <div class="flip-face flip-back"><span class="bk-tag">{tag}</span><p>{back}</p></div>
+          </div></div>""")
+    return '<div class="carry-grid">' + "".join(out) + '</div>'
+
+def _matrix(m):
+    rows = "".join(
+        f'<tr data-answer="{ans}"><td>{find}</td><td class="mcell"><button data-col="exp" aria-label="{m["c1"]}"></button></td><td class="mcell"><button data-col="rep" aria-label="{m["c2"]}"></button></td></tr>'
+        for find, ans in m["rows"])
+    return f"""<div class="widget matrix-item fade-up"><span class="widget-tag">Matrix memory test</span>
+      <p class="prompt">{m['q']}</p>
+      <div class="matrix-scroll"><table class="matrix"><thead><tr><th>{m['head']}</th><th>{m['c1']}</th><th>{m['c2']}</th></tr></thead><tbody>{rows}</tbody></table></div>
+      <div class="quiz-actions" style="margin-top:1.2rem;"><button class="btn btn-coral matrix-check">Check the grid</button><span class="matrix-result" hidden style="font-weight:800;color:var(--teal-600);"><b></b></span></div></div>"""
+
+def _chart(ch):
+    head = "".join(f"<th>{h}</th>" for h in ch["cols"])
+    body = []
+    flag_cls = ' class="flag"'
+    for r_i, row in enumerate(ch["rows"]):
+        cells = ""
+        for c_i, v in enumerate(row):
+            fc = flag_cls if (r_i in ch.get("flag_rows", []) and c_i > 0) else ""
+            cells += f"<td{fc}>{v}</td>"
+        body.append(f"<tr>{cells}</tr>")
+    opts = "".join(f'<button class="choice" data-correct="{c}">{t}</button>' for t, c in ch["opts"])
+    return f"""<div class="widget mc-item fade-up"><span class="widget-tag">Chart &amp; trend test</span>
+      <p class="prompt">{ch['q']}</p>
+      <div class="trend-scroll"><table class="trend-table"><thead><tr>{head}</tr></thead><tbody>{"".join(body)}</tbody></table></div>
+      <div class="choice-grid" style="grid-template-columns:1fr;">{opts}</div>
+      <div class="quiz-actions" style="margin-top:1.2rem;"><button class="btn btn-coral mc-check">Check answer</button></div>
+      <div class="rationale" style="background:var(--bg);border-left:3px solid var(--teal-600);color:var(--ink);"><b style="color:var(--teal-600);">Why:</b><p style="color:var(--ink-60);">{ch['rationale']}</p></div></div>"""
+
+def _quiz(quiz):
+    L = "ABCDE"
+    out = []
+    for qi, (q, opts, rat) in enumerate(quiz, 1):
+        ob = "".join(f'<button class="opt" data-correct="{c}"><span class="k">{L[i]}</span><span>{t}</span></button>' for i, (t, c) in enumerate(opts))
+        out.append(f"""<div class="quiz-card" style="margin-bottom:2.5rem;"><div class="quiz-head"><span>Clinical quick check</span><span>Question {qi} of {len(quiz)}</span></div>
+          <p class="quiz-q">{q}</p><div class="opts">{ob}</div>
+          <div class="quiz-actions"><button class="btn btn-coral check-btn">Check answer</button></div>
+          <div class="rationale"><b>Why:</b><p>{rat}</p></div></div>""")
+    return "".join(out)
+
+def _sata(s):
+    if not s:
+        return ""
+    ob = "".join(f'<button class="opt" data-correct="{c}"><span class="box"></span><span>{t}</span></button>' for t, c in s["opts"])
+    return f"""<div class="quiz-card sata" style="margin-bottom:2.5rem;"><div class="quiz-head"><span>Clinical quick check</span><span>Select all that apply</span></div>
+      <span class="sata-tag">Next Gen NCLEX &middot; SATA</span><p class="quiz-q">{s['q']}</p>
+      <div class="opts">{ob}</div>
+      <div class="quiz-actions"><button class="btn btn-coral check-btn">Check answer</button></div>
+      <div class="rationale"><b>Why:</b><p>{s['rationale']}</p></div></div>"""
+
+PATTERN_RUN = ("<span>Don't memorize a list. <em>Build a pattern.</em></span>") * 4
+
+def build_course(c):
+    ctx = "".join(f'<span class="c">{x}</span>' for x in c["context"])
+    return f"""  <div class="page-hero">
+    <div class="wrap inner">
+      <a href="scrubtv.html" style="color:rgba(255,255,255,0.7);font-size:0.85rem;font-weight:700;">&larr; Back to Scrub TV</a>
+      <p class="lesson-kicker" style="margin-top:1.4rem;">{c['kicker']}</p>
+      <span class="lesson-label" style="color:var(--gold-400);">{c['tag']}</span>
+      <h1 style="margin-top:0.6rem;">{c['title']} <span class="em">{c['title_em']}</span></h1>
+      <p>{c['intro']}</p>
+    </div>
+  </div>
+
+  <div class="pattern-strip" aria-hidden="true"><div class="run">{PATTERN_RUN}</div></div>
+
+  <section class="scene-band">
+    <div class="wrap">
+      <div class="section-head fade-up" style="margin-bottom:1.4rem;"><span class="lesson-label">The scene</span><h2 style="color:#fff;">{c['scene_title']}</h2></div>
+      <div class="scene-visual fade-up">
+        <div class="sv-thumb" style="background:{c['grad']};"><span class="sv-play">{I['play']}</span></div>
+        <span class="sv-note">Curated visual &mdash; sets the scene, not the exact case. (Sourced video drops in here.)</span>
+      </div>
+      <div class="player">
+        <div class="player-main fade-up">
+          <div class="scene-context">{ctx}</div>
+          <div class="play-row">
+            <button class="play-btn" aria-label="Play the scene"><span class="play-ico">{I['play']}</span><span class="pause-ico"><svg viewBox="0 0 24 24" fill="currentColor"><rect x="6" y="5" width="4" height="14" rx="1"/><rect x="14" y="5" width="4" height="14" rx="1"/></svg></span></button>
+            <div class="waveform" aria-hidden="true">{waveform_bars()}</div>
+          </div>
+          <div class="time-row"><span class="cur-time">0:00</span><span>{c['runtime']}</span></div>
+          <p class="audio-note">Audio is swap-ready &mdash; real recorded / AI-voiced scene drops in here.</p>
+          <div class="unlock-note">{I['check']} Scene complete</div>
+        </div>
+        <div class="transcript fade-up" aria-label="Transcript">{_scene(c['scene'])}</div>
+      </div>
+    </div>
+  </section>
+
+  <section style="background:var(--bg);">
+    <div class="wrap">
+      <div class="section-head fade-up"><span class="lesson-label">Memory game</span><h2>{c['mem_head']}</h2><p>Tap a card when you're ready to test what stuck. No passive scrolling here.</p></div>
+      {_memory(c['memory'])}
+    </div>
+  </section>
+
+  <section style="background:var(--card);">
+    <div class="wrap">
+      <div class="section-head fade-up"><span class="lesson-label">Matrix memory test</span><h2>{c['matrix_head']}</h2></div>
+      {_matrix(c['matrix'])}
+    </div>
+  </section>
+
+  <section style="background:var(--bg);">
+    <div class="wrap">
+      <div class="section-head fade-up"><span class="lesson-label">Chart test</span><h2>{c['chart_head']}</h2></div>
+      {_chart(c['chart'])}
+    </div>
+  </section>
+
+  <section class="quiz-band">
+    <div class="wrap">
+      <div class="section-head fade-up"><span class="lesson-label" style="color:var(--gold-400);">Clinical quick check</span><h2 style="color:#fff;">Now &mdash; <span class="em" style="color:var(--gold-400);">make the call</span>.</h2></div>
+      {_quiz(c['quiz'])}{_sata(c.get('sata'))}
+      <div class="result-reveal" hidden>
+        <div class="result-card">
+          <span class="lesson-label" style="color:var(--teal-600);">Lesson complete</span>
+          <div class="score"><span data-quiz-score>0/0</span></div>
+          <span class="pts-won">{I['star']} <span data-pts-won>points earned</span></span>
+          <p class="review">Esi: &ldquo;<b>I'll re-test you in 3 days</b> &mdash; that's right when this starts to fade. Build the pattern, don't cram the list.&rdquo;</p>
+          <a class="btn btn-coral" href="join.html" style="margin-top:1.6rem;">Save my progress (free account)</a>
+        </div>
+        <div style="height:1.2rem;"></div>
+        <div class="next-up"><span class="ic">{I['play']}</span><div><small>Next free lesson</small><b>{c['next']}</b></div><a class="btn btn-line go" href="scrubtv.html">Browse &rarr;</a></div>
+      </div>
+    </div>
+  </section>
+
+  <section style="background:var(--bg);">
+    <div class="wrap" style="text-align:center;">
+      <div class="section-head fade-up" style="margin-inline:auto;"><span class="lesson-label">Keep the momentum</span><h2>Small sessions. <span class="em">Serious growth.</span></h2><p style="margin-inline:auto;">This lesson is free forever. Prepping a specialty? The full paid courses go deeper on {c['upsell']}.</p></div>
+      <a class="btn btn-coral" href="courses.html">See specialty prep</a>
+    </div>
+  </section>
+
+  <script src="js/course.js"></script>
+  <script src="js/prep.js"></script>
+"""
+
+COURSES = [
+  {
+    "slug": "course-lab-values.html", "num": "01",
+    "kicker": "Foundations &middot; ~14 min &middot; Free", "tag": "Scrub TV &middot; Lesson 01",
+    "title": "When the lab calls at", "title_em": "3 a.m.",
+    "intro": "A full free lesson on critical lab values. Hear the scene, lock in the six that save lives, then prove it &mdash; memory game, matrix, chart, and a clinical quick check.",
+    "grad": "linear-gradient(135deg,#4d2b9e,#14b8a8)", "runtime": "6:12",
+    "scene_title": "Room 4. Post-op day two.",
+    "context": ["ER &middot; Night shift", "68-year-old male", "Post-op day 2"],
+    "scene": [
+      ("other", "Lab", "Night shift, this is the lab &mdash; critical value on your Room 4."),
+      ("nurse", "You", "Go ahead, I'm listening."),
+      ("other", "Lab", "Potassium is 6.8. Repeat, six-point-eight. Read back, please."),
+      ("nurse", "You", "Critical potassium 6.8 on Room 4 &mdash; read back confirmed."),
+      ("nurse", "You", "<em>Mr. Alvarez, 68, post-op day two. He said his legs felt heavy.</em>"),
+      ("other", "Pt", "My heart's... doing a funny flutter. And I'm so weak."),
+      ("nurse", "You", "<em>Weakness. Palpitations. A potassium of 6.8. My mind goes to his heart.</em>"),
+      ("nurse", "You", "I'm getting you on the monitor and grabbing a 12-lead right now."),
+    ],
+    "mem_head": 'Three things to <span class="em">carry with you</span>.',
+    "memory": [
+      ("Recognize", "A number is a story.", "K&#8314; 6.8 is hyperkalemia (normal 3.5&ndash;5.0). Warnings: weakness, palpitations, peaked T waves."),
+      ("Prioritize", "Protect the heart first.", "Cardiac stability beats everything. Monitor + 12-lead ECG now. High potassium kills through the heart."),
+      ("Act", "Stop, check, escalate.", "Hold potassium, notify the provider (SBAR), anticipate calcium to protect, insulin+D50 to shift, kayexalate/dialysis to remove."),
+    ],
+    "matrix_head": 'Which results <span class="em">demand action</span> now?',
+    "matrix": {"q": "For each lab, decide: expected/normal, or act now?", "head": "Lab result", "c1": "Expected", "c2": "Act now",
+      "rows": [("Potassium 6.8 mEq/L", "rep"), ("Sodium 139 mEq/L", "exp"), ("Glucose 45 mg/dL", "rep"), ("Calcium 9.5 mg/dL", "exp"), ("Magnesium 1.2 mg/dL", "rep")]},
+    "chart_head": 'Read the <span class="em">glucose</span> trend.',
+    "chart": {"q": "A diabetic patient's glucose over the shift. What's your priority?", "cols": ["Time", "Glucose", "Alert?"], "flag_rows": [2],
+      "rows": [["08:00", "142 mg/dL", "&mdash;"], ["12:00", "88 mg/dL", "&mdash;"], ["16:00", "45 mg/dL", "Confused, shaky"]],
+      "opts": [("Treat now with 15 g fast-acting carbohydrate, then recheck in 15 min", 1), ("Give the next scheduled insulin dose", 0), ("Document and reassess in 30 minutes", 0), ("Encourage a high-protein snack", 0)],
+      "rationale": "Symptomatic hypoglycemia is an emergency &mdash; <b>treat first</b> with 15 g fast carbs, recheck in 15. Never give insulin or wait when the brain is starving for glucose."},
+    "quiz": [
+      ("K&#8314; 6.8 with new palpitations and weakness. Priority?", [("Document and reassess in 30 minutes", 0), ("Cardiac monitor + 12-lead ECG", 1), ("Encourage potassium-rich foods", 0), ("Ask family if weakness is baseline", 0)], "Hyperkalemia is dangerous to the <b>heart</b> &mdash; monitor and ECG first."),
+      ("IV calcium gluconate's role in hyperkalemia?", [("Lowers potassium directly", 0), ("Stabilizes the cardiac membrane to protect the heart", 1), ("Shifts potassium into cells", 0), ("Removes potassium from the body", 0)], "Calcium <b>protects the heart</b>; it doesn't lower the level."),
+      ("Normal potassium range?", [("1.5&ndash;2.5", 0), ("3.5&ndash;5.0 mEq/L", 1), ("8.5&ndash;10.5", 0), ("135&ndash;145", 0)], "3.5&ndash;5.0 &mdash; the banana that costs $3.50 to $5.00."),
+      ("Furosemide is started. Which electrolyte drops?", [("Sodium", 0), ("Potassium", 1), ("Calcium", 0), ("Magnesium only", 0)], "Loop diuretics waste <b>potassium</b> &mdash; watch for hypokalemia and U waves."),
+      ("Sodium 118. Most concerned about?", [("Seizures and altered mental status", 1), ("Peaked T waves", 0), ("Positive Chvostek sign", 0), ("Kussmaul respirations", 0)], "Severe hyponatremia causes cerebral edema &mdash; headache, confusion, <b>seizures</b>."),
+    ],
+    "sata": {"q": "Potassium is 6.8. Which actions are appropriate? Select all that apply.",
+      "opts": [("Place on a cardiac monitor", 1), ("Hold all oral and IV potassium", 1), ("Notify the provider", 1), ("Offer a banana for energy", 0), ("Prepare IV calcium gluconate", 1)],
+      "rationale": "Four are right. Offering a banana <b>adds</b> potassium &mdash; exactly wrong. SATA is all-or-nothing."},
+    "next": "Prioritization &amp; Delegation", "upsell": "renal, cardiac &amp; critical care",
+  },
+  {
+    "slug": "course-prioritization.html", "num": "02",
+    "kicker": "Foundations &middot; ~12 min &middot; Free", "tag": "Scrub TV &middot; Lesson 02",
+    "title": "Four patients.", "title_em": "One of you.",
+    "intro": "The heart of the NCLEX: who do you see first, and what can you hand off? Learn to think in ABCs, acuity, and safe delegation &mdash; then prove it.",
+    "grad": "linear-gradient(135deg,#2b1055,#8b5cff)", "runtime": "5:40",
+    "scene_title": "0700. Shift change.",
+    "context": ["Med-Surg", "4-patient assignment", "Start of shift"],
+    "scene": [
+      ("other", "RN", "Here's your handoff &mdash; four patients, and the aide's with you till noon."),
+      ("nurse", "You", "Give me the headlines. Who's least stable?"),
+      ("other", "RN", "Room 1: stable, waiting on discharge. Room 2: new onset shortness of breath."),
+      ("nurse", "You", "<em>Shortness of breath &mdash; that's airway and breathing. Room 2 is first.</em>"),
+      ("other", "RN", "Room 3: post-op, pain 3 and improving. Room 4: fresh admit, needs assessment."),
+      ("nurse", "You", "<em>Improving pain can wait. A new admit needs my eyes, not the aide's.</em>"),
+      ("nurse", "You", "I'll see Room 2 now, then the new admit. Aide takes stable vitals and the discharge walk."),
+      ("nurse", "You", "<em>ABCs first. Unstable before stable. Delegate the routine, keep the judgment.</em>"),
+    ],
+    "mem_head": 'Three rules to <span class="em">see first</span> by.',
+    "memory": [
+      ("Airway first", "ABCs win.", "Airway, Breathing, Circulation always outrank comfort. New shortness of breath, choking, or a failing airway is always your first stop."),
+      ("Acuity", "Unstable beats stable.", "Acute, new, or unstable comes before chronic, expected, or improving. A changing patient beats a comfortable one."),
+      ("Delegate", "Keep the judgment.", "Delegate stable, routine, predictable tasks (vitals, ADLs, ambulating stable patients). Assessment, teaching, and unstable patients stay with the RN."),
+    ],
+    "matrix_head": 'Can you <span class="em">delegate</span> it to the aide (UAP)?',
+    "matrix": {"q": "For each task, decide: delegate to the UAP, or RN only?", "head": "Task", "c1": "Delegate", "c2": "RN only",
+      "rows": [("Vital signs on a stable patient", "exp"), ("Initial assessment of a new admit", "rep"), ("Ambulate a stable post-op patient", "exp"), ("Teach a new diabetic about insulin", "rep"), ("Feed a stable patient", "exp"), ("Evaluate a patient's response to a new med", "rep")]},
+    "chart_head": 'Who do you see <span class="em">first</span>?',
+    "chart": {"q": "Four patients at 0700. Based on this board, who is your priority?", "cols": ["Room", "Status", "Key finding"], "flag_rows": [1],
+      "rows": [["1", "Stable", "Awaiting discharge"], ["2", "New", "SpO&#8322; 89%, new dyspnea"], ["3", "Post-op", "Pain 3/10, improving"], ["4", "Admit", "Vitals stable, needs H&amp;P"]],
+      "opts": [("Room 2 &mdash; new dyspnea with low SpO&#8322; is an airway/breathing threat", 1), ("Room 1 &mdash; get the discharge moving", 0), ("Room 3 &mdash; treat the pain", 0), ("Room 4 &mdash; the admit paperwork is overdue", 0)],
+      "rationale": "New dyspnea with SpO&#8322; 89% is an <b>ABC</b> problem &mdash; breathing beats discharge, pain, and paperwork every time."},
+    "quiz": [
+      ("Which patient should the nurse assess first?", [("A patient with chronic, stable COPD", 0), ("A patient with new confusion and RR 30", 1), ("A patient due for routine AM meds", 0), ("A patient asking about discharge", 0)], "New confusion + high RR is acute deterioration &mdash; <b>ABCs and change</b> come first."),
+      ("Which task is appropriate to delegate to a UAP?", [("Assessing a new admission", 0), ("Bathing a stable patient", 1), ("Teaching wound care", 0), ("Evaluating a PRN pain med", 0)], "UAPs do stable, routine, predictable care. <b>Assessment, teaching, and evaluation</b> stay with the RN."),
+      ("Using Maslow, which need comes first?", [("Belonging &mdash; the patient feels lonely", 0), ("Physiologic &mdash; the patient can't breathe", 1), ("Self-esteem &mdash; the patient feels embarrassed", 0), ("Safety &mdash; the bed alarm is off", 0)], "Physiologic needs (airway, breathing, circulation) sit at the base of Maslow &mdash; they come first."),
+      ("Two patients need you now. Which is the priority?", [("Expected post-op incision pain", 0), ("New, sudden chest pain with diaphoresis", 1), ("A dietary complaint", 0), ("A request for a warm blanket", 0)], "New, sudden chest pain with sweating is a possible cardiac emergency &mdash; <b>acute and unstable</b> wins."),
+      ("Which is the RN's non-delegable responsibility?", [("Recording intake and output", 0), ("The initial nursing assessment", 1), ("Ambulating a stable patient", 0), ("Stocking supplies", 0)], "The <b>initial assessment</b> (and care planning, teaching, evaluation) is the RN's alone."),
+    ],
+    "sata": {"q": "Which tasks can be delegated to a UAP? Select all that apply.",
+      "opts": [("Taking vital signs on stable patients", 1), ("Assisting with feeding", 1), ("Performing the admission assessment", 0), ("Ambulating a stable patient", 1), ("Teaching about a new medication", 0)],
+      "rationale": "Stable, routine tasks delegate. <b>Assessment and teaching</b> require an RN &mdash; every time."},
+    "next": "Medication Safety", "upsell": "med-surg, ER &amp; leadership",
+  },
+  {
+    "slug": "course-med-safety.html", "num": "03",
+    "kicker": "Foundations &middot; ~12 min &middot; Free", "tag": "Scrub TV &middot; Lesson 03",
+    "title": "The catch before", "title_em": "the harm.",
+    "intro": "Most med errors are caught by a nurse who slowed down. Learn the rights, the high-alert drugs, and the stop-signs &mdash; then prove you'd catch it too.",
+    "grad": "linear-gradient(135deg,#4d2b9e,#ffb038)", "runtime": "5:20",
+    "scene_title": "The medication room.",
+    "context": ["Med-Surg", "0900 med pass", "Two patients, same last name"],
+    "scene": [
+      ("nurse", "You", "<em>Two Johnsons on the unit today. That's exactly how the wrong-patient errors happen.</em>"),
+      ("other", "Pt", "You can just leave the pills, honey, I know which are mine."),
+      ("nurse", "You", "I hear you &mdash; but I check the band every time. Two identifiers, no exceptions."),
+      ("nurse", "You", "<em>Name and date of birth. Scan the band. Now I know it's really her.</em>"),
+      ("nurse", "You", "This one's insulin &mdash; high-alert. I want a second nurse to verify the dose."),
+      ("other", "RN", "Verified: 6 units, matches the order."),
+      ("nurse", "You", "<em>Right patient, right drug, right dose, right route, right time. Then I document.</em>"),
+      ("nurse", "You", "Slowing down for ten seconds is how nobody gets hurt."),
+    ],
+    "mem_head": 'Three habits that <span class="em">prevent harm</span>.',
+    "memory": [
+      ("The Rights", "Check every one.", "Right patient, drug, dose, route, time &mdash; plus right documentation, reason, and response. Skip one and you've opened the door to harm."),
+      ("High-alert", "Slow down for these.", "Insulin, heparin/anticoagulants, opioids, and concentrated electrolytes (like IV potassium) cause the most serious errors. Many need an independent double-check."),
+      ("Two IDs", "Every time.", "Two identifiers (name + date of birth), and scan the band. \"I know which are mine\" is never an identifier."),
+    ],
+    "matrix_head": 'Safe to give, or <span class="em">stop</span>?',
+    "matrix": {"q": "For each situation, decide: safe to proceed, or stop?", "head": "Situation", "c1": "Safe", "c2": "Stop",
+      "rows": [("Insulin dose verified by a second nurse", "exp"), ("Heparin given without an independent double-check", "rep"), ("Med left at the bedside without checking the band", "rep"), ("Metoprolol held for a heart rate of 46", "exp"), ("An extended-release tablet crushed to give via tube", "rep")]},
+    "chart_head": 'Read the <span class="em">INR</span> trend.',
+    "chart": {"q": "A patient on warfarin. Their INR over three days. What's your action?", "cols": ["Day", "INR", "Note"], "flag_rows": [2],
+      "rows": [["Mon", "2.1", "Therapeutic"], ["Wed", "3.4", "Rising"], ["Fri", "5.8", "Gums bleeding"]],
+      "opts": [("Hold the warfarin, notify the provider, anticipate vitamin K", 1), ("Give the next warfarin dose as scheduled", 0), ("Increase the warfarin dose", 0), ("Document and reassess next week", 0)],
+      "rationale": "An INR of 5.8 with bleeding is dangerously high &mdash; <b>hold the warfarin</b>, notify the provider, and anticipate vitamin K. The trend and the bleeding both scream stop."},
+    "quiz": [
+      ("Before giving a medication, how many patient identifiers are required?", [("One is enough if you know the patient", 0), ("Two independent identifiers", 1), ("The room number", 0), ("The patient's word", 0)], "Always <b>two identifiers</b> (name + DOB), and scan the band."),
+      ("Which is considered a high-alert medication?", [("Acetaminophen", 0), ("Insulin", 1), ("A stool softener", 0), ("A saline flush", 0)], "Insulin, heparin, opioids, and concentrated electrolytes are <b>high-alert</b> &mdash; slow down and double-check."),
+      ("The heart rate is 46 before a dose of metoprolol. The nurse should:", [("Give it as ordered", 0), ("Hold it and notify the provider", 1), ("Double the dose", 0), ("Give half the dose", 0)], "Beta-blockers are held for bradycardia &mdash; <b>hold and notify</b> when the HR is below the parameter."),
+      ("A capsule is labeled extended-release. The patient has a feeding tube. The nurse should:", [("Open and crush it into the tube", 0), ("Call the pharmacy for a suitable form", 1), ("Give it whole and hope it passes", 0), ("Skip it entirely without telling anyone", 0)], "Crushing extended-release drugs can cause a dangerous dose dump &mdash; <b>ask pharmacy</b> for an appropriate formulation."),
+      ("Two patients share a last name. The safest action is to:", [("Ask which pills are theirs", 0), ("Verify two identifiers and scan the band", 1), ("Use the room number", 0), ("Trust the assignment sheet", 0)], "Same-name patients are a classic error trap &mdash; <b>two identifiers and the band scan</b> every time."),
+    ],
+    "sata": {"q": "Which of these are high-alert medications? Select all that apply.",
+      "opts": [("Insulin", 1), ("Heparin", 1), ("Docusate (stool softener)", 0), ("IV concentrated potassium", 1), ("Hydromorphone (an opioid)", 1)],
+      "rationale": "Insulin, heparin, concentrated electrolytes, and opioids are high-alert. A stool softener is low-risk."},
+    "next": "Spot the Deterioration", "upsell": "pharmacology, ICU &amp; med-surg",
+  },
+  {
+    "slug": "course-deterioration.html", "num": "04",
+    "kicker": "Foundations &middot; ~12 min &middot; Free", "tag": "Scrub TV &middot; Lesson 04",
+    "title": "See it coming.", "title_em": "Before it spirals.",
+    "intro": "Patients rarely crash without warning &mdash; they whisper first. Learn the subtle early signs, trust the trend, and escalate before it's an emergency.",
+    "grad": "linear-gradient(135deg,#2b1055,#e5484d)", "runtime": "5:30",
+    "scene_title": "Room 7. Something's off.",
+    "context": ["Med-Surg", "Evening", "Post-op day 1"],
+    "scene": [
+      ("nurse", "You", "<em>She was chatty this morning. Now she's quiet, picking at the sheets.</em>"),
+      ("other", "Pt", "I'm fine... just can't get comfortable. And I'm a little short of breath."),
+      ("nurse", "You", "Let me get a set of vitals. Stay with me."),
+      ("nurse", "You", "<em>Respirations 26, up from 16. Heart rate creeping. She's restless.</em>"),
+      ("nurse", "You", "<em>No single number is screaming &mdash; but the trend is. That's the whisper before the crash.</em>"),
+      ("nurse", "You", "I'm calling the rapid response team now. I'd rather be early than sorry."),
+      ("other", "RN", "Good call. What's your SBAR?"),
+      ("nurse", "You", "<em>Escalate early. Nobody was ever harmed by a nurse who called too soon.</em>"),
+    ],
+    "mem_head": 'Three signs to <span class="em">trust early</span>.',
+    "memory": [
+      ("Trend", "Direction over numbers.", "One vital sign can be noise. A trend &mdash; rising RR and HR, falling BP and SpO&#8322; over hours &mdash; is the story. Chart it and watch the direction."),
+      ("Subtle", "Restlessness first.", "The earliest sign of deterioration is often a rising respiratory rate or a subtle mental-status change &mdash; restlessness, confusion, \"just not right.\" Believe it."),
+      ("Escalate", "Call early.", "When the pattern points down, escalate with SBAR and call the rapid response team. Early is always better than late &mdash; you can't un-crash a patient."),
+    ],
+    "matrix_head": 'Escalate now, or <span class="em">keep watching</span>?',
+    "matrix": {"q": "For each finding, decide: escalate now, or monitor?", "head": "Finding", "c1": "Monitor", "c2": "Escalate",
+      "rows": [("RR 28, up from 16 an hour ago", "rep"), ("SpO&#8322; 91% on room air, was 98%", "rep"), ("Pain 3/10, steadily improving", "exp"), ("New confusion and restlessness", "rep"), ("Blood pressure 96/58, trending down", "rep"), ("Stable vitals, resting comfortably", "exp")]},
+    "chart_head": 'Read the <span class="em">deterioration</span>.',
+    "chart": {"q": "Your patient's vitals over 8 hours. What is your priority interpretation?", "cols": ["Time", "HR", "BP", "Temp", "RR", "SpO&#8322;"], "flag_rows": [2],
+      "rows": [["08:00", "88", "122/78", "37.0", "16", "98%"], ["12:00", "104", "108/66", "38.4", "22", "95%"], ["16:00", "122", "94/54", "39.1", "28", "91%"]],
+      "opts": [("Rising HR/RR/temp with falling BP &amp; SpO&#8322; &mdash; early sepsis. Escalate.", 1), ("Expected recovery &mdash; keep routine monitoring", 0), ("Anxiety &mdash; offer reassurance", 0), ("Dehydration &mdash; offer oral fluids", 0)],
+      "rationale": "Up in HR, RR, and temp while BP and SpO&#8322; fall is the classic <b>sepsis / deterioration</b> pattern. The direction matters more than any one number &mdash; escalate early."},
+    "quiz": [
+      ("What is often the earliest sign of clinical deterioration?", [("A rising respiratory rate", 1), ("A drop in temperature", 0), ("Increased appetite", 0), ("Lower heart rate", 0)], "A <b>rising respiratory rate</b> (and subtle mental-status change) is often the first, earliest warning."),
+      ("A patient becomes restless and confused with RR 30. The nurse should:", [("Reassure and recheck in an hour", 0), ("Assess, take vitals, and escalate", 1), ("Document only", 0), ("Give a sedative", 0)], "New confusion + high RR is deterioration &mdash; <b>assess and escalate</b>, don't wait."),
+      ("Which pattern most suggests early sepsis?", [("HR and RR up, BP and SpO&#8322; down, temp up", 1), ("All vital signs stable", 0), ("Only a mild headache", 0), ("Isolated high blood pressure", 0)], "The <b>trend</b> &mdash; rising HR/RR/temp, falling BP/SpO&#8322; &mdash; is the sepsis pattern (SIRS)."),
+      ("The nurse is calling the rapid response team. Which tool structures the call?", [("SOAP", 0), ("SBAR", 1), ("PERRLA", 0), ("RICE", 0)], "<b>SBAR</b> (Situation, Background, Assessment, Recommendation) structures the escalation."),
+      ("A single slightly-abnormal vital sign is best interpreted by:", [("Ignoring it if the patient looks okay", 0), ("Comparing it to the trend over time", 1), ("Rechecking only at end of shift", 0), ("Charting without action", 0)], "One value is noise; the <b>trend</b> is the signal. Compare to baseline and direction."),
+    ],
+    "sata": {"q": "Which findings warrant escalation to the provider or rapid response? Select all that apply.",
+      "opts": [("New confusion or restlessness", 1), ("RR 28 and climbing", 1), ("Improving, well-controlled pain", 0), ("SpO&#8322; falling from 98% to 90%", 1), ("Urine output 15 mL/hr for 2 hours", 1)],
+      "rationale": "New confusion, rising RR, falling SpO&#8322;, and low urine output all signal deterioration &mdash; escalate. Improving pain does not."},
+    "next": "Critical Lab Values", "upsell": "ICU, ER &amp; rapid response",
+  },
+]
+
+for _c in COURSES:
+    PAGES[_c["slug"]] = (
+        f"{_c['title']} {_c['title_em']} &mdash; Free NCLEX Lesson | Must Love Scrubs",
+        "A free interactive NCLEX lesson: audio scene, memory game, matrix, chart test, and a clinical quick check.",
+        build_course(_c), "scrubtv")
+
+def lesson_cards():
+    out = []
+    for c in COURSES:
+        name = f"{c['title']} {c['title_em']}"
+        out.append(f"""<a class="course-card fade-up" href="{c['slug']}">
+          <div class="cover" style="background:{c['grad']};">{c['num']}</div>
+          <div class="body"><b>{name}</b><small>{c['kicker'].split('&middot;')[0].strip()} &middot; audio + 4 tests</small>
+            <div class="foot"><span class="p" style="color:var(--teal-600);">Free</span><a style="font-size:0.82rem;font-weight:700;color:var(--coral-500);">Start &rarr;</a></div>
+          </div></a>""")
+    return '<div class="course-shelf">' + "".join(out) + '</div>'
+
+PAGES["scrubtv.html"] = ("Scrub TV — Free NCLEX Lessons | Must Love Scrubs",
+    "Scrub TV: four free interactive NCLEX lessons a month. Each one is an audio scene plus a memory game, matrix, chart test, and quiz.",
+    page_hero('Scrub TV: nursing school meets <span class="hl on-dark">your feed</span>.',
+              "Four free lessons a month. Each is a curated audio scene plus a full workout &mdash; memory game, matrix, chart test, and a clinical quick check. Watch, listen, then prove it.")
+    + f"""  <main class="content-block">
+    <div class="wrap">
+      <div class="section-head fade-up"><span class="eyebrow teal">This month</span><h2>Four free lessons. <span class="hl">Zero excuses.</span></h2><p>The complete free tier &mdash; as deep as anything you'd pay for elsewhere. Specialty prep lives in <a href="courses.html" style="color:var(--coral-500);font-weight:700;">paid courses</a>.</p></div>
+      {lesson_cards()}
+      <div class="points-strip fade-up" style="margin-top:2rem;">
+        <div class="txt"><b>Every lesson earns points.</b><p>Finish the quick check to bank points toward store downloads and course discounts &mdash; all tracked on your dashboard.</p></div>
+        <a class="btn btn-dark" href="profile.html">See my progress</a>
+      </div>
+    </div>
+  </main>
+""", "scrubtv")
 
 # ---------------------------------------------------------------- write out
 for fname, (title, desc, body, *rest) in PAGES.items():
