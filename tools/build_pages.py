@@ -94,8 +94,9 @@ def chrome(fname, title, desc, body, active=""):
       <div>
         <h4>Learn</h4>
         <ul class="mega-links">
-          <li><a href="courses.html">Courses <small>NCLEX prep, specialties &amp; more</small></a></li>
-          <li><a href="scrubtv.html">Scrub TV <small>Videos + quizzes, new every 2 weeks</small></a></li>
+          <li><a href="course-lab-values.html">Free NCLEX Practice <small>Start with a free audio scene</small></a></li>
+          <li><a href="courses.html">Courses <small>NCLEX prep, entrance exams &amp; more</small></a></li>
+          <li><a href="scrubtv.html">Scrub TV <small>Audio scenes + quizzes, new every 2 weeks</small></a></li>
           <li><a href="esi.html">Esi <small>Your AI tutor &amp; site guide</small></a></li>
         </ul>
       </div>
@@ -147,7 +148,7 @@ def chrome(fname, title, desc, body, active=""):
         <h5>Learn</h5>
         <ul>
           <li><a href="courses.html">Courses</a></li>
-          <li><a href="courses.html">Free NCLEX Practice</a></li>
+          <li><a href="course-lab-values.html">Free NCLEX Practice</a></li>
           <li><a href="scrubtv.html">Scrub TV</a></li>
           <li><a href="esi.html">Esi Tutoring</a></li>
         </ul>
@@ -371,10 +372,10 @@ INDEX_BODY = f"""  <main>
           <h1>Train for the nurse you're <span class="hl on-dark">becoming</span>.</h1>
           <p class="lede">Prep courses built on proven retention science, videos that teach like a great preceptor, and Esi — the AI tutor that makes it stick. This is the ecosystem of nursing.</p>
           <div class="hero-cta">
-            <a class="btn btn-coral" href="courses.html">Start Learning</a>
-            <a class="btn btn-ghost" href="scrubtv.html">Watch Scrub TV</a>
+            <a class="btn btn-coral" href="course-lab-values.html">Try a free scene</a>
+            <a class="btn btn-ghost" href="courses.html">See all courses</a>
           </div>
-          <p class="hero-note">Free account &middot; daily points &middot; no card required</p>
+          <p class="hero-note">Free NCLEX practice &middot; daily points &middot; no card required</p>
         </div>
         <div class="hero-visual fade-up">
           <div class="scene">{HERO_SCENE}</div>
@@ -894,6 +895,182 @@ PAGES["terms.html"] = ("Terms of Use (Draft) — Must Love Scrubs",
         <p>The service is provided “as is.” To the maximum extent permitted by law, our liability is limited to the amount you paid in the previous 12 months.</p>
         <h2>7. Changes</h2>
         <p>We may update these terms; continued use after notice constitutes acceptance. Contact: hello@mustlovescrubs.com.</p>""", draft=True))
+
+# ---------------------------------------------------------------- FREE AUDIO-SCENE COURSE
+SCENE_LINES = [
+    ("other", "Lab", "Night shift, this is the lab — critical value on your Room 4."),
+    ("nurse", "You", "Go ahead, I'm listening."),
+    ("other", "Lab", "Potassium is 6.8. Repeat, six-point-eight. Read back, please."),
+    ("nurse", "You", "Critical potassium 6.8 on Room 4 — read back confirmed."),
+    ("nurse", "You", "<em>Mr. Alvarez, 68, post-op day two. Last round he said his legs felt heavy.</em>"),
+    ("nurse", "You", "Mr. Alvarez? Tell me how you're feeling right now."),
+    ("other", "Pt", "My heart's... doing a funny flutter. And I'm so weak."),
+    ("nurse", "You", "<em>Weakness. Palpitations. A potassium of 6.8. My mind goes straight to his heart.</em>"),
+    ("nurse", "You", "I'm getting you on the monitor and grabbing a 12-lead right now. Stay with me."),
+    ("nurse", "You", "<em>Don't chase the number. Protect the heart. Then escalate.</em>"),
+]
+
+def scene_transcript():
+    out = []
+    for who, spk, text in SCENE_LINES:
+        out.append(f'<div class="line {who}"><span class="spk">{spk}</span><p>{text}</p></div>')
+    return "".join(out)
+
+def waveform_bars(n=48):
+    return "".join('<i></i>' for _ in range(n))
+
+QUIZ = [
+    ("Your patient has a potassium of 6.8, new palpitations, and sudden weakness. What is your priority?",
+     [("Document the value and reassess in 30 minutes", 0),
+      ("Place him on a cardiac monitor and get a 12-lead ECG", 1),
+      ("Encourage potassium-rich foods so he feels stronger", 0),
+      ("Ask the family whether the weakness is baseline", 0)],
+     "Hyperkalemia is dangerous because of its effect on the <b>heart</b>. Monitoring and an ECG come first &mdash; peaked T waves and lethal arrhythmias can develop fast, long before documentation matters."),
+    ("The provider orders IV calcium gluconate. What is its role in hyperkalemia?",
+     [("It lowers the potassium level directly", 0),
+      ("It stabilizes the cardiac membrane to protect the heart", 1),
+      ("It shifts potassium into the cells", 0),
+      ("It removes potassium from the body", 0)],
+     "Calcium gluconate doesn't lower potassium &mdash; it <b>protects the heart</b> by stabilizing the cardiac membrane, buying time while insulin + D50 shift it and kayexalate or dialysis remove it."),
+    ("Which finding would you expect on the ECG of a patient with a potassium of 6.8?",
+     [("Peaked T waves", 1),
+      ("A prominent U wave", 0),
+      ("ST-elevation in two leads", 0),
+      ("A shortened PR interval", 0)],
+     "Peaked, tented T waves are the classic early sign of <b>high</b> potassium. U waves point the other way &mdash; toward <b>low</b> potassium. Build the pattern: high K&#8314; &rarr; peaked T's."),
+]
+
+def quiz_cards():
+    out = []
+    letters = "ABCD"
+    for qi, (q, opts, rat) in enumerate(QUIZ, 1):
+        obtns = []
+        for oi, (text, correct) in enumerate(opts):
+            obtns.append(f'<button class="opt" data-correct="{correct}"><span class="k">{letters[oi]}</span><span>{text}</span></button>')
+        out.append(f"""<div class="quiz-card" style="margin-bottom:2.5rem;">
+          <div class="quiz-head"><span>Clinical quick check</span><span>Question {qi} of {len(QUIZ)}</span></div>
+          <p class="quiz-q">{q}</p>
+          <div class="opts">{"".join(obtns)}</div>
+          <div class="quiz-actions"><button class="btn btn-coral check-btn">Check answer</button><span style="font-size:0.8rem;color:rgba(255,255,255,0.6);">Choose the safest next step.</span></div>
+          <div class="rationale"><b>Why:</b><p>{rat}</p></div>
+        </div>""")
+    return "".join(out)
+
+COURSE_BODY = f"""  <div class="page-hero">
+    <div class="wrap inner">
+      <a href="scrubtv.html" style="color:rgba(255,255,255,0.7);font-size:0.85rem;font-weight:700;">&larr; Back to Scrub TV</a>
+      <p class="lesson-kicker" style="margin-top:1.4rem;">ER / Night shift &middot; 6 min listen &middot; Free</p>
+      <span class="lesson-label" style="color:var(--gold-400);">Scrub TV &middot; Audio Scene &middot; Ep. 01</span>
+      <h1 style="margin-top:0.6rem;">When the lab calls at <span class="em">3 a.m.</span></h1>
+      <p>Listen to the scene. Catch what matters. Make the call. This is how the floor really sounds &mdash; and how you learn to think before you touch a textbook.</p>
+    </div>
+  </div>
+
+  <div class="pattern-strip" aria-hidden="true">
+    <div class="run"><span>Don't memorize a list. <em>Build a pattern.</em></span><span>Don't memorize a list. <em>Build a pattern.</em></span><span>Don't memorize a list. <em>Build a pattern.</em></span><span>Don't memorize a list. <em>Build a pattern.</em></span></div>
+  </div>
+
+  <section class="scene-band">
+    <div class="wrap">
+      <div class="section-head fade-up" style="margin-bottom:1.6rem;"><span class="lesson-label">The scene</span><h2 style="color:#fff;">Room 4. Post-op day two.</h2></div>
+      <div class="player">
+        <div class="player-main fade-up">
+          <div class="scene-context"><span class="c">ER &middot; Night shift</span><span class="c">68-year-old male</span><span class="c">Post-op day 2</span></div>
+          <div class="play-row">
+            <button class="play-btn" aria-label="Play the scene">
+              <span class="play-ico">{I['play']}</span>
+              <span class="pause-ico"><svg viewBox="0 0 24 24" fill="currentColor"><rect x="6" y="5" width="4" height="14" rx="1"/><rect x="14" y="5" width="4" height="14" rx="1"/></svg></span>
+            </button>
+            <div class="waveform" aria-hidden="true">{waveform_bars()}</div>
+          </div>
+          <div class="time-row"><span class="cur-time">0:00</span><span>6:12</span></div>
+          <p class="audio-note">Audio is swap-ready &mdash; real recorded / AI-voiced scene drops in here. Press play to preview the synced experience.</p>
+          <div class="unlock-note">{I['check']} Scene complete &middot; quick check unlocked below</div>
+        </div>
+        <div class="transcript fade-up" aria-label="Transcript">
+          {scene_transcript()}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section style="background:var(--bg);">
+    <div class="wrap">
+      <div class="section-head fade-up"><span class="lesson-label">The quick recall</span><h2>Three things to <span class="em">carry with you</span>.</h2><p>Tap a card when you're ready to test what stuck. No passive scrolling here.</p></div>
+      <div class="carry-grid">
+        <div class="flip fade-up" tabindex="0" role="button" aria-label="Reveal card 1">
+          <div class="flip-inner">
+            <div class="flip-face flip-front f1"><span class="idx">01</span><span class="tag">Recognize</span><h3>A number is a story.</h3><span class="cue">Tap to reveal &rarr;</span></div>
+            <div class="flip-face flip-back"><span class="bk-tag">Recognize</span><p>K&#8314; 6.8 is <b>hyperkalemia</b> (normal 3.5&ndash;5.0). The body's warnings: muscle weakness, palpitations, and on the monitor &mdash; peaked T waves.</p></div>
+          </div>
+        </div>
+        <div class="flip fade-up" tabindex="0" role="button" aria-label="Reveal card 2">
+          <div class="flip-inner">
+            <div class="flip-face flip-front f2"><span class="idx">02</span><span class="tag">Prioritize</span><h3>Protect the heart first.</h3><span class="cue">Tap to reveal &rarr;</span></div>
+            <div class="flip-face flip-back"><span class="bk-tag">Prioritize</span><p>Cardiac stability beats everything. <b>Monitor + 12-lead ECG now.</b> High potassium kills through the heart, not the lab slip.</p></div>
+          </div>
+        </div>
+        <div class="flip fade-up" tabindex="0" role="button" aria-label="Reveal card 3">
+          <div class="flip-inner">
+            <div class="flip-face flip-front f3"><span class="idx">03</span><span class="tag">Act</span><h3>Stop, check, escalate.</h3><span class="cue">Tap to reveal &rarr;</span></div>
+            <div class="flip-face flip-back"><span class="bk-tag">Act</span><p>Hold potassium sources, notify the provider (SBAR), and anticipate: <b>calcium</b> to protect, <b>insulin + D50</b> to shift, <b>kayexalate/dialysis</b> to remove.</p></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section style="background:var(--card);">
+    <div class="wrap">
+      <div class="confidence fade-up">
+        <span class="lesson-label" style="color:var(--teal-600);">Confidence check</span>
+        <h3 style="margin-top:0.5rem;">How sure are you on the critical potassium value?</h3>
+        <input type="range" min="0" max="100" value="50" aria-label="Confidence">
+        <div class="conf-scale"><span>Not sure</span><span>Locked in</span></div>
+        <button class="btn btn-line conf-btn" style="margin-top:1.2rem;">Reveal the answer</button>
+        <div class="conf-reveal">
+          <p style="color:var(--ink-60);"><b style="color:var(--ink);">Normal K&#8314; is 3.5&ndash;5.0 mEq/L</b> &mdash; a banana costs $3.50 to $5.00. Above 6.0 is critical: peaked T's, weakness, &ldquo;protect the heart.&rdquo; Below 2.5 is critical too &mdash; cramps and arrhythmias. Rating your own certainty <em>before</em> the reveal is what makes it stick.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="quiz-band" hidden>
+    <div class="wrap">
+      <div class="section-head fade-up"><span class="lesson-label" style="color:var(--gold-400);">Clinical quick check</span><h2 style="color:#fff;">Now &mdash; <span class="em" style="color:var(--gold-400);">make the call</span>.</h2></div>
+      {quiz_cards()}
+
+      <div class="result-reveal" hidden>
+        <div class="result-card">
+          <span class="lesson-label" style="color:var(--teal-600);">Scene complete</span>
+          <div class="score"><span data-quiz-score>0/3</span></div>
+          <span class="pts-won">{I['star']} <span data-pts-won>points earned</span></span>
+          <p class="review">Esi: &ldquo;<b>I'll re-test you in 3 days</b> &mdash; that's right when this starts to fade. Build the pattern, don't cram the list.&rdquo;</p>
+          <a class="btn btn-coral" href="join.html" style="margin-top:1.6rem;">Save my progress (free account)</a>
+        </div>
+        <div style="height:1.2rem;"></div>
+        <div class="next-up">
+          <span class="ic">{I['er']}</span>
+          <div><small>Next scene &middot; ER / Trauma</small><b>Chest pain: what can't wait?</b></div>
+          <a class="btn btn-line go" href="scrubtv.html">Listen &rarr;</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section style="background:var(--bg);">
+    <div class="wrap" style="text-align:center;">
+      <div class="section-head fade-up" style="margin-inline:auto;"><span class="lesson-label">Keep the momentum</span><h2>Small sessions. <span class="em">Serious growth.</span></h2><p style="margin-inline:auto;">This scene is free forever. When you're ready to pass, the full NCLEX bank, mock exams, and Esi drilling your weak spots are one step away.</p></div>
+      <a class="btn btn-coral" href="courses.html">See NCLEX Complete</a>
+    </div>
+  </section>
+
+  <script src="js/course.js"></script>
+"""
+
+PAGES["course-lab-values.html"] = ("Free Audio Scene: Critical Lab Values | Must Love Scrubs",
+    "A free audio-scene NCLEX lesson: recognize and act on a critical potassium value. Listen, learn the pattern, and test yourself.",
+    COURSE_BODY, "scrubtv")
 
 # ---------------------------------------------------------------- write out
 for fname, (title, desc, body, *rest) in PAGES.items():
