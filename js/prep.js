@@ -28,8 +28,8 @@
   var tmr = document.querySelector('.timed-round');
   if (tmr) {
     var PROMPTS = JSON.parse(tmr.getAttribute('data-prompts'));
-    var promptEl = tmr.querySelector('.prompt');
-    var gridEl = tmr.querySelector('.choice-grid');
+    var promptEl = tmr.querySelector('.tmr-body .prompt');
+    var gridEl = tmr.querySelector('.tmr-body .choice-grid');
     var barEl = tmr.querySelector('.timer-bar i');
     var idxEl = tmr.querySelector('.tmr-idx');
     var streakEl = tmr.querySelector('.tmr-streak');
