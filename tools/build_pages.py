@@ -94,6 +94,7 @@ def chrome(fname, title, desc, body, active=""):
       <div>
         <h4>Learn</h4>
         <ul class="mega-links">
+          <li><a href="nclex.html">NCLEX Prep <small>RN &amp; LPN &middot; every NGN item type</small></a></li>
           <li><a href="course-lab-values.html">Free NCLEX Practice <small>Start with a free audio scene</small></a></li>
           <li><a href="courses.html">Courses <small>NCLEX prep, entrance exams &amp; more</small></a></li>
           <li><a href="scrubtv.html">Scrub TV <small>Audio scenes + quizzes, new every 2 weeks</small></a></li>
@@ -1173,6 +1174,188 @@ COURSE_BODY = f"""  <div class="page-hero">
 PAGES["course-lab-values.html"] = ("Free Audio Scene: Critical Lab Values | Must Love Scrubs",
     "A free audio-scene NCLEX lesson: recognize and act on a critical potassium value. Listen, learn the pattern, and test yourself.",
     COURSE_BODY, "scrubtv")
+
+# ---------------------------------------------------------------- NCLEX PREP PAGE
+import json as _json
+TMR_PROMPTS = [
+    {"q": "Normal potassium (K+)?", "a": [{"t": "3.5-5.0", "c": 1}, {"t": "135-145", "c": 0}, {"t": "1.5-2.5", "c": 0}, {"t": "9-10.5", "c": 0}]},
+    {"q": "Normal sodium (Na+)?", "a": [{"t": "135-145", "c": 1}, {"t": "3.5-5.0", "c": 0}, {"t": "70-110", "c": 0}, {"t": "12-16", "c": 0}]},
+    {"q": "Treat hypoglycemia below?", "a": [{"t": "70 mg/dL", "c": 1}, {"t": "110 mg/dL", "c": 0}, {"t": "140 mg/dL", "c": 0}, {"t": "200 mg/dL", "c": 0}]},
+    {"q": "Low magnesium risks...", "a": [{"t": "Torsades", "c": 1}, {"t": "Constipation", "c": 0}, {"t": "Flushing", "c": 0}, {"t": "Bradycardia", "c": 0}]},
+    {"q": "Peaked T waves mean...", "a": [{"t": "High K+", "c": 1}, {"t": "Low K+", "c": 0}, {"t": "High Ca", "c": 0}, {"t": "Low Na", "c": 0}]},
+    {"q": "Normal calcium (Ca)?", "a": [{"t": "9.0-10.5", "c": 1}, {"t": "3.5-5.0", "c": 0}, {"t": "1.5-2.5", "c": 0}, {"t": "135-145", "c": 0}]},
+]
+TMR_JSON = _json.dumps(TMR_PROMPTS)
+
+PREP_BODY = f"""  <div class="page-hero">
+    <div class="wrap inner">
+      <span class="lesson-label" style="color:var(--gold-400);">NCLEX Prep</span>
+      <h1 style="margin-top:0.6rem;">Prep that feels like the <span class="em">real test</span>.</h1>
+      <p>Every Next Gen NCLEX item type &mdash; timed recall, trends, matrix grids, SBAR, select-all. Choose your exam, start free, unlock the full bank when you're ready.</p>
+      <div style="margin-top:1.6rem;display:flex;flex-wrap:wrap;gap:1rem;align-items:center;">
+        <div class="segment" role="tablist" aria-label="Choose exam track">
+          <button class="on" data-track="rn">NCLEX-RN</button>
+          <button data-track="lpn">NCLEX-PN (LPN)</button>
+        </div>
+        <span class="track-note">You're prepping for the <b class="track-word">RN</b>. Questions adapt to your scope.</span>
+      </div>
+    </div>
+  </div>
+
+  <section style="background:var(--bg);">
+    <div class="wrap">
+      <div class="section-head fade-up"><span class="lesson-label">Free to start</span><h2>Two ways in.</h2><p>Sample every item type free. Unlock the full <span class="track-word">RN</span> bank, timed mocks, and analytics when it's crunch time.</p></div>
+      <div class="tier-compare">
+        <div class="tier-col fade-up">
+          <div class="tname">Free practice</div>
+          <div class="tprice">$0 forever</div>
+          <ul>
+            <li>{I['check']} Every NGN item type to try</li>
+            <li>{I['check']} A live sample from the <span class="track-word">RN</span> bank</li>
+            <li>{I['check']} Daily points &amp; streaks</li>
+            <li>{I['check']} Scrub TV audio scenes</li>
+          </ul>
+          <a class="btn btn-line" href="course-lab-values.html">Try a free scene</a>
+        </div>
+        <div class="tier-col paid fade-up">
+          <div class="tname">NCLEX Complete</div>
+          <div class="tprice">$129 &middot; or $39/mo</div>
+          <ul>
+            <li>{I['check']} 2,000+ questions, <span class="track-word">RN</span> &amp; LPN tracks</li>
+            <li>{I['check']} Every NGN type + full rationales</li>
+            <li>{I['check']} Timed mock exams in real format</li>
+            <li>{I['check']} Weak-area analytics + Esi tutoring</li>
+          </ul>
+          <a class="btn btn-coral" href="#unlock" data-unlock>Unlock the full bank</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section style="background:var(--card);">
+    <div class="wrap">
+      <div class="section-head fade-up"><span class="lesson-label">Item type 1</span><h2>Timed memory round.</h2><p>Rapid recall against the clock &mdash; speed is how you know it's automatic.</p></div>
+      <div class="widget timed-round fade-up" data-prompts='{TMR_JSON}'>
+        <div class="tmr-intro">
+          <span class="widget-tag">{I['star']} Beat your streak</span>
+          <p class="prompt" style="margin-bottom:1.4rem;">Six lab-value prompts. ~8 seconds each. Answer fast, keep the streak alive.</p>
+          <button class="btn btn-coral tmr-start">Start the round</button>
+        </div>
+        <div class="tmr-body" hidden>
+          <div class="tmr-meta"><span class="tmr-idx">1 / 6</span><span class="streak">Streak: <span class="tmr-streak">0</span></span></div>
+          <div class="timer-bar"><i></i></div>
+          <p class="prompt"></p>
+          <div class="choice-grid"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section style="background:var(--bg);">
+    <div class="wrap">
+      <div class="section-head fade-up"><span class="lesson-label">Item type 2</span><h2>Chart &amp; trend.</h2><p>Read the story across the vitals. NGN wants to know you can see it coming.</p></div>
+      <div class="widget mc-item fade-up">
+        <span class="widget-tag">Trend item</span>
+        <p class="prompt">Your post-op patient's vitals over 8 hours. What is your priority interpretation?</p>
+        <div class="trend-scroll">
+          <table class="trend-table">
+            <thead><tr><th>Time</th><th>HR</th><th>BP</th><th>Temp &deg;C</th><th>RR</th><th>SpO&#8322;</th></tr></thead>
+            <tbody>
+              <tr><td>08:00</td><td>88</td><td>122/78</td><td>37.0</td><td>16</td><td>98%</td></tr>
+              <tr><td>12:00</td><td>104</td><td>108/66</td><td>38.4</td><td>22</td><td>95%</td></tr>
+              <tr><td>16:00</td><td class="flag">122</td><td class="flag">94/54</td><td class="flag">39.1</td><td class="flag">28</td><td class="flag">91%</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="choice-grid" style="grid-template-columns:1fr;">
+          <button class="choice" data-correct="1">Rising HR/RR/temp with falling BP &amp; SpO&#8322; &mdash; early sepsis. Escalate now.</button>
+          <button class="choice" data-correct="0">Expected post-op recovery &mdash; continue routine monitoring.</button>
+          <button class="choice" data-correct="0">Anxiety &mdash; offer reassurance and reassess in an hour.</button>
+          <button class="choice" data-correct="0">Mild dehydration &mdash; encourage oral fluids.</button>
+        </div>
+        <div class="quiz-actions" style="margin-top:1.2rem;"><button class="btn btn-coral mc-check">Check answer</button></div>
+        <div class="rationale" style="background:var(--bg);border-left:3px solid var(--teal-600);color:var(--ink);"><b style="color:var(--teal-600);">Why:</b><p style="color:var(--ink-60);">Trending up in HR, RR, and temp while BP and SpO&#8322; fall is the classic <b>deterioration / sepsis</b> pattern (SIRS). The individual numbers matter less than the direction &mdash; recognize it early and escalate.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section style="background:var(--card);">
+    <div class="wrap">
+      <div class="section-head fade-up"><span class="lesson-label">Item type 3</span><h2>Matrix / grid.</h2><p><span data-rn="For each finding, decide: expected, or does it need you to act?" data-lpn="For each finding, decide: expected, or report to the RN?">For each finding, decide: expected, or does it need you to act?</span></p></div>
+      <div class="widget matrix-item fade-up">
+        <span class="widget-tag">Matrix item</span>
+        <div class="matrix-scroll">
+          <table class="matrix">
+            <thead><tr><th>Post-op finding</th><th>Expected</th><th data-rn="Act / notify" data-lpn="Report to RN">Act / notify</th></tr></thead>
+            <tbody>
+              <tr data-answer="exp"><td>Temp 38.0&deg;C at 12 hours</td><td class="mcell"><button data-col="exp" aria-label="expected"></button></td><td class="mcell"><button data-col="rep" aria-label="act"></button></td></tr>
+              <tr data-answer="rep"><td>Urine output 20 mL/hr for 2 hours</td><td class="mcell"><button data-col="exp"></button></td><td class="mcell"><button data-col="rep"></button></td></tr>
+              <tr data-answer="exp"><td>Pain 4/10, steadily improving</td><td class="mcell"><button data-col="exp"></button></td><td class="mcell"><button data-col="rep"></button></td></tr>
+              <tr data-answer="rep"><td>New confusion with HR 122</td><td class="mcell"><button data-col="exp"></button></td><td class="mcell"><button data-col="rep"></button></td></tr>
+              <tr data-answer="exp"><td>Incision pink, edges approximated</td><td class="mcell"><button data-col="exp"></button></td><td class="mcell"><button data-col="rep"></button></td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="quiz-actions" style="margin-top:1.2rem;"><button class="btn btn-coral matrix-check">Check the grid</button><span class="matrix-result" hidden style="font-weight:800;color:var(--teal-600);"><b></b></span></div>
+      </div>
+    </div>
+  </section>
+
+  <section style="background:var(--bg);">
+    <div class="wrap">
+      <div class="section-head fade-up"><span class="lesson-label">Item type 4</span><h2>Build the SBAR.</h2><p>You're calling the provider about the potassium patient. Put each line where it belongs.</p></div>
+      <div class="widget sbar fade-up">
+        <span class="widget-tag">SBAR builder</span>
+        <div class="sbar-grid">
+          <div class="sbar-slot" data-answer="s"><span class="lab">S<b>Situation</b></span></div>
+          <div class="sbar-slot" data-answer="b"><span class="lab">B<b>Background</b></span></div>
+          <div class="sbar-slot" data-answer="a"><span class="lab">A<b>Assessment</b></span></div>
+          <div class="sbar-slot" data-answer="r"><span class="lab">R<b>Recommendation</b></span></div>
+        </div>
+        <p style="font-size:0.8rem;color:var(--ink-60);margin-bottom:0.7rem;">Tap a line, then tap its slot.</p>
+        <div class="chip-pool">
+          <button class="sbar-chip" data-id="a">I'm concerned about a cardiac arrhythmia from hyperkalemia.</button>
+          <button class="sbar-chip" data-id="r">Please come assess and consider IV calcium gluconate.</button>
+          <button class="sbar-chip" data-id="s">Mr. Alvarez in Room 4 has new palpitations and weakness.</button>
+          <button class="sbar-chip" data-id="b">He's post-op day 2; his potassium just resulted at 6.8.</button>
+        </div>
+        <div class="quiz-actions" style="margin-top:1.3rem;"><button class="btn btn-coral sbar-check">Check my SBAR</button><span class="sbar-result" hidden style="font-weight:800;color:var(--teal-600);"><b></b></span></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="unlock" style="background:var(--card);">
+    <div class="wrap">
+      <div class="gate fade-up">
+        <div class="lock-ic">{I['lock']}</div>
+        <h3>That's the free sample.</h3>
+        <p>You've tried every item type. The full <span class="track-word">RN</span> bank has <b>2,000+ questions</b>, timed mock exams in real test format, weak-area analytics, and Esi drilling exactly what you miss.</p>
+        <a class="btn btn-coral" href="#" data-unlock>Unlock NCLEX Complete &mdash; $129 (demo)</a>
+        <a class="relock" href="#" data-unlock>Just let me feel the paid side &rarr;</a>
+      </div>
+
+      <div class="paid-only">
+        <div class="section-head fade-up"><span class="lesson-label" style="color:var(--teal-600);">Unlocked</span><h2>Welcome to the full <span class="track-word">RN</span> bank.</h2><p>This is the paid experience. Everything below is unlocked.</p></div>
+        <div class="tile-grid cols-3">
+          <div class="tile"><span class="tag">Question bank</span><h3>2,140 <span class="track-word">RN</span> questions</h3><p>Every NGN type, filterable by clinical area, with full rationales on every option.</p></div>
+          <div class="tile"><span class="tag">Mock exams</span><h3>Real test format</h3><p>75&ndash;145 item CAT-style mocks with a pass-probability score.</p></div>
+          <div class="tile"><span class="tag">Analytics</span><h3>Your weak areas</h3><p>A live map of strong vs weak topics, updated every question.</p></div>
+        </div>
+        <div class="points-strip" style="margin-top:1.4rem;background:linear-gradient(135deg,var(--indigo-900),var(--indigo-700));color:#fff;">
+          <div class="txt"><b style="color:#fff;">Ready for a full mock?</b><p style="color:rgba(255,255,255,0.75);">75 questions, timed, scored with a pass-probability. (Demo &mdash; runner coming in Phase 2.)</p></div>
+          <a class="btn btn-coral" href="#">Start 75-question mock</a>
+        </div>
+        <p style="text-align:center;margin-top:1.6rem;"><a class="relock" href="#" data-relock style="color:var(--ink-60);text-decoration:underline;font-size:0.8rem;">Relock to feel the free side again</a></p>
+      </div>
+    </div>
+  </section>
+
+  <script src="js/prep.js"></script>
+"""
+
+PAGES["nclex.html"] = ("NCLEX Prep (RN &amp; LPN) — Must Love Scrubs",
+    "Free NCLEX practice with every Next Gen item type: timed recall, chart-trend, matrix grid, SBAR builder, and select-all. RN and LPN tracks.",
+    PREP_BODY, "courses")
 
 # ---------------------------------------------------------------- write out
 for fname, (title, desc, body, *rest) in PAGES.items():
