@@ -64,31 +64,54 @@
     conf.querySelector('.conf-btn').addEventListener('click', function () { conf.classList.add('revealed'); });
   }
 
-  /* ---- Quiz ---- */
+  /* ---- Sort-it drill (Low / Normal / High) ---- */
+  document.querySelectorAll('.sort-row').forEach(function (row) {
+    var answer = row.getAttribute('data-answer');
+    var btns = Array.prototype.slice.call(row.querySelectorAll('.sort-btn'));
+    var done = false;
+    btns.forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        if (done) return; done = true;
+        row.classList.add('done');
+        btns.forEach(function (b) {
+          b.setAttribute('disabled', '');
+          if (b.getAttribute('data-zone') === answer) b.classList.add('right');
+          else if (b === btn) b.classList.add('miss');
+        });
+      });
+    });
+  });
+
+  /* ---- Quiz (single-answer MC + Select-All-That-Apply) ---- */
   var score = 0, answered = 0;
   document.querySelectorAll('.quiz-card').forEach(function (card) {
+    var multi = card.classList.contains('sata');
     var opts = Array.prototype.slice.call(card.querySelectorAll('.opt'));
     var checkBtn = card.querySelector('.check-btn');
     var rationale = card.querySelector('.rationale');
-    var picked = null, locked = false;
+    var locked = false;
     opts.forEach(function (o) {
       o.addEventListener('click', function () {
         if (locked) return;
-        opts.forEach(function (x) { x.classList.remove('selected'); });
-        o.classList.add('selected'); picked = o;
+        if (multi) { o.classList.toggle('selected'); }
+        else { opts.forEach(function (x) { x.classList.remove('selected'); }); o.classList.add('selected'); }
       });
     });
     checkBtn.addEventListener('click', function () {
-      if (locked || !picked) return;
+      if (locked) return;
+      if (!opts.some(function (o) { return o.classList.contains('selected'); })) return;
       locked = true;
-      var correct = picked.getAttribute('data-correct') === '1';
-      if (correct) score++;
-      answered++;
+      var allRight = true;
       opts.forEach(function (o) {
         o.setAttribute('disabled', '');
-        if (o.getAttribute('data-correct') === '1') o.classList.add('correct');
-        else if (o === picked) o.classList.add('wrong');
+        var isC = o.getAttribute('data-correct') === '1';
+        var sel = o.classList.contains('selected');
+        if (isC) o.classList.add('correct');
+        if (sel && !isC) { o.classList.add('wrong'); allRight = false; }
+        if (isC && !sel) allRight = false;
       });
+      if (allRight) score++;
+      answered++;
       if (rationale) rationale.classList.add('show');
       checkBtn.textContent = 'Answer locked';
       checkBtn.style.opacity = '0.6';

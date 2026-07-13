@@ -1005,10 +1005,47 @@ def lab_ref_cards():
         </div>""")
     return '<div class="ref-grid">' + "".join(out) + '</div>'
 
+SORT = [
+    ("K&#8314; 6.8 mEq/L", "Potassium", "high"),
+    ("Na&#8314; 118 mEq/L", "Sodium", "low"),
+    ("Glucose 45 mg/dL", "Glucose", "low"),
+    ("Ca 10.2 mg/dL", "Calcium", "normal"),
+    ("Mg 1.2 mg/dL", "Magnesium", "low"),
+    ("K&#8314; 3.9 mEq/L", "Potassium", "normal"),
+]
+
+def sort_rows():
+    out = []
+    for val, sub, ans in SORT:
+        out.append(f"""<div class="sort-row" data-answer="{ans}">
+          <span class="val">{val}<small>{sub}</small></span>
+          <span class="sort-btns">
+            <button class="sort-btn" data-zone="low">Low</button>
+            <button class="sort-btn" data-zone="normal">Normal</button>
+            <button class="sort-btn" data-zone="high">High</button>
+          </span>
+        </div>""")
+    return '<div class="sort-list">' + "".join(out) + '</div>'
+
+SATA_CARD = """<div class="quiz-card sata" style="margin-bottom:2.5rem;">
+          <div class="quiz-head"><span>Clinical quick check</span><span>Select all that apply</span></div>
+          <span class="sata-tag">Next Gen NCLEX &middot; SATA</span>
+          <p class="quiz-q">Your patient's potassium is 6.8 mEq/L. Which actions are appropriate right now? Select all that apply.</p>
+          <div class="opts">
+            <button class="opt" data-correct="1"><span class="box"></span><span>Place the patient on a cardiac monitor</span></button>
+            <button class="opt" data-correct="1"><span class="box"></span><span>Hold all oral and IV potassium</span></button>
+            <button class="opt" data-correct="1"><span class="box"></span><span>Notify the provider</span></button>
+            <button class="opt" data-correct="0"><span class="box"></span><span>Offer a banana for a quick energy boost</span></button>
+            <button class="opt" data-correct="1"><span class="box"></span><span>Prepare to give IV calcium gluconate</span></button>
+          </div>
+          <div class="quiz-actions"><button class="btn btn-coral check-btn">Check answer</button><span style="font-size:0.8rem;color:rgba(255,255,255,0.6);">Pick every correct action.</span></div>
+          <div class="rationale"><b>Why:</b><p>Four are right &mdash; monitor the heart, stop all potassium, tell the provider, and anticipate calcium to protect the heart. Offering a banana <b>adds</b> potassium, exactly the wrong move. SATA items are all-or-nothing, so every box counts.</p></div>
+        </div>"""
+
 COURSE_BODY = f"""  <div class="page-hero">
     <div class="wrap inner">
       <a href="scrubtv.html" style="color:rgba(255,255,255,0.7);font-size:0.85rem;font-weight:700;">&larr; Back to Scrub TV</a>
-      <p class="lesson-kicker" style="margin-top:1.4rem;">ER / Night shift &middot; ~12 min &middot; 8 questions &middot; Free</p>
+      <p class="lesson-kicker" style="margin-top:1.4rem;">ER / Night shift &middot; ~14 min &middot; sorting drill + 9 questions &middot; Free</p>
       <span class="lesson-label" style="color:var(--gold-400);">Scrub TV &middot; Audio Scene &middot; Ep. 01</span>
       <h1 style="margin-top:0.6rem;">When the lab calls at <span class="em">3 a.m.</span></h1>
       <p>A full free lesson on critical lab values. Listen to the scene, learn the six that save lives, then prove it on 8 NCLEX-style questions. This is how the floor really sounds &mdash; and how you learn to think before you touch a textbook.</p>
@@ -1079,6 +1116,13 @@ COURSE_BODY = f"""  <div class="page-hero">
 
   <section style="background:var(--card);">
     <div class="wrap">
+      <div class="section-head fade-up"><span class="lesson-label" style="color:var(--teal-600);">Sort it &middot; quick drill</span><h2>Low, normal, or <span class="em">high</span>?</h2><p>Tap the zone for each value. Instant feedback &mdash; this is active recall, not a cheat sheet.</p></div>
+      {sort_rows()}
+    </div>
+  </section>
+
+  <section style="background:var(--bg);">
+    <div class="wrap">
       <div class="confidence fade-up">
         <span class="lesson-label" style="color:var(--teal-600);">Confidence check</span>
         <h3 style="margin-top:0.5rem;">How sure are you on the critical potassium value?</h3>
@@ -1096,6 +1140,7 @@ COURSE_BODY = f"""  <div class="page-hero">
     <div class="wrap">
       <div class="section-head fade-up"><span class="lesson-label" style="color:var(--gold-400);">Clinical quick check</span><h2 style="color:#fff;">Now &mdash; <span class="em" style="color:var(--gold-400);">make the call</span>.</h2></div>
       {quiz_cards()}
+      {SATA_CARD}
 
       <div class="result-reveal" hidden>
         <div class="result-card">
