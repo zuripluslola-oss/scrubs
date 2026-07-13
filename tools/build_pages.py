@@ -223,9 +223,9 @@ def cat_grid():
     return '<div class="cat-grid">' + "".join(cells) + '</div>'
 
 VIDEOS = [
-    ("ER / TRAUMA", "Triage in 90 seconds: who do you see first?", "linear-gradient(140deg,#522a5b,#d24e2a)", 25),
-    ("PHARMACOLOGY", "Beta blockers, explained the way you'll remember", "linear-gradient(140deg,#241127,#1f9b86)", 25),
-    ("PRENATAL & L&D", "Decels decoded: early, late &amp; variable", "linear-gradient(140deg,#522a5b,#c9922a)", 25),
+    ("ER / TRAUMA", "Triage in 90 seconds: who do you see first?", "linear-gradient(140deg,#4d2b9e,#7a45f0)", 25),
+    ("PHARMACOLOGY", "Beta blockers, explained the way you'll remember", "linear-gradient(140deg,#1a0942,#14b8a8)", 25),
+    ("PRENATAL & L&D", "Decels decoded: early, late &amp; variable", "linear-gradient(140deg,#4d2b9e,#d99a1f)", 25),
 ]
 
 def video_row():
@@ -241,10 +241,10 @@ def video_row():
     return '<div class="video-row">' + "".join(out) + '</div>'
 
 COURSE_SHELF = [
-    ("Pharmacology Mastery", "220 questions · flashcards · mnemonics", "$59", "linear-gradient(140deg,#d24e2a,#522a5b)", "RX"),
-    ("Med-Surg Essentials", "8 systems · case studies · mock exams", "$69", "linear-gradient(140deg,#1f9b86,#241127)", "MS"),
-    ("Prioritization &amp; Delegation", "NGN-style clinical judgment drills", "$49", "linear-gradient(140deg,#c9922a,#d24e2a)", "NGN"),
-    ("Dosage Calculation Bootcamp", "Step-by-step method · 300 practice problems", "$49", "linear-gradient(140deg,#522a5b,#1f9b86)", "CALC"),
+    ("Pharmacology Mastery", "220 questions · flashcards · mnemonics", "$59", "linear-gradient(140deg,#7a45f0,#4d2b9e)", "RX"),
+    ("Med-Surg Essentials", "8 systems · case studies · mock exams", "$69", "linear-gradient(140deg,#14b8a8,#1a0942)", "MS"),
+    ("Prioritization &amp; Delegation", "NGN-style clinical judgment drills", "$49", "linear-gradient(140deg,#d99a1f,#7a45f0)", "NGN"),
+    ("Dosage Calculation Bootcamp", "Step-by-step method · 300 practice problems", "$49", "linear-gradient(140deg,#4d2b9e,#14b8a8)", "CALC"),
 ]
 
 def course_shelf():
@@ -260,14 +260,14 @@ def course_shelf():
     return '<div class="course-shelf">' + "".join(out) + '</div>'
 
 PRODUCTS = [
-    ("Scrub Life Tote Bag", "$24", "linear-gradient(140deg,#ff8f6b,#1f9b86)", "M❤S"),
-    ("Coffee &amp; Compassion Mug", "$18", "linear-gradient(140deg,#e8613a,#d24e2a)", "MLS"),
-    ("Must Love Scrubs Tee", "$28", "linear-gradient(140deg,#351a3c,#522a5b)", "M❤S"),
-    ("Shift Survival Tumbler", "$26", "linear-gradient(140deg,#eab63f,#c9922a)", "MLS"),
-    ("Night Shift Hoodie", "$44", "linear-gradient(140deg,#522a5b,#241127)", "M❤S"),
-    ("Badge Buddy Sticker Pack", "$9", "linear-gradient(140deg,#ff8f6b,#522a5b)", "MLS"),
-    ("Nurse Era Crewneck", "$38", "linear-gradient(140deg,#d24e2a,#eab63f)", "M❤S"),
-    ("Clipboard Confidence Notebook", "$14", "linear-gradient(140deg,#1f9b86,#351a3c)", "MLS"),
+    ("Scrub Life Tote Bag", "$24", "linear-gradient(140deg,#a78bff,#14b8a8)", "M❤S"),
+    ("Coffee &amp; Compassion Mug", "$18", "linear-gradient(140deg,#8b5cff,#7a45f0)", "MLS"),
+    ("Must Love Scrubs Tee", "$28", "linear-gradient(140deg,#2b1055,#4d2b9e)", "M❤S"),
+    ("Shift Survival Tumbler", "$26", "linear-gradient(140deg,#ffc23d,#d99a1f)", "MLS"),
+    ("Night Shift Hoodie", "$44", "linear-gradient(140deg,#4d2b9e,#1a0942)", "M❤S"),
+    ("Badge Buddy Sticker Pack", "$9", "linear-gradient(140deg,#a78bff,#4d2b9e)", "MLS"),
+    ("Nurse Era Crewneck", "$38", "linear-gradient(140deg,#7a45f0,#ffc23d)", "M❤S"),
+    ("Clipboard Confidence Notebook", "$14", "linear-gradient(140deg,#14b8a8,#2b1055)", "MLS"),
 ]
 
 def product_grid(limit=None):
@@ -287,10 +287,10 @@ DIGITAL = [
 ]
 
 TESTIMONIALS = [
-    ("The videos plus the quizzes right underneath — that combo made things finally stick for me.", "J.M.", "RN, Med-Surg", "#d24e2a"),
-    ("I passed on my first try. The way this course teaches you to THINK through questions changed everything.", "A.T.", "New Grad RN", "#1f9b86"),
-    ("Esi feels like having a tutor in my pocket. She catches my weak areas before I do.", "S.K.", "Nursing Student", "#522a5b"),
-    ("Finally a nursing site that doesn't look and feel like it was built in 2009.", "D.R.", "Travel Nurse", "#c9922a"),
+    ("The videos plus the quizzes right underneath — that combo made things finally stick for me.", "J.M.", "RN, Med-Surg", "#7a45f0"),
+    ("I passed on my first try. The way this course teaches you to THINK through questions changed everything.", "A.T.", "New Grad RN", "#14b8a8"),
+    ("Esi feels like having a tutor in my pocket. She catches my weak areas before I do.", "S.K.", "Nursing Student", "#4d2b9e"),
+    ("Finally a nursing site that doesn't look and feel like it was built in 2009.", "D.R.", "Travel Nurse", "#d99a1f"),
 ]
 
 def testi_track():
@@ -327,38 +327,38 @@ def faq_list():
 HERO_SCENE = """<svg viewBox="0 0 560 420" role="img" aria-label="Instructor training nursing students at a hospital bed">
   <defs>
     <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0" stop-color="#522a5b"/><stop offset="1" stop-color="#351a3c"/>
+      <stop offset="0" stop-color="#4d2b9e"/><stop offset="1" stop-color="#2b1055"/>
     </linearGradient>
     <linearGradient id="floor" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0" stop-color="#522a5b"/><stop offset="1" stop-color="#241127"/>
+      <stop offset="0" stop-color="#4d2b9e"/><stop offset="1" stop-color="#1a0942"/>
     </linearGradient>
   </defs>
   <rect width="560" height="420" fill="url(#sky)"/>
   <rect y="300" width="560" height="120" fill="url(#floor)"/>
-  <rect x="40" y="60" width="120" height="150" rx="10" fill="#3d2145"/>
-  <path d="M60 100h80M60 125h80M60 150h55" stroke="#ff8f6b" stroke-width="6" stroke-linecap="round" opacity="0.8"/>
-  <path d="M60 175 h20 l8-16 10 30 9-14h33" stroke="#e8613a" stroke-width="5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
-  <rect x="120" y="250" width="330" height="70" rx="16" fill="#1f9b86"/>
-  <rect x="130" y="230" width="310" height="34" rx="14" fill="#f7f0e6"/>
+  <rect x="40" y="60" width="120" height="150" rx="10" fill="#3a1f7a"/>
+  <path d="M60 100h80M60 125h80M60 150h55" stroke="#a78bff" stroke-width="6" stroke-linecap="round" opacity="0.8"/>
+  <path d="M60 175 h20 l8-16 10 30 9-14h33" stroke="#8b5cff" stroke-width="5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect x="120" y="250" width="330" height="70" rx="16" fill="#14b8a8"/>
+  <rect x="130" y="230" width="310" height="34" rx="14" fill="#f6f3ff"/>
   <ellipse cx="175" cy="247" rx="22" ry="14" fill="#ffffff"/>
-  <path d="M205 252 q90 -18 220 -6 l0 18 -220 0z" fill="#ff8f6b" opacity="0.92"/>
-  <rect x="135" y="318" width="14" height="70" fill="#45274d"/>
-  <rect x="425" y="318" width="14" height="70" fill="#45274d"/>
+  <path d="M205 252 q90 -18 220 -6 l0 18 -220 0z" fill="#a78bff" opacity="0.92"/>
+  <rect x="135" y="318" width="14" height="70" fill="#432a8a"/>
+  <rect x="425" y="318" width="14" height="70" fill="#432a8a"/>
   <circle cx="480" cy="120" r="26" fill="#f4c39a"/>
-  <path d="M462 112a26 26 0 0 1 36-4l4-10a32 32 0 0 0-46 6z" fill="#351a3c"/>
-  <path d="M450 210 q30 -66 60 0 l6 90 h-72z" fill="#1f9b86"/>
-  <path d="M452 170 q-24 34 -40 44l10 14q26 -14 42 -40z" fill="#1f9b86"/>
+  <path d="M462 112a26 26 0 0 1 36-4l4-10a32 32 0 0 0-46 6z" fill="#2b1055"/>
+  <path d="M450 210 q30 -66 60 0 l6 90 h-72z" fill="#14b8a8"/>
+  <path d="M452 170 q-24 34 -40 44l10 14q26 -14 42 -40z" fill="#14b8a8"/>
   <path d="M420 216 l-16 12 8 10 16 -10z" fill="#f4c39a"/>
   <circle cx="340" cy="150" r="22" fill="#e8b088"/>
   <path d="M322 144a22 22 0 0 1 34-6l6-8a30 30 0 0 0-46 8z" fill="#3b2a20"/>
-  <path d="M315 230 q25 -54 50 0 l5 74 h-60z" fill="#e8613a"/>
-  <path d="M318 196 q-20 26 -34 34l8 12q22 -10 36 -32z" fill="#e8613a"/>
+  <path d="M315 230 q25 -54 50 0 l5 74 h-60z" fill="#8b5cff"/>
+  <path d="M318 196 q-20 26 -34 34l8 12q22 -10 36 -32z" fill="#8b5cff"/>
   <circle cx="255" cy="160" r="21" fill="#8a5a3b"/>
   <path d="M238 154a21 21 0 0 1 33-6l5-8a29 29 0 0 0-44 8z" fill="#161616"/>
-  <path d="M232 236 q23 -50 46 0 l5 68 h-56z" fill="#ff8f6b"/>
-  <path d="M234 202 q-16 22 -28 30l7 11q20 -10 32 -28z" fill="#ff8f6b"/>
-  <circle cx="500" cy="60" r="3" fill="#eab63f"/><circle cx="520" cy="80" r="2" fill="#eab63f" opacity="0.7"/>
-  <circle cx="60" cy="40" r="2.5" fill="#ff8f6b" opacity="0.8"/><circle cx="90" cy="28" r="2" fill="#e8613a" opacity="0.8"/>
+  <path d="M232 236 q23 -50 46 0 l5 68 h-56z" fill="#a78bff"/>
+  <path d="M234 202 q-16 22 -28 30l7 11q20 -10 32 -28z" fill="#a78bff"/>
+  <circle cx="500" cy="60" r="3" fill="#ffc23d"/><circle cx="520" cy="80" r="2" fill="#ffc23d" opacity="0.7"/>
+  <circle cx="60" cy="40" r="2.5" fill="#a78bff" opacity="0.8"/><circle cx="90" cy="28" r="2" fill="#8b5cff" opacity="0.8"/>
 </svg>"""
 
 INDEX_BODY = f"""  <main>
@@ -665,7 +665,7 @@ PAGES["spotlight.html"] = ("Nurse Spotlight — Must Love Scrubs",
     + """  <main class="content-block">
     <div class="wrap">
       <div class="course-hero fade-up">
-        <div class="art" style="background:radial-gradient(circle at 30% 30%, rgba(255,201,77,0.4), transparent 55%), linear-gradient(150deg,#d24e2a,#522a5b);"><span class="big">&#10084;</span></div>
+        <div class="art" style="background:radial-gradient(circle at 30% 30%, rgba(255,201,77,0.4), transparent 55%), linear-gradient(150deg,#7a45f0,#4d2b9e);"><span class="big">&#10084;</span></div>
         <div class="body">
           <div class="chip-row"><span class="chip gold">FEATURED STORY</span></div>
           <h3>“Twelve-hour shifts taught me everything about people.”</h3>
