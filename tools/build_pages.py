@@ -137,7 +137,7 @@ def chrome(fname, title, desc, body, active=""):
           <span class="mark">M<b>&#10084;</b>S</span>
           <span class="word" style="color:#fff;">Must <i>Love</i> Scrubs</span>
         </a>
-        <p>The ecosystem of nursing — learn, watch, shop, and grow, wherever you are on your journey.</p>
+        <p>Education with a pulse. Free NCLEX practice, warm community, and tools built for the nurse you're becoming.</p>
         <div class="footer-social">
           <a href="https://facebook.com/mustlovescrubs" aria-label="Facebook">{I['fb']}</a>
           <a href="https://tiktok.com/@mustlovescrubs" aria-label="TikTok">{I['tiktok']}</a>
@@ -146,34 +146,25 @@ def chrome(fname, title, desc, body, active=""):
       <div class="footer-col">
         <h5>Learn</h5>
         <ul>
-          <li><a href="courses.html">All Courses</a></li>
-          <li><a href="courses.html">NCLEX Complete</a></li>
+          <li><a href="courses.html">Courses</a></li>
+          <li><a href="courses.html">Free NCLEX Practice</a></li>
           <li><a href="scrubtv.html">Scrub TV</a></li>
-          <li><a href="esi.html">Meet Esi</a></li>
+          <li><a href="esi.html">Esi Tutoring</a></li>
         </ul>
       </div>
       <div class="footer-col">
-        <h5>Community</h5>
+        <h5>Discover</h5>
         <ul>
-          <li><a href="spotlight.html">Nurse Spotlight</a></li>
+          <li><a href="spotlight.html">Spotlight</a></li>
           <li><a href="jobs.html">Job Search</a></li>
           <li><a href="blog.html">Blog</a></li>
-          <li><a href="join.html">Create Free Account</a></li>
-        </ul>
-      </div>
-      <div class="footer-col">
-        <h5>Shop</h5>
-        <ul>
-          <li><a href="store.html">Lifestyle Store</a></li>
-          <li><a href="store.html#digital">Digital Downloads</a></li>
-          <li><a href="profile.html">Redeem Points</a></li>
+          <li><a href="store.html">Store</a></li>
         </ul>
       </div>
       <div class="footer-col">
         <h5>Company</h5>
         <ul>
-          <li><a href="about.html">About Us</a></li>
-          <li><a href="careers.html">Careers</a></li>
+          <li><a href="about.html">About</a></li>
           <li><a href="help.html">Help Center</a></li>
           <li><a href="contact.html">Contact</a></li>
           <li><a href="support.html">Support</a></li>
@@ -181,10 +172,10 @@ def chrome(fname, title, desc, body, active=""):
       </div>
     </div>
     <div class="wrap footer-bottom">
-      <span>&copy; 2026 Must Love Scrubs. All rights reserved. &middot; hello@mustlovescrubs.com</span>
+      <span>&copy; 2026 Must Love Scrubs. All rights reserved. &middot; hello@mustlovescrubs.com &middot; Educational content only, not clinical advice.</span>
       <div class="legal-links">
-        <a href="privacy.html">Privacy Policy</a>
-        <a href="terms.html">Terms of Use</a>
+        <a href="privacy.html">Privacy</a>
+        <a href="terms.html">Terms</a>
       </div>
     </div>
   </footer>
@@ -231,9 +222,9 @@ def cat_grid():
     return '<div class="cat-grid">' + "".join(cells) + '</div>'
 
 VIDEOS = [
-    ("ER / TRAUMA", "Triage in 90 seconds: who do you see first?", "linear-gradient(140deg,#2c2f63,#e63e4e)", 25),
-    ("PHARMACOLOGY", "Beta blockers, explained the way you'll remember", "linear-gradient(140deg,#12132b,#0b9f92)", 25),
-    ("PRENATAL & L&D", "Decels decoded: early, late &amp; variable", "linear-gradient(140deg,#2c2f63,#e0a92c)", 25),
+    ("ER / TRAUMA", "Triage in 90 seconds: who do you see first?", "linear-gradient(140deg,#1f4d3f,#d24e2a)", 25),
+    ("PHARMACOLOGY", "Beta blockers, explained the way you'll remember", "linear-gradient(140deg,#12312a,#2c6350)", 25),
+    ("PRENATAL & L&D", "Decels decoded: early, late &amp; variable", "linear-gradient(140deg,#1f4d3f,#c9922a)", 25),
 ]
 
 def video_row():
@@ -249,10 +240,10 @@ def video_row():
     return '<div class="video-row">' + "".join(out) + '</div>'
 
 COURSE_SHELF = [
-    ("Pharmacology Mastery", "220 questions · flashcards · mnemonics", "$59", "linear-gradient(140deg,#e63e4e,#2c2f63)", "RX"),
-    ("Med-Surg Essentials", "8 systems · case studies · mock exams", "$69", "linear-gradient(140deg,#0b9f92,#12132b)", "MS"),
-    ("Prioritization &amp; Delegation", "NGN-style clinical judgment drills", "$49", "linear-gradient(140deg,#e0a92c,#e63e4e)", "NGN"),
-    ("Dosage Calculation Bootcamp", "Step-by-step method · 300 practice problems", "$49", "linear-gradient(140deg,#2c2f63,#0b9f92)", "CALC"),
+    ("Pharmacology Mastery", "220 questions · flashcards · mnemonics", "$59", "linear-gradient(140deg,#d24e2a,#1f4d3f)", "RX"),
+    ("Med-Surg Essentials", "8 systems · case studies · mock exams", "$69", "linear-gradient(140deg,#2c6350,#12312a)", "MS"),
+    ("Prioritization &amp; Delegation", "NGN-style clinical judgment drills", "$49", "linear-gradient(140deg,#c9922a,#d24e2a)", "NGN"),
+    ("Dosage Calculation Bootcamp", "Step-by-step method · 300 practice problems", "$49", "linear-gradient(140deg,#1f4d3f,#2c6350)", "CALC"),
 ]
 
 def course_shelf():
@@ -268,14 +259,14 @@ def course_shelf():
     return '<div class="course-shelf">' + "".join(out) + '</div>'
 
 PRODUCTS = [
-    ("Scrub Life Tote Bag", "$24", "linear-gradient(140deg,#14d3c0,#0b9f92)", "M❤S"),
-    ("Coffee &amp; Compassion Mug", "$18", "linear-gradient(140deg,#ff4f5e,#e63e4e)", "MLS"),
-    ("Must Love Scrubs Tee", "$28", "linear-gradient(140deg,#191b3a,#2c2f63)", "M❤S"),
-    ("Shift Survival Tumbler", "$26", "linear-gradient(140deg,#ffc94d,#e0a92c)", "MLS"),
-    ("Night Shift Hoodie", "$44", "linear-gradient(140deg,#2c2f63,#12132b)", "M❤S"),
-    ("Badge Buddy Sticker Pack", "$9", "linear-gradient(140deg,#14d3c0,#2c2f63)", "MLS"),
-    ("Nurse Era Crewneck", "$38", "linear-gradient(140deg,#e63e4e,#ffc94d)", "M❤S"),
-    ("Clipboard Confidence Notebook", "$14", "linear-gradient(140deg,#0b9f92,#191b3a)", "MLS"),
+    ("Scrub Life Tote Bag", "$24", "linear-gradient(140deg,#6bbfa6,#2c6350)", "M❤S"),
+    ("Coffee &amp; Compassion Mug", "$18", "linear-gradient(140deg,#e8613a,#d24e2a)", "MLS"),
+    ("Must Love Scrubs Tee", "$28", "linear-gradient(140deg,#163a30,#1f4d3f)", "M❤S"),
+    ("Shift Survival Tumbler", "$26", "linear-gradient(140deg,#eab63f,#c9922a)", "MLS"),
+    ("Night Shift Hoodie", "$44", "linear-gradient(140deg,#1f4d3f,#12312a)", "M❤S"),
+    ("Badge Buddy Sticker Pack", "$9", "linear-gradient(140deg,#6bbfa6,#1f4d3f)", "MLS"),
+    ("Nurse Era Crewneck", "$38", "linear-gradient(140deg,#d24e2a,#eab63f)", "M❤S"),
+    ("Clipboard Confidence Notebook", "$14", "linear-gradient(140deg,#2c6350,#163a30)", "MLS"),
 ]
 
 def product_grid(limit=None):
@@ -295,10 +286,10 @@ DIGITAL = [
 ]
 
 TESTIMONIALS = [
-    ("The videos plus the quizzes right underneath — that combo made things finally stick for me.", "J.M.", "RN, Med-Surg", "#e63e4e"),
-    ("I passed on my first try. The way this course teaches you to THINK through questions changed everything.", "A.T.", "New Grad RN", "#0b9f92"),
-    ("Esi feels like having a tutor in my pocket. She catches my weak areas before I do.", "S.K.", "Nursing Student", "#2c2f63"),
-    ("Finally a nursing site that doesn't look and feel like it was built in 2009.", "D.R.", "Travel Nurse", "#e0a92c"),
+    ("The videos plus the quizzes right underneath — that combo made things finally stick for me.", "J.M.", "RN, Med-Surg", "#d24e2a"),
+    ("I passed on my first try. The way this course teaches you to THINK through questions changed everything.", "A.T.", "New Grad RN", "#2c6350"),
+    ("Esi feels like having a tutor in my pocket. She catches my weak areas before I do.", "S.K.", "Nursing Student", "#1f4d3f"),
+    ("Finally a nursing site that doesn't look and feel like it was built in 2009.", "D.R.", "Travel Nurse", "#c9922a"),
 ]
 
 def testi_track():
@@ -335,38 +326,38 @@ def faq_list():
 HERO_SCENE = """<svg viewBox="0 0 560 420" role="img" aria-label="Instructor training nursing students at a hospital bed">
   <defs>
     <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0" stop-color="#2c2f63"/><stop offset="1" stop-color="#191b3a"/>
+      <stop offset="0" stop-color="#1f4d3f"/><stop offset="1" stop-color="#163a30"/>
     </linearGradient>
     <linearGradient id="floor" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0" stop-color="#232653"/><stop offset="1" stop-color="#14152e"/>
+      <stop offset="0" stop-color="#1f4d3f"/><stop offset="1" stop-color="#12312a"/>
     </linearGradient>
   </defs>
   <rect width="560" height="420" fill="url(#sky)"/>
   <rect y="300" width="560" height="120" fill="url(#floor)"/>
-  <rect x="40" y="60" width="120" height="150" rx="10" fill="#1f2247"/>
-  <path d="M60 100h80M60 125h80M60 150h55" stroke="#14d3c0" stroke-width="6" stroke-linecap="round" opacity="0.8"/>
-  <path d="M60 175 h20 l8-16 10 30 9-14h33" stroke="#ff4f5e" stroke-width="5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
-  <rect x="120" y="250" width="330" height="70" rx="16" fill="#3a3e78"/>
-  <rect x="130" y="230" width="310" height="34" rx="14" fill="#f0f1fa"/>
+  <rect x="40" y="60" width="120" height="150" rx="10" fill="#1a4033"/>
+  <path d="M60 100h80M60 125h80M60 150h55" stroke="#6bbfa6" stroke-width="6" stroke-linecap="round" opacity="0.8"/>
+  <path d="M60 175 h20 l8-16 10 30 9-14h33" stroke="#e8613a" stroke-width="5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect x="120" y="250" width="330" height="70" rx="16" fill="#2c6350"/>
+  <rect x="130" y="230" width="310" height="34" rx="14" fill="#f3ede0"/>
   <ellipse cx="175" cy="247" rx="22" ry="14" fill="#ffffff"/>
-  <path d="M205 252 q90 -18 220 -6 l0 18 -220 0z" fill="#14d3c0" opacity="0.92"/>
-  <rect x="135" y="318" width="14" height="70" fill="#2a2d5c"/>
-  <rect x="425" y="318" width="14" height="70" fill="#2a2d5c"/>
+  <path d="M205 252 q90 -18 220 -6 l0 18 -220 0z" fill="#6bbfa6" opacity="0.92"/>
+  <rect x="135" y="318" width="14" height="70" fill="#234a3c"/>
+  <rect x="425" y="318" width="14" height="70" fill="#234a3c"/>
   <circle cx="480" cy="120" r="26" fill="#f4c39a"/>
-  <path d="M462 112a26 26 0 0 1 36-4l4-10a32 32 0 0 0-46 6z" fill="#191b3a"/>
-  <path d="M450 210 q30 -66 60 0 l6 90 h-72z" fill="#0b9f92"/>
-  <path d="M452 170 q-24 34 -40 44l10 14q26 -14 42 -40z" fill="#0b9f92"/>
+  <path d="M462 112a26 26 0 0 1 36-4l4-10a32 32 0 0 0-46 6z" fill="#163a30"/>
+  <path d="M450 210 q30 -66 60 0 l6 90 h-72z" fill="#2c6350"/>
+  <path d="M452 170 q-24 34 -40 44l10 14q26 -14 42 -40z" fill="#2c6350"/>
   <path d="M420 216 l-16 12 8 10 16 -10z" fill="#f4c39a"/>
   <circle cx="340" cy="150" r="22" fill="#e8b088"/>
   <path d="M322 144a22 22 0 0 1 34-6l6-8a30 30 0 0 0-46 8z" fill="#3b2a20"/>
-  <path d="M315 230 q25 -54 50 0 l5 74 h-60z" fill="#ff4f5e"/>
-  <path d="M318 196 q-20 26 -34 34l8 12q22 -10 36 -32z" fill="#ff4f5e"/>
+  <path d="M315 230 q25 -54 50 0 l5 74 h-60z" fill="#e8613a"/>
+  <path d="M318 196 q-20 26 -34 34l8 12q22 -10 36 -32z" fill="#e8613a"/>
   <circle cx="255" cy="160" r="21" fill="#8a5a3b"/>
   <path d="M238 154a21 21 0 0 1 33-6l5-8a29 29 0 0 0-44 8z" fill="#161616"/>
-  <path d="M232 236 q23 -50 46 0 l5 68 h-56z" fill="#14d3c0"/>
-  <path d="M234 202 q-16 22 -28 30l7 11q20 -10 32 -28z" fill="#14d3c0"/>
-  <circle cx="500" cy="60" r="3" fill="#ffc94d"/><circle cx="520" cy="80" r="2" fill="#ffc94d" opacity="0.7"/>
-  <circle cx="60" cy="40" r="2.5" fill="#14d3c0" opacity="0.8"/><circle cx="90" cy="28" r="2" fill="#ff4f5e" opacity="0.8"/>
+  <path d="M232 236 q23 -50 46 0 l5 68 h-56z" fill="#6bbfa6"/>
+  <path d="M234 202 q-16 22 -28 30l7 11q20 -10 32 -28z" fill="#6bbfa6"/>
+  <circle cx="500" cy="60" r="3" fill="#eab63f"/><circle cx="520" cy="80" r="2" fill="#eab63f" opacity="0.7"/>
+  <circle cx="60" cy="40" r="2.5" fill="#6bbfa6" opacity="0.8"/><circle cx="90" cy="28" r="2" fill="#e8613a" opacity="0.8"/>
 </svg>"""
 
 INDEX_BODY = f"""  <main>
@@ -673,7 +664,7 @@ PAGES["spotlight.html"] = ("Nurse Spotlight — Must Love Scrubs",
     + """  <main class="content-block">
     <div class="wrap">
       <div class="course-hero fade-up">
-        <div class="art" style="background:radial-gradient(circle at 30% 30%, rgba(255,201,77,0.4), transparent 55%), linear-gradient(150deg,#e63e4e,#2c2f63);"><span class="big">&#10084;</span></div>
+        <div class="art" style="background:radial-gradient(circle at 30% 30%, rgba(255,201,77,0.4), transparent 55%), linear-gradient(150deg,#d24e2a,#1f4d3f);"><span class="big">&#10084;</span></div>
         <div class="body">
           <div class="chip-row"><span class="chip gold">FEATURED STORY</span></div>
           <h3>“Twelve-hour shifts taught me everything about people.”</h3>
