@@ -938,6 +938,36 @@ QUIZ = [
       ("ST-elevation in two leads", 0),
       ("A shortened PR interval", 0)],
      "Peaked, tented T waves are the classic early sign of <b>high</b> potassium. U waves point the other way &mdash; toward <b>low</b> potassium. Build the pattern: high K&#8314; &rarr; peaked T's."),
+    ("What is the normal reference range for serum potassium?",
+     [("1.5&ndash;2.5 mEq/L", 0),
+      ("3.5&ndash;5.0 mEq/L", 1),
+      ("8.5&ndash;10.5 mg/dL", 0),
+      ("135&ndash;145 mEq/L", 0)],
+     "Normal potassium is <b>3.5&ndash;5.0 mEq/L</b> &mdash; the banana that costs $3.50 to $5.00. 8.5&ndash;10.5 is calcium; 135&ndash;145 is sodium. Knowing the anchors is how you spot a critical value instantly."),
+    ("Your patient is started on furosemide (a loop diuretic). Which electrolyte will you watch most closely for a drop?",
+     [("Sodium", 0),
+      ("Calcium", 0),
+      ("Potassium", 1),
+      ("Magnesium only", 0)],
+     "Loop diuretics waste <b>potassium</b> &mdash; hypokalemia is the classic risk. Watch for muscle weakness, cramps, and U waves on the ECG, and expect the provider to order a potassium supplement."),
+    ("A patient's sodium is 118 mEq/L. What are you most concerned about?",
+     [("Seizures and altered mental status", 1),
+      ("Peaked T waves", 0),
+      ("Positive Chvostek sign", 0),
+      ("Kussmaul respirations", 0)],
+     "Severe hyponatremia (&lt;120) pulls water <b>into brain cells</b> &mdash; cerebral edema causes headache, confusion, and <b>seizures</b>. Neuro checks and safety are the priority; correct sodium slowly to avoid harm."),
+    ("A patient's magnesium is 1.2 mg/dL. Which complication are you monitoring for?",
+     [("Depressed reflexes and drowsiness", 0),
+      ("Cardiac arrhythmias, including torsades de pointes", 1),
+      ("Constipation and thirst", 0),
+      ("Bradycardia and warm, flushed skin", 0)],
+     "<b>Low</b> magnesium destabilizes the heart &mdash; watch for arrhythmias, especially <b>torsades de pointes</b>. (Depressed reflexes and flushing point the other way, toward <b>high</b> magnesium.)"),
+    ("A patient with a glucose of 45 mg/dL is confused and diaphoretic. What do you do first?",
+     [("Draw a repeat glucose and wait for the result", 0),
+      ("Give 15 g of fast-acting carbohydrate", 1),
+      ("Administer the next scheduled insulin dose", 0),
+      ("Encourage a high-protein snack", 0)],
+     "Symptomatic hypoglycemia is an emergency &mdash; <b>treat first</b> with 15 g of fast-acting carb (juice, glucose gel/tabs), then recheck in 15 minutes. Never give insulin or wait when the brain is starving for glucose."),
 ]
 
 def quiz_cards():
@@ -956,13 +986,32 @@ def quiz_cards():
         </div>""")
     return "".join(out)
 
+LAB_REF = [
+    ("Potassium", "K&#8314;", "3.5&ndash;5.0 mEq/L", "&lt;2.5 or &gt;6.5", "Banana costs $3.50&ndash;$5.00. High &rarr; peaked T's; low &rarr; U waves.", "c1"),
+    ("Sodium", "Na&#8314;", "135&ndash;145 mEq/L", "&lt;120 or &gt;160", "Low &rarr; seizures &amp; confusion (water into the brain).", "c2"),
+    ("Calcium", "Ca", "9.0&ndash;10.5 mg/dL", "&lt;7.0 or &gt;12", "Low &rarr; positive Chvostek &amp; Trousseau, tetany.", "c3"),
+    ("Magnesium", "Mg", "1.5&ndash;2.5 mg/dL", "&lt;1.0 or &gt;4.0", "Low &rarr; torsades. High &rarr; depressed reflexes.", "c4"),
+    ("Glucose", "&#9679;", "70&ndash;110 mg/dL", "&lt;70 or &gt;400", "Symptomatic low? Treat first with 15 g fast carbs.", "c1"),
+    ("Creatinine", "Cr", "0.6&ndash;1.2 mg/dL", "&gt;4.0", "Rising Cr = failing kidneys. Hold nephrotoxic meds.", "c2"),
+]
+
+def lab_ref_cards():
+    out = []
+    for name, sym, rng, crit, trick, color in LAB_REF:
+        out.append(f"""<div class="ref-card fade-up">
+          <div class="ref-top"><span class="ref-sym {color}">{sym}</span><div><b>{name}</b><span class="ref-range">{rng}</span></div></div>
+          <div class="ref-crit"><span>Critical</span><b>{crit}</b></div>
+          <p class="ref-trick">{trick}</p>
+        </div>""")
+    return '<div class="ref-grid">' + "".join(out) + '</div>'
+
 COURSE_BODY = f"""  <div class="page-hero">
     <div class="wrap inner">
       <a href="scrubtv.html" style="color:rgba(255,255,255,0.7);font-size:0.85rem;font-weight:700;">&larr; Back to Scrub TV</a>
-      <p class="lesson-kicker" style="margin-top:1.4rem;">ER / Night shift &middot; 6 min listen &middot; Free</p>
+      <p class="lesson-kicker" style="margin-top:1.4rem;">ER / Night shift &middot; ~12 min &middot; 8 questions &middot; Free</p>
       <span class="lesson-label" style="color:var(--gold-400);">Scrub TV &middot; Audio Scene &middot; Ep. 01</span>
       <h1 style="margin-top:0.6rem;">When the lab calls at <span class="em">3 a.m.</span></h1>
-      <p>Listen to the scene. Catch what matters. Make the call. This is how the floor really sounds &mdash; and how you learn to think before you touch a textbook.</p>
+      <p>A full free lesson on critical lab values. Listen to the scene, learn the six that save lives, then prove it on 8 NCLEX-style questions. This is how the floor really sounds &mdash; and how you learn to think before you touch a textbook.</p>
     </div>
   </div>
 
@@ -1017,6 +1066,14 @@ COURSE_BODY = f"""  <div class="page-hero">
           </div>
         </div>
       </div>
+    </div>
+  </section>
+
+  <section style="background:var(--bg);">
+    <div class="wrap">
+      <div class="section-head fade-up"><span class="lesson-label">Know your criticals</span><h2>The six that <span class="em">save lives</span>.</h2><p>These are the values you'll act on at 3 a.m. Learn the anchor, spot the danger, know the move.</p></div>
+      {lab_ref_cards()}
+      <p class="ref-foot fade-up">Ranges vary slightly by lab. Learn the pattern, then confirm against your facility's reference values.</p>
     </div>
   </section>
 

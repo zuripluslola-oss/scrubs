@@ -822,6 +822,34 @@ section { padding-block: clamp(3.6rem, 9vw, 6.5rem); position: relative; }
 .f2 { background: var(--coral-500); color: var(--white); }
 .f3 { background: var(--gold-400); color: var(--indigo-950); }
 
+/* lab-values reference cards */
+.ref-grid { display: grid; gap: 1rem; grid-template-columns: 1fr; }
+@media (min-width: 620px)  { .ref-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (min-width: 980px)  { .ref-grid { grid-template-columns: repeat(3, 1fr); } }
+.ref-card {
+  background: var(--card); border: 1px solid rgba(30,18,51,0.08);
+  border-radius: var(--radius); padding: 1.4rem; box-shadow: var(--shadow-1);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+.ref-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-2); }
+.ref-top { display: flex; align-items: center; gap: 0.9rem; }
+.ref-sym {
+  width: 48px; height: 48px; border-radius: 13px; flex-shrink: 0;
+  display: grid; place-items: center;
+  font-family: var(--font-display); font-weight: 800; font-size: 1.1rem;
+}
+.ref-top b { display: block; font-size: 1.05rem; }
+.ref-range { font-size: 0.85rem; color: var(--ink-60); font-variant-numeric: tabular-nums; }
+.ref-crit {
+  margin-top: 1rem; padding: 0.6rem 0.9rem; border-radius: var(--radius-sm);
+  background: var(--coral-100);
+  display: flex; align-items: center; justify-content: space-between;
+}
+.ref-crit span { font-size: 0.68rem; font-weight: 800; letter-spacing: 0.1em; text-transform: uppercase; color: var(--coral-600); }
+.ref-crit b { font-size: 0.9rem; color: var(--coral-600); font-variant-numeric: tabular-nums; }
+.ref-trick { margin-top: 0.9rem; font-size: 0.85rem; color: var(--ink-60); line-height: 1.5; }
+.ref-foot { margin-top: 1.4rem; font-size: 0.78rem; color: var(--ink-60); text-align: center; }
+
 /* confidence check */
 .confidence { background: var(--card); border: 1px solid rgba(22,35,29,0.08); border-radius: var(--radius); padding: 1.8rem; box-shadow: var(--shadow-1); max-width: 640px; }
 .confidence h3 { font-size: 1.3rem; }
