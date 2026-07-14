@@ -101,7 +101,7 @@ def chrome(fname, title, desc, body, active=""):
       <div>
         <h4>Learn</h4>
         <ul class="mega-links">
-          <li><a href="nclex-complete.html">NCLEX Complete <small>The flagship &middot; plans from $49</small></a></li>
+          <li><a href="nclex-complete.html">NCLEX Complete <small>The flagship &middot; plans from $59</small></a></li>
           <li><a href="nclex.html">Free NCLEX Prep <small>RN &amp; LPN &middot; every NGN item type</small></a></li>
           <li><a href="nclex-guide.html">Free Study Guide <small>How to pass &middot; for nurses, by nurses</small></a></li>
           <li><a href="course-lab-values.html">Free NCLEX Practice <small>Start with a free audio scene</small></a></li>
@@ -114,7 +114,7 @@ def chrome(fname, title, desc, body, active=""):
       <div>
         <h4>Community</h4>
         <ul class="mega-links">
-          <li><a href="dictionary.html">Nurse Dictionary <small>Every term, in plain language</small></a></li>
+          <li><a href="dictionary.html">Scrubs Dictionary <small>Every term, in plain language</small></a></li>
           <li><a href="spotlight.html">Nurse Spotlight <small>Real stories, beautifully told</small></a></li>
           <li><a href="jobs.html">Job Search <small>A small Indeed, just for nurses</small></a></li>
           <li><a href="blog.html">Blog <small>News, tips &amp; nurse life</small></a></li>
@@ -134,7 +134,7 @@ def chrome(fname, title, desc, body, active=""):
       <a class="mega-promo" href="nclex-complete.html">
         <span class="art">NCLEX</span>
         <b>NCLEX Complete</b>
-        <p>50 cases, 2,600+ questions, 4 readiness exams &amp; Esi — from $49.</p>
+        <p>50 cases, 2,600+ questions, 4 readiness exams &amp; Esi — from $59.</p>
         <span class="btn btn-coral" style="padding:0.6rem 1.3rem; font-size:0.85rem;">See the plans</span>
       </a>
     </div>
@@ -170,7 +170,7 @@ def chrome(fname, title, desc, body, active=""):
       <div class="footer-col">
         <h5>Discover</h5>
         <ul>
-          <li><a href="dictionary.html">Nurse Dictionary</a></li>
+          <li><a href="dictionary.html">Scrubs Dictionary</a></li>
           <li><a href="spotlight.html">Spotlight</a></li>
           <li><a href="jobs.html">Job Search</a></li>
           <li><a href="blog.html">Blog</a></li>
@@ -205,7 +205,7 @@ def chrome(fname, title, desc, body, active=""):
 
   <button class="esi-fab" data-esi-launch aria-label="Esi — your AI tutor">
     <span class="orb"></span>
-    <span>Esi<span class="lock">PREMIUM TUTOR</span></span>
+    <span>Esi</span>
   </button>
 
   <script src="js/main.js"></script>
@@ -275,15 +275,18 @@ def course_shelf():
 
 # -------- Subscription pricing (3 tiers, Esi included, duration-based) --------
 TIERS = [
-    {"dur": "1 Month", "sub": "of full access", "was": "$79", "now": "49",
-     "save": "Save $30", "feat": False, "guar": False,
-     "blurb": "For students testing in under a month who need reps and a plan &mdash; fast."},
-    {"dur": "2 Months", "sub": "of full access", "was": "$149", "now": "89",
-     "save": "Save $60", "feat": True, "guar": True,
-     "blurb": "The sweet spot for most students &mdash; runway to fix every weak area."},
-    {"dur": "3 Months", "sub": "of full access", "was": "$199", "now": "119",
-     "save": "Save $80", "feat": False, "guar": True,
-     "blurb": "Best if you work full-time or are building from the ground up."},
+    {"dur": "1 Month", "sub": "of full access", "was": "$99", "now": "59", "permo": "$59/mo",
+     "save": "Save $40", "rec": "", "feat": False, "guar": False,
+     "blurb": "Testing soon and just need reps and a plan? Start here."},
+    {"dur": "2 Months", "sub": "of full access", "was": "$169", "now": "99", "permo": "$50/mo",
+     "save": "Save $70", "rec": "Most popular", "feat": True, "guar": True,
+     "blurb": "The timeline most students choose &mdash; room to fix every weak area."},
+    {"dur": "3 Months", "sub": "of full access", "was": "$219", "now": "129", "permo": "$43/mo",
+     "save": "Save $90", "rec": "", "feat": False, "guar": True,
+     "blurb": "Working full-time or rebuilding your foundation? This fits."},
+    {"dur": "6 Months", "sub": "of full access", "was": "$349", "now": "199", "permo": "$33/mo",
+     "save": "Save $150", "rec": "Best value", "feat": False, "guar": True,
+     "blurb": "The lowest price per month &mdash; go at your own pace, stress-free."},
 ]
 TIER_FEATURES = [
     "2,600+ original NCLEX questions &mdash; RN &amp; PN",
@@ -293,21 +296,25 @@ TIER_FEATURES = [
     "Personalized study schedule &amp; calendar",
     "Mastered / Reviewing / Learning tagging",
     "Performance by subject area",
-    "140+ cheat sheets &amp; the Nurse Dictionary",
+    "140+ cheat sheets &amp; the Scrubs Dictionary",
 ]
 
 def pricing_tiers(cta="join.html"):
     li = "".join(f"<li>{I['check']}{f}</li>" for f in TIER_FEATURES)
     cards = []
     for t in TIERS:
-        rec = '<span class="rec-tab">Most recommended</span>' if t["feat"] else ""
+        rec = ""
+        if t["rec"]:
+            rec = f'<span class="rec-tab{"" if t["feat"] else " alt"}">{t["rec"]}</span>'
         guar = (f'<li>{I["shield"]}<b style="color:var(--teal-600);">Pass Guarantee</b> '
                 "&mdash; full refund if you don't pass</li>") if t["guar"] else ""
         btncls = "btn-coral" if t["feat"] else "btn-line"
-        cards.append(f"""<div class="tier{' feat' if t['feat'] else ''} fade-up">
+        cls = " feat" if t["feat"] else (" best" if t["rec"] else "")
+        cards.append(f"""<div class="tier{cls} fade-up">
           {rec}
           <div class="dur">{t['dur']}<small>{t['sub']}</small></div>
           <div class="cost"><span class="was">{t['was']}</span><span class="now">${t['now']}</span><span class="usd">USD</span></div>
+          <div class="permo">{t['permo']} &middot; Esi included</div>
           <span class="save">{t['save']} instantly</span>
           <p class="blurb">{t['blurb']}</p>
           <a class="btn {btncls} tier-cta" href="{cta}">Get {t['dur']}</a>
@@ -368,7 +375,7 @@ FAQS = [
     ("Is it updated for the Next Gen NCLEX (NGN)?", "Completely. Every item type on the current test plan is here — case studies, bow-tie, trend, matrix, select-all, and more — and our practice exams run on a real computer-adaptive engine, so test day feels familiar."),
     ("Can I use it for the NCLEX-PN (LPN)?", "Yes — the question bank has both an RN and a PN track. Pick your exam and the questions adapt to your scope of practice."),
     ("Is Esi, the AI tutor, included?", "Yes — Esi comes with every plan at no extra cost. She tracks your weak areas, builds your study plan, and turns every miss into a targeted drill. There's no separate add-on."),
-    ("What's free versus paid?", "Free forever: NCLEX practice with every item type, four Scrub TV lessons a month, the Nurse Dictionary, and daily points. Paid unlocks the full question bank, case studies, readiness exams, schedules, the workbook, and Esi."),
+    ("What's free versus paid?", "Free forever: NCLEX practice with every item type, four Scrub TV lessons a month, the Scrubs Dictionary, and daily points. Paid unlocks the full question bank, case studies, readiness exams, schedules, the workbook, and Esi."),
     ("Can I study on my phone?", "Absolutely — the entire experience is mobile-first with app-style navigation. Study on the bus, in the break room, or on the couch."),
 ]
 
@@ -435,7 +442,7 @@ def home_lessons():
     out = []
     for num, name, slug, grad in HOME_LESSONS:
         out.append(f'<a class="course-card fade-up" href="{slug}"><div class="cover" style="background:{grad};">{num}</div><div class="body"><b>{name}</b><small>Audio scene + 4 tests &middot; Free</small><div class="foot"><span class="p" style="color:var(--teal-600);">Free</span><span style="font-size:0.82rem;font-weight:700;color:var(--coral-500);">Start &rarr;</span></div></div></a>')
-    return '<div class="course-shelf one-line">' + "".join(out) + '</div>'
+    return '<div class="course-shelf">' + "".join(out) + '</div>'
 
 INDEX_BODY = f"""  <main>
     <section class="hero">
@@ -471,7 +478,7 @@ INDEX_BODY = f"""  <main>
               <h2>Four free lessons. <span class="hl">Every month.</span></h2>
               <p>Each is a curated audio scene plus a full workout — memory game, matrix, chart test, and a clinical quick check.</p>
             </div>
-            <a class="btn btn-line" href="scrubtv.html">Free lessons &rarr;</a>
+            <a class="btn btn-coral" href="scrubtv.html">Browse free lessons</a>
           </div>
         </div>
         {home_lessons()}
@@ -481,9 +488,9 @@ INDEX_BODY = f"""  <main>
     <section class="welcome">
       <div class="hero-layer" data-parallax="0.14" aria-hidden="true"><div class="glow glow-coral" style="opacity:0.5;"></div></div>
       <div class="wrap fade-up" style="position:relative;z-index:2;">
-        <p class="kicker">Created by a group of nurses &mdash; for nurses, by nurses</p>
+        <p class="kicker">A home built by nurses, for nurses</p>
         <h2>WELCOME <span class="heart">HOME</span>.</h2>
-        <p class="sub">We're nurses who remember exactly how the NCLEX felt &mdash; and how clunky the tools were. So we built Must Love Scrubs: prep as excellent as the care you give, from people who've stood where you're standing.</p>
+        <p class="sub">A home built by nurses, for nurses &mdash; because we remember exactly how the NCLEX felt, and how clunky the tools were. Must Love Scrubs is prep as excellent as the care you give, from people who've stood where you're standing.</p>
         {photo('nurses-group.jpg', 'linear-gradient(135deg,#4d2b9e,#14b8a8)', 'margin-top:2rem;min-height:300px;max-width:900px;margin-left:auto;margin-right:auto;')}
         <p style="margin-top:1.2rem;font-size:0.9rem;"><a href="nclex-guide.html" style="color:var(--gold-400);font-weight:800;">Read our free NCLEX study guide &rarr;</a></p>
       </div>
@@ -501,8 +508,8 @@ INDEX_BODY = f"""  <main>
             <div class="chip-row"><span class="chip gold">FLAGSHIP</span><span class="chip teal">NGN READY</span><span class="chip">Esi compatible</span></div>
             <h3>NCLEX Complete</h3>
             <p>The full journey to test day: adaptive question banks, clinical-judgment case studies, mock exams in real test format, and analytics that show exactly where you're strong and where you're not.</p>
-            <div class="price-line"><span class="price">from $49</span><span class="per">Esi tutor included &middot; Pass Guarantee</span></div>
-            <div class="chip-row"><span class="chip gold">3 plans &rarr; 1, 2 or 3 months &middot; everything unlocked</span></div>
+            <div class="price-line"><span class="price">from $59</span><span class="per">Esi tutor included &middot; Pass Guarantee</span></div>
+            <div class="chip-row"><span class="chip gold">4 plans &rarr; 1, 2, 3 or 6 months &middot; everything unlocked</span></div>
             <a class="btn btn-coral" href="nclex-complete.html">Explore NCLEX Complete</a>
           </div>
         </div>
@@ -535,7 +542,7 @@ INDEX_BODY = f"""  <main>
           <article class="why-card fade-up">
             <span class="num">04</span>
             <h3>Free that beats their paid</h3>
-            <p>Your free account already includes NCLEX practice with every NGN item type, four full lessons a month, and the Nurse Dictionary — deeper than what most sites put behind a paywall.</p>
+            <p>Your free account already includes NCLEX practice with every NGN item type, four full lessons a month, and the Scrubs Dictionary — deeper than what most sites put behind a paywall.</p>
           </article>
         </div>
       </div>
@@ -561,7 +568,7 @@ INDEX_BODY = f"""  <main>
           <div class="art" style="background:url(images/dictionary.jpg) center/cover no-repeat, radial-gradient(circle at 70% 25%, rgba(255,201,77,0.4), transparent 50%), radial-gradient(circle at 20% 80%, rgba(139,92,255,0.5), transparent 55%), linear-gradient(150deg,#2b1055,#4d2b9e);"></div>
           <div class="body">
             <div class="chip-row"><span class="chip gold">NEW TOOL</span><span class="chip teal">217+ terms</span></div>
-            <h3>The Nurse Dictionary</h3>
+            <h3>The Scrubs Dictionary</h3>
             <p>Every term, abbreviation, and bit of nurse-speak &mdash; in plain language. <b>Free to search online.</b> Or get the full download: every word with a <b>real clinical example + rationale</b>, so it actually sticks.</p>
             <div class="price-line"><span class="price">$4.99</span><span class="per">download &middot; or unlock with points &middot; free with any course</span></div>
             <div class="hero-cta" style="margin-top:0.4rem;"><a class="btn btn-coral" href="dictionary.html">Open the Dictionary</a><a class="btn btn-line" href="dictionary.html#download">Get the download</a></div>
@@ -653,8 +660,8 @@ PAGES["courses.html"] = ("Courses — Must Love Scrubs",
           <div class="chip-row"><span class="chip gold">FLAGSHIP</span><span class="chip teal">NGN READY</span></div>
           <h3>NCLEX Complete</h3>
           <p>Everything to test day: adaptive banks, clinical-judgment cases, timed mocks in real test format, score analytics, and a visual progress map. Built on how memory actually works — spaced repetition and active recall, not cramming.</p>
-          <div class="price-line"><span class="price">from $49</span><span class="per">Esi tutor included &middot; Pass Guarantee</span></div>
-          <div class="chip-row"><span class="chip gold">3 plans &rarr; 1, 2 or 3 months &middot; everything unlocked</span></div>
+          <div class="price-line"><span class="price">from $59</span><span class="per">Esi tutor included &middot; Pass Guarantee</span></div>
+          <div class="chip-row"><span class="chip gold">4 plans &rarr; 1, 2, 3 or 6 months &middot; everything unlocked</span></div>
           <a class="btn btn-coral" href="nclex-complete.html">Explore NCLEX Complete</a>
         </div>
       </div>
@@ -710,8 +717,8 @@ PAGES["esi.html"] = ("Meet Esi — Your AI Tutor | Must Love Scrubs",
         <span class="eyebrow" style="color:var(--gold-400);">Included with every plan</span>
         <h2>Esi comes with your subscription.</h2>
         <p><b style="font-size:1.6rem;">$0 extra</b> &nbsp;&middot;&nbsp; included in every NCLEX Complete plan &middot; nothing to add on</p>
-        <p style="margin-top:0.6rem;color:var(--gold-400);font-weight:700;">Every plan &mdash; 1, 2, or 3 months &mdash; unlocks Esi in full. Plans start at $49.</p>
-        <a class="btn btn-coral" href="nclex-complete.html">See the plans &mdash; from $49</a>
+        <p style="margin-top:0.6rem;color:var(--gold-400);font-weight:700;">Every plan &mdash; 1, 2, 3, or 6 months &mdash; unlocks Esi in full. Plans start at $59.</p>
+        <a class="btn btn-coral" href="nclex-complete.html">See the plans &mdash; from $59</a>
         <a class="btn btn-line" href="#" data-esi-subscribe style="margin-top:0.6rem;">Preview Esi unlocked (demo)</a>
         <div class="perks">
           <span>{I['check']} Unlimited tutoring sessions</span>
@@ -959,11 +966,11 @@ PAGES["profile.html"] = ("Profile Dashboard — Must Love Scrubs",
       </div>
       <div class="tile span2 fade-up" data-downloads>
         <div style="display:flex;align-items:center;justify-content:space-between;gap:1rem;flex-wrap:wrap;"><span class="tag">My downloads</span><span class="badge-new" data-dl-badge hidden><span class="spark"></span> Updated &middot; free</span></div>
-        <h3>Nurse Dictionary</h3>
+        <h3>Scrubs Dictionary</h3>
         <div data-dl-owned hidden>
           <div class="update-card" style="margin-top:0.8rem;">
             <div class="uc-body">
-              <b>Nurse Dictionary <span data-dl-ver>Core Release 2</span></b>
+              <b>Scrubs Dictionary <span data-dl-ver>Core Release 2</span></b>
               <p data-dl-msg>You own this. It's yours for life — every future expansion lands here free, automatically.</p>
               <span class="uc-ver" data-dl-note></span>
             </div>
@@ -1340,7 +1347,7 @@ PREP_BODY = f"""  <div class="page-hero">
         </div>
         <div class="tier-col paid fade-up">
           <div class="tname">NCLEX Complete</div>
-          <div class="tprice">Plans from $49 &middot; Esi included</div>
+          <div class="tprice">Plans from $59 &middot; Esi included</div>
           <ul>
             <li>{I['check']} 2,600+ questions, <span class="track-word">RN</span> &amp; LPN tracks</li>
             <li>{I['check']} 50 case studies + 4 readiness exams</li>
@@ -1452,7 +1459,7 @@ PREP_BODY = f"""  <div class="page-hero">
         <div class="lock-ic">{I['lock']}</div>
         <h3>That's the free sample.</h3>
         <p>You've tried every item type. The full <span class="track-word">RN</span> bank has <b>2,600+ questions</b>, 50 case studies, 4 readiness exams, timed mocks, weak-area analytics, and Esi drilling exactly what you miss.</p>
-        <a class="btn btn-coral" href="#" data-unlock>Unlock NCLEX Complete &mdash; from $49 (demo)</a>
+        <a class="btn btn-coral" href="#" data-unlock>Unlock NCLEX Complete &mdash; from $59 (demo)</a>
         <a class="relock" href="#" data-unlock>Just let me feel the paid side &rarr;</a>
       </div>
 
@@ -1524,7 +1531,7 @@ COMPLETE_BODY = f"""  <div class="page-hero">
       <h1 style="margin-top:0.6rem;">Everything you need to pass. <span class="em">Nothing you don't.</span></h1>
       <p>Four ways to master the Next Gen NCLEX &mdash; case studies, a deep question bank, a strategy course, and full-length readiness exams that predict your pass chance &mdash; wrapped in a plan built around your test date. Esi, your AI tutor, comes with every plan.</p>
       <div class="hero-cta" style="margin-top:1.8rem;">
-        <a class="btn btn-coral" href="#pricing">See plans &mdash; from $49</a>
+        <a class="btn btn-coral" href="#pricing">See plans &mdash; from $59</a>
         <a class="btn btn-ghost" href="nclex.html">Try the free practice</a>
       </div>
       <div class="chip-row" style="margin-top:1.4rem;justify-content:center;">
@@ -1764,7 +1771,7 @@ COMPLETE_BODY = f"""  <div class="page-hero">
       {pricing_tiers("join.html")}
       <div class="guarantee fade-up">
         {I['shield']}
-        <div><b>NCLEX Pass Guarantee</b><p>On the 2- and 3-month plans, finish the program and if you don't pass, you get a full refund. We built it to work &mdash; and we stand behind it.</p></div>
+        <div><b>NCLEX Pass Guarantee</b><p>On the 2-, 3-, and 6-month plans, finish the program and if you don't pass, you get a full refund. We built it to work &mdash; and we stand behind it.</p></div>
       </div>
       <p style="text-align:center;margin-top:1.6rem;font-size:0.78rem;color:var(--ink-60);max-width:70ch;margin-left:auto;margin-right:auto;">NCLEX&reg; is a registered trademark of the National Council of State Boards of Nursing, Inc. Must Love Scrubs is not affiliated with or endorsed by NCSBN. All questions and materials are 100% original and created by our team. Educational content only &mdash; not medical advice.</p>
     </div>
@@ -1774,7 +1781,7 @@ COMPLETE_BODY = f"""  <div class="page-hero">
 """
 
 PAGES["nclex-complete.html"] = ("NCLEX Complete — The Flagship NCLEX Prep | Must Love Scrubs",
-    "NCLEX Complete: 50 Next Gen case studies, 2,600+ original questions, a strategy course, and 4 full-length readiness exams that predict your pass chance. Esi AI tutor included. Plans from $49.",
+    "NCLEX Complete: 50 Next Gen case studies, 2,600+ original questions, a strategy course, and 4 full-length readiness exams that predict your pass chance. Esi AI tutor included. Plans from $59.",
     COMPLETE_BODY, "courses")
 
 # ---------------------------------------------------------------- FREE NCLEX STUDY GUIDE / RESOURCES HUB
@@ -1786,7 +1793,7 @@ GUIDE_TOPICS = [
     ("card", "How much does it cost?", "fees", "The exam fee, extra costs, and where prep fits your budget."),
     ("book", "What's on the test plan?", "testplan", "The categories every question is drawn from — and where to focus."),
     ("star", "When should I take it?", "when", "How to pick a test date that gives you enough runway."),
-    ("play", "How long should I study?", "study", "1, 2, or 3 months — take the quiz and get a matched plan."),
+    ("play", "How long should I study?", "study", "1, 2, 3, or 6 months — take the quiz and get a matched plan."),
 ]
 
 def guide_cards():
@@ -1905,6 +1912,7 @@ GUIDE_BODY = f"""  <div class="page-hero">
           <a href="nclex-complete.html#pricing">1-Month plan</a>
           <a href="nclex-complete.html#pricing">2-Month plan</a>
           <a href="nclex-complete.html#pricing">3-Month plan</a>
+          <a href="nclex-complete.html#pricing">6-Month plan</a>
         </div>
       </div>
     </div>
@@ -1926,7 +1934,7 @@ GUIDE_BODY = f"""  <div class="page-hero">
       <div class="soon-band fade-up" style="margin-top:1.6rem;">
         <div>
           <h3>Ready to go all in?</h3>
-          <p>NCLEX Complete has the case studies, the question bank, the readiness exams, the schedule, and Esi &mdash; from $49.</p>
+          <p>NCLEX Complete has the case studies, the question bank, the readiness exams, the schedule, and Esi &mdash; from $59.</p>
         </div>
         <a class="btn btn-coral" href="nclex-complete.html">Explore NCLEX Complete</a>
       </div>
@@ -2188,7 +2196,7 @@ def dict_chips():
 DICT_BODY = f"""  <div class="page-hero">
     <div class="wrap inner">
       <span class="lesson-label" style="color:var(--gold-400);">Free tool</span>
-      <h1 style="margin-top:0.6rem;">The Nurse <span class="em">Dictionary</span>.</h1>
+      <h1 style="margin-top:0.6rem;">The Scrubs <span class="em">Dictionary</span>.</h1>
       <p>Every term, abbreviation, and bit of nurse-speak &mdash; in plain language. Search it, filter it, learn it. Free to search, forever, and always growing.</p>
     </div>
   </div>
@@ -2236,8 +2244,8 @@ DICT_BODY = f"""  <div class="page-hero">
           <b class="cterm">Hyperkalemia</b>
           <p class="cdef">A higher-than-normal level of potassium in the blood (above ~5.0 mEq/L). Can affect the heart's rhythm.</p>
           <div class="cbonus">
-            <p><b>{I['star']} Real clinical example.</b> Mr. Alvarez, post-op day 2 with kidney injury, has a potassium of 6.8 and tall, peaked T waves on the monitor. His nurse holds all potassium, places him on a cardiac monitor, and calls the provider &mdash; anticipating IV calcium to protect the heart.</p>
-            <p><b>{I['check']} Why it sticks.</b> You don't just learn the number &mdash; you see what it <i>looks like</i> at the bedside and what you'd do about it. That's the rationale that turns a definition into nursing judgment.</p>
+            <p><b>{I['star']} Real-world nurse situation (the bonus).</b> Mr. Alvarez, post-op day 2 with kidney injury, has a potassium of 6.8 and tall, peaked T waves on the monitor. His nurse holds all potassium, places him on a cardiac monitor, and calls the provider &mdash; anticipating IV calcium to protect the heart.</p>
+            <p><b>{I['check']} Built-in context clues.</b> Your brain remembers stories, not definitions. Seeing the term <i>in a scene</i> &mdash; the patient, the monitor, the action &mdash; gives you the context clues that make it stick on test day and on the floor.</p>
           </div>
         </div>
       </div>
@@ -2254,7 +2262,7 @@ DICT_BODY = f"""  <div class="page-hero">
   <script src="js/dictionary.js"></script>
 """
 
-PAGES["dictionary.html"] = ("Nurse Dictionary &mdash; Must Love Scrubs",
+PAGES["dictionary.html"] = ("Scrubs Dictionary &mdash; Must Love Scrubs",
     "A free, searchable dictionary of 217+ nursing and medical terms, abbreviations, and plain-language definitions. Download with examples and rationales.",
     DICT_BODY, "dictionary")
 

@@ -679,21 +679,21 @@ section { padding-block: clamp(3.6rem, 9vw, 6.5rem); position: relative; }
   right: 0.8rem;
   bottom: calc(var(--bottomnav-h) + 0.7rem);
   z-index: 85;
-  display: flex; align-items: center; gap: 0.4rem;
-  padding: 0.34rem 0.7rem 0.34rem 0.34rem;
+  display: flex; align-items: center; gap: 0.35rem;
+  padding: 0.28rem 0.6rem 0.28rem 0.28rem;
   border-radius: var(--pill);
   background: var(--indigo-950);
   color: var(--white);
   font-weight: 800;
-  font-size: 0.76rem;
-  opacity: 0.9;
-  box-shadow: 0 8px 22px rgba(18, 19, 43, 0.38);
+  font-size: 0.72rem;
+  opacity: 0.88;
+  box-shadow: 0 6px 18px rgba(18, 19, 43, 0.34);
   transition: transform 0.22s ease, opacity 0.22s ease;
 }
 @media (min-width: 900px) { .esi-fab { bottom: 1rem; } }
 .esi-fab:hover { transform: translateY(-2px); opacity: 1; }
 .esi-fab .orb {
-  width: 24px; height: 24px; border-radius: 50%;
+  width: 20px; height: 20px; border-radius: 50%;
   background:
     radial-gradient(circle at 30% 28%, rgba(255,255,255,0.9), transparent 35%),
     radial-gradient(circle at 70% 72%, var(--coral-500), transparent 60%),
@@ -1226,11 +1226,15 @@ body.mls-paid .gate { display: none; }
 
 /* --- Pricing tiers (3-tier subscription, Esi included) --- */
 .tiers { display: grid; gap: 1.2rem; grid-template-columns: 1fr; margin-top: 1.6rem; }
-@media (min-width: 820px) { .tiers { grid-template-columns: repeat(3, 1fr); align-items: start; } }
+@media (min-width: 620px) { .tiers { grid-template-columns: repeat(2, 1fr); align-items: start; } }
+@media (min-width: 1080px) { .tiers { grid-template-columns: repeat(4, 1fr); } }
 .tier { position: relative; background: var(--card); border: 1px solid rgba(30,18,51,0.09); border-radius: var(--radius); padding: 1.8rem 1.5rem; box-shadow: var(--shadow-1); display: flex; flex-direction: column; }
 .tier.feat { border: 2px solid var(--coral-500); box-shadow: 0 24px 54px rgba(139,92,255,0.22); }
-@media (min-width: 820px) { .tier.feat { transform: translateY(-10px); } }
+.tier.best { border: 2px solid var(--teal-600); box-shadow: 0 24px 54px rgba(20,184,168,0.18); }
+@media (min-width: 1080px) { .tier.feat { transform: translateY(-10px); } }
 .tier .rec-tab { position: absolute; top: -13px; left: 50%; transform: translateX(-50%); background: linear-gradient(120deg, var(--coral-500), var(--coral-600)); color: #fff; font-size: 0.64rem; font-weight: 800; letter-spacing: 0.1em; text-transform: uppercase; padding: 0.4rem 1rem; border-radius: var(--pill); white-space: nowrap; box-shadow: 0 8px 20px rgba(139,92,255,0.4); }
+.tier .rec-tab.alt { background: linear-gradient(120deg, var(--teal-600), var(--teal-400)); box-shadow: 0 8px 20px rgba(20,184,168,0.4); }
+.tier .permo { font-size: 0.78rem; font-weight: 700; color: var(--ink-60); margin: 0.15rem 0 0.1rem; }
 .tier .dur { font-family: var(--font-display); font-size: 1.5rem; font-weight: 800; color: var(--ink); }
 .tier .dur small { display:block; font-family: var(--font-body); font-size:0.78rem; font-weight:600; color: var(--ink-60); letter-spacing:0; }
 .tier .cost { margin: 0.9rem 0 0.2rem; display: flex; align-items: baseline; gap: 0.5rem; }

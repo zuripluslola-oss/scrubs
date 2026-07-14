@@ -1,4 +1,4 @@
-/* Must Love Scrubs — Nurse Dictionary: live search + category filter. */
+/* Must Love Scrubs — Scrubs Dictionary: live search + category filter. */
 (function () {
   'use strict';
   var input = document.querySelector('.dict-search input');
