@@ -141,6 +141,61 @@ tiles, 3-step method, a **locked/blurred** sample-question preview, and a
 question data yet.** Prices $49–$79. Wired into the mega menu (Learn) and footer.
 Owner will review the UI and request changes before content is written.
 
+## Competitor benchmark — pieces to match, our own way (owner-locked 2026-07)
+
+Benchmarked against NCLEX Bootcamp. We recreate every piece with **100%
+original content and MLS branding** — never copy their text, never use the name
+"NCLEX Bootcamp." Map of their piece → our equivalent:
+
+| Their piece | Our equivalent (page) |
+|---|---|
+| NCLEX Question of the Day (email) | Question of the Day, phone **or** email (`nclex-complete.html`, `nclex-guide.html`, profile) |
+| 50 Next Gen case studies + video walkthroughs | 50 case studies pillar (`nclex-complete.html`) |
+| 2,600+ standalone questions | Our original question bank (`nclex.html` free sample → NCLEX Complete) |
+| Next Gen Strategy Course (lesson player: timer, answer stats, autoplay, video walkthroughs) | Strategy video course (NCLEX Complete) — lesson-player UI is a Phase-2 build to spec |
+| 4 full-length readiness exams + pass prediction | Readiness meter Low/Borderline/High/Very High (NCLEX Complete) |
+| Study Schedule Creator (1/2/3-mo calendar) | Study schedules + plan quiz (NCLEX Complete) |
+| Pass Targets Tracker | Mastered/Reviewing/Learning tagging + performance-by-subject bars |
+| 140+ printable cheat sheets | Store digital downloads + Nurse Dictionary + the 50-Q workbook |
+| Ask Bootcamp AI | **Esi** (our differentiator — included in every plan) |
+| Free NCLEX Study Guide (lead-magnet doc) | `nclex-guide.html` — "for nurses, by nurses" (below) |
+| NCLEX 101 info (register / exam day / fees / test plan) | Sections in `nclex-guide.html` (placeholder external links to add) |
+| Facebook study group + weekly webinars | Community band (NCLEX Complete) |
+
+**Brand voice: "for nurses, by nurses."** MLS was created by a group of nurses.
+Homepage intro and the study guide lead with this. Founder letter voice = warm,
+been-there ("First — breathe"), never corporate.
+
+## Free NCLEX Study Guide (`nclex-guide.html`, owner-locked)
+
+A free lead-magnet content hub (our answer to Bootcamp's study guide). Sections:
+"for nurses, by nurses" hero → founder intro letter (photo `nurses-group.jpg`) →
+Question-of-the-Day subscribe → "What is NGN?" bulleted explainer with links →
+NCLEX-101 quick cards → logistics blocks (**register, exam day, fees, test plan,
+when to test, how long to study** — each links to our pages + a placeholder
+`data-ext` external link the owner fills in) → strategy + readiness/analyzer
+section. Placeholder link "the MLS Bootcamp" → `nclex-complete.html` (can also
+point to an external bootcamp URL). NCSBN trademark disclaimer required.
+
+## Photos (`/images`, owner supplies files)
+
+Real photos are embedded into pages + the bundle at build time by
+`tools/bundle_site.py` (base64 data URIs, CSP-safe). Slots reference
+`images/<name>`; until a file exists, a gradient fallback shows. Current slots:
+`nurses-group.jpg` (home intro + guide intro), `dictionary.jpg` (dictionary art,
+replaced the old "A–Z" block). See `images/README.md`.
+
+## Homepage + nav changes (owner-locked 2026-07)
+
+- **Bottom nav (mobile): Home · Courses · Scrub TV · Dictionary · Profile.** Store removed from bottom nav.
+- **No Store section on the homepage** (store still exists at `store.html`).
+- "Why MLS" is **4 cards** (added "Free that beats their paid").
+- Social proof: **1,400+ reads bigger (gold lead stat)**; dictionary-terms stat replaced with **free-lessons count**; all numbers count up on scroll; trust badges in a 4-up grid.
+- Homepage FAQ is **NCLEX-focused** (`FAQS`); **Esi page has its own FAQ** (`ESI_FAQS`). `faq_list(faqs)` takes a data arg.
+- **Esi widget is smaller / less obstructive** (`.esi-fab`).
+- Scrub TV free lessons render on **one line** (`.course-shelf.one-line`); button reads "Free lessons".
+- Dictionary shows a **free-vs-paid "with bonus" comparison** (`.compare-grid`) so buyers see the paid value.
+
 ## Nurse Dictionary (owner-locked tool)
 
 A searchable index of medical/nursing terms and definitions — free tool at

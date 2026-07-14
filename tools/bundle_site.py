@@ -122,6 +122,20 @@ ROUTER = r"""
 full_js = '<script>\n' + ROUTER + '\n' + '\n\n'.join(inlined_js) + '\n</script>'
 shell = shell.replace('<script src="js/main.js"></script>', full_js)
 
+# ---- embed real photos from /images as data URIs (CSP-safe in the artifact) ----
+import base64, mimetypes
+def _embed_images(html):
+    def repl(m):
+        rel = m.group(1)  # e.g. images/nurses-group.jpg
+        path = os.path.join(ROOT, rel)
+        if os.path.exists(path):
+            mime = mimetypes.guess_type(path)[0] or 'image/jpeg'
+            data = base64.b64encode(open(path, 'rb').read()).decode('ascii')
+            return f'url(data:{mime};base64,{data})'
+        return 'none'  # file not provided yet -> drop the layer, gradient shows through
+    return re.sub(r'url\((images/[^)]+)\)', repl, html)
+shell = _embed_images(shell)
+
 out = os.path.join(ROOT, 'mls-site-bundle.html')
 with open(out, 'w', encoding='utf-8') as f:
     f.write(shell)

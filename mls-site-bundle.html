@@ -446,7 +446,8 @@ section { padding-block: clamp(3.6rem, 9vw, 6.5rem); position: relative; }
 /* Why choose */
 .why { background: var(--card); }
 .why-grid { display: grid; gap: 1.1rem; }
-@media (min-width: 880px) { .why-grid { grid-template-columns: repeat(3, 1fr); } }
+@media (min-width: 620px) { .why-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (min-width: 1000px) { .why-grid { grid-template-columns: repeat(4, 1fr); } }
 .why-card {
   border-radius: var(--radius);
   padding: 1.8rem 1.6rem;
@@ -498,23 +499,52 @@ section { padding-block: clamp(3.6rem, 9vw, 6.5rem); position: relative; }
 
 /* Social proof */
 .proof { background: var(--indigo-950); color: var(--white); }
-.stat-row { display: grid; gap: 2rem; grid-template-columns: 1fr; text-align: center; }
+.stat-row { display: grid; gap: 2rem; grid-template-columns: 1fr; text-align: center; align-items: end; }
 @media (min-width: 680px) { .stat-row { grid-template-columns: repeat(3, 1fr); } }
-.stat-big b { display: block; font-size: clamp(2.4rem, 7vw, 3.6rem); font-weight: 800; letter-spacing: -0.02em; font-variant-numeric: tabular-nums; }
+.stat-big b { display: block; font-size: clamp(2.4rem, 7vw, 3.6rem); font-weight: 800; letter-spacing: -0.02em; font-variant-numeric: tabular-nums; line-height: 1; }
 .stat-big b .plus { color: var(--teal-400); }
 .stat-big span { color: rgba(255,255,255,0.65); font-size: 0.9rem; }
+/* the lead stat (1,400+) reads bigger */
+.stat-big.lead b { font-size: clamp(3.4rem, 11vw, 5.6rem); color: var(--gold-400); }
+.stat-big.lead b .plus { color: var(--gold-400); }
+.stat-big.lead span { color: rgba(255,255,255,0.85); font-weight: 700; }
+
 .trust-row {
   margin-top: 2.8rem; padding-top: 2rem;
   border-top: 1px solid rgba(255,255,255,0.12);
-  display: flex; flex-wrap: wrap; justify-content: center; gap: 0.7rem 1rem;
+  display: grid; gap: 0.8rem; grid-template-columns: repeat(2, 1fr);
 }
+@media (min-width: 720px) { .trust-row { grid-template-columns: repeat(4, 1fr); } }
 .trust {
-  display: inline-flex; align-items: center; gap: 0.5rem;
-  font-size: 0.8rem; font-weight: 700; color: rgba(255,255,255,0.8);
-  border: 1px solid rgba(255,255,255,0.18);
-  padding: 0.5rem 1rem; border-radius: var(--pill);
+  display: flex; align-items: center; justify-content: center; gap: 0.5rem;
+  text-align: center;
+  font-size: 0.8rem; font-weight: 700; color: rgba(255,255,255,0.85);
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.16);
+  padding: 0.85rem 0.9rem; border-radius: 14px;
 }
-.trust svg { width: 15px; height: 15px; color: var(--teal-400); }
+.trust svg { width: 16px; height: 16px; color: var(--teal-400); flex-shrink: 0; }
+
+/* photo frames (real images embedded at bundle time; gradient shows until then) */
+.photo { border-radius: var(--radius); background-size: cover; background-position: center; box-shadow: var(--shadow-1); }
+
+/* one-line lesson shelf (horizontal scroll) */
+.course-shelf.one-line { display: flex; gap: 1rem; grid-template-columns: none; overflow-x: auto; padding-bottom: 0.6rem; scroll-snap-type: x mandatory; -webkit-overflow-scrolling: touch; }
+.course-shelf.one-line > * { flex: 0 0 min(78%, 250px); scroll-snap-align: start; }
+
+/* dictionary free-vs-paid comparison */
+.compare-grid { display: grid; gap: 1rem; grid-template-columns: 1fr; margin-top: 1.4rem; }
+@media (min-width: 760px) { .compare-grid { grid-template-columns: 1fr 1.25fr; align-items: start; } }
+.compare-col { background: var(--card); border: 1px solid rgba(30,18,51,0.09); border-radius: var(--radius); padding: 1.5rem; box-shadow: var(--shadow-1); }
+.compare-col.paid { border: 2px solid var(--coral-500); box-shadow: 0 20px 46px rgba(139,92,255,0.16); }
+.compare-col .ctag { display: inline-block; font-size: 0.62rem; font-weight: 800; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink-60); background: var(--bg); padding: 0.3rem 0.7rem; border-radius: var(--pill); }
+.compare-col .ctag.paid { color: var(--coral-600); background: var(--coral-100); }
+.compare-col .cterm { display: block; font-family: var(--font-display); font-size: 1.5rem; font-weight: 800; color: var(--ink); margin: 0.7rem 0 0.3rem; }
+.compare-col .cdef { font-size: 0.9rem; color: var(--ink-60); }
+.compare-col .cbonus { margin-top: 1rem; border-top: 1px dashed rgba(139,92,255,0.35); padding-top: 1rem; display: grid; gap: 0.8rem; }
+.compare-col .cbonus p { font-size: 0.86rem; color: var(--ink); }
+.compare-col .cbonus b { color: var(--coral-600); }
+.compare-col .cbonus svg { width: 15px; height: 15px; vertical-align: -2px; }
 
 /* Testimonials */
 .testis { background: var(--bg); }
@@ -654,30 +684,31 @@ section { padding-block: clamp(3.6rem, 9vw, 6.5rem); position: relative; }
 
 .esi-fab {
   position: fixed;
-  right: 1rem;
-  bottom: calc(var(--bottomnav-h) + 0.9rem);
+  right: 0.8rem;
+  bottom: calc(var(--bottomnav-h) + 0.7rem);
   z-index: 85;
-  display: flex; align-items: center; gap: 0.55rem;
-  padding: 0.6rem 1.1rem 0.6rem 0.6rem;
+  display: flex; align-items: center; gap: 0.4rem;
+  padding: 0.34rem 0.7rem 0.34rem 0.34rem;
   border-radius: var(--pill);
   background: var(--indigo-950);
   color: var(--white);
   font-weight: 800;
-  font-size: 0.9rem;
-  box-shadow: 0 14px 36px rgba(18, 19, 43, 0.45);
-  transition: transform 0.22s ease;
+  font-size: 0.76rem;
+  opacity: 0.9;
+  box-shadow: 0 8px 22px rgba(18, 19, 43, 0.38);
+  transition: transform 0.22s ease, opacity 0.22s ease;
 }
-@media (min-width: 900px) { .esi-fab { bottom: 1.2rem; } }
-.esi-fab:hover { transform: translateY(-3px) scale(1.02); }
+@media (min-width: 900px) { .esi-fab { bottom: 1rem; } }
+.esi-fab:hover { transform: translateY(-2px); opacity: 1; }
 .esi-fab .orb {
-  width: 36px; height: 36px; border-radius: 50%;
+  width: 24px; height: 24px; border-radius: 50%;
   background:
     radial-gradient(circle at 30% 28%, rgba(255,255,255,0.9), transparent 35%),
     radial-gradient(circle at 70% 72%, var(--coral-500), transparent 60%),
     linear-gradient(140deg, var(--teal-400), var(--indigo-700));
-  box-shadow: inset 0 -3px 8px rgba(0,0,0,0.25);
+  box-shadow: inset 0 -2px 6px rgba(0,0,0,0.25);
 }
-.esi-fab .lock { font-size: 0.62rem; font-weight: 700; color: var(--gold-400); display: block; line-height: 1; margin-top: 2px; }
+.esi-fab .lock { font-size: 0.5rem; font-weight: 700; letter-spacing: 0.04em; color: var(--gold-400); display: block; line-height: 1; margin-top: 1px; }
 
 /* ---------- Subpage scaffolding ---------- */
 
@@ -1337,6 +1368,26 @@ body.mls-paid .gate { display: none; }
 .soon-form input { border: none; border-radius: var(--pill); padding: 0.7rem 1.1rem; font-size: 0.88rem; min-width: 220px; }
 .soon-note { font-size: 0.82rem; font-weight: 700; color: var(--teal-400); }
 
+/* --- Free NCLEX study-guide hub --- */
+.intro-letter { display: grid; gap: 1.6rem; grid-template-columns: 1fr; align-items: start; }
+@media (min-width: 820px) { .intro-letter { grid-template-columns: 0.85fr 1.15fr; } }
+.intro-letter .photo { min-height: 280px; width: 100%; }
+.letter-body h2 { font-size: clamp(1.6rem, 4vw, 2.2rem); margin: 0.3rem 0 0.7rem; }
+.letter-body p { color: var(--ink); font-size: 0.95rem; margin-bottom: 0.7rem; }
+.guide-points { max-width: 760px; margin: 0 auto; background: var(--card); border: 1px solid rgba(30,18,51,0.08); border-radius: var(--radius); padding: 1.6rem 1.8rem; box-shadow: var(--shadow-1); }
+.guide-points ul { list-style: none; display: block; }
+.guide-points li { position: relative; padding-left: 1.8rem; margin-bottom: 0.9rem; font-size: 0.92rem; line-height: 1.55; color: var(--ink); }
+.guide-points li svg { position: absolute; left: 0; top: 3px; width: 18px; height: 18px; color: var(--teal-600); }
+.guide-points a { color: var(--coral-500); font-weight: 700; }
+.guide-stack { display: grid; gap: 1rem; max-width: 820px; }
+.guide-block { background: var(--card); border: 1px solid rgba(30,18,51,0.08); border-radius: var(--radius); padding: 1.6rem 1.8rem; box-shadow: var(--shadow-1); scroll-margin-top: 90px; }
+.guide-block h3 { font-size: 1.2rem; margin-bottom: 0.5rem; }
+.guide-block p { color: var(--ink-60); font-size: 0.92rem; margin-bottom: 0.8rem; }
+.guide-block .btn-line { font-size: 0.82rem; padding: 0.5rem 1rem; }
+.guide-block [data-ext]::after { content: " ↗"; }
+.plan-links { display: flex; gap: 0.6rem; flex-wrap: wrap; margin-top: 1rem; }
+.plan-links a { font-size: 0.82rem; font-weight: 700; color: var(--coral-600); background: var(--coral-100); padding: 0.5rem 1rem; border-radius: var(--pill); }
+
 /* fade-up reveal */
 .fade-up { opacity: 0; transform: translateY(26px); transition: opacity 0.65s ease, transform 0.65s ease; }
 .fade-up.visible { opacity: 1; transform: translateY(0); }
@@ -1389,6 +1440,7 @@ body.mls-paid .gate { display: none; }
         <ul class="mega-links">
           <li><a href="nclex-complete.html">NCLEX Complete <small>The flagship &middot; plans from $49</small></a></li>
           <li><a href="nclex.html">Free NCLEX Prep <small>RN &amp; LPN &middot; every NGN item type</small></a></li>
+          <li><a href="nclex-guide.html">Free Study Guide <small>How to pass &middot; for nurses, by nurses</small></a></li>
           <li><a href="course-lab-values.html">Free NCLEX Practice <small>Start with a free audio scene</small></a></li>
           <li><a href="specialties.html">Specialty Prep <small>22 specialty tracks &middot; rolling out</small></a></li>
           <li><a href="courses.html">Courses <small>NCLEX prep, entrance exams &amp; more</small></a></li>
@@ -1502,19 +1554,21 @@ body.mls-paid .gate { display: none; }
               <h2>Four free lessons. <span class="hl">Every month.</span></h2>
               <p>Each is a curated audio scene plus a full workout — memory game, matrix, chart test, and a clinical quick check.</p>
             </div>
-            <a class="btn btn-line" href="scrubtv.html">All lessons</a>
+            <a class="btn btn-line" href="scrubtv.html">Free lessons &rarr;</a>
           </div>
         </div>
-        <div class="course-shelf"><a class="course-card fade-up" href="course-lab-values.html"><div class="cover" style="background:linear-gradient(135deg,#4d2b9e,#14b8a8);">01</div><div class="body"><b>Critical Lab Values</b><small>Audio scene + 4 tests &middot; Free</small><div class="foot"><span class="p" style="color:var(--teal-600);">Free</span><span style="font-size:0.82rem;font-weight:700;color:var(--coral-500);">Start &rarr;</span></div></div></a><a class="course-card fade-up" href="course-prioritization.html"><div class="cover" style="background:linear-gradient(135deg,#2b1055,#8b5cff);">02</div><div class="body"><b>Prioritization &amp; Delegation</b><small>Audio scene + 4 tests &middot; Free</small><div class="foot"><span class="p" style="color:var(--teal-600);">Free</span><span style="font-size:0.82rem;font-weight:700;color:var(--coral-500);">Start &rarr;</span></div></div></a><a class="course-card fade-up" href="course-med-safety.html"><div class="cover" style="background:linear-gradient(135deg,#4d2b9e,#ffb038);">03</div><div class="body"><b>Medication Safety</b><small>Audio scene + 4 tests &middot; Free</small><div class="foot"><span class="p" style="color:var(--teal-600);">Free</span><span style="font-size:0.82rem;font-weight:700;color:var(--coral-500);">Start &rarr;</span></div></div></a><a class="course-card fade-up" href="course-deterioration.html"><div class="cover" style="background:linear-gradient(135deg,#2b1055,#e5484d);">04</div><div class="body"><b>Spot the Deterioration</b><small>Audio scene + 4 tests &middot; Free</small><div class="foot"><span class="p" style="color:var(--teal-600);">Free</span><span style="font-size:0.82rem;font-weight:700;color:var(--coral-500);">Start &rarr;</span></div></div></a></div>
+        <div class="course-shelf one-line"><a class="course-card fade-up" href="course-lab-values.html"><div class="cover" style="background:linear-gradient(135deg,#4d2b9e,#14b8a8);">01</div><div class="body"><b>Critical Lab Values</b><small>Audio scene + 4 tests &middot; Free</small><div class="foot"><span class="p" style="color:var(--teal-600);">Free</span><span style="font-size:0.82rem;font-weight:700;color:var(--coral-500);">Start &rarr;</span></div></div></a><a class="course-card fade-up" href="course-prioritization.html"><div class="cover" style="background:linear-gradient(135deg,#2b1055,#8b5cff);">02</div><div class="body"><b>Prioritization &amp; Delegation</b><small>Audio scene + 4 tests &middot; Free</small><div class="foot"><span class="p" style="color:var(--teal-600);">Free</span><span style="font-size:0.82rem;font-weight:700;color:var(--coral-500);">Start &rarr;</span></div></div></a><a class="course-card fade-up" href="course-med-safety.html"><div class="cover" style="background:linear-gradient(135deg,#4d2b9e,#ffb038);">03</div><div class="body"><b>Medication Safety</b><small>Audio scene + 4 tests &middot; Free</small><div class="foot"><span class="p" style="color:var(--teal-600);">Free</span><span style="font-size:0.82rem;font-weight:700;color:var(--coral-500);">Start &rarr;</span></div></div></a><a class="course-card fade-up" href="course-deterioration.html"><div class="cover" style="background:linear-gradient(135deg,#2b1055,#e5484d);">04</div><div class="body"><b>Spot the Deterioration</b><small>Audio scene + 4 tests &middot; Free</small><div class="foot"><span class="p" style="color:var(--teal-600);">Free</span><span style="font-size:0.82rem;font-weight:700;color:var(--coral-500);">Start &rarr;</span></div></div></a></div>
       </div>
     </section>
 
     <section class="welcome">
       <div class="hero-layer" data-parallax="0.14" aria-hidden="true"><div class="glow glow-coral" style="opacity:0.5;"></div></div>
       <div class="wrap fade-up" style="position:relative;z-index:2;">
-        <p class="kicker">Wherever you are on your nursing journey…</p>
+        <p class="kicker">Created by a group of nurses &mdash; for nurses, by nurses</p>
         <h2>WELCOME <span class="heart">HOME</span>.</h2>
-        <p class="sub">Student, new grad, seasoned RN, or somewhere in between — Must Love Scrubs was built around one belief: nurses deserve tools as excellent as the care they give.</p>
+        <p class="sub">We're nurses who remember exactly how the NCLEX felt &mdash; and how clunky the tools were. So we built Must Love Scrubs: prep as excellent as the care you give, from people who've stood where you're standing.</p>
+        <div class="photo" style="background-image:none,linear-gradient(135deg,#4d2b9e,#14b8a8);margin-top:2rem;min-height:300px;max-width:900px;margin-left:auto;margin-right:auto;"></div>
+        <p style="margin-top:1.2rem;font-size:0.9rem;"><a href="nclex-guide.html" style="color:var(--gold-400);font-weight:800;">Read our free NCLEX study guide &rarr;</a></p>
       </div>
     </section>
 
@@ -1583,43 +1637,13 @@ body.mls-paid .gate { display: none; }
           <article class="why-card fade-up">
             <span class="num">03</span>
             <h3>Massive prep library</h3>
-            <p>NCLEX Complete leads a growing catalog of specialty prep — pharmacology, med-surg, peds, mental health, NGN drills — with new content added constantly.</p>
+            <p>NCLEX Complete leads a growing catalog — 22 specialty tracks, pharmacology, med-surg, peds, mental health, NGN drills — with new content added constantly.</p>
           </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="store" id="store">
-      <div class="wrap">
-        <div class="section-head fade-up">
-          <div class="row">
-            <div>
-              <span class="eyebrow gold">The Store</span>
-              <h2>Wear the <span class="hl">love</span>.</h2>
-              <p>Small, curated, and made for nurse life — every piece carries the MLS mark.</p>
-            </div>
-            <a class="btn btn-line" href="store.html">Shop all</a>
-          </div>
-        </div>
-        <div class="product-grid"><a class="product fade-up" href="store.html">
-          <div class="shot" style="background:linear-gradient(140deg,#a78bff,#14b8a8);"><span class="logo-print">M❤S</span></div>
-          <div class="body"><b>Scrub Life Tote Bag</b><span class="p">$24</span></div>
-        </a><a class="product fade-up" href="store.html">
-          <div class="shot" style="background:linear-gradient(140deg,#8b5cff,#7a45f0);"><span class="logo-print">MLS</span></div>
-          <div class="body"><b>Coffee &amp; Compassion Mug</b><span class="p">$18</span></div>
-        </a><a class="product fade-up" href="store.html">
-          <div class="shot" style="background:linear-gradient(140deg,#2b1055,#4d2b9e);"><span class="logo-print">M❤S</span></div>
-          <div class="body"><b>Must Love Scrubs Tee</b><span class="p">$28</span></div>
-        </a><a class="product fade-up" href="store.html">
-          <div class="shot" style="background:linear-gradient(140deg,#ffc23d,#d99a1f);"><span class="logo-print">MLS</span></div>
-          <div class="body"><b>Shift Survival Tumbler</b><span class="p">$26</span></div>
-        </a></div>
-        <div class="points-strip fade-up">
-          <div class="txt">
-            <b>Your points are currency here.</b>
-            <p>Claim 10 free points daily, earn more from quizzes &amp; contests, then redeem for study guides, brain sheets, planners and other digital downloads.</p>
-          </div>
-          <a class="btn btn-dark" href="profile.html">Claim today's points</a>
+          <article class="why-card fade-up">
+            <span class="num">04</span>
+            <h3>Free that beats their paid</h3>
+            <p>Your free account already includes NCLEX practice with every NGN item type, four full lessons a month, and the Nurse Dictionary — deeper than what most sites put behind a paywall.</p>
+          </article>
         </div>
       </div>
     </section>
@@ -1641,7 +1665,7 @@ body.mls-paid .gate { display: none; }
     <section class="store">
       <div class="wrap">
         <div class="course-hero fade-up" style="box-shadow:var(--shadow-2);">
-          <div class="art" style="background:radial-gradient(circle at 70% 25%, rgba(255,201,77,0.4), transparent 50%), radial-gradient(circle at 20% 80%, rgba(139,92,255,0.5), transparent 55%), linear-gradient(150deg,#2b1055,#4d2b9e);"><span class="big" style="font-size:3.4rem;">A&ndash;Z</span></div>
+          <div class="art" style="background:none center/cover no-repeat, radial-gradient(circle at 70% 25%, rgba(255,201,77,0.4), transparent 50%), radial-gradient(circle at 20% 80%, rgba(139,92,255,0.5), transparent 55%), linear-gradient(150deg,#2b1055,#4d2b9e);"></div>
           <div class="body">
             <div class="chip-row"><span class="chip gold">NEW TOOL</span><span class="chip teal">217+ terms</span></div>
             <h3>The Nurse Dictionary</h3>
@@ -1656,9 +1680,9 @@ body.mls-paid .gate { display: none; }
     <section class="proof">
       <div class="wrap">
         <div class="stat-row">
-          <div class="stat-big fade-up"><b><span data-count="1400">0</span><span class="plus">+</span></b><span>Course users already in</span></div>
-          <div class="stat-big fade-up"><b><span data-count="217">0</span><span class="plus">+</span></b><span>Dictionary terms, free to search</span></div>
-          <div class="stat-big fade-up"><b>24/7</b><span>Esi tutoring, whenever you study</span></div>
+          <div class="stat-big lead fade-up"><b><span data-count="1400">0</span><span class="plus">+</span></b><span>Course users already in</span></div>
+          <div class="stat-big fade-up"><b><span data-count="48">0</span></b><span>Free lessons a year &mdash; 4 every month</span></div>
+          <div class="stat-big fade-up"><b><span data-count="22">0</span></b><span>Specialty tracks rolling out</span></div>
         </div>
         <div class="trust-row fade-up">
           <span class="trust"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="5" y="10" width="14" height="10" rx="3"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg> Secure checkout</span>
@@ -1702,27 +1726,33 @@ body.mls-paid .gate { display: none; }
     <section class="faq">
       <div class="wrap">
         <div class="section-head fade-up" style="text-align:center;margin-inline:auto;">
-          <span class="eyebrow teal">Questions</span>
-          <h2>Everything you're wondering.</h2>
+          <span class="eyebrow teal">NCLEX FAQ</span>
+          <h2>Everything you're wondering about <span class="hl">NCLEX prep</span>.</h2>
         </div>
         <div class="faq-list"><div class="faq-item">
-          <button class="faq-q">What is Must Love Scrubs? <svg class="chev" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="m6 9 6 6 6-6"/></svg></button>
-          <div class="faq-a"><p>A premium nursing education ecosystem: prep courses built on proven retention science, Scrub TV learning videos with quizzes, a curated nurse lifestyle store, and Esi — an AI tutor that guides your studying and helps you navigate the site.</p></div>
+          <button class="faq-q">What is NCLEX Complete? <svg class="chev" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="m6 9 6 6 6-6"/></svg></button>
+          <div class="faq-a"><p>Our flagship NCLEX prep: 50 Next Gen case studies with walkthroughs, 2,600+ original questions, a strategy video course, and four full-length readiness exams that predict your pass chance — plus a study schedule and Esi, your AI tutor. Everything's included in one plan.</p></div>
         </div><div class="faq-item">
-          <button class="faq-q">Is Esi free? <svg class="chev" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="m6 9 6 6 6-6"/></svg></button>
-          <div class="faq-a"><p>Esi is a premium add-on to any prep course. She tutors you one-on-one, targets your weak areas, and helps you find your way around the site. You can preview what she does on the Esi page.</p></div>
+          <button class="faq-q">How is this different from other NCLEX question banks? <svg class="chev" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="m6 9 6 6 6-6"/></svg></button>
+          <div class="faq-a"><p>Most banks hand you thousands of questions and wish you luck. We teach you to <b>think like a nurse</b> — every question has a rationale for every option, case studies show the reasoning, and Esi drills exactly what you keep missing. It's built on how memory actually works.</p></div>
         </div><div class="faq-item">
-          <button class="faq-q">How do points work? <svg class="chev" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="m6 9 6 6 6-6"/></svg></button>
-          <div class="faq-a"><p>Log in and claim 10 free points every day on your Profile Dashboard. Earn more by completing quizzes, puzzles, and video activities. Redeem points for digital downloads in the store — study guides, brain sheets, planners and more.</p></div>
+          <button class="faq-q">Is there a pass guarantee? <svg class="chev" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="m6 9 6 6 6-6"/></svg></button>
+          <div class="faq-a"><p>Yes. On the 2- and 3-month plans, finish the program and if you don't pass, you get a full refund. We built it to work and we stand behind it.</p></div>
         </div><div class="faq-item">
-          <button class="faq-q">What courses do you offer? <svg class="chev" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="m6 9 6 6 6-6"/></svg></button>
-          <div class="faq-a"><p>NCLEX Complete is our flagship, alongside specialty courses like Pharmacology Mastery, Med-Surg Essentials, and NGN Prioritization &amp; Delegation. The library grows constantly.</p></div>
+          <button class="faq-q">Is it updated for the Next Gen NCLEX (NGN)? <svg class="chev" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="m6 9 6 6 6-6"/></svg></button>
+          <div class="faq-a"><p>Completely. Every item type on the current test plan is here — case studies, bow-tie, trend, matrix, select-all, and more — and our practice exams run on a real computer-adaptive engine, so test day feels familiar.</p></div>
         </div><div class="faq-item">
-          <button class="faq-q">How often does Scrub TV update? <svg class="chev" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="m6 9 6 6 6-6"/></svg></button>
-          <div class="faq-a"><p>Fresh videos drop every two weeks across eight specialty channels — each with quizzes and activities that earn you points.</p></div>
+          <button class="faq-q">Can I use it for the NCLEX-PN (LPN)? <svg class="chev" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="m6 9 6 6 6-6"/></svg></button>
+          <div class="faq-a"><p>Yes — the question bank has both an RN and a PN track. Pick your exam and the questions adapt to your scope of practice.</p></div>
         </div><div class="faq-item">
-          <button class="faq-q">Can I use Must Love Scrubs on my phone? <svg class="chev" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="m6 9 6 6 6-6"/></svg></button>
-          <div class="faq-a"><p>Absolutely — the entire site is designed mobile-first, with app-style navigation. Study on the bus, in the break room, or on the couch.</p></div>
+          <button class="faq-q">Is Esi, the AI tutor, included? <svg class="chev" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="m6 9 6 6 6-6"/></svg></button>
+          <div class="faq-a"><p>Yes — Esi comes with every plan at no extra cost. She tracks your weak areas, builds your study plan, and turns every miss into a targeted drill. There's no separate add-on.</p></div>
+        </div><div class="faq-item">
+          <button class="faq-q">What's free versus paid? <svg class="chev" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="m6 9 6 6 6-6"/></svg></button>
+          <div class="faq-a"><p>Free forever: NCLEX practice with every item type, four Scrub TV lessons a month, the Nurse Dictionary, and daily points. Paid unlocks the full question bank, case studies, readiness exams, schedules, the workbook, and Esi.</p></div>
+        </div><div class="faq-item">
+          <button class="faq-q">Can I study on my phone? <svg class="chev" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="m6 9 6 6 6-6"/></svg></button>
+          <div class="faq-a"><p>Absolutely — the entire experience is mobile-first with app-style navigation. Study on the bus, in the break room, or on the couch.</p></div>
         </div></div>
       </div>
     </section>
@@ -3485,7 +3515,7 @@ body.mls-paid .gate { display: none; }
   <section id="download" style="background:var(--card);">
     <div class="wrap">
       <div class="course-hero fade-up" style="box-shadow:var(--shadow-2);">
-        <div class="art" style="background:radial-gradient(circle at 70% 25%, rgba(255,201,77,0.4), transparent 50%), radial-gradient(circle at 20% 80%, rgba(20,184,168,0.5), transparent 55%), linear-gradient(150deg,#2b1055,#4d2b9e);"><span class="big" style="font-size:3rem;">A&ndash;Z</span></div>
+        <div class="art" style="background:none center/cover no-repeat, radial-gradient(circle at 70% 25%, rgba(255,201,77,0.4), transparent 50%), radial-gradient(circle at 20% 80%, rgba(20,184,168,0.5), transparent 55%), linear-gradient(150deg,#2b1055,#4d2b9e);"></div>
         <div class="body">
           <div class="chip-row"><span class="chip gold">Download</span><span class="chip teal">Example + rationale for every term</span></div>
           <h3>Take the whole dictionary with you.</h3>
@@ -3493,6 +3523,24 @@ body.mls-paid .gate { display: none; }
           <div class="price-line"><span class="price">$4.99</span><span class="per">one-time</span></div>
           <div class="chip-row"><span class="chip">Unlock with points</span><span class="chip">Free with any course</span></div>
           <div class="hero-cta" style="margin-top:0.4rem;"><a class="btn btn-coral" href="join.html">Unlock with points</a><a class="btn btn-line" href="store.html">Buy for $4.99</a></div>
+        </div>
+      </div>
+
+      <div class="section-head fade-up" style="margin-top:2.6rem;"><span class="eyebrow gold">See what you're paying for</span><h2>Same term. <span class="hl">Two depths.</span></h2><p>Here's the exact difference between the free search and the paid download &mdash; using one real term.</p></div>
+      <div class="compare-grid fade-up">
+        <div class="compare-col free">
+          <span class="ctag">Free search</span>
+          <b class="cterm">Hyperkalemia</b>
+          <p class="cdef">A higher-than-normal level of potassium in the blood (above ~5.0 mEq/L). Can affect the heart's rhythm.</p>
+        </div>
+        <div class="compare-col paid">
+          <span class="ctag paid">Paid download &middot; with bonus</span>
+          <b class="cterm">Hyperkalemia</b>
+          <p class="cdef">A higher-than-normal level of potassium in the blood (above ~5.0 mEq/L). Can affect the heart's rhythm.</p>
+          <div class="cbonus">
+            <p><b><svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 3 2.7 5.7 6.3.8-4.6 4.3 1.2 6.2L12 17l-5.6 3 1.2-6.2L3 9.5l6.3-.8z"/></svg> Real clinical example.</b> Mr. Alvarez, post-op day 2 with kidney injury, has a potassium of 6.8 and tall, peaked T waves on the monitor. His nurse holds all potassium, places him on a cardiac monitor, and calls the provider &mdash; anticipating IV calcium to protect the heart.</p>
+            <p><b><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="m4 12.5 5 5L20 6.5"/></svg> Why it sticks.</b> You don't just learn the number &mdash; you see what it <i>looks like</i> at the bedside and what you'd do about it. That's the rationale that turns a definition into nursing judgment.</p>
+          </div>
         </div>
       </div>
     </div>
@@ -3535,6 +3583,32 @@ body.mls-paid .gate { display: none; }
         </div>
       </div>
       <p style="margin-top:1.6rem;font-size:0.78rem;color:var(--ink-60);max-width:70ch;">Esi is an educational tutor only. She does not provide medical advice, diagnose, or prescribe, and she is not a substitute for clinical judgment, faculty guidance, or professional medical care. In an emergency, call 911.</p>
+
+      <div class="faq" style="margin-top:3rem;">
+        <div class="section-head fade-up" style="text-align:center;margin-inline:auto;">
+          <span class="eyebrow teal">Esi FAQ</span>
+          <h2>Questions about <span class="hl">Esi</span>.</h2>
+        </div>
+        <div class="faq-list"><div class="faq-item">
+          <button class="faq-q">What exactly is Esi? <svg class="chev" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="m6 9 6 6 6-6"/></svg></button>
+          <div class="faq-a"><p>Esi is your AI nursing tutor. She explains what you missed, drills your weak areas, builds your study plan, and helps you find anything on the site — like a preceptor and a guide in one.</p></div>
+        </div><div class="faq-item">
+          <button class="faq-q">Is Esi included in my plan? <svg class="chev" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="m6 9 6 6 6-6"/></svg></button>
+          <div class="faq-a"><p>Yes. Esi comes with every NCLEX Complete plan at no extra charge. There's nothing separate to buy.</p></div>
+        </div><div class="faq-item">
+          <button class="faq-q">Can Esi diagnose or give medical advice? <svg class="chev" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="m6 9 6 6 6-6"/></svg></button>
+          <div class="faq-a"><p>No. Esi is an educational tutor only. She never diagnoses, prescribes, or replaces clinical judgment, faculty, or professional medical care. In an emergency, call 911.</p></div>
+        </div><div class="faq-item">
+          <button class="faq-q">How does Esi know my weak areas? <svg class="chev" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="m6 9 6 6 6-6"/></svg></button>
+          <div class="faq-a"><p>She watches your quiz and question results, spots the topics you keep missing, and schedules focused reviews at the moment you're about to forget — spaced repetition, automated.</p></div>
+        </div><div class="faq-item">
+          <button class="faq-q">Can I chat with Esi for free? <svg class="chev" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="m6 9 6 6 6-6"/></svg></button>
+          <div class="faq-a"><p>Esi lives inside your subscription, so there's no free open chat. You can preview exactly what she does on this page, then unlock her with any plan.</p></div>
+        </div><div class="faq-item">
+          <button class="faq-q">Does Esi work on my phone? <svg class="chev" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="m6 9 6 6 6-6"/></svg></button>
+          <div class="faq-a"><p>Yes — Esi is right there in the app-style experience on any device, whenever you sit down to study.</p></div>
+        </div></div>
+      </div>
     </div>
   </main>
 
@@ -3886,6 +3960,172 @@ body.mls-paid .gate { display: none; }
         <div><b>NCLEX Pass Guarantee</b><p>On the 2- and 3-month plans, finish the program and if you don't pass, you get a full refund. We built it to work &mdash; and we stand behind it.</p></div>
       </div>
       <p style="text-align:center;margin-top:1.6rem;font-size:0.78rem;color:var(--ink-60);max-width:70ch;margin-left:auto;margin-right:auto;">NCLEX&reg; is a registered trademark of the National Council of State Boards of Nursing, Inc. Must Love Scrubs is not affiliated with or endorsed by NCSBN. All questions and materials are 100% original and created by our team. Educational content only &mdash; not medical advice.</p>
+    </div>
+  </section>
+
+</div>
+<div class="mls-route" data-route="nclex-guide.html" hidden>
+  <div class="page-hero">
+    <div class="wrap inner">
+      <span class="lesson-label" style="color:var(--gold-400);">Free NCLEX Study Guide</span>
+      <h1 style="margin-top:0.6rem;">Everything you need to pass &mdash; <span class="em">for nurses, by nurses.</span></h1>
+      <p>Must Love Scrubs was built by a group of nurses who remember exactly how the NCLEX felt. This free guide is the advice we wish we'd had &mdash; how the test works, how to study, and how to walk in ready.</p>
+      <div class="hero-cta" style="margin-top:1.8rem;">
+        <a class="btn btn-coral" href="#ngn">Start reading</a>
+        <a class="btn btn-ghost" href="nclex-complete.html">See the MLS Bootcamp</a>
+      </div>
+    </div>
+  </div>
+
+  <section style="background:var(--bg);">
+    <div class="wrap">
+      <div class="intro-letter fade-up">
+        <div class="photo" style="background-image:none,linear-gradient(150deg,#4d2b9e,#14b8a8);min-height:280px;"></div>
+        <div class="letter-body">
+          <span class="eyebrow teal">Hi, future nurse</span>
+          <h2>First &mdash; breathe.</h2>
+          <p>We're the nurses behind Must Love Scrubs, and we made this because the NCLEX terrified us too. Here's the good news: the Next Gen NCLEX has stopped asking you to memorize every tiny detail. It wants to know one thing &mdash; <b>can you think like a nurse?</b></p>
+          <p>That's learnable. Everything in this guide (and everything in our prep) is built to grow exactly that skill: reading a situation, weighing the options, and choosing the safest action. Practice that, and test day stops being a wall and starts being a formality.</p>
+          <p style="margin-top:1rem;"><b>Happy studying &mdash; you've got this.</b><br><span style="color:var(--ink-60);">&mdash; The Must Love Scrubs team, nurses who've been where you are</span></p>
+          <p style="margin-top:1rem;font-size:0.82rem;color:var(--ink-60);">Want the full program? <a href="nclex-complete.html" style="color:var(--coral-500);font-weight:700;">Meet NCLEX Complete &mdash; our bootcamp &rarr;</a> &nbsp;<span style="opacity:0.7;">(placeholder: your external bootcamp link can point here too)</span></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section style="background:var(--card);">
+    <div class="wrap">
+      <div class="qotd fade-up" style="max-width:720px;margin:0 auto;">
+        <span class="qk">Free &middot; every morning</span>
+        <h3>Subscribe to the NCLEX Question of the Day</h3>
+        <p class="stem">One fresh NGN-style question in your inbox or on your phone, every day &mdash; pulled from our original question bank. Free to join, and a great way to keep your mind sharp.</p>
+        <div class="qotd-signup">
+          <span style="font-size:0.82rem;color:rgba(255,255,255,0.8);align-self:center;">Send it to my:</span>
+          <div class="seg" data-qotd-channel>
+            <button class="on" data-ch="phone">Phone</button>
+            <button data-ch="email">Email</button>
+          </div>
+          <a class="btn btn-coral" href="join.html" style="padding:0.5rem 1.1rem;font-size:0.82rem;">Subscribe free</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="ngn" style="background:var(--bg);">
+    <div class="wrap">
+      <div class="section-head fade-up"><span class="eyebrow teal">The basics</span><h2>What is the <span class="hl">Next Gen NCLEX (NGN)?</span></h2><p>The NGN is the current version of the exam. It's a better mirror of real nursing &mdash; more clinical judgment, less rote memorization. Here's what changed:</p></div>
+      <div class="guide-points fade-up">
+        <ul>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="m4 12.5 5 5L20 6.5"/></svg> <b>Case studies.</b> Unfolding, six-item cases test how you reason through a real patient. <a href="nclex-complete.html#pricing">See our 50 case studies &rarr;</a></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="m4 12.5 5 5L20 6.5"/></svg> <b>New item types.</b> Drop-down, matrix, highlight, bow-tie and more. <a href="nclex.html">Try every item type free &rarr;</a></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="m4 12.5 5 5L20 6.5"/></svg> <b>Partial credit</b> on select-all-that-apply &mdash; miss one option and you still earn most of the points. Good news for test-takers.</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="m4 12.5 5 5L20 6.5"/></svg> <b>Lab values are given to you.</b> You can look them up, just like at the bedside &mdash; so focus on the <i>meaning</i>, not the number.</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="m4 12.5 5 5L20 6.5"/></svg> <b>It adapts to you.</b> The exam is computer-adaptive (CAT) &mdash; it changes difficulty as you answer and can end between 75 and 145 questions. <a href="nclex-complete.html">Practice on a real CAT engine &rarr;</a></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section style="background:var(--card);">
+    <div class="wrap">
+      <div class="section-head fade-up"><span class="eyebrow">NCLEX 101</span><h2>Your questions, <span class="hl">answered.</span></h2><p>The logistics nobody explains clearly. Tap any card to jump to it.</p></div>
+      <div class="spec-grid"><a class="spec-card fade-up" href="#register">
+          <span class="ic" style="background:linear-gradient(140deg,#8b5cff,#4d2b9e);"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 4a1 1 0 0 1 1-1h12v18H6a1 1 0 0 1-1-1z"/><path d="M8 3v18M11 8h5M11 11h5"/></svg></span>
+          <h3>How do I register?</h3>
+          <p>Sign up with your board of nursing, get your ATT, and book your date.</p>
+          <div class="foot"><span class="go">Read &rarr;</span></div>
+        </a><a class="spec-card fade-up" href="#examday">
+          <span class="ic" style="background:linear-gradient(140deg,#8b5cff,#4d2b9e);"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l8 3v6c0 4.5-3.2 7.6-8 9-4.8-1.4-8-4.5-8-9V6z"/><path d="m8.8 12 2.2 2.2 4.2-4.4"/></svg></span>
+          <h3>What's exam day like?</h3>
+          <p>What to bring, what to expect, and how the CAT actually works.</p>
+          <div class="foot"><span class="go">Read &rarr;</span></div>
+        </a><a class="spec-card fade-up" href="#fees">
+          <span class="ic" style="background:linear-gradient(140deg,#8b5cff,#4d2b9e);"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="3" y="6" width="18" height="13" rx="3"/><path d="M3 10h18"/></svg></span>
+          <h3>How much does it cost?</h3>
+          <p>The exam fee, extra costs, and where prep fits your budget.</p>
+          <div class="foot"><span class="go">Read &rarr;</span></div>
+        </a><a class="spec-card fade-up" href="#testplan">
+          <span class="ic" style="background:linear-gradient(140deg,#8b5cff,#4d2b9e);"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5a2 2 0 0 1 2-2h13v18H6a2 2 0 0 0-2 2z"/><path d="M4 19a2 2 0 0 1 2-2h13"/><path d="M11 7h4M13 5v4"/></svg></span>
+          <h3>What's on the test plan?</h3>
+          <p>The categories every question is drawn from — and where to focus.</p>
+          <div class="foot"><span class="go">Read &rarr;</span></div>
+        </a><a class="spec-card fade-up" href="#when">
+          <span class="ic" style="background:linear-gradient(140deg,#8b5cff,#4d2b9e);"><svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 3 2.7 5.7 6.3.8-4.6 4.3 1.2 6.2L12 17l-5.6 3 1.2-6.2L3 9.5l6.3-.8z"/></svg></span>
+          <h3>When should I take it?</h3>
+          <p>How to pick a test date that gives you enough runway.</p>
+          <div class="foot"><span class="go">Read &rarr;</span></div>
+        </a><a class="spec-card fade-up" href="#study">
+          <span class="ic" style="background:linear-gradient(140deg,#8b5cff,#4d2b9e);"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="4"/><path d="M10 9.5v5l4.5-2.5z" fill="currentColor" stroke="none"/></svg></span>
+          <h3>How long should I study?</h3>
+          <p>1, 2, or 3 months — take the quiz and get a matched plan.</p>
+          <div class="foot"><span class="go">Read &rarr;</span></div>
+        </a></div>
+    </div>
+  </section>
+
+  <section style="background:var(--bg);">
+    <div class="wrap guide-stack">
+      <div class="guide-block fade-up" id="register">
+        <h3>How do I register for the NCLEX?</h3>
+        <p>Three steps: (1) apply for licensure with your state board of nursing, (2) register for the exam and pay the fee, and (3) wait for your <b>Authorization to Test (ATT)</b> &mdash; then schedule your date and location. Give yourself a buffer; ATTs can take a few weeks.</p>
+        <p><a class="btn btn-line" href="#" data-ext>Official registration (add NCSBN link)</a></p>
+      </div>
+      <div class="guide-block fade-up" id="examday">
+        <h3>What's exam day like?</h3>
+        <p>Bring your ID and your ATT. You'll be checked in, store your belongings, and test at a computer. The NCLEX is a <b>computer-adaptive test</b> &mdash; each answer shapes the next question, and the exam ends when it's confident about your result (anywhere from 75 to 145 questions). Breathe, read carefully, and trust your preparation.</p>
+        <p><a class="btn btn-line" href="nclex-complete.html">Practice in real test format &rarr;</a></p>
+      </div>
+      <div class="guide-block fade-up" id="fees">
+        <h3>How much does the NCLEX cost?</h3>
+        <p>The exam itself has a set registration fee paid to the testing service, plus possible state licensure and background-check costs that vary by board. Budget for those separately from prep. Our prep starts at <b>$49</b> &mdash; and includes everything, with Esi.</p>
+        <p><a class="btn btn-line" href="nclex-complete.html#pricing">See prep plans &rarr;</a> &nbsp; <a class="btn btn-line" href="#" data-ext>Current exam fee (add link)</a></p>
+      </div>
+      <div class="guide-block fade-up" id="testplan">
+        <h3>What's on the test plan?</h3>
+        <p>Every question comes from the official <b>Client Needs</b> categories &mdash; Safe &amp; Effective Care Environment, Health Promotion, Psychosocial Integrity, and Physiological Integrity &mdash; with clinical judgment woven throughout. Our question bank is tagged to these same areas so you always know where you stand.</p>
+        <p><a class="btn btn-line" href="nclex-complete.html">See performance by subject area &rarr;</a> &nbsp; <a class="btn btn-line" href="#" data-ext>Official test plan (add link)</a></p>
+      </div>
+      <div class="guide-block fade-up" id="when">
+        <h3>When should I take the NCLEX?</h3>
+        <p>Sooner than you think &mdash; most students do best testing <b>4 to 8 weeks after graduation</b>, while the content is fresh. The trick is picking a date that leaves enough runway to fix your weak areas without going stale. That's exactly what our study schedule builds around.</p>
+        <p><a class="btn btn-line" href="#study">How long should I study? &rarr;</a></p>
+      </div>
+      <div class="guide-block fade-up" id="study">
+        <h3>How long should I study?</h3>
+        <p>It depends on your foundation and your test date. As a rule of thumb: a <b>1-month</b> plan for strong students who mainly need reps, a <b>2-month</b> plan for most people, and a <b>3-month</b> plan if you work full-time or are rebuilding basics. Not sure? Take the 30-second quiz.</p>
+        <div class="hero-cta" style="margin-top:0.6rem;">
+          <a class="btn btn-coral" href="nclex-complete.html#pricing">Take the plan quiz &rarr;</a>
+        </div>
+        <div class="plan-links">
+          <a href="nclex-complete.html#pricing">1-Month plan</a>
+          <a href="nclex-complete.html#pricing">2-Month plan</a>
+          <a href="nclex-complete.html#pricing">3-Month plan</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section style="background:var(--card);">
+    <div class="wrap">
+      <div class="section-head fade-up"><span class="eyebrow gold">Any advice?</span><h2>Our best <span class="hl">strategy</span> for test day.</h2><p>Reading the question right is half the battle. Two tools do the heavy lifting:</p></div>
+      <div class="community">
+        <div class="comm-card fade-up">
+          <span class="ci" style="background:linear-gradient(140deg,#ffc23d,#8b5cff);"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="4"/><path d="M10 9.5v5l4.5-2.5z" fill="currentColor" stroke="none"/></svg></span>
+          <div><h4>Next Gen strategy course</h4><p>Short lessons on how to read a case, spot the answer type, and dodge the traps the test is built on. <a href="nclex-complete.html" style="color:var(--coral-500);font-weight:700;">Explore the course &rarr;</a></p></div>
+        </div>
+        <div class="comm-card fade-up">
+          <span class="ci" style="background:linear-gradient(140deg,#2ad4c4,#1a0942);"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l8 3v6c0 4.5-3.2 7.6-8 9-4.8-1.4-8-4.5-8-9V6z"/><path d="m8.8 12 2.2 2.2 4.2-4.4"/></svg></span>
+          <div><h4>Readiness &amp; analyzing tool</h4><p>Full-length readiness exams predict your pass chance and show your weakest subjects, so you always know what to fix next. <a href="nclex-complete.html" style="color:var(--coral-500);font-weight:700;">See the analyzer &rarr;</a></p></div>
+        </div>
+      </div>
+      <div class="soon-band fade-up" style="margin-top:1.6rem;">
+        <div>
+          <h3>Ready to go all in?</h3>
+          <p>NCLEX Complete has the case studies, the question bank, the readiness exams, the schedule, and Esi &mdash; from $49.</p>
+        </div>
+        <a class="btn btn-coral" href="nclex-complete.html">Explore NCLEX Complete</a>
+      </div>
+      <p style="text-align:center;margin-top:1.4rem;font-size:0.78rem;color:var(--ink-60);max-width:70ch;margin-left:auto;margin-right:auto;">NCLEX&reg; is a registered trademark of the National Council of State Boards of Nursing, Inc. Must Love Scrubs is not affiliated with or endorsed by NCSBN. This guide is original educational content, not medical or licensing advice &mdash; always confirm current requirements with your state board.</p>
     </div>
   </section>
 
@@ -6667,6 +6907,7 @@ body.mls-paid .gate { display: none; }
         <h5>Learn</h5>
         <ul>
           <li><a href="nclex-complete.html">NCLEX Complete</a></li>
+          <li><a href="nclex-guide.html">Free Study Guide</a></li>
           <li><a href="specialties.html">Specialty Prep</a></li>
           <li><a href="courses.html">Courses</a></li>
           <li><a href="course-lab-values.html">Free NCLEX Practice</a></li>
@@ -6706,7 +6947,7 @@ body.mls-paid .gate { display: none; }
     <a class="bn-item active" href="index.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11.5 12 4l9 7.5"/><path d="M5 10v10h5v-6h4v6h5V10"/></svg><span>Home</span></a>
     <a class="bn-item" href="courses.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5a2 2 0 0 1 2-2h13v18H6a2 2 0 0 0-2 2z"/><path d="M4 19a2 2 0 0 1 2-2h13"/><path d="M11 7h4M13 5v4"/></svg><span>Courses</span></a>
     <a class="bn-item bn-center" href="scrubtv.html"><span class="puck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="4"/><path d="M10 9.5v5l4.5-2.5z" fill="currentColor" stroke="none"/></svg></span><span>Scrub TV</span></a>
-    <a class="bn-item" href="store.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 8h14l-1.2 12H6.2z"/><path d="M9 11V6a3 3 0 0 1 6 0v5"/></svg><span>Store</span></a>
+    <a class="bn-item" href="dictionary.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 4a1 1 0 0 1 1-1h12v18H6a1 1 0 0 1-1-1z"/><path d="M8 3v18M11 8h5M11 11h5"/></svg><span>Dictionary</span></a>
     <a class="bn-item" href="profile.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 21c1.5-3.5 4.5-5 8-5s6.5 1.5 8 5"/></svg><span>Profile</span></a>
   </nav>
 
