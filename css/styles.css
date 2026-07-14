@@ -1167,6 +1167,28 @@ body.mls-paid .gate { display: none; }
 @keyframes badge-shine { 0% { transform: translateX(-130%); } 60%, 100% { transform: translateX(240%); } }
 @media (prefers-reduced-motion: reduce) { .badge-new::after { animation: none; display: none; } }
 
+/* ---------- NCLEX Complete product page ---------- */
+.readiness { max-width: 520px; }
+.rd-track { display: grid; grid-template-columns: repeat(4, 1fr); gap: 6px; }
+.rd-seg { height: 14px; border-radius: var(--pill); background: rgba(255,255,255,0.14); }
+.rd-seg.s1 { background: #e5484d; } .rd-seg.s2 { background: #ffb038; } .rd-seg.s3 { background: var(--teal-400); } .rd-seg.s4 { background: #2ee6a6; }
+.rd-labels { display: grid; grid-template-columns: repeat(4, 1fr); gap: 6px; margin-top: 0.5rem; font-size: 0.64rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.05em; color: rgba(255,255,255,0.6); text-align: center; }
+.rd-labels .cur { color: var(--teal-400); }
+.tag-chips { display: flex; gap: 0.5rem; flex-wrap: wrap; margin-top: 0.4rem; }
+.tagc { padding: 0.4rem 0.95rem; border-radius: var(--pill); font-size: 0.8rem; font-weight: 800; border: 1.5px solid; cursor: pointer; transition: transform 0.15s ease; }
+.tagc:hover { transform: translateY(-2px); }
+.tagc.mastered { color: var(--teal-600); border-color: var(--teal-600); background: var(--teal-100); }
+.tagc.reviewing { color: var(--gold-600); border-color: var(--gold-600); background: var(--gold-100); }
+.tagc.learning { color: var(--coral-600); border-color: var(--coral-600); background: var(--coral-100); }
+.tagc.picked { box-shadow: 0 0 0 3px rgba(139,92,255,0.25); }
+.sched-grid { display: grid; gap: 1rem; grid-template-columns: 1fr; }
+@media (min-width: 760px) { .sched-grid { grid-template-columns: repeat(3, 1fr); } }
+.sched { background: var(--card); border: 1px solid rgba(30,18,51,0.08); border-radius: var(--radius); padding: 1.5rem; box-shadow: var(--shadow-1); }
+.sched .len { font-family: var(--font-display); font-size: 1.8rem; font-weight: 800; color: var(--coral-500); }
+.sched ul { list-style: none; margin-top: 0.8rem; display: grid; gap: 0.5rem; }
+.sched li { display: flex; gap: 0.5rem; align-items: flex-start; font-size: 0.86rem; color: var(--ink-60); }
+.sched li svg { width: 15px; height: 15px; color: var(--teal-600); flex-shrink: 0; margin-top: 2px; }
+
 /* fade-up reveal */
 .fade-up { opacity: 0; transform: translateY(26px); transition: opacity 0.65s ease, transform 0.65s ease; }
 .fade-up.visible { opacity: 1; transform: translateY(0); }
