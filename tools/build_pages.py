@@ -94,7 +94,8 @@ def chrome(fname, title, desc, body, active=""):
       <div>
         <h4>Learn</h4>
         <ul class="mega-links">
-          <li><a href="nclex.html">NCLEX Prep <small>RN &amp; LPN &middot; every NGN item type</small></a></li>
+          <li><a href="nclex-complete.html">NCLEX Complete <small>The flagship &middot; plans from $49</small></a></li>
+          <li><a href="nclex.html">Free NCLEX Prep <small>RN &amp; LPN &middot; every NGN item type</small></a></li>
           <li><a href="course-lab-values.html">Free NCLEX Practice <small>Start with a free audio scene</small></a></li>
           <li><a href="courses.html">Courses <small>NCLEX prep, entrance exams &amp; more</small></a></li>
           <li><a href="scrubtv.html">Scrub TV <small>4 free lessons a month, quizzes &amp; more</small></a></li>
@@ -121,11 +122,11 @@ def chrome(fname, title, desc, body, active=""):
           <li><a href="settings.html">Settings</a></li>
         </ul>
       </div>
-      <a class="mega-promo" href="courses.html">
+      <a class="mega-promo" href="nclex-complete.html">
         <span class="art">NCLEX</span>
         <b>NCLEX Complete</b>
-        <p>The flagship prep course — built on proven retention science.</p>
-        <span class="btn btn-coral" style="padding:0.6rem 1.3rem; font-size:0.85rem;">Start Learning</span>
+        <p>50 cases, 2,600+ questions, 4 readiness exams &amp; Esi — from $49.</p>
+        <span class="btn btn-coral" style="padding:0.6rem 1.3rem; font-size:0.85rem;">See the plans</span>
       </a>
     </div>
   </nav>
@@ -148,6 +149,7 @@ def chrome(fname, title, desc, body, active=""):
       <div class="footer-col">
         <h5>Learn</h5>
         <ul>
+          <li><a href="nclex-complete.html">NCLEX Complete</a></li>
           <li><a href="courses.html">Courses</a></li>
           <li><a href="course-lab-values.html">Free NCLEX Practice</a></li>
           <li><a href="scrubtv.html">Scrub TV</a></li>
@@ -259,6 +261,49 @@ def course_shelf():
           </div>
         </article>""")
     return '<div class="course-shelf">' + "".join(out) + '</div>'
+
+# -------- Subscription pricing (3 tiers, Esi included, duration-based) --------
+TIERS = [
+    {"dur": "1 Month", "sub": "of full access", "was": "$79", "now": "49",
+     "save": "Save $30", "feat": False, "guar": False,
+     "blurb": "For students testing in under a month who need reps and a plan &mdash; fast."},
+    {"dur": "2 Months", "sub": "of full access", "was": "$149", "now": "89",
+     "save": "Save $60", "feat": True, "guar": True,
+     "blurb": "The sweet spot for most students &mdash; runway to fix every weak area."},
+    {"dur": "3 Months", "sub": "of full access", "was": "$199", "now": "119",
+     "save": "Save $80", "feat": False, "guar": True,
+     "blurb": "Best if you work full-time or are building from the ground up."},
+]
+TIER_FEATURES = [
+    "2,600+ original NCLEX questions &mdash; RN &amp; PN",
+    "50 Next Gen case studies with walkthroughs",
+    "4 full-length CAT readiness exams",
+    "Next Gen strategy video course",
+    "Personalized study schedule &amp; calendar",
+    "Mastered / Reviewing / Learning tagging",
+    "Performance by subject area",
+    "140+ cheat sheets &amp; the Nurse Dictionary",
+]
+
+def pricing_tiers(cta="join.html"):
+    li = "".join(f"<li>{I['check']}{f}</li>" for f in TIER_FEATURES)
+    cards = []
+    for t in TIERS:
+        rec = '<span class="rec-tab">Most recommended</span>' if t["feat"] else ""
+        guar = (f'<li>{I["shield"]}<b style="color:var(--teal-600);">Pass Guarantee</b> '
+                "&mdash; full refund if you don't pass</li>") if t["guar"] else ""
+        btncls = "btn-coral" if t["feat"] else "btn-line"
+        cards.append(f"""<div class="tier{' feat' if t['feat'] else ''} fade-up">
+          {rec}
+          <div class="dur">{t['dur']}<small>{t['sub']}</small></div>
+          <div class="cost"><span class="was">{t['was']}</span><span class="now">${t['now']}</span><span class="usd">USD</span></div>
+          <span class="save">{t['save']} instantly</span>
+          <p class="blurb">{t['blurb']}</p>
+          <a class="btn {btncls} tier-cta" href="{cta}">Get {t['dur']}</a>
+          <div class="esi-in"><span class="orb"></span> Esi AI tutor included &mdash; free</div>
+          <ul>{li}{guar}</ul>
+        </div>""")
+    return '<div class="tiers">' + "".join(cards) + '</div>'
 
 PRODUCTS = [
     ("Scrub Life Tote Bag", "$24", "linear-gradient(140deg,#a78bff,#14b8a8)", "M❤S"),
@@ -432,9 +477,9 @@ INDEX_BODY = f"""  <main>
             <div class="chip-row"><span class="chip gold">FLAGSHIP</span><span class="chip teal">NGN READY</span><span class="chip">Esi compatible</span></div>
             <h3>NCLEX Complete</h3>
             <p>The full journey to test day: adaptive question banks, clinical-judgment case studies, mock exams in real test format, and analytics that show exactly where you're strong and where you're not.</p>
-            <div class="price-line"><span class="price">$149</span><span class="per">one-time, standalone</span></div>
-            <div class="chip-row"><span class="chip gold">Bundle with Esi &rarr; $129 + $19/mo &middot; save $20</span></div>
-            <a class="btn btn-coral" href="courses.html">Explore the course</a>
+            <div class="price-line"><span class="price">from $49</span><span class="per">Esi tutor included &middot; Pass Guarantee</span></div>
+            <div class="chip-row"><span class="chip gold">3 plans &rarr; 1, 2 or 3 months &middot; everything unlocked</span></div>
+            <a class="btn btn-coral" href="nclex-complete.html">Explore NCLEX Complete</a>
           </div>
         </div>
         {course_shelf()}
@@ -592,8 +637,8 @@ PAGES["index.html"] = ("Must Love Scrubs — The Ecosystem of Nursing",
 PAGES["courses.html"] = ("Courses — Must Love Scrubs",
     "NCLEX prep and specialty nursing courses built on proven retention science.",
     page_hero('Prep that teaches you to <span class="hl on-dark">think</span>.',
-              "Adaptive question banks, real test-format mocks, and analytics that show your exact weak areas. Add Esi and get a tutor who never sleeps.",
-              '<div class="hero-cta" style="margin-top:1.8rem;"><a class="btn btn-coral" href="join.html">Start free</a><a class="btn btn-ghost" href="esi.html">Add Esi tutoring</a></div>')
+              "Adaptive question banks, real test-format mocks, and analytics that show your exact weak areas &mdash; with Esi, a tutor who never sleeps, included in every plan.",
+              '<div class="hero-cta" style="margin-top:1.8rem;"><a class="btn btn-coral" href="nclex-complete.html">Explore NCLEX Complete</a><a class="btn btn-ghost" href="join.html">Start free</a></div>')
     + f"""  <main class="content-block">
     <div class="wrap">
       <div class="course-hero fade-up">
@@ -602,9 +647,9 @@ PAGES["courses.html"] = ("Courses — Must Love Scrubs",
           <div class="chip-row"><span class="chip gold">FLAGSHIP</span><span class="chip teal">NGN READY</span></div>
           <h3>NCLEX Complete</h3>
           <p>Everything to test day: adaptive banks, clinical-judgment cases, timed mocks in real test format, score analytics, and a visual progress map. Built on how memory actually works — spaced repetition and active recall, not cramming.</p>
-          <div class="price-line"><span class="price">$149</span><span class="per">one-time, standalone</span></div>
-          <div class="chip-row"><span class="chip gold">Bundle with Esi &rarr; $129 + $19/mo &middot; save $20</span></div>
-          <a class="btn btn-coral" href="join.html">Enroll (coming at launch)</a>
+          <div class="price-line"><span class="price">from $49</span><span class="per">Esi tutor included &middot; Pass Guarantee</span></div>
+          <div class="chip-row"><span class="chip gold">3 plans &rarr; 1, 2 or 3 months &middot; everything unlocked</span></div>
+          <a class="btn btn-coral" href="nclex-complete.html">Explore NCLEX Complete</a>
         </div>
       </div>
       <div style="height:1.2rem;"></div>
@@ -656,11 +701,12 @@ PAGES["esi.html"] = ("Meet Esi — Your AI Tutor | Must Love Scrubs",
         <div class="tile fade-up"><span class="tag">Method</span><h3>She teaches thinking</h3><p>NGN-style clinical judgment, walked through step by step. Not what to memorize — how to reason.</p></div>
       </div>
       <div class="join-card fade-up" style="margin-top:2.5rem;">
-        <span class="eyebrow" style="color:var(--gold-400);">Premium add-on</span>
-        <h2>Add Esi to any prep course.</h2>
-        <p><b style="font-size:1.6rem;">$19/mo</b> &nbsp;&middot;&nbsp; requires an active course &middot; cancel anytime</p>
-        <p style="margin-top:0.6rem;color:var(--gold-400);font-weight:700;">Bundle deal: grab Esi with NCLEX Complete and the course drops to $129 (save $20).</p>
-        <a class="btn btn-coral" href="#" data-esi-subscribe>Subscribe to Esi (demo)</a>
+        <span class="eyebrow" style="color:var(--gold-400);">Included with every plan</span>
+        <h2>Esi comes with your subscription.</h2>
+        <p><b style="font-size:1.6rem;">$0 extra</b> &nbsp;&middot;&nbsp; included in every NCLEX Complete plan &middot; nothing to add on</p>
+        <p style="margin-top:0.6rem;color:var(--gold-400);font-weight:700;">Every plan &mdash; 1, 2, or 3 months &mdash; unlocks Esi in full. Plans start at $49.</p>
+        <a class="btn btn-coral" href="nclex-complete.html">See the plans &mdash; from $49</a>
+        <a class="btn btn-line" href="#" data-esi-subscribe style="margin-top:0.6rem;">Preview Esi unlocked (demo)</a>
         <div class="perks">
           <span>{I['check']} Unlimited tutoring sessions</span>
           <span>{I['check']} Weak-area tracking</span>
@@ -891,6 +937,12 @@ PAGES["profile.html"] = ("Profile Dashboard — Must Love Scrubs",
       </div>
       <div class="tile fade-up"><span class="tag">Quiz history</span><h3>Latest scores</h3><p>Beta blockers quiz — 8/10<br>Triage priorities — 9/10<br>Decels decoded — 7/10</p></div>
       <div class="tile fade-up"><span class="tag">Certificates</span><h3>Earned</h3><p>Your completion certificates will collect here — downloadable and shareable.</p></div>
+      <div class="tile fade-up" style="background:linear-gradient(150deg,var(--indigo-950),var(--indigo-700));color:#fff;">
+        <span class="tag" style="color:var(--gold-400);">Question of the Day</span>
+        <h3 style="color:#fff;">🔥 12-day streak</h3>
+        <p style="color:rgba(255,255,255,0.82);">A fresh NGN question every morning, on your phone or email. Keep the streak alive.</p>
+        <a class="btn btn-coral" href="nclex-complete.html#pricing" style="margin-top:0.9rem;">Today's question &rarr;</a>
+      </div>
       <div class="tile span2 fade-up" data-downloads>
         <div style="display:flex;align-items:center;justify-content:space-between;gap:1rem;flex-wrap:wrap;"><span class="tag">My downloads</span><span class="badge-new" data-dl-badge hidden><span class="spark"></span> Updated &middot; free</span></div>
         <h3>Nurse Dictionary</h3>
@@ -1274,14 +1326,15 @@ PREP_BODY = f"""  <div class="page-hero">
         </div>
         <div class="tier-col paid fade-up">
           <div class="tname">NCLEX Complete</div>
-          <div class="tprice">$149 &middot; or bundle $129 + Esi</div>
+          <div class="tprice">Plans from $49 &middot; Esi included</div>
           <ul>
-            <li>{I['check']} 2,000+ questions, <span class="track-word">RN</span> &amp; LPN tracks</li>
-            <li>{I['check']} Every NGN type + full rationales</li>
-            <li>{I['check']} Timed mock exams in real format</li>
+            <li>{I['check']} 2,600+ questions, <span class="track-word">RN</span> &amp; LPN tracks</li>
+            <li>{I['check']} 50 case studies + 4 readiness exams</li>
+            <li>{I['check']} Study schedule, tagging &amp; the workbook</li>
             <li>{I['check']} Weak-area analytics + Esi tutoring</li>
           </ul>
-          <a class="btn btn-coral" href="#unlock" data-unlock>Unlock the full bank</a>
+          <a class="btn btn-coral" href="nclex-complete.html">See NCLEX Complete &rarr;</a>
+          <a class="relock" href="#unlock" data-unlock style="display:block;margin-top:0.6rem;">Or feel the paid side right here &rarr;</a>
         </div>
       </div>
     </div>
@@ -1384,8 +1437,8 @@ PREP_BODY = f"""  <div class="page-hero">
       <div class="gate fade-up">
         <div class="lock-ic">{I['lock']}</div>
         <h3>That's the free sample.</h3>
-        <p>You've tried every item type. The full <span class="track-word">RN</span> bank has <b>2,000+ questions</b>, timed mock exams in real test format, weak-area analytics, and Esi drilling exactly what you miss.</p>
-        <a class="btn btn-coral" href="#" data-unlock>Unlock NCLEX Complete &mdash; from $129 (demo)</a>
+        <p>You've tried every item type. The full <span class="track-word">RN</span> bank has <b>2,600+ questions</b>, 50 case studies, 4 readiness exams, timed mocks, weak-area analytics, and Esi drilling exactly what you miss.</p>
+        <a class="btn btn-coral" href="#" data-unlock>Unlock NCLEX Complete &mdash; from $49 (demo)</a>
         <a class="relock" href="#" data-unlock>Just let me feel the paid side &rarr;</a>
       </div>
 
@@ -1440,6 +1493,275 @@ PREP_BODY = f"""  <div class="page-hero">
 PAGES["nclex.html"] = ("NCLEX Prep (RN &amp; LPN) — Must Love Scrubs",
     "Free NCLEX practice with every Next Gen item type: timed recall, chart-trend, matrix grid, SBAR builder, and select-all. RN and LPN tracks.",
     PREP_BODY, "courses")
+
+# ---------------------------------------------------------------- NCLEX COMPLETE (flagship product page)
+
+# Custom inline icons (sized by CSS) for this page
+IC_STACK = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3 3 8l9 5 9-5-9-5z"/><path d="M3 13l9 5 9-5"/></svg>'
+IC_CASE = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="5" width="16" height="15" rx="2.5"/><path d="M8 3v4M16 3v4M4 10h16M8 14h5M8 17h8"/></svg>'
+IC_ROUTE = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="6" cy="18" r="2.5"/><circle cx="18" cy="6" r="2.5"/><path d="M8.5 17.5 15 8m1 8h1a3 3 0 0 0 0-6h-6a3 3 0 0 1 0-6H8"/></svg>'
+IC_GAUGE = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 18a8 8 0 1 1 16 0"/><path d="m12 14 4-4"/><circle cx="12" cy="14" r="1.4" fill="currentColor"/></svg>'
+IC_USERS = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="3.5"/><path d="M3 20c0-3.3 2.7-5.5 6-5.5s6 2.2 6 5.5"/><path d="M16 5.2a3.5 3.5 0 0 1 0 5.6M18 20c0-2.4-1-4.3-2.6-5.2"/></svg>'
+IC_CAL = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3.5" y="5" width="17" height="16" rx="2.5"/><path d="M3.5 10h17M8 3v4M16 3v4"/></svg>'
+
+COMPLETE_BODY = f"""  <div class="page-hero">
+    <div class="wrap inner">
+      <span class="lesson-label" style="color:var(--gold-400);">The flagship &middot; NCLEX Complete</span>
+      <h1 style="margin-top:0.6rem;">Everything you need to pass. <span class="em">Nothing you don't.</span></h1>
+      <p>Four ways to master the Next Gen NCLEX &mdash; case studies, a deep question bank, a strategy course, and full-length readiness exams that predict your pass chance &mdash; wrapped in a plan built around your test date. Esi, your AI tutor, comes with every plan.</p>
+      <div class="hero-cta" style="margin-top:1.8rem;">
+        <a class="btn btn-coral" href="#pricing">See plans &mdash; from $49</a>
+        <a class="btn btn-ghost" href="nclex.html">Try the free practice</a>
+      </div>
+      <div class="chip-row" style="margin-top:1.4rem;justify-content:center;">
+        <span class="chip gold">Esi AI tutor included</span>
+        <span class="chip teal">Pass Guarantee</span>
+        <span class="chip">100% original content</span>
+      </div>
+    </div>
+  </div>
+
+  <section style="background:var(--bg);">
+    <div class="wrap">
+      <div class="section-head fade-up"><span class="eyebrow teal">Four ways to prep</span><h2>The complete system, <span class="hl">not a pile of questions.</span></h2><p>Most sites hand you a giant question bank and wish you luck. NCLEX Complete teaches you to <b>think like a nurse</b> from four angles &mdash; then proves you're ready.</p></div>
+      <div class="pillar-grid">
+        <div class="pillar fade-up">
+          <div class="illo" style="background:linear-gradient(140deg,#8b5cff,#4d2b9e);">{IC_CASE}</div>
+          <span class="kick">Learn the reasoning</span>
+          <div class="stat">50</div>
+          <h3>Next Gen case studies</h3>
+          <p>Full unfolding cases with a step-by-step expert walkthrough for each &mdash; exactly how the new NCLEX tests clinical judgment. Watch how an expert reasons through the bow-tie, then try it yourself.</p>
+        </div>
+        <div class="pillar fade-up">
+          <div class="illo" style="background:linear-gradient(140deg,#2ad4c4,#1a0942);">{IC_STACK}</div>
+          <span class="kick">Build the reps</span>
+          <div class="stat">2,600+</div>
+          <h3>Standalone questions</h3>
+          <p>Original NCLEX-style questions across every clinical area &mdash; MC, select-all, matrix, trend, ordered response and more. Every option carries a full rationale, not just a right answer.</p>
+        </div>
+        <div class="pillar fade-up">
+          <div class="illo" style="background:linear-gradient(140deg,#ffc23d,#8b5cff);">{I['play']}</div>
+          <span class="kick">Learn the strategy</span>
+          <div class="stat">NGN</div>
+          <h3>Strategy video course</h3>
+          <p>A short, sharp course on how to <i>approach</i> Next Gen items &mdash; how to read a case, spot the answer type, and avoid the traps the test is built on. Strategy is the difference between knowing and passing.</p>
+        </div>
+        <div class="pillar fade-up">
+          <div class="illo" style="background:linear-gradient(140deg,#e5484d,#7a45f0);">{IC_GAUGE}</div>
+          <span class="kick">Prove you're ready</span>
+          <div class="stat">4</div>
+          <h3>Full-length readiness exams</h3>
+          <p>Four computer-adaptive practice exams in real test format. Each one predicts your pass chance &mdash; Low, Borderline, High, or Very High &mdash; and shows the exact subjects holding you back.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section style="background:var(--card);">
+    <div class="wrap">
+      <div class="section-head fade-up"><span class="eyebrow">Readiness</span><h2>Know your pass chance <span class="hl">before test day.</span></h2><p>After each readiness exam, you get a single honest read on where you stand &mdash; and what to fix next.</p></div>
+      <div class="cat-explain fade-up">
+        <h3 style="margin-bottom:0.4rem;">Your readiness after Exam 2</h3>
+        <p style="margin-bottom:1.4rem;">Based on 145 adaptive items across every category.</p>
+        <div class="readiness" data-readiness="3">
+          <div class="rd-track"><div class="rd-seg s1"></div><div class="rd-seg s2"></div><div class="rd-seg s3"></div><div class="rd-seg s4"></div></div>
+          <div class="rd-labels"><span data-rd="1">Low</span><span data-rd="2">Borderline</span><span data-rd="3" class="cur">High</span><span data-rd="4">Very High</span></div>
+        </div>
+        <p style="margin-top:1.3rem;"><b style="color:var(--teal-400);">You're tracking High.</b> Two more focused sessions on your weakest areas and you'll be Very High. Esi has already queued them.</p>
+      </div>
+    </div>
+  </section>
+
+  <section style="background:var(--bg);">
+    <div class="wrap">
+      <div class="section-head fade-up"><span class="eyebrow teal">What's a CAT?</span><h2>The real NCLEX <span class="hl">adapts to you.</span></h2><p>The NCLEX is a Computer Adaptive Test &mdash; it changes difficulty based on how you answer. Our readiness exams work the same way, so test day feels familiar.</p></div>
+      <div class="cat-explain fade-up">
+        <div class="cat-steps">
+          <div class="cat-step"><b>1 &middot; It reacts</b><p>Answer correctly and the next question gets harder. Miss one and it eases off &mdash; constantly zeroing in on your true ability.</p></div>
+          <div class="cat-step"><b>2 &middot; It's not fixed-length</b><p>The exam can end anywhere from 75 to 145 questions &mdash; it stops the moment it's confident you're above (or below) the passing line.</p></div>
+          <div class="cat-step"><b>3 &middot; We mirror it</b><p>Practicing on a real adaptive engine means no surprises. You'll have already felt the format four times before it counts.</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section style="background:var(--card);">
+    <div class="wrap">
+      <div class="section-head fade-up"><span class="eyebrow gold">Study schedule</span><h2>A day-by-day plan, <span class="hl">built around your test date.</span></h2><p>Tell us when you test and how much time you have &mdash; we build the calendar, complete with review days and readiness checkpoints baked in.</p></div>
+      <div class="sched-grid">
+        <div class="sched fade-up">
+          <span class="rec">Fast track</span>
+          <div class="len">1 Month</div>
+          <div class="hrs">3&ndash;4 hrs/day &middot; 6 days/week</div>
+          <ul>
+            <li>{I['check']} Great if you have a solid foundation and just need practice</li>
+            <li>{I['check']} Daily case study + standalone set</li>
+            <li>{I['check']} Readiness Exam at weeks 2 and 4</li>
+            <li>{I['check']} Built-in review days so nothing slips</li>
+          </ul>
+        </div>
+        <div class="sched hot fade-up">
+          <span class="rec">Most students</span>
+          <div class="len">2 Months</div>
+          <div class="hrs">~2 hrs/day &middot; 5 days/week</div>
+          <ul>
+            <li>{I['check']} The ideal timeline for most test-takers</li>
+            <li>{I['check']} Concept days, practice days, and review days</li>
+            <li>{I['check']} All 4 readiness exams spaced across the plan</li>
+            <li>{I['check']} Weak-area drills auto-scheduled by Esi</li>
+          </ul>
+        </div>
+        <div class="sched fade-up">
+          <span class="rec">Full-time workers</span>
+          <div class="len">3 Months</div>
+          <div class="hrs">1&ndash;2 hrs/day &middot; 5 days/week</div>
+          <ul>
+            <li>{I['check']} Right if you work full-time or need to rebuild basics</li>
+            <li>{I['check']} Gentler daily load, same total coverage</li>
+            <li>{I['check']} Extra concept teaching before practice</li>
+            <li>{I['check']} Readiness checkpoints every few weeks</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="section-head fade-up" style="margin-top:3rem;"><span class="eyebrow">Not sure?</span><h2>Which plan is <span class="hl">right for you?</span></h2><p>Answer three quick questions and we'll point you to the 1-, 2-, or 3-month plan.</p></div>
+      <div class="squiz fade-up" data-squiz>
+        <div class="sq-progress"><i style="width:33%;"></i></div>
+        <div class="q" data-step="1">
+          <span class="qnum">Question 1 of 3</span>
+          <h4>When is your NCLEX test date?</h4>
+          <div class="opts">
+            <button class="opt" data-score="1">In about a month or less</button>
+            <button class="opt" data-score="2">Roughly two months out</button>
+            <button class="opt" data-score="3">Three months or more &mdash; or not booked yet</button>
+          </div>
+        </div>
+        <div class="q" data-step="2">
+          <span class="qnum">Question 2 of 3</span>
+          <h4>How much can you realistically study each day?</h4>
+          <div class="opts">
+            <button class="opt" data-score="1">3&ndash;4 focused hours</button>
+            <button class="opt" data-score="2">About 2 hours</button>
+            <button class="opt" data-score="3">An hour or so &mdash; I work or have family</button>
+          </div>
+        </div>
+        <div class="q" data-step="3">
+          <span class="qnum">Question 3 of 3</span>
+          <h4>How solid do your fundamentals feel right now?</h4>
+          <div class="opts">
+            <button class="opt" data-score="1">Strong &mdash; I mostly need reps and timing</button>
+            <button class="opt" data-score="2">Okay &mdash; some shaky areas to firm up</button>
+            <button class="opt" data-score="3">Rusty &mdash; I want to rebuild from the ground up</button>
+          </div>
+        </div>
+        <div class="sq-result">
+          <span class="qnum">Your match</span>
+          <div class="big" data-sq-plan>2-Month Plan</div>
+          <p data-sq-note>Enough runway to fix weak areas without cramming &mdash; the sweet spot for most students.</p>
+          <a class="btn btn-coral" href="#pricing">See the matching plan</a>
+          <div><button class="btn btn-line" data-sq-restart style="margin-top:0.8rem;">Retake the quiz</button></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section style="background:var(--bg);">
+    <div class="wrap">
+      <div class="section-head fade-up"><span class="eyebrow teal">Track every item</span><h2>Tag it. Master it. <span class="hl">Watch it move.</span></h2><p>Flag any question as Mastered, Reviewing, or Learning &mdash; then see your whole exam roll up by subject area, so you always know where to spend the next hour.</p></div>
+      <div class="widget fade-up" style="max-width:720px;margin:0 auto;">
+        <span class="widget-tag">{I['star']} Tag this question</span>
+        <p class="prompt" style="margin-bottom:0.4rem;">A client with heart failure gains 3 lb in two days. What is the nurse's priority action?</p>
+        <div class="tag-chips" data-tagset>
+          <button class="tagc mastered" data-tag="mastered">Mastered</button>
+          <button class="tagc reviewing" data-tag="reviewing">Reviewing</button>
+          <button class="tagc learning" data-tag="learning">Learning</button>
+        </div>
+        <p data-tag-note style="font-size:0.82rem;color:var(--ink-60);margin-top:0.7rem;">Tap a tag &mdash; it files the question into your dashboard for smart review.</p>
+      </div>
+
+      <div class="section-head fade-up" style="margin-top:3rem;"><span class="eyebrow">Performance by subject area</span><h2>Your weak spots, <span class="hl">in plain sight.</span></h2></div>
+      <div class="subj-grid fade-up" style="margin-left:auto;margin-right:auto;">
+        <div class="subj"><span class="lab">Adult Health</span><span class="track"><i class="hi" style="width:82%;"></i></span><span class="pct">82%</span></div>
+        <div class="subj"><span class="lab">Pharmacology</span><span class="track"><i class="lo" style="width:44%;"></i></span><span class="pct">44%</span></div>
+        <div class="subj"><span class="lab">Mental Health</span><span class="track"><i class="hi" style="width:78%;"></i></span><span class="pct">78%</span></div>
+        <div class="subj"><span class="lab">Maternal / Newborn</span><span class="track"><i class="mid" style="width:63%;"></i></span><span class="pct">63%</span></div>
+        <div class="subj"><span class="lab">Safety &amp; Infection</span><span class="track"><i class="hi" style="width:88%;"></i></span><span class="pct">88%</span></div>
+        <div class="subj"><span class="lab">Pediatrics</span><span class="track"><i class="mid" style="width:57%;"></i></span><span class="pct">57%</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section style="background:var(--card);">
+    <div class="wrap">
+      <div class="section-head fade-up"><span class="eyebrow gold">Question of the Day</span><h2>One question, <span class="hl">every morning.</span></h2><p>A fresh NGN-style question lands on your phone or in your inbox daily &mdash; keep the streak, keep it sharp.</p></div>
+      <div class="qotd fade-up" data-qotd style="max-width:640px;margin:0 auto;">
+        <span class="qk">Today's question</span>
+        <h3>Clinical Judgment</h3>
+        <p class="stem">A nurse is caring for a client receiving IV heparin. Which laboratory value is the <b>priority</b> to monitor?</p>
+        <div class="qopts">
+          <button class="qo" data-correct="0">Serum potassium</button>
+          <button class="qo" data-correct="1">Activated partial thromboplastin time (aPTT)</button>
+          <button class="qo" data-correct="0">Blood urea nitrogen (BUN)</button>
+          <button class="qo" data-correct="0">Serum glucose</button>
+        </div>
+        <div class="qrat"><b style="color:var(--teal-400);">Correct: aPTT.</b> Heparin's effect is monitored with the aPTT (therapeutic range ~1.5&ndash;2.5&times; the control). Antidote to remember: <b>protamine sulfate</b>. (INR/PT tracks <i>warfarin</i>, not heparin &mdash; a classic NCLEX trap.)</div>
+        <div class="qotd-signup">
+          <span style="font-size:0.82rem;color:rgba(255,255,255,0.8);align-self:center;">Send it to my:</span>
+          <div class="seg" data-qotd-channel>
+            <button class="on" data-ch="phone">Phone</button>
+            <button data-ch="email">Email</button>
+          </div>
+          <button class="btn btn-coral" data-qotd-sub style="padding:0.5rem 1.1rem;font-size:0.82rem;">Send me the daily question</button>
+        </div>
+        <p data-qotd-done hidden style="margin-top:0.8rem;font-size:0.82rem;color:var(--teal-400);font-weight:700;"></p>
+      </div>
+    </div>
+  </section>
+
+  <section style="background:var(--bg);">
+    <div class="wrap">
+      <div class="section-head fade-up"><span class="eyebrow teal">You're not alone</span><h2>A community <span class="hl">in your corner.</span></h2></div>
+      <div class="community">
+        <div class="comm-card fade-up">
+          <span class="ci" style="background:linear-gradient(140deg,#8b5cff,#4d2b9e);">{IC_USERS}</span>
+          <div><h4>Private study group</h4><p>Join thousands of nurses-to-be trading tips, wins, and last-minute pep talks. Post a question at 2 a.m. and someone's awake.</p></div>
+        </div>
+        <div class="comm-card fade-up">
+          <span class="ci" style="background:linear-gradient(140deg,#2ad4c4,#1a0942);">{I['play']}</span>
+          <div><h4>Weekly live webinars</h4><p>A real instructor walks through the hardest topics live every week &mdash; ask questions, get answers, and catch the replay if you miss it.</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section style="background:var(--card);">
+    <div class="wrap">
+      <div class="section-head fade-up"><span class="eyebrow gold">Take it with you</span><h2>The <span class="hl">50-question workbook.</span></h2><p>Every plan includes our downloadable NGN workbook &mdash; 50 original questions, each with a described illustration, a rationale for <b>every</b> option, an NCLEX tip, and a memory trick. Print it, mark it up, study offline.</p></div>
+      <div class="points-strip fade-up">
+        <div class="txt"><b>50 original Next Gen questions &middot; ~100 pages.</b><p>Written from scratch by our team &mdash; not scraped from anywhere. Yours to download and keep with any plan.</p></div>
+        <a class="btn btn-dark" href="#pricing">Included with every plan</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="pricing" style="background:var(--bg);">
+    <div class="wrap">
+      <div class="section-head fade-up"><span class="eyebrow">Pricing</span><h2>One price. <span class="hl">Everything included.</span></h2><p>No add-ons, no upsells. Every plan unlocks the full system &mdash; questions, cases, readiness exams, schedules, the workbook, and Esi. Pick the runway that fits your test date.</p></div>
+      {pricing_tiers("join.html")}
+      <div class="guarantee fade-up">
+        {I['shield']}
+        <div><b>NCLEX Pass Guarantee</b><p>On the 2- and 3-month plans, finish the program and if you don't pass, you get a full refund. We built it to work &mdash; and we stand behind it.</p></div>
+      </div>
+      <p style="text-align:center;margin-top:1.6rem;font-size:0.78rem;color:var(--ink-60);max-width:70ch;margin-left:auto;margin-right:auto;">NCLEX&reg; is a registered trademark of the National Council of State Boards of Nursing, Inc. Must Love Scrubs is not affiliated with or endorsed by NCSBN. All questions and materials are 100% original and created by our team. Educational content only &mdash; not medical advice.</p>
+    </div>
+  </section>
+
+  <script src="js/complete.js"></script>
+"""
+
+PAGES["nclex-complete.html"] = ("NCLEX Complete — The Flagship NCLEX Prep | Must Love Scrubs",
+    "NCLEX Complete: 50 Next Gen case studies, 2,600+ original questions, a strategy course, and 4 full-length readiness exams that predict your pass chance. Esi AI tutor included. Plans from $49.",
+    COMPLETE_BODY, "courses")
 
 # ---------------------------------------------------------------- NURSE DICTIONARY
 import json as _json2
