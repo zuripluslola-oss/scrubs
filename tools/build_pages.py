@@ -97,6 +97,7 @@ def chrome(fname, title, desc, body, active=""):
           <li><a href="nclex-complete.html">NCLEX Complete <small>The flagship &middot; plans from $49</small></a></li>
           <li><a href="nclex.html">Free NCLEX Prep <small>RN &amp; LPN &middot; every NGN item type</small></a></li>
           <li><a href="course-lab-values.html">Free NCLEX Practice <small>Start with a free audio scene</small></a></li>
+          <li><a href="specialties.html">Specialty Prep <small>22 specialty tracks &middot; rolling out</small></a></li>
           <li><a href="courses.html">Courses <small>NCLEX prep, entrance exams &amp; more</small></a></li>
           <li><a href="scrubtv.html">Scrub TV <small>4 free lessons a month, quizzes &amp; more</small></a></li>
           <li><a href="esi.html">Esi <small>Your AI tutor &amp; site guide</small></a></li>
@@ -150,6 +151,7 @@ def chrome(fname, title, desc, body, active=""):
         <h5>Learn</h5>
         <ul>
           <li><a href="nclex-complete.html">NCLEX Complete</a></li>
+          <li><a href="specialties.html">Specialty Prep</a></li>
           <li><a href="courses.html">Courses</a></li>
           <li><a href="course-lab-values.html">Free NCLEX Practice</a></li>
           <li><a href="scrubtv.html">Scrub TV</a></li>
@@ -1762,6 +1764,198 @@ COMPLETE_BODY = f"""  <div class="page-hero">
 PAGES["nclex-complete.html"] = ("NCLEX Complete — The Flagship NCLEX Prep | Must Love Scrubs",
     "NCLEX Complete: 50 Next Gen case studies, 2,600+ original questions, a strategy course, and 4 full-length readiness exams that predict your pass chance. Esi AI tutor included. Plans from $49.",
     COMPLETE_BODY, "courses")
+
+# ---------------------------------------------------------------- SPECIALTY PREP (22 tracks, UI shell)
+
+# icon = key in I{}; grad = hero/card gradient; topics = 4 module labels (UI only)
+SPECIALTIES = [
+    ("med-surg", "Medical-Surgical", "medsurg", "linear-gradient(140deg,#8b5cff,#4d2b9e)", "$59",
+     "The broadest floor in nursing — build the systems-based judgment that carries every shift.",
+     ["Fluid, electrolyte &amp; acid-base", "Perioperative care", "Multi-system assessment", "Prioritizing a full assignment"]),
+    ("emergency", "Emergency / ER", "er", "linear-gradient(140deg,#e5484d,#7a45f0)", "$69",
+     "Triage, trauma, and the first ten minutes — think fast and think right under pressure.",
+     ["Triage &amp; rapid assessment", "Trauma &amp; resuscitation", "Chest pain &amp; stroke", "Toxicology &amp; overdose"]),
+    ("critical-care", "Critical Care / ICU", "icu", "linear-gradient(140deg,#2ad4c4,#1a0942)", "$79",
+     "Vents, drips, and unstable patients — the deepest end of bedside reasoning.",
+     ["Hemodynamic monitoring", "Ventilator management", "Vasoactive drips", "Sepsis &amp; shock"]),
+    ("pediatrics", "Pediatrics", "peds", "linear-gradient(140deg,#ffc23d,#8b5cff)", "$59",
+     "Weight-based everything and growing bodies — nursing the smallest patients safely.",
+     ["Growth &amp; development", "Pediatric dosing safety", "Respiratory illnesses", "Fluid &amp; dehydration"]),
+    ("labor-delivery", "Labor &amp; Delivery / OB", "prenatal", "linear-gradient(140deg,#8b5cff,#14b8a8)", "$69",
+     "Two patients at once — read the strip, protect the mom, deliver the baby.",
+     ["Fetal monitoring", "Stages of labor", "Preeclampsia &amp; hemorrhage", "Postpartum care"]),
+    ("neonatal", "Neonatal / NICU", "peds", "linear-gradient(140deg,#2ad4c4,#4d2b9e)", "$79",
+     "Grams, thermoregulation, and fragile beginnings — high-acuity newborn care.",
+     ["Newborn assessment", "Thermoregulation", "Preterm complications", "Neonatal resuscitation"]),
+    ("oncology", "Oncology", "shield", "linear-gradient(140deg,#7a45f0,#d99a1f)", "$69",
+     "Chemo safety, neutropenia, and hard conversations — precise, compassionate care.",
+     ["Chemotherapy safety", "Neutropenic precautions", "Oncologic emergencies", "Symptom &amp; pain management"]),
+    ("cardiac", "Cardiac / Telemetry", "icu", "linear-gradient(140deg,#e5484d,#2b1055)", "$69",
+     "Rhythms, MIs, and heart failure — see the pattern before the alarm.",
+     ["ECG rhythm basics", "Acute coronary syndrome", "Heart failure", "Cardiac medications"]),
+    ("perioperative", "OR / Perioperative", "medsurg", "linear-gradient(140deg,#4d2b9e,#14b8a8)", "$59",
+     "Sterile fields, counts, and time-outs — safety from pre-op to hand-off.",
+     ["Surgical asepsis", "Pre-op preparation", "Intra-op safety &amp; counts", "Handoff to PACU"]),
+    ("pacu", "PACU / Post-Anesthesia", "icu", "linear-gradient(140deg,#8b5cff,#2ad4c4)", "$59",
+     "The riskiest recovery minutes — airway, arousal, and complications after anesthesia.",
+     ["Airway &amp; emergence", "Anesthesia complications", "Aldrete scoring", "Pain &amp; nausea control"]),
+    ("psychiatric", "Psychiatric / Mental Health", "mental", "linear-gradient(140deg,#7a45f0,#4d2b9e)", "$59",
+     "Therapeutic presence and safety — the words and the watchfulness that heal.",
+     ["Therapeutic communication", "Suicide &amp; safety", "Psychotropic medications", "Crisis de-escalation"]),
+    ("geriatrics", "Geriatrics", "geri", "linear-gradient(140deg,#d99a1f,#7a45f0)", "$49",
+     "Polypharmacy, falls, and dignity — nursing the aging adult with care.",
+     ["Age-related changes", "Polypharmacy &amp; safety", "Falls &amp; mobility", "Delirium vs dementia"]),
+    ("home-health", "Home Health", "home", "linear-gradient(140deg,#14b8a8,#2b1055)", "$49",
+     "One nurse, one home — assessment, teaching, and safety without the call bell.",
+     ["Home safety assessment", "Wound &amp; IV in the home", "Caregiver teaching", "Care coordination"]),
+    ("hospice", "Hospice / Palliative", "prenatal", "linear-gradient(140deg,#8b5cff,#d99a1f)", "$49",
+     "Comfort as the goal — symptom relief, presence, and honoring the end of life.",
+     ["Pain &amp; symptom management", "Comfort measures", "End-of-life communication", "Family &amp; grief support"]),
+    ("rehabilitation", "Rehabilitation", "medsurg", "linear-gradient(140deg,#4d2b9e,#2ad4c4)", "$49",
+     "Function over cure — help patients rebuild independence step by step.",
+     ["Mobility &amp; transfers", "ADL retraining", "Neuro rehab", "Skin &amp; bladder programs"]),
+    ("dialysis", "Dialysis / Nephrology", "pharm", "linear-gradient(140deg,#2ad4c4,#7a45f0)", "$69",
+     "Access, fluid, and electrolytes — the rhythm of kidney care.",
+     ["AV access care", "Fluid &amp; electrolyte balance", "Dialysis complications", "Renal medications"]),
+    ("wound-care", "Wound Care", "shield", "linear-gradient(140deg,#d99a1f,#4d2b9e)", "$59",
+     "Stage it, dress it, heal it — the science of skin and tissue repair.",
+     ["Pressure injury staging", "Wound assessment", "Dressing selection", "Infection &amp; healing"]),
+    ("ambulatory", "Ambulatory / Clinic", "book", "linear-gradient(140deg,#8b5cff,#14b8a8)", "$49",
+     "High volume, quick visits — assessment and teaching in the outpatient world.",
+     ["Focused assessment", "Immunizations", "Chronic disease teaching", "Triage by phone"]),
+    ("school", "School Nursing", "peds", "linear-gradient(140deg,#ffc23d,#4d2b9e)", "$49",
+     "One nurse for a whole school — from asthma to emergencies to care plans.",
+     ["Common school emergencies", "Chronic conditions at school", "Medication administration", "Health screening"]),
+    ("occupational", "Occupational Health", "shield", "linear-gradient(140deg,#14b8a8,#4d2b9e)", "$49",
+     "Workplace wellness and injury — prevention, assessment, and return-to-work.",
+     ["Workplace injury care", "Exposure &amp; prevention", "Ergonomics", "Return-to-work planning"]),
+    ("long-term-care", "Long-Term Care", "geri", "linear-gradient(140deg,#7a45f0,#d99a1f)", "$49",
+     "Residents, not room numbers — steady, relationship-based chronic care.",
+     ["Chronic condition management", "Skin &amp; wound prevention", "Behavioral care", "Regulatory &amp; documentation"]),
+    ("progressive-care", "Progressive Care (PCU)", "icu", "linear-gradient(140deg,#e5484d,#14b8a8)", "$69",
+     "A step below the ICU — telemetry, titration, and catching the early turn.",
+     ["Telemetry monitoring", "Titratable drips", "Respiratory support", "Recognizing deterioration"]),
+]
+
+def specialties_grid():
+    cards = []
+    for slug, name, icon, grad, price, tag, topics in SPECIALTIES:
+        cards.append(f"""<a class="spec-card fade-up" href="specialty-{slug}.html">
+          <span class="spec-lock">{I['lock']} In development</span>
+          <span class="ic" style="background:{grad};">{I[icon]}</span>
+          <h3>{name}</h3>
+          <p>{tag}</p>
+          <div class="foot"><span class="price">{price}</span><span class="go">Preview &rarr;</span></div>
+        </a>""")
+    return '<div class="spec-grid">' + "".join(cards) + '</div>'
+
+def build_specialty(slug, name, icon, grad, price, tag, topics):
+    chips = "".join(f'<span class="chip">{t}</span>' for t in topics)
+    modules = "".join(f"""<div class="pillar fade-up">
+          <div class="illo" style="background:{grad};">{I[icon]}</div>
+          <span class="kick">Module</span>
+          <h3>{t}</h3>
+          <p>Full lessons, question sets, and rationales for this area are in development for the {name} track.</p>
+        </div>""" for t in topics)
+    return f"""  <div class="page-hero" style="background:{grad};">
+    <div class="wrap inner">
+      <span class="lesson-label" style="color:var(--gold-400);">Specialty Prep &middot; In development</span>
+      <h1 style="margin-top:0.6rem;">{name}</h1>
+      <p>{tag}</p>
+      <div class="spec-hero-tags">{chips}</div>
+      <div class="hero-cta" style="margin-top:1.8rem;">
+        <a class="btn btn-coral" href="#notify">Notify me when it launches</a>
+        <a class="btn btn-ghost" href="specialties.html">All 22 specialties</a>
+      </div>
+    </div>
+  </div>
+
+  <section style="background:var(--bg);">
+    <div class="wrap">
+      <div class="section-head fade-up"><span class="eyebrow teal">What you'll master</span><h2>The {name} <span class="hl">track.</span></h2><p>Built on the same retention science as NCLEX Complete &mdash; audio scenes, question sets, and rationales, focused on this specialty. Here's what it will cover.</p></div>
+      <div class="pillar-grid">
+        {modules}
+      </div>
+    </div>
+  </section>
+
+  <section style="background:var(--card);">
+    <div class="wrap">
+      <div class="section-head fade-up"><span class="eyebrow">How this track works</span><h2>Learn it once. <span class="hl">Keep it forever.</span></h2></div>
+      <div class="tile-grid cols-3">
+        <div class="tile fade-up"><span class="tag">Step 1</span><h3>Watch &amp; listen</h3><p>Short specialty scenes drop you onto the unit &mdash; the way a great preceptor would show you.</p></div>
+        <div class="tile fade-up"><span class="tag">Step 2</span><h3>Quiz &amp; earn</h3><p>Specialty question sets in every NGN format, with a rationale for every option &mdash; and points as you go.</p></div>
+        <div class="tile fade-up"><span class="tag">Step 3</span><h3>Review with Esi</h3><p>Esi tracks your misses in this specialty and drills them until they're strengths.</p></div>
+      </div>
+
+      <div class="section-head fade-up" style="margin-top:3rem;"><span class="eyebrow gold">Sneak peek</span><h2>A taste of the <span class="hl">question bank.</span></h2></div>
+      <div class="locked-preview fade-up" style="max-width:720px;margin:0 auto;">
+        <div class="widget blur">
+          <span class="widget-tag">{I['star']} {name} item</span>
+          <p class="prompt">Sample {name} scenario &mdash; the client presents with the classic findings your specialty is built to recognize&hellip;</p>
+          <div class="choice-grid" style="grid-template-columns:1fr;">
+            <button class="choice">Option A &mdash; a plausible distractor</button>
+            <button class="choice">Option B &mdash; the correct action</button>
+            <button class="choice">Option C &mdash; a plausible distractor</button>
+            <button class="choice">Option D &mdash; a plausible distractor</button>
+          </div>
+        </div>
+        <div class="lockmsg">
+          <div class="lockbox">
+            <span class="lc">{I['lock']}</span>
+            <b>Locked &mdash; coming soon</b>
+            <p>The {name} question bank is being written now. Join the list and we'll unlock it for you first.</p>
+            <a class="btn btn-coral" href="#notify">Notify me</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="notify" style="background:var(--bg);">
+    <div class="wrap">
+      <div class="soon-band fade-up">
+        <div>
+          <h3>Be first into {name}.</h3>
+          <p>We'll email you the moment this specialty track goes live &mdash; often with early-bird pricing from {price}.</p>
+        </div>
+        <div>
+          <form class="soon-form" data-soon onsubmit="return false;">
+            <input type="email" placeholder="you@email.com" aria-label="Email">
+            <button class="btn btn-coral" type="submit">Notify me</button>
+          </form>
+          <p class="soon-note" data-soon-done hidden>&check; You're on the list &mdash; we'll be in touch.</p>
+        </div>
+      </div>
+      <p style="text-align:center;margin-top:1.4rem;font-size:0.8rem;color:var(--ink-60);">Prefer the full picture? <a href="specialties.html" style="color:var(--coral-500);font-weight:700;">Browse all 22 specialty tracks &rarr;</a></p>
+    </div>
+  </section>
+
+  <script src="js/specialty.js"></script>
+"""
+
+for _s in SPECIALTIES:
+    _slug, _name, _icon, _grad, _price, _tag, _topics = _s
+    PAGES[f"specialty-{_slug}.html"] = (
+        f"{_name} Specialty Prep (Coming Soon) | Must Love Scrubs",
+        f"{_name} specialty nursing prep from Must Love Scrubs — audio scenes, NGN question sets, and rationales. In development; join the list for early access.",
+        build_specialty(_slug, _name, _icon, _grad, _price, _tag, _topics), "courses")
+
+PAGES["specialties.html"] = ("Specialty Prep — 22 Nursing Specialties | Must Love Scrubs",
+    "Focused NCLEX-style prep for 22 nursing specialties: ER, ICU, Pediatrics, OB, Oncology, Cardiac, and more. Built on proven retention science. Rolling out now.",
+    page_hero('The 22 <span class="hl on-dark">specialty tracks</span>.',
+              "Passed the NCLEX? Keep going. Focused prep for the specialty you're headed into &mdash; each built on the same retention science as NCLEX Complete. Rolling out now, one specialty at a time.")
+    + f"""  <main class="content-block">
+    <div class="wrap">
+      <div class="section-head fade-up"><span class="eyebrow teal">Any-RN specialties</span><h2>Prep for <span class="hl">where you're going.</span></h2><p>These are the clinical specialties any RN can step into. Tap any track to preview what it will cover &mdash; and get on the list for early access.</p></div>
+      {specialties_grid()}
+      <div class="points-strip fade-up" style="margin-top:2.4rem;">
+        <div class="txt"><b>New tracks are dropping continuously.</b><p>We're building these the right way &mdash; original scenes, question sets, and rationales, one specialty at a time. Owners of NCLEX Complete get first access.</p></div>
+        <a class="btn btn-dark" href="nclex-complete.html">Start with NCLEX Complete</a>
+      </div>
+    </div>
+  </main>
+""", "courses")
 
 # ---------------------------------------------------------------- NURSE DICTIONARY
 import json as _json2

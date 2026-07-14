@@ -1302,6 +1302,41 @@ body.mls-paid .gate { display: none; }
 .comm-card h4 { font-size: 1.05rem; margin-bottom: 0.3rem; }
 .comm-card p { font-size: 0.85rem; color: var(--ink-60); }
 
+/* --- Specialty prep: hub grid + detail shell --- */
+.spec-grid { display: grid; gap: 1rem; grid-template-columns: 1fr; margin-top: 1.6rem; }
+@media (min-width: 600px) { .spec-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (min-width: 940px) { .spec-grid { grid-template-columns: repeat(3, 1fr); } }
+.spec-card { position: relative; display: flex; flex-direction: column; background: var(--card); border: 1px solid rgba(30,18,51,0.08); border-radius: var(--radius); padding: 1.4rem; box-shadow: var(--shadow-1); overflow: hidden; transition: transform 0.15s ease, box-shadow 0.15s ease; }
+.spec-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-2); }
+.spec-card .ic { width: 48px; height: 48px; border-radius: 13px; display: grid; place-items: center; color: #fff; margin-bottom: 0.9rem; }
+.spec-card .ic svg { width: 24px; height: 24px; }
+.spec-card h3 { font-size: 1.04rem; margin-bottom: 0.3rem; }
+.spec-card p { font-size: 0.83rem; color: var(--ink-60); flex: 1; }
+.spec-card .foot { display: flex; align-items: center; justify-content: space-between; margin-top: 1rem; }
+.spec-card .price { font-family: var(--font-display); font-weight: 800; color: var(--coral-500); font-size: 1.05rem; }
+.spec-card .go { font-size: 0.8rem; font-weight: 700; color: var(--coral-500); }
+.spec-lock { position: absolute; top: 1rem; right: 1rem; display: inline-flex; align-items: center; gap: 0.3rem; font-size: 0.6rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.08em; color: var(--gold-600); background: var(--gold-100); padding: 0.3rem 0.6rem; border-radius: var(--pill); }
+.spec-lock svg { width: 11px; height: 11px; }
+
+.spec-hero-tags { display: flex; flex-wrap: wrap; gap: 0.5rem; justify-content: center; margin-top: 1.2rem; }
+.spec-hero-tags .chip { background: rgba(255,255,255,0.12); color: #fff; border: 1px solid rgba(255,255,255,0.2); }
+
+.locked-preview { position: relative; border-radius: var(--radius); overflow: hidden; }
+.locked-preview .blur { filter: blur(5px); pointer-events: none; user-select: none; opacity: 0.75; }
+.locked-preview .lockmsg { position: absolute; inset: 0; display: grid; place-items: center; padding: 1rem; }
+.locked-preview .lockbox { background: var(--card); border: 1.5px solid var(--coral-500); border-radius: var(--radius); padding: 1.5rem 1.8rem; box-shadow: var(--shadow-2); text-align: center; max-width: 340px; }
+.locked-preview .lockbox .lc { width: 46px; height: 46px; border-radius: 50%; background: var(--coral-100); color: var(--coral-500); display: grid; place-items: center; margin: 0 auto 0.7rem; }
+.locked-preview .lockbox .lc svg { width: 22px; height: 22px; }
+.locked-preview .lockbox b { display: block; font-size: 1.05rem; margin-bottom: 0.3rem; }
+.locked-preview .lockbox p { font-size: 0.82rem; color: var(--ink-60); margin-bottom: 0.9rem; }
+
+.soon-band { display: flex; gap: 1rem; align-items: center; flex-wrap: wrap; justify-content: space-between; background: linear-gradient(135deg, var(--indigo-900), var(--indigo-700)); color: #fff; border-radius: var(--radius); padding: 1.6rem 1.8rem; box-shadow: var(--shadow-2); }
+.soon-band h3 { color: #fff; margin-bottom: 0.2rem; }
+.soon-band p { color: rgba(255,255,255,0.78); font-size: 0.86rem; margin: 0; }
+.soon-form { display: flex; gap: 0.5rem; flex-wrap: wrap; }
+.soon-form input { border: none; border-radius: var(--pill); padding: 0.7rem 1.1rem; font-size: 0.88rem; min-width: 220px; }
+.soon-note { font-size: 0.82rem; font-weight: 700; color: var(--teal-400); }
+
 /* fade-up reveal */
 .fade-up { opacity: 0; transform: translateY(26px); transition: opacity 0.65s ease, transform 0.65s ease; }
 .fade-up.visible { opacity: 1; transform: translateY(0); }
@@ -1355,6 +1390,7 @@ body.mls-paid .gate { display: none; }
           <li><a href="nclex-complete.html">NCLEX Complete <small>The flagship &middot; plans from $49</small></a></li>
           <li><a href="nclex.html">Free NCLEX Prep <small>RN &amp; LPN &middot; every NGN item type</small></a></li>
           <li><a href="course-lab-values.html">Free NCLEX Practice <small>Start with a free audio scene</small></a></li>
+          <li><a href="specialties.html">Specialty Prep <small>22 specialty tracks &middot; rolling out</small></a></li>
           <li><a href="courses.html">Courses <small>NCLEX prep, entrance exams &amp; more</small></a></li>
           <li><a href="scrubtv.html">Scrub TV <small>4 free lessons a month, quizzes &amp; more</small></a></li>
           <li><a href="esi.html">Esi <small>Your AI tutor &amp; site guide</small></a></li>
@@ -4221,6 +4257,2270 @@ body.mls-paid .gate { display: none; }
   </main>
 
 </div>
+<div class="mls-route" data-route="specialties.html" hidden>
+  <div class="page-hero">
+    <div class="wrap inner">
+      <h1>The 22 <span class="hl on-dark">specialty tracks</span>.</h1>
+      <p>Passed the NCLEX? Keep going. Focused prep for the specialty you're headed into &mdash; each built on the same retention science as NCLEX Complete. Rolling out now, one specialty at a time.</p>
+      
+    </div>
+  </div>
+  <main class="content-block">
+    <div class="wrap">
+      <div class="section-head fade-up"><span class="eyebrow teal">Any-RN specialties</span><h2>Prep for <span class="hl">where you're going.</span></h2><p>These are the clinical specialties any RN can step into. Tap any track to preview what it will cover &mdash; and get on the list for early access.</p></div>
+      <div class="spec-grid"><a class="spec-card fade-up" href="specialty-med-surg.html">
+          <span class="spec-lock"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="5" y="10" width="14" height="10" rx="3"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg> In development</span>
+          <span class="ic" style="background:linear-gradient(140deg,#8b5cff,#4d2b9e);"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="4" width="14" height="17" rx="3"/><path d="M9 4.5V3h6v1.5"/><path d="M12 9v6M9 12h6"/></svg></span>
+          <h3>Medical-Surgical</h3>
+          <p>The broadest floor in nursing — build the systems-based judgment that carries every shift.</p>
+          <div class="foot"><span class="price">$59</span><span class="go">Preview &rarr;</span></div>
+        </a><a class="spec-card fade-up" href="specialty-emergency.html">
+          <span class="spec-lock"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="5" y="10" width="14" height="10" rx="3"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg> In development</span>
+          <span class="ic" style="background:linear-gradient(140deg,#e5484d,#7a45f0);"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2 5 13h5l-1 9 8-11h-5z"/></svg></span>
+          <h3>Emergency / ER</h3>
+          <p>Triage, trauma, and the first ten minutes — think fast and think right under pressure.</p>
+          <div class="foot"><span class="price">$69</span><span class="go">Preview &rarr;</span></div>
+        </a><a class="spec-card fade-up" href="specialty-critical-care.html">
+          <span class="spec-lock"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="5" y="10" width="14" height="10" rx="3"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg> In development</span>
+          <span class="ic" style="background:linear-gradient(140deg,#2ad4c4,#1a0942);"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="13" rx="3"/><path d="M6 10.5h3l1.5-3 2.5 5 1.5-2h3.5"/><path d="M9 21h6"/></svg></span>
+          <h3>Critical Care / ICU</h3>
+          <p>Vents, drips, and unstable patients — the deepest end of bedside reasoning.</p>
+          <div class="foot"><span class="price">$79</span><span class="go">Preview &rarr;</span></div>
+        </a><a class="spec-card fade-up" href="specialty-pediatrics.html">
+          <span class="spec-lock"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="5" y="10" width="14" height="10" rx="3"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg> In development</span>
+          <span class="ic" style="background:linear-gradient(140deg,#ffc23d,#8b5cff);"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="9" r="5.5"/><circle cx="7.5" cy="4.5" r="1.8"/><circle cx="16.5" cy="4.5" r="1.8"/><path d="M9.5 15.5 8 21m6.5-5.5L16 21"/><circle cx="10" cy="8.4" r=".6" fill="currentColor"/><circle cx="14" cy="8.4" r=".6" fill="currentColor"/></svg></span>
+          <h3>Pediatrics</h3>
+          <p>Weight-based everything and growing bodies — nursing the smallest patients safely.</p>
+          <div class="foot"><span class="price">$59</span><span class="go">Preview &rarr;</span></div>
+        </a><a class="spec-card fade-up" href="specialty-labor-delivery.html">
+          <span class="spec-lock"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="5" y="10" width="14" height="10" rx="3"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg> In development</span>
+          <span class="ic" style="background:linear-gradient(140deg,#8b5cff,#14b8a8);"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20s-7-4.3-7-9.5A4.2 4.2 0 0 1 12 7a4.2 4.2 0 0 1 7 3.5C19 15.7 12 20 12 20z"/><circle cx="12" cy="12" r="2"/></svg></span>
+          <h3>Labor &amp; Delivery / OB</h3>
+          <p>Two patients at once — read the strip, protect the mom, deliver the baby.</p>
+          <div class="foot"><span class="price">$69</span><span class="go">Preview &rarr;</span></div>
+        </a><a class="spec-card fade-up" href="specialty-neonatal.html">
+          <span class="spec-lock"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="5" y="10" width="14" height="10" rx="3"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg> In development</span>
+          <span class="ic" style="background:linear-gradient(140deg,#2ad4c4,#4d2b9e);"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="9" r="5.5"/><circle cx="7.5" cy="4.5" r="1.8"/><circle cx="16.5" cy="4.5" r="1.8"/><path d="M9.5 15.5 8 21m6.5-5.5L16 21"/><circle cx="10" cy="8.4" r=".6" fill="currentColor"/><circle cx="14" cy="8.4" r=".6" fill="currentColor"/></svg></span>
+          <h3>Neonatal / NICU</h3>
+          <p>Grams, thermoregulation, and fragile beginnings — high-acuity newborn care.</p>
+          <div class="foot"><span class="price">$79</span><span class="go">Preview &rarr;</span></div>
+        </a><a class="spec-card fade-up" href="specialty-oncology.html">
+          <span class="spec-lock"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="5" y="10" width="14" height="10" rx="3"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg> In development</span>
+          <span class="ic" style="background:linear-gradient(140deg,#7a45f0,#d99a1f);"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l8 3v6c0 4.5-3.2 7.6-8 9-4.8-1.4-8-4.5-8-9V6z"/><path d="m8.8 12 2.2 2.2 4.2-4.4"/></svg></span>
+          <h3>Oncology</h3>
+          <p>Chemo safety, neutropenia, and hard conversations — precise, compassionate care.</p>
+          <div class="foot"><span class="price">$69</span><span class="go">Preview &rarr;</span></div>
+        </a><a class="spec-card fade-up" href="specialty-cardiac.html">
+          <span class="spec-lock"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="5" y="10" width="14" height="10" rx="3"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg> In development</span>
+          <span class="ic" style="background:linear-gradient(140deg,#e5484d,#2b1055);"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="13" rx="3"/><path d="M6 10.5h3l1.5-3 2.5 5 1.5-2h3.5"/><path d="M9 21h6"/></svg></span>
+          <h3>Cardiac / Telemetry</h3>
+          <p>Rhythms, MIs, and heart failure — see the pattern before the alarm.</p>
+          <div class="foot"><span class="price">$69</span><span class="go">Preview &rarr;</span></div>
+        </a><a class="spec-card fade-up" href="specialty-perioperative.html">
+          <span class="spec-lock"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="5" y="10" width="14" height="10" rx="3"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg> In development</span>
+          <span class="ic" style="background:linear-gradient(140deg,#4d2b9e,#14b8a8);"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="4" width="14" height="17" rx="3"/><path d="M9 4.5V3h6v1.5"/><path d="M12 9v6M9 12h6"/></svg></span>
+          <h3>OR / Perioperative</h3>
+          <p>Sterile fields, counts, and time-outs — safety from pre-op to hand-off.</p>
+          <div class="foot"><span class="price">$59</span><span class="go">Preview &rarr;</span></div>
+        </a><a class="spec-card fade-up" href="specialty-pacu.html">
+          <span class="spec-lock"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="5" y="10" width="14" height="10" rx="3"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg> In development</span>
+          <span class="ic" style="background:linear-gradient(140deg,#8b5cff,#2ad4c4);"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="13" rx="3"/><path d="M6 10.5h3l1.5-3 2.5 5 1.5-2h3.5"/><path d="M9 21h6"/></svg></span>
+          <h3>PACU / Post-Anesthesia</h3>
+          <p>The riskiest recovery minutes — airway, arousal, and complications after anesthesia.</p>
+          <div class="foot"><span class="price">$59</span><span class="go">Preview &rarr;</span></div>
+        </a><a class="spec-card fade-up" href="specialty-psychiatric.html">
+          <span class="spec-lock"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="5" y="10" width="14" height="10" rx="3"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg> In development</span>
+          <span class="ic" style="background:linear-gradient(140deg,#7a45f0,#4d2b9e);"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 21v-3.2A7 7 0 1 1 19 11l1.5 3H18v3a2 2 0 0 1-2 2h-2v2"/><path d="M11 8.5a2.5 2.5 0 0 1 5 0c0 1.8-2.5 2-2.5 3.5"/><circle cx="13.5" cy="14.6" r=".5" fill="currentColor"/></svg></span>
+          <h3>Psychiatric / Mental Health</h3>
+          <p>Therapeutic presence and safety — the words and the watchfulness that heal.</p>
+          <div class="foot"><span class="price">$59</span><span class="go">Preview &rarr;</span></div>
+        </a><a class="spec-card fade-up" href="specialty-geriatrics.html">
+          <span class="spec-lock"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="5" y="10" width="14" height="10" rx="3"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg> In development</span>
+          <span class="ic" style="background:linear-gradient(140deg,#d99a1f,#7a45f0);"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7.5-4.6-7.5-10A4.5 4.5 0 0 1 12 7.5 4.5 4.5 0 0 1 19.5 11c0 5.4-7.5 10-7.5 10z"/><path d="M7 12h3l1.5-2.5L14 13l1.5-1.5H19"/></svg></span>
+          <h3>Geriatrics</h3>
+          <p>Polypharmacy, falls, and dignity — nursing the aging adult with care.</p>
+          <div class="foot"><span class="price">$49</span><span class="go">Preview &rarr;</span></div>
+        </a><a class="spec-card fade-up" href="specialty-home-health.html">
+          <span class="spec-lock"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="5" y="10" width="14" height="10" rx="3"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg> In development</span>
+          <span class="ic" style="background:linear-gradient(140deg,#14b8a8,#2b1055);"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11.5 12 4l9 7.5"/><path d="M5 10v10h5v-6h4v6h5V10"/></svg></span>
+          <h3>Home Health</h3>
+          <p>One nurse, one home — assessment, teaching, and safety without the call bell.</p>
+          <div class="foot"><span class="price">$49</span><span class="go">Preview &rarr;</span></div>
+        </a><a class="spec-card fade-up" href="specialty-hospice.html">
+          <span class="spec-lock"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="5" y="10" width="14" height="10" rx="3"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg> In development</span>
+          <span class="ic" style="background:linear-gradient(140deg,#8b5cff,#d99a1f);"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20s-7-4.3-7-9.5A4.2 4.2 0 0 1 12 7a4.2 4.2 0 0 1 7 3.5C19 15.7 12 20 12 20z"/><circle cx="12" cy="12" r="2"/></svg></span>
+          <h3>Hospice / Palliative</h3>
+          <p>Comfort as the goal — symptom relief, presence, and honoring the end of life.</p>
+          <div class="foot"><span class="price">$49</span><span class="go">Preview &rarr;</span></div>
+        </a><a class="spec-card fade-up" href="specialty-rehabilitation.html">
+          <span class="spec-lock"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="5" y="10" width="14" height="10" rx="3"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg> In development</span>
+          <span class="ic" style="background:linear-gradient(140deg,#4d2b9e,#2ad4c4);"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="4" width="14" height="17" rx="3"/><path d="M9 4.5V3h6v1.5"/><path d="M12 9v6M9 12h6"/></svg></span>
+          <h3>Rehabilitation</h3>
+          <p>Function over cure — help patients rebuild independence step by step.</p>
+          <div class="foot"><span class="price">$49</span><span class="go">Preview &rarr;</span></div>
+        </a><a class="spec-card fade-up" href="specialty-dialysis.html">
+          <span class="spec-lock"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="5" y="10" width="14" height="10" rx="3"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg> In development</span>
+          <span class="ic" style="background:linear-gradient(140deg,#2ad4c4,#7a45f0);"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="3.5" y="9" width="17" height="7" rx="3.5" transform="rotate(-35 12 12.5)"/><path d="m9 8.5 6 7"/></svg></span>
+          <h3>Dialysis / Nephrology</h3>
+          <p>Access, fluid, and electrolytes — the rhythm of kidney care.</p>
+          <div class="foot"><span class="price">$69</span><span class="go">Preview &rarr;</span></div>
+        </a><a class="spec-card fade-up" href="specialty-wound-care.html">
+          <span class="spec-lock"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="5" y="10" width="14" height="10" rx="3"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg> In development</span>
+          <span class="ic" style="background:linear-gradient(140deg,#d99a1f,#4d2b9e);"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l8 3v6c0 4.5-3.2 7.6-8 9-4.8-1.4-8-4.5-8-9V6z"/><path d="m8.8 12 2.2 2.2 4.2-4.4"/></svg></span>
+          <h3>Wound Care</h3>
+          <p>Stage it, dress it, heal it — the science of skin and tissue repair.</p>
+          <div class="foot"><span class="price">$59</span><span class="go">Preview &rarr;</span></div>
+        </a><a class="spec-card fade-up" href="specialty-ambulatory.html">
+          <span class="spec-lock"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="5" y="10" width="14" height="10" rx="3"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg> In development</span>
+          <span class="ic" style="background:linear-gradient(140deg,#8b5cff,#14b8a8);"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5a2 2 0 0 1 2-2h13v18H6a2 2 0 0 0-2 2z"/><path d="M4 19a2 2 0 0 1 2-2h13"/><path d="M11 7h4M13 5v4"/></svg></span>
+          <h3>Ambulatory / Clinic</h3>
+          <p>High volume, quick visits — assessment and teaching in the outpatient world.</p>
+          <div class="foot"><span class="price">$49</span><span class="go">Preview &rarr;</span></div>
+        </a><a class="spec-card fade-up" href="specialty-school.html">
+          <span class="spec-lock"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="5" y="10" width="14" height="10" rx="3"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg> In development</span>
+          <span class="ic" style="background:linear-gradient(140deg,#ffc23d,#4d2b9e);"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="9" r="5.5"/><circle cx="7.5" cy="4.5" r="1.8"/><circle cx="16.5" cy="4.5" r="1.8"/><path d="M9.5 15.5 8 21m6.5-5.5L16 21"/><circle cx="10" cy="8.4" r=".6" fill="currentColor"/><circle cx="14" cy="8.4" r=".6" fill="currentColor"/></svg></span>
+          <h3>School Nursing</h3>
+          <p>One nurse for a whole school — from asthma to emergencies to care plans.</p>
+          <div class="foot"><span class="price">$49</span><span class="go">Preview &rarr;</span></div>
+        </a><a class="spec-card fade-up" href="specialty-occupational.html">
+          <span class="spec-lock"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="5" y="10" width="14" height="10" rx="3"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg> In development</span>
+          <span class="ic" style="background:linear-gradient(140deg,#14b8a8,#4d2b9e);"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l8 3v6c0 4.5-3.2 7.6-8 9-4.8-1.4-8-4.5-8-9V6z"/><path d="m8.8 12 2.2 2.2 4.2-4.4"/></svg></span>
+          <h3>Occupational Health</h3>
+          <p>Workplace wellness and injury — prevention, assessment, and return-to-work.</p>
+          <div class="foot"><span class="price">$49</span><span class="go">Preview &rarr;</span></div>
+        </a><a class="spec-card fade-up" href="specialty-long-term-care.html">
+          <span class="spec-lock"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="5" y="10" width="14" height="10" rx="3"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg> In development</span>
+          <span class="ic" style="background:linear-gradient(140deg,#7a45f0,#d99a1f);"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7.5-4.6-7.5-10A4.5 4.5 0 0 1 12 7.5 4.5 4.5 0 0 1 19.5 11c0 5.4-7.5 10-7.5 10z"/><path d="M7 12h3l1.5-2.5L14 13l1.5-1.5H19"/></svg></span>
+          <h3>Long-Term Care</h3>
+          <p>Residents, not room numbers — steady, relationship-based chronic care.</p>
+          <div class="foot"><span class="price">$49</span><span class="go">Preview &rarr;</span></div>
+        </a><a class="spec-card fade-up" href="specialty-progressive-care.html">
+          <span class="spec-lock"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="5" y="10" width="14" height="10" rx="3"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg> In development</span>
+          <span class="ic" style="background:linear-gradient(140deg,#e5484d,#14b8a8);"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="13" rx="3"/><path d="M6 10.5h3l1.5-3 2.5 5 1.5-2h3.5"/><path d="M9 21h6"/></svg></span>
+          <h3>Progressive Care (PCU)</h3>
+          <p>A step below the ICU — telemetry, titration, and catching the early turn.</p>
+          <div class="foot"><span class="price">$69</span><span class="go">Preview &rarr;</span></div>
+        </a></div>
+      <div class="points-strip fade-up" style="margin-top:2.4rem;">
+        <div class="txt"><b>New tracks are dropping continuously.</b><p>We're building these the right way &mdash; original scenes, question sets, and rationales, one specialty at a time. Owners of NCLEX Complete get first access.</p></div>
+        <a class="btn btn-dark" href="nclex-complete.html">Start with NCLEX Complete</a>
+      </div>
+    </div>
+  </main>
+
+</div>
+<div class="mls-route" data-route="specialty-ambulatory.html" hidden>
+  <div class="page-hero" style="background:linear-gradient(140deg,#8b5cff,#14b8a8);">
+    <div class="wrap inner">
+      <span class="lesson-label" style="color:var(--gold-400);">Specialty Prep &middot; In development</span>
+      <h1 style="margin-top:0.6rem;">Ambulatory / Clinic</h1>
+      <p>High volume, quick visits — assessment and teaching in the outpatient world.</p>
+      <div class="spec-hero-tags"><span class="chip">Focused assessment</span><span class="chip">Immunizations</span><span class="chip">Chronic disease teaching</span><span class="chip">Triage by phone</span></div>
+      <div class="hero-cta" style="margin-top:1.8rem;">
+        <a class="btn btn-coral" href="#notify">Notify me when it launches</a>
+        <a class="btn btn-ghost" href="specialties.html">All 22 specialties</a>
+      </div>
+    </div>
+  </div>
+
+  <section style="background:var(--bg);">
+    <div class="wrap">
+      <div class="section-head fade-up"><span class="eyebrow teal">What you'll master</span><h2>The Ambulatory / Clinic <span class="hl">track.</span></h2><p>Built on the same retention science as NCLEX Complete &mdash; audio scenes, question sets, and rationales, focused on this specialty. Here's what it will cover.</p></div>
+      <div class="pillar-grid">
+        <div class="pillar fade-up">
+          <div class="illo" style="background:linear-gradient(140deg,#8b5cff,#14b8a8);"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5a2 2 0 0 1 2-2h13v18H6a2 2 0 0 0-2 2z"/><path d="M4 19a2 2 0 0 1 2-2h13"/><path d="M11 7h4M13 5v4"/></svg></div>
+          <span class="kick">Module</span>
+          <h3>Focused assessment</h3>
+          <p>Full lessons, question sets, and rationales for this area are in development for the Ambulatory / Clinic track.</p>
+        </div><div class="pillar fade-up">
+          <div class="illo" style="background:linear-gradient(140deg,#8b5cff,#14b8a8);"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5a2 2 0 0 1 2-2h13v18H6a2 2 0 0 0-2 2z"/><path d="M4 19a2 2 0 0 1 2-2h13"/><path d="M11 7h4M13 5v4"/></svg></div>
+          <span class="kick">Module</span>
+          <h3>Immunizations</h3>
+          <p>Full lessons, question sets, and rationales for this area are in development for the Ambulatory / Clinic track.</p>
+        </div><div class="pillar fade-up">
+          <div class="illo" style="background:linear-gradient(140deg,#8b5cff,#14b8a8);"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5a2 2 0 0 1 2-2h13v18H6a2 2 0 0 0-2 2z"/><path d="M4 19a2 2 0 0 1 2-2h13"/><path d="M11 7h4M13 5v4"/></svg></div>
+          <span class="kick">Module</span>
+          <h3>Chronic disease teaching</h3>
+          <p>Full lessons, question sets, and rationales for this area are in development for the Ambulatory / Clinic track.</p>
+        </div><div class="pillar fade-up">
+          <div class="illo" style="background:linear-gradient(140deg,#8b5cff,#14b8a8);"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5a2 2 0 0 1 2-2h13v18H6a2 2 0 0 0-2 2z"/><path d="M4 19a2 2 0 0 1 2-2h13"/><path d="M11 7h4M13 5v4"/></svg></div>
+          <span class="kick">Module</span>
+          <h3>Triage by phone</h3>
+          <p>Full lessons, question sets, and rationales for this area are in development for the Ambulatory / Clinic track.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section style="background:var(--card);">
+    <div class="wrap">
+      <div class="section-head fade-up"><span class="eyebrow">How this track works</span><h2>Learn it once. <span class="hl">Keep it forever.</span></h2></div>
+      <div class="tile-grid cols-3">
+        <div class="tile fade-up"><span class="tag">Step 1</span><h3>Watch &amp; listen</h3><p>Short specialty scenes drop you onto the unit &mdash; the way a great preceptor would show you.</p></div>
+        <div class="tile fade-up"><span class="tag">Step 2</span><h3>Quiz &amp; earn</h3><p>Specialty question sets in every NGN format, with a rationale for every option &mdash; and points as you go.</p></div>
+        <div class="tile fade-up"><span class="tag">Step 3</span><h3>Review with Esi</h3><p>Esi tracks your misses in this specialty and drills them until they're strengths.</p></div>
+      </div>
+
+      <div class="section-head fade-up" style="margin-top:3rem;"><span class="eyebrow gold">Sneak peek</span><h2>A taste of the <span class="hl">question bank.</span></h2></div>
+      <div class="locked-preview fade-up" style="max-width:720px;margin:0 auto;">
+        <div class="widget blur">
+          <span class="widget-tag"><svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 3 2.7 5.7 6.3.8-4.6 4.3 1.2 6.2L12 17l-5.6 3 1.2-6.2L3 9.5l6.3-.8z"/></svg> Ambulatory / Clinic item</span>
+          <p class="prompt">Sample Ambulatory / Clinic scenario &mdash; the client presents with the classic findings your specialty is built to recognize&hellip;</p>
+          <div class="choice-grid" style="grid-template-columns:1fr;">
+            <button class="choice">Option A &mdash; a plausible distractor</button>
+            <button class="choice">Option B &mdash; the correct action</button>
+            <button class="choice">Option C &mdash; a plausible distractor</button>
+            <button class="choice">Option D &mdash; a plausible distractor</button>
+          </div>
+        </div>
+        <div class="lockmsg">
+          <div class="lockbox">
+            <span class="lc"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="5" y="10" width="14" height="10" rx="3"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg></span>
+            <b>Locked &mdash; coming soon</b>
+            <p>The Ambulatory / Clinic question bank is being written now. Join the list and we'll unlock it for you first.</p>
+            <a class="btn btn-coral" href="#notify">Notify me</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="notify" style="background:var(--bg);">
+    <div class="wrap">
+      <div class="soon-band fade-up">
+        <div>
+          <h3>Be first into Ambulatory / Clinic.</h3>
+          <p>We'll email you the moment this specialty track goes live &mdash; often with early-bird pricing from $49.</p>
+        </div>
+        <div>
+          <form class="soon-form" data-soon onsubmit="return false;">
+            <input type="email" placeholder="you@email.com" aria-label="Email">
+            <button class="btn btn-coral" type="submit">Notify me</button>
+          </form>
+          <p class="soon-note" data-soon-done hidden>&check; You're on the list &mdash; we'll be in touch.</p>
+        </div>
+      </div>
+      <p style="text-align:center;margin-top:1.4rem;font-size:0.8rem;color:var(--ink-60);">Prefer the full picture? <a href="specialties.html" style="color:var(--coral-500);font-weight:700;">Browse all 22 specialty tracks &rarr;</a></p>
+    </div>
+  </section>
+
+</div>
+<div class="mls-route" data-route="specialty-cardiac.html" hidden>
+  <div class="page-hero" style="background:linear-gradient(140deg,#e5484d,#2b1055);">
+    <div class="wrap inner">
+      <span class="lesson-label" style="color:var(--gold-400);">Specialty Prep &middot; In development</span>
+      <h1 style="margin-top:0.6rem;">Cardiac / Telemetry</h1>
+      <p>Rhythms, MIs, and heart failure — see the pattern before the alarm.</p>
+      <div class="spec-hero-tags"><span class="chip">ECG rhythm basics</span><span class="chip">Acute coronary syndrome</span><span class="chip">Heart failure</span><span class="chip">Cardiac medications</span></div>
+      <div class="hero-cta" style="margin-top:1.8rem;">
+        <a class="btn btn-coral" href="#notify">Notify me when it launches</a>
+        <a class="btn btn-ghost" href="specialties.html">All 22 specialties</a>
+      </div>
+    </div>
+  </div>
+
+  <section style="background:var(--bg);">
+    <div class="wrap">
+      <div class="section-head fade-up"><span class="eyebrow teal">What you'll master</span><h2>The Cardiac / Telemetry <span class="hl">track.</span></h2><p>Built on the same retention science as NCLEX Complete &mdash; audio scenes, question sets, and rationales, focused on this specialty. Here's what it will cover.</p></div>
+      <div class="pillar-grid">
+        <div class="pillar fade-up">
+          <div class="illo" style="background:linear-gradient(140deg,#e5484d,#2b1055);"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="13" rx="3"/><path d="M6 10.5h3l1.5-3 2.5 5 1.5-2h3.5"/><path d="M9 21h6"/></svg></div>
+          <span class="kick">Module</span>
+          <h3>ECG rhythm basics</h3>
+          <p>Full lessons, question sets, and rationales for this area are in development for the Cardiac / Telemetry track.</p>
+        </div><div class="pillar fade-up">
+          <div class="illo" style="background:linear-gradient(140deg,#e5484d,#2b1055);"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="13" rx="3"/><path d="M6 10.5h3l1.5-3 2.5 5 1.5-2h3.5"/><path d="M9 21h6"/></svg></div>
+          <span class="kick">Module</span>
+          <h3>Acute coronary syndrome</h3>
+          <p>Full lessons, question sets, and rationales for this area are in development for the Cardiac / Telemetry track.</p>
+        </div><div class="pillar fade-up">
+          <div class="illo" style="background:linear-gradient(140deg,#e5484d,#2b1055);"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="13" rx="3"/><path d="M6 10.5h3l1.5-3 2.5 5 1.5-2h3.5"/><path d="M9 21h6"/></svg></div>
+          <span class="kick">Module</span>
+          <h3>Heart failure</h3>
+          <p>Full lessons, question sets, and rationales for this area are in development for the Cardiac / Telemetry track.</p>
+        </div><div class="pillar fade-up">
+          <div class="illo" style="background:linear-gradient(140deg,#e5484d,#2b1055);"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="13" rx="3"/><path d="M6 10.5h3l1.5-3 2.5 5 1.5-2h3.5"/><path d="M9 21h6"/></svg></div>
+          <span class="kick">Module</span>
+          <h3>Cardiac medications</h3>
+          <p>Full lessons, question sets, and rationales for this area are in development for the Cardiac / Telemetry track.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section style="background:var(--card);">
+    <div class="wrap">
+      <div class="section-head fade-up"><span class="eyebrow">How this track works</span><h2>Learn it once. <span class="hl">Keep it forever.</span></h2></div>
+      <div class="tile-grid cols-3">
+        <div class="tile fade-up"><span class="tag">Step 1</span><h3>Watch &amp; listen</h3><p>Short specialty scenes drop you onto the unit &mdash; the way a great preceptor would show you.</p></div>
+        <div class="tile fade-up"><span class="tag">Step 2</span><h3>Quiz &amp; earn</h3><p>Specialty question sets in every NGN format, with a rationale for every option &mdash; and points as you go.</p></div>
+        <div class="tile fade-up"><span class="tag">Step 3</span><h3>Review with Esi</h3><p>Esi tracks your misses in this specialty and drills them until they're strengths.</p></div>
+      </div>
+
+      <div class="section-head fade-up" style="margin-top:3rem;"><span class="eyebrow gold">Sneak peek</span><h2>A taste of the <span class="hl">question bank.</span></h2></div>
+      <div class="locked-preview fade-up" style="max-width:720px;margin:0 auto;">
+        <div class="widget blur">
+          <span class="widget-tag"><svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 3 2.7 5.7 6.3.8-4.6 4.3 1.2 6.2L12 17l-5.6 3 1.2-6.2L3 9.5l6.3-.8z"/></svg> Cardiac / Telemetry item</span>
+          <p class="prompt">Sample Cardiac / Telemetry scenario &mdash; the client presents with the classic findings your specialty is built to recognize&hellip;</p>
+          <div class="choice-grid" style="grid-template-columns:1fr;">
+            <button class="choice">Option A &mdash; a plausible distractor</button>
+            <button class="choice">Option B &mdash; the correct action</button>
+            <button class="choice">Option C &mdash; a plausible distractor</button>
+            <button class="choice">Option D &mdash; a plausible distractor</button>
+          </div>
+        </div>
+        <div class="lockmsg">
+          <div class="lockbox">
+            <span class="lc"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="5" y="10" width="14" height="10" rx="3"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg></span>
+            <b>Locked &mdash; coming soon</b>
+            <p>The Cardiac / Telemetry question bank is being written now. Join the list and we'll unlock it for you first.</p>
+            <a class="btn btn-coral" href="#notify">Notify me</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="notify" style="background:var(--bg);">
+    <div class="wrap">
+      <div class="soon-band fade-up">
+        <div>
+          <h3>Be first into Cardiac / Telemetry.</h3>
+          <p>We'll email you the moment this specialty track goes live &mdash; often with early-bird pricing from $69.</p>
+        </div>
+        <div>
+          <form class="soon-form" data-soon onsubmit="return false;">
+            <input type="email" placeholder="you@email.com" aria-label="Email">
+            <button class="btn btn-coral" type="submit">Notify me</button>
+          </form>
+          <p class="soon-note" data-soon-done hidden>&check; You're on the list &mdash; we'll be in touch.</p>
+        </div>
+      </div>
+      <p style="text-align:center;margin-top:1.4rem;font-size:0.8rem;color:var(--ink-60);">Prefer the full picture? <a href="specialties.html" style="color:var(--coral-500);font-weight:700;">Browse all 22 specialty tracks &rarr;</a></p>
+    </div>
+  </section>
+
+</div>
+<div class="mls-route" data-route="specialty-critical-care.html" hidden>
+  <div class="page-hero" style="background:linear-gradient(140deg,#2ad4c4,#1a0942);">
+    <div class="wrap inner">
+      <span class="lesson-label" style="color:var(--gold-400);">Specialty Prep &middot; In development</span>
+      <h1 style="margin-top:0.6rem;">Critical Care / ICU</h1>
+      <p>Vents, drips, and unstable patients — the deepest end of bedside reasoning.</p>
+      <div class="spec-hero-tags"><span class="chip">Hemodynamic monitoring</span><span class="chip">Ventilator management</span><span class="chip">Vasoactive drips</span><span class="chip">Sepsis &amp; shock</span></div>
+      <div class="hero-cta" style="margin-top:1.8rem;">
+        <a class="btn btn-coral" href="#notify">Notify me when it launches</a>
+        <a class="btn btn-ghost" href="specialties.html">All 22 specialties</a>
+      </div>
+    </div>
+  </div>
+
+  <section style="background:var(--bg);">
+    <div class="wrap">
+      <div class="section-head fade-up"><span class="eyebrow teal">What you'll master</span><h2>The Critical Care / ICU <span class="hl">track.</span></h2><p>Built on the same retention science as NCLEX Complete &mdash; audio scenes, question sets, and rationales, focused on this specialty. Here's what it will cover.</p></div>
+      <div class="pillar-grid">
+        <div class="pillar fade-up">
+          <div class="illo" style="background:linear-gradient(140deg,#2ad4c4,#1a0942);"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="13" rx="3"/><path d="M6 10.5h3l1.5-3 2.5 5 1.5-2h3.5"/><path d="M9 21h6"/></svg></div>
+          <span class="kick">Module</span>
+          <h3>Hemodynamic monitoring</h3>
+          <p>Full lessons, question sets, and rationales for this area are in development for the Critical Care / ICU track.</p>
+        </div><div class="pillar fade-up">
+          <div class="illo" style="background:linear-gradient(140deg,#2ad4c4,#1a0942);"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="13" rx="3"/><path d="M6 10.5h3l1.5-3 2.5 5 1.5-2h3.5"/><path d="M9 21h6"/></svg></div>
+          <span class="kick">Module</span>
+          <h3>Ventilator management</h3>
+          <p>Full lessons, question sets, and rationales for this area are in development for the Critical Care / ICU track.</p>
+        </div><div class="pillar fade-up">
+          <div class="illo" style="background:linear-gradient(140deg,#2ad4c4,#1a0942);"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="13" rx="3"/><path d="M6 10.5h3l1.5-3 2.5 5 1.5-2h3.5"/><path d="M9 21h6"/></svg></div>
+          <span class="kick">Module</span>
+          <h3>Vasoactive drips</h3>
+          <p>Full lessons, question sets, and rationales for this area are in development for the Critical Care / ICU track.</p>
+        </div><div class="pillar fade-up">
+          <div class="illo" style="background:linear-gradient(140deg,#2ad4c4,#1a0942);"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="13" rx="3"/><path d="M6 10.5h3l1.5-3 2.5 5 1.5-2h3.5"/><path d="M9 21h6"/></svg></div>
+          <span class="kick">Module</span>
+          <h3>Sepsis &amp; shock</h3>
+          <p>Full lessons, question sets, and rationales for this area are in development for the Critical Care / ICU track.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section style="background:var(--card);">
+    <div class="wrap">
+      <div class="section-head fade-up"><span class="eyebrow">How this track works</span><h2>Learn it once. <span class="hl">Keep it forever.</span></h2></div>
+      <div class="tile-grid cols-3">
+        <div class="tile fade-up"><span class="tag">Step 1</span><h3>Watch &amp; listen</h3><p>Short specialty scenes drop you onto the unit &mdash; the way a great preceptor would show you.</p></div>
+        <div class="tile fade-up"><span class="tag">Step 2</span><h3>Quiz &amp; earn</h3><p>Specialty question sets in every NGN format, with a rationale for every option &mdash; and points as you go.</p></div>
+        <div class="tile fade-up"><span class="tag">Step 3</span><h3>Review with Esi</h3><p>Esi tracks your misses in this specialty and drills them until they're strengths.</p></div>
+      </div>
+
+      <div class="section-head fade-up" style="margin-top:3rem;"><span class="eyebrow gold">Sneak peek</span><h2>A taste of the <span class="hl">question bank.</span></h2></div>
+      <div class="locked-preview fade-up" style="max-width:720px;margin:0 auto;">
+        <div class="widget blur">
+          <span class="widget-tag"><svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 3 2.7 5.7 6.3.8-4.6 4.3 1.2 6.2L12 17l-5.6 3 1.2-6.2L3 9.5l6.3-.8z"/></svg> Critical Care / ICU item</span>
+          <p class="prompt">Sample Critical Care / ICU scenario &mdash; the client presents with the classic findings your specialty is built to recognize&hellip;</p>
+          <div class="choice-grid" style="grid-template-columns:1fr;">
+            <button class="choice">Option A &mdash; a plausible distractor</button>
+            <button class="choice">Option B &mdash; the correct action</button>
+            <button class="choice">Option C &mdash; a plausible distractor</button>
+            <button class="choice">Option D &mdash; a plausible distractor</button>
+          </div>
+        </div>
+        <div class="lockmsg">
+          <div class="lockbox">
+            <span class="lc"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="5" y="10" width="14" height="10" rx="3"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg></span>
+            <b>Locked &mdash; coming soon</b>
+            <p>The Critical Care / ICU question bank is being written now. Join the list and we'll unlock it for you first.</p>
+            <a class="btn btn-coral" href="#notify">Notify me</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="notify" style="background:var(--bg);">
+    <div class="wrap">
+      <div class="soon-band fade-up">
+        <div>
+          <h3>Be first into Critical Care / ICU.</h3>
+          <p>We'll email you the moment this specialty track goes live &mdash; often with early-bird pricing from $79.</p>
+        </div>
+        <div>
+          <form class="soon-form" data-soon onsubmit="return false;">
+            <input type="email" placeholder="you@email.com" aria-label="Email">
+            <button class="btn btn-coral" type="submit">Notify me</button>
+          </form>
+          <p class="soon-note" data-soon-done hidden>&check; You're on the list &mdash; we'll be in touch.</p>
+        </div>
+      </div>
+      <p style="text-align:center;margin-top:1.4rem;font-size:0.8rem;color:var(--ink-60);">Prefer the full picture? <a href="specialties.html" style="color:var(--coral-500);font-weight:700;">Browse all 22 specialty tracks &rarr;</a></p>
+    </div>
+  </section>
+
+</div>
+<div class="mls-route" data-route="specialty-dialysis.html" hidden>
+  <div class="page-hero" style="background:linear-gradient(140deg,#2ad4c4,#7a45f0);">
+    <div class="wrap inner">
+      <span class="lesson-label" style="color:var(--gold-400);">Specialty Prep &middot; In development</span>
+      <h1 style="margin-top:0.6rem;">Dialysis / Nephrology</h1>
+      <p>Access, fluid, and electrolytes — the rhythm of kidney care.</p>
+      <div class="spec-hero-tags"><span class="chip">AV access care</span><span class="chip">Fluid &amp; electrolyte balance</span><span class="chip">Dialysis complications</span><span class="chip">Renal medications</span></div>
+      <div class="hero-cta" style="margin-top:1.8rem;">
+        <a class="btn btn-coral" href="#notify">Notify me when it launches</a>
+        <a class="btn btn-ghost" href="specialties.html">All 22 specialties</a>
+      </div>
+    </div>
+  </div>
+
+  <section style="background:var(--bg);">
+    <div class="wrap">
+      <div class="section-head fade-up"><span class="eyebrow teal">What you'll master</span><h2>The Dialysis / Nephrology <span class="hl">track.</span></h2><p>Built on the same retention science as NCLEX Complete &mdash; audio scenes, question sets, and rationales, focused on this specialty. Here's what it will cover.</p></div>
+      <div class="pillar-grid">
+        <div class="pillar fade-up">
+          <div class="illo" style="background:linear-gradient(140deg,#2ad4c4,#7a45f0);"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="3.5" y="9" width="17" height="7" rx="3.5" transform="rotate(-35 12 12.5)"/><path d="m9 8.5 6 7"/></svg></div>
+          <span class="kick">Module</span>
+          <h3>AV access care</h3>
+          <p>Full lessons, question sets, and rationales for this area are in development for the Dialysis / Nephrology track.</p>
+        </div><div class="pillar fade-up">
+          <div class="illo" style="background:linear-gradient(140deg,#2ad4c4,#7a45f0);"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="3.5" y="9" width="17" height="7" rx="3.5" transform="rotate(-35 12 12.5)"/><path d="m9 8.5 6 7"/></svg></div>
+          <span class="kick">Module</span>
+          <h3>Fluid &amp; electrolyte balance</h3>
+          <p>Full lessons, question sets, and rationales for this area are in development for the Dialysis / Nephrology track.</p>
+        </div><div class="pillar fade-up">
+          <div class="illo" style="background:linear-gradient(140deg,#2ad4c4,#7a45f0);"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="3.5" y="9" width="17" height="7" rx="3.5" transform="rotate(-35 12 12.5)"/><path d="m9 8.5 6 7"/></svg></div>
+          <span class="kick">Module</span>
+          <h3>Dialysis complications</h3>
+          <p>Full lessons, question sets, and rationales for this area are in development for the Dialysis / Nephrology track.</p>
+        </div><div class="pillar fade-up">
+          <div class="illo" style="background:linear-gradient(140deg,#2ad4c4,#7a45f0);"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="3.5" y="9" width="17" height="7" rx="3.5" transform="rotate(-35 12 12.5)"/><path d="m9 8.5 6 7"/></svg></div>
+          <span class="kick">Module</span>
+          <h3>Renal medications</h3>
+          <p>Full lessons, question sets, and rationales for this area are in development for the Dialysis / Nephrology track.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section style="background:var(--card);">
+    <div class="wrap">
+      <div class="section-head fade-up"><span class="eyebrow">How this track works</span><h2>Learn it once. <span class="hl">Keep it forever.</span></h2></div>
+      <div class="tile-grid cols-3">
+        <div class="tile fade-up"><span class="tag">Step 1</span><h3>Watch &amp; listen</h3><p>Short specialty scenes drop you onto the unit &mdash; the way a great preceptor would show you.</p></div>
+        <div class="tile fade-up"><span class="tag">Step 2</span><h3>Quiz &amp; earn</h3><p>Specialty question sets in every NGN format, with a rationale for every option &mdash; and points as you go.</p></div>
+        <div class="tile fade-up"><span class="tag">Step 3</span><h3>Review with Esi</h3><p>Esi tracks your misses in this specialty and drills them until they're strengths.</p></div>
+      </div>
+
+      <div class="section-head fade-up" style="margin-top:3rem;"><span class="eyebrow gold">Sneak peek</span><h2>A taste of the <span class="hl">question bank.</span></h2></div>
+      <div class="locked-preview fade-up" style="max-width:720px;margin:0 auto;">
+        <div class="widget blur">
+          <span class="widget-tag"><svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 3 2.7 5.7 6.3.8-4.6 4.3 1.2 6.2L12 17l-5.6 3 1.2-6.2L3 9.5l6.3-.8z"/></svg> Dialysis / Nephrology item</span>
+          <p class="prompt">Sample Dialysis / Nephrology scenario &mdash; the client presents with the classic findings your specialty is built to recognize&hellip;</p>
+          <div class="choice-grid" style="grid-template-columns:1fr;">
+            <button class="choice">Option A &mdash; a plausible distractor</button>
+            <button class="choice">Option B &mdash; the correct action</button>
+            <button class="choice">Option C &mdash; a plausible distractor</button>
+            <button class="choice">Option D &mdash; a plausible distractor</button>
+          </div>
+        </div>
+        <div class="lockmsg">
+          <div class="lockbox">
+            <span class="lc"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="5" y="10" width="14" height="10" rx="3"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg></span>
+            <b>Locked &mdash; coming soon</b>
+            <p>The Dialysis / Nephrology question bank is being written now. Join the list and we'll unlock it for you first.</p>
+            <a class="btn btn-coral" href="#notify">Notify me</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="notify" style="background:var(--bg);">
+    <div class="wrap">
+      <div class="soon-band fade-up">
+        <div>
+          <h3>Be first into Dialysis / Nephrology.</h3>
+          <p>We'll email you the moment this specialty track goes live &mdash; often with early-bird pricing from $69.</p>
+        </div>
+        <div>
+          <form class="soon-form" data-soon onsubmit="return false;">
+            <input type="email" placeholder="you@email.com" aria-label="Email">
+            <button class="btn btn-coral" type="submit">Notify me</button>
+          </form>
+          <p class="soon-note" data-soon-done hidden>&check; You're on the list &mdash; we'll be in touch.</p>
+        </div>
+      </div>
+      <p style="text-align:center;margin-top:1.4rem;font-size:0.8rem;color:var(--ink-60);">Prefer the full picture? <a href="specialties.html" style="color:var(--coral-500);font-weight:700;">Browse all 22 specialty tracks &rarr;</a></p>
+    </div>
+  </section>
+
+</div>
+<div class="mls-route" data-route="specialty-emergency.html" hidden>
+  <div class="page-hero" style="background:linear-gradient(140deg,#e5484d,#7a45f0);">
+    <div class="wrap inner">
+      <span class="lesson-label" style="color:var(--gold-400);">Specialty Prep &middot; In development</span>
+      <h1 style="margin-top:0.6rem;">Emergency / ER</h1>
+      <p>Triage, trauma, and the first ten minutes — think fast and think right under pressure.</p>
+      <div class="spec-hero-tags"><span class="chip">Triage &amp; rapid assessment</span><span class="chip">Trauma &amp; resuscitation</span><span class="chip">Chest pain &amp; stroke</span><span class="chip">Toxicology &amp; overdose</span></div>
+      <div class="hero-cta" style="margin-top:1.8rem;">
+        <a class="btn btn-coral" href="#notify">Notify me when it launches</a>
+        <a class="btn btn-ghost" href="specialties.html">All 22 specialties</a>
+      </div>
+    </div>
+  </div>
+
+  <section style="background:var(--bg);">
+    <div class="wrap">
+      <div class="section-head fade-up"><span class="eyebrow teal">What you'll master</span><h2>The Emergency / ER <span class="hl">track.</span></h2><p>Built on the same retention science as NCLEX Complete &mdash; audio scenes, question sets, and rationales, focused on this specialty. Here's what it will cover.</p></div>
+      <div class="pillar-grid">
+        <div class="pillar fade-up">
+          <div class="illo" style="background:linear-gradient(140deg,#e5484d,#7a45f0);"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2 5 13h5l-1 9 8-11h-5z"/></svg></div>
+          <span class="kick">Module</span>
+          <h3>Triage &amp; rapid assessment</h3>
+          <p>Full lessons, question sets, and rationales for this area are in development for the Emergency / ER track.</p>
+        </div><div class="pillar fade-up">
+          <div class="illo" style="background:linear-gradient(140deg,#e5484d,#7a45f0);"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2 5 13h5l-1 9 8-11h-5z"/></svg></div>
+          <span class="kick">Module</span>
+          <h3>Trauma &amp; resuscitation</h3>
+          <p>Full lessons, question sets, and rationales for this area are in development for the Emergency / ER track.</p>
+        </div><div class="pillar fade-up">
+          <div class="illo" style="background:linear-gradient(140deg,#e5484d,#7a45f0);"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2 5 13h5l-1 9 8-11h-5z"/></svg></div>
+          <span class="kick">Module</span>
+          <h3>Chest pain &amp; stroke</h3>
+          <p>Full lessons, question sets, and rationales for this area are in development for the Emergency / ER track.</p>
+        </div><div class="pillar fade-up">
+          <div class="illo" style="background:linear-gradient(140deg,#e5484d,#7a45f0);"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2 5 13h5l-1 9 8-11h-5z"/></svg></div>
+          <span class="kick">Module</span>
+          <h3>Toxicology &amp; overdose</h3>
+          <p>Full lessons, question sets, and rationales for this area are in development for the Emergency / ER track.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section style="background:var(--card);">
+    <div class="wrap">
+      <div class="section-head fade-up"><span class="eyebrow">How this track works</span><h2>Learn it once. <span class="hl">Keep it forever.</span></h2></div>
+      <div class="tile-grid cols-3">
+        <div class="tile fade-up"><span class="tag">Step 1</span><h3>Watch &amp; listen</h3><p>Short specialty scenes drop you onto the unit &mdash; the way a great preceptor would show you.</p></div>
+        <div class="tile fade-up"><span class="tag">Step 2</span><h3>Quiz &amp; earn</h3><p>Specialty question sets in every NGN format, with a rationale for every option &mdash; and points as you go.</p></div>
+        <div class="tile fade-up"><span class="tag">Step 3</span><h3>Review with Esi</h3><p>Esi tracks your misses in this specialty and drills them until they're strengths.</p></div>
+      </div>
+
+      <div class="section-head fade-up" style="margin-top:3rem;"><span class="eyebrow gold">Sneak peek</span><h2>A taste of the <span class="hl">question bank.</span></h2></div>
+      <div class="locked-preview fade-up" style="max-width:720px;margin:0 auto;">
+        <div class="widget blur">
+          <span class="widget-tag"><svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 3 2.7 5.7 6.3.8-4.6 4.3 1.2 6.2L12 17l-5.6 3 1.2-6.2L3 9.5l6.3-.8z"/></svg> Emergency / ER item</span>
+          <p class="prompt">Sample Emergency / ER scenario &mdash; the client presents with the classic findings your specialty is built to recognize&hellip;</p>
+          <div class="choice-grid" style="grid-template-columns:1fr;">
+            <button class="choice">Option A &mdash; a plausible distractor</button>
+            <button class="choice">Option B &mdash; the correct action</button>
+            <button class="choice">Option C &mdash; a plausible distractor</button>
+            <button class="choice">Option D &mdash; a plausible distractor</button>
+          </div>
+        </div>
+        <div class="lockmsg">
+          <div class="lockbox">
+            <span class="lc"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="5" y="10" width="14" height="10" rx="3"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg></span>
+            <b>Locked &mdash; coming soon</b>
+            <p>The Emergency / ER question bank is being written now. Join the list and we'll unlock it for you first.</p>
+            <a class="btn btn-coral" href="#notify">Notify me</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="notify" style="background:var(--bg);">
+    <div class="wrap">
+      <div class="soon-band fade-up">
+        <div>
+          <h3>Be first into Emergency / ER.</h3>
+          <p>We'll email you the moment this specialty track goes live &mdash; often with early-bird pricing from $69.</p>
+        </div>
+        <div>
+          <form class="soon-form" data-soon onsubmit="return false;">
+            <input type="email" placeholder="you@email.com" aria-label="Email">
+            <button class="btn btn-coral" type="submit">Notify me</button>
+          </form>
+          <p class="soon-note" data-soon-done hidden>&check; You're on the list &mdash; we'll be in touch.</p>
+        </div>
+      </div>
+      <p style="text-align:center;margin-top:1.4rem;font-size:0.8rem;color:var(--ink-60);">Prefer the full picture? <a href="specialties.html" style="color:var(--coral-500);font-weight:700;">Browse all 22 specialty tracks &rarr;</a></p>
+    </div>
+  </section>
+
+</div>
+<div class="mls-route" data-route="specialty-geriatrics.html" hidden>
+  <div class="page-hero" style="background:linear-gradient(140deg,#d99a1f,#7a45f0);">
+    <div class="wrap inner">
+      <span class="lesson-label" style="color:var(--gold-400);">Specialty Prep &middot; In development</span>
+      <h1 style="margin-top:0.6rem;">Geriatrics</h1>
+      <p>Polypharmacy, falls, and dignity — nursing the aging adult with care.</p>
+      <div class="spec-hero-tags"><span class="chip">Age-related changes</span><span class="chip">Polypharmacy &amp; safety</span><span class="chip">Falls &amp; mobility</span><span class="chip">Delirium vs dementia</span></div>
+      <div class="hero-cta" style="margin-top:1.8rem;">
+        <a class="btn btn-coral" href="#notify">Notify me when it launches</a>
+        <a class="btn btn-ghost" href="specialties.html">All 22 specialties</a>
+      </div>
+    </div>
+  </div>
+
+  <section style="background:var(--bg);">
+    <div class="wrap">
+      <div class="section-head fade-up"><span class="eyebrow teal">What you'll master</span><h2>The Geriatrics <span class="hl">track.</span></h2><p>Built on the same retention science as NCLEX Complete &mdash; audio scenes, question sets, and rationales, focused on this specialty. Here's what it will cover.</p></div>
+      <div class="pillar-grid">
+        <div class="pillar fade-up">
+          <div class="illo" style="background:linear-gradient(140deg,#d99a1f,#7a45f0);"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7.5-4.6-7.5-10A4.5 4.5 0 0 1 12 7.5 4.5 4.5 0 0 1 19.5 11c0 5.4-7.5 10-7.5 10z"/><path d="M7 12h3l1.5-2.5L14 13l1.5-1.5H19"/></svg></div>
+          <span class="kick">Module</span>
+          <h3>Age-related changes</h3>
+          <p>Full lessons, question sets, and rationales for this area are in development for the Geriatrics track.</p>
+        </div><div class="pillar fade-up">
+          <div class="illo" style="background:linear-gradient(140deg,#d99a1f,#7a45f0);"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7.5-4.6-7.5-10A4.5 4.5 0 0 1 12 7.5 4.5 4.5 0 0 1 19.5 11c0 5.4-7.5 10-7.5 10z"/><path d="M7 12h3l1.5-2.5L14 13l1.5-1.5H19"/></svg></div>
+          <span class="kick">Module</span>
+          <h3>Polypharmacy &amp; safety</h3>
+          <p>Full lessons, question sets, and rationales for this area are in development for the Geriatrics track.</p>
+        </div><div class="pillar fade-up">
+          <div class="illo" style="background:linear-gradient(140deg,#d99a1f,#7a45f0);"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7.5-4.6-7.5-10A4.5 4.5 0 0 1 12 7.5 4.5 4.5 0 0 1 19.5 11c0 5.4-7.5 10-7.5 10z"/><path d="M7 12h3l1.5-2.5L14 13l1.5-1.5H19"/></svg></div>
+          <span class="kick">Module</span>
+          <h3>Falls &amp; mobility</h3>
+          <p>Full lessons, question sets, and rationales for this area are in development for the Geriatrics track.</p>
+        </div><div class="pillar fade-up">
+          <div class="illo" style="background:linear-gradient(140deg,#d99a1f,#7a45f0);"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7.5-4.6-7.5-10A4.5 4.5 0 0 1 12 7.5 4.5 4.5 0 0 1 19.5 11c0 5.4-7.5 10-7.5 10z"/><path d="M7 12h3l1.5-2.5L14 13l1.5-1.5H19"/></svg></div>
+          <span class="kick">Module</span>
+          <h3>Delirium vs dementia</h3>
+          <p>Full lessons, question sets, and rationales for this area are in development for the Geriatrics track.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section style="background:var(--card);">
+    <div class="wrap">
+      <div class="section-head fade-up"><span class="eyebrow">How this track works</span><h2>Learn it once. <span class="hl">Keep it forever.</span></h2></div>
+      <div class="tile-grid cols-3">
+        <div class="tile fade-up"><span class="tag">Step 1</span><h3>Watch &amp; listen</h3><p>Short specialty scenes drop you onto the unit &mdash; the way a great preceptor would show you.</p></div>
+        <div class="tile fade-up"><span class="tag">Step 2</span><h3>Quiz &amp; earn</h3><p>Specialty question sets in every NGN format, with a rationale for every option &mdash; and points as you go.</p></div>
+        <div class="tile fade-up"><span class="tag">Step 3</span><h3>Review with Esi</h3><p>Esi tracks your misses in this specialty and drills them until they're strengths.</p></div>
+      </div>
+
+      <div class="section-head fade-up" style="margin-top:3rem;"><span class="eyebrow gold">Sneak peek</span><h2>A taste of the <span class="hl">question bank.</span></h2></div>
+      <div class="locked-preview fade-up" style="max-width:720px;margin:0 auto;">
+        <div class="widget blur">
+          <span class="widget-tag"><svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 3 2.7 5.7 6.3.8-4.6 4.3 1.2 6.2L12 17l-5.6 3 1.2-6.2L3 9.5l6.3-.8z"/></svg> Geriatrics item</span>
+          <p class="prompt">Sample Geriatrics scenario &mdash; the client presents with the classic findings your specialty is built to recognize&hellip;</p>
+          <div class="choice-grid" style="grid-template-columns:1fr;">
+            <button class="choice">Option A &mdash; a plausible distractor</button>
+            <button class="choice">Option B &mdash; the correct action</button>
+            <button class="choice">Option C &mdash; a plausible distractor</button>
+            <button class="choice">Option D &mdash; a plausible distractor</button>
+          </div>
+        </div>
+        <div class="lockmsg">
+          <div class="lockbox">
+            <span class="lc"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="5" y="10" width="14" height="10" rx="3"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg></span>
+            <b>Locked &mdash; coming soon</b>
+            <p>The Geriatrics question bank is being written now. Join the list and we'll unlock it for you first.</p>
+            <a class="btn btn-coral" href="#notify">Notify me</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="notify" style="background:var(--bg);">
+    <div class="wrap">
+      <div class="soon-band fade-up">
+        <div>
+          <h3>Be first into Geriatrics.</h3>
+          <p>We'll email you the moment this specialty track goes live &mdash; often with early-bird pricing from $49.</p>
+        </div>
+        <div>
+          <form class="soon-form" data-soon onsubmit="return false;">
+            <input type="email" placeholder="you@email.com" aria-label="Email">
+            <button class="btn btn-coral" type="submit">Notify me</button>
+          </form>
+          <p class="soon-note" data-soon-done hidden>&check; You're on the list &mdash; we'll be in touch.</p>
+        </div>
+      </div>
+      <p style="text-align:center;margin-top:1.4rem;font-size:0.8rem;color:var(--ink-60);">Prefer the full picture? <a href="specialties.html" style="color:var(--coral-500);font-weight:700;">Browse all 22 specialty tracks &rarr;</a></p>
+    </div>
+  </section>
+
+</div>
+<div class="mls-route" data-route="specialty-home-health.html" hidden>
+  <div class="page-hero" style="background:linear-gradient(140deg,#14b8a8,#2b1055);">
+    <div class="wrap inner">
+      <span class="lesson-label" style="color:var(--gold-400);">Specialty Prep &middot; In development</span>
+      <h1 style="margin-top:0.6rem;">Home Health</h1>
+      <p>One nurse, one home — assessment, teaching, and safety without the call bell.</p>
+      <div class="spec-hero-tags"><span class="chip">Home safety assessment</span><span class="chip">Wound &amp; IV in the home</span><span class="chip">Caregiver teaching</span><span class="chip">Care coordination</span></div>
+      <div class="hero-cta" style="margin-top:1.8rem;">
+        <a class="btn btn-coral" href="#notify">Notify me when it launches</a>
+        <a class="btn btn-ghost" href="specialties.html">All 22 specialties</a>
+      </div>
+    </div>
+  </div>
+
+  <section style="background:var(--bg);">
+    <div class="wrap">
+      <div class="section-head fade-up"><span class="eyebrow teal">What you'll master</span><h2>The Home Health <span class="hl">track.</span></h2><p>Built on the same retention science as NCLEX Complete &mdash; audio scenes, question sets, and rationales, focused on this specialty. Here's what it will cover.</p></div>
+      <div class="pillar-grid">
+        <div class="pillar fade-up">
+          <div class="illo" style="background:linear-gradient(140deg,#14b8a8,#2b1055);"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11.5 12 4l9 7.5"/><path d="M5 10v10h5v-6h4v6h5V10"/></svg></div>
+          <span class="kick">Module</span>
+          <h3>Home safety assessment</h3>
+          <p>Full lessons, question sets, and rationales for this area are in development for the Home Health track.</p>
+        </div><div class="pillar fade-up">
+          <div class="illo" style="background:linear-gradient(140deg,#14b8a8,#2b1055);"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11.5 12 4l9 7.5"/><path d="M5 10v10h5v-6h4v6h5V10"/></svg></div>
+          <span class="kick">Module</span>
+          <h3>Wound &amp; IV in the home</h3>
+          <p>Full lessons, question sets, and rationales for this area are in development for the Home Health track.</p>
+        </div><div class="pillar fade-up">
+          <div class="illo" style="background:linear-gradient(140deg,#14b8a8,#2b1055);"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11.5 12 4l9 7.5"/><path d="M5 10v10h5v-6h4v6h5V10"/></svg></div>
+          <span class="kick">Module</span>
+          <h3>Caregiver teaching</h3>
+          <p>Full lessons, question sets, and rationales for this area are in development for the Home Health track.</p>
+        </div><div class="pillar fade-up">
+          <div class="illo" style="background:linear-gradient(140deg,#14b8a8,#2b1055);"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11.5 12 4l9 7.5"/><path d="M5 10v10h5v-6h4v6h5V10"/></svg></div>
+          <span class="kick">Module</span>
+          <h3>Care coordination</h3>
+          <p>Full lessons, question sets, and rationales for this area are in development for the Home Health track.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section style="background:var(--card);">
+    <div class="wrap">
+      <div class="section-head fade-up"><span class="eyebrow">How this track works</span><h2>Learn it once. <span class="hl">Keep it forever.</span></h2></div>
+      <div class="tile-grid cols-3">
+        <div class="tile fade-up"><span class="tag">Step 1</span><h3>Watch &amp; listen</h3><p>Short specialty scenes drop you onto the unit &mdash; the way a great preceptor would show you.</p></div>
+        <div class="tile fade-up"><span class="tag">Step 2</span><h3>Quiz &amp; earn</h3><p>Specialty question sets in every NGN format, with a rationale for every option &mdash; and points as you go.</p></div>
+        <div class="tile fade-up"><span class="tag">Step 3</span><h3>Review with Esi</h3><p>Esi tracks your misses in this specialty and drills them until they're strengths.</p></div>
+      </div>
+
+      <div class="section-head fade-up" style="margin-top:3rem;"><span class="eyebrow gold">Sneak peek</span><h2>A taste of the <span class="hl">question bank.</span></h2></div>
+      <div class="locked-preview fade-up" style="max-width:720px;margin:0 auto;">
+        <div class="widget blur">
+          <span class="widget-tag"><svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 3 2.7 5.7 6.3.8-4.6 4.3 1.2 6.2L12 17l-5.6 3 1.2-6.2L3 9.5l6.3-.8z"/></svg> Home Health item</span>
+          <p class="prompt">Sample Home Health scenario &mdash; the client presents with the classic findings your specialty is built to recognize&hellip;</p>
+          <div class="choice-grid" style="grid-template-columns:1fr;">
+            <button class="choice">Option A &mdash; a plausible distractor</button>
+            <button class="choice">Option B &mdash; the correct action</button>
+            <button class="choice">Option C &mdash; a plausible distractor</button>
+            <button class="choice">Option D &mdash; a plausible distractor</button>
+          </div>
+        </div>
+        <div class="lockmsg">
+          <div class="lockbox">
+            <span class="lc"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="5" y="10" width="14" height="10" rx="3"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg></span>
+            <b>Locked &mdash; coming soon</b>
+            <p>The Home Health question bank is being written now. Join the list and we'll unlock it for you first.</p>
+            <a class="btn btn-coral" href="#notify">Notify me</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="notify" style="background:var(--bg);">
+    <div class="wrap">
+      <div class="soon-band fade-up">
+        <div>
+          <h3>Be first into Home Health.</h3>
+          <p>We'll email you the moment this specialty track goes live &mdash; often with early-bird pricing from $49.</p>
+        </div>
+        <div>
+          <form class="soon-form" data-soon onsubmit="return false;">
+            <input type="email" placeholder="you@email.com" aria-label="Email">
+            <button class="btn btn-coral" type="submit">Notify me</button>
+          </form>
+          <p class="soon-note" data-soon-done hidden>&check; You're on the list &mdash; we'll be in touch.</p>
+        </div>
+      </div>
+      <p style="text-align:center;margin-top:1.4rem;font-size:0.8rem;color:var(--ink-60);">Prefer the full picture? <a href="specialties.html" style="color:var(--coral-500);font-weight:700;">Browse all 22 specialty tracks &rarr;</a></p>
+    </div>
+  </section>
+
+</div>
+<div class="mls-route" data-route="specialty-hospice.html" hidden>
+  <div class="page-hero" style="background:linear-gradient(140deg,#8b5cff,#d99a1f);">
+    <div class="wrap inner">
+      <span class="lesson-label" style="color:var(--gold-400);">Specialty Prep &middot; In development</span>
+      <h1 style="margin-top:0.6rem;">Hospice / Palliative</h1>
+      <p>Comfort as the goal — symptom relief, presence, and honoring the end of life.</p>
+      <div class="spec-hero-tags"><span class="chip">Pain &amp; symptom management</span><span class="chip">Comfort measures</span><span class="chip">End-of-life communication</span><span class="chip">Family &amp; grief support</span></div>
+      <div class="hero-cta" style="margin-top:1.8rem;">
+        <a class="btn btn-coral" href="#notify">Notify me when it launches</a>
+        <a class="btn btn-ghost" href="specialties.html">All 22 specialties</a>
+      </div>
+    </div>
+  </div>
+
+  <section style="background:var(--bg);">
+    <div class="wrap">
+      <div class="section-head fade-up"><span class="eyebrow teal">What you'll master</span><h2>The Hospice / Palliative <span class="hl">track.</span></h2><p>Built on the same retention science as NCLEX Complete &mdash; audio scenes, question sets, and rationales, focused on this specialty. Here's what it will cover.</p></div>
+      <div class="pillar-grid">
+        <div class="pillar fade-up">
+          <div class="illo" style="background:linear-gradient(140deg,#8b5cff,#d99a1f);"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20s-7-4.3-7-9.5A4.2 4.2 0 0 1 12 7a4.2 4.2 0 0 1 7 3.5C19 15.7 12 20 12 20z"/><circle cx="12" cy="12" r="2"/></svg></div>
+          <span class="kick">Module</span>
+          <h3>Pain &amp; symptom management</h3>
+          <p>Full lessons, question sets, and rationales for this area are in development for the Hospice / Palliative track.</p>
+        </div><div class="pillar fade-up">
+          <div class="illo" style="background:linear-gradient(140deg,#8b5cff,#d99a1f);"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20s-7-4.3-7-9.5A4.2 4.2 0 0 1 12 7a4.2 4.2 0 0 1 7 3.5C19 15.7 12 20 12 20z"/><circle cx="12" cy="12" r="2"/></svg></div>
+          <span class="kick">Module</span>
+          <h3>Comfort measures</h3>
+          <p>Full lessons, question sets, and rationales for this area are in development for the Hospice / Palliative track.</p>
+        </div><div class="pillar fade-up">
+          <div class="illo" style="background:linear-gradient(140deg,#8b5cff,#d99a1f);"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20s-7-4.3-7-9.5A4.2 4.2 0 0 1 12 7a4.2 4.2 0 0 1 7 3.5C19 15.7 12 20 12 20z"/><circle cx="12" cy="12" r="2"/></svg></div>
+          <span class="kick">Module</span>
+          <h3>End-of-life communication</h3>
+          <p>Full lessons, question sets, and rationales for this area are in development for the Hospice / Palliative track.</p>
+        </div><div class="pillar fade-up">
+          <div class="illo" style="background:linear-gradient(140deg,#8b5cff,#d99a1f);"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20s-7-4.3-7-9.5A4.2 4.2 0 0 1 12 7a4.2 4.2 0 0 1 7 3.5C19 15.7 12 20 12 20z"/><circle cx="12" cy="12" r="2"/></svg></div>
+          <span class="kick">Module</span>
+          <h3>Family &amp; grief support</h3>
+          <p>Full lessons, question sets, and rationales for this area are in development for the Hospice / Palliative track.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section style="background:var(--card);">
+    <div class="wrap">
+      <div class="section-head fade-up"><span class="eyebrow">How this track works</span><h2>Learn it once. <span class="hl">Keep it forever.</span></h2></div>
+      <div class="tile-grid cols-3">
+        <div class="tile fade-up"><span class="tag">Step 1</span><h3>Watch &amp; listen</h3><p>Short specialty scenes drop you onto the unit &mdash; the way a great preceptor would show you.</p></div>
+        <div class="tile fade-up"><span class="tag">Step 2</span><h3>Quiz &amp; earn</h3><p>Specialty question sets in every NGN format, with a rationale for every option &mdash; and points as you go.</p></div>
+        <div class="tile fade-up"><span class="tag">Step 3</span><h3>Review with Esi</h3><p>Esi tracks your misses in this specialty and drills them until they're strengths.</p></div>
+      </div>
+
+      <div class="section-head fade-up" style="margin-top:3rem;"><span class="eyebrow gold">Sneak peek</span><h2>A taste of the <span class="hl">question bank.</span></h2></div>
+      <div class="locked-preview fade-up" style="max-width:720px;margin:0 auto;">
+        <div class="widget blur">
+          <span class="widget-tag"><svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 3 2.7 5.7 6.3.8-4.6 4.3 1.2 6.2L12 17l-5.6 3 1.2-6.2L3 9.5l6.3-.8z"/></svg> Hospice / Palliative item</span>
+          <p class="prompt">Sample Hospice / Palliative scenario &mdash; the client presents with the classic findings your specialty is built to recognize&hellip;</p>
+          <div class="choice-grid" style="grid-template-columns:1fr;">
+            <button class="choice">Option A &mdash; a plausible distractor</button>
+            <button class="choice">Option B &mdash; the correct action</button>
+            <button class="choice">Option C &mdash; a plausible distractor</button>
+            <button class="choice">Option D &mdash; a plausible distractor</button>
+          </div>
+        </div>
+        <div class="lockmsg">
+          <div class="lockbox">
+            <span class="lc"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="5" y="10" width="14" height="10" rx="3"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg></span>
+            <b>Locked &mdash; coming soon</b>
+            <p>The Hospice / Palliative question bank is being written now. Join the list and we'll unlock it for you first.</p>
+            <a class="btn btn-coral" href="#notify">Notify me</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="notify" style="background:var(--bg);">
+    <div class="wrap">
+      <div class="soon-band fade-up">
+        <div>
+          <h3>Be first into Hospice / Palliative.</h3>
+          <p>We'll email you the moment this specialty track goes live &mdash; often with early-bird pricing from $49.</p>
+        </div>
+        <div>
+          <form class="soon-form" data-soon onsubmit="return false;">
+            <input type="email" placeholder="you@email.com" aria-label="Email">
+            <button class="btn btn-coral" type="submit">Notify me</button>
+          </form>
+          <p class="soon-note" data-soon-done hidden>&check; You're on the list &mdash; we'll be in touch.</p>
+        </div>
+      </div>
+      <p style="text-align:center;margin-top:1.4rem;font-size:0.8rem;color:var(--ink-60);">Prefer the full picture? <a href="specialties.html" style="color:var(--coral-500);font-weight:700;">Browse all 22 specialty tracks &rarr;</a></p>
+    </div>
+  </section>
+
+</div>
+<div class="mls-route" data-route="specialty-labor-delivery.html" hidden>
+  <div class="page-hero" style="background:linear-gradient(140deg,#8b5cff,#14b8a8);">
+    <div class="wrap inner">
+      <span class="lesson-label" style="color:var(--gold-400);">Specialty Prep &middot; In development</span>
+      <h1 style="margin-top:0.6rem;">Labor &amp; Delivery / OB</h1>
+      <p>Two patients at once — read the strip, protect the mom, deliver the baby.</p>
+      <div class="spec-hero-tags"><span class="chip">Fetal monitoring</span><span class="chip">Stages of labor</span><span class="chip">Preeclampsia &amp; hemorrhage</span><span class="chip">Postpartum care</span></div>
+      <div class="hero-cta" style="margin-top:1.8rem;">
+        <a class="btn btn-coral" href="#notify">Notify me when it launches</a>
+        <a class="btn btn-ghost" href="specialties.html">All 22 specialties</a>
+      </div>
+    </div>
+  </div>
+
+  <section style="background:var(--bg);">
+    <div class="wrap">
+      <div class="section-head fade-up"><span class="eyebrow teal">What you'll master</span><h2>The Labor &amp; Delivery / OB <span class="hl">track.</span></h2><p>Built on the same retention science as NCLEX Complete &mdash; audio scenes, question sets, and rationales, focused on this specialty. Here's what it will cover.</p></div>
+      <div class="pillar-grid">
+        <div class="pillar fade-up">
+          <div class="illo" style="background:linear-gradient(140deg,#8b5cff,#14b8a8);"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20s-7-4.3-7-9.5A4.2 4.2 0 0 1 12 7a4.2 4.2 0 0 1 7 3.5C19 15.7 12 20 12 20z"/><circle cx="12" cy="12" r="2"/></svg></div>
+          <span class="kick">Module</span>
+          <h3>Fetal monitoring</h3>
+          <p>Full lessons, question sets, and rationales for this area are in development for the Labor &amp; Delivery / OB track.</p>
+        </div><div class="pillar fade-up">
+          <div class="illo" style="background:linear-gradient(140deg,#8b5cff,#14b8a8);"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20s-7-4.3-7-9.5A4.2 4.2 0 0 1 12 7a4.2 4.2 0 0 1 7 3.5C19 15.7 12 20 12 20z"/><circle cx="12" cy="12" r="2"/></svg></div>
+          <span class="kick">Module</span>
+          <h3>Stages of labor</h3>
+          <p>Full lessons, question sets, and rationales for this area are in development for the Labor &amp; Delivery / OB track.</p>
+        </div><div class="pillar fade-up">
+          <div class="illo" style="background:linear-gradient(140deg,#8b5cff,#14b8a8);"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20s-7-4.3-7-9.5A4.2 4.2 0 0 1 12 7a4.2 4.2 0 0 1 7 3.5C19 15.7 12 20 12 20z"/><circle cx="12" cy="12" r="2"/></svg></div>
+          <span class="kick">Module</span>
+          <h3>Preeclampsia &amp; hemorrhage</h3>
+          <p>Full lessons, question sets, and rationales for this area are in development for the Labor &amp; Delivery / OB track.</p>
+        </div><div class="pillar fade-up">
+          <div class="illo" style="background:linear-gradient(140deg,#8b5cff,#14b8a8);"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20s-7-4.3-7-9.5A4.2 4.2 0 0 1 12 7a4.2 4.2 0 0 1 7 3.5C19 15.7 12 20 12 20z"/><circle cx="12" cy="12" r="2"/></svg></div>
+          <span class="kick">Module</span>
+          <h3>Postpartum care</h3>
+          <p>Full lessons, question sets, and rationales for this area are in development for the Labor &amp; Delivery / OB track.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section style="background:var(--card);">
+    <div class="wrap">
+      <div class="section-head fade-up"><span class="eyebrow">How this track works</span><h2>Learn it once. <span class="hl">Keep it forever.</span></h2></div>
+      <div class="tile-grid cols-3">
+        <div class="tile fade-up"><span class="tag">Step 1</span><h3>Watch &amp; listen</h3><p>Short specialty scenes drop you onto the unit &mdash; the way a great preceptor would show you.</p></div>
+        <div class="tile fade-up"><span class="tag">Step 2</span><h3>Quiz &amp; earn</h3><p>Specialty question sets in every NGN format, with a rationale for every option &mdash; and points as you go.</p></div>
+        <div class="tile fade-up"><span class="tag">Step 3</span><h3>Review with Esi</h3><p>Esi tracks your misses in this specialty and drills them until they're strengths.</p></div>
+      </div>
+
+      <div class="section-head fade-up" style="margin-top:3rem;"><span class="eyebrow gold">Sneak peek</span><h2>A taste of the <span class="hl">question bank.</span></h2></div>
+      <div class="locked-preview fade-up" style="max-width:720px;margin:0 auto;">
+        <div class="widget blur">
+          <span class="widget-tag"><svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 3 2.7 5.7 6.3.8-4.6 4.3 1.2 6.2L12 17l-5.6 3 1.2-6.2L3 9.5l6.3-.8z"/></svg> Labor &amp; Delivery / OB item</span>
+          <p class="prompt">Sample Labor &amp; Delivery / OB scenario &mdash; the client presents with the classic findings your specialty is built to recognize&hellip;</p>
+          <div class="choice-grid" style="grid-template-columns:1fr;">
+            <button class="choice">Option A &mdash; a plausible distractor</button>
+            <button class="choice">Option B &mdash; the correct action</button>
+            <button class="choice">Option C &mdash; a plausible distractor</button>
+            <button class="choice">Option D &mdash; a plausible distractor</button>
+          </div>
+        </div>
+        <div class="lockmsg">
+          <div class="lockbox">
+            <span class="lc"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="5" y="10" width="14" height="10" rx="3"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg></span>
+            <b>Locked &mdash; coming soon</b>
+            <p>The Labor &amp; Delivery / OB question bank is being written now. Join the list and we'll unlock it for you first.</p>
+            <a class="btn btn-coral" href="#notify">Notify me</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="notify" style="background:var(--bg);">
+    <div class="wrap">
+      <div class="soon-band fade-up">
+        <div>
+          <h3>Be first into Labor &amp; Delivery / OB.</h3>
+          <p>We'll email you the moment this specialty track goes live &mdash; often with early-bird pricing from $69.</p>
+        </div>
+        <div>
+          <form class="soon-form" data-soon onsubmit="return false;">
+            <input type="email" placeholder="you@email.com" aria-label="Email">
+            <button class="btn btn-coral" type="submit">Notify me</button>
+          </form>
+          <p class="soon-note" data-soon-done hidden>&check; You're on the list &mdash; we'll be in touch.</p>
+        </div>
+      </div>
+      <p style="text-align:center;margin-top:1.4rem;font-size:0.8rem;color:var(--ink-60);">Prefer the full picture? <a href="specialties.html" style="color:var(--coral-500);font-weight:700;">Browse all 22 specialty tracks &rarr;</a></p>
+    </div>
+  </section>
+
+</div>
+<div class="mls-route" data-route="specialty-long-term-care.html" hidden>
+  <div class="page-hero" style="background:linear-gradient(140deg,#7a45f0,#d99a1f);">
+    <div class="wrap inner">
+      <span class="lesson-label" style="color:var(--gold-400);">Specialty Prep &middot; In development</span>
+      <h1 style="margin-top:0.6rem;">Long-Term Care</h1>
+      <p>Residents, not room numbers — steady, relationship-based chronic care.</p>
+      <div class="spec-hero-tags"><span class="chip">Chronic condition management</span><span class="chip">Skin &amp; wound prevention</span><span class="chip">Behavioral care</span><span class="chip">Regulatory &amp; documentation</span></div>
+      <div class="hero-cta" style="margin-top:1.8rem;">
+        <a class="btn btn-coral" href="#notify">Notify me when it launches</a>
+        <a class="btn btn-ghost" href="specialties.html">All 22 specialties</a>
+      </div>
+    </div>
+  </div>
+
+  <section style="background:var(--bg);">
+    <div class="wrap">
+      <div class="section-head fade-up"><span class="eyebrow teal">What you'll master</span><h2>The Long-Term Care <span class="hl">track.</span></h2><p>Built on the same retention science as NCLEX Complete &mdash; audio scenes, question sets, and rationales, focused on this specialty. Here's what it will cover.</p></div>
+      <div class="pillar-grid">
+        <div class="pillar fade-up">
+          <div class="illo" style="background:linear-gradient(140deg,#7a45f0,#d99a1f);"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7.5-4.6-7.5-10A4.5 4.5 0 0 1 12 7.5 4.5 4.5 0 0 1 19.5 11c0 5.4-7.5 10-7.5 10z"/><path d="M7 12h3l1.5-2.5L14 13l1.5-1.5H19"/></svg></div>
+          <span class="kick">Module</span>
+          <h3>Chronic condition management</h3>
+          <p>Full lessons, question sets, and rationales for this area are in development for the Long-Term Care track.</p>
+        </div><div class="pillar fade-up">
+          <div class="illo" style="background:linear-gradient(140deg,#7a45f0,#d99a1f);"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7.5-4.6-7.5-10A4.5 4.5 0 0 1 12 7.5 4.5 4.5 0 0 1 19.5 11c0 5.4-7.5 10-7.5 10z"/><path d="M7 12h3l1.5-2.5L14 13l1.5-1.5H19"/></svg></div>
+          <span class="kick">Module</span>
+          <h3>Skin &amp; wound prevention</h3>
+          <p>Full lessons, question sets, and rationales for this area are in development for the Long-Term Care track.</p>
+        </div><div class="pillar fade-up">
+          <div class="illo" style="background:linear-gradient(140deg,#7a45f0,#d99a1f);"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7.5-4.6-7.5-10A4.5 4.5 0 0 1 12 7.5 4.5 4.5 0 0 1 19.5 11c0 5.4-7.5 10-7.5 10z"/><path d="M7 12h3l1.5-2.5L14 13l1.5-1.5H19"/></svg></div>
+          <span class="kick">Module</span>
+          <h3>Behavioral care</h3>
+          <p>Full lessons, question sets, and rationales for this area are in development for the Long-Term Care track.</p>
+        </div><div class="pillar fade-up">
+          <div class="illo" style="background:linear-gradient(140deg,#7a45f0,#d99a1f);"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7.5-4.6-7.5-10A4.5 4.5 0 0 1 12 7.5 4.5 4.5 0 0 1 19.5 11c0 5.4-7.5 10-7.5 10z"/><path d="M7 12h3l1.5-2.5L14 13l1.5-1.5H19"/></svg></div>
+          <span class="kick">Module</span>
+          <h3>Regulatory &amp; documentation</h3>
+          <p>Full lessons, question sets, and rationales for this area are in development for the Long-Term Care track.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section style="background:var(--card);">
+    <div class="wrap">
+      <div class="section-head fade-up"><span class="eyebrow">How this track works</span><h2>Learn it once. <span class="hl">Keep it forever.</span></h2></div>
+      <div class="tile-grid cols-3">
+        <div class="tile fade-up"><span class="tag">Step 1</span><h3>Watch &amp; listen</h3><p>Short specialty scenes drop you onto the unit &mdash; the way a great preceptor would show you.</p></div>
+        <div class="tile fade-up"><span class="tag">Step 2</span><h3>Quiz &amp; earn</h3><p>Specialty question sets in every NGN format, with a rationale for every option &mdash; and points as you go.</p></div>
+        <div class="tile fade-up"><span class="tag">Step 3</span><h3>Review with Esi</h3><p>Esi tracks your misses in this specialty and drills them until they're strengths.</p></div>
+      </div>
+
+      <div class="section-head fade-up" style="margin-top:3rem;"><span class="eyebrow gold">Sneak peek</span><h2>A taste of the <span class="hl">question bank.</span></h2></div>
+      <div class="locked-preview fade-up" style="max-width:720px;margin:0 auto;">
+        <div class="widget blur">
+          <span class="widget-tag"><svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 3 2.7 5.7 6.3.8-4.6 4.3 1.2 6.2L12 17l-5.6 3 1.2-6.2L3 9.5l6.3-.8z"/></svg> Long-Term Care item</span>
+          <p class="prompt">Sample Long-Term Care scenario &mdash; the client presents with the classic findings your specialty is built to recognize&hellip;</p>
+          <div class="choice-grid" style="grid-template-columns:1fr;">
+            <button class="choice">Option A &mdash; a plausible distractor</button>
+            <button class="choice">Option B &mdash; the correct action</button>
+            <button class="choice">Option C &mdash; a plausible distractor</button>
+            <button class="choice">Option D &mdash; a plausible distractor</button>
+          </div>
+        </div>
+        <div class="lockmsg">
+          <div class="lockbox">
+            <span class="lc"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="5" y="10" width="14" height="10" rx="3"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg></span>
+            <b>Locked &mdash; coming soon</b>
+            <p>The Long-Term Care question bank is being written now. Join the list and we'll unlock it for you first.</p>
+            <a class="btn btn-coral" href="#notify">Notify me</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="notify" style="background:var(--bg);">
+    <div class="wrap">
+      <div class="soon-band fade-up">
+        <div>
+          <h3>Be first into Long-Term Care.</h3>
+          <p>We'll email you the moment this specialty track goes live &mdash; often with early-bird pricing from $49.</p>
+        </div>
+        <div>
+          <form class="soon-form" data-soon onsubmit="return false;">
+            <input type="email" placeholder="you@email.com" aria-label="Email">
+            <button class="btn btn-coral" type="submit">Notify me</button>
+          </form>
+          <p class="soon-note" data-soon-done hidden>&check; You're on the list &mdash; we'll be in touch.</p>
+        </div>
+      </div>
+      <p style="text-align:center;margin-top:1.4rem;font-size:0.8rem;color:var(--ink-60);">Prefer the full picture? <a href="specialties.html" style="color:var(--coral-500);font-weight:700;">Browse all 22 specialty tracks &rarr;</a></p>
+    </div>
+  </section>
+
+</div>
+<div class="mls-route" data-route="specialty-med-surg.html" hidden>
+  <div class="page-hero" style="background:linear-gradient(140deg,#8b5cff,#4d2b9e);">
+    <div class="wrap inner">
+      <span class="lesson-label" style="color:var(--gold-400);">Specialty Prep &middot; In development</span>
+      <h1 style="margin-top:0.6rem;">Medical-Surgical</h1>
+      <p>The broadest floor in nursing — build the systems-based judgment that carries every shift.</p>
+      <div class="spec-hero-tags"><span class="chip">Fluid, electrolyte &amp; acid-base</span><span class="chip">Perioperative care</span><span class="chip">Multi-system assessment</span><span class="chip">Prioritizing a full assignment</span></div>
+      <div class="hero-cta" style="margin-top:1.8rem;">
+        <a class="btn btn-coral" href="#notify">Notify me when it launches</a>
+        <a class="btn btn-ghost" href="specialties.html">All 22 specialties</a>
+      </div>
+    </div>
+  </div>
+
+  <section style="background:var(--bg);">
+    <div class="wrap">
+      <div class="section-head fade-up"><span class="eyebrow teal">What you'll master</span><h2>The Medical-Surgical <span class="hl">track.</span></h2><p>Built on the same retention science as NCLEX Complete &mdash; audio scenes, question sets, and rationales, focused on this specialty. Here's what it will cover.</p></div>
+      <div class="pillar-grid">
+        <div class="pillar fade-up">
+          <div class="illo" style="background:linear-gradient(140deg,#8b5cff,#4d2b9e);"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="4" width="14" height="17" rx="3"/><path d="M9 4.5V3h6v1.5"/><path d="M12 9v6M9 12h6"/></svg></div>
+          <span class="kick">Module</span>
+          <h3>Fluid, electrolyte &amp; acid-base</h3>
+          <p>Full lessons, question sets, and rationales for this area are in development for the Medical-Surgical track.</p>
+        </div><div class="pillar fade-up">
+          <div class="illo" style="background:linear-gradient(140deg,#8b5cff,#4d2b9e);"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="4" width="14" height="17" rx="3"/><path d="M9 4.5V3h6v1.5"/><path d="M12 9v6M9 12h6"/></svg></div>
+          <span class="kick">Module</span>
+          <h3>Perioperative care</h3>
+          <p>Full lessons, question sets, and rationales for this area are in development for the Medical-Surgical track.</p>
+        </div><div class="pillar fade-up">
+          <div class="illo" style="background:linear-gradient(140deg,#8b5cff,#4d2b9e);"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="4" width="14" height="17" rx="3"/><path d="M9 4.5V3h6v1.5"/><path d="M12 9v6M9 12h6"/></svg></div>
+          <span class="kick">Module</span>
+          <h3>Multi-system assessment</h3>
+          <p>Full lessons, question sets, and rationales for this area are in development for the Medical-Surgical track.</p>
+        </div><div class="pillar fade-up">
+          <div class="illo" style="background:linear-gradient(140deg,#8b5cff,#4d2b9e);"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="4" width="14" height="17" rx="3"/><path d="M9 4.5V3h6v1.5"/><path d="M12 9v6M9 12h6"/></svg></div>
+          <span class="kick">Module</span>
+          <h3>Prioritizing a full assignment</h3>
+          <p>Full lessons, question sets, and rationales for this area are in development for the Medical-Surgical track.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section style="background:var(--card);">
+    <div class="wrap">
+      <div class="section-head fade-up"><span class="eyebrow">How this track works</span><h2>Learn it once. <span class="hl">Keep it forever.</span></h2></div>
+      <div class="tile-grid cols-3">
+        <div class="tile fade-up"><span class="tag">Step 1</span><h3>Watch &amp; listen</h3><p>Short specialty scenes drop you onto the unit &mdash; the way a great preceptor would show you.</p></div>
+        <div class="tile fade-up"><span class="tag">Step 2</span><h3>Quiz &amp; earn</h3><p>Specialty question sets in every NGN format, with a rationale for every option &mdash; and points as you go.</p></div>
+        <div class="tile fade-up"><span class="tag">Step 3</span><h3>Review with Esi</h3><p>Esi tracks your misses in this specialty and drills them until they're strengths.</p></div>
+      </div>
+
+      <div class="section-head fade-up" style="margin-top:3rem;"><span class="eyebrow gold">Sneak peek</span><h2>A taste of the <span class="hl">question bank.</span></h2></div>
+      <div class="locked-preview fade-up" style="max-width:720px;margin:0 auto;">
+        <div class="widget blur">
+          <span class="widget-tag"><svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 3 2.7 5.7 6.3.8-4.6 4.3 1.2 6.2L12 17l-5.6 3 1.2-6.2L3 9.5l6.3-.8z"/></svg> Medical-Surgical item</span>
+          <p class="prompt">Sample Medical-Surgical scenario &mdash; the client presents with the classic findings your specialty is built to recognize&hellip;</p>
+          <div class="choice-grid" style="grid-template-columns:1fr;">
+            <button class="choice">Option A &mdash; a plausible distractor</button>
+            <button class="choice">Option B &mdash; the correct action</button>
+            <button class="choice">Option C &mdash; a plausible distractor</button>
+            <button class="choice">Option D &mdash; a plausible distractor</button>
+          </div>
+        </div>
+        <div class="lockmsg">
+          <div class="lockbox">
+            <span class="lc"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="5" y="10" width="14" height="10" rx="3"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg></span>
+            <b>Locked &mdash; coming soon</b>
+            <p>The Medical-Surgical question bank is being written now. Join the list and we'll unlock it for you first.</p>
+            <a class="btn btn-coral" href="#notify">Notify me</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="notify" style="background:var(--bg);">
+    <div class="wrap">
+      <div class="soon-band fade-up">
+        <div>
+          <h3>Be first into Medical-Surgical.</h3>
+          <p>We'll email you the moment this specialty track goes live &mdash; often with early-bird pricing from $59.</p>
+        </div>
+        <div>
+          <form class="soon-form" data-soon onsubmit="return false;">
+            <input type="email" placeholder="you@email.com" aria-label="Email">
+            <button class="btn btn-coral" type="submit">Notify me</button>
+          </form>
+          <p class="soon-note" data-soon-done hidden>&check; You're on the list &mdash; we'll be in touch.</p>
+        </div>
+      </div>
+      <p style="text-align:center;margin-top:1.4rem;font-size:0.8rem;color:var(--ink-60);">Prefer the full picture? <a href="specialties.html" style="color:var(--coral-500);font-weight:700;">Browse all 22 specialty tracks &rarr;</a></p>
+    </div>
+  </section>
+
+</div>
+<div class="mls-route" data-route="specialty-neonatal.html" hidden>
+  <div class="page-hero" style="background:linear-gradient(140deg,#2ad4c4,#4d2b9e);">
+    <div class="wrap inner">
+      <span class="lesson-label" style="color:var(--gold-400);">Specialty Prep &middot; In development</span>
+      <h1 style="margin-top:0.6rem;">Neonatal / NICU</h1>
+      <p>Grams, thermoregulation, and fragile beginnings — high-acuity newborn care.</p>
+      <div class="spec-hero-tags"><span class="chip">Newborn assessment</span><span class="chip">Thermoregulation</span><span class="chip">Preterm complications</span><span class="chip">Neonatal resuscitation</span></div>
+      <div class="hero-cta" style="margin-top:1.8rem;">
+        <a class="btn btn-coral" href="#notify">Notify me when it launches</a>
+        <a class="btn btn-ghost" href="specialties.html">All 22 specialties</a>
+      </div>
+    </div>
+  </div>
+
+  <section style="background:var(--bg);">
+    <div class="wrap">
+      <div class="section-head fade-up"><span class="eyebrow teal">What you'll master</span><h2>The Neonatal / NICU <span class="hl">track.</span></h2><p>Built on the same retention science as NCLEX Complete &mdash; audio scenes, question sets, and rationales, focused on this specialty. Here's what it will cover.</p></div>
+      <div class="pillar-grid">
+        <div class="pillar fade-up">
+          <div class="illo" style="background:linear-gradient(140deg,#2ad4c4,#4d2b9e);"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="9" r="5.5"/><circle cx="7.5" cy="4.5" r="1.8"/><circle cx="16.5" cy="4.5" r="1.8"/><path d="M9.5 15.5 8 21m6.5-5.5L16 21"/><circle cx="10" cy="8.4" r=".6" fill="currentColor"/><circle cx="14" cy="8.4" r=".6" fill="currentColor"/></svg></div>
+          <span class="kick">Module</span>
+          <h3>Newborn assessment</h3>
+          <p>Full lessons, question sets, and rationales for this area are in development for the Neonatal / NICU track.</p>
+        </div><div class="pillar fade-up">
+          <div class="illo" style="background:linear-gradient(140deg,#2ad4c4,#4d2b9e);"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="9" r="5.5"/><circle cx="7.5" cy="4.5" r="1.8"/><circle cx="16.5" cy="4.5" r="1.8"/><path d="M9.5 15.5 8 21m6.5-5.5L16 21"/><circle cx="10" cy="8.4" r=".6" fill="currentColor"/><circle cx="14" cy="8.4" r=".6" fill="currentColor"/></svg></div>
+          <span class="kick">Module</span>
+          <h3>Thermoregulation</h3>
+          <p>Full lessons, question sets, and rationales for this area are in development for the Neonatal / NICU track.</p>
+        </div><div class="pillar fade-up">
+          <div class="illo" style="background:linear-gradient(140deg,#2ad4c4,#4d2b9e);"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="9" r="5.5"/><circle cx="7.5" cy="4.5" r="1.8"/><circle cx="16.5" cy="4.5" r="1.8"/><path d="M9.5 15.5 8 21m6.5-5.5L16 21"/><circle cx="10" cy="8.4" r=".6" fill="currentColor"/><circle cx="14" cy="8.4" r=".6" fill="currentColor"/></svg></div>
+          <span class="kick">Module</span>
+          <h3>Preterm complications</h3>
+          <p>Full lessons, question sets, and rationales for this area are in development for the Neonatal / NICU track.</p>
+        </div><div class="pillar fade-up">
+          <div class="illo" style="background:linear-gradient(140deg,#2ad4c4,#4d2b9e);"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="9" r="5.5"/><circle cx="7.5" cy="4.5" r="1.8"/><circle cx="16.5" cy="4.5" r="1.8"/><path d="M9.5 15.5 8 21m6.5-5.5L16 21"/><circle cx="10" cy="8.4" r=".6" fill="currentColor"/><circle cx="14" cy="8.4" r=".6" fill="currentColor"/></svg></div>
+          <span class="kick">Module</span>
+          <h3>Neonatal resuscitation</h3>
+          <p>Full lessons, question sets, and rationales for this area are in development for the Neonatal / NICU track.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section style="background:var(--card);">
+    <div class="wrap">
+      <div class="section-head fade-up"><span class="eyebrow">How this track works</span><h2>Learn it once. <span class="hl">Keep it forever.</span></h2></div>
+      <div class="tile-grid cols-3">
+        <div class="tile fade-up"><span class="tag">Step 1</span><h3>Watch &amp; listen</h3><p>Short specialty scenes drop you onto the unit &mdash; the way a great preceptor would show you.</p></div>
+        <div class="tile fade-up"><span class="tag">Step 2</span><h3>Quiz &amp; earn</h3><p>Specialty question sets in every NGN format, with a rationale for every option &mdash; and points as you go.</p></div>
+        <div class="tile fade-up"><span class="tag">Step 3</span><h3>Review with Esi</h3><p>Esi tracks your misses in this specialty and drills them until they're strengths.</p></div>
+      </div>
+
+      <div class="section-head fade-up" style="margin-top:3rem;"><span class="eyebrow gold">Sneak peek</span><h2>A taste of the <span class="hl">question bank.</span></h2></div>
+      <div class="locked-preview fade-up" style="max-width:720px;margin:0 auto;">
+        <div class="widget blur">
+          <span class="widget-tag"><svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 3 2.7 5.7 6.3.8-4.6 4.3 1.2 6.2L12 17l-5.6 3 1.2-6.2L3 9.5l6.3-.8z"/></svg> Neonatal / NICU item</span>
+          <p class="prompt">Sample Neonatal / NICU scenario &mdash; the client presents with the classic findings your specialty is built to recognize&hellip;</p>
+          <div class="choice-grid" style="grid-template-columns:1fr;">
+            <button class="choice">Option A &mdash; a plausible distractor</button>
+            <button class="choice">Option B &mdash; the correct action</button>
+            <button class="choice">Option C &mdash; a plausible distractor</button>
+            <button class="choice">Option D &mdash; a plausible distractor</button>
+          </div>
+        </div>
+        <div class="lockmsg">
+          <div class="lockbox">
+            <span class="lc"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="5" y="10" width="14" height="10" rx="3"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg></span>
+            <b>Locked &mdash; coming soon</b>
+            <p>The Neonatal / NICU question bank is being written now. Join the list and we'll unlock it for you first.</p>
+            <a class="btn btn-coral" href="#notify">Notify me</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="notify" style="background:var(--bg);">
+    <div class="wrap">
+      <div class="soon-band fade-up">
+        <div>
+          <h3>Be first into Neonatal / NICU.</h3>
+          <p>We'll email you the moment this specialty track goes live &mdash; often with early-bird pricing from $79.</p>
+        </div>
+        <div>
+          <form class="soon-form" data-soon onsubmit="return false;">
+            <input type="email" placeholder="you@email.com" aria-label="Email">
+            <button class="btn btn-coral" type="submit">Notify me</button>
+          </form>
+          <p class="soon-note" data-soon-done hidden>&check; You're on the list &mdash; we'll be in touch.</p>
+        </div>
+      </div>
+      <p style="text-align:center;margin-top:1.4rem;font-size:0.8rem;color:var(--ink-60);">Prefer the full picture? <a href="specialties.html" style="color:var(--coral-500);font-weight:700;">Browse all 22 specialty tracks &rarr;</a></p>
+    </div>
+  </section>
+
+</div>
+<div class="mls-route" data-route="specialty-occupational.html" hidden>
+  <div class="page-hero" style="background:linear-gradient(140deg,#14b8a8,#4d2b9e);">
+    <div class="wrap inner">
+      <span class="lesson-label" style="color:var(--gold-400);">Specialty Prep &middot; In development</span>
+      <h1 style="margin-top:0.6rem;">Occupational Health</h1>
+      <p>Workplace wellness and injury — prevention, assessment, and return-to-work.</p>
+      <div class="spec-hero-tags"><span class="chip">Workplace injury care</span><span class="chip">Exposure &amp; prevention</span><span class="chip">Ergonomics</span><span class="chip">Return-to-work planning</span></div>
+      <div class="hero-cta" style="margin-top:1.8rem;">
+        <a class="btn btn-coral" href="#notify">Notify me when it launches</a>
+        <a class="btn btn-ghost" href="specialties.html">All 22 specialties</a>
+      </div>
+    </div>
+  </div>
+
+  <section style="background:var(--bg);">
+    <div class="wrap">
+      <div class="section-head fade-up"><span class="eyebrow teal">What you'll master</span><h2>The Occupational Health <span class="hl">track.</span></h2><p>Built on the same retention science as NCLEX Complete &mdash; audio scenes, question sets, and rationales, focused on this specialty. Here's what it will cover.</p></div>
+      <div class="pillar-grid">
+        <div class="pillar fade-up">
+          <div class="illo" style="background:linear-gradient(140deg,#14b8a8,#4d2b9e);"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l8 3v6c0 4.5-3.2 7.6-8 9-4.8-1.4-8-4.5-8-9V6z"/><path d="m8.8 12 2.2 2.2 4.2-4.4"/></svg></div>
+          <span class="kick">Module</span>
+          <h3>Workplace injury care</h3>
+          <p>Full lessons, question sets, and rationales for this area are in development for the Occupational Health track.</p>
+        </div><div class="pillar fade-up">
+          <div class="illo" style="background:linear-gradient(140deg,#14b8a8,#4d2b9e);"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l8 3v6c0 4.5-3.2 7.6-8 9-4.8-1.4-8-4.5-8-9V6z"/><path d="m8.8 12 2.2 2.2 4.2-4.4"/></svg></div>
+          <span class="kick">Module</span>
+          <h3>Exposure &amp; prevention</h3>
+          <p>Full lessons, question sets, and rationales for this area are in development for the Occupational Health track.</p>
+        </div><div class="pillar fade-up">
+          <div class="illo" style="background:linear-gradient(140deg,#14b8a8,#4d2b9e);"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l8 3v6c0 4.5-3.2 7.6-8 9-4.8-1.4-8-4.5-8-9V6z"/><path d="m8.8 12 2.2 2.2 4.2-4.4"/></svg></div>
+          <span class="kick">Module</span>
+          <h3>Ergonomics</h3>
+          <p>Full lessons, question sets, and rationales for this area are in development for the Occupational Health track.</p>
+        </div><div class="pillar fade-up">
+          <div class="illo" style="background:linear-gradient(140deg,#14b8a8,#4d2b9e);"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l8 3v6c0 4.5-3.2 7.6-8 9-4.8-1.4-8-4.5-8-9V6z"/><path d="m8.8 12 2.2 2.2 4.2-4.4"/></svg></div>
+          <span class="kick">Module</span>
+          <h3>Return-to-work planning</h3>
+          <p>Full lessons, question sets, and rationales for this area are in development for the Occupational Health track.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section style="background:var(--card);">
+    <div class="wrap">
+      <div class="section-head fade-up"><span class="eyebrow">How this track works</span><h2>Learn it once. <span class="hl">Keep it forever.</span></h2></div>
+      <div class="tile-grid cols-3">
+        <div class="tile fade-up"><span class="tag">Step 1</span><h3>Watch &amp; listen</h3><p>Short specialty scenes drop you onto the unit &mdash; the way a great preceptor would show you.</p></div>
+        <div class="tile fade-up"><span class="tag">Step 2</span><h3>Quiz &amp; earn</h3><p>Specialty question sets in every NGN format, with a rationale for every option &mdash; and points as you go.</p></div>
+        <div class="tile fade-up"><span class="tag">Step 3</span><h3>Review with Esi</h3><p>Esi tracks your misses in this specialty and drills them until they're strengths.</p></div>
+      </div>
+
+      <div class="section-head fade-up" style="margin-top:3rem;"><span class="eyebrow gold">Sneak peek</span><h2>A taste of the <span class="hl">question bank.</span></h2></div>
+      <div class="locked-preview fade-up" style="max-width:720px;margin:0 auto;">
+        <div class="widget blur">
+          <span class="widget-tag"><svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 3 2.7 5.7 6.3.8-4.6 4.3 1.2 6.2L12 17l-5.6 3 1.2-6.2L3 9.5l6.3-.8z"/></svg> Occupational Health item</span>
+          <p class="prompt">Sample Occupational Health scenario &mdash; the client presents with the classic findings your specialty is built to recognize&hellip;</p>
+          <div class="choice-grid" style="grid-template-columns:1fr;">
+            <button class="choice">Option A &mdash; a plausible distractor</button>
+            <button class="choice">Option B &mdash; the correct action</button>
+            <button class="choice">Option C &mdash; a plausible distractor</button>
+            <button class="choice">Option D &mdash; a plausible distractor</button>
+          </div>
+        </div>
+        <div class="lockmsg">
+          <div class="lockbox">
+            <span class="lc"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="5" y="10" width="14" height="10" rx="3"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg></span>
+            <b>Locked &mdash; coming soon</b>
+            <p>The Occupational Health question bank is being written now. Join the list and we'll unlock it for you first.</p>
+            <a class="btn btn-coral" href="#notify">Notify me</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="notify" style="background:var(--bg);">
+    <div class="wrap">
+      <div class="soon-band fade-up">
+        <div>
+          <h3>Be first into Occupational Health.</h3>
+          <p>We'll email you the moment this specialty track goes live &mdash; often with early-bird pricing from $49.</p>
+        </div>
+        <div>
+          <form class="soon-form" data-soon onsubmit="return false;">
+            <input type="email" placeholder="you@email.com" aria-label="Email">
+            <button class="btn btn-coral" type="submit">Notify me</button>
+          </form>
+          <p class="soon-note" data-soon-done hidden>&check; You're on the list &mdash; we'll be in touch.</p>
+        </div>
+      </div>
+      <p style="text-align:center;margin-top:1.4rem;font-size:0.8rem;color:var(--ink-60);">Prefer the full picture? <a href="specialties.html" style="color:var(--coral-500);font-weight:700;">Browse all 22 specialty tracks &rarr;</a></p>
+    </div>
+  </section>
+
+</div>
+<div class="mls-route" data-route="specialty-oncology.html" hidden>
+  <div class="page-hero" style="background:linear-gradient(140deg,#7a45f0,#d99a1f);">
+    <div class="wrap inner">
+      <span class="lesson-label" style="color:var(--gold-400);">Specialty Prep &middot; In development</span>
+      <h1 style="margin-top:0.6rem;">Oncology</h1>
+      <p>Chemo safety, neutropenia, and hard conversations — precise, compassionate care.</p>
+      <div class="spec-hero-tags"><span class="chip">Chemotherapy safety</span><span class="chip">Neutropenic precautions</span><span class="chip">Oncologic emergencies</span><span class="chip">Symptom &amp; pain management</span></div>
+      <div class="hero-cta" style="margin-top:1.8rem;">
+        <a class="btn btn-coral" href="#notify">Notify me when it launches</a>
+        <a class="btn btn-ghost" href="specialties.html">All 22 specialties</a>
+      </div>
+    </div>
+  </div>
+
+  <section style="background:var(--bg);">
+    <div class="wrap">
+      <div class="section-head fade-up"><span class="eyebrow teal">What you'll master</span><h2>The Oncology <span class="hl">track.</span></h2><p>Built on the same retention science as NCLEX Complete &mdash; audio scenes, question sets, and rationales, focused on this specialty. Here's what it will cover.</p></div>
+      <div class="pillar-grid">
+        <div class="pillar fade-up">
+          <div class="illo" style="background:linear-gradient(140deg,#7a45f0,#d99a1f);"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l8 3v6c0 4.5-3.2 7.6-8 9-4.8-1.4-8-4.5-8-9V6z"/><path d="m8.8 12 2.2 2.2 4.2-4.4"/></svg></div>
+          <span class="kick">Module</span>
+          <h3>Chemotherapy safety</h3>
+          <p>Full lessons, question sets, and rationales for this area are in development for the Oncology track.</p>
+        </div><div class="pillar fade-up">
+          <div class="illo" style="background:linear-gradient(140deg,#7a45f0,#d99a1f);"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l8 3v6c0 4.5-3.2 7.6-8 9-4.8-1.4-8-4.5-8-9V6z"/><path d="m8.8 12 2.2 2.2 4.2-4.4"/></svg></div>
+          <span class="kick">Module</span>
+          <h3>Neutropenic precautions</h3>
+          <p>Full lessons, question sets, and rationales for this area are in development for the Oncology track.</p>
+        </div><div class="pillar fade-up">
+          <div class="illo" style="background:linear-gradient(140deg,#7a45f0,#d99a1f);"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l8 3v6c0 4.5-3.2 7.6-8 9-4.8-1.4-8-4.5-8-9V6z"/><path d="m8.8 12 2.2 2.2 4.2-4.4"/></svg></div>
+          <span class="kick">Module</span>
+          <h3>Oncologic emergencies</h3>
+          <p>Full lessons, question sets, and rationales for this area are in development for the Oncology track.</p>
+        </div><div class="pillar fade-up">
+          <div class="illo" style="background:linear-gradient(140deg,#7a45f0,#d99a1f);"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l8 3v6c0 4.5-3.2 7.6-8 9-4.8-1.4-8-4.5-8-9V6z"/><path d="m8.8 12 2.2 2.2 4.2-4.4"/></svg></div>
+          <span class="kick">Module</span>
+          <h3>Symptom &amp; pain management</h3>
+          <p>Full lessons, question sets, and rationales for this area are in development for the Oncology track.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section style="background:var(--card);">
+    <div class="wrap">
+      <div class="section-head fade-up"><span class="eyebrow">How this track works</span><h2>Learn it once. <span class="hl">Keep it forever.</span></h2></div>
+      <div class="tile-grid cols-3">
+        <div class="tile fade-up"><span class="tag">Step 1</span><h3>Watch &amp; listen</h3><p>Short specialty scenes drop you onto the unit &mdash; the way a great preceptor would show you.</p></div>
+        <div class="tile fade-up"><span class="tag">Step 2</span><h3>Quiz &amp; earn</h3><p>Specialty question sets in every NGN format, with a rationale for every option &mdash; and points as you go.</p></div>
+        <div class="tile fade-up"><span class="tag">Step 3</span><h3>Review with Esi</h3><p>Esi tracks your misses in this specialty and drills them until they're strengths.</p></div>
+      </div>
+
+      <div class="section-head fade-up" style="margin-top:3rem;"><span class="eyebrow gold">Sneak peek</span><h2>A taste of the <span class="hl">question bank.</span></h2></div>
+      <div class="locked-preview fade-up" style="max-width:720px;margin:0 auto;">
+        <div class="widget blur">
+          <span class="widget-tag"><svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 3 2.7 5.7 6.3.8-4.6 4.3 1.2 6.2L12 17l-5.6 3 1.2-6.2L3 9.5l6.3-.8z"/></svg> Oncology item</span>
+          <p class="prompt">Sample Oncology scenario &mdash; the client presents with the classic findings your specialty is built to recognize&hellip;</p>
+          <div class="choice-grid" style="grid-template-columns:1fr;">
+            <button class="choice">Option A &mdash; a plausible distractor</button>
+            <button class="choice">Option B &mdash; the correct action</button>
+            <button class="choice">Option C &mdash; a plausible distractor</button>
+            <button class="choice">Option D &mdash; a plausible distractor</button>
+          </div>
+        </div>
+        <div class="lockmsg">
+          <div class="lockbox">
+            <span class="lc"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="5" y="10" width="14" height="10" rx="3"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg></span>
+            <b>Locked &mdash; coming soon</b>
+            <p>The Oncology question bank is being written now. Join the list and we'll unlock it for you first.</p>
+            <a class="btn btn-coral" href="#notify">Notify me</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="notify" style="background:var(--bg);">
+    <div class="wrap">
+      <div class="soon-band fade-up">
+        <div>
+          <h3>Be first into Oncology.</h3>
+          <p>We'll email you the moment this specialty track goes live &mdash; often with early-bird pricing from $69.</p>
+        </div>
+        <div>
+          <form class="soon-form" data-soon onsubmit="return false;">
+            <input type="email" placeholder="you@email.com" aria-label="Email">
+            <button class="btn btn-coral" type="submit">Notify me</button>
+          </form>
+          <p class="soon-note" data-soon-done hidden>&check; You're on the list &mdash; we'll be in touch.</p>
+        </div>
+      </div>
+      <p style="text-align:center;margin-top:1.4rem;font-size:0.8rem;color:var(--ink-60);">Prefer the full picture? <a href="specialties.html" style="color:var(--coral-500);font-weight:700;">Browse all 22 specialty tracks &rarr;</a></p>
+    </div>
+  </section>
+
+</div>
+<div class="mls-route" data-route="specialty-pacu.html" hidden>
+  <div class="page-hero" style="background:linear-gradient(140deg,#8b5cff,#2ad4c4);">
+    <div class="wrap inner">
+      <span class="lesson-label" style="color:var(--gold-400);">Specialty Prep &middot; In development</span>
+      <h1 style="margin-top:0.6rem;">PACU / Post-Anesthesia</h1>
+      <p>The riskiest recovery minutes — airway, arousal, and complications after anesthesia.</p>
+      <div class="spec-hero-tags"><span class="chip">Airway &amp; emergence</span><span class="chip">Anesthesia complications</span><span class="chip">Aldrete scoring</span><span class="chip">Pain &amp; nausea control</span></div>
+      <div class="hero-cta" style="margin-top:1.8rem;">
+        <a class="btn btn-coral" href="#notify">Notify me when it launches</a>
+        <a class="btn btn-ghost" href="specialties.html">All 22 specialties</a>
+      </div>
+    </div>
+  </div>
+
+  <section style="background:var(--bg);">
+    <div class="wrap">
+      <div class="section-head fade-up"><span class="eyebrow teal">What you'll master</span><h2>The PACU / Post-Anesthesia <span class="hl">track.</span></h2><p>Built on the same retention science as NCLEX Complete &mdash; audio scenes, question sets, and rationales, focused on this specialty. Here's what it will cover.</p></div>
+      <div class="pillar-grid">
+        <div class="pillar fade-up">
+          <div class="illo" style="background:linear-gradient(140deg,#8b5cff,#2ad4c4);"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="13" rx="3"/><path d="M6 10.5h3l1.5-3 2.5 5 1.5-2h3.5"/><path d="M9 21h6"/></svg></div>
+          <span class="kick">Module</span>
+          <h3>Airway &amp; emergence</h3>
+          <p>Full lessons, question sets, and rationales for this area are in development for the PACU / Post-Anesthesia track.</p>
+        </div><div class="pillar fade-up">
+          <div class="illo" style="background:linear-gradient(140deg,#8b5cff,#2ad4c4);"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="13" rx="3"/><path d="M6 10.5h3l1.5-3 2.5 5 1.5-2h3.5"/><path d="M9 21h6"/></svg></div>
+          <span class="kick">Module</span>
+          <h3>Anesthesia complications</h3>
+          <p>Full lessons, question sets, and rationales for this area are in development for the PACU / Post-Anesthesia track.</p>
+        </div><div class="pillar fade-up">
+          <div class="illo" style="background:linear-gradient(140deg,#8b5cff,#2ad4c4);"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="13" rx="3"/><path d="M6 10.5h3l1.5-3 2.5 5 1.5-2h3.5"/><path d="M9 21h6"/></svg></div>
+          <span class="kick">Module</span>
+          <h3>Aldrete scoring</h3>
+          <p>Full lessons, question sets, and rationales for this area are in development for the PACU / Post-Anesthesia track.</p>
+        </div><div class="pillar fade-up">
+          <div class="illo" style="background:linear-gradient(140deg,#8b5cff,#2ad4c4);"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="13" rx="3"/><path d="M6 10.5h3l1.5-3 2.5 5 1.5-2h3.5"/><path d="M9 21h6"/></svg></div>
+          <span class="kick">Module</span>
+          <h3>Pain &amp; nausea control</h3>
+          <p>Full lessons, question sets, and rationales for this area are in development for the PACU / Post-Anesthesia track.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section style="background:var(--card);">
+    <div class="wrap">
+      <div class="section-head fade-up"><span class="eyebrow">How this track works</span><h2>Learn it once. <span class="hl">Keep it forever.</span></h2></div>
+      <div class="tile-grid cols-3">
+        <div class="tile fade-up"><span class="tag">Step 1</span><h3>Watch &amp; listen</h3><p>Short specialty scenes drop you onto the unit &mdash; the way a great preceptor would show you.</p></div>
+        <div class="tile fade-up"><span class="tag">Step 2</span><h3>Quiz &amp; earn</h3><p>Specialty question sets in every NGN format, with a rationale for every option &mdash; and points as you go.</p></div>
+        <div class="tile fade-up"><span class="tag">Step 3</span><h3>Review with Esi</h3><p>Esi tracks your misses in this specialty and drills them until they're strengths.</p></div>
+      </div>
+
+      <div class="section-head fade-up" style="margin-top:3rem;"><span class="eyebrow gold">Sneak peek</span><h2>A taste of the <span class="hl">question bank.</span></h2></div>
+      <div class="locked-preview fade-up" style="max-width:720px;margin:0 auto;">
+        <div class="widget blur">
+          <span class="widget-tag"><svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 3 2.7 5.7 6.3.8-4.6 4.3 1.2 6.2L12 17l-5.6 3 1.2-6.2L3 9.5l6.3-.8z"/></svg> PACU / Post-Anesthesia item</span>
+          <p class="prompt">Sample PACU / Post-Anesthesia scenario &mdash; the client presents with the classic findings your specialty is built to recognize&hellip;</p>
+          <div class="choice-grid" style="grid-template-columns:1fr;">
+            <button class="choice">Option A &mdash; a plausible distractor</button>
+            <button class="choice">Option B &mdash; the correct action</button>
+            <button class="choice">Option C &mdash; a plausible distractor</button>
+            <button class="choice">Option D &mdash; a plausible distractor</button>
+          </div>
+        </div>
+        <div class="lockmsg">
+          <div class="lockbox">
+            <span class="lc"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="5" y="10" width="14" height="10" rx="3"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg></span>
+            <b>Locked &mdash; coming soon</b>
+            <p>The PACU / Post-Anesthesia question bank is being written now. Join the list and we'll unlock it for you first.</p>
+            <a class="btn btn-coral" href="#notify">Notify me</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="notify" style="background:var(--bg);">
+    <div class="wrap">
+      <div class="soon-band fade-up">
+        <div>
+          <h3>Be first into PACU / Post-Anesthesia.</h3>
+          <p>We'll email you the moment this specialty track goes live &mdash; often with early-bird pricing from $59.</p>
+        </div>
+        <div>
+          <form class="soon-form" data-soon onsubmit="return false;">
+            <input type="email" placeholder="you@email.com" aria-label="Email">
+            <button class="btn btn-coral" type="submit">Notify me</button>
+          </form>
+          <p class="soon-note" data-soon-done hidden>&check; You're on the list &mdash; we'll be in touch.</p>
+        </div>
+      </div>
+      <p style="text-align:center;margin-top:1.4rem;font-size:0.8rem;color:var(--ink-60);">Prefer the full picture? <a href="specialties.html" style="color:var(--coral-500);font-weight:700;">Browse all 22 specialty tracks &rarr;</a></p>
+    </div>
+  </section>
+
+</div>
+<div class="mls-route" data-route="specialty-pediatrics.html" hidden>
+  <div class="page-hero" style="background:linear-gradient(140deg,#ffc23d,#8b5cff);">
+    <div class="wrap inner">
+      <span class="lesson-label" style="color:var(--gold-400);">Specialty Prep &middot; In development</span>
+      <h1 style="margin-top:0.6rem;">Pediatrics</h1>
+      <p>Weight-based everything and growing bodies — nursing the smallest patients safely.</p>
+      <div class="spec-hero-tags"><span class="chip">Growth &amp; development</span><span class="chip">Pediatric dosing safety</span><span class="chip">Respiratory illnesses</span><span class="chip">Fluid &amp; dehydration</span></div>
+      <div class="hero-cta" style="margin-top:1.8rem;">
+        <a class="btn btn-coral" href="#notify">Notify me when it launches</a>
+        <a class="btn btn-ghost" href="specialties.html">All 22 specialties</a>
+      </div>
+    </div>
+  </div>
+
+  <section style="background:var(--bg);">
+    <div class="wrap">
+      <div class="section-head fade-up"><span class="eyebrow teal">What you'll master</span><h2>The Pediatrics <span class="hl">track.</span></h2><p>Built on the same retention science as NCLEX Complete &mdash; audio scenes, question sets, and rationales, focused on this specialty. Here's what it will cover.</p></div>
+      <div class="pillar-grid">
+        <div class="pillar fade-up">
+          <div class="illo" style="background:linear-gradient(140deg,#ffc23d,#8b5cff);"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="9" r="5.5"/><circle cx="7.5" cy="4.5" r="1.8"/><circle cx="16.5" cy="4.5" r="1.8"/><path d="M9.5 15.5 8 21m6.5-5.5L16 21"/><circle cx="10" cy="8.4" r=".6" fill="currentColor"/><circle cx="14" cy="8.4" r=".6" fill="currentColor"/></svg></div>
+          <span class="kick">Module</span>
+          <h3>Growth &amp; development</h3>
+          <p>Full lessons, question sets, and rationales for this area are in development for the Pediatrics track.</p>
+        </div><div class="pillar fade-up">
+          <div class="illo" style="background:linear-gradient(140deg,#ffc23d,#8b5cff);"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="9" r="5.5"/><circle cx="7.5" cy="4.5" r="1.8"/><circle cx="16.5" cy="4.5" r="1.8"/><path d="M9.5 15.5 8 21m6.5-5.5L16 21"/><circle cx="10" cy="8.4" r=".6" fill="currentColor"/><circle cx="14" cy="8.4" r=".6" fill="currentColor"/></svg></div>
+          <span class="kick">Module</span>
+          <h3>Pediatric dosing safety</h3>
+          <p>Full lessons, question sets, and rationales for this area are in development for the Pediatrics track.</p>
+        </div><div class="pillar fade-up">
+          <div class="illo" style="background:linear-gradient(140deg,#ffc23d,#8b5cff);"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="9" r="5.5"/><circle cx="7.5" cy="4.5" r="1.8"/><circle cx="16.5" cy="4.5" r="1.8"/><path d="M9.5 15.5 8 21m6.5-5.5L16 21"/><circle cx="10" cy="8.4" r=".6" fill="currentColor"/><circle cx="14" cy="8.4" r=".6" fill="currentColor"/></svg></div>
+          <span class="kick">Module</span>
+          <h3>Respiratory illnesses</h3>
+          <p>Full lessons, question sets, and rationales for this area are in development for the Pediatrics track.</p>
+        </div><div class="pillar fade-up">
+          <div class="illo" style="background:linear-gradient(140deg,#ffc23d,#8b5cff);"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="9" r="5.5"/><circle cx="7.5" cy="4.5" r="1.8"/><circle cx="16.5" cy="4.5" r="1.8"/><path d="M9.5 15.5 8 21m6.5-5.5L16 21"/><circle cx="10" cy="8.4" r=".6" fill="currentColor"/><circle cx="14" cy="8.4" r=".6" fill="currentColor"/></svg></div>
+          <span class="kick">Module</span>
+          <h3>Fluid &amp; dehydration</h3>
+          <p>Full lessons, question sets, and rationales for this area are in development for the Pediatrics track.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section style="background:var(--card);">
+    <div class="wrap">
+      <div class="section-head fade-up"><span class="eyebrow">How this track works</span><h2>Learn it once. <span class="hl">Keep it forever.</span></h2></div>
+      <div class="tile-grid cols-3">
+        <div class="tile fade-up"><span class="tag">Step 1</span><h3>Watch &amp; listen</h3><p>Short specialty scenes drop you onto the unit &mdash; the way a great preceptor would show you.</p></div>
+        <div class="tile fade-up"><span class="tag">Step 2</span><h3>Quiz &amp; earn</h3><p>Specialty question sets in every NGN format, with a rationale for every option &mdash; and points as you go.</p></div>
+        <div class="tile fade-up"><span class="tag">Step 3</span><h3>Review with Esi</h3><p>Esi tracks your misses in this specialty and drills them until they're strengths.</p></div>
+      </div>
+
+      <div class="section-head fade-up" style="margin-top:3rem;"><span class="eyebrow gold">Sneak peek</span><h2>A taste of the <span class="hl">question bank.</span></h2></div>
+      <div class="locked-preview fade-up" style="max-width:720px;margin:0 auto;">
+        <div class="widget blur">
+          <span class="widget-tag"><svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 3 2.7 5.7 6.3.8-4.6 4.3 1.2 6.2L12 17l-5.6 3 1.2-6.2L3 9.5l6.3-.8z"/></svg> Pediatrics item</span>
+          <p class="prompt">Sample Pediatrics scenario &mdash; the client presents with the classic findings your specialty is built to recognize&hellip;</p>
+          <div class="choice-grid" style="grid-template-columns:1fr;">
+            <button class="choice">Option A &mdash; a plausible distractor</button>
+            <button class="choice">Option B &mdash; the correct action</button>
+            <button class="choice">Option C &mdash; a plausible distractor</button>
+            <button class="choice">Option D &mdash; a plausible distractor</button>
+          </div>
+        </div>
+        <div class="lockmsg">
+          <div class="lockbox">
+            <span class="lc"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="5" y="10" width="14" height="10" rx="3"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg></span>
+            <b>Locked &mdash; coming soon</b>
+            <p>The Pediatrics question bank is being written now. Join the list and we'll unlock it for you first.</p>
+            <a class="btn btn-coral" href="#notify">Notify me</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="notify" style="background:var(--bg);">
+    <div class="wrap">
+      <div class="soon-band fade-up">
+        <div>
+          <h3>Be first into Pediatrics.</h3>
+          <p>We'll email you the moment this specialty track goes live &mdash; often with early-bird pricing from $59.</p>
+        </div>
+        <div>
+          <form class="soon-form" data-soon onsubmit="return false;">
+            <input type="email" placeholder="you@email.com" aria-label="Email">
+            <button class="btn btn-coral" type="submit">Notify me</button>
+          </form>
+          <p class="soon-note" data-soon-done hidden>&check; You're on the list &mdash; we'll be in touch.</p>
+        </div>
+      </div>
+      <p style="text-align:center;margin-top:1.4rem;font-size:0.8rem;color:var(--ink-60);">Prefer the full picture? <a href="specialties.html" style="color:var(--coral-500);font-weight:700;">Browse all 22 specialty tracks &rarr;</a></p>
+    </div>
+  </section>
+
+</div>
+<div class="mls-route" data-route="specialty-perioperative.html" hidden>
+  <div class="page-hero" style="background:linear-gradient(140deg,#4d2b9e,#14b8a8);">
+    <div class="wrap inner">
+      <span class="lesson-label" style="color:var(--gold-400);">Specialty Prep &middot; In development</span>
+      <h1 style="margin-top:0.6rem;">OR / Perioperative</h1>
+      <p>Sterile fields, counts, and time-outs — safety from pre-op to hand-off.</p>
+      <div class="spec-hero-tags"><span class="chip">Surgical asepsis</span><span class="chip">Pre-op preparation</span><span class="chip">Intra-op safety &amp; counts</span><span class="chip">Handoff to PACU</span></div>
+      <div class="hero-cta" style="margin-top:1.8rem;">
+        <a class="btn btn-coral" href="#notify">Notify me when it launches</a>
+        <a class="btn btn-ghost" href="specialties.html">All 22 specialties</a>
+      </div>
+    </div>
+  </div>
+
+  <section style="background:var(--bg);">
+    <div class="wrap">
+      <div class="section-head fade-up"><span class="eyebrow teal">What you'll master</span><h2>The OR / Perioperative <span class="hl">track.</span></h2><p>Built on the same retention science as NCLEX Complete &mdash; audio scenes, question sets, and rationales, focused on this specialty. Here's what it will cover.</p></div>
+      <div class="pillar-grid">
+        <div class="pillar fade-up">
+          <div class="illo" style="background:linear-gradient(140deg,#4d2b9e,#14b8a8);"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="4" width="14" height="17" rx="3"/><path d="M9 4.5V3h6v1.5"/><path d="M12 9v6M9 12h6"/></svg></div>
+          <span class="kick">Module</span>
+          <h3>Surgical asepsis</h3>
+          <p>Full lessons, question sets, and rationales for this area are in development for the OR / Perioperative track.</p>
+        </div><div class="pillar fade-up">
+          <div class="illo" style="background:linear-gradient(140deg,#4d2b9e,#14b8a8);"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="4" width="14" height="17" rx="3"/><path d="M9 4.5V3h6v1.5"/><path d="M12 9v6M9 12h6"/></svg></div>
+          <span class="kick">Module</span>
+          <h3>Pre-op preparation</h3>
+          <p>Full lessons, question sets, and rationales for this area are in development for the OR / Perioperative track.</p>
+        </div><div class="pillar fade-up">
+          <div class="illo" style="background:linear-gradient(140deg,#4d2b9e,#14b8a8);"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="4" width="14" height="17" rx="3"/><path d="M9 4.5V3h6v1.5"/><path d="M12 9v6M9 12h6"/></svg></div>
+          <span class="kick">Module</span>
+          <h3>Intra-op safety &amp; counts</h3>
+          <p>Full lessons, question sets, and rationales for this area are in development for the OR / Perioperative track.</p>
+        </div><div class="pillar fade-up">
+          <div class="illo" style="background:linear-gradient(140deg,#4d2b9e,#14b8a8);"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="4" width="14" height="17" rx="3"/><path d="M9 4.5V3h6v1.5"/><path d="M12 9v6M9 12h6"/></svg></div>
+          <span class="kick">Module</span>
+          <h3>Handoff to PACU</h3>
+          <p>Full lessons, question sets, and rationales for this area are in development for the OR / Perioperative track.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section style="background:var(--card);">
+    <div class="wrap">
+      <div class="section-head fade-up"><span class="eyebrow">How this track works</span><h2>Learn it once. <span class="hl">Keep it forever.</span></h2></div>
+      <div class="tile-grid cols-3">
+        <div class="tile fade-up"><span class="tag">Step 1</span><h3>Watch &amp; listen</h3><p>Short specialty scenes drop you onto the unit &mdash; the way a great preceptor would show you.</p></div>
+        <div class="tile fade-up"><span class="tag">Step 2</span><h3>Quiz &amp; earn</h3><p>Specialty question sets in every NGN format, with a rationale for every option &mdash; and points as you go.</p></div>
+        <div class="tile fade-up"><span class="tag">Step 3</span><h3>Review with Esi</h3><p>Esi tracks your misses in this specialty and drills them until they're strengths.</p></div>
+      </div>
+
+      <div class="section-head fade-up" style="margin-top:3rem;"><span class="eyebrow gold">Sneak peek</span><h2>A taste of the <span class="hl">question bank.</span></h2></div>
+      <div class="locked-preview fade-up" style="max-width:720px;margin:0 auto;">
+        <div class="widget blur">
+          <span class="widget-tag"><svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 3 2.7 5.7 6.3.8-4.6 4.3 1.2 6.2L12 17l-5.6 3 1.2-6.2L3 9.5l6.3-.8z"/></svg> OR / Perioperative item</span>
+          <p class="prompt">Sample OR / Perioperative scenario &mdash; the client presents with the classic findings your specialty is built to recognize&hellip;</p>
+          <div class="choice-grid" style="grid-template-columns:1fr;">
+            <button class="choice">Option A &mdash; a plausible distractor</button>
+            <button class="choice">Option B &mdash; the correct action</button>
+            <button class="choice">Option C &mdash; a plausible distractor</button>
+            <button class="choice">Option D &mdash; a plausible distractor</button>
+          </div>
+        </div>
+        <div class="lockmsg">
+          <div class="lockbox">
+            <span class="lc"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="5" y="10" width="14" height="10" rx="3"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg></span>
+            <b>Locked &mdash; coming soon</b>
+            <p>The OR / Perioperative question bank is being written now. Join the list and we'll unlock it for you first.</p>
+            <a class="btn btn-coral" href="#notify">Notify me</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="notify" style="background:var(--bg);">
+    <div class="wrap">
+      <div class="soon-band fade-up">
+        <div>
+          <h3>Be first into OR / Perioperative.</h3>
+          <p>We'll email you the moment this specialty track goes live &mdash; often with early-bird pricing from $59.</p>
+        </div>
+        <div>
+          <form class="soon-form" data-soon onsubmit="return false;">
+            <input type="email" placeholder="you@email.com" aria-label="Email">
+            <button class="btn btn-coral" type="submit">Notify me</button>
+          </form>
+          <p class="soon-note" data-soon-done hidden>&check; You're on the list &mdash; we'll be in touch.</p>
+        </div>
+      </div>
+      <p style="text-align:center;margin-top:1.4rem;font-size:0.8rem;color:var(--ink-60);">Prefer the full picture? <a href="specialties.html" style="color:var(--coral-500);font-weight:700;">Browse all 22 specialty tracks &rarr;</a></p>
+    </div>
+  </section>
+
+</div>
+<div class="mls-route" data-route="specialty-progressive-care.html" hidden>
+  <div class="page-hero" style="background:linear-gradient(140deg,#e5484d,#14b8a8);">
+    <div class="wrap inner">
+      <span class="lesson-label" style="color:var(--gold-400);">Specialty Prep &middot; In development</span>
+      <h1 style="margin-top:0.6rem;">Progressive Care (PCU)</h1>
+      <p>A step below the ICU — telemetry, titration, and catching the early turn.</p>
+      <div class="spec-hero-tags"><span class="chip">Telemetry monitoring</span><span class="chip">Titratable drips</span><span class="chip">Respiratory support</span><span class="chip">Recognizing deterioration</span></div>
+      <div class="hero-cta" style="margin-top:1.8rem;">
+        <a class="btn btn-coral" href="#notify">Notify me when it launches</a>
+        <a class="btn btn-ghost" href="specialties.html">All 22 specialties</a>
+      </div>
+    </div>
+  </div>
+
+  <section style="background:var(--bg);">
+    <div class="wrap">
+      <div class="section-head fade-up"><span class="eyebrow teal">What you'll master</span><h2>The Progressive Care (PCU) <span class="hl">track.</span></h2><p>Built on the same retention science as NCLEX Complete &mdash; audio scenes, question sets, and rationales, focused on this specialty. Here's what it will cover.</p></div>
+      <div class="pillar-grid">
+        <div class="pillar fade-up">
+          <div class="illo" style="background:linear-gradient(140deg,#e5484d,#14b8a8);"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="13" rx="3"/><path d="M6 10.5h3l1.5-3 2.5 5 1.5-2h3.5"/><path d="M9 21h6"/></svg></div>
+          <span class="kick">Module</span>
+          <h3>Telemetry monitoring</h3>
+          <p>Full lessons, question sets, and rationales for this area are in development for the Progressive Care (PCU) track.</p>
+        </div><div class="pillar fade-up">
+          <div class="illo" style="background:linear-gradient(140deg,#e5484d,#14b8a8);"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="13" rx="3"/><path d="M6 10.5h3l1.5-3 2.5 5 1.5-2h3.5"/><path d="M9 21h6"/></svg></div>
+          <span class="kick">Module</span>
+          <h3>Titratable drips</h3>
+          <p>Full lessons, question sets, and rationales for this area are in development for the Progressive Care (PCU) track.</p>
+        </div><div class="pillar fade-up">
+          <div class="illo" style="background:linear-gradient(140deg,#e5484d,#14b8a8);"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="13" rx="3"/><path d="M6 10.5h3l1.5-3 2.5 5 1.5-2h3.5"/><path d="M9 21h6"/></svg></div>
+          <span class="kick">Module</span>
+          <h3>Respiratory support</h3>
+          <p>Full lessons, question sets, and rationales for this area are in development for the Progressive Care (PCU) track.</p>
+        </div><div class="pillar fade-up">
+          <div class="illo" style="background:linear-gradient(140deg,#e5484d,#14b8a8);"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="13" rx="3"/><path d="M6 10.5h3l1.5-3 2.5 5 1.5-2h3.5"/><path d="M9 21h6"/></svg></div>
+          <span class="kick">Module</span>
+          <h3>Recognizing deterioration</h3>
+          <p>Full lessons, question sets, and rationales for this area are in development for the Progressive Care (PCU) track.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section style="background:var(--card);">
+    <div class="wrap">
+      <div class="section-head fade-up"><span class="eyebrow">How this track works</span><h2>Learn it once. <span class="hl">Keep it forever.</span></h2></div>
+      <div class="tile-grid cols-3">
+        <div class="tile fade-up"><span class="tag">Step 1</span><h3>Watch &amp; listen</h3><p>Short specialty scenes drop you onto the unit &mdash; the way a great preceptor would show you.</p></div>
+        <div class="tile fade-up"><span class="tag">Step 2</span><h3>Quiz &amp; earn</h3><p>Specialty question sets in every NGN format, with a rationale for every option &mdash; and points as you go.</p></div>
+        <div class="tile fade-up"><span class="tag">Step 3</span><h3>Review with Esi</h3><p>Esi tracks your misses in this specialty and drills them until they're strengths.</p></div>
+      </div>
+
+      <div class="section-head fade-up" style="margin-top:3rem;"><span class="eyebrow gold">Sneak peek</span><h2>A taste of the <span class="hl">question bank.</span></h2></div>
+      <div class="locked-preview fade-up" style="max-width:720px;margin:0 auto;">
+        <div class="widget blur">
+          <span class="widget-tag"><svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 3 2.7 5.7 6.3.8-4.6 4.3 1.2 6.2L12 17l-5.6 3 1.2-6.2L3 9.5l6.3-.8z"/></svg> Progressive Care (PCU) item</span>
+          <p class="prompt">Sample Progressive Care (PCU) scenario &mdash; the client presents with the classic findings your specialty is built to recognize&hellip;</p>
+          <div class="choice-grid" style="grid-template-columns:1fr;">
+            <button class="choice">Option A &mdash; a plausible distractor</button>
+            <button class="choice">Option B &mdash; the correct action</button>
+            <button class="choice">Option C &mdash; a plausible distractor</button>
+            <button class="choice">Option D &mdash; a plausible distractor</button>
+          </div>
+        </div>
+        <div class="lockmsg">
+          <div class="lockbox">
+            <span class="lc"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="5" y="10" width="14" height="10" rx="3"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg></span>
+            <b>Locked &mdash; coming soon</b>
+            <p>The Progressive Care (PCU) question bank is being written now. Join the list and we'll unlock it for you first.</p>
+            <a class="btn btn-coral" href="#notify">Notify me</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="notify" style="background:var(--bg);">
+    <div class="wrap">
+      <div class="soon-band fade-up">
+        <div>
+          <h3>Be first into Progressive Care (PCU).</h3>
+          <p>We'll email you the moment this specialty track goes live &mdash; often with early-bird pricing from $69.</p>
+        </div>
+        <div>
+          <form class="soon-form" data-soon onsubmit="return false;">
+            <input type="email" placeholder="you@email.com" aria-label="Email">
+            <button class="btn btn-coral" type="submit">Notify me</button>
+          </form>
+          <p class="soon-note" data-soon-done hidden>&check; You're on the list &mdash; we'll be in touch.</p>
+        </div>
+      </div>
+      <p style="text-align:center;margin-top:1.4rem;font-size:0.8rem;color:var(--ink-60);">Prefer the full picture? <a href="specialties.html" style="color:var(--coral-500);font-weight:700;">Browse all 22 specialty tracks &rarr;</a></p>
+    </div>
+  </section>
+
+</div>
+<div class="mls-route" data-route="specialty-psychiatric.html" hidden>
+  <div class="page-hero" style="background:linear-gradient(140deg,#7a45f0,#4d2b9e);">
+    <div class="wrap inner">
+      <span class="lesson-label" style="color:var(--gold-400);">Specialty Prep &middot; In development</span>
+      <h1 style="margin-top:0.6rem;">Psychiatric / Mental Health</h1>
+      <p>Therapeutic presence and safety — the words and the watchfulness that heal.</p>
+      <div class="spec-hero-tags"><span class="chip">Therapeutic communication</span><span class="chip">Suicide &amp; safety</span><span class="chip">Psychotropic medications</span><span class="chip">Crisis de-escalation</span></div>
+      <div class="hero-cta" style="margin-top:1.8rem;">
+        <a class="btn btn-coral" href="#notify">Notify me when it launches</a>
+        <a class="btn btn-ghost" href="specialties.html">All 22 specialties</a>
+      </div>
+    </div>
+  </div>
+
+  <section style="background:var(--bg);">
+    <div class="wrap">
+      <div class="section-head fade-up"><span class="eyebrow teal">What you'll master</span><h2>The Psychiatric / Mental Health <span class="hl">track.</span></h2><p>Built on the same retention science as NCLEX Complete &mdash; audio scenes, question sets, and rationales, focused on this specialty. Here's what it will cover.</p></div>
+      <div class="pillar-grid">
+        <div class="pillar fade-up">
+          <div class="illo" style="background:linear-gradient(140deg,#7a45f0,#4d2b9e);"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 21v-3.2A7 7 0 1 1 19 11l1.5 3H18v3a2 2 0 0 1-2 2h-2v2"/><path d="M11 8.5a2.5 2.5 0 0 1 5 0c0 1.8-2.5 2-2.5 3.5"/><circle cx="13.5" cy="14.6" r=".5" fill="currentColor"/></svg></div>
+          <span class="kick">Module</span>
+          <h3>Therapeutic communication</h3>
+          <p>Full lessons, question sets, and rationales for this area are in development for the Psychiatric / Mental Health track.</p>
+        </div><div class="pillar fade-up">
+          <div class="illo" style="background:linear-gradient(140deg,#7a45f0,#4d2b9e);"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 21v-3.2A7 7 0 1 1 19 11l1.5 3H18v3a2 2 0 0 1-2 2h-2v2"/><path d="M11 8.5a2.5 2.5 0 0 1 5 0c0 1.8-2.5 2-2.5 3.5"/><circle cx="13.5" cy="14.6" r=".5" fill="currentColor"/></svg></div>
+          <span class="kick">Module</span>
+          <h3>Suicide &amp; safety</h3>
+          <p>Full lessons, question sets, and rationales for this area are in development for the Psychiatric / Mental Health track.</p>
+        </div><div class="pillar fade-up">
+          <div class="illo" style="background:linear-gradient(140deg,#7a45f0,#4d2b9e);"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 21v-3.2A7 7 0 1 1 19 11l1.5 3H18v3a2 2 0 0 1-2 2h-2v2"/><path d="M11 8.5a2.5 2.5 0 0 1 5 0c0 1.8-2.5 2-2.5 3.5"/><circle cx="13.5" cy="14.6" r=".5" fill="currentColor"/></svg></div>
+          <span class="kick">Module</span>
+          <h3>Psychotropic medications</h3>
+          <p>Full lessons, question sets, and rationales for this area are in development for the Psychiatric / Mental Health track.</p>
+        </div><div class="pillar fade-up">
+          <div class="illo" style="background:linear-gradient(140deg,#7a45f0,#4d2b9e);"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 21v-3.2A7 7 0 1 1 19 11l1.5 3H18v3a2 2 0 0 1-2 2h-2v2"/><path d="M11 8.5a2.5 2.5 0 0 1 5 0c0 1.8-2.5 2-2.5 3.5"/><circle cx="13.5" cy="14.6" r=".5" fill="currentColor"/></svg></div>
+          <span class="kick">Module</span>
+          <h3>Crisis de-escalation</h3>
+          <p>Full lessons, question sets, and rationales for this area are in development for the Psychiatric / Mental Health track.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section style="background:var(--card);">
+    <div class="wrap">
+      <div class="section-head fade-up"><span class="eyebrow">How this track works</span><h2>Learn it once. <span class="hl">Keep it forever.</span></h2></div>
+      <div class="tile-grid cols-3">
+        <div class="tile fade-up"><span class="tag">Step 1</span><h3>Watch &amp; listen</h3><p>Short specialty scenes drop you onto the unit &mdash; the way a great preceptor would show you.</p></div>
+        <div class="tile fade-up"><span class="tag">Step 2</span><h3>Quiz &amp; earn</h3><p>Specialty question sets in every NGN format, with a rationale for every option &mdash; and points as you go.</p></div>
+        <div class="tile fade-up"><span class="tag">Step 3</span><h3>Review with Esi</h3><p>Esi tracks your misses in this specialty and drills them until they're strengths.</p></div>
+      </div>
+
+      <div class="section-head fade-up" style="margin-top:3rem;"><span class="eyebrow gold">Sneak peek</span><h2>A taste of the <span class="hl">question bank.</span></h2></div>
+      <div class="locked-preview fade-up" style="max-width:720px;margin:0 auto;">
+        <div class="widget blur">
+          <span class="widget-tag"><svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 3 2.7 5.7 6.3.8-4.6 4.3 1.2 6.2L12 17l-5.6 3 1.2-6.2L3 9.5l6.3-.8z"/></svg> Psychiatric / Mental Health item</span>
+          <p class="prompt">Sample Psychiatric / Mental Health scenario &mdash; the client presents with the classic findings your specialty is built to recognize&hellip;</p>
+          <div class="choice-grid" style="grid-template-columns:1fr;">
+            <button class="choice">Option A &mdash; a plausible distractor</button>
+            <button class="choice">Option B &mdash; the correct action</button>
+            <button class="choice">Option C &mdash; a plausible distractor</button>
+            <button class="choice">Option D &mdash; a plausible distractor</button>
+          </div>
+        </div>
+        <div class="lockmsg">
+          <div class="lockbox">
+            <span class="lc"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="5" y="10" width="14" height="10" rx="3"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg></span>
+            <b>Locked &mdash; coming soon</b>
+            <p>The Psychiatric / Mental Health question bank is being written now. Join the list and we'll unlock it for you first.</p>
+            <a class="btn btn-coral" href="#notify">Notify me</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="notify" style="background:var(--bg);">
+    <div class="wrap">
+      <div class="soon-band fade-up">
+        <div>
+          <h3>Be first into Psychiatric / Mental Health.</h3>
+          <p>We'll email you the moment this specialty track goes live &mdash; often with early-bird pricing from $59.</p>
+        </div>
+        <div>
+          <form class="soon-form" data-soon onsubmit="return false;">
+            <input type="email" placeholder="you@email.com" aria-label="Email">
+            <button class="btn btn-coral" type="submit">Notify me</button>
+          </form>
+          <p class="soon-note" data-soon-done hidden>&check; You're on the list &mdash; we'll be in touch.</p>
+        </div>
+      </div>
+      <p style="text-align:center;margin-top:1.4rem;font-size:0.8rem;color:var(--ink-60);">Prefer the full picture? <a href="specialties.html" style="color:var(--coral-500);font-weight:700;">Browse all 22 specialty tracks &rarr;</a></p>
+    </div>
+  </section>
+
+</div>
+<div class="mls-route" data-route="specialty-rehabilitation.html" hidden>
+  <div class="page-hero" style="background:linear-gradient(140deg,#4d2b9e,#2ad4c4);">
+    <div class="wrap inner">
+      <span class="lesson-label" style="color:var(--gold-400);">Specialty Prep &middot; In development</span>
+      <h1 style="margin-top:0.6rem;">Rehabilitation</h1>
+      <p>Function over cure — help patients rebuild independence step by step.</p>
+      <div class="spec-hero-tags"><span class="chip">Mobility &amp; transfers</span><span class="chip">ADL retraining</span><span class="chip">Neuro rehab</span><span class="chip">Skin &amp; bladder programs</span></div>
+      <div class="hero-cta" style="margin-top:1.8rem;">
+        <a class="btn btn-coral" href="#notify">Notify me when it launches</a>
+        <a class="btn btn-ghost" href="specialties.html">All 22 specialties</a>
+      </div>
+    </div>
+  </div>
+
+  <section style="background:var(--bg);">
+    <div class="wrap">
+      <div class="section-head fade-up"><span class="eyebrow teal">What you'll master</span><h2>The Rehabilitation <span class="hl">track.</span></h2><p>Built on the same retention science as NCLEX Complete &mdash; audio scenes, question sets, and rationales, focused on this specialty. Here's what it will cover.</p></div>
+      <div class="pillar-grid">
+        <div class="pillar fade-up">
+          <div class="illo" style="background:linear-gradient(140deg,#4d2b9e,#2ad4c4);"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="4" width="14" height="17" rx="3"/><path d="M9 4.5V3h6v1.5"/><path d="M12 9v6M9 12h6"/></svg></div>
+          <span class="kick">Module</span>
+          <h3>Mobility &amp; transfers</h3>
+          <p>Full lessons, question sets, and rationales for this area are in development for the Rehabilitation track.</p>
+        </div><div class="pillar fade-up">
+          <div class="illo" style="background:linear-gradient(140deg,#4d2b9e,#2ad4c4);"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="4" width="14" height="17" rx="3"/><path d="M9 4.5V3h6v1.5"/><path d="M12 9v6M9 12h6"/></svg></div>
+          <span class="kick">Module</span>
+          <h3>ADL retraining</h3>
+          <p>Full lessons, question sets, and rationales for this area are in development for the Rehabilitation track.</p>
+        </div><div class="pillar fade-up">
+          <div class="illo" style="background:linear-gradient(140deg,#4d2b9e,#2ad4c4);"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="4" width="14" height="17" rx="3"/><path d="M9 4.5V3h6v1.5"/><path d="M12 9v6M9 12h6"/></svg></div>
+          <span class="kick">Module</span>
+          <h3>Neuro rehab</h3>
+          <p>Full lessons, question sets, and rationales for this area are in development for the Rehabilitation track.</p>
+        </div><div class="pillar fade-up">
+          <div class="illo" style="background:linear-gradient(140deg,#4d2b9e,#2ad4c4);"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="4" width="14" height="17" rx="3"/><path d="M9 4.5V3h6v1.5"/><path d="M12 9v6M9 12h6"/></svg></div>
+          <span class="kick">Module</span>
+          <h3>Skin &amp; bladder programs</h3>
+          <p>Full lessons, question sets, and rationales for this area are in development for the Rehabilitation track.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section style="background:var(--card);">
+    <div class="wrap">
+      <div class="section-head fade-up"><span class="eyebrow">How this track works</span><h2>Learn it once. <span class="hl">Keep it forever.</span></h2></div>
+      <div class="tile-grid cols-3">
+        <div class="tile fade-up"><span class="tag">Step 1</span><h3>Watch &amp; listen</h3><p>Short specialty scenes drop you onto the unit &mdash; the way a great preceptor would show you.</p></div>
+        <div class="tile fade-up"><span class="tag">Step 2</span><h3>Quiz &amp; earn</h3><p>Specialty question sets in every NGN format, with a rationale for every option &mdash; and points as you go.</p></div>
+        <div class="tile fade-up"><span class="tag">Step 3</span><h3>Review with Esi</h3><p>Esi tracks your misses in this specialty and drills them until they're strengths.</p></div>
+      </div>
+
+      <div class="section-head fade-up" style="margin-top:3rem;"><span class="eyebrow gold">Sneak peek</span><h2>A taste of the <span class="hl">question bank.</span></h2></div>
+      <div class="locked-preview fade-up" style="max-width:720px;margin:0 auto;">
+        <div class="widget blur">
+          <span class="widget-tag"><svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 3 2.7 5.7 6.3.8-4.6 4.3 1.2 6.2L12 17l-5.6 3 1.2-6.2L3 9.5l6.3-.8z"/></svg> Rehabilitation item</span>
+          <p class="prompt">Sample Rehabilitation scenario &mdash; the client presents with the classic findings your specialty is built to recognize&hellip;</p>
+          <div class="choice-grid" style="grid-template-columns:1fr;">
+            <button class="choice">Option A &mdash; a plausible distractor</button>
+            <button class="choice">Option B &mdash; the correct action</button>
+            <button class="choice">Option C &mdash; a plausible distractor</button>
+            <button class="choice">Option D &mdash; a plausible distractor</button>
+          </div>
+        </div>
+        <div class="lockmsg">
+          <div class="lockbox">
+            <span class="lc"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="5" y="10" width="14" height="10" rx="3"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg></span>
+            <b>Locked &mdash; coming soon</b>
+            <p>The Rehabilitation question bank is being written now. Join the list and we'll unlock it for you first.</p>
+            <a class="btn btn-coral" href="#notify">Notify me</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="notify" style="background:var(--bg);">
+    <div class="wrap">
+      <div class="soon-band fade-up">
+        <div>
+          <h3>Be first into Rehabilitation.</h3>
+          <p>We'll email you the moment this specialty track goes live &mdash; often with early-bird pricing from $49.</p>
+        </div>
+        <div>
+          <form class="soon-form" data-soon onsubmit="return false;">
+            <input type="email" placeholder="you@email.com" aria-label="Email">
+            <button class="btn btn-coral" type="submit">Notify me</button>
+          </form>
+          <p class="soon-note" data-soon-done hidden>&check; You're on the list &mdash; we'll be in touch.</p>
+        </div>
+      </div>
+      <p style="text-align:center;margin-top:1.4rem;font-size:0.8rem;color:var(--ink-60);">Prefer the full picture? <a href="specialties.html" style="color:var(--coral-500);font-weight:700;">Browse all 22 specialty tracks &rarr;</a></p>
+    </div>
+  </section>
+
+</div>
+<div class="mls-route" data-route="specialty-school.html" hidden>
+  <div class="page-hero" style="background:linear-gradient(140deg,#ffc23d,#4d2b9e);">
+    <div class="wrap inner">
+      <span class="lesson-label" style="color:var(--gold-400);">Specialty Prep &middot; In development</span>
+      <h1 style="margin-top:0.6rem;">School Nursing</h1>
+      <p>One nurse for a whole school — from asthma to emergencies to care plans.</p>
+      <div class="spec-hero-tags"><span class="chip">Common school emergencies</span><span class="chip">Chronic conditions at school</span><span class="chip">Medication administration</span><span class="chip">Health screening</span></div>
+      <div class="hero-cta" style="margin-top:1.8rem;">
+        <a class="btn btn-coral" href="#notify">Notify me when it launches</a>
+        <a class="btn btn-ghost" href="specialties.html">All 22 specialties</a>
+      </div>
+    </div>
+  </div>
+
+  <section style="background:var(--bg);">
+    <div class="wrap">
+      <div class="section-head fade-up"><span class="eyebrow teal">What you'll master</span><h2>The School Nursing <span class="hl">track.</span></h2><p>Built on the same retention science as NCLEX Complete &mdash; audio scenes, question sets, and rationales, focused on this specialty. Here's what it will cover.</p></div>
+      <div class="pillar-grid">
+        <div class="pillar fade-up">
+          <div class="illo" style="background:linear-gradient(140deg,#ffc23d,#4d2b9e);"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="9" r="5.5"/><circle cx="7.5" cy="4.5" r="1.8"/><circle cx="16.5" cy="4.5" r="1.8"/><path d="M9.5 15.5 8 21m6.5-5.5L16 21"/><circle cx="10" cy="8.4" r=".6" fill="currentColor"/><circle cx="14" cy="8.4" r=".6" fill="currentColor"/></svg></div>
+          <span class="kick">Module</span>
+          <h3>Common school emergencies</h3>
+          <p>Full lessons, question sets, and rationales for this area are in development for the School Nursing track.</p>
+        </div><div class="pillar fade-up">
+          <div class="illo" style="background:linear-gradient(140deg,#ffc23d,#4d2b9e);"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="9" r="5.5"/><circle cx="7.5" cy="4.5" r="1.8"/><circle cx="16.5" cy="4.5" r="1.8"/><path d="M9.5 15.5 8 21m6.5-5.5L16 21"/><circle cx="10" cy="8.4" r=".6" fill="currentColor"/><circle cx="14" cy="8.4" r=".6" fill="currentColor"/></svg></div>
+          <span class="kick">Module</span>
+          <h3>Chronic conditions at school</h3>
+          <p>Full lessons, question sets, and rationales for this area are in development for the School Nursing track.</p>
+        </div><div class="pillar fade-up">
+          <div class="illo" style="background:linear-gradient(140deg,#ffc23d,#4d2b9e);"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="9" r="5.5"/><circle cx="7.5" cy="4.5" r="1.8"/><circle cx="16.5" cy="4.5" r="1.8"/><path d="M9.5 15.5 8 21m6.5-5.5L16 21"/><circle cx="10" cy="8.4" r=".6" fill="currentColor"/><circle cx="14" cy="8.4" r=".6" fill="currentColor"/></svg></div>
+          <span class="kick">Module</span>
+          <h3>Medication administration</h3>
+          <p>Full lessons, question sets, and rationales for this area are in development for the School Nursing track.</p>
+        </div><div class="pillar fade-up">
+          <div class="illo" style="background:linear-gradient(140deg,#ffc23d,#4d2b9e);"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="9" r="5.5"/><circle cx="7.5" cy="4.5" r="1.8"/><circle cx="16.5" cy="4.5" r="1.8"/><path d="M9.5 15.5 8 21m6.5-5.5L16 21"/><circle cx="10" cy="8.4" r=".6" fill="currentColor"/><circle cx="14" cy="8.4" r=".6" fill="currentColor"/></svg></div>
+          <span class="kick">Module</span>
+          <h3>Health screening</h3>
+          <p>Full lessons, question sets, and rationales for this area are in development for the School Nursing track.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section style="background:var(--card);">
+    <div class="wrap">
+      <div class="section-head fade-up"><span class="eyebrow">How this track works</span><h2>Learn it once. <span class="hl">Keep it forever.</span></h2></div>
+      <div class="tile-grid cols-3">
+        <div class="tile fade-up"><span class="tag">Step 1</span><h3>Watch &amp; listen</h3><p>Short specialty scenes drop you onto the unit &mdash; the way a great preceptor would show you.</p></div>
+        <div class="tile fade-up"><span class="tag">Step 2</span><h3>Quiz &amp; earn</h3><p>Specialty question sets in every NGN format, with a rationale for every option &mdash; and points as you go.</p></div>
+        <div class="tile fade-up"><span class="tag">Step 3</span><h3>Review with Esi</h3><p>Esi tracks your misses in this specialty and drills them until they're strengths.</p></div>
+      </div>
+
+      <div class="section-head fade-up" style="margin-top:3rem;"><span class="eyebrow gold">Sneak peek</span><h2>A taste of the <span class="hl">question bank.</span></h2></div>
+      <div class="locked-preview fade-up" style="max-width:720px;margin:0 auto;">
+        <div class="widget blur">
+          <span class="widget-tag"><svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 3 2.7 5.7 6.3.8-4.6 4.3 1.2 6.2L12 17l-5.6 3 1.2-6.2L3 9.5l6.3-.8z"/></svg> School Nursing item</span>
+          <p class="prompt">Sample School Nursing scenario &mdash; the client presents with the classic findings your specialty is built to recognize&hellip;</p>
+          <div class="choice-grid" style="grid-template-columns:1fr;">
+            <button class="choice">Option A &mdash; a plausible distractor</button>
+            <button class="choice">Option B &mdash; the correct action</button>
+            <button class="choice">Option C &mdash; a plausible distractor</button>
+            <button class="choice">Option D &mdash; a plausible distractor</button>
+          </div>
+        </div>
+        <div class="lockmsg">
+          <div class="lockbox">
+            <span class="lc"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="5" y="10" width="14" height="10" rx="3"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg></span>
+            <b>Locked &mdash; coming soon</b>
+            <p>The School Nursing question bank is being written now. Join the list and we'll unlock it for you first.</p>
+            <a class="btn btn-coral" href="#notify">Notify me</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="notify" style="background:var(--bg);">
+    <div class="wrap">
+      <div class="soon-band fade-up">
+        <div>
+          <h3>Be first into School Nursing.</h3>
+          <p>We'll email you the moment this specialty track goes live &mdash; often with early-bird pricing from $49.</p>
+        </div>
+        <div>
+          <form class="soon-form" data-soon onsubmit="return false;">
+            <input type="email" placeholder="you@email.com" aria-label="Email">
+            <button class="btn btn-coral" type="submit">Notify me</button>
+          </form>
+          <p class="soon-note" data-soon-done hidden>&check; You're on the list &mdash; we'll be in touch.</p>
+        </div>
+      </div>
+      <p style="text-align:center;margin-top:1.4rem;font-size:0.8rem;color:var(--ink-60);">Prefer the full picture? <a href="specialties.html" style="color:var(--coral-500);font-weight:700;">Browse all 22 specialty tracks &rarr;</a></p>
+    </div>
+  </section>
+
+</div>
+<div class="mls-route" data-route="specialty-wound-care.html" hidden>
+  <div class="page-hero" style="background:linear-gradient(140deg,#d99a1f,#4d2b9e);">
+    <div class="wrap inner">
+      <span class="lesson-label" style="color:var(--gold-400);">Specialty Prep &middot; In development</span>
+      <h1 style="margin-top:0.6rem;">Wound Care</h1>
+      <p>Stage it, dress it, heal it — the science of skin and tissue repair.</p>
+      <div class="spec-hero-tags"><span class="chip">Pressure injury staging</span><span class="chip">Wound assessment</span><span class="chip">Dressing selection</span><span class="chip">Infection &amp; healing</span></div>
+      <div class="hero-cta" style="margin-top:1.8rem;">
+        <a class="btn btn-coral" href="#notify">Notify me when it launches</a>
+        <a class="btn btn-ghost" href="specialties.html">All 22 specialties</a>
+      </div>
+    </div>
+  </div>
+
+  <section style="background:var(--bg);">
+    <div class="wrap">
+      <div class="section-head fade-up"><span class="eyebrow teal">What you'll master</span><h2>The Wound Care <span class="hl">track.</span></h2><p>Built on the same retention science as NCLEX Complete &mdash; audio scenes, question sets, and rationales, focused on this specialty. Here's what it will cover.</p></div>
+      <div class="pillar-grid">
+        <div class="pillar fade-up">
+          <div class="illo" style="background:linear-gradient(140deg,#d99a1f,#4d2b9e);"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l8 3v6c0 4.5-3.2 7.6-8 9-4.8-1.4-8-4.5-8-9V6z"/><path d="m8.8 12 2.2 2.2 4.2-4.4"/></svg></div>
+          <span class="kick">Module</span>
+          <h3>Pressure injury staging</h3>
+          <p>Full lessons, question sets, and rationales for this area are in development for the Wound Care track.</p>
+        </div><div class="pillar fade-up">
+          <div class="illo" style="background:linear-gradient(140deg,#d99a1f,#4d2b9e);"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l8 3v6c0 4.5-3.2 7.6-8 9-4.8-1.4-8-4.5-8-9V6z"/><path d="m8.8 12 2.2 2.2 4.2-4.4"/></svg></div>
+          <span class="kick">Module</span>
+          <h3>Wound assessment</h3>
+          <p>Full lessons, question sets, and rationales for this area are in development for the Wound Care track.</p>
+        </div><div class="pillar fade-up">
+          <div class="illo" style="background:linear-gradient(140deg,#d99a1f,#4d2b9e);"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l8 3v6c0 4.5-3.2 7.6-8 9-4.8-1.4-8-4.5-8-9V6z"/><path d="m8.8 12 2.2 2.2 4.2-4.4"/></svg></div>
+          <span class="kick">Module</span>
+          <h3>Dressing selection</h3>
+          <p>Full lessons, question sets, and rationales for this area are in development for the Wound Care track.</p>
+        </div><div class="pillar fade-up">
+          <div class="illo" style="background:linear-gradient(140deg,#d99a1f,#4d2b9e);"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l8 3v6c0 4.5-3.2 7.6-8 9-4.8-1.4-8-4.5-8-9V6z"/><path d="m8.8 12 2.2 2.2 4.2-4.4"/></svg></div>
+          <span class="kick">Module</span>
+          <h3>Infection &amp; healing</h3>
+          <p>Full lessons, question sets, and rationales for this area are in development for the Wound Care track.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section style="background:var(--card);">
+    <div class="wrap">
+      <div class="section-head fade-up"><span class="eyebrow">How this track works</span><h2>Learn it once. <span class="hl">Keep it forever.</span></h2></div>
+      <div class="tile-grid cols-3">
+        <div class="tile fade-up"><span class="tag">Step 1</span><h3>Watch &amp; listen</h3><p>Short specialty scenes drop you onto the unit &mdash; the way a great preceptor would show you.</p></div>
+        <div class="tile fade-up"><span class="tag">Step 2</span><h3>Quiz &amp; earn</h3><p>Specialty question sets in every NGN format, with a rationale for every option &mdash; and points as you go.</p></div>
+        <div class="tile fade-up"><span class="tag">Step 3</span><h3>Review with Esi</h3><p>Esi tracks your misses in this specialty and drills them until they're strengths.</p></div>
+      </div>
+
+      <div class="section-head fade-up" style="margin-top:3rem;"><span class="eyebrow gold">Sneak peek</span><h2>A taste of the <span class="hl">question bank.</span></h2></div>
+      <div class="locked-preview fade-up" style="max-width:720px;margin:0 auto;">
+        <div class="widget blur">
+          <span class="widget-tag"><svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 3 2.7 5.7 6.3.8-4.6 4.3 1.2 6.2L12 17l-5.6 3 1.2-6.2L3 9.5l6.3-.8z"/></svg> Wound Care item</span>
+          <p class="prompt">Sample Wound Care scenario &mdash; the client presents with the classic findings your specialty is built to recognize&hellip;</p>
+          <div class="choice-grid" style="grid-template-columns:1fr;">
+            <button class="choice">Option A &mdash; a plausible distractor</button>
+            <button class="choice">Option B &mdash; the correct action</button>
+            <button class="choice">Option C &mdash; a plausible distractor</button>
+            <button class="choice">Option D &mdash; a plausible distractor</button>
+          </div>
+        </div>
+        <div class="lockmsg">
+          <div class="lockbox">
+            <span class="lc"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="5" y="10" width="14" height="10" rx="3"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg></span>
+            <b>Locked &mdash; coming soon</b>
+            <p>The Wound Care question bank is being written now. Join the list and we'll unlock it for you first.</p>
+            <a class="btn btn-coral" href="#notify">Notify me</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="notify" style="background:var(--bg);">
+    <div class="wrap">
+      <div class="soon-band fade-up">
+        <div>
+          <h3>Be first into Wound Care.</h3>
+          <p>We'll email you the moment this specialty track goes live &mdash; often with early-bird pricing from $59.</p>
+        </div>
+        <div>
+          <form class="soon-form" data-soon onsubmit="return false;">
+            <input type="email" placeholder="you@email.com" aria-label="Email">
+            <button class="btn btn-coral" type="submit">Notify me</button>
+          </form>
+          <p class="soon-note" data-soon-done hidden>&check; You're on the list &mdash; we'll be in touch.</p>
+        </div>
+      </div>
+      <p style="text-align:center;margin-top:1.4rem;font-size:0.8rem;color:var(--ink-60);">Prefer the full picture? <a href="specialties.html" style="color:var(--coral-500);font-weight:700;">Browse all 22 specialty tracks &rarr;</a></p>
+    </div>
+  </section>
+
+</div>
 <div class="mls-route" data-route="spotlight.html" hidden>
   <div class="page-hero">
     <div class="wrap inner">
@@ -4367,6 +6667,7 @@ body.mls-paid .gate { display: none; }
         <h5>Learn</h5>
         <ul>
           <li><a href="nclex-complete.html">NCLEX Complete</a></li>
+          <li><a href="specialties.html">Specialty Prep</a></li>
           <li><a href="courses.html">Courses</a></li>
           <li><a href="course-lab-values.html">Free NCLEX Practice</a></li>
           <li><a href="scrubtv.html">Scrub TV</a></li>
@@ -5140,6 +7441,25 @@ body.mls-paid .gate { display: none; }
     });
   });
   apply();
+})();
+
+
+/* ===== specialty.js ===== */
+/* Must Love Scrubs — specialty track pages (UI shell)
+   Waitlist "notify me" demo until backend. */
+
+(function () {
+  'use strict';
+  document.querySelectorAll('[data-soon]').forEach(function (form) {
+    var done = form.parentElement.querySelector('[data-soon-done]');
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      var input = form.querySelector('input[type="email"]');
+      if (input && !input.value) { input.focus(); return; }
+      form.hidden = true;
+      if (done) done.hidden = false;
+    });
+  });
 })();
 
 </script>
