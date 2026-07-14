@@ -444,6 +444,27 @@ def home_lessons():
         out.append(f'<a class="course-card fade-up" href="{slug}"><div class="cover" style="background:{grad};">{num}</div><div class="body"><b>{name}</b><small>Audio scene + 4 tests &middot; Free</small><div class="foot"><span class="p" style="color:var(--teal-600);">Free</span><span style="font-size:0.82rem;font-weight:700;color:var(--coral-500);">Start &rarr;</span></div></div></a>')
     return '<div class="course-shelf">' + "".join(out) + '</div>'
 
+# Homepage RN-specialties carousel (a curated few; full list on specialties.html)
+HOME_SPECS = [
+    ("emergency", "Emergency / ER", "er", "linear-gradient(140deg,#e5484d,#7a45f0)", "$69"),
+    ("critical-care", "Critical Care / ICU", "icu", "linear-gradient(140deg,#2ad4c4,#1a0942)", "$79"),
+    ("pediatrics", "Pediatrics", "peds", "linear-gradient(140deg,#ffc23d,#8b5cff)", "$59"),
+    ("med-surg", "Medical-Surgical", "medsurg", "linear-gradient(140deg,#8b5cff,#4d2b9e)", "$59"),
+    ("labor-delivery", "Labor &amp; Delivery / OB", "prenatal", "linear-gradient(140deg,#8b5cff,#14b8a8)", "$69"),
+    ("oncology", "Oncology", "shield", "linear-gradient(140deg,#7a45f0,#d99a1f)", "$69"),
+    ("cardiac", "Cardiac / Telemetry", "icu", "linear-gradient(140deg,#e5484d,#2b1055)", "$69"),
+]
+def home_spec_carousel():
+    out = []
+    for slug, name, icon, grad, price in HOME_SPECS:
+        out.append(f"""<a class="spec-card fade-up" href="specialty-{slug}.html">
+          <span class="spec-lock">{I['lock']} Soon</span>
+          <span class="ic" style="background:{grad};">{I[icon]}</span>
+          <h3>{name}</h3>
+          <div class="foot"><span class="price">{price}</span><span class="go">Preview &rarr;</span></div>
+        </a>""")
+    return '<div class="spec-rail">' + "".join(out) + '</div>'
+
 INDEX_BODY = f"""  <main>
     <section class="hero">
       <div class="hero-layer" data-parallax="0.22" aria-hidden="true">
@@ -513,7 +534,22 @@ INDEX_BODY = f"""  <main>
             <a class="btn btn-coral" href="nclex-complete.html">Explore NCLEX Complete</a>
           </div>
         </div>
-        {course_shelf()}
+      </div>
+    </section>
+
+    <section class="courses" style="padding-top:0;">
+      <div class="wrap">
+        <div class="section-head fade-up">
+          <div class="row">
+            <div>
+              <span class="eyebrow teal">RN Specialties</span>
+              <h2>Prep for <span class="hl">where you're going.</span></h2>
+              <p>Passed the NCLEX? Keep going. Focused prep for the specialty you're headed into &mdash; rolling out now.</p>
+            </div>
+            <a class="btn btn-coral" href="specialties.html">See all 22 specialties</a>
+          </div>
+        </div>
+        {home_spec_carousel()}
       </div>
     </section>
 

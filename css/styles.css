@@ -1342,6 +1342,8 @@ body.mls-paid .gate { display: none; }
 .spec-card .foot { display: flex; align-items: center; justify-content: space-between; margin-top: 1rem; }
 .spec-card .price { font-family: var(--font-display); font-weight: 800; color: var(--coral-500); font-size: 1.05rem; }
 .spec-card .go { font-size: 0.8rem; font-weight: 700; color: var(--coral-500); }
+.spec-rail { display: flex; gap: 1rem; overflow-x: auto; padding: 0.2rem 0 0.8rem; scroll-snap-type: x mandatory; -webkit-overflow-scrolling: touch; scrollbar-width: thin; }
+.spec-rail > .spec-card { flex: 0 0 min(80%, 250px); scroll-snap-align: start; }
 .spec-lock { position: absolute; top: 1rem; right: 1rem; display: inline-flex; align-items: center; gap: 0.3rem; font-size: 0.6rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.08em; color: var(--gold-600); background: var(--gold-100); padding: 0.3rem 0.6rem; border-radius: var(--pill); }
 .spec-lock svg { width: 11px; height: 11px; }
 
