@@ -431,3 +431,761 @@ Watch the number: **RR < 12 = hold and reassess; RR ≤ 8 with sedation = act
 now.**
 
 ---
+
+# Section 2 · Adult Health / Med-Surg
+
+---
+
+### Question 11 — Chest tube management
+**Category:** Adult Health / Respiratory · **Client Need:** Reduction of Risk Potential · **Difficulty:** Moderate
+
+**Scenario.** A client has a chest tube connected to a water-seal drainage system
+after a spontaneous pneumothorax. The nurse observes **continuous vigorous
+bubbling** in the water-seal chamber.
+
+**What does this finding most likely indicate?**
+
+- **A.** Normal, expected function of the drainage system
+- **B.** An air leak in the system or tubing connections
+- **C.** Complete lung re-expansion
+- **D.** Obstruction of the chest tube
+
+🎨 *Suggested illustration:* a three-chamber chest drainage unit with the water-seal chamber bubbling continuously, and a magnifying glass over a loose tubing connection.
+
+**✅ Correct answer: B**
+
+**Rationale**
+- **A — Incorrect.** *Intermittent* bubbling in the water-seal chamber with
+  respiration can be normal, but **continuous vigorous** bubbling is not.
+- **B — Correct.** Continuous bubbling in the water-seal chamber signals an **air
+  leak** — air is entering the system from a loose connection, a dislodged
+  dressing, or the pleural space. The nurse checks all connections first.
+- **C — Incorrect.** With full lung re-expansion, bubbling and tidaling
+  **stop** — the opposite of this finding.
+- **D — Incorrect.** An obstruction would reduce or stop drainage and tidaling,
+  not cause continuous bubbling.
+
+**📝 NCLEX Tip.** Learn the chambers: **water-seal = bubbling/tidaling info;
+suction-control = gentle continuous bubbling is normal there.** Continuous
+bubbling in the *water-seal* chamber = **air leak.**
+
+**💡 Clinical Pearl / Memory Trick.** "**Tidaling is fine, continuous is a
+sign.**" If the tube is ever pulled out, cover with a sterile occlusive dressing
+taped on **three sides.**
+
+---
+
+### Question 12 — Increased intracranial pressure
+**Category:** Adult Health / Neuro · **Client Need:** Physiological Adaptation · **Difficulty:** Hard
+
+**Scenario.** A client with a traumatic brain injury is being monitored for
+increased intracranial pressure (ICP).
+
+**Which set of findings should the nurse report immediately as an early sign of
+rising ICP?**
+
+- **A.** Restlessness and a decreasing level of consciousness
+- **B.** Bradycardia, widening pulse pressure, and irregular respirations
+- **C.** Hypotension and tachycardia
+- **D.** Constricted, briskly reactive pupils
+
+🎨 *Suggested illustration:* a brain in a fixed skull with pressure arrows pushing outward, and a small trend arrow showing LOC dropping first.
+
+**✅ Correct answer: A**
+
+**Rationale**
+- **A — Correct.** The **earliest** and most sensitive sign of rising ICP is a
+  **change in level of consciousness** — restlessness, confusion, or a subtle
+  decline. Catching it early is what protects the brain.
+- **B — Incorrect.** Bradycardia, widening pulse pressure, and irregular
+  respirations (**Cushing's triad**) are **late, ominous** signs of severely
+  elevated ICP — important, but not *early*.
+- **C — Incorrect.** Hypotension and tachycardia point toward shock/hypovolemia,
+  not classic ICP changes.
+- **D — Incorrect.** Rising ICP tends to cause a **dilated, sluggish or fixed**
+  pupil, not constricted and brisk.
+
+**📝 NCLEX Tip.** Read carefully for **"early" vs "late."** Early ICP = **LOC
+change.** Late ICP = **Cushing's triad.** The same topic has two different
+"right" answers depending on that one word.
+
+**💡 Clinical Pearl / Memory Trick.** **Cushing's triad = "high, low, slow, and
+odd"**: **high** systolic/**widening pulse pressure, low** heart rate
+(**slow**), and **odd/irregular** breathing. Keep the HOB at **30°** and the
+head midline to promote venous drainage.
+
+---
+
+### Question 13 — Postoperative DVT prevention
+**Category:** Adult Health / Perioperative · **Client Need:** Reduction of Risk Potential · **Difficulty:** Easy
+
+**Scenario.** A client is on the first postoperative day after abdominal surgery
+and is reluctant to move.
+
+**Which nursing action best helps prevent deep vein thrombosis (DVT)?**
+
+- **A.** Massage the calves firmly twice per shift.
+- **B.** Encourage early ambulation and leg exercises.
+- **C.** Keep the knee gatch of the bed elevated continuously.
+- **D.** Maintain strict bed rest until the client is pain-free.
+
+🎨 *Suggested illustration:* a client taking first steps at the bedside with a nurse assisting, sequential compression sleeves visible on the calves.
+
+**✅ Correct answer: B**
+
+**Rationale**
+- **A — Incorrect.** **Never massage** the legs of a client at risk for DVT — a
+  clot could dislodge and become an embolus.
+- **B — Correct.** **Early ambulation** plus ankle pumps and leg exercises
+  promote venous return and are first-line DVT prevention, along with
+  compression devices and prescribed anticoagulants.
+- **C — Incorrect.** A continuously elevated knee gatch causes popliteal
+  compression and venous pooling — it *increases* DVT risk.
+- **D — Incorrect.** Prolonged immobility is a leading cause of DVT, not a
+  prevention strategy.
+
+**📝 NCLEX Tip.** When the answer choices include **"massage the calf,"** it's
+almost always the wrong (dangerous) option in an at-risk client.
+
+**💡 Clinical Pearl / Memory Trick.** DVT prevention = **"Move, Squeeze,
+Thin"**: **Move** (ambulate/leg exercises), **Squeeze** (SCDs/compression), and
+**Thin** the blood (prophylactic anticoagulants). Don't rub.
+
+---
+
+### Question 14 — Adrenal insufficiency (Addisonian crisis)
+**Category:** Adult Health / Endocrine · **Client Need:** Physiological Adaptation · **Difficulty:** Hard
+
+**Scenario.** A client with Addison's disease is admitted after several days of
+vomiting and diarrhea. The nurse notes blood pressure 82/50 mm Hg, weakness, and
+a serum sodium of 128 mEq/L.
+
+**Which finding requires the nurse's most immediate attention?**
+
+- **A.** Bronzed skin pigmentation
+- **B.** Blood pressure of 82/50 mm Hg
+- **C.** Craving for salty foods
+- **D.** Report of chronic fatigue
+
+🎨 *Suggested illustration:* a limp blood-pressure cuff reading 82/50 beside an IV bag of normal saline and a vial of hydrocortisone.
+
+**✅ Correct answer: B**
+
+**Rationale**
+- **A — Incorrect.** Hyperpigmentation is a classic *chronic* Addison's finding,
+  not an emergency.
+- **B — Correct.** In **Addisonian crisis**, the lack of cortisol and
+  aldosterone causes **profound hypotension and vascular collapse.** The BP of
+  82/50 is life-threatening and needs immediate IV fluids and IV
+  hydrocortisone.
+- **C — Incorrect.** Salt craving reflects aldosterone deficiency but is not the
+  acute priority.
+- **D — Incorrect.** Fatigue is expected in Addison's and is not urgent.
+
+**📝 NCLEX Tip.** **Addison's = "everything low"** (low cortisol, low BP, low
+sodium, low glucose, high potassium). **Cushing's = "everything high."** Crisis =
+treat the **shock** first.
+
+**💡 Clinical Pearl / Memory Trick.** "**Add**ison's = you have to **add** the
+steroids." Priorities in crisis: **fluids, hydrocortisone, and correct the
+electrolytes.**
+
+---
+
+### Question 15 — Diabetic ketoacidosis
+**Category:** Adult Health / Endocrine · **Client Need:** Physiological Adaptation · **Difficulty:** Hard
+
+**Scenario.** A client with type 1 diabetes is admitted with diabetic
+ketoacidosis (DKA): glucose 560 mg/dL, pH 7.20, and potassium 5.8 mEq/L. An IV
+insulin infusion and IV fluids are started.
+
+**As the insulin begins to work, which electrolyte change must the nurse
+anticipate and monitor closely?**
+
+- **A.** Rising sodium
+- **B.** Falling potassium
+- **C.** Rising calcium
+- **D.** Falling glucose only, with no electrolyte concern
+
+🎨 *Suggested illustration:* an arrow showing potassium moving from the bloodstream into a cell as insulin acts, with a cardiac monitor in the background.
+
+**✅ Correct answer: B**
+
+**Rationale**
+- **A — Incorrect.** Sodium shifts occur but are not the priority monitoring
+  concern as insulin acts.
+- **B — Correct.** Insulin drives **potassium back into the cells**, so a serum
+  potassium that started high can **fall rapidly** into a dangerous low range.
+  The nurse monitors potassium closely and anticipates replacement.
+- **C — Incorrect.** Calcium is not the key electrolyte in DKA management.
+- **D — Incorrect.** Glucose does fall, but ignoring potassium could be fatal —
+  hypokalemia causes lethal dysrhythmias.
+
+**📝 NCLEX Tip.** In DKA, **insulin lowers glucose *and* potassium.** The test
+loves the moment when initial hyperkalemia flips to hypokalemia. Never give IV
+insulin if potassium is already low without replacing it.
+
+**💡 Clinical Pearl / Memory Trick.** "**Insulin pushes K into the cell.**"
+Follow the sequence: **fluids first, then insulin, and watch the potassium the
+whole way down.**
+
+---
+
+### Question 16 — Ischemic stroke and thrombolytics
+**Category:** Adult Health / Neuro · **Client Need:** Physiological Adaptation · **Difficulty:** Moderate
+
+**Scenario.** A client arrives in the emergency department with sudden left-sided
+weakness and slurred speech that began 90 minutes ago. A CT scan rules out
+hemorrhage, and the provider considers alteplase (tPA).
+
+**Which piece of information is most important for the nurse to verify before tPA
+is given?**
+
+- **A.** The client's usual blood pressure at home
+- **B.** The exact time of symptom onset and any recent bleeding or surgery
+- **C.** Whether the client has eaten in the last 8 hours
+- **D.** The client's preferred language
+
+🎨 *Suggested illustration:* a clock showing symptom onset with a shrinking "treatment window," beside a checklist that includes "recent surgery? recent bleeding?"
+
+**✅ Correct answer: B**
+
+**Rationale**
+- **A — Incorrect.** Current BP matters for tPA parameters, but the *usual home*
+  BP is not the critical screening item.
+- **B — Correct.** tPA is time-limited (a narrow window from **symptom onset**)
+  and is contraindicated with recent bleeding, surgery, or hemorrhagic stroke.
+  Confirming **onset time** and **bleeding risk** is essential to give it safely.
+- **C — Incorrect.** Fasting status is not the key thrombolytic screening
+  question.
+- **D — Incorrect.** Preferred language matters for communication but is not the
+  safety priority before a clot-buster.
+
+**📝 NCLEX Tip.** For thrombolytics, think **"time and bleeding."** If you don't
+know the *exact* onset time, or there's recent bleeding/surgery, tPA is unsafe.
+
+**💡 Clinical Pearl / Memory Trick.** Stroke mantra: **"Time is brain."** Act
+**FAST** — **F**ace droop, **A**rm drift, **S**peech slurred, **T**ime to call
+911.
+
+---
+
+### Question 17 — Hemodialysis access care
+**Category:** Adult Health / Renal · **Client Need:** Reduction of Risk Potential · **Difficulty:** Moderate
+
+**Scenario.** A client has a newly matured arteriovenous (AV) fistula in the left
+arm for hemodialysis.
+
+**Which nursing action protects the fistula?**
+
+- **A.** Take blood pressures and draw blood from the left arm for convenience.
+- **B.** Assess for a thrill (buzz) and bruit, and avoid constriction of the left arm.
+- **C.** Keep a tight blood-pressure cuff inflated on the left arm to reduce bleeding.
+- **D.** Apply a heating pad continuously over the fistula site.
+
+🎨 *Suggested illustration:* a nurse's fingertips resting over a forearm fistula feeling a "thrill," with a "no BP / no blood draws" symbol over that arm.
+
+**✅ Correct answer: B**
+
+**Rationale**
+- **A — Incorrect.** **No BP cuffs, blood draws, or IVs** in the fistula arm —
+  these can clot or damage the access.
+- **B — Correct.** The nurse confirms patency by **palpating the thrill** and
+  **auscultating the bruit** each shift, and protects the arm from anything that
+  compresses it (tight sleeves, cuffs, sleeping on it).
+- **C — Incorrect.** A constantly inflated cuff would occlude the fistula and
+  cause it to clot.
+- **D — Incorrect.** Continuous heat is not standard fistula care and risks
+  burns/vasodilation problems.
+
+**📝 NCLEX Tip.** Fistula assessment = **"feel the thrill, hear the bruit."**
+Their absence means the access may have **clotted** — report immediately.
+
+**💡 Clinical Pearl / Memory Trick.** Protect the access arm: **"No BP, no
+sticks, no squeeze."** A palpable **thrill** and audible **bruit** mean it's
+flowing.
+
+---
+
+### Question 18 — Hepatic encephalopathy
+**Category:** Adult Health / GI · **Client Need:** Physiological Adaptation · **Difficulty:** Moderate
+
+**Scenario.** A client with cirrhosis is admitted with confusion and asterixis
+(a flapping hand tremor). The provider prescribes lactulose.
+
+**Which outcome tells the nurse the lactulose is working as intended?**
+
+- **A.** The client has two to three soft stools per day and improving mental status.
+- **B.** The client reports relief of abdominal pain.
+- **C.** The client's blood pressure decreases.
+- **D.** The client has no bowel movements for 24 hours.
+
+🎨 *Suggested illustration:* a lab trend showing ammonia falling next to a client who looks more alert, with a small stool-count tally of 2–3/day.
+
+**✅ Correct answer: A**
+
+**Rationale**
+- **A — Correct.** Lactulose treats **hepatic encephalopathy** by trapping
+  ammonia in the gut and expelling it in stool. The therapeutic goal is **2–3
+  soft stools daily**, which lowers ammonia and **improves mental status.**
+- **B — Incorrect.** Lactulose is not an analgesic; pain relief is not its
+  purpose or measure of effect.
+- **C — Incorrect.** Lactulose does not act primarily on blood pressure.
+- **D — Incorrect.** No bowel movements means the drug is **not** clearing
+  ammonia — the opposite of the goal (and a sign the dose is too low).
+
+**📝 NCLEX Tip.** For lactulose, **more stools is the goal, not a side effect.**
+Titrate to 2–3 soft stools/day. Rising ammonia → worsening confusion.
+
+**💡 Clinical Pearl / Memory Trick.** "**Lactulose loses the ammonia** — out the
+back door." Falling ammonia + clearer thinking = success.
+
+---
+
+### Question 19 — Acute pancreatitis
+**Category:** Adult Health / GI · **Client Need:** Basic Care and Comfort · **Difficulty:** Moderate
+
+**Scenario.** A client is admitted with acute pancreatitis and severe epigastric
+pain radiating to the back.
+
+**Which position and intervention will best promote comfort?**
+
+- **A.** Supine and flat with the legs extended
+- **B.** Side-lying with knees drawn up toward the chest (fetal position)
+- **C.** High-Fowler's with a large meal to settle the stomach
+- **D.** Prone with the head turned to the side
+
+🎨 *Suggested illustration:* a client curled in a fetal side-lying position holding the abdomen, with an "NPO" sign on the bedside table.
+
+**✅ Correct answer: B**
+
+**Rationale**
+- **A — Incorrect.** Lying flat with legs extended stretches the abdomen and
+  typically worsens pancreatic pain.
+- **B — Correct.** A **side-lying, knees-to-chest (fetal)** position reduces
+  tension on the inflamed pancreas and eases pain. The client is also kept
+  **NPO** to rest the gland.
+- **C — Incorrect.** Eating stimulates pancreatic enzyme secretion and
+  intensifies pain — clients are NPO, not fed.
+- **D — Incorrect.** Prone positioning does not relieve pancreatic pain and is
+  impractical.
+
+**📝 NCLEX Tip.** Pancreatitis care = **rest the pancreas**: NPO, IV fluids, pain
+control, and a position that *unstretches* the abdomen (fetal/leaning forward).
+
+**💡 Clinical Pearl / Memory Trick.** "**Curl up to calm the pancreas.**"
+Remember the enzymes: **amylase and lipase rise** (lipase is more specific).
+
+---
+
+### Question 20 — Autonomic dysreflexia
+**Category:** Adult Health / Neuro · **Client Need:** Physiological Adaptation · **Difficulty:** Hard
+
+**Scenario.** A client with a spinal cord injury at the T4 level suddenly
+develops a pounding headache, blood pressure 200/110 mm Hg, flushing above the
+injury, and sweating.
+
+**What should the nurse do first?**
+
+- **A.** Lay the client flat and elevate the legs.
+- **B.** Raise the head of the bed to a sitting position and look for the trigger (often a full bladder).
+- **C.** Administer an as-needed sedative and dim the lights.
+- **D.** Notify the provider and wait for orders before acting.
+
+🎨 *Suggested illustration:* a client sitting upright with a red flushed face and a bulging bladder icon, blood pressure cuff reading 200/110.
+
+**✅ Correct answer: B**
+
+**Rationale**
+- **A — Incorrect.** Lying flat and raising the legs would *increase* an already
+  dangerously high blood pressure.
+- **B — Correct.** Autonomic dysreflexia is a hypertensive emergency. The nurse
+  immediately **sits the client up** (to lower BP by orthostasis) and **removes
+  the trigger** — most commonly a **distended bladder** (kinked catheter),
+  impacted stool, or tight clothing.
+- **C — Incorrect.** Sedation and dim lights do not address the surging blood
+  pressure or its cause.
+- **D — Incorrect.** This is time-critical; the nurse acts first (sit up, find
+  the trigger) *and* notifies the provider — not waits idly.
+
+**📝 NCLEX Tip.** Autonomic dysreflexia = **the one time you raise the head and
+lower the legs for high BP.** Then hunt the trigger: **bladder → bowel → skin.**
+
+**💡 Clinical Pearl / Memory Trick.** "**Sit them up, find the cause.**" The
+culprit is usually a **full bladder** — check the catheter first. Untreated, it
+can cause a stroke or seizure.
+
+---
+
+# Section 3 · Maternal, Newborn & Pediatrics
+
+---
+
+### Question 21 — Preeclampsia warning sign
+**Category:** Maternity · **Client Need:** Health Promotion and Maintenance · **Difficulty:** Moderate
+
+**Scenario.** A client at 37 weeks' gestation with preeclampsia is being
+monitored on the antepartum unit.
+
+**Which new report should the nurse recognize as a sign of worsening disease and
+report immediately?**
+
+- **A.** Mild ankle edema at the end of the day
+- **B.** Epigastric or right-upper-quadrant pain
+- **C.** Occasional fetal hiccups
+- **D.** Braxton Hicks contractions that stop with rest
+
+🎨 *Suggested illustration:* a pregnant client pressing a hand to the upper-right abdomen with a small "liver" highlight, and a warning triangle over the area.
+
+**✅ Correct answer: B**
+
+**Rationale**
+- **A — Incorrect.** Dependent ankle edema is common in late pregnancy and, by
+  itself, is not an emergency.
+- **B — Correct.** **Epigastric or RUQ pain** signals liver involvement (hepatic
+  distention, possible HELLP syndrome) and often precedes a **seizure
+  (eclampsia).** It is an urgent finding.
+- **C — Incorrect.** Fetal hiccups are a normal, reassuring finding.
+- **D — Incorrect.** Braxton Hicks contractions that resolve with rest are
+  normal and not a sign of worsening preeclampsia.
+
+**📝 NCLEX Tip.** The preeclampsia danger trio to report: **severe headache,
+visual changes, and epigastric/RUQ pain.** These warn of impending eclampsia.
+
+**💡 Clinical Pearl / Memory Trick.** "**Head, eyes, and belly = seizure on the
+way.**" Epigastric pain in preeclampsia is a **liver alarm**, not indigestion.
+
+---
+
+### Question 22 — Fetal heart rate: late decelerations
+**Category:** Maternity / Intrapartum · **Client Need:** Reduction of Risk Potential · **Difficulty:** Hard
+
+**Scenario.** A laboring client receiving IV oxytocin shows **late decelerations**
+on the fetal monitor — the fetal heart rate drops after the peak of each
+contraction and returns to baseline after the contraction ends.
+
+**What is the nurse's first action?**
+
+- **A.** Increase the oxytocin infusion to strengthen contractions.
+- **B.** Stop the oxytocin, reposition the client to her side, and give oxygen.
+- **C.** Encourage the client to hold her breath and push with each contraction.
+- **D.** Document the reassuring tracing and continue routine care.
+
+🎨 *Suggested illustration:* a fetal monitor strip showing the heart-rate dip mirroring and lagging behind each contraction, with an arrow to a side-lying laboring client on oxygen.
+
+**✅ Correct answer: B**
+
+**Rationale**
+- **A — Incorrect.** Increasing oxytocin worsens uteroplacental insufficiency and
+  the decelerations — exactly the wrong move.
+- **B — Correct.** Late decelerations indicate **uteroplacental insufficiency**
+  (the fetus isn't getting enough oxygen). Intrauterine resuscitation is
+  priority: **stop the oxytocin, turn the client on her side, give oxygen, and
+  increase IV fluids.**
+- **C — Incorrect.** Pushing does not correct the underlying oxygen problem.
+- **D — Incorrect.** Late decelerations are **non-reassuring**, not normal —
+  they require action.
+
+**📝 NCLEX Tip.** Memorize the pattern letters: **VEAL CHOP.** **L**ate decels →
+**P**lacental insufficiency → act. **V**ariable → **C**ord compression →
+reposition.
+
+**💡 Clinical Pearl / Memory Trick.** Intrauterine resuscitation = **"Turn, O₂,
+IV, stop the Pit."** Late = **late is bad** (placental problem); early decels
+mirror the contraction and are usually benign (head compression).
+
+---
+
+### Question 23 — Postpartum hemorrhage
+**Category:** Maternity / Postpartum · **Client Need:** Reduction of Risk Potential · **Difficulty:** Moderate
+
+**Scenario.** One hour after a vaginal birth, the nurse finds the client's uterine
+fundus **boggy (soft)** and displaced above and to the right of the umbilicus,
+with a large amount of vaginal bleeding.
+
+**What should the nurse do first?**
+
+- **A.** Massage the fundus while supporting the lower uterine segment.
+- **B.** Administer a prescribed analgesic for afterbirth pains.
+- **C.** Increase the rate of the IV fluids and recheck in 30 minutes.
+- **D.** Place the client in reverse Trendelenburg position.
+
+🎨 *Suggested illustration:* a nurse's two hands on the abdomen — one massaging a soft fundus, one cupping just above the pubic bone — with a full-bladder icon pushing the uterus off-center.
+
+**✅ Correct answer: A**
+
+**Rationale**
+- **A — Correct.** A **boggy fundus** means the uterus isn't contracting (uterine
+  atony), the leading cause of early postpartum hemorrhage. **Fundal massage** is
+  the immediate action to firm the uterus and control bleeding. (A displaced
+  fundus also hints at a full bladder, which should be emptied next.)
+- **B — Incorrect.** Pain control does not address the active hemorrhage.
+- **C — Incorrect.** Fluids support volume but do not stop the bleeding; waiting
+  30 minutes is unsafe.
+- **D — Incorrect.** Positioning does not treat uterine atony.
+
+**📝 NCLEX Tip.** Boggy uterus = **massage first.** A uterus pushed up and to the
+**right** is a classic clue for a **full bladder** — have the client void or
+catheterize after massaging.
+
+**💡 Clinical Pearl / Memory Trick.** "**Firm it up.**" If massage alone doesn't
+work, expect uterotonics (**oxytocin, methylergonovine, carboprost**) — but
+**hold methylergonovine if the client is hypertensive.**
+
+---
+
+### Question 24 — Normal newborn assessment
+**Category:** Newborn · **Client Need:** Health Promotion and Maintenance · **Difficulty:** Easy
+
+**Scenario.** A nurse assesses a 2-hour-old term newborn.
+
+**Which finding is normal and requires no further action?**
+
+- **A.** Bluish discoloration of the hands and feet (acrocyanosis)
+- **B.** A respiratory rate of 22/min
+- **C.** Central cyanosis of the lips and trunk
+- **D.** A blood glucose of 30 mg/dL
+
+🎨 *Suggested illustration:* a swaddled newborn with slightly bluish hands and feet but a pink face and trunk, a small "normal" checkmark near the extremities.
+
+**✅ Correct answer: A**
+
+**Rationale**
+- **A — Correct.** **Acrocyanosis** (blue hands and feet with a pink trunk) is a
+  normal newborn finding in the first 24–48 hours due to immature peripheral
+  circulation.
+- **B — Incorrect.** Normal newborn respirations are **30–60/min**; 22 is too
+  low and needs evaluation.
+- **C — Incorrect.** **Central** cyanosis (lips, tongue, trunk) is never normal
+  and signals hypoxia — an emergency.
+- **D — Incorrect.** Newborn glucose below **40 mg/dL** suggests hypoglycemia and
+  requires intervention (feeding, rechecking).
+
+**📝 NCLEX Tip.** Distinguish **acrocyanosis (normal, peripheral)** from
+**central cyanosis (abnormal, trunk/lips).** Only the peripheral kind is
+expected.
+
+**💡 Clinical Pearl / Memory Trick.** Newborn normals to bank: **HR 110–160, RR
+30–60, temp ~36.5–37.5°C, glucose ≥ 40.** Blue *ends* okay, blue *center* not.
+
+---
+
+### Question 25 — Antenatal corticosteroids
+**Category:** Maternity / Pharmacology · **Client Need:** Pharmacological Therapies · **Difficulty:** Moderate
+
+**Scenario.** A client in preterm labor at 30 weeks receives IM betamethasone.
+The client asks why it was given.
+
+**Which response by the nurse is accurate?**
+
+- **A.** "It stops your contractions so labor won't progress."
+- **B.** "It helps your baby's lungs mature more quickly in case of early birth."
+- **C.** "It treats an infection that may have triggered your labor."
+- **D.** "It raises your blood pressure to protect the placenta."
+
+🎨 *Suggested illustration:* a cross-section of developing fetal lungs with tiny alveoli filling with surfactant, a syringe labeled "betamethasone" beside it.
+
+**✅ Correct answer: B**
+
+**Rationale**
+- **A — Incorrect.** Betamethasone does not stop contractions — that's the role
+  of tocolytics (e.g., magnesium sulfate, nifedipine).
+- **B — Correct.** Antenatal corticosteroids like **betamethasone accelerate
+  fetal lung maturity** (surfactant production), reducing respiratory distress
+  syndrome if the baby is born preterm.
+- **C — Incorrect.** It is not an antibiotic and does not treat infection.
+- **D — Incorrect.** Its purpose is fetal lung maturation, not raising maternal
+  blood pressure.
+
+**📝 NCLEX Tip.** Separate the two preterm-labor drugs: **tocolytics buy time**
+(stop contractions); **corticosteroids mature the lungs.** Betamethasone = lungs.
+
+**💡 Clinical Pearl / Memory Trick.** "**Beta-methasone = better breathing.**"
+Given to mom, works on the **baby's lungs.**
+
+---
+
+### Question 26 — Infant safe sleep
+**Category:** Pediatrics / Health Promotion · **Client Need:** Health Promotion and Maintenance · **Difficulty:** Easy
+
+**Scenario.** A nurse is teaching new parents about reducing the risk of sudden
+infant death syndrome (SIDS).
+
+**Which instruction should the nurse include?**
+
+- **A.** "Place your baby on the stomach to sleep to prevent choking."
+- **B.** "Put your baby to sleep on the back on a firm, flat surface with no soft bedding."
+- **C.** "Use a soft pillow and plush blankets to keep the baby comfortable."
+- **D.** "Let the baby sleep in your bed so you can watch them closely."
+
+🎨 *Suggested illustration:* an infant lying on its back in an empty crib with a firm mattress and no pillows or toys, a green "safe sleep" checkmark above.
+
+**✅ Correct answer: B**
+
+**Rationale**
+- **A — Incorrect.** **Stomach (prone) sleeping raises SIDS risk** — the outdated
+  choking fear is not supported; healthy infants protect their airway on their
+  backs.
+- **B — Correct.** "**Back to sleep**" on a **firm, flat, bare surface** — no
+  pillows, bumpers, or loose blankets — is the evidence-based standard to reduce
+  SIDS.
+- **C — Incorrect.** Soft pillows and plush bedding are suffocation hazards.
+- **D — Incorrect.** Bed-sharing increases the risk of suffocation and SIDS;
+  room-sharing (separate sleep surface) is what's recommended.
+
+**📝 NCLEX Tip.** Safe sleep = **Back, Bare, Alone (own surface).** Any answer
+adding pillows, blankets, or prone positioning is wrong.
+
+**💡 Clinical Pearl / Memory Trick.** "**Back to sleep, tummy to play.**" The
+crib should be **boring** — nothing in it but the baby.
+
+---
+
+### Question 27 — Suspected epiglottitis
+**Category:** Pediatrics / Respiratory · **Client Need:** Physiological Adaptation · **Difficulty:** Hard
+
+**Scenario.** A 4-year-old arrives drooling, leaning forward in a tripod
+position, with a high fever, muffled voice, and refusal to swallow. Epiglottitis
+is suspected.
+
+**Which action should the nurse avoid?**
+
+- **A.** Keeping the child calm and in a position of comfort on the parent's lap
+- **B.** Examining the throat with a tongue depressor to visualize the epiglottis
+- **C.** Preparing emergency airway equipment at the bedside
+- **D.** Notifying the provider and staying with the child
+
+🎨 *Suggested illustration:* a child sitting upright in tripod position drooling, with a red "do not" symbol over a tongue depressor near the mouth.
+
+**✅ Correct answer: B**
+
+**Rationale**
+- **A — Incorrect (this is appropriate).** Keeping the child calm and upright
+  prevents further airway spasm — a correct action, so it is not what the nurse
+  avoids.
+- **B — Correct (this is what to AVOID).** **Never inspect the throat or use a
+  tongue depressor** with suspected epiglottitis — it can trigger laryngospasm
+  and complete airway obstruction. Visualization is done only where an emergency
+  airway can be secured.
+- **C — Incorrect (this is appropriate).** Having airway/intubation equipment
+  ready is essential.
+- **D — Incorrect (this is appropriate).** Staying with the child and notifying
+  the provider is correct.
+
+**📝 NCLEX Tip.** This is a **negative-style** item ("which should you AVOID").
+Read the stem twice — the *right answer is the wrong action.* For epiglottitis:
+**hands off the throat.**
+
+**💡 Clinical Pearl / Memory Trick.** Epiglottitis "**tripod, drool, and
+muffled**" = airway emergency. Remember the **4 D's: Drooling, Dysphagia,
+Dysphonia, Distress.** Don't touch the throat.
+
+---
+
+### Question 28 — Pediatric dehydration
+**Category:** Pediatrics / Fluid & Electrolyte · **Client Need:** Reduction of Risk Potential · **Difficulty:** Moderate
+
+**Scenario.** A nurse is monitoring an infant admitted with several days of
+vomiting and diarrhea.
+
+**Which finding is the most reliable indicator of the infant's fluid status?**
+
+- **A.** Skin color
+- **B.** Daily weight
+- **C.** Reported number of wet diapers by phone
+- **D.** Presence of tears when crying
+
+🎨 *Suggested illustration:* an infant scale with a trend line dropping day over day, next to a diaper with a small "output" note.
+
+**✅ Correct answer: B**
+
+**Rationale**
+- **A — Incorrect.** Skin color is nonspecific and affected by many factors.
+- **B — Correct.** **Daily weight** measured on the same scale is the **most
+  accurate, objective indicator of fluid balance** in infants and children —
+  1 kg ≈ 1 L of fluid. Rapid weight loss quantifies dehydration.
+- **C — Incorrect.** Diaper counts help but are subjective and less precise than
+  measured weight.
+- **D — Incorrect.** Absence of tears and a sunken fontanel are *signs* of
+  dehydration but don't measure it as reliably as weight.
+
+**📝 NCLEX Tip.** When a question asks for the **best/most reliable** measure of
+fluid status, **daily weight** usually wins over intake/output estimates.
+
+**💡 Clinical Pearl / Memory Trick.** "**The scale tells the tale.**" Other
+infant dehydration clues: **sunken fontanel, no tears, dry mucous membranes, and
+decreased urine output (< 1 mL/kg/hr).**
+
+---
+
+### Question 29 — Cystic fibrosis nutrition
+**Category:** Pediatrics / GI · **Client Need:** Physiological Adaptation · **Difficulty:** Moderate
+
+**Scenario.** A child with cystic fibrosis is prescribed pancreatic enzyme
+replacement.
+
+**Which instruction should the nurse give the caregivers?**
+
+- **A.** "Give the enzymes only at bedtime on an empty stomach."
+- **B.** "Give the enzymes with every meal and snack."
+- **C.** "Restrict the child's fat and calorie intake."
+- **D.** "Skip the enzymes on days the child feels well."
+
+🎨 *Suggested illustration:* a plate of food beside an enzyme capsule with a clock showing "with meals," and a high-calorie snack in the background.
+
+**✅ Correct answer: B**
+
+**Rationale**
+- **A — Incorrect.** Enzymes must be taken **with food** to help digest it, not
+  on an empty stomach.
+- **B — Correct.** In cystic fibrosis, thick secretions block pancreatic enzymes,
+  causing malabsorption. **Pancreatic enzymes are given with every meal and
+  snack** so nutrients (especially fats and fat-soluble vitamins) can be
+  absorbed.
+- **C — Incorrect.** These children need a **high-calorie, high-protein** diet —
+  fat is not restricted; it's supported with enzymes.
+- **D — Incorrect.** Enzymes are needed with all food, every day — not skipped.
+
+**📝 NCLEX Tip.** Rule of thumb for replacement enzymes: **"No food, no
+enzyme; food, then enzyme."** CF kids need **more** calories, not fewer.
+
+**💡 Clinical Pearl / Memory Trick.** CF = **"salty, sticky, and hungry."** Salty
+sweat (diagnostic sweat chloride), sticky mucus, and a big appetite need to
+**eat more + take enzymes + add fat-soluble vitamins A, D, E, K.**
+
+---
+
+### Question 30 — Tetralogy of Fallot "tet spell"
+**Category:** Pediatrics / Cardiac · **Client Need:** Physiological Adaptation · **Difficulty:** Hard
+
+**Scenario.** A toddler with tetralogy of Fallot suddenly becomes acutely
+cyanotic and irritable during crying (a hypercyanotic "tet" spell).
+
+**What should the nurse do first?**
+
+- **A.** Lay the child flat and extend the legs.
+- **B.** Place the child in a knee-to-chest position.
+- **C.** Encourage vigorous physical activity to improve circulation.
+- **D.** Withhold oxygen to avoid drying the airways.
+
+🎨 *Suggested illustration:* a caregiver holding a toddler with knees tucked up to the chest, a calm posture, oxygen flowing, cyanosis easing.
+
+**✅ Correct answer: B**
+
+**Rationale**
+- **A — Incorrect.** Lying flat with legs extended reduces systemic resistance
+  and worsens the right-to-left shunt and cyanosis.
+- **B — Correct.** The **knee-to-chest** position **increases systemic vascular
+  resistance**, which reduces the right-to-left shunt and directs more blood to
+  the lungs — relieving the cyanotic spell. Oxygen and calming the child follow.
+- **C — Incorrect.** Activity increases oxygen demand and deepens cyanosis.
+- **D — Incorrect.** Oxygen is *given*, not withheld, during a hypercyanotic
+  spell.
+
+**📝 NCLEX Tip.** For a tet spell, the magic position is **knee-to-chest** (older
+children may squat). Both increase systemic resistance and ease the shunt.
+
+**💡 Clinical Pearl / Memory Trick.** "**Knees to chest gives the lungs their
+best.**" Squatting/knee-chest is the toddler's own instinct to abort a tet spell.
+
+---
