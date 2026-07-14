@@ -70,9 +70,22 @@ nurses" — search UI + public nursing job resources), blog, about, careers,
 help, contact, support, settings, profile (dashboard), join (create free
 account), search, notifications, privacy (DRAFT), terms (DRAFT).
 
-## Pricing (market-anchored placeholders, owner edits later)
+## Pricing (owner-locked structure; numbers editable)
 
-NCLEX Complete $129 (or $39/mo) · specialty courses $49–$79 · **Esi tutor add-on +$19/mo** (requires a course). Free account: free content tier, points, dashboard.
+- **NCLEX Complete: $149** one-time, standalone.
+- **Esi tutor: +$19/mo** add-on (requires a course).
+- **Bundle deal (buy together): course drops to $129 + Esi $19/mo — save $20.** This is the "get them together" discount; frame as best value.
+- ($129 one-time ≈ 3.3 months vs an old $39/mo plan — buy-once wins past ~3 months.)
+- Specialty courses $49–$79 · Nurse Dictionary download $4.99 (or points, free with any course).
+- Free account: free tier (NCLEX practice + 4 Scrub TV lessons + dictionary search), points, dashboard.
+
+## Dictionary = own-once, free-forever (owner-locked)
+
+Ownership is a **profile flag**, not a file sale. The download always serves the
+**latest release**; owners get every future expansion **free, automatically**,
+surfaced in **Profile → My Downloads** with a sleek gradient **"UPDATED · FREE"
+badge** (`.badge-new` — coral→gold, never a blue button) + version note. Demo via
+localStorage (`dictOwned`, `dictSeen`); real version reads the account/DB in Phase 2.
 
 ## Contact (samples until owner replaces)
 

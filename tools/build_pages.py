@@ -432,8 +432,8 @@ INDEX_BODY = f"""  <main>
             <div class="chip-row"><span class="chip gold">FLAGSHIP</span><span class="chip teal">NGN READY</span><span class="chip">Esi compatible</span></div>
             <h3>NCLEX Complete</h3>
             <p>The full journey to test day: adaptive question banks, clinical-judgment case studies, mock exams in real test format, and analytics that show exactly where you're strong and where you're not.</p>
-            <div class="price-line"><span class="price">$129</span><span class="per">one-time &middot; or $39/mo</span></div>
-            <div class="chip-row"><span class="chip">+ Add Esi tutoring &middot; $19/mo</span></div>
+            <div class="price-line"><span class="price">$149</span><span class="per">one-time, standalone</span></div>
+            <div class="chip-row"><span class="chip gold">Bundle with Esi &rarr; $129 + $19/mo &middot; save $20</span></div>
             <a class="btn btn-coral" href="courses.html">Explore the course</a>
           </div>
         </div>
@@ -602,8 +602,8 @@ PAGES["courses.html"] = ("Courses — Must Love Scrubs",
           <div class="chip-row"><span class="chip gold">FLAGSHIP</span><span class="chip teal">NGN READY</span></div>
           <h3>NCLEX Complete</h3>
           <p>Everything to test day: adaptive banks, clinical-judgment cases, timed mocks in real test format, score analytics, and a visual progress map. Built on how memory actually works — spaced repetition and active recall, not cramming.</p>
-          <div class="price-line"><span class="price">$129</span><span class="per">one-time &middot; or $39/mo</span></div>
-          <div class="chip-row"><span class="chip">+ Esi tutoring $19/mo</span></div>
+          <div class="price-line"><span class="price">$149</span><span class="per">one-time, standalone</span></div>
+          <div class="chip-row"><span class="chip gold">Bundle with Esi &rarr; $129 + $19/mo &middot; save $20</span></div>
           <a class="btn btn-coral" href="join.html">Enroll (coming at launch)</a>
         </div>
       </div>
@@ -659,6 +659,7 @@ PAGES["esi.html"] = ("Meet Esi — Your AI Tutor | Must Love Scrubs",
         <span class="eyebrow" style="color:var(--gold-400);">Premium add-on</span>
         <h2>Add Esi to any prep course.</h2>
         <p><b style="font-size:1.6rem;">$19/mo</b> &nbsp;&middot;&nbsp; requires an active course &middot; cancel anytime</p>
+        <p style="margin-top:0.6rem;color:var(--gold-400);font-weight:700;">Bundle deal: grab Esi with NCLEX Complete and the course drops to $129 (save $20).</p>
         <a class="btn btn-coral" href="#" data-esi-subscribe>Subscribe to Esi (demo)</a>
         <div class="perks">
           <span>{I['check']} Unlimited tutoring sessions</span>
@@ -890,6 +891,24 @@ PAGES["profile.html"] = ("Profile Dashboard — Must Love Scrubs",
       </div>
       <div class="tile fade-up"><span class="tag">Quiz history</span><h3>Latest scores</h3><p>Beta blockers quiz — 8/10<br>Triage priorities — 9/10<br>Decels decoded — 7/10</p></div>
       <div class="tile fade-up"><span class="tag">Certificates</span><h3>Earned</h3><p>Your completion certificates will collect here — downloadable and shareable.</p></div>
+      <div class="tile span2 fade-up" data-downloads>
+        <div style="display:flex;align-items:center;justify-content:space-between;gap:1rem;flex-wrap:wrap;"><span class="tag">My downloads</span><span class="badge-new" data-dl-badge hidden><span class="spark"></span> Updated &middot; free</span></div>
+        <h3>Nurse Dictionary</h3>
+        <div data-dl-owned hidden>
+          <div class="update-card" style="margin-top:0.8rem;">
+            <div class="uc-body">
+              <b>Nurse Dictionary <span data-dl-ver>Core Release 2</span></b>
+              <p data-dl-msg>You own this. It's yours for life — every future expansion lands here free, automatically.</p>
+              <span class="uc-ver" data-dl-note></span>
+            </div>
+            <a class="btn btn-glow" href="dictionary.html#download" data-dl-get>Open latest version</a>
+          </div>
+        </div>
+        <div data-dl-unowned>
+          <p style="margin-top:0.6rem;">You don't own the download yet. Buy it once for $4.99 (or unlock with points) — then every future expansion is <b>free forever</b>, with the new words waiting right here.</p>
+          <div class="hero-cta" style="margin-top:1rem;"><a class="btn btn-coral" href="dictionary.html#download">Get the Dictionary</a><button class="btn btn-line" data-dl-demo>Unlock (demo)</button></div>
+        </div>
+      </div>
       <div class="tile fade-up"><span class="tag">Saved</span><h3>Your library</h3><p>Saved videos, courses, and downloads live here for quick return.</p></div>
       <div class="tile span2 fade-up"><span class="tag">Esi recommends</span><h3>Tonight's 20 minutes</h3><p>“Your cardiac pharm misses cluster around beta blockers vs. calcium channel blockers. Watch the 6-minute refresher, then take the 10-question drill — I'll re-test you Thursday.” — Esi</p></div>
       <div class="tile fade-up"><span class="tag">Settings</span><h3>Manage account</h3><p><a href="settings.html" style="color:var(--coral-500);font-weight:700;">Account, billing &amp; notifications &rarr;</a></p></div>
@@ -1255,7 +1274,7 @@ PREP_BODY = f"""  <div class="page-hero">
         </div>
         <div class="tier-col paid fade-up">
           <div class="tname">NCLEX Complete</div>
-          <div class="tprice">$129 &middot; or $39/mo</div>
+          <div class="tprice">$149 &middot; or bundle $129 + Esi</div>
           <ul>
             <li>{I['check']} 2,000+ questions, <span class="track-word">RN</span> &amp; LPN tracks</li>
             <li>{I['check']} Every NGN type + full rationales</li>
@@ -1366,7 +1385,7 @@ PREP_BODY = f"""  <div class="page-hero">
         <div class="lock-ic">{I['lock']}</div>
         <h3>That's the free sample.</h3>
         <p>You've tried every item type. The full <span class="track-word">RN</span> bank has <b>2,000+ questions</b>, timed mock exams in real test format, weak-area analytics, and Esi drilling exactly what you miss.</p>
-        <a class="btn btn-coral" href="#" data-unlock>Unlock NCLEX Complete &mdash; $129 (demo)</a>
+        <a class="btn btn-coral" href="#" data-unlock>Unlock NCLEX Complete &mdash; from $129 (demo)</a>
         <a class="relock" href="#" data-unlock>Just let me feel the paid side &rarr;</a>
       </div>
 

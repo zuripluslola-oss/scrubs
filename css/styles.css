@@ -1139,6 +1139,34 @@ body.mls-paid .gate { display: none; }
 /* free lessons get a clean, friendly "free" ribbon to contrast the premium look */
 .free-ribbon { display: inline-flex; align-items: center; gap: 0.4rem; font-size: 0.68rem; font-weight: 800; letter-spacing: 0.1em; text-transform: uppercase; color: var(--teal-600); background: var(--teal-100); padding: 0.3rem 0.8rem; border-radius: var(--pill); }
 
+/* ---------- Sleek "NEW / updated" badge (no blue button) ---------- */
+.badge-new {
+  position: relative; display: inline-flex; align-items: center; gap: 0.4rem;
+  font-size: 0.62rem; font-weight: 800; letter-spacing: 0.14em; text-transform: uppercase;
+  color: #fff; padding: 0.34rem 0.85rem; border-radius: var(--pill);
+  background: linear-gradient(100deg, var(--coral-500), var(--gold-400));
+  box-shadow: 0 6px 18px rgba(255,176,56,0.4); overflow: hidden;
+}
+.badge-new .spark { width: 6px; height: 6px; border-radius: 50%; background: #fff; box-shadow: 0 0 8px #fff, 0 0 14px rgba(255,255,255,0.6); }
+.badge-new::after { content: ""; position: absolute; inset: 0; background: linear-gradient(100deg, transparent 25%, rgba(255,255,255,0.55) 50%, transparent 75%); transform: translateX(-130%); animation: badge-shine 3s ease-in-out infinite; }
+
+/* update card — sleek, glassy, gold-edged; no plain blue button */
+.update-card {
+  position: relative; overflow: hidden; border-radius: var(--radius);
+  background: linear-gradient(150deg, var(--indigo-900), var(--indigo-700));
+  color: #fff; padding: 1.4rem 1.5rem; box-shadow: var(--shadow-2), inset 0 0 0 1px rgba(255,201,77,0.3);
+  display: flex; flex-wrap: wrap; align-items: center; gap: 1rem;
+}
+.update-card .uc-body { flex: 1; min-width: 200px; }
+.update-card .uc-body b { display: block; font-size: 1.02rem; }
+.update-card .uc-body p { font-size: 0.85rem; color: rgba(255,255,255,0.75); margin-top: 0.2rem; }
+.update-card .uc-ver { font-size: 0.72rem; color: var(--gold-400); font-weight: 700; margin-top: 0.4rem; display: inline-block; }
+.btn-glow { background: linear-gradient(100deg, var(--coral-500), #ff8a4c); color: #fff; box-shadow: 0 10px 26px rgba(255,120,60,0.45); }
+.btn-glow:hover { filter: brightness(1.06); }
+
+@keyframes badge-shine { 0% { transform: translateX(-130%); } 60%, 100% { transform: translateX(240%); } }
+@media (prefers-reduced-motion: reduce) { .badge-new::after { animation: none; display: none; } }
+
 /* fade-up reveal */
 .fade-up { opacity: 0; transform: translateY(26px); transition: opacity 0.65s ease, transform 0.65s ease; }
 .fade-up.visible { opacity: 1; transform: translateY(0); }

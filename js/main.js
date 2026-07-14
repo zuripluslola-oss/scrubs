@@ -143,6 +143,34 @@
     });
   }
 
+  /* ---------- Dictionary ownership + auto-free updates (demo) ----------
+     Ownership is a profile flag, not a file sale. The download always serves
+     the LATEST release; owners get every future expansion free, flagged NEW.
+     Real version reads this from the account/DB in Phase 2. */
+  (function () {
+    var LATEST = { ver: 'Core Release 3', num: 3, note: '40 new terms across your specialties — added to your library free.' };
+    var wrap = document.querySelector('[data-downloads]');
+    if (!wrap) return;
+    function render() {
+      var owned = localStorage.getItem('dictOwned') === 'true';
+      var seen = parseInt(localStorage.getItem('dictSeen') || '0', 10);
+      var isNew = owned && seen < LATEST.num;
+      wrap.querySelector('[data-dl-owned]').hidden = !owned;
+      wrap.querySelector('[data-dl-unowned]').hidden = owned;
+      wrap.querySelector('[data-dl-badge]').hidden = !isNew;
+      wrap.querySelector('[data-dl-ver]').textContent = LATEST.ver;
+      var note = wrap.querySelector('[data-dl-note]');
+      note.textContent = isNew ? ('🆕 ' + LATEST.ver + ' — ' + LATEST.note) : ('You have the latest — ' + LATEST.ver + '.');
+    }
+    var demo = wrap.querySelector('[data-dl-demo]');
+    if (demo) demo.addEventListener('click', function () {
+      localStorage.setItem('dictOwned', 'true'); localStorage.setItem('dictSeen', '2'); render();
+    });
+    var get = wrap.querySelector('[data-dl-get]');
+    if (get) get.addEventListener('click', function () { localStorage.setItem('dictSeen', String(LATEST.num)); setTimeout(render, 60); });
+    render();
+  })();
+
   /* demo subscribe toggle on the Esi page */
   var subBtn = document.querySelector('[data-esi-subscribe]');
   if (subBtn) {
