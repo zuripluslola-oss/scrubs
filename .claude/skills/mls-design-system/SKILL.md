@@ -70,14 +70,41 @@ nurses" — search UI + public nursing job resources), blog, about, careers,
 help, contact, support, settings, profile (dashboard), join (create free
 account), search, notifications, privacy (DRAFT), terms (DRAFT).
 
-## Pricing (owner-locked structure; numbers editable)
+## Pricing (owner-locked structure; numbers editable — updated 2026-07)
 
-- **NCLEX Complete: $149** one-time, standalone.
-- **Esi tutor: +$19/mo** add-on (requires a course).
-- **Bundle deal (buy together): course drops to $129 + Esi $19/mo — save $20.** This is the "get them together" discount; frame as best value.
-- ($129 one-time ≈ 3.3 months vs an old $39/mo plan — buy-once wins past ~3 months.)
+**NCLEX Complete = one subscription, three durations. Esi is INCLUDED in every
+plan (no add-on) because competitors bundle AI and we beat them on it.** Every
+plan unlocks the ENTIRE system — question bank, 50 case studies, 4 readiness
+exams, strategy course, study schedules, tagging, analytics, the workbook, and
+Esi. The only difference between tiers is how much runway you get.
+
+- **1 Month — $49** (anchor $79, "Save $30"). For students testing soon.
+- **2 Months — $89** (anchor $149, "Save $60"). *Most recommended.* Pass Guarantee.
+- **3 Months — $119** (anchor $199, "Save $80"). Pass Guarantee. Full-time workers.
+- **Pass Guarantee** on the 2- and 3-month plans: finish the program, full refund if you don't pass.
+- Helper `pricing_tiers()` in `build_pages.py` renders the three cards; `TIERS` + `TIER_FEATURES` hold the data. `nclex-complete.html` is the flagship product page.
 - Specialty courses $49–$79 · Nurse Dictionary download $4.99 (or points, free with any course).
 - Free account: free tier (NCLEX practice + 4 Scrub TV lessons + dictionary search), points, dashboard.
+
+## NCLEX Complete flagship page (owner-locked — benchmarked to beat NCLEX Bootcamp)
+
+`nclex-complete.html` is the paid product page. Original content only — never
+copy Bootcamp/Kaplan/actual NCLEX; never call it "NCLEX Bootcamp." Sections:
+four pillars (50 Next Gen case studies + walkthroughs · 2,600+ standalone
+questions · Next Gen strategy course · 4 full-length CAT readiness exams that
+predict pass chance Low/Borderline/High/Very High), a readiness meter, a CAT
+explainer, 1/2/3-month day-by-day study schedules, an interactive "which plan"
+quiz, Mastered/Reviewing/Learning tagging, performance-by-subject bars,
+Question of the Day (phone or email), community (study group + weekly webinars),
+the downloadable 50-question workbook, and the three-tier pricing block. JS in
+`js/complete.js`. NCLEX® trademark disclaimer required at the bottom.
+
+## Crawl / anti-scrape policy (owner-locked)
+
+`robots.txt` allows Google/Bing/DuckDuckGo (SEO) and blocks known AI/content
+scrapers (GPTBot, ClaudeBot, CCBot, PerplexityBot, Bytespider, etc.). robots.txt
+is a request, not enforcement — REAL blocking (the 403 competitors return) is a
+hosting/CDN switch: enable Cloudflare Bot Fight Mode / a WAF rule at deploy.
 
 ## Dictionary = own-once, free-forever (owner-locked)
 
