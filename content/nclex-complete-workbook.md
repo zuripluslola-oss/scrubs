@@ -1189,3 +1189,782 @@ children may squat). Both increase systemic resistance and ease the shunt.
 best.**" Squatting/knee-chest is the toddler's own instinct to abort a tet spell.
 
 ---
+
+# Section 4 · Mental Health & Fundamentals
+
+---
+
+### Question 31 — Therapeutic communication
+**Category:** Mental Health · **Client Need:** Psychosocial Integrity · **Difficulty:** Moderate
+
+**Scenario.** A client newly diagnosed with cancer says, "I don't even know how
+to tell my kids. I feel like I've already let them down."
+
+**Which response by the nurse is most therapeutic?**
+
+- **A.** "Don't worry — plenty of people beat cancer these days."
+- **B.** "It sounds like you're feeling overwhelmed about facing your children."
+- **C.** "Why would you feel like you've let them down? You didn't cause this."
+- **D.** "You should focus on staying positive for your family's sake."
+
+🎨 *Suggested illustration:* a nurse seated at eye level, leaning in, one hand open toward a client who looks down — an unhurried, attentive posture.
+
+**✅ Correct answer: B**
+
+**Rationale**
+- **A — Incorrect.** False reassurance ("plenty of people beat cancer") dismisses
+  the client's feelings and shuts down communication.
+- **B — Correct.** **Reflecting the client's feeling** ("it sounds like you're
+  feeling overwhelmed") shows empathy, validates the emotion, and invites the
+  client to say more — the heart of therapeutic communication.
+- **C — Incorrect.** "Why" questions can sound challenging and put the client on
+  the defensive.
+- **D — Incorrect.** Telling the client to "stay positive" minimizes real
+  distress and imposes the nurse's agenda.
+
+**📝 NCLEX Tip.** Therapeutic answers usually **reflect feelings, stay open, and
+keep the focus on the client.** Avoid false reassurance, "why" questions, giving
+advice, and changing the subject.
+
+**💡 Clinical Pearl / Memory Trick.** When two answers both look kind, pick the
+one that **names the feeling and hands the conversation back to the client.**
+Silence and reflection beat cheerleading.
+
+---
+
+### Question 32 — Suicide risk priority
+**Category:** Mental Health · **Client Need:** Safe and Effective Care Environment · **Difficulty:** Hard
+
+**Scenario.** During an assessment, a client with depression states, "I've been
+saving up my pills, and soon it won't matter anymore."
+
+**What is the nurse's priority action?**
+
+- **A.** Encourage the client to focus on reasons for living.
+- **B.** Ask the client directly whether they have a plan to harm themselves and ensure safety.
+- **C.** Document the statement and continue the scheduled assessment.
+- **D.** Reassure the client that things will improve with medication.
+
+🎨 *Suggested illustration:* a nurse making calm, direct eye contact asking a clear question, with a "safety first" band across the bottom.
+
+**✅ Correct answer: B**
+
+**Rationale**
+- **A — Incorrect.** Reasons for living may come later, but they do not address
+  the immediate danger.
+- **B — Correct.** The statement suggests a **plan and means** (saved pills). The
+  nurse must **ask directly about suicidal intent and plan** and **institute
+  safety measures** immediately (do not leave the client alone, remove means).
+  Asking directly does not "plant the idea."
+- **C — Incorrect.** Documenting without acting leaves the client in danger.
+- **D — Incorrect.** Reassurance ignores an active safety threat.
+
+**📝 NCLEX Tip.** Safety is always the priority in suicide items. A client with a
+**plan and the means** is high-risk and needs **direct questioning and immediate
+protection.**
+
+**💡 Clinical Pearl / Memory Trick.** "**Ask the question, remove the means,
+never leave alone.**" The more specific the **plan** and the more available the
+**means**, the higher the risk.
+
+---
+
+### Question 33 — Alcohol withdrawal
+**Category:** Mental Health / Physiological · **Client Need:** Physiological Adaptation · **Difficulty:** Moderate
+
+**Scenario.** A client admitted 24 hours ago after a fall reports the last
+alcoholic drink was "yesterday morning." The nurse notes tremors, diaphoresis,
+heart rate 118/min, blood pressure 168/96, and rising anxiety.
+
+**Which is the nurse's priority concern?**
+
+- **A.** These findings are expected and require no action.
+- **B.** The client is at risk for worsening withdrawal, including seizures and delirium tremens.
+- **C.** The client is likely experiencing an allergic reaction.
+- **D.** The client is showing signs of opioid intoxication.
+
+🎨 *Suggested illustration:* a timeline of hours-since-last-drink with escalating symptoms (tremor → tachycardia → seizure risk), a vital-signs monitor trending up.
+
+**✅ Correct answer: B**
+
+**Rationale**
+- **A — Incorrect.** Escalating autonomic signs are **not** benign — untreated,
+  withdrawal can progress to seizures and **delirium tremens (DTs)**, which can
+  be fatal.
+- **B — Correct.** Tremor, diaphoresis, tachycardia, hypertension, and anxiety
+  1–2 days after the last drink signal **alcohol withdrawal.** The nurse
+  anticipates **benzodiazepines** (per protocol/CIWA scoring), thiamine, a calm
+  environment, and seizure precautions.
+- **C — Incorrect.** There is no allergen described; the picture is autonomic
+  hyperactivity, not anaphylaxis.
+- **D — Incorrect.** Opioid intoxication causes **sedation and slowed
+  breathing** — the opposite of this hyperadrenergic state.
+
+**📝 NCLEX Tip.** Alcohol withdrawal = **hyperactivity** (up HR, up BP, tremor,
+agitation). Peak DT risk is **48–72 hours** after the last drink. Benzodiazepines
+are the mainstay.
+
+**💡 Clinical Pearl / Memory Trick.** "**Withdrawal winds you up.**" Give
+**thiamine before glucose** to prevent Wernicke's encephalopathy in heavy
+drinkers.
+
+---
+
+### Question 34 — Lithium and fluid balance teaching
+**Category:** Mental Health / Pharmacology · **Client Need:** Health Promotion and Maintenance · **Difficulty:** Easy
+
+**Scenario.** A nurse is teaching a client starting lithium about self-care at
+home.
+
+**Which client statement indicates a need for further teaching?**
+
+- **A.** "I'll drink plenty of water and keep my salt intake steady."
+- **B.** "I'll get my blood levels checked as scheduled."
+- **C.** "I'll start a strict low-sodium diet to be healthier."
+- **D.** "I'll call my provider if I have vomiting or diarrhea."
+
+🎨 *Suggested illustration:* a water bottle and a steady salt shaker with a green check, and a "low-sodium diet" label crossed out in red.
+
+**✅ Correct answer: C**
+
+**Rationale**
+- **A — Incorrect (correct understanding).** Adequate fluids and **consistent**
+  sodium keep lithium levels stable — good teaching.
+- **B — Incorrect (correct understanding).** Regular level monitoring is
+  essential with lithium's narrow therapeutic range.
+- **C — Correct (this statement needs correction).** A **low-sodium diet is
+  dangerous** with lithium — low sodium makes the kidneys retain lithium,
+  raising it toward toxicity. This shows a knowledge gap.
+- **D — Incorrect (correct understanding).** Vomiting and diarrhea cause fluid/
+  sodium loss and toxicity risk, so reporting them is correct.
+
+**📝 NCLEX Tip.** Watch for **negative-polarity** stems ("need for further
+teaching," "requires follow-up") — you're hunting the **wrong** statement.
+
+**💡 Clinical Pearl / Memory Trick.** Lithium loves **steady salt and steady
+water.** Sudden **low sodium or dehydration = rising lithium = toxicity.**
+
+---
+
+### Question 35 — Blood pressure measurement error
+**Category:** Fundamentals · **Client Need:** Reduction of Risk Potential · **Difficulty:** Easy
+
+**Scenario.** A nurse obtains an unexpectedly high blood pressure reading on a
+client.
+
+**Which factor could falsely elevate the reading?**
+
+- **A.** Using a cuff that is too small (narrow) for the client's arm
+- **B.** Positioning the arm at the level of the heart
+- **C.** Allowing the client to rest quietly for five minutes first
+- **D.** Using a cuff that covers about 80% of the upper arm circumference
+
+🎨 *Suggested illustration:* a too-small cuff straining around a large arm with an exaggerated high number on the monitor, next to a correctly sized cuff reading normal.
+
+**✅ Correct answer: A**
+
+**Rationale**
+- **A — Correct.** A cuff that is **too small/narrow** for the arm gives a
+  **falsely high** reading. (A cuff too large reads falsely low.)
+- **B — Incorrect.** Arm at heart level is the **correct** technique and yields an
+  accurate reading.
+- **C — Incorrect.** Resting quietly first prevents falsely high readings — good
+  technique.
+- **D — Incorrect.** A properly sized cuff (bladder covering ~80% of the arm) is
+  correct and improves accuracy.
+
+**📝 NCLEX Tip.** Cuff-size errors: **too small → too high; too big → too low.**
+Also, an arm **below** heart level reads high; **above** heart level reads low.
+
+**💡 Clinical Pearl / Memory Trick.** "**Small cuff, big number.**" When a value
+surprises you, **recheck technique before treating the number.**
+
+---
+
+### Question 36 — Sterile field / surgical asepsis
+**Category:** Fundamentals / Infection Control · **Client Need:** Safe and Effective Care Environment · **Difficulty:** Moderate
+
+**Scenario.** A nurse is setting up a sterile field for a bedside procedure.
+
+**Which action breaks sterile technique and requires the nurse to start over?**
+
+- **A.** Holding sterile items above waist level and within view
+- **B.** Considering the outer one-inch border of the sterile drape contaminated
+- **C.** Reaching across the sterile field to place an item on the far side
+- **D.** Opening the outermost flap of a sterile package away from the body first
+
+🎨 *Suggested illustration:* a gloved hand reaching directly over an open sterile tray with a red "contaminated" arc where the arm crosses it.
+
+**✅ Correct answer: C**
+
+**Rationale**
+- **A — Incorrect (correct technique).** Keeping sterile items **above the waist
+  and in sight** maintains sterility.
+- **B — Incorrect (correct technique).** The **outer 1-inch border** of a sterile
+  field is treated as **contaminated** — standard practice.
+- **C — Correct (this breaks sterility).** **Reaching across a sterile field**
+  contaminates it — the unsterile arm passes over sterile items. The nurse must
+  set up so items are reached from the side, not over the top.
+- **D — Incorrect (correct technique).** Opening the **first flap away** from the
+  body prevents reaching over the sterile contents.
+
+**📝 NCLEX Tip.** Sterile rules to bank: **keep it in sight, above the waist;
+1-inch border is dirty; never turn your back on it; never reach across it; wet =
+contaminated.**
+
+**💡 Clinical Pearl / Memory Trick.** "**Below the waist or out of sight = it
+isn't sterile — not quite.**" When in doubt, throw it out and restart.
+
+---
+
+### Question 37 — Nasogastric tube placement verification
+**Category:** Fundamentals · **Client Need:** Reduction of Risk Potential · **Difficulty:** Moderate
+
+**Scenario.** A nurse prepares to give medication through a newly inserted
+nasogastric (NG) tube.
+
+**Which method is the most reliable for verifying correct tube placement?**
+
+- **A.** Auscultating air injected into the tube over the stomach
+- **B.** Checking that the client is not coughing
+- **C.** Reviewing the X-ray obtained after insertion
+- **D.** Confirming the external tube length looks about right
+
+🎨 *Suggested illustration:* a chest/abdomen X-ray showing an NG tube tip below the diaphragm in the stomach, marked with a confirming checkmark.
+
+**✅ Correct answer: C**
+
+**Rationale**
+- **A — Incorrect.** The **air/auscultation ("whoosh") test is unreliable** —
+  sounds can transmit even if the tube is in the lung. It's no longer
+  recommended as confirmation.
+- **B — Incorrect.** Absence of coughing does not confirm gastric placement; a
+  tube can be misplaced without coughing.
+- **C — Correct.** **Radiographic (X-ray) confirmation** is the **gold standard**
+  for verifying placement after initial insertion, before using the tube.
+- **D — Incorrect.** External length is a rough check for migration, not proof of
+  correct initial placement.
+
+**📝 NCLEX Tip.** For **initial** NG placement, the answer is **X-ray.** Ongoing
+checks may use **pH of aspirate** and measuring the external length — but never
+the air-auscultation method as confirmation.
+
+**💡 Clinical Pearl / Memory Trick.** "**When in doubt, X-ray it out.**" Gastric
+aspirate is usually **acidic (pH ≤ 5)**; respiratory/intestinal fluid is more
+alkaline.
+
+---
+
+### Question 38 — Fall risk / restraint alternatives
+**Category:** Fundamentals / Safety · **Client Need:** Safe and Effective Care Environment · **Difficulty:** Easy
+
+**Scenario.** A confused older adult is at high risk for falls. The nurse plans
+care to keep the client safe.
+
+**Which intervention should the nurse implement first?**
+
+- **A.** Apply a vest restraint to keep the client in bed.
+- **B.** Place the bed in the lowest position with the call light in reach and initiate frequent rounding.
+- **C.** Raise all four side rails to prevent the client from getting up.
+- **D.** Keep the room dark and quiet at all times to reduce stimulation.
+
+🎨 *Suggested illustration:* a low bed with a bed-alarm pad, call light clipped within reach, and a nurse checking in — no restraints in sight.
+
+**✅ Correct answer: B**
+
+**Rationale**
+- **A — Incorrect.** Restraints are a **last resort**, require an order, and can
+  increase injury — not a first-line fall strategy.
+- **B — Correct.** The **least restrictive** measures come first: **low bed, call
+  light within reach, nonslip footwear, a clear path, bed/chair alarms, and
+  frequent (hourly) rounding.**
+- **C — Incorrect.** **Four raised side rails are considered a restraint** and can
+  cause serious injury if the client climbs over.
+- **D — Incorrect.** A completely dark room can increase confusion and fall risk;
+  some soft lighting aids orientation.
+
+**📝 NCLEX Tip.** Always choose the **least restrictive** safe option first.
+Restraints and four side rails are **restraints** — near the bottom of the list,
+never the first answer.
+
+**💡 Clinical Pearl / Memory Trick.** "**Least restrictive, first and best.**"
+Restraints need an **order, a time limit, and regular checks** — never PRN,
+never for staff convenience.
+
+---
+
+### Question 39 — Hand hygiene and C. difficile
+**Category:** Fundamentals / Infection Control · **Client Need:** Safe and Effective Care Environment · **Difficulty:** Moderate
+
+**Scenario.** A nurse cares for a client with *Clostridioides difficile*
+(C. diff) infection.
+
+**Which infection-control action is correct?**
+
+- **A.** Use alcohol-based hand sanitizer after removing gloves.
+- **B.** Wash hands with soap and water, and use contact precautions with gown and gloves.
+- **C.** Place the client on airborne precautions with an N95 respirator.
+- **D.** No special precautions are needed if the client uses a private bathroom.
+
+🎨 *Suggested illustration:* a nurse washing hands with soap and running water, a gown-and-gloves station outside a room marked "Contact Precautions."
+
+**✅ Correct answer: B**
+
+**Rationale**
+- **A — Incorrect.** **Alcohol sanitizer does not kill C. diff spores** — soap
+  and water friction is required to physically remove them.
+- **B — Correct.** C. diff requires **contact precautions (gown and gloves)** and
+  **handwashing with soap and water.** Dedicated equipment and bleach-based
+  cleaning are also used.
+- **C — Incorrect.** C. diff spreads by contact/fecal-oral, **not airborne** —
+  an N95 is unnecessary.
+- **D — Incorrect.** Precautions are absolutely required; a private bathroom does
+  not replace contact isolation.
+
+**📝 NCLEX Tip.** Remember the "spore rule": for **C. diff (and norovirus)**, use
+**soap and water**, not alcohol gel. Precaution type = **contact.**
+
+**💡 Clinical Pearl / Memory Trick.** "**Spores need soap.**" Match the bug to
+the precaution: **Contact** (C. diff, MRSA), **Droplet** (flu, meningitis,
+pertussis), **Airborne** (**M**easles, **T**B, **V**aricella — "**My Chicken
+Hez TB**").
+
+---
+
+### Question 40 — Delegation to unlicensed assistive personnel
+**Category:** Fundamentals / Management · **Client Need:** Safe and Effective Care Environment · **Difficulty:** Moderate
+
+**Scenario.** A registered nurse (RN) is delegating tasks to unlicensed assistive
+personnel (UAP) on a busy med-surg unit.
+
+**Which task is appropriate for the RN to delegate to the UAP?**
+
+- **A.** Performing the admission assessment on a new client
+- **B.** Recording the intake and output of a stable client
+- **C.** Teaching a client how to use an incentive spirometer for the first time
+- **D.** Adjusting the flow rate of a client's IV fluids
+
+🎨 *Suggested illustration:* a task board sorting duties into "RN only" (assess, teach, evaluate, meds) and "UAP okay" (vitals, I&O, hygiene, ambulate).
+
+**✅ Correct answer: B**
+
+**Rationale**
+- **A — Incorrect.** **Assessment** is an RN responsibility and cannot be
+  delegated.
+- **B — Correct.** Recording **intake and output** for a **stable** client is a
+  routine, standardized task within the UAP's scope.
+- **C — Incorrect.** **Teaching** (client education) is an RN function, especially
+  first-time instruction.
+- **D — Incorrect.** Titrating/adjusting IV fluids involves nursing judgment and
+  is not delegated to a UAP.
+
+**📝 NCLEX Tip.** UAPs handle **stable, routine, standard** tasks — vitals,
+hygiene, feeding, ambulating, I&O. The RN keeps the **"AT-E"**: **A**ssess,
+**T**each, **E**valuate (and nursing judgment/meds).
+
+**💡 Clinical Pearl / Memory Trick.** "**If it takes a nurse's brain, it stays
+with the nurse.**" Delegate the **stable and predictable**, keep the **unstable
+and the teaching.**
+
+---
+
+# Section 5 · Safety, Infection Control & Clinical Judgment
+
+---
+
+### Question 41 — Prioritizing client care
+**Category:** Clinical Judgment / Prioritization · **Client Need:** Safe and Effective Care Environment · **Difficulty:** Hard
+
+**Scenario.** At the start of the shift, a nurse receives report on four clients.
+
+**Which client should the nurse assess first?**
+
+- **A.** A client scheduled for discharge who is waiting for paperwork
+- **B.** A client with new-onset shortness of breath and an oxygen saturation of 86%
+- **C.** A client requesting pain medication for chronic back pain rated 5/10
+- **D.** A postoperative client whose dressing has a small amount of dried drainage
+
+🎨 *Suggested illustration:* four bedside cards ranked by urgency, the breathing client flagged red at the top with a pulse-ox reading 86%.
+
+**✅ Correct answer: B**
+
+**Rationale**
+- **A — Incorrect.** A stable client awaiting discharge is the lowest priority.
+- **B — Correct.** **Airway/Breathing problems come first.** New shortness of
+  breath with an **SpO₂ of 86%** is an acute oxygenation emergency and takes
+  priority over all the others.
+- **C — Incorrect.** Chronic pain at 5/10 is important but not immediately
+  life-threatening.
+- **D — Incorrect.** A small amount of **dried** drainage is expected and stable.
+
+**📝 NCLEX Tip.** Use **ABCs, then Maslow, then acute-over-chronic, then
+unstable-over-stable.** A breathing problem almost always outranks pain,
+discharge, or expected findings.
+
+**💡 Clinical Pearl / Memory Trick.** "**Air goes first.**" Rank with **ABC** —
+then remember that **new/sudden and unstable** beats **chronic and expected**
+every time.
+
+---
+
+### Question 42 — Sepsis interventions (Select All That Apply)
+**Category:** Clinical Judgment · **Client Need:** Physiological Adaptation · **Difficulty:** Hard
+
+**Scenario.** A client is suspected of having sepsis: temperature 39.2°C, heart
+rate 122/min, blood pressure 88/50 mm Hg, and rising lactate.
+
+**Which interventions should the nurse anticipate? Select all that apply.**
+
+- **A.** Obtain blood cultures before starting antibiotics.
+- **B.** Administer broad-spectrum antibiotics promptly.
+- **C.** Begin IV fluid resuscitation for hypotension.
+- **D.** Withhold all fluids to avoid overload.
+- **E.** Measure serum lactate and monitor urine output.
+
+🎨 *Suggested illustration:* a "sepsis bundle" checklist — cultures, antibiotics, fluids, lactate, urine output — with the "withhold fluids" line struck through in red.
+
+**✅ Correct answers: A, B, C, E**
+
+**Rationale**
+- **A — Correct.** **Cultures are drawn before antibiotics** so the causative
+  organism can still be identified.
+- **B — Correct.** **Early broad-spectrum antibiotics** (ideally within the first
+  hour) are central to sepsis survival.
+- **C — Correct.** **IV fluid resuscitation** treats the sepsis-induced
+  hypotension and poor perfusion.
+- **D — Incorrect.** Withholding fluids in a hypotensive septic client worsens
+  perfusion and organ damage — the opposite of care.
+- **E — Correct.** **Lactate** trends and **urine output** gauge perfusion and
+  the response to treatment.
+
+**📝 NCLEX Tip.** In SATA items, evaluate **each option as its own true/false.**
+One clearly harmful choice (like "withhold fluids") is almost always false.
+
+**💡 Clinical Pearl / Memory Trick.** Sepsis "hour-1" bundle: **"Culture,
+Cover, Fluids, Lactate."** Draw cultures → give antibiotics → resuscitate with
+fluids → recheck lactate.
+
+---
+
+### Question 43 — Hyperkalemia
+**Category:** Clinical Judgment / Fluid & Electrolyte · **Client Need:** Physiological Adaptation · **Difficulty:** Hard
+
+**Scenario.** A client with acute kidney injury has a serum potassium of
+6.9 mEq/L. The cardiac monitor shows tall, peaked T waves.
+
+**Which action should the nurse take first?**
+
+- **A.** Encourage the client to eat a banana for energy.
+- **B.** Notify the provider and prepare to treat the hyperkalemia while monitoring the ECG.
+- **C.** Administer a potassium supplement as previously scheduled.
+- **D.** Restrict the client's fluids and recheck the potassium in the morning.
+
+🎨 *Suggested illustration:* an ECG strip with exaggerated tall, peaked T waves beside a lab value "K⁺ 6.9" flagged red, and a cardiac monitor in view.
+
+**✅ Correct answer: B**
+
+**Rationale**
+- **A — Incorrect.** Bananas are **high in potassium** — exactly wrong for
+  hyperkalemia.
+- **B — Correct.** A potassium of 6.9 with **peaked T waves** is a cardiac
+  emergency. The nurse **notifies the provider and prepares treatment**
+  (e.g., IV calcium gluconate to protect the heart; insulin with dextrose and/or
+  a beta-agonist to shift potassium into cells; and measures to remove it) while
+  watching the ECG.
+- **C — Incorrect.** Giving more potassium to a hyperkalemic client could be
+  lethal — always reassess "scheduled" electrolytes against current labs.
+- **D — Incorrect.** Waiting until morning with a life-threatening level and ECG
+  changes is unsafe.
+
+**📝 NCLEX Tip.** Match the ECG to the electrolyte: **hyperkalemia → tall, peaked
+T waves; hypokalemia → flat T waves and U waves.** Peaked T's + high K = act now.
+
+**💡 Clinical Pearl / Memory Trick.** Emergency hyperkalemia order: **"Calcium
+protects, insulin + D50 shifts, and dialysis/kayexalate removes."** Calcium
+guards the heart first; it doesn't lower the potassium itself.
+
+---
+
+### Question 44 — Disaster triage
+**Category:** Safety / Management · **Client Need:** Safe and Effective Care Environment · **Difficulty:** Moderate
+
+**Scenario.** After a mass-casualty event, a charge nurse must free up medical-
+surgical beds quickly.
+
+**Which client is the most appropriate to discharge or transfer first to make
+room?**
+
+- **A.** A client 2 days post-op who is stable, tolerating a diet, and ambulating
+- **B.** A client receiving IV vasopressors for unstable blood pressure
+- **C.** A client with new chest pain and pending cardiac enzymes
+- **D.** A client with a temperature of 39.5°C and a rising white blood cell count
+
+🎨 *Suggested illustration:* a triage board moving one green-tagged stable client toward the exit while red-tagged unstable clients stay.
+
+**✅ Correct answer: A**
+
+**Rationale**
+- **A — Correct.** The **most stable** client — post-op, eating, ambulating — is
+  the safest to discharge or transfer to open a bed for incoming casualties.
+- **B — Incorrect.** A client on **vasopressors** is unstable and cannot be moved
+  out.
+- **C — Incorrect.** New chest pain with pending enzymes is potentially unstable
+  (possible MI) and must stay.
+- **D — Incorrect.** High fever with rising WBCs suggests active infection/
+  possible sepsis — not appropriate to discharge.
+
+**📝 NCLEX Tip.** "Who can you discharge/transfer?" flips normal priority: you
+pick the **most stable** client, not the sickest. Read whether the stem wants
+*who to see first* vs *who can leave.*
+
+**💡 Clinical Pearl / Memory Trick.** In disaster/staffing questions, **the
+boring, stable client is the right answer** — they can safely go. Keep the
+unstable ones close.
+
+---
+
+### Question 45 — Safe medication administration
+**Category:** Safety / Pharmacology · **Client Need:** Safe and Effective Care Environment · **Difficulty:** Easy
+
+**Scenario.** A nurse is preparing to administer a medication and notices the
+prescription is difficult to read and the dose seems unusually high.
+
+**What should the nurse do?**
+
+- **A.** Administer the dose as written to avoid delaying treatment.
+- **B.** Give a smaller dose that seems safer based on judgment.
+- **C.** Hold the medication and clarify the order with the prescriber.
+- **D.** Ask another nurse to interpret the handwriting and proceed.
+
+🎨 *Suggested illustration:* a nurse pausing with a med cup in hand, phone to ear calling the prescriber, an unclear order highlighted with a question mark.
+
+**✅ Correct answer: C**
+
+**Rationale**
+- **A — Incorrect.** Administering an unclear or possibly excessive dose risks
+  serious harm — never give what you can't verify.
+- **B — Incorrect.** Improvising a dose is outside the nurse's scope and unsafe.
+- **C — Correct.** When an order is **illegible, incomplete, or appears
+  incorrect**, the nurse **holds the medication and clarifies directly with the
+  prescriber** before giving anything.
+- **D — Incorrect.** A second nurse's guess doesn't make an unverified order
+  safe; the prescriber must clarify.
+
+**📝 NCLEX Tip.** The nurse is the **last safety check.** Any unclear, incomplete,
+or unsafe-looking order is **clarified before administration** — never assumed.
+
+**💡 Clinical Pearl / Memory Trick.** "**If it isn't right, don't write (or
+give).**" Remember the **rights** of medication administration — right client,
+drug, dose, route, time, documentation, reason, response.
+
+---
+
+### Question 46 — Anaphylaxis
+**Category:** Clinical Judgment / Emergency · **Client Need:** Physiological Adaptation · **Difficulty:** Hard
+
+**Scenario.** Minutes after receiving an IV antibiotic, a client develops facial
+swelling, hives, wheezing, and a drop in blood pressure.
+
+**What is the nurse's priority action?**
+
+- **A.** Document the reaction and continue the infusion at a slower rate.
+- **B.** Stop the antibiotic, maintain the airway, and prepare to administer epinephrine.
+- **C.** Administer an oral antihistamine and reassess in 20 minutes.
+- **D.** Apply a cool compress to the swollen areas.
+
+🎨 *Suggested illustration:* an IV clamped shut, a client with facial/lip swelling and hives, an epinephrine auto-injector highlighted and ready.
+
+**✅ Correct answer: B**
+
+**Rationale**
+- **A — Incorrect.** Continuing the trigger (even slower) worsens a
+  life-threatening reaction.
+- **B — Correct.** This is **anaphylaxis.** The nurse **stops the causative
+  drug, protects the airway, and gives epinephrine** — the first-line,
+  life-saving medication — followed by oxygen, IV fluids, antihistamines, and
+  corticosteroids.
+- **C — Incorrect.** Oral antihistamines are too slow and not first-line for
+  anaphylaxis with airway/BP compromise.
+- **D — Incorrect.** A compress does nothing for airway swelling or shock.
+
+**📝 NCLEX Tip.** Anaphylaxis first-line = **epinephrine**, every time.
+Antihistamines and steroids are **adjuncts**, not the priority.
+
+**💡 Clinical Pearl / Memory Trick.** "**Epi first, and don't rehearse.**" Stop
+the trigger → **epinephrine** → airway/oxygen → fluids for the pressure.
+
+---
+
+### Question 47 — Acute chest pain
+**Category:** Clinical Judgment / Cardiac · **Client Need:** Physiological Adaptation · **Difficulty:** Moderate
+
+**Scenario.** A client on a med-surg unit suddenly reports crushing substernal
+chest pressure radiating to the left arm, with nausea and diaphoresis.
+
+**Which is the nurse's first action?**
+
+- **A.** Call the client's family to notify them of the change.
+- **B.** Stay with the client, call for help/activate the response, and prepare to give oxygen and obtain an ECG.
+- **C.** Have the client walk to the nurses' station for evaluation.
+- **D.** Give a full glass of water and wait to see if the pain resolves.
+
+🎨 *Suggested illustration:* a client clutching the chest with pain radiating down the left arm, a nurse pressing the call button while reaching for an oxygen line and ECG leads.
+
+**✅ Correct answer: B**
+
+**Rationale**
+- **A — Incorrect.** Notifying family is not the immediate priority during a
+  possible heart attack.
+- **B — Correct.** Suspected **acute coronary syndrome** demands the nurse **stay
+  with the client, summon help/activate the rapid response or protocol, apply
+  oxygen if indicated, obtain a 12-lead ECG, and anticipate aspirin,
+  nitroglycerin, and continuous monitoring.**
+- **C — Incorrect.** **Never ambulate** a client with possible cardiac chest
+  pain — exertion increases oxygen demand and risk.
+- **D — Incorrect.** Water and watchful waiting delay life-saving care.
+
+**📝 NCLEX Tip.** Cardiac chest pain = **rest + oxygen + ECG + meds**, and keep
+the client **still.** Any answer that makes the client exert is wrong.
+
+**💡 Clinical Pearl / Memory Trick.** Remember the classic bundle **"MONA"** —
+**M**orphine, **O**xygen, **N**itroglycerin, **A**spirin — while an ECG is
+obtained (aspirin is often given first/early). Don't walk the chest-pain client.
+
+---
+
+### Question 48 — Recognizing early deterioration
+**Category:** Clinical Judgment · **Client Need:** Reduction of Risk Potential · **Difficulty:** Hard
+
+**Scenario.** A postoperative client's vital signs over three hours show a
+gradually rising heart rate (88 → 118/min), a rising respiratory rate
+(16 → 26/min), a falling blood pressure (122/78 → 100/60), and new restlessness.
+
+**How should the nurse interpret these trends?**
+
+- **A.** Expected postoperative recovery — continue routine monitoring.
+- **B.** Early signs of clinical deterioration that warrant escalation.
+- **C.** Signs of adequate pain control taking effect.
+- **D.** Normal variation that requires no documentation.
+
+🎨 *Suggested illustration:* a small trend chart with HR and RR lines climbing while BP drifts down, and a "call for help" flag rising at the end.
+
+**✅ Correct answer: B**
+
+**Rationale**
+- **A — Incorrect.** A steadily rising HR/RR with falling BP is **not** normal
+  recovery — it points to a developing problem (bleeding, sepsis, shock).
+- **B — Correct.** Reading the **trend**, not single numbers, reveals **early
+  deterioration.** The nurse escalates — reassesses, notifies the provider or
+  activates the **rapid response team** — before the client crashes.
+- **C — Incorrect.** Effective pain control would not cause rising respiratory
+  rate, tachycardia, and hypotension together.
+- **D — Incorrect.** These changes are significant and must be documented and
+  acted upon.
+
+**📝 NCLEX Tip.** Next Gen NCLEX loves **trends over time.** Up-HR + up-RR +
+down-BP + new restlessness = **compensating shock** — recognize and **escalate
+early.**
+
+**💡 Clinical Pearl / Memory Trick.** "**The story is in the trend.**"
+Restlessness and a climbing heart/resp rate are often the body's **first quiet
+alarm** before pressure ever drops far.
+
+---
+
+### Question 49 — Oxygen and fire safety
+**Category:** Safety · **Client Need:** Safe and Effective Care Environment · **Difficulty:** Easy
+
+**Scenario.** A nurse provides safety teaching to a client using home oxygen.
+
+**Which client statement indicates correct understanding?**
+
+- **A.** "I can smoke as long as I lower the oxygen flow first."
+- **B.** "I'll keep the oxygen at least several feet away from stoves, candles, and open flames."
+- **C.** "I'll use petroleum jelly on my lips to keep them from drying out."
+- **D.** "Wool blankets are best for reducing static around the oxygen."
+
+🎨 *Suggested illustration:* a home oxygen concentrator with a "no smoking / no open flame" sign, positioned well away from a kitchen stove.
+
+**✅ Correct answer: B**
+
+**Rationale**
+- **A — Incorrect.** **No smoking near oxygen — ever.** Oxygen supports
+  combustion and can cause a flash fire regardless of flow rate.
+- **B — Correct.** Oxygen must be kept **away from flames, heat, and sparks**
+  (stoves, candles, heaters). "No smoking" signs and safe distances are standard.
+- **C — Incorrect.** **Petroleum-based products are flammable** near oxygen —
+  use water-based lip moisturizer instead.
+- **D — Incorrect.** **Wool and synthetics build static/sparks**; cotton is
+  preferred around oxygen.
+
+**📝 NCLEX Tip.** Oxygen safety = **no flames, no petroleum products, no
+static-prone fabrics.** Any answer that allows smoking near oxygen is wrong.
+
+**💡 Clinical Pearl / Memory Trick.** "**Oxygen doesn't burn — it makes
+everything else burn faster.**" Keep flames, grease (petroleum), and sparks far
+away.
+
+---
+
+### Question 50 — Clinical judgment capstone (bow-tie style)
+**Category:** Clinical Judgment · **Client Need:** Physiological Adaptation · **Difficulty:** Hard
+
+**Scenario.** A client 1 day after abdominal surgery reports increasing thirst
+and dizziness. Assessment: heart rate 124/min, blood pressure 92/58 mm Hg, urine
+output 15 mL over 2 hours, and a saturated abdominal dressing with bright red
+drainage.
+
+**The nurse determines the client is most likely experiencing ___(1)___ and
+should first ___(2)___.**
+
+*(1) Condition options:* fluid volume overload · **hypovolemic shock** ·
+allergic reaction · normal postoperative fluid shift
+
+*(2) First action options:* apply firm pressure to the site and notify the
+surgeon while increasing IV fluids · slow the IV fluids to prevent overload ·
+administer the next dose of pain medication · reposition and recheck in one hour
+
+🎨 *Suggested illustration:* a bow-tie layout — center "problem," left "supporting data" (low BP, high HR, low urine, bleeding dressing), right "actions" (pressure, notify, fluids).
+
+**✅ Correct answers: (1) hypovolemic shock · (2) apply firm pressure to the site and notify the surgeon while increasing IV fluids**
+
+**Rationale**
+- **Condition — hypovolemic shock (correct).** Tachycardia, hypotension, very low
+  urine output, thirst, dizziness, and **active bright-red bleeding** together
+  point to blood/volume loss — **hypovolemic (hemorrhagic) shock.**
+  - *Fluid overload* would show high BP, crackles, and edema — not bleeding and
+    low output from hypoperfusion.
+  - *Allergic reaction* would show hives, swelling, and wheezing.
+  - *Normal fluid shift* does not include a saturated bloody dressing with
+    unstable vitals.
+- **First action — pressure + notify + fluids (correct).** **Control the
+  bleeding** (direct pressure), **escalate** to the surgeon, and **restore
+  volume** with IV fluids.
+  - *Slowing fluids* would worsen shock.
+  - *Pain medication* can further lower blood pressure and ignores the
+    hemorrhage.
+  - *Repositioning and waiting* dangerously delays care.
+
+**📝 NCLEX Tip.** Bow-tie items test the full clinical-judgment loop:
+**recognize cues → analyze → prioritize the problem → act → (later) evaluate.**
+Let the data in the stem point you to the condition, then choose the action that
+treats *that* condition.
+
+**💡 Clinical Pearl / Memory Trick.** Shock is about **perfusion**: **fast pulse,
+low pressure, low urine, cool and thirsty.** For **hypovolemic** shock: **stop
+the loss and replace the volume** — in that order.
+
+---
+
+## You finished all 50. 🎉
+
+That's the whole workbook — every Next Gen item type, with the reasoning laid
+bare. If a rationale surprised you, that's the win: you just closed a gap the
+test would have found.
+
+**Keep going in the app:** tag the ones you missed as *Learning*, and Esi will
+bring them back at exactly the right time.
+
+*— The Must Love Scrubs team*
+
+**M❤️‍🩹S**
