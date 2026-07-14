@@ -537,22 +537,6 @@ INDEX_BODY = f"""  <main>
       </div>
     </section>
 
-    <section class="courses" style="padding-top:0;">
-      <div class="wrap">
-        <div class="section-head fade-up">
-          <div class="row">
-            <div>
-              <span class="eyebrow teal">RN Specialties</span>
-              <h2>Prep for <span class="hl">where you're going.</span></h2>
-              <p>Passed the NCLEX? Keep going. Focused prep for the specialty you're headed into &mdash; rolling out now.</p>
-            </div>
-            <a class="btn btn-coral" href="specialties.html">See all 22 specialties</a>
-          </div>
-        </div>
-        {home_spec_carousel()}
-      </div>
-    </section>
-
     <section class="why">
       <div class="wrap">
         <div class="section-head fade-up">
@@ -581,6 +565,22 @@ INDEX_BODY = f"""  <main>
             <p>Your free account already includes NCLEX practice with every NGN item type, four full lessons a month, and the Scrubs Dictionary — deeper than what most sites put behind a paywall.</p>
           </article>
         </div>
+      </div>
+    </section>
+
+    <section class="courses">
+      <div class="wrap">
+        <div class="section-head fade-up">
+          <div class="row">
+            <div>
+              <span class="eyebrow teal">RN Specialties</span>
+              <h2>Prep for <span class="hl">where you're going.</span></h2>
+              <p>Passed the NCLEX? Keep going. Focused prep for the specialty you're headed into &mdash; rolling out now.</p>
+            </div>
+            <a class="btn btn-coral" href="specialties.html">See all 22 specialties</a>
+          </div>
+        </div>
+        {home_spec_carousel()}
       </div>
     </section>
 
