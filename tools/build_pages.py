@@ -499,7 +499,12 @@ INDEX_BODY = f"""  <main>
               <h2>Four free lessons. <span class="hl">Every month.</span></h2>
               <p>Each is a curated audio scene plus a full workout — memory game, matrix, chart test, and a clinical quick check.</p>
             </div>
-            <a class="btn btn-coral" href="scrubtv.html">Browse free lessons</a>
+            <a class="tv-btn" href="scrubtv.html" aria-label="Browse free Scrub TV lessons">
+              <span class="tv-antenna"></span>
+              <span class="tv-screen"><span class="tv-scan"></span><span class="tv-label">Scrub<b>T.V.</b></span></span>
+              <span class="tv-stand"></span>
+              <span class="tv-cta">Browse free lessons</span>
+            </a>
           </div>
         </div>
         {home_lessons()}
@@ -587,13 +592,13 @@ INDEX_BODY = f"""  <main>
     <section style="background:linear-gradient(150deg,var(--teal-600),var(--indigo-700));color:#fff;">
       <div class="wrap fade-up">
         <span class="eyebrow" style="color:var(--gold-400);">Points &amp; rewards</span>
-        <h2 style="font-size:clamp(2rem,6vw,3rem);max-width:16ch;">Study more. <span class="hl">Pay less.</span></h2>
-        <p style="margin-top:1rem;max-width:52ch;color:rgba(255,255,255,0.82);">The more free lessons you crush, the cheaper your paid prep gets. Wild concept, right?</p>
+        <h2 style="font-size:clamp(2rem,6vw,3rem);max-width:18ch;">Get <span class="hl">points</span> for learning.</h2>
+        <p style="margin-top:1rem;max-width:54ch;color:rgba(255,255,255,0.82);">Every lesson you finish and every practice test you pass earns points &mdash; then redeem them for course discounts, downloads, and the Scrubs Dictionary. Your prep literally pays you back.</p>
         <div style="display:grid;gap:1rem;margin-top:2.4rem;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));">
-          <div style="background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.16);border-radius:var(--radius);padding:1.4rem;"><div style="font-family:var(--font-display);font-size:1.6rem;color:var(--gold-400);font-weight:800;">01</div><b style="display:block;margin-top:0.4rem;">Take a free lesson</b><span style="font-size:0.85rem;color:rgba(255,255,255,0.7);">Any Scrub TV lesson or free NCLEX practice.</span></div>
-          <div style="background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.16);border-radius:var(--radius);padding:1.4rem;"><div style="font-family:var(--font-display);font-size:1.6rem;color:var(--gold-400);font-weight:800;">02</div><b style="display:block;margin-top:0.4rem;">Pass the quick check</b><span style="font-size:0.85rem;color:rgba(255,255,255,0.7);">Prove it on the clinical quiz.</span></div>
-          <div style="background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.16);border-radius:var(--radius);padding:1.4rem;"><div style="font-family:var(--font-display);font-size:1.6rem;color:var(--gold-400);font-weight:800;">03</div><b style="display:block;margin-top:0.4rem;">Bank points + streak</b><span style="font-size:0.85rem;color:rgba(255,255,255,0.7);">10 free a day, plus quiz &amp; streak bonuses.</span></div>
-          <div style="background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.16);border-radius:var(--radius);padding:1.4rem;"><div style="font-family:var(--font-display);font-size:1.6rem;color:var(--gold-400);font-weight:800;">04</div><b style="display:block;margin-top:0.4rem;">Redeem the reward</b><span style="font-size:0.85rem;color:rgba(255,255,255,0.7);">Course discounts, store downloads &amp; the Dictionary.</span></div>
+          <div style="background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.16);border-radius:var(--radius);padding:1.4rem;"><div style="font-family:var(--font-display);font-size:1.6rem;color:var(--gold-400);font-weight:800;">01</div><b style="display:block;margin-top:0.4rem;">Learn &amp; prep</b><span style="font-size:0.85rem;color:rgba(255,255,255,0.7);">Any Scrub TV lesson or free NCLEX practice earns points.</span></div>
+          <div style="background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.16);border-radius:var(--radius);padding:1.4rem;"><div style="font-family:var(--font-display);font-size:1.6rem;color:var(--gold-400);font-weight:800;">02</div><b style="display:block;margin-top:0.4rem;">Pass a test</b><span style="font-size:0.85rem;color:rgba(255,255,255,0.7);">Quizzes and practice tests pay out more the better you score.</span></div>
+          <div style="background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.16);border-radius:var(--radius);padding:1.4rem;"><div style="font-family:var(--font-display);font-size:1.6rem;color:var(--gold-400);font-weight:800;">03</div><b style="display:block;margin-top:0.4rem;">Bank points + streak</b><span style="font-size:0.85rem;color:rgba(255,255,255,0.7);">10 free a day, plus quiz, test &amp; streak bonuses.</span></div>
+          <div style="background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.16);border-radius:var(--radius);padding:1.4rem;"><div style="font-family:var(--font-display);font-size:1.6rem;color:var(--gold-400);font-weight:800;">04</div><b style="display:block;margin-top:0.4rem;">Redeem the reward</b><span style="font-size:0.85rem;color:rgba(255,255,255,0.7);">Course discounts, store downloads &amp; the Scrubs Dictionary.</span></div>
         </div>
       </div>
     </section>
@@ -690,22 +695,48 @@ PAGES["courses.html"] = ("Courses — Must Love Scrubs",
               '<div class="hero-cta" style="margin-top:1.8rem;"><a class="btn btn-coral" href="nclex-complete.html">Explore NCLEX Complete</a><a class="btn btn-ghost" href="join.html">Start free</a></div>')
     + f"""  <main class="content-block">
     <div class="wrap">
+      <div class="section-head fade-up"><span class="eyebrow gold">The flagship</span><h2>Start with <span class="hl">NCLEX Complete.</span></h2><p>One subscription, everything included &mdash; the fastest path to test day.</p></div>
       <div class="course-hero fade-up">
-        <div class="art"><span class="big">NCLEX</span></div>
+        <div class="art" style="background:url(images/dictionary.jpg) center/cover no-repeat, radial-gradient(circle at 70% 25%, rgba(255,201,77,0.35), transparent 50%), linear-gradient(150deg,#2b1055,#4d2b9e);"><span class="big">NCLEX</span></div>
         <div class="body">
-          <div class="chip-row"><span class="chip gold">FLAGSHIP</span><span class="chip teal">NGN READY</span></div>
+          <div class="chip-row"><span class="chip gold">FLAGSHIP</span><span class="chip teal">NGN READY</span><span class="chip">Esi included</span></div>
           <h3>NCLEX Complete</h3>
-          <p>Everything to test day: adaptive banks, clinical-judgment cases, timed mocks in real test format, score analytics, and a visual progress map. Built on how memory actually works — spaced repetition and active recall, not cramming.</p>
+          <p>Everything to test day: 50 case studies, 2,600+ questions, 4 readiness exams, timed mocks in real format, score analytics, and a visual progress map. Built on how memory actually works &mdash; spaced repetition and active recall, not cramming.</p>
           <div class="price-line"><span class="price">from $59</span><span class="per">Esi tutor included &middot; Pass Guarantee</span></div>
           <div class="chip-row"><span class="chip gold">4 plans &rarr; 1, 2, 3 or 6 months &middot; everything unlocked</span></div>
           <a class="btn btn-coral" href="nclex-complete.html">Explore NCLEX Complete</a>
         </div>
       </div>
-      <div style="height:1.2rem;"></div>
+
+      <div class="section-head fade-up" style="margin-top:3.5rem;"><span class="eyebrow teal">Focused courses</span><h2>Drill a single <span class="hl">weak area.</span></h2><p>Targeted mini-courses when you just need to shore up one topic fast.</p></div>
       {course_shelf()}
+
+      <div class="section-head fade-up" style="margin-top:3.5rem;">
+        <div class="row">
+          <div><span class="eyebrow">Specialty prep</span><h2>Prep for your <span class="hl">specialty.</span></h2><p>The clinical specialty you're headed into &mdash; 22 tracks rolling out.</p></div>
+          <a class="btn btn-coral" href="specialties.html">See all 22 specialties</a>
+        </div>
+      </div>
+      {home_spec_carousel()}
+
+      <div class="section-head fade-up" style="margin-top:3.5rem;"><span class="eyebrow gold">Free to start</span><h2>Free that beats their <span class="hl">paid.</span></h2><p>Four full lessons a month, free NCLEX practice, and the Scrubs Dictionary &mdash; no card required.</p></div>
+      {home_lessons()}
+      <div class="two-up fade-up" style="margin-top:1.2rem;">
+        <a class="wide-card" href="nclex.html">
+          <span class="wc-ic" style="background:linear-gradient(140deg,#8b5cff,#4d2b9e);">{I['book']}</span>
+          <div><b>Free NCLEX practice</b><p>Try every Next Gen item type &mdash; timed recall, trends, matrix, SBAR, select-all.</p></div>
+          <span class="wc-go">{I['check']}</span>
+        </a>
+        <a class="wide-card" href="dictionary.html">
+          <span class="wc-ic" style="background:linear-gradient(140deg,#2ad4c4,#1a0942);">{I['dict']}</span>
+          <div><b>Scrubs Dictionary</b><p>Every term in plain language, free to search. Own the download for the bonus scenarios.</p></div>
+          <span class="wc-go">{I['check']}</span>
+        </a>
+      </div>
+
       <div class="section-head fade-up" style="margin-top:3.5rem;">
         <span class="eyebrow teal">How it works</span>
-        <h2>Learn it once. Keep it forever.</h2>
+        <h2>Learn it once. <span class="hl">Keep it forever.</span></h2>
       </div>
       <div class="tile-grid cols-3">
         <div class="tile fade-up"><span class="tag">Step 1</span><h3>Watch &amp; learn</h3><p>Short, sharp lessons and Scrub TV videos teach the concept the way a great preceptor would.</p></div>
