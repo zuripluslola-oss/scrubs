@@ -10,7 +10,7 @@ import os, glob, json, collections, sys
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 QDIR = os.path.join(ROOT, 'data', 'qbank')
 
-REQUIRED = ['id', 'exam', 'cat', 'type', 'stem', 'opts', 'correct']
+REQUIRED = ['id', 'exam', 'cat', 'type', 'stem']  # per-type fields checked below
 
 
 def main():
@@ -29,7 +29,8 @@ def main():
             for k in REQUIRED:
                 if k not in q:
                     errors.append(f'{where}: missing "{k}"')
-            if q.get('type', 'mc') == 'mc':
+            t = q.get('type', 'mc')
+            if t == 'mc':
                 if len(q.get('opts', [])) != 4:
                     errors.append(f'{where}: MC needs exactly 4 options')
                 for o in q.get('opts', []):
@@ -37,6 +38,21 @@ def main():
                         errors.append(f'{where}: an option is missing text or rationale')
                 if not (0 <= q.get('correct', -1) <= 3):
                     errors.append(f'{where}: correct index out of range')
+            elif t == 'sata':
+                if len(q.get('opts', [])) < 3:
+                    errors.append(f'{where}: SATA needs 3+ options')
+                if not isinstance(q.get('correct'), list) or not q['correct']:
+                    errors.append(f'{where}: SATA correct must be a non-empty list of indices')
+                elif any(not (0 <= i < len(q.get('opts', []))) for i in q['correct']):
+                    errors.append(f'{where}: SATA correct index out of range')
+            elif t == 'matrix':
+                if len(q.get('cols', [])) < 2:
+                    errors.append(f'{where}: matrix needs 2+ columns')
+                for r in q.get('rows', []):
+                    if 't' not in r or not (0 <= r.get('correct', -1) < len(q.get('cols', []))):
+                        errors.append(f'{where}: a matrix row is missing text or has a bad correct index')
+            else:
+                errors.append(f'{where}: unknown type "{t}"')
             if q.get('id') in seen:
                 errors.append(f'{where}: duplicate id (also in {seen[q["id"]]})')
             else:

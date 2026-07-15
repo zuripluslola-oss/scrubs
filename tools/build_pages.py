@@ -1922,19 +1922,27 @@ def _load_qbank():
     for path in sorted(_glob.glob(os.path.join(ROOT, 'data', 'qbank', '*.json'))):
         data = _json.load(open(path, encoding='utf-8'))
         for q in data.get('questions', []):
-            if q.get('type', 'mc') != 'mc':      continue   # non-MC: pending support
-            if len(q.get('opts', [])) != 4:      continue
-            if not (0 <= q.get('correct', -1) <= 3): continue
-            if q.get('id') in seen:              continue
+            t = q.get('type', 'mc')
+            if q.get('id') in seen: continue
+            if t == 'mc':
+                if len(q.get('opts', [])) != 4: continue
+                if not (0 <= q.get('correct', -1) <= 3): continue
+                if 'pct' not in q:  # synthesize answer-stats
+                    base = {'Easy': 78, 'Moderate': 68, 'Hard': 55}.get(q.get('difficulty', 'Moderate'), 68)
+                    h = int(_hl.md5(q['id'].encode()).hexdigest(), 16)
+                    c = q['correct']; pct = [0, 0, 0, 0]; pct[c] = base + (h % 7) - 3
+                    rem = 100 - pct[c]; others = [i for i in range(4) if i != c]
+                    splits = [rem // 2, rem // 3, rem - rem // 2 - rem // 3]
+                    for k, i in enumerate(others): pct[i] = splits[k]
+                    q['pct'] = pct
+            elif t == 'sata':
+                if len(q.get('opts', [])) < 3: continue
+                if not isinstance(q.get('correct'), list) or not q['correct']: continue
+            elif t == 'matrix':
+                if not q.get('cols') or not q.get('rows'): continue
+            else:
+                continue  # unknown type
             seen.add(q['id'])
-            if 'pct' not in q:  # synthesize answer-stats
-                base = {'Easy': 78, 'Moderate': 68, 'Hard': 55}.get(q.get('difficulty', 'Moderate'), 68)
-                h = int(_hl.md5(q['id'].encode()).hexdigest(), 16)
-                c = q['correct']; pct = [0, 0, 0, 0]; pct[c] = base + (h % 7) - 3
-                rem = 100 - pct[c]; others = [i for i in range(4) if i != c]
-                splits = [rem // 2, rem // 3, rem - rem // 2 - rem // 3]
-                for k, i in enumerate(others): pct[i] = splits[k]
-                q['pct'] = pct
             qs.append(q)
     return qs
 

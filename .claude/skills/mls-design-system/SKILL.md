@@ -241,8 +241,11 @@ The batch pipeline is live. Questions live in **`data/qbank/*.json`** batch file
 stats, and assembles the bank feeding `qbank.html`. Add a batch → rebuild → it
 appears. `free: true` flags the free sample (gated otherwise) — data-driven, no
 code change. `tools/import_workbook.py` migrated the 50-question workbook →
-**48 MC questions across 8 categories** (the SATA + bow-tie items await non-MC
-support). Authoring model (owner-picked): **I generate original questions in
+**48 MC questions across 8 categories**. The bank engine now also supports
+**`sata`** (select-all, per-option right/missed/wrong + all-or-nothing scoring)
+and **`matrix`** (grid, one pick per row) — see `data/qbank/ngn-item-types.json`.
+**Bow-tie**, drop-down/cloze, highlight, and ordered-response are the remaining
+NGN types (not yet built). Authoring model (owner-picked): **I generate original questions in
 JSON batches**, owner reviews each batch. Next: benchmark batch toward 250 RN.
 qbank data JSON is embedded in a `<script type="application/json" data-qbank>`
 block (not an attribute) and `**bold**` renders in `js/qbank.js`.
