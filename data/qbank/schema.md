@@ -22,12 +22,13 @@ rebuild, and it appears — no code changes.
 | `exam`        | ✅ | `"RN"` or `"PN"` |
 | `cat`         | ✅ | display category (e.g. `"Pharmacology"`, `"Med-Surg"`, `"Maternal / Newborn"`, `"Pediatrics"`, `"Mental Health"`, `"Fundamentals"`, `"Safety"`, `"Clinical Judgment"`) |
 | `topic`       | ▫ | free-text sub-topic |
-| `difficulty`  | ▫ | `"Easy" | "Moderate" | "Hard"` |
+| `difficulty`  | ✅ | `"Easy" | "Moderate" | "Hard"` — **required** for the CAT engine. The loader derives a numeric `level` (Easy→2, Moderate→3, Hard→4; 1 & 5 reserved for finer calibration). |
 | `type`        | ✅ | `"mc"` today (single answer). `sata` / `matrix` / `bowtie` reserved for later. |
 | `free`        | ▫ | `true` → shown in the free sample; else gated. Default `false`. |
 | `stem`        | ✅ | the scenario + question text |
-| `opts`        | ✅ | array of 4 `{ "t": option text, "r": rationale for THIS option }` |
-| `correct`     | ✅ | 0-based index of the correct option (0–3) |
+| `opts`        | ✅ (mc/sata) | array of `{ "t": option text, "r": rationale for THIS option }`. **Every option carries its own rationale (right and wrong).** mc = exactly 4; sata = 3+. |
+| `correct`     | ✅ (mc/sata) | mc: 0-based index (0–3). sata: array of correct indices. |
+| `cols`/`rows` | ✅ (matrix) | `cols`: column labels. `rows`: `{ "t": finding, "correct": col index, "r": rationale }` — **each row needs its own rationale.** |
 | `tip`         | ▫ | NCLEX tip |
 | `pearl`       | ▫ | clinical pearl / memory trick |
 | `illustration`| ▫ | described art (for the workbook/app) |

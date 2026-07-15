@@ -51,8 +51,13 @@ def main():
                 for r in q.get('rows', []):
                     if 't' not in r or not (0 <= r.get('correct', -1) < len(q.get('cols', []))):
                         errors.append(f'{where}: a matrix row is missing text or has a bad correct index')
+                    if not r.get('r'):
+                        errors.append(f'{where}: a matrix row is missing its rationale ("r")')
             else:
                 errors.append(f'{where}: unknown type "{t}"')
+            # every question needs a difficulty for the CAT engine
+            if q.get('difficulty') not in ('Easy', 'Moderate', 'Hard'):
+                errors.append(f'{where}: difficulty must be Easy | Moderate | Hard (needed for CAT)')
             if q.get('id') in seen:
                 errors.append(f'{where}: duplicate id (also in {seen[q["id"]]})')
             else:

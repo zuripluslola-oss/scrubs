@@ -1942,6 +1942,9 @@ def _load_qbank():
                 if not q.get('cols') or not q.get('rows'): continue
             else:
                 continue  # unknown type
+            # numeric difficulty level for the CAT engine (1=very easy … 5=very hard).
+            # Easy/Moderate/Hard map to 2/3/4; 1 and 5 reserved for finer calibration.
+            q['level'] = {'Easy': 2, 'Moderate': 3, 'Hard': 4}.get(q.get('difficulty', 'Moderate'), 3)
             seen.add(q['id'])
             qs.append(q)
     return qs

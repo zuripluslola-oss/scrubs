@@ -52,11 +52,11 @@
       "stem": "For each post-operative finding, decide whether it is **expected** or **requires the nurse to act.**",
       "cols": ["Expected", "Act / notify"],
       "rows": [
-        {"t": "Temperature 38.0°C at 12 hours post-op", "correct": 0},
-        {"t": "Urine output 20 mL/hr for 2 hours", "correct": 1},
-        {"t": "Pain 4/10, steadily improving", "correct": 0},
-        {"t": "New confusion with heart rate 122/min", "correct": 1},
-        {"t": "Incision pink, edges approximated", "correct": 0}
+        {"t": "Temperature 38.0°C at 12 hours post-op", "correct": 0, "r": "**Expected.** A low-grade fever in the first 24–48 hours is a common inflammatory response to surgery."},
+        {"t": "Urine output 20 mL/hr for 2 hours", "correct": 1, "r": "**Act.** Below ~30 mL/hr (0.5 mL/kg/hr) signals poor perfusion or hypovolemia — investigate and notify."},
+        {"t": "Pain 4/10, steadily improving", "correct": 0, "r": "**Expected.** Pain that is present but trending down reflects normal recovery."},
+        {"t": "New confusion with heart rate 122/min", "correct": 1, "r": "**Act.** New confusion with tachycardia is an early deterioration sign (hypoxia, bleeding, sepsis) — escalate."},
+        {"t": "Incision pink, edges approximated", "correct": 0, "r": "**Expected.** Pink, well-approximated wound edges show normal healing."}
       ],
       "rationale": "Low urine output (20 mL/hr) and new confusion with tachycardia signal deterioration — **act.** A mild temp, improving pain, and a clean, approximated incision are **expected** post-op findings.",
       "tip": "Matrix items: judge **each row independently** — is this expected, or does it need action?",
@@ -73,11 +73,11 @@
       "stem": "For each laboratory value, decide whether it is **within normal limits** or a **critical value to report.**",
       "cols": ["Normal", "Critical — report"],
       "rows": [
-        {"t": "Potassium 6.8 mEq/L", "correct": 1},
-        {"t": "Sodium 139 mEq/L", "correct": 0},
-        {"t": "Glucose 45 mg/dL", "correct": 1},
-        {"t": "Hemoglobin 13 g/dL", "correct": 0},
-        {"t": "Platelets 40,000/µL", "correct": 1}
+        {"t": "Potassium 6.8 mEq/L", "correct": 1, "r": "**Critical.** Above 5.0 mEq/L; hyperkalemia risks lethal dysrhythmias — report."},
+        {"t": "Sodium 139 mEq/L", "correct": 0, "r": "**Normal.** Within the 135–145 mEq/L range."},
+        {"t": "Glucose 45 mg/dL", "correct": 1, "r": "**Critical.** Below 70 mg/dL is hypoglycemia — treat and report."},
+        {"t": "Hemoglobin 13 g/dL", "correct": 0, "r": "**Normal.** Within the ~12–17 g/dL range."},
+        {"t": "Platelets 40,000/µL", "correct": 1, "r": "**Critical.** Below 50,000/µL sharply raises bleeding risk — report."}
       ],
       "rationale": "Critical: potassium 6.8 (>5.0), glucose 45 (<70), platelets 40k (<50k). Normal: sodium 139 (135–145) and hemoglobin 13 (about 12–17).",
       "tip": "Know your normal ranges cold — the matrix rewards fast recognition of what's out of range.",

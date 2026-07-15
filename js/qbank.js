@@ -163,7 +163,10 @@
         if (chosen !== r.correct) allRight = false;
       });
       isCorrect = allRight;
-      body = '<div class="qb-rationale"><b>Why:</b><p>' + md(q.rationale || '') + '</p></div>';
+      var rrows = q.rows.map(function (r) {
+        return '<li class="ok"><b>' + md(r.t) + '</b> — ' + md(r.r || q.cols[r.correct]) + '</li>';
+      }).join('');
+      body = '<div class="qb-rationale"><b>Why each row:</b><ul>' + rrows + '</ul></div>';
     }
 
     if (isCorrect) correct++;
