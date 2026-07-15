@@ -53,6 +53,22 @@ def main():
                         errors.append(f'{where}: a matrix row is missing text or has a bad correct index')
                     if not r.get('r'):
                         errors.append(f'{where}: a matrix row is missing its rationale ("r")')
+            elif t == 'bowtie':
+                for part in ('condition', 'actions', 'parameters'):
+                    p = q.get(part) or {}
+                    opts = p.get('options', [])
+                    if len(opts) < 2:
+                        errors.append(f'{where}: bow-tie {part} needs 2+ options')
+                    for o in opts:
+                        if 't' not in o or 'r' not in o:
+                            errors.append(f'{where}: a bow-tie {part} option is missing text or rationale')
+                    c = p.get('correct')
+                    if part == 'condition':
+                        if not isinstance(c, int) or not (0 <= c < len(opts)):
+                            errors.append(f'{where}: bow-tie condition correct must be a valid index')
+                    else:
+                        if not isinstance(c, list) or not c:
+                            errors.append(f'{where}: bow-tie {part} correct must be a non-empty list')
             else:
                 errors.append(f'{where}: unknown type "{t}"')
             # every question needs a difficulty for the CAT engine

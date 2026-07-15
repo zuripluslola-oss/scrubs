@@ -42,7 +42,7 @@
     var body =
       '<span class="qb-cat">' + q.cat + '</span>' +
       '<p class="qb-stem">' + md(q.stem) + '</p>' +
-      (q.type === 'matrix' ? renderMatrix(q) : renderOpts(q)) +
+      (q.type === 'matrix' ? renderMatrix(q) : q.type === 'bowtie' ? renderBowtie(q) : renderOpts(q)) +
       '<div class="qb-actions"><button class="btn btn-coral qb-submit" disabled>Submit answer</button></div>' +
       '<div class="qb-reveal" hidden></div>';
     stage.innerHTML = '<div class="qb-q">' + body + '</div>';
@@ -50,6 +50,7 @@
     if (q.type === 'mc') wireMC(q);
     else if (q.type === 'sata') wireSATA(q);
     else if (q.type === 'matrix') wireMatrix(q);
+    else if (q.type === 'bowtie') wireBowtie(q);
     submitBtn().addEventListener('click', submit);
   }
 
@@ -112,6 +113,54 @@
     });
   }
 
+  /* ---------- Bow-tie ---------- */
+  function btGroup(q, key, cls) {
+    var g = q[key];
+    var chips = g.options.map(function (o, i) {
+      return '<button class="bt-opt" data-grp="' + key + '" data-i="' + i + '">' + md(o.t) + '</button>';
+    }).join('');
+    return '<div class="bt-col ' + cls + '"><span class="bt-label">' + g.prompt + '</span><div class="bt-opts">' + chips + '</div></div>';
+  }
+  function renderBowtie(q) {
+    return '<div class="bt-grid">' +
+      btGroup(q, 'actions', 'left') +
+      btGroup(q, 'condition', 'mid') +
+      btGroup(q, 'parameters', 'right') +
+      '</div>';
+  }
+  function btComplete(q) {
+    return pick.condition != null &&
+      Object.keys(pick.actions).length === (q.actions.pick || 2) &&
+      Object.keys(pick.parameters).length === (q.parameters.pick || 2);
+  }
+  function wireBowtie(q) {
+    pick = { condition: null, actions: {}, parameters: {} };
+    stage.querySelectorAll('.bt-opt').forEach(function (b) {
+      b.addEventListener('click', function () {
+        if (answered) return;
+        var grp = b.getAttribute('data-grp'), i = parseInt(b.getAttribute('data-i'), 10);
+        if (grp === 'condition') {
+          stage.querySelectorAll('.bt-opt[data-grp="condition"]').forEach(function (x) { x.classList.remove('sel'); });
+          b.classList.add('sel'); pick.condition = i;
+        } else {
+          var set = pick[grp], cap = q[grp].pick || 2;
+          if (set[i]) { delete set[i]; b.classList.remove('sel'); }
+          else if (Object.keys(set).length < cap) { set[i] = true; b.classList.add('sel'); }
+        }
+        submitBtn().disabled = !btComplete(q);
+      });
+    });
+  }
+  function sameSet(obj, arr) {
+    return Object.keys(obj).length === arr.length && arr.every(function (i) { return obj[i]; });
+  }
+  function btPartRationale(g, chosenIsCorrect) {
+    var items = g.options.map(function (o, i) {
+      return '<li class="' + (chosenIsCorrect(i) ? 'ok' : 'no') + '"><b>' + md(o.t) + ':</b> ' + md(o.r) + '</li>';
+    }).join('');
+    return '<div class="qb-rationale"><b>' + g.prompt + '</b><ul>' + items + '</ul></div>';
+  }
+
   /* ---------- submit / scoring ---------- */
   function submit() {
     if (answered) return;
@@ -167,6 +216,28 @@
         return '<li class="ok"><b>' + md(r.t) + '</b> — ' + md(r.r || q.cols[r.correct]) + '</li>';
       }).join('');
       body = '<div class="qb-rationale"><b>Why each row:</b><ul>' + rrows + '</ul></div>';
+    }
+    else if (q.type === 'bowtie') {
+      var condOK = pick.condition === q.condition.correct;
+      var actOK = sameSet(pick.actions, q.actions.correct);
+      var parOK = sameSet(pick.parameters, q.parameters.correct);
+      isCorrect = condOK && actOK && parOK;
+      ['condition', 'actions', 'parameters'].forEach(function (key) {
+        var g = q[key], cset = {};
+        if (key === 'condition') cset[g.correct] = true;
+        else g.correct.forEach(function (i) { cset[i] = true; });
+        stage.querySelectorAll('.bt-opt[data-grp="' + key + '"]').forEach(function (b) {
+          var i = parseInt(b.getAttribute('data-i'), 10); b.disabled = true;
+          var sel = key === 'condition' ? (pick.condition === i) : !!pick[key][i];
+          if (cset[i] && sel) b.classList.add('right');
+          else if (cset[i] && !sel) b.classList.add('missed');
+          else if (!cset[i] && sel) b.classList.add('wrong');
+        });
+      });
+      body =
+        btPartRationale(q.condition, function (i) { return i === q.condition.correct; }) +
+        btPartRationale(q.actions, function (i) { return q.actions.correct.indexOf(i) >= 0; }) +
+        btPartRationale(q.parameters, function (i) { return q.parameters.correct.indexOf(i) >= 0; });
     }
 
     if (isCorrect) correct++;

@@ -1940,6 +1940,8 @@ def _load_qbank():
                 if not isinstance(q.get('correct'), list) or not q['correct']: continue
             elif t == 'matrix':
                 if not q.get('cols') or not q.get('rows'): continue
+            elif t == 'bowtie':
+                if not (q.get('condition') and q.get('actions') and q.get('parameters')): continue
             else:
                 continue  # unknown type
             # numeric difficulty level for the CAT engine (1=very easy … 5=very hard).

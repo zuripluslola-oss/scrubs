@@ -82,6 +82,50 @@
       "rationale": "Critical: potassium 6.8 (>5.0), glucose 45 (<70), platelets 40k (<50k). Normal: sodium 139 (135–145) and hemoglobin 13 (about 12–17).",
       "tip": "Know your normal ranges cold — the matrix rewards fast recognition of what's out of range.",
       "pearl": "Potassium **3.5–5.0**, sodium **135–145**, glucose **70–110** fasting — the ranges the test leans on most."
+    },
+    {
+      "id": "bowtie-0001",
+      "exam": "RN",
+      "cat": "Clinical Judgment",
+      "topic": "Hypovolemic shock",
+      "difficulty": "Hard",
+      "type": "bowtie",
+      "free": true,
+      "stem": "A client is 1 day post-op after abdominal surgery and reports increasing thirst and dizziness. Assessment: heart rate 124/min, blood pressure 92/58 mm Hg, urine output 15 mL over 2 hours, and a saturated abdominal dressing with bright-red drainage. Complete the diagram — choose the condition, the 2 actions to take, and the 2 findings to monitor.",
+      "condition": {
+        "prompt": "Condition",
+        "options": [
+          {"t": "Hypovolemic shock", "r": "**Correct.** Tachycardia, hypotension, very low urine output, thirst, and active bright-red bleeding all point to blood/volume loss."},
+          {"t": "Fluid volume overload", "r": "Incorrect. Overload shows high BP, crackles, and edema — not bleeding with low output."},
+          {"t": "Allergic reaction", "r": "Incorrect. That would show hives, swelling, and wheezing."},
+          {"t": "Normal post-op fluid shift", "r": "Incorrect. A saturated bloody dressing with unstable vitals is not a normal shift."}
+        ],
+        "correct": 0
+      },
+      "actions": {
+        "prompt": "Actions to take (choose 2)",
+        "pick": 2,
+        "options": [
+          {"t": "Apply firm pressure to the bleeding site", "r": "**Correct.** Direct pressure is the immediate step to control the external bleeding."},
+          {"t": "Increase IV fluids and notify the surgeon", "r": "**Correct.** Restore circulating volume and escalate to the surgeon urgently."},
+          {"t": "Give the next dose of pain medication", "r": "Incorrect. Opioids can further lower BP and ignore the hemorrhage."},
+          {"t": "Slow the IV fluids to prevent overload", "r": "Incorrect. Slowing fluids worsens hypovolemic shock."}
+        ],
+        "correct": [0, 1]
+      },
+      "parameters": {
+        "prompt": "Findings to monitor (choose 2)",
+        "pick": 2,
+        "options": [
+          {"t": "Blood pressure", "r": "**Correct.** BP tracks perfusion and the response to fluid resuscitation."},
+          {"t": "Urine output", "r": "**Correct.** Output is a sensitive marker of perfusion and volume status."},
+          {"t": "Serum sodium", "r": "Incorrect. Not the priority monitor during acute hemorrhage."},
+          {"t": "Deep tendon reflexes", "r": "Incorrect. Reflexes aren't the key marker of shock here."}
+        ],
+        "correct": [0, 1]
+      },
+      "tip": "Bow-tie tests the whole loop: **recognize** the condition → decide what to **do** → decide what to **watch.**",
+      "pearl": "Shock = fast pulse, low pressure, low urine, cool & thirsty. Hypovolemic: **stop the loss, replace the volume.**"
     }
   ]
 }
