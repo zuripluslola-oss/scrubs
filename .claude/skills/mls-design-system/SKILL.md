@@ -154,7 +154,7 @@ original content and MLS branding** — never copy their text, never use the nam
 |---|---|
 | NCLEX Question of the Day (email) | Question of the Day, phone **or** email (`nclex-complete.html`, `nclex-guide.html`, profile) |
 | 50 Next Gen case studies + video walkthroughs | 50 case studies pillar (`nclex-complete.html`) |
-| 2,600+ standalone questions | Our original question bank (`nclex.html` free sample → NCLEX Complete) |
+| 2,600+ standalone questions | Interactive **Question Bank** `qbank.html` — original Qs, rationale per option, answer stats, tagging, timer/score (`QBANK` data + `js/qbank.js`); free sample → full bank in NCLEX Complete |
 | Next Gen Strategy Course (lesson player: timer, answer stats, autoplay, video walkthroughs) | Strategy video course (NCLEX Complete) — lesson-player UI is a Phase-2 build to spec |
 | 4 full-length readiness exams + pass prediction | Readiness meter Low/Borderline/High/Very High (NCLEX Complete) |
 | Study Schedule Creator (1/2/3-mo calendar) | Study schedules + plan quiz (NCLEX Complete) |

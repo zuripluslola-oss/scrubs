@@ -58,7 +58,7 @@ def route_safe(js):
     # turn `window.location.href = X;` into `MLSROUTE(X);`
     return re.sub(r'window\.location\.href\s*=\s*(.+?);', r'MLSROUTE(\1);', js)
 
-js_files = ['main.js', 'prep.js', 'course.js', 'complete.js', 'dictionary.js', 'specialty.js']
+js_files = ['main.js', 'prep.js', 'course.js', 'complete.js', 'dictionary.js', 'specialty.js', 'qbank.js']
 inlined_js = []
 for jf in js_files:
     p = os.path.join(ROOT, 'js', jf)

@@ -532,6 +532,50 @@ section { padding-block: clamp(3.6rem, 9vw, 6.5rem); position: relative; }
 .course-shelf.one-line { display: flex; gap: 1rem; grid-template-columns: none; overflow-x: auto; padding-bottom: 0.6rem; scroll-snap-type: x mandatory; -webkit-overflow-scrolling: touch; }
 .course-shelf.one-line > * { flex: 0 0 min(78%, 250px); scroll-snap-align: start; }
 
+/* --- Question Bank --- */
+.qbank { max-width: 820px; margin: 0 auto; }
+.qb-bar { display: flex; flex-wrap: wrap; gap: 1rem; align-items: center; justify-content: space-between; margin-bottom: 1.4rem; }
+.qb-chips { display: flex; flex-wrap: wrap; gap: 0.45rem; }
+.qb-chip { padding: 0.4rem 0.85rem; border-radius: var(--pill); font-size: 0.78rem; font-weight: 800; border: 1.5px solid rgba(30,18,51,0.14); background: var(--card); color: var(--ink-60); cursor: pointer; transition: all 0.15s; }
+.qb-chip:hover { border-color: var(--coral-500); color: var(--coral-500); }
+.qb-chip.on { background: var(--coral-500); border-color: var(--coral-500); color: #fff; }
+.qb-meta { display: flex; gap: 1.1rem; }
+.qb-stat { font-size: 0.7rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; color: var(--ink-40); }
+.qb-stat b { display: block; font-family: var(--font-display); font-size: 1.15rem; color: var(--ink); letter-spacing: 0; text-transform: none; }
+.qb-q { background: var(--card); border: 1px solid rgba(30,18,51,0.08); border-radius: var(--radius); padding: 1.8rem; box-shadow: var(--shadow-1); }
+.qb-cat { display: inline-block; font-size: 0.64rem; font-weight: 800; letter-spacing: 0.1em; text-transform: uppercase; color: var(--coral-600); background: var(--coral-100); padding: 0.3rem 0.7rem; border-radius: var(--pill); }
+.qb-stem { font-size: 1.08rem; font-weight: 600; color: var(--ink); margin: 0.9rem 0 1.2rem; line-height: 1.5; }
+.qb-opts { display: grid; gap: 0.6rem; }
+.qb-opt { position: relative; display: flex; align-items: flex-start; gap: 0.7rem; text-align: left; background: var(--bg); border: 1.5px solid rgba(30,18,51,0.12); border-radius: 14px; padding: 0.85rem 1rem; font-size: 0.92rem; color: var(--ink); cursor: pointer; transition: border-color 0.15s, background 0.15s; }
+.qb-opt:hover:not(:disabled) { border-color: var(--coral-500); }
+.qb-opt.sel { border-color: var(--coral-500); background: var(--coral-100); }
+.qb-opt .qb-key { font-weight: 800; color: var(--coral-500); flex-shrink: 0; }
+.qb-opt.right { border-color: var(--teal-600); background: var(--teal-100); }
+.qb-opt.right .qb-key { color: var(--teal-600); }
+.qb-opt.wrong { border-color: #e5484d; background: #fdecec; }
+.qb-opt.wrong .qb-key { color: #e5484d; }
+.qb-opt .qb-txt { flex: 1; }
+.qb-pct { display: flex; align-items: center; gap: 0.4rem; width: 84px; flex-shrink: 0; align-self: center; }
+.qb-pct i { display: block; height: 6px; border-radius: var(--pill); background: var(--coral-500); min-width: 3px; }
+.qb-opt.right .qb-pct i { background: var(--teal-600); }
+.qb-pct b { font-size: 0.72rem; color: var(--ink-60); font-variant-numeric: tabular-nums; }
+.qb-actions { margin-top: 1.2rem; }
+.qb-reveal { margin-top: 1.4rem; border-top: 1px solid rgba(30,18,51,0.08); padding-top: 1.2rem; }
+.qb-verdict { display: inline-block; font-weight: 800; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.06em; padding: 0.3rem 0.8rem; border-radius: var(--pill); }
+.qb-verdict.ok { color: var(--teal-600); background: var(--teal-100); }
+.qb-verdict.no { color: #e5484d; background: #fdecec; }
+.qb-rationale { margin-top: 1rem; }
+.qb-rationale ul { list-style: none; display: grid; gap: 0.5rem; margin-top: 0.5rem; }
+.qb-rationale li { font-size: 0.86rem; color: var(--ink-60); padding-left: 0.9rem; border-left: 3px solid rgba(30,18,51,0.12); }
+.qb-rationale li.ok { border-left-color: var(--teal-600); color: var(--ink); }
+.qb-tip { margin-top: 1rem; background: var(--gold-100); border-radius: 12px; padding: 0.8rem 1rem; font-size: 0.86rem; color: var(--ink); }
+.qb-tagrow { display: flex; flex-wrap: wrap; gap: 0.5rem; align-items: center; margin-top: 1.1rem; }
+.qb-tagrow > span { font-size: 0.8rem; font-weight: 700; color: var(--ink-60); }
+.qb-gate { text-align: center; max-width: 520px; margin: 0 auto; background: var(--card); border: 2px solid var(--coral-500); border-radius: var(--radius); padding: 2rem; box-shadow: var(--shadow-2); }
+.qb-gate .lock-ic { width: 54px; height: 54px; border-radius: 50%; background: var(--coral-100); color: var(--coral-500); display: grid; place-items: center; margin: 0 auto 0.9rem; }
+.qb-gate .lock-ic svg { width: 26px; height: 26px; }
+.qb-gate p { color: var(--ink-60); margin: 0.5rem auto 1.2rem; }
+
 /* courses page wide cards */
 .two-up { display: grid; gap: 1rem; grid-template-columns: 1fr; }
 @media (min-width: 720px) { .two-up { grid-template-columns: repeat(2, 1fr); } }
@@ -1476,6 +1520,7 @@ body.mls-paid .gate { display: none; }
         <ul class="mega-links">
           <li><a href="nclex-complete.html">NCLEX Complete <small>The flagship &middot; plans from $59</small></a></li>
           <li><a href="nclex.html">Free NCLEX Prep <small>RN &amp; LPN &middot; every NGN item type</small></a></li>
+          <li><a href="qbank.html">Question Bank <small>Practice with rationales &amp; answer stats</small></a></li>
           <li><a href="nclex-guide.html">Free Study Guide <small>How to pass &middot; for nurses, by nurses</small></a></li>
           <li><a href="course-lab-values.html">Free NCLEX Practice <small>Start with a free audio scene</small></a></li>
           <li><a href="specialties.html">Specialty Prep <small>22 specialty tracks &middot; rolling out</small></a></li>
@@ -3845,7 +3890,7 @@ body.mls-paid .gate { display: none; }
           <span class="kick">Build the reps</span>
           <div class="stat">2,600+</div>
           <h3>Standalone questions</h3>
-          <p>Original NCLEX-style questions across every clinical area &mdash; MC, select-all, matrix, trend, ordered response and more. Every option carries a full rationale, not just a right answer.</p>
+          <p>Original NCLEX-style questions across every clinical area &mdash; MC, select-all, matrix, trend, ordered response and more. Every option carries a full rationale, not just a right answer. <a href="qbank.html" style="color:var(--coral-500);font-weight:700;">Try the bank free &rarr;</a></p>
         </div>
         <div class="pillar fade-up">
           <div class="illo" style="background:linear-gradient(140deg,#ffc23d,#8b5cff);"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="4"/><path d="M10 9.5v5l4.5-2.5z" fill="currentColor" stroke="none"/></svg></div>
@@ -4567,6 +4612,38 @@ body.mls-paid .gate { display: none; }
       <div class="tile fade-up"><span class="tag">Settings</span><h3>Manage account</h3><p><a href="settings.html" style="color:var(--coral-500);font-weight:700;">Account, billing &amp; notifications &rarr;</a></p></div>
     </div>
   </main>
+
+</div>
+<div class="mls-route" data-route="qbank.html" hidden>
+  <div class="page-hero">
+    <div class="wrap inner">
+      <span class="lesson-label" style="color:var(--gold-400);">Question Bank &middot; Sample</span>
+      <h1 style="margin-top:0.6rem;">Practice like it’s the <span class="em">real thing</span>.</h1>
+      <p>Every question has a rationale for <b>every</b> option, answer stats, and one-tap tagging &mdash; the same engine that powers the full 2,600+ bank. This is a free taste; unlock the rest with any plan.</p>
+    </div>
+  </div>
+
+  <section style="background:var(--bg);">
+    <div class="wrap">
+      <div class="qbank" data-qbank='[{"cat": "Pharmacology", "stem": "A client with atrial fibrillation is being discharged on warfarin. Which statement indicates the teaching was effective?", "opts": [{"t": "\u201cI\u2019ll double my dose if I ever miss a day.\u201d", "r": "Doubling risks a dangerously high INR and bleeding \u2014 a missed dose is reported to the provider, not doubled."}, {"t": "\u201cI\u2019ll keep my leafy-green vegetables about the same each week.\u201d", "r": "Correct. Warfarin antagonizes vitamin K, so the goal is consistency (not avoidance) to keep the INR stable."}, {"t": "\u201cI can take ibuprofen for aches whenever I need it.\u201d", "r": "NSAIDs raise bleeding risk and should not be taken freely with warfarin."}, {"t": "\u201cI\u2019ll stop it once my heartbeat feels regular.\u201d", "r": "Warfarin prevents clots in AFib regardless of how the rhythm feels; stopping abruptly raises stroke risk."}], "correct": 1, "tip": "When an option says \u201cavoid all vitamin K foods,\u201d it\u2019s a trap \u2014 the answer is consistency.", "pct": [6, 71, 9, 14]}, {"cat": "Pharmacology", "stem": "An older adult on digoxin and furosemide reports nausea, no appetite, and \u201cyellow-green halos\u201d around lights. What is the nurse\u2019s priority action?", "opts": [{"t": "Give the next scheduled digoxin dose.", "r": "Giving more digoxin to a client showing toxicity could be fatal."}, {"t": "Hold the digoxin and obtain digoxin and potassium levels.", "r": "Correct. Nausea, anorexia, and yellow-green vision are classic digoxin toxicity; low potassium (from furosemide) worsens it."}, {"t": "Encourage a high-potassium breakfast and reassess later.", "r": "Diet alone won\u2019t fix active toxicity, and delaying risks a lethal dysrhythmia."}, {"t": "Document as expected heart-failure findings.", "r": "These are a medication emergency, not expected findings."}], "correct": 1, "tip": "Digoxin + a potassium-wasting diuretic = connect low K\u207a to higher toxicity risk.", "pct": [4, 79, 8, 9]}, {"cat": "Med-Surg", "stem": "A client is started on IV furosemide for pulmonary edema. Which lab value is most important to monitor?", "opts": [{"t": "Serum sodium", "r": "Furosemide can lower sodium, but the potassium loss is the higher priority."}, {"t": "Serum potassium", "r": "Correct. Furosemide is potassium-wasting; hypokalemia can cause life-threatening dysrhythmias."}, {"t": "Serum calcium", "r": "Loop diuretics affect calcium slightly, but it isn\u2019t the priority."}, {"t": "Serum magnesium", "r": "Magnesium can drop, but potassium is the classic priority answer."}], "correct": 1, "tip": "Loop & thiazide \u2192 lose potassium; spironolactone \u2192 keeps it. Normal K\u207a = 3.5\u20135.0.", "pct": [10, 74, 7, 9]}, {"cat": "Med-Surg", "stem": "A client with a traumatic brain injury is monitored for increased ICP. Which finding is the earliest sign to report?", "opts": [{"t": "Restlessness and a decreasing level of consciousness", "r": "Correct. A change in level of consciousness is the earliest, most sensitive sign of rising ICP."}, {"t": "Bradycardia, widening pulse pressure, irregular respirations", "r": "That\u2019s Cushing\u2019s triad \u2014 a late, ominous sign, not early."}, {"t": "Hypotension and tachycardia", "r": "This points to shock/hypovolemia, not classic ICP changes."}, {"t": "Constricted, briskly reactive pupils", "r": "Rising ICP causes a dilated, sluggish pupil, not constricted/brisk."}], "correct": 0, "tip": "Read for \u201cearly\u201d vs \u201clate.\u201d Early ICP = LOC change; late ICP = Cushing\u2019s triad.", "pct": [63, 21, 7, 9]}, {"cat": "Maternal / Newborn", "stem": "A laboring client on IV oxytocin shows late decelerations. What is the nurse\u2019s first action?", "opts": [{"t": "Increase the oxytocin to strengthen contractions.", "r": "This worsens uteroplacental insufficiency \u2014 exactly wrong."}, {"t": "Stop the oxytocin, reposition to the side, and give oxygen.", "r": "Correct. Late decels signal uteroplacental insufficiency; intrauterine resuscitation is the priority."}, {"t": "Have the client hold her breath and push.", "r": "Pushing doesn\u2019t correct the underlying oxygen problem."}, {"t": "Document the reassuring tracing and continue.", "r": "Late decels are non-reassuring \u2014 they require action."}], "correct": 1, "tip": "VEAL CHOP: Late \u2192 Placental insufficiency \u2192 act. Turn, O\u2082, IV, stop the Pit.", "pct": [7, 76, 6, 11]}, {"cat": "Pediatrics", "stem": "A 4-year-old presents drooling, in a tripod position, with high fever and a muffled voice. Epiglottitis is suspected. Which action should the nurse AVOID?", "opts": [{"t": "Keeping the child calm on the parent\u2019s lap", "r": "This is appropriate \u2014 calm and upright prevents airway spasm."}, {"t": "Examining the throat with a tongue depressor", "r": "Correct (this is what to AVOID). It can trigger laryngospasm and total airway obstruction."}, {"t": "Preparing emergency airway equipment", "r": "Appropriate \u2014 have airway equipment ready."}, {"t": "Notifying the provider and staying with the child", "r": "Appropriate \u2014 stay and escalate."}], "correct": 1, "tip": "Negative-style stem: the \u201cright\u201d answer is the wrong action. Epiglottitis = hands off the throat.", "pct": [8, 72, 11, 9]}, {"cat": "Mental Health", "stem": "A client newly diagnosed with cancer says, \u201cI feel like I\u2019ve already let my kids down.\u201d Which response is most therapeutic?", "opts": [{"t": "\u201cDon\u2019t worry \u2014 plenty of people beat cancer.\u201d", "r": "False reassurance dismisses the feeling and shuts down communication."}, {"t": "\u201cIt sounds like you\u2019re feeling overwhelmed about facing your children.\u201d", "r": "Correct. Reflecting the feeling shows empathy and invites the client to say more."}, {"t": "\u201cWhy would you feel like you\u2019ve let them down?\u201d", "r": "\u201cWhy\u201d questions can feel challenging and put the client on the defensive."}, {"t": "\u201cYou should stay positive for your family.\u201d", "r": "Telling them how to feel minimizes real distress."}], "correct": 1, "tip": "Therapeutic answers reflect feelings and keep the focus on the client \u2014 not advice or reassurance.", "pct": [5, 78, 8, 9]}, {"cat": "Safety", "stem": "At the start of the shift, which client should the nurse assess first?", "opts": [{"t": "A client awaiting discharge paperwork", "r": "Stable \u2014 lowest priority."}, {"t": "A client with new shortness of breath and SpO\u2082 86%", "r": "Correct. Airway/Breathing comes first \u2014 an acute oxygenation emergency."}, {"t": "A client requesting pain medication for chronic back pain (5/10)", "r": "Important but not immediately life-threatening."}, {"t": "A post-op client with a small amount of dried drainage", "r": "Expected and stable."}], "correct": 1, "tip": "ABCs first, then acute-over-chronic, unstable-over-stable. Air goes first.", "pct": [4, 81, 8, 7]}]'>
+        <div class="qb-bar fade-up">
+          <div class="qb-chips"><button class="qb-chip on" data-cat="All">All</button><button class="qb-chip" data-cat="Pharmacology">Pharmacology</button><button class="qb-chip" data-cat="Med-Surg">Med-Surg</button><button class="qb-chip" data-cat="Maternal / Newborn">Maternal / Newborn</button><button class="qb-chip" data-cat="Pediatrics">Pediatrics</button><button class="qb-chip" data-cat="Mental Health">Mental Health</button><button class="qb-chip" data-cat="Safety">Safety</button></div>
+          <div class="qb-meta">
+            <span class="qb-stat">Score <b data-qb-score>0/0</b></span>
+            <span class="qb-stat">Timer <b data-qb-timer>0:00</b></span>
+            <span class="qb-stat">Q <b data-qb-prog>1/8</b></span>
+          </div>
+        </div>
+        <div class="qb-stage fade-up" data-qb-stage></div>
+        <div class="qb-gate" data-qb-gate hidden>
+          <div class="lock-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="5" y="10" width="14" height="10" rx="3"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg></div>
+          <h3>That’s the free sample.</h3>
+          <p>You’ve seen how the bank works. The full <b>2,600+ question</b> bank &mdash; every NGN type, all clinical areas, with Esi drilling your misses &mdash; comes with any plan.</p>
+          <a class="btn btn-coral" href="nclex-complete.html#pricing">Unlock the full bank &mdash; from $59</a>
+        </div>
+      </div>
+    </div>
+  </section>
 
 </div>
 <div class="mls-route" data-route="scrubtv.html" hidden>
@@ -7049,6 +7126,7 @@ body.mls-paid .gate { display: none; }
         <h5>Learn</h5>
         <ul>
           <li><a href="nclex-complete.html">NCLEX Complete</a></li>
+          <li><a href="qbank.html">Question Bank</a></li>
           <li><a href="nclex-guide.html">Free Study Guide</a></li>
           <li><a href="specialties.html">Specialty Prep</a></li>
           <li><a href="courses.html">Courses</a></li>
@@ -7843,6 +7921,140 @@ body.mls-paid .gate { display: none; }
       if (done) done.hidden = false;
     });
   });
+})();
+
+
+/* ===== qbank.js ===== */
+/* Must Love Scrubs — Question Bank (interactive sample).
+   Filter by category, answer, see rationale for every option, answer stats,
+   Mastered/Reviewing/Learning tagging, timer, score. Demo until backend. */
+
+(function () {
+  'use strict';
+  var root = document.querySelector('[data-qbank]');
+  if (!root) return;
+
+  var ALL = JSON.parse(root.getAttribute('data-qbank'));
+  var stage = root.querySelector('[data-qb-stage]');
+  var gate = root.querySelector('[data-qb-gate]');
+  var scoreEl = root.querySelector('[data-qb-score]');
+  var progEl = root.querySelector('[data-qb-prog]');
+  var timerEl = root.querySelector('[data-qb-timer]');
+
+  var list = ALL.slice();
+  var idx = 0, answered = false, chosen = -1;
+  var correct = 0, total = 0;
+
+  // timer
+  var start = Date.now();
+  setInterval(function () {
+    var s = Math.floor((Date.now() - start) / 1000);
+    timerEl.textContent = Math.floor(s / 60) + ':' + ('0' + (s % 60)).slice(-2);
+  }, 1000);
+
+  function esc(s) { return s; }
+  function updateMeta() {
+    scoreEl.textContent = correct + '/' + total;
+    progEl.textContent = Math.min(idx + 1, list.length) + '/' + list.length;
+  }
+
+  function render() {
+    answered = false; chosen = -1;
+    if (idx >= list.length) { stage.hidden = true; gate.hidden = false; updateMeta(); return; }
+    stage.hidden = false; gate.hidden = true;
+    var q = list[idx];
+    var opts = q.opts.map(function (o, i) {
+      return '<button class="qb-opt" data-i="' + i + '"><span class="qb-key">' + 'ABCD'[i] + '</span><span class="qb-txt">' + o.t + '</span></button>';
+    }).join('');
+    stage.innerHTML =
+      '<div class="qb-q">' +
+        '<span class="qb-cat">' + q.cat + '</span>' +
+        '<p class="qb-stem">' + q.stem + '</p>' +
+        '<div class="qb-opts">' + opts + '</div>' +
+        '<div class="qb-actions"><button class="btn btn-coral qb-submit" disabled>Submit answer</button></div>' +
+        '<div class="qb-reveal" hidden></div>' +
+      '</div>';
+    updateMeta();
+
+    var optButtons = stage.querySelectorAll('.qb-opt');
+    optButtons.forEach(function (b) {
+      b.addEventListener('click', function () {
+        if (answered) return;
+        optButtons.forEach(function (x) { x.classList.remove('sel'); });
+        b.classList.add('sel');
+        chosen = parseInt(b.getAttribute('data-i'), 10);
+        stage.querySelector('.qb-submit').disabled = false;
+      });
+    });
+    stage.querySelector('.qb-submit').addEventListener('click', submit);
+  }
+
+  function submit() {
+    if (answered || chosen < 0) return;
+    answered = true;
+    var q = list[idx];
+    total++;
+    if (chosen === q.correct) correct++;
+    updateMeta();
+
+    var optButtons = stage.querySelectorAll('.qb-opt');
+    optButtons.forEach(function (b) {
+      var i = parseInt(b.getAttribute('data-i'), 10);
+      b.disabled = true;
+      if (i === q.correct) b.classList.add('right');
+      else if (i === chosen) b.classList.add('wrong');
+      // answer-stats bar
+      var bar = document.createElement('span');
+      bar.className = 'qb-pct';
+      bar.innerHTML = '<i style="width:' + q.pct[i] + '%"></i><b>' + q.pct[i] + '%</b>';
+      b.appendChild(bar);
+    });
+
+    var rats = q.opts.map(function (o, i) {
+      var cls = i === q.correct ? 'ok' : 'no';
+      return '<li class="' + cls + '"><b>' + 'ABCD'[i] + '.</b> ' + o.r + '</li>';
+    }).join('');
+    var verdict = chosen === q.correct
+      ? '<span class="qb-verdict ok">Correct</span>'
+      : '<span class="qb-verdict no">Not quite</span>';
+
+    var rev = stage.querySelector('.qb-reveal');
+    rev.hidden = false;
+    rev.innerHTML =
+      verdict +
+      '<div class="qb-rationale"><b>Why each option:</b><ul>' + rats + '</ul></div>' +
+      '<div class="qb-tip"><b>📝 Tip.</b> ' + q.tip + '</div>' +
+      '<div class="qb-tagrow"><span>Tag this:</span>' +
+        '<button class="tagc mastered" data-tag>Mastered</button>' +
+        '<button class="tagc reviewing" data-tag>Reviewing</button>' +
+        '<button class="tagc learning" data-tag>Learning</button></div>' +
+      '<div class="qb-actions"><button class="btn btn-coral qb-next">' +
+        (idx + 1 >= list.length ? 'See results' : 'Next question') + ' &rarr;</button></div>';
+
+    rev.querySelectorAll('[data-tag]').forEach(function (t) {
+      t.addEventListener('click', function () {
+        rev.querySelectorAll('[data-tag]').forEach(function (x) { x.classList.remove('picked'); });
+        t.classList.add('picked');
+      });
+    });
+    rev.querySelector('.qb-next').addEventListener('click', function () { idx++; render(); });
+    stage.querySelector('.qb-submit').disabled = true;
+    stage.querySelector('.qb-submit').textContent = 'Answered';
+  }
+
+  // category filter
+  root.querySelectorAll('.qb-chip').forEach(function (chip) {
+    chip.addEventListener('click', function () {
+      root.querySelectorAll('.qb-chip').forEach(function (c) { c.classList.remove('on'); });
+      chip.classList.add('on');
+      var cat = chip.getAttribute('data-cat');
+      list = cat === 'All' ? ALL.slice() : ALL.filter(function (q) { return q.cat === cat; });
+      idx = 0; correct = 0; total = 0;
+      render();
+    });
+  });
+
+  render();
 })();
 
 </script>

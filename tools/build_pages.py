@@ -103,6 +103,7 @@ def chrome(fname, title, desc, body, active=""):
         <ul class="mega-links">
           <li><a href="nclex-complete.html">NCLEX Complete <small>The flagship &middot; plans from $59</small></a></li>
           <li><a href="nclex.html">Free NCLEX Prep <small>RN &amp; LPN &middot; every NGN item type</small></a></li>
+          <li><a href="qbank.html">Question Bank <small>Practice with rationales &amp; answer stats</small></a></li>
           <li><a href="nclex-guide.html">Free Study Guide <small>How to pass &middot; for nurses, by nurses</small></a></li>
           <li><a href="course-lab-values.html">Free NCLEX Practice <small>Start with a free audio scene</small></a></li>
           <li><a href="specialties.html">Specialty Prep <small>22 specialty tracks &middot; rolling out</small></a></li>
@@ -159,6 +160,7 @@ def chrome(fname, title, desc, body, active=""):
         <h5>Learn</h5>
         <ul>
           <li><a href="nclex-complete.html">NCLEX Complete</a></li>
+          <li><a href="qbank.html">Question Bank</a></li>
           <li><a href="nclex-guide.html">Free Study Guide</a></li>
           <li><a href="specialties.html">Specialty Prep</a></li>
           <li><a href="courses.html">Courses</a></li>
@@ -1625,7 +1627,7 @@ COMPLETE_BODY = f"""  <div class="page-hero">
           <span class="kick">Build the reps</span>
           <div class="stat">2,600+</div>
           <h3>Standalone questions</h3>
-          <p>Original NCLEX-style questions across every clinical area &mdash; MC, select-all, matrix, trend, ordered response and more. Every option carries a full rationale, not just a right answer.</p>
+          <p>Original NCLEX-style questions across every clinical area &mdash; MC, select-all, matrix, trend, ordered response and more. Every option carries a full rationale, not just a right answer. <a href="qbank.html" style="color:var(--coral-500);font-weight:700;">Try the bank free &rarr;</a></p>
         </div>
         <div class="pillar fade-up">
           <div class="illo" style="background:linear-gradient(140deg,#ffc23d,#8b5cff);">{I['play']}</div>
@@ -1850,6 +1852,114 @@ COMPLETE_BODY = f"""  <div class="page-hero">
 PAGES["nclex-complete.html"] = ("NCLEX Complete — The Flagship NCLEX Prep | Must Love Scrubs",
     "NCLEX Complete: 50 Next Gen case studies, 2,600+ original questions, a strategy course, and 4 full-length readiness exams that predict your pass chance. Esi AI tutor included. Plans from $59.",
     COMPLETE_BODY, "courses")
+
+# ---------------------------------------------------------------- QUESTION BANK (interactive, original content)
+
+# Each: cat, stem, opts[{t,r}], correct index, tip, pct (answer-stats, sums ~100)
+QBANK = [
+    {"cat": "Pharmacology", "stem": "A client with atrial fibrillation is being discharged on warfarin. Which statement indicates the teaching was effective?",
+     "opts": [
+        {"t": "“I’ll double my dose if I ever miss a day.”", "r": "Doubling risks a dangerously high INR and bleeding — a missed dose is reported to the provider, not doubled."},
+        {"t": "“I’ll keep my leafy-green vegetables about the same each week.”", "r": "Correct. Warfarin antagonizes vitamin K, so the goal is consistency (not avoidance) to keep the INR stable."},
+        {"t": "“I can take ibuprofen for aches whenever I need it.”", "r": "NSAIDs raise bleeding risk and should not be taken freely with warfarin."},
+        {"t": "“I’ll stop it once my heartbeat feels regular.”", "r": "Warfarin prevents clots in AFib regardless of how the rhythm feels; stopping abruptly raises stroke risk."}],
+     "correct": 1, "tip": "When an option says “avoid all vitamin K foods,” it’s a trap — the answer is consistency.", "pct": [6, 71, 9, 14]},
+    {"cat": "Pharmacology", "stem": "An older adult on digoxin and furosemide reports nausea, no appetite, and “yellow-green halos” around lights. What is the nurse’s priority action?",
+     "opts": [
+        {"t": "Give the next scheduled digoxin dose.", "r": "Giving more digoxin to a client showing toxicity could be fatal."},
+        {"t": "Hold the digoxin and obtain digoxin and potassium levels.", "r": "Correct. Nausea, anorexia, and yellow-green vision are classic digoxin toxicity; low potassium (from furosemide) worsens it."},
+        {"t": "Encourage a high-potassium breakfast and reassess later.", "r": "Diet alone won’t fix active toxicity, and delaying risks a lethal dysrhythmia."},
+        {"t": "Document as expected heart-failure findings.", "r": "These are a medication emergency, not expected findings."}],
+     "correct": 1, "tip": "Digoxin + a potassium-wasting diuretic = connect low K⁺ to higher toxicity risk.", "pct": [4, 79, 8, 9]},
+    {"cat": "Med-Surg", "stem": "A client is started on IV furosemide for pulmonary edema. Which lab value is most important to monitor?",
+     "opts": [
+        {"t": "Serum sodium", "r": "Furosemide can lower sodium, but the potassium loss is the higher priority."},
+        {"t": "Serum potassium", "r": "Correct. Furosemide is potassium-wasting; hypokalemia can cause life-threatening dysrhythmias."},
+        {"t": "Serum calcium", "r": "Loop diuretics affect calcium slightly, but it isn’t the priority."},
+        {"t": "Serum magnesium", "r": "Magnesium can drop, but potassium is the classic priority answer."}],
+     "correct": 1, "tip": "Loop & thiazide → lose potassium; spironolactone → keeps it. Normal K⁺ = 3.5–5.0.", "pct": [10, 74, 7, 9]},
+    {"cat": "Med-Surg", "stem": "A client with a traumatic brain injury is monitored for increased ICP. Which finding is the earliest sign to report?",
+     "opts": [
+        {"t": "Restlessness and a decreasing level of consciousness", "r": "Correct. A change in level of consciousness is the earliest, most sensitive sign of rising ICP."},
+        {"t": "Bradycardia, widening pulse pressure, irregular respirations", "r": "That’s Cushing’s triad — a late, ominous sign, not early."},
+        {"t": "Hypotension and tachycardia", "r": "This points to shock/hypovolemia, not classic ICP changes."},
+        {"t": "Constricted, briskly reactive pupils", "r": "Rising ICP causes a dilated, sluggish pupil, not constricted/brisk."}],
+     "correct": 0, "tip": "Read for “early” vs “late.” Early ICP = LOC change; late ICP = Cushing’s triad.", "pct": [63, 21, 7, 9]},
+    {"cat": "Maternal / Newborn", "stem": "A laboring client on IV oxytocin shows late decelerations. What is the nurse’s first action?",
+     "opts": [
+        {"t": "Increase the oxytocin to strengthen contractions.", "r": "This worsens uteroplacental insufficiency — exactly wrong."},
+        {"t": "Stop the oxytocin, reposition to the side, and give oxygen.", "r": "Correct. Late decels signal uteroplacental insufficiency; intrauterine resuscitation is the priority."},
+        {"t": "Have the client hold her breath and push.", "r": "Pushing doesn’t correct the underlying oxygen problem."},
+        {"t": "Document the reassuring tracing and continue.", "r": "Late decels are non-reassuring — they require action."}],
+     "correct": 1, "tip": "VEAL CHOP: Late → Placental insufficiency → act. Turn, O₂, IV, stop the Pit.", "pct": [7, 76, 6, 11]},
+    {"cat": "Pediatrics", "stem": "A 4-year-old presents drooling, in a tripod position, with high fever and a muffled voice. Epiglottitis is suspected. Which action should the nurse AVOID?",
+     "opts": [
+        {"t": "Keeping the child calm on the parent’s lap", "r": "This is appropriate — calm and upright prevents airway spasm."},
+        {"t": "Examining the throat with a tongue depressor", "r": "Correct (this is what to AVOID). It can trigger laryngospasm and total airway obstruction."},
+        {"t": "Preparing emergency airway equipment", "r": "Appropriate — have airway equipment ready."},
+        {"t": "Notifying the provider and staying with the child", "r": "Appropriate — stay and escalate."}],
+     "correct": 1, "tip": "Negative-style stem: the “right” answer is the wrong action. Epiglottitis = hands off the throat.", "pct": [8, 72, 11, 9]},
+    {"cat": "Mental Health", "stem": "A client newly diagnosed with cancer says, “I feel like I’ve already let my kids down.” Which response is most therapeutic?",
+     "opts": [
+        {"t": "“Don’t worry — plenty of people beat cancer.”", "r": "False reassurance dismisses the feeling and shuts down communication."},
+        {"t": "“It sounds like you’re feeling overwhelmed about facing your children.”", "r": "Correct. Reflecting the feeling shows empathy and invites the client to say more."},
+        {"t": "“Why would you feel like you’ve let them down?”", "r": "“Why” questions can feel challenging and put the client on the defensive."},
+        {"t": "“You should stay positive for your family.”", "r": "Telling them how to feel minimizes real distress."}],
+     "correct": 1, "tip": "Therapeutic answers reflect feelings and keep the focus on the client — not advice or reassurance.", "pct": [5, 78, 8, 9]},
+    {"cat": "Safety", "stem": "At the start of the shift, which client should the nurse assess first?",
+     "opts": [
+        {"t": "A client awaiting discharge paperwork", "r": "Stable — lowest priority."},
+        {"t": "A client with new shortness of breath and SpO₂ 86%", "r": "Correct. Airway/Breathing comes first — an acute oxygenation emergency."},
+        {"t": "A client requesting pain medication for chronic back pain (5/10)", "r": "Important but not immediately life-threatening."},
+        {"t": "A post-op client with a small amount of dried drainage", "r": "Expected and stable."}],
+     "correct": 1, "tip": "ABCs first, then acute-over-chronic, unstable-over-stable. Air goes first.", "pct": [4, 81, 8, 7]},
+]
+QBANK_JSON = _json.dumps(QBANK)
+QB_CATS = ["All", "Pharmacology", "Med-Surg", "Maternal / Newborn", "Pediatrics", "Mental Health", "Safety"]
+
+def qb_chips():
+    out = []
+    for i, c in enumerate(QB_CATS):
+        on = " on" if i == 0 else ""
+        out.append(f'<button class="qb-chip{on}" data-cat="{c}">{c}</button>')
+    return "".join(out)
+
+QBANK_BODY = f"""  <div class="page-hero">
+    <div class="wrap inner">
+      <span class="lesson-label" style="color:var(--gold-400);">Question Bank &middot; Sample</span>
+      <h1 style="margin-top:0.6rem;">Practice like it’s the <span class="em">real thing</span>.</h1>
+      <p>Every question has a rationale for <b>every</b> option, answer stats, and one-tap tagging &mdash; the same engine that powers the full 2,600+ bank. This is a free taste; unlock the rest with any plan.</p>
+    </div>
+  </div>
+
+  <section style="background:var(--bg);">
+    <div class="wrap">
+      <div class="qbank" data-qbank='{QBANK_JSON}'>
+        <div class="qb-bar fade-up">
+          <div class="qb-chips">{qb_chips()}</div>
+          <div class="qb-meta">
+            <span class="qb-stat">Score <b data-qb-score>0/0</b></span>
+            <span class="qb-stat">Timer <b data-qb-timer>0:00</b></span>
+            <span class="qb-stat">Q <b data-qb-prog>1/{len(QBANK)}</b></span>
+          </div>
+        </div>
+        <div class="qb-stage fade-up" data-qb-stage></div>
+        <div class="qb-gate" data-qb-gate hidden>
+          <div class="lock-ic">{I['lock']}</div>
+          <h3>That’s the free sample.</h3>
+          <p>You’ve seen how the bank works. The full <b>2,600+ question</b> bank &mdash; every NGN type, all clinical areas, with Esi drilling your misses &mdash; comes with any plan.</p>
+          <a class="btn btn-coral" href="nclex-complete.html#pricing">Unlock the full bank &mdash; from $59</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script src="js/qbank.js"></script>
+"""
+
+PAGES["qbank.html"] = ("NCLEX Question Bank (Free Sample) | Must Love Scrubs",
+    "Practice original NCLEX-style questions with a rationale for every option, answer stats, and Mastered/Reviewing/Learning tagging. A free sample of the 2,600+ question bank.",
+    QBANK_BODY, "courses")
 
 # ---------------------------------------------------------------- FREE NCLEX STUDY GUIDE / RESOURCES HUB
 
