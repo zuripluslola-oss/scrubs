@@ -1915,7 +1915,39 @@ QBANK = [
      "correct": 1, "tip": "ABCs first, then acute-over-chronic, unstable-over-stable. Air goes first.", "pct": [4, 81, 8, 7]},
 ]
 QBANK_JSON = _json.dumps(QBANK)
-QB_CATS = ["All", "Pharmacology", "Med-Surg", "Maternal / Newborn", "Pediatrics", "Mental Health", "Safety"]
+# --- assemble the bank from data/qbank/*.json (batch pipeline) ---
+def _load_qbank():
+    import glob as _glob, hashlib as _hl
+    qs, seen = [], set()
+    for path in sorted(_glob.glob(os.path.join(ROOT, 'data', 'qbank', '*.json'))):
+        data = _json.load(open(path, encoding='utf-8'))
+        for q in data.get('questions', []):
+            if q.get('type', 'mc') != 'mc':      continue   # non-MC: pending support
+            if len(q.get('opts', [])) != 4:      continue
+            if not (0 <= q.get('correct', -1) <= 3): continue
+            if q.get('id') in seen:              continue
+            seen.add(q['id'])
+            if 'pct' not in q:  # synthesize answer-stats
+                base = {'Easy': 78, 'Moderate': 68, 'Hard': 55}.get(q.get('difficulty', 'Moderate'), 68)
+                h = int(_hl.md5(q['id'].encode()).hexdigest(), 16)
+                c = q['correct']; pct = [0, 0, 0, 0]; pct[c] = base + (h % 7) - 3
+                rem = 100 - pct[c]; others = [i for i in range(4) if i != c]
+                splits = [rem // 2, rem // 3, rem - rem // 2 - rem // 3]
+                for k, i in enumerate(others): pct[i] = splits[k]
+                q['pct'] = pct
+            qs.append(q)
+    return qs
+
+_loaded = _load_qbank()
+if _loaded:
+    QBANK = _loaded
+QB_FREE = [q for q in QBANK if q.get('free')] or QBANK
+QB_TOTAL = len(QBANK)
+QBANK_JSON = _json.dumps(QB_FREE, ensure_ascii=False).replace('<', '\\u003c').replace('>', '\\u003e').replace('&', '\\u0026')
+QB_CATS = ['All']
+for _q in QB_FREE:
+    if _q['cat'] not in QB_CATS:
+        QB_CATS.append(_q['cat'])
 
 def qb_chips():
     out = []
@@ -1928,26 +1960,27 @@ QBANK_BODY = f"""  <div class="page-hero">
     <div class="wrap inner">
       <span class="lesson-label" style="color:var(--gold-400);">Question Bank &middot; Sample</span>
       <h1 style="margin-top:0.6rem;">Practice like it’s the <span class="em">real thing</span>.</h1>
-      <p>Every question has a rationale for <b>every</b> option, answer stats, and one-tap tagging &mdash; the same engine that powers the full 2,600+ bank. This is a free taste; unlock the rest with any plan.</p>
+      <p>Every question has a rationale for <b>every</b> option, answer stats, and one-tap tagging &mdash; the same engine that powers the full bank. This is a free taste; unlock the rest with any plan.</p>
     </div>
   </div>
 
   <section style="background:var(--bg);">
     <div class="wrap">
-      <div class="qbank" data-qbank='{QBANK_JSON}'>
+      <div class="qbank" data-qb-total="{QB_TOTAL}">
+        <script type="application/json" data-qbank>{QBANK_JSON}</script>
         <div class="qb-bar fade-up">
           <div class="qb-chips">{qb_chips()}</div>
           <div class="qb-meta">
             <span class="qb-stat">Score <b data-qb-score>0/0</b></span>
             <span class="qb-stat">Timer <b data-qb-timer>0:00</b></span>
-            <span class="qb-stat">Q <b data-qb-prog>1/{len(QBANK)}</b></span>
+            <span class="qb-stat">Q <b data-qb-prog>1/{len(QB_FREE)}</b></span>
           </div>
         </div>
         <div class="qb-stage fade-up" data-qb-stage></div>
         <div class="qb-gate" data-qb-gate hidden>
           <div class="lock-ic">{I['lock']}</div>
           <h3>That’s the free sample.</h3>
-          <p>You’ve seen how the bank works. The full <b>2,600+ question</b> bank &mdash; every NGN type, all clinical areas, with Esi drilling your misses &mdash; comes with any plan.</p>
+          <p>You’ve seen how the bank works. The full <b>{QB_TOTAL}-question</b> bank &mdash; growing toward 2,600+, every NGN type, all clinical areas, with Esi drilling your misses &mdash; comes with any plan.</p>
           <a class="btn btn-coral" href="nclex-complete.html#pricing">Unlock the full bank &mdash; from $59</a>
         </div>
       </div>

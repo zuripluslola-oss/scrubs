@@ -1,0 +1,160 @@
+{
+  "batch": "workbook-safety",
+  "questions": [
+    {
+      "id": "safety-0001",
+      "exam": "RN",
+      "cat": "Safety",
+      "topic": "Prioritizing client care",
+      "difficulty": "Hard",
+      "type": "mc",
+      "stem": "At the start of the shift, a nurse receives report on four clients. Which client should the nurse assess first?",
+      "opts": [
+        {
+          "t": "A client scheduled for discharge who is waiting for paperwork",
+          "r": "A stable client awaiting discharge is the lowest priority."
+        },
+        {
+          "t": "A client with new-onset shortness of breath and an oxygen saturation of 86%",
+          "r": "**Airway/Breathing problems come first.** New shortness of breath with an **SpO₂ of 86%** is an acute oxygenation emergency and takes priority over all the others."
+        },
+        {
+          "t": "A client requesting pain medication for chronic back pain rated 5/10",
+          "r": "Chronic pain at 5/10 is important but not immediately life-threatening."
+        },
+        {
+          "t": "A postoperative client whose dressing has a small amount of dried drainage",
+          "r": "A small amount of **dried** drainage is expected and stable."
+        }
+      ],
+      "correct": 1,
+      "tip": "Use **ABCs, then Maslow, then acute-over-chronic, then unstable-over-stable.** A breathing problem almost always outranks pain, discharge, or expected findings.",
+      "pearl": "\"**Air goes first.**\" Rank with **ABC** — then remember that **new/sudden and unstable** beats **chronic and expected** every time.",
+      "free": true
+    },
+    {
+      "id": "safety-0002",
+      "exam": "RN",
+      "cat": "Safety",
+      "topic": "Disaster triage",
+      "difficulty": "Moderate",
+      "type": "mc",
+      "stem": "After a mass-casualty event, a charge nurse must free up medical- surgical beds quickly. Which client is the most appropriate to discharge or transfer first to make",
+      "opts": [
+        {
+          "t": "A client 2 days post-op who is stable, tolerating a diet, and ambulating",
+          "r": "The **most stable** client — post-op, eating, ambulating — is the safest to discharge or transfer to open a bed for incoming casualties."
+        },
+        {
+          "t": "A client receiving IV vasopressors for unstable blood pressure",
+          "r": "A client on **vasopressors** is unstable and cannot be moved out."
+        },
+        {
+          "t": "A client with new chest pain and pending cardiac enzymes",
+          "r": "New chest pain with pending enzymes is potentially unstable (possible MI) and must stay."
+        },
+        {
+          "t": "A client with a temperature of 39.5°C and a rising white blood cell count",
+          "r": "High fever with rising WBCs suggests active infection/ possible sepsis — not appropriate to discharge."
+        }
+      ],
+      "correct": 0,
+      "tip": "\"Who can you discharge/transfer?\" flips normal priority: you pick the **most stable** client, not the sickest. Read whether the stem wants *who to see first* vs *who can leave.*",
+      "pearl": "In disaster/staffing questions, **the boring, stable client is the right answer** — they can safely go. Keep the unstable ones close.",
+      "free": true
+    },
+    {
+      "id": "safety-0003",
+      "exam": "RN",
+      "cat": "Safety",
+      "topic": "Safe medication administration",
+      "difficulty": "Easy",
+      "type": "mc",
+      "stem": "A nurse is preparing to administer a medication and notices the prescription is difficult to read and the dose seems unusually high. What should the nurse do?",
+      "opts": [
+        {
+          "t": "Administer the dose as written to avoid delaying treatment.",
+          "r": "Administering an unclear or possibly excessive dose risks serious harm — never give what you can't verify."
+        },
+        {
+          "t": "Give a smaller dose that seems safer based on judgment.",
+          "r": "Improvising a dose is outside the nurse's scope and unsafe."
+        },
+        {
+          "t": "Hold the medication and clarify the order with the prescriber.",
+          "r": "When an order is **illegible, incomplete, or appears incorrect**, the nurse **holds the medication and clarifies directly with the prescriber** before giving anything."
+        },
+        {
+          "t": "Ask another nurse to interpret the handwriting and proceed.",
+          "r": "A second nurse's guess doesn't make an unverified order safe; the prescriber must clarify."
+        }
+      ],
+      "correct": 2,
+      "tip": "The nurse is the **last safety check.** Any unclear, incomplete, or unsafe-looking order is **clarified before administration** — never assumed.",
+      "pearl": "\"**If it isn't right, don't write (or give).**\" Remember the **rights** of medication administration — right client, drug, dose, route, time, documentation, reason, response.",
+      "free": false
+    },
+    {
+      "id": "safety-0004",
+      "exam": "RN",
+      "cat": "Safety",
+      "topic": "Anaphylaxis",
+      "difficulty": "Hard",
+      "type": "mc",
+      "stem": "Minutes after receiving an IV antibiotic, a client develops facial swelling, hives, wheezing, and a drop in blood pressure. What is the nurse's priority action?",
+      "opts": [
+        {
+          "t": "Document the reaction and continue the infusion at a slower rate.",
+          "r": "Continuing the trigger (even slower) worsens a life-threatening reaction."
+        },
+        {
+          "t": "Stop the antibiotic, maintain the airway, and prepare to administer epinephrine.",
+          "r": "This is **anaphylaxis.** The nurse **stops the causative drug, protects the airway, and gives epinephrine** — the first-line, life-saving medication — followed by oxygen, IV fluids, antihistamines, and corticosteroids."
+        },
+        {
+          "t": "Administer an oral antihistamine and reassess in 20 minutes.",
+          "r": "Oral antihistamines are too slow and not first-line for anaphylaxis with airway/BP compromise."
+        },
+        {
+          "t": "Apply a cool compress to the swollen areas.",
+          "r": "A compress does nothing for airway swelling or shock."
+        }
+      ],
+      "correct": 1,
+      "tip": "Anaphylaxis first-line = **epinephrine**, every time. Antihistamines and steroids are **adjuncts**, not the priority.",
+      "pearl": "\"**Epi first, and don't rehearse.**\" Stop the trigger → **epinephrine** → airway/oxygen → fluids for the pressure.",
+      "free": false
+    },
+    {
+      "id": "safety-0005",
+      "exam": "RN",
+      "cat": "Safety",
+      "topic": "Oxygen and fire safety",
+      "difficulty": "Easy",
+      "type": "mc",
+      "stem": "A nurse provides safety teaching to a client using home oxygen. Which client statement indicates correct understanding?",
+      "opts": [
+        {
+          "t": "\"I can smoke as long as I lower the oxygen flow first.\"",
+          "r": "**No smoking near oxygen — ever.** Oxygen supports combustion and can cause a flash fire regardless of flow rate."
+        },
+        {
+          "t": "\"I'll keep the oxygen at least several feet away from stoves, candles, and open flames.\"",
+          "r": "Oxygen must be kept **away from flames, heat, and sparks** (stoves, candles, heaters). \"No smoking\" signs and safe distances are standard."
+        },
+        {
+          "t": "\"I'll use petroleum jelly on my lips to keep them from drying out.\"",
+          "r": "**Petroleum-based products are flammable** near oxygen — use water-based lip moisturizer instead."
+        },
+        {
+          "t": "\"Wool blankets are best for reducing static around the oxygen.\"",
+          "r": "**Wool and synthetics build static/sparks**; cotton is preferred around oxygen."
+        }
+      ],
+      "correct": 1,
+      "tip": "Oxygen safety = **no flames, no petroleum products, no static-prone fabrics.** Any answer that allows smoking near oxygen is wrong.",
+      "pearl": "\"**Oxygen doesn't burn — it makes everything else burn faster.**\" Keep flames, grease (petroleum), and sparks far away.",
+      "free": false
+    }
+  ]
+}

@@ -233,6 +233,20 @@ specialty tags. Formats: Excel (edit) + CSV (bulk import) + website JSON (`data/
   difficulty, type, stem, options, correct, why-correct, why-others-wrong, NCLEX rationale,
   key concept, memory tip.
 - Types: MC, SATA, matrix/grid, bow-tie, trend, drag-drop, ordered response, case study, prioritization, delegation.
+### Pipeline IMPLEMENTED (2026-07)
+
+The batch pipeline is live. Questions live in **`data/qbank/*.json`** batch files
+(schema in `data/qbank/schema.md`). `tools/build_qbank.py` validates + summarizes;
+`build_pages.py` `_load_qbank()` globs, validates, de-dupes, synthesizes answer
+stats, and assembles the bank feeding `qbank.html`. Add a batch → rebuild → it
+appears. `free: true` flags the free sample (gated otherwise) — data-driven, no
+code change. `tools/import_workbook.py` migrated the 50-question workbook →
+**48 MC questions across 8 categories** (the SATA + bow-tie items await non-MC
+support). Authoring model (owner-picked): **I generate original questions in
+JSON batches**, owner reviews each batch. Next: benchmark batch toward 250 RN.
+qbank data JSON is embedded in a `<script type="application/json" data-qbank>`
+block (not an attribute) and `**bold**` renders in `js/qbank.js`.
+
 - **Approach: benchmark-first** — build the taxonomy + DB template, then a 250 RN +
   100 specialty benchmark batch to lock quality, THEN scale. Don't ship a huge bank that
   fails when nurses use it. QC gate: verified answer, NCLEX wording, no ambiguity,

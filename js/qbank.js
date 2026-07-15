@@ -4,10 +4,12 @@
 
 (function () {
   'use strict';
-  var root = document.querySelector('[data-qbank]');
+  var root = document.querySelector('.qbank');
   if (!root) return;
 
-  var ALL = JSON.parse(root.getAttribute('data-qbank'));
+  var dataEl = root.querySelector('script[data-qbank]');
+  var ALL = JSON.parse(dataEl.textContent);
+  function md(s) { return String(s == null ? '' : s).replace(/\*\*(.+?)\*\*/g, '<b>$1</b>'); }
   var stage = root.querySelector('[data-qb-stage]');
   var gate = root.querySelector('[data-qb-gate]');
   var scoreEl = root.querySelector('[data-qb-score]');
@@ -37,12 +39,12 @@
     stage.hidden = false; gate.hidden = true;
     var q = list[idx];
     var opts = q.opts.map(function (o, i) {
-      return '<button class="qb-opt" data-i="' + i + '"><span class="qb-key">' + 'ABCD'[i] + '</span><span class="qb-txt">' + o.t + '</span></button>';
+      return '<button class="qb-opt" data-i="' + i + '"><span class="qb-key">' + 'ABCD'[i] + '</span><span class="qb-txt">' + md(o.t) + '</span></button>';
     }).join('');
     stage.innerHTML =
       '<div class="qb-q">' +
         '<span class="qb-cat">' + q.cat + '</span>' +
-        '<p class="qb-stem">' + q.stem + '</p>' +
+        '<p class="qb-stem">' + md(q.stem) + '</p>' +
         '<div class="qb-opts">' + opts + '</div>' +
         '<div class="qb-actions"><button class="btn btn-coral qb-submit" disabled>Submit answer</button></div>' +
         '<div class="qb-reveal" hidden></div>' +
@@ -85,18 +87,20 @@
 
     var rats = q.opts.map(function (o, i) {
       var cls = i === q.correct ? 'ok' : 'no';
-      return '<li class="' + cls + '"><b>' + 'ABCD'[i] + '.</b> ' + o.r + '</li>';
+      return '<li class="' + cls + '"><b>' + 'ABCD'[i] + '.</b> ' + md(o.r) + '</li>';
     }).join('');
     var verdict = chosen === q.correct
       ? '<span class="qb-verdict ok">Correct</span>'
       : '<span class="qb-verdict no">Not quite</span>';
+    var pearl = q.pearl ? '<div class="qb-tip qb-pearl"><b>💡 Memory trick.</b> ' + md(q.pearl) + '</div>' : '';
 
     var rev = stage.querySelector('.qb-reveal');
     rev.hidden = false;
     rev.innerHTML =
       verdict +
       '<div class="qb-rationale"><b>Why each option:</b><ul>' + rats + '</ul></div>' +
-      '<div class="qb-tip"><b>📝 Tip.</b> ' + q.tip + '</div>' +
+      (q.tip ? '<div class="qb-tip"><b>📝 Tip.</b> ' + md(q.tip) + '</div>' : '') +
+      pearl +
       '<div class="qb-tagrow"><span>Tag this:</span>' +
         '<button class="tagc mastered" data-tag>Mastered</button>' +
         '<button class="tagc reviewing" data-tag>Reviewing</button>' +

@@ -561,6 +561,7 @@ section { padding-block: clamp(3.6rem, 9vw, 6.5rem); position: relative; }
 .qb-rationale li { font-size: 0.86rem; color: var(--ink-60); padding-left: 0.9rem; border-left: 3px solid rgba(30,18,51,0.12); }
 .qb-rationale li.ok { border-left-color: var(--teal-600); color: var(--ink); }
 .qb-tip { margin-top: 1rem; background: var(--gold-100); border-radius: 12px; padding: 0.8rem 1rem; font-size: 0.86rem; color: var(--ink); }
+.qb-pearl { background: var(--teal-100); }
 .qb-tagrow { display: flex; flex-wrap: wrap; gap: 0.5rem; align-items: center; margin-top: 1.1rem; }
 .qb-tagrow > span { font-size: 0.8rem; font-weight: 700; color: var(--ink-60); }
 .qb-gate { text-align: center; max-width: 520px; margin: 0 auto; background: var(--card); border: 2px solid var(--coral-500); border-radius: var(--radius); padding: 2rem; box-shadow: var(--shadow-2); }
