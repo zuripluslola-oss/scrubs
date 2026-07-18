@@ -104,6 +104,15 @@ Each student has a dynamic map: per-domain mastery (Cardiovascular 92%, Pharmaco
 - **"Why?" chain:** tap Why repeatedly to drill from a finding down through physiology, each step a deeper NKE link.
 - **Concept maps:** interactive visual branches (e.g., Sepsis → infection, lactate, cultures, antibiotics, fluids, vasopressors, organ dysfunction, shock).
 
+### 4.5 CAT ↔ pop quizzes & mini-prep ↔ visible improvement (locked)
+This is one closed loop, not separate features:
+1. **CAT / readiness exam** estimates the student's ability and pinpoints weak nodes (by system, topic, and clinical-judgment step).
+2. Those weak nodes are pushed into **pop quizzes** (short, adaptive, 5–10 items that surface at smart moments) and **mini-prep** (focused micro-lessons + drills on exactly those gaps).
+3. Every attempt updates the **student knowledge graph** (mastery + spaced-repetition schedule), which **re-feeds the next CAT** — so the adaptive test, the pop quizzes, and the mini-prep are all driven by the *same* mastery data.
+4. **Improvement is shown, not implied:** the dashboard tracks each domain's mastery **over time** (before → after), readiness trend (Low → Very High), a per-topic "then vs now," and pop-quiz score deltas — so the student literally sees weak areas turning into strong ones.
+
+**Is this how it works already?** The *architecture* already supports it — the design uses one shared mastery store that feeds `/me/next` (smart study) and the dashboard. What this update does is make the loop **explicit and named**: CAT results must generate targeted pop quizzes + mini-prep, and the dashboard must show the before/after improvement, not just a current score.
+
 ---
 
 ## 5. Data model & schema (build-like-a-software-company)
@@ -126,19 +135,46 @@ Each student has a dynamic map: per-domain mastery (Cardiovascular 92%, Pharmaco
 
 ---
 
-## 6. Question Engine — all NGN item types
+## 6. Question Engine — ALL NCLEX + NGN item types (verified vs NCSBN)
 
-Supported/target types: **Multiple Choice · SATA · Matrix · Bow-tie** (built in the qbank engine today) · **Drop-down/Cloze · Ordered Response · Hot Spot · Trend · Audio · Image · Case Study** (unfolding, 6 items). Every question: rationale for right *and* wrong, difficulty (1–5), topic, specialty, NCLEX category, clinical-judgment step, est. time, references, and NKE links. CAT-ready: difficulty drives adaptive item selection (IRT/Rasch-style; recalibrated from real `attempts` data over time).
+We support the **complete** set. NCSBN uses **2 stand-alone** NGN item types (bow-tie, trend) plus **12 case-study** NGN item types, alongside the **traditional** item types that remain on the exam. Our engine must cover every one.
+
+**Traditional NCLEX item types**
+1. **Multiple Choice** (single answer) — *built*
+2. **Multiple Response / Select All That Apply (SATA)** — *built*
+3. **Fill-in-the-Blank / Dosage Calculation** (numeric entry) — planned
+4. **Ordered Response** (drag-to-rank) — planned
+5. **Hot Spot** (click the region on an image) — planned
+6. **Chart / Exhibit** (tabbed EHR + question) — planned
+7. **Graphic Options** (answer choices are images) — planned
+8. **Audio** (listen, then answer) — planned
+
+**NGN stand-alone item types**
+9. **Bow-Tie** (condition + actions + parameters) — *built*
+10. **Trend** (data across multiple time points) — planned
+
+**NGN case-study item types (the 12, as families + variants)**
+11. **Matrix** — Matrix Multiple Choice *(built)* + Matrix Multiple Response (multi-pick per row) — planned variant
+12. **Extended Multiple Response** — SATA / **Select-N** / **Grouping**, with **partial credit** — planned
+13. **Cloze / Drop-Down** — drop-down, drop-down cloze, drop-down table, drop-down **rationale** — planned
+14. **Extended Drag-and-Drop** — incl. **drag-and-drop cloze** (not every token must be used) — planned
+15. **Enhanced Hot Spot / Highlight** — highlight **text** or highlight **table** — planned
++ **Unfolding Case Study** — the wrapper: **6 items** stepping through the 6 clinical-judgment stages (Recognize → Analyze → Prioritize → Generate → Take Action → Evaluate).
+
+**Built today (qbank engine):** MC, SATA, Matrix (multiple-choice), Bow-Tie. Everything else is specified and planned; each gets its own interface + scoring, added one at a time.
+
+**Every question (all types):** rationale for right *and* wrong, difficulty (1–5), topic, specialty, NCLEX Client-Needs category, clinical-judgment step, est. time, references, and NKE links. Partial-credit scoring where NCSBN uses it (SATA/extended multiple response, matrix, bow-tie). CAT-ready: difficulty drives adaptive item selection (IRT/Rasch-style; recalibrated from real `attempts` data).
 
 ---
 
 ## 7. Community — Twitter-style for nursing (locked decision)
 
-- **Format:** text **feeds + threads**, X/Twitter-style, for **nurses and visitors** alike.
-- **No user video uploads.** (Video lives only in ScrubTV, watch-only.)
+- **Format:** **feeds + threads**, full X/Twitter-style, for **nurses and visitors** alike.
+- **Full media posting — text, images, video, and GIFs** (whatever you can do on Twitter/X). Users can post video here. *(ScrubTV stays a separate, curated MLS media network; the community is user-generated.)*
 - **Profiles have NO feed** — profiles stay focused on learning/dashboard, not a social wall.
 - **Keep the learning dashboard as-is for now.**
 - Purpose: discussion, tips, encouragement, study-group energy — the community moat competitors' closed Facebook groups can't match, native to the platform.
+- Moderation & safety required for user media (report/flag, content rules) since video/images are allowed.
 - Roadmap extras (later): study groups, leaderboards, weekly challenges, mentors.
 
 ---
@@ -176,8 +212,10 @@ The proven template for every future topic. Full module authored (`DIS-CV-0001`)
 ## 11. Locked decisions captured from this session
 - Do **not** build the website or app now — confirm & outline first.
 - **Web app first**, publishable (native) app later.
-- Community = **Twitter-style feeds + threads**, nurses **and** visitors, **no video posting**.
+- Community = **full Twitter-style feeds + threads** (text, images, **video**, GIFs), nurses **and** visitors.
 - **Profiles: no feed.** **Dashboard: keep learning focus for now.**
+- **CAT ↔ pop quizzes ↔ mini-prep** is one loop on shared mastery data; dashboard shows **improvement over time** (§4.5).
+- **All NCLEX + NGN item types** are in scope (§6), verified against NCSBN.
 - Everything hangs off the **Nursing Knowledge Engine** (connected nodes + edges).
 - Gold-standard-module approach: perfect one, then replicate (HF done; Diabetes next).
 - Launch target 5–8k questions; architecture scales beyond without redesign.

@@ -31,7 +31,13 @@ exam         : RN PN SPECIALTY
 age_group    : adult pediatric neonatal geriatric
 care_setting : er icu med_surg ld pediatrics community ltc
 status       : draft in_review published archived
-question_type: mc sata matrix bowtie dropdown ordered hotspot trend audio image casestudy
+question_type: mc sata ext_multi matrix bowtie dropdown drag_drop ordered highlight hotspot
+               fill_blank exhibit graphic trend audio casestudy
+               -- Traditional: mc, sata, fill_blank, ordered, hotspot, exhibit, graphic, audio
+               -- NGN standalone: bowtie, trend
+               -- NGN case-study: ext_multi(SATA/select-N/grouping), matrix(MC+MR), dropdown(cloze
+               --   +table+rationale), drag_drop(+cloze), highlight(text/table); casestudy=6-item wrapper
+               -- built today: mc, sata, matrix(MC), bowtie
 relation     : has_symptom treated_by monitored_with causes complication_of tested_by
                teaches assesses part_of links_to precedes            (typed edges)
 post_kind    : post reply
@@ -131,11 +137,18 @@ question_stats (                -- powers the "% chose X" answer stats + IRT rec
 threads ( id uuid PK, author_id uuid, root_post_id uuid, reply_count int, updated_at )
 posts (
   id uuid PK, thread_id uuid, author_id uuid, parent_id uuid,   -- null = root
-  kind post_kind, body text NOT NULL,        -- text only; NO video uploads
-  like_count int DEFAULT 0, tags text[],     -- optional topic tags -> nodes
+  kind post_kind, body text,                 -- text optional when media present
+  media jsonb DEFAULT '[]',                  -- [{type:image|video|gif, url, thumb, w,h,dur}]
+  like_count int DEFAULT 0, repost_count int DEFAULT 0, tags text[],  -- topic tags -> nodes
   created_at timestamptz )
--- visibility: readable by visitors; posting requires role >= member
--- profiles do NOT render a feed (product decision)
+-- Full Twitter/X-style: text, images, VIDEO, and GIFs allowed.
+-- visibility: readable by visitors; posting requires role >= member.
+-- profiles do NOT render a feed (product decision).
+-- moderation: reports table + content rules (required because user media is allowed).
+
+media_assets ( id uuid PK, owner_id uuid, type text, url text, thumb_url text,
+  bytes bigint, duration_sec int, status text, created_at )   -- transcode/scan pipeline
+reports ( id uuid PK, post_id uuid, reporter_id uuid, reason text, status text, created_at )
 ```
 
 ---
@@ -195,9 +208,31 @@ Common fields (every question): `qtype · stem · tip · pearl · references[] �
 { "qtype":"dropdown", "blanks":[{"id":1,"options":[{"t":"","r":""}],"correct":2}] }
 // ordered
 { "qtype":"ordered", "items":[{"t":"","r":""}], "correct_order":[2,0,1,3] }
-// hotspot
+// hotspot (click region on image)
 { "qtype":"hotspot", "image_id":"IMG-..", "regions":[{"id":"","correct":true,"r":""}] }
-// trend / audio / image : mc/sata payload + a media_id and time-series/asset
+// highlight (enhanced hot spot — highlight text or table cells)
+{ "qtype":"highlight", "target":"text|table", "segments":[{"t":"","correct":true,"r":""}] }
+// ext_multi (extended multiple response: SATA / select-N / grouping; partial credit)
+{ "qtype":"ext_multi", "mode":"sata|select_n|grouping", "pick":null|N,
+  "groups":null|[{"label":"","options":[...]}], "opts":[{"t":"","r":""}], "correct":[..],
+  "scoring":"partial" }
+// matrix multiple response (multi-pick per row) — matrix MC already defined above
+{ "qtype":"matrix", "mode":"mr", "cols":["",""], "rows":[{"t":"","correct":[0,1],"r":""}] }
+// drag_drop (extended; not every token must be used) + drag-drop cloze
+{ "qtype":"drag_drop", "tokens":[{"id":"","t":""}], "targets":[{"id":"","accepts":"","r":""}],
+  "cloze":false }
+// fill_blank / dosage calculation (numeric entry with tolerance + unit)
+{ "qtype":"fill_blank", "answer":2.5, "unit":"mL", "tolerance":0.01, "formula":"", "r":"" }
+// exhibit / chart (tabbed EHR panels + an mc/sata question)
+{ "qtype":"exhibit", "tabs":[{"label":"","content":""}], "question":{ /* mc|sata payload */ } }
+// graphic (answer choices are images)
+{ "qtype":"graphic", "opts":[{"image_id":"IMG-..","r":""}], "correct":1 }
+// trend (data over time points + mc/sata) ; audio (media_id + mc/sata)
+{ "qtype":"trend", "series":[{"time":"","values":{}}], "question":{ /* mc|sata */ } }
+{ "qtype":"audio", "media_id":"", "question":{ /* mc|sata */ } }
+// casestudy (unfolding wrapper: 6 items, one per clinical-judgment step)
+{ "qtype":"casestudy", "scenario":"", "ehr_tabs":[...],
+  "items":[{ "cj_step":"REC", /* any item-type payload */ }, ...×6] }
 ```
 **Rule (validator-enforced): every option/row/blank carries its own rationale (right AND wrong).** Difficulty (1–5) required on every question.
 
@@ -245,6 +280,10 @@ GET /me/dashboard          -> { readiness, pass_probability, by_domain:[{system,
                                 ngn_score, med_score, lab_score, specialty_readiness[] }
 GET /me/mastery/:node_id
 GET /me/reviews            -> due spaced-repetition items
+GET /me/popquiz            -> short adaptive quiz (5–10 items) built from weak nodes flagged by CAT
+GET /me/mini-prep          -> focused micro-lessons + drills targeting current gaps
+GET /me/progress?range=30d -> improvement over time: per-domain before→now, readiness trend,
+                              pop-quiz score deltas, topics moved weak→strong
 ```
 
 ### Esi (AI)
@@ -258,11 +297,12 @@ Esi reads the user's mastery/history; subscriber-gated; educational-only disclai
 ```
 GET  /threads?cursor=      -> feed (readable by visitors)
 GET  /thread/:id           -> root + replies
-POST /threads              {body, tags?}          // role >= member; text only
-POST /thread/:id/reply     {body, parent_id?}
-POST /post/:id/like
+POST /media                (multipart) -> {media_id,url,thumb}  // image/video/gif; scanned+transcoded
+POST /threads              {body?, media?[], tags?}   // role >= member; text and/or media
+POST /thread/:id/reply     {body?, media?[], parent_id?}
+POST /post/:id/like  ·  POST /post/:id/repost  ·  POST /post/:id/report {reason}
 ```
-No media-upload endpoint (no user video/image posting). Profiles expose learning stats, **not a feed**.
+**Full Twitter/X-style media** — text, images, video, and GIFs. Uploads go through `/media` (virus scan + video transcode + thumbnail). Profiles expose learning stats, **not a feed**.
 
 ### Entitlements / billing (Phase 2 integration)
 ```
@@ -280,6 +320,8 @@ POST /webhooks/billing     (server-to-server)   -> writes entitlements
 3. **CAT selection (`/me/next` in exam mode):** maintain the user's **ability estimate** on the difficulty scale; pick the next unseen item whose `difficulty`/`irt_difficulty` is nearest the estimate; update estimate after each answer; apply the **75–145 item** window and a confidence stop rule for readiness exams.
 4. **Readiness / pass probability:** logistic function of the ability estimate vs. the passing standard, shown as Low / Borderline / High / Very High on the dashboard and readiness exams.
 5. **Recalibration:** as real `attempts` accumulate, recompute each item's `irt_difficulty` from performance (the "pretest" process) — expert Easy/Moderate/Hard is the seed, data is the truth.
+6. **Pop-quiz / mini-prep loop:** the same weak nodes a CAT/readiness exam surfaces are fed into `/me/popquiz` (short adaptive sets) and `/me/mini-prep` (targeted micro-lessons + drills). Their attempts update the same `mastery` store, which re-feeds the next CAT — one closed loop on shared data, not separate systems.
+7. **Show improvement:** snapshot `mastery` over time so `/me/progress` returns before→now per domain, readiness trend (Low→Very High), and pop-quiz deltas — the student *sees* weak areas becoming strong, not just a current score.
 
 ---
 

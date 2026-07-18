@@ -1,20 +1,19 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><title>Must Love Scrubs — Database & API Contract v1</title>
-<style>
-:root{--v:#8b5cff;--vd:#4d2b9e;--ind:#2b1055;--ink:#1e1233;--mint:#14b8a8;--mintl:#2ad4c4;--bg:#f6f3ff}
+<!doctype html><html lang="en"><head><meta charset="utf-8"><title>Must Love Scrubs — Database & API Contract v1</title><style>
+:root{--v:#8b5cff;--vd:#4d2b9e;--ind:#2b1055;--ink:#1e1233;--mintl:#2ad4c4;--bg:#f6f3ff}
 *{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font-family:'Iowan Old Style',Palatino,Georgia,serif;line-height:1.55;font-size:14px}
 .sheet{max-width:860px;margin:0 auto;background:#fff;padding:50px 56px;box-shadow:0 20px 60px rgba(30,18,51,.12)}
 h1,h2,h3,h4{font-family:'Helvetica Neue',Arial,sans-serif;line-height:1.2}
-h1{font-size:1.8rem;font-weight:800;color:var(--vd);border-bottom:4px solid var(--mintl);padding-bottom:.4rem;margin:.3rem 0 1rem}
-h2{font-size:1.2rem;color:var(--ind);border-bottom:2px solid rgba(139,92,255,.25);padding-bottom:.3rem;margin:2rem 0 .8rem}
-h3{font-size:1.02rem;color:var(--vd);margin:1.2rem 0 .3rem}
-p,li{margin:.4rem 0}strong{color:var(--ink)}ul,ol{padding-left:1.2rem}
-hr{border:none;border-top:1px solid rgba(30,18,51,.12);margin:1.4rem 0}
-pre{background:#1e1233;color:#e9e2ff;padding:.9rem 1rem;border-radius:10px;overflow-x:auto;font-size:.8rem;line-height:1.45}
+h1{font-size:1.85rem;font-weight:800;color:var(--vd);border-bottom:4px solid var(--mintl);padding-bottom:.4rem;margin:.3rem 0 1rem}
+h2{font-size:1.25rem;color:var(--ind);border-bottom:2px solid rgba(139,92,255,.25);padding-bottom:.3rem;margin:2rem 0 .8rem}
+h3{font-size:1.03rem;color:var(--vd);margin:1.3rem 0 .3rem}
+p,li{margin:.45rem 0}strong{color:var(--ink)}ul,ol{padding-left:1.2rem}
+hr{border:none;border-top:1px solid rgba(30,18,51,.12);margin:1.5rem 0}
+pre{background:#1e1233;color:#e9e2ff;padding:.9rem 1rem;border-radius:10px;overflow-x:auto;font-size:.78rem;line-height:1.45}
 code{font-family:'SF Mono',Menlo,Consolas,monospace}
 :not(pre)>code{background:#efeaff;color:var(--vd);padding:0 4px;border-radius:4px;font-size:.85em}
 table{border-collapse:collapse;width:100%;font-size:.85rem;margin:.6rem 0}
 th,td{border:1px solid rgba(30,18,51,.15);padding:.35rem .55rem;text-align:left}th{background:var(--bg)}
-@media print{body{background:#fff}.sheet{box-shadow:none;max-width:none;padding:0 .25in}pre{white-space:pre-wrap}}
+@media print{body{background:#fff}.sheet{box-shadow:none;max-width:none;padding:0 .3in}pre{white-space:pre-wrap}}
 @page{margin:.6in}
 </style></head><body><div class="sheet"><h1>Must Love Scrubs — Database Schema &amp; API Contract (v1 draft)</h1>
 <p><em>Companion to the Master Specification. Turns §5 (data model) and §6 (question engine) into concrete tables and endpoints. Tech-neutral but opinionated: PostgreSQL (relational core + JSONB for template bodies + an <code>edges</code> table for the knowledge graph), REST/JSON API, JWT auth. Same API serves the web app now and the native app later.</em></p>
@@ -32,7 +31,7 @@ th,td{border:1px solid rgba(30,18,51,.15);padding:.35rem .55rem;text-align:left}
 </ul>
 <hr />
 <h2>1. Enumerations</h2>
-<pre class="codehilite"><code>content_type : NKI DIS MED LAB PRO SKL ANA SYM ASM QBK NGN FLS VID IMG EDU PATH
+<pre><code>content_type : NKI DIS MED LAB PRO SKL ANA SYM ASM QBK NGN FLS VID IMG EDU PATH
 body_system  : cardiovascular respiratory neurological renal endocrine gastrointestinal
                hematologic immune_infectious musculoskeletal integumentary reproductive_ob
                neonatal pediatric psychiatric
@@ -43,16 +42,21 @@ exam         : RN PN SPECIALTY
 age_group    : adult pediatric neonatal geriatric
 care_setting : er icu med_surg ld pediatrics community ltc
 status       : draft in_review published archived
-question_type: mc sata matrix bowtie dropdown ordered hotspot trend audio image casestudy
+question_type: mc sata ext_multi matrix bowtie dropdown drag_drop ordered highlight hotspot
+               fill_blank exhibit graphic trend audio casestudy
+               -- Traditional: mc, sata, fill_blank, ordered, hotspot, exhibit, graphic, audio
+               -- NGN standalone: bowtie, trend
+               -- NGN case-study: ext_multi(SATA/select-N/grouping), matrix(MC+MR), dropdown(cloze
+               --   +table+rationale), drag_drop(+cloze), highlight(text/table); casestudy=6-item wrapper
+               -- built today: mc, sata, matrix(MC), bowtie
 relation     : has_symptom treated_by monitored_with causes complication_of tested_by
                teaches assesses part_of links_to precedes            (typed edges)
 post_kind    : post reply
 </code></pre>
-
 <hr />
 <h2>2. Tables (illustrative DDL)</h2>
 <h3>2.1 <code>nodes</code> — every content object</h3>
-<pre class="codehilite"><code class="language-sql">nodes (
+<pre><code class="language-sql">nodes (
   id            text PRIMARY KEY,           -- DIS-CV-0001
   type          content_type NOT NULL,
   title         text NOT NULL,
@@ -77,9 +81,8 @@ post_kind    : post reply
 -- indexes: type, body_system, difficulty, status, GIN(search_tsv),
 --          GIN(specialties), GIN(client_needs)
 </code></pre>
-
 <h3>2.2 <code>edges</code> — the knowledge graph</h3>
-<pre class="codehilite"><code class="language-sql">edges (
+<pre><code class="language-sql">edges (
   from_id  text REFERENCES nodes(id) ON DELETE CASCADE,
   to_id    text REFERENCES nodes(id) ON DELETE CASCADE,
   relation relation NOT NULL,
@@ -88,16 +91,14 @@ post_kind    : post reply
 )
 -- index: (from_id), (to_id)
 </code></pre>
-
 <h3>2.3 <code>questions</code> — extends a node of type QBK/NGN</h3>
 <p>Question payload lives in <code>nodes.body</code> (JSONB, shape in §4) so it inherits all tags/edges. A thin view exposes them:</p>
-<pre class="codehilite"><code class="language-sql">-- questions are nodes WHERE type IN ('QBK','NGN')
+<pre><code class="language-sql">-- questions are nodes WHERE type IN ('QBK','NGN')
 -- body JSONB holds: qtype, stem, opts[], correct, tip, pearl, references[],
 --                   learning_objective, bloom, est_time_sec  (see §4)
 </code></pre>
-
 <h3>2.4 People &amp; entitlements</h3>
-<pre class="codehilite"><code class="language-sql">users (
+<pre><code class="language-sql">users (
   id uuid PK, email citext UNIQUE, name text, role text DEFAULT 'member',
   exam_date date, target text,            -- e.g. pass-target
   created_at, updated_at )
@@ -107,9 +108,8 @@ entitlements (
   started_at timestamptz, expires_at timestamptz, esi_included boolean DEFAULT true,
   status text )                            -- active | expired | refunded
 </code></pre>
-
 <h3>2.5 Practice &amp; mastery (adaptive engine)</h3>
-<pre class="codehilite"><code class="language-sql">attempts (
+<pre><code class="language-sql">attempts (
   id uuid PK, user_id uuid, question_id text REFERENCES nodes(id),
   chosen jsonb,               -- index | [indices] | {row:col} | bowtie parts
   correct boolean, ms int, ability_at numeric,   -- ability estimate at time of answer
@@ -130,53 +130,54 @@ question_stats (                -- powers the &quot;% chose X&quot; answer stats
   question_id text PK, exposures int, correct int, option_counts jsonb,
   irt_difficulty real )         -- recalibrated from real data over time
 </code></pre>
-
 <h3>2.6 Community (Twitter-style — text feeds + threads)</h3>
-<pre class="codehilite"><code class="language-sql">threads ( id uuid PK, author_id uuid, root_post_id uuid, reply_count int, updated_at )
+<pre><code class="language-sql">threads ( id uuid PK, author_id uuid, root_post_id uuid, reply_count int, updated_at )
 posts (
   id uuid PK, thread_id uuid, author_id uuid, parent_id uuid,   -- null = root
-  kind post_kind, body text NOT NULL,        -- text only; NO video uploads
-  like_count int DEFAULT 0, tags text[],     -- optional topic tags -&gt; nodes
+  kind post_kind, body text,                 -- text optional when media present
+  media jsonb DEFAULT '[]',                  -- [{type:image|video|gif, url, thumb, w,h,dur}]
+  like_count int DEFAULT 0, repost_count int DEFAULT 0, tags text[],  -- topic tags -&gt; nodes
   created_at timestamptz )
--- visibility: readable by visitors; posting requires role &gt;= member
--- profiles do NOT render a feed (product decision)
-</code></pre>
+-- Full Twitter/X-style: text, images, VIDEO, and GIFs allowed.
+-- visibility: readable by visitors; posting requires role &gt;= member.
+-- profiles do NOT render a feed (product decision).
+-- moderation: reports table + content rules (required because user media is allowed).
 
+media_assets ( id uuid PK, owner_id uuid, type text, url text, thumb_url text,
+  bytes bigint, duration_sec int, status text, created_at )   -- transcode/scan pipeline
+reports ( id uuid PK, post_id uuid, reporter_id uuid, reason text, status text, created_at )
+</code></pre>
 <hr />
 <h2>3. Node body templates (JSONB shapes)</h2>
 <p>Each <code>type</code> validates its <code>body</code> against a template (extend the <code>tools/build_qbank.py</code> validator pattern to all types). Examples:</p>
 <p><strong>DIS (disease)</strong></p>
-<pre class="codehilite"><code class="language-json">{ &quot;definition&quot;:&quot;&quot;, &quot;causes&quot;:[], &quot;risk_factors&quot;:[], &quot;pathophysiology&quot;:&quot;&quot;,
+<pre><code class="language-json">{ &quot;definition&quot;:&quot;&quot;, &quot;causes&quot;:[], &quot;risk_factors&quot;:[], &quot;pathophysiology&quot;:&quot;&quot;,
   &quot;signs_symptoms&quot;:[], &quot;assessment&quot;:[], &quot;diagnostics&quot;:[], &quot;lab_findings&quot;:[],
   &quot;nursing_diagnoses&quot;:[], &quot;interventions&quot;:[], &quot;medications&quot;:[], &quot;patient_teaching&quot;:[],
   &quot;complications&quot;:[], &quot;priority_actions&quot;:[], &quot;nclex_tips&quot;:[], &quot;memory_aids&quot;:[] }
 </code></pre>
-
 <p><strong>MED (medication)</strong></p>
-<pre class="codehilite"><code class="language-json">{ &quot;generic&quot;:&quot;&quot;, &quot;brand&quot;:[], &quot;drug_class&quot;:&quot;&quot;, &quot;pharm_class&quot;:&quot;&quot;, &quot;therapeutic_class&quot;:&quot;&quot;,
+<pre><code class="language-json">{ &quot;generic&quot;:&quot;&quot;, &quot;brand&quot;:[], &quot;drug_class&quot;:&quot;&quot;, &quot;pharm_class&quot;:&quot;&quot;, &quot;therapeutic_class&quot;:&quot;&quot;,
   &quot;pronunciation&quot;:&quot;&quot;, &quot;overview&quot;:&quot;&quot;, &quot;moa&quot;:&quot;&quot;, &quot;uses&quot;:[], &quot;dosage&quot;:{&quot;adult&quot;:&quot;&quot;,&quot;peds&quot;:&quot;&quot;},
   &quot;routes&quot;:[], &quot;admin_tips&quot;:[], &quot;contraindications&quot;:[], &quot;warnings&quot;:[], &quot;black_box&quot;:&quot;&quot;,
   &quot;side_effects&quot;:{&quot;common&quot;:[],&quot;serious&quot;:[],&quot;life_threatening&quot;:[]},
   &quot;nursing&quot;:{&quot;pre&quot;:[],&quot;during&quot;:[],&quot;post&quot;:[]}, &quot;patient_teaching&quot;:[] }
 </code></pre>
-
 <p><strong>LAB</strong></p>
-<pre class="codehilite"><code class="language-json">{ &quot;abbrev&quot;:&quot;&quot;, &quot;specimen&quot;:&quot;&quot;, &quot;normal&quot;:{&quot;adult&quot;:&quot;&quot;,&quot;peds&quot;:&quot;&quot;}, &quot;critical&quot;:{&quot;low&quot;:&quot;&quot;,&quot;high&quot;:&quot;&quot;},
+<pre><code class="language-json">{ &quot;abbrev&quot;:&quot;&quot;, &quot;specimen&quot;:&quot;&quot;, &quot;normal&quot;:{&quot;adult&quot;:&quot;&quot;,&quot;peds&quot;:&quot;&quot;}, &quot;critical&quot;:{&quot;low&quot;:&quot;&quot;,&quot;high&quot;:&quot;&quot;},
   &quot;purpose&quot;:&quot;&quot;, &quot;high_causes&quot;:[], &quot;low_causes&quot;:[], &quot;nursing_actions&quot;:[], &quot;notify_threshold&quot;:&quot;&quot;,
   &quot;patient_teaching&quot;:[] }
 </code></pre>
-
 <p><strong>PRO (procedure)</strong></p>
-<pre class="codehilite"><code class="language-json">{ &quot;settings&quot;:[], &quot;purpose&quot;:&quot;&quot;, &quot;indications&quot;:[], &quot;equipment&quot;:[], &quot;preparation&quot;:[],
+<pre><code class="language-json">{ &quot;settings&quot;:[], &quot;purpose&quot;:&quot;&quot;, &quot;indications&quot;:[], &quot;equipment&quot;:[], &quot;preparation&quot;:[],
   &quot;steps&quot;:[], &quot;risks&quot;:[], &quot;responsibilities&quot;:{&quot;before&quot;:[],&quot;during&quot;:[],&quot;after&quot;:[]},
   &quot;patient_teaching&quot;:[], &quot;documentation&quot;:[] }
 </code></pre>
-
 <p><em>(SKL, ANA, FLS, VID, IMG, EDU, PATH have their own locked shapes — same pattern.)</em></p>
 <hr />
 <h2>4. Question object (in <code>nodes.body</code>) — all item types</h2>
 <p>Common fields (every question): <code>qtype · stem · tip · pearl · references[] · learning_objective · bloom · est_time_sec</code>. Type-specific:</p>
-<pre class="codehilite"><code class="language-jsonc">// mc
+<pre><code class="language-jsonc">// mc
 { &quot;qtype&quot;:&quot;mc&quot;, &quot;opts&quot;:[{&quot;t&quot;:&quot;&quot;,&quot;r&quot;:&quot;&quot;}×4], &quot;correct&quot;:1, &quot;pct&quot;:[..] }
 // sata
 { &quot;qtype&quot;:&quot;sata&quot;, &quot;opts&quot;:[{&quot;t&quot;:&quot;&quot;,&quot;r&quot;:&quot;&quot;}≥3], &quot;correct&quot;:[0,1,4] }   // all-or-nothing
@@ -191,24 +192,44 @@ posts (
 { &quot;qtype&quot;:&quot;dropdown&quot;, &quot;blanks&quot;:[{&quot;id&quot;:1,&quot;options&quot;:[{&quot;t&quot;:&quot;&quot;,&quot;r&quot;:&quot;&quot;}],&quot;correct&quot;:2}] }
 // ordered
 { &quot;qtype&quot;:&quot;ordered&quot;, &quot;items&quot;:[{&quot;t&quot;:&quot;&quot;,&quot;r&quot;:&quot;&quot;}], &quot;correct_order&quot;:[2,0,1,3] }
-// hotspot
+// hotspot (click region on image)
 { &quot;qtype&quot;:&quot;hotspot&quot;, &quot;image_id&quot;:&quot;IMG-..&quot;, &quot;regions&quot;:[{&quot;id&quot;:&quot;&quot;,&quot;correct&quot;:true,&quot;r&quot;:&quot;&quot;}] }
-// trend / audio / image : mc/sata payload + a media_id and time-series/asset
+// highlight (enhanced hot spot — highlight text or table cells)
+{ &quot;qtype&quot;:&quot;highlight&quot;, &quot;target&quot;:&quot;text|table&quot;, &quot;segments&quot;:[{&quot;t&quot;:&quot;&quot;,&quot;correct&quot;:true,&quot;r&quot;:&quot;&quot;}] }
+// ext_multi (extended multiple response: SATA / select-N / grouping; partial credit)
+{ &quot;qtype&quot;:&quot;ext_multi&quot;, &quot;mode&quot;:&quot;sata|select_n|grouping&quot;, &quot;pick&quot;:null|N,
+  &quot;groups&quot;:null|[{&quot;label&quot;:&quot;&quot;,&quot;options&quot;:[...]}], &quot;opts&quot;:[{&quot;t&quot;:&quot;&quot;,&quot;r&quot;:&quot;&quot;}], &quot;correct&quot;:[..],
+  &quot;scoring&quot;:&quot;partial&quot; }
+// matrix multiple response (multi-pick per row) — matrix MC already defined above
+{ &quot;qtype&quot;:&quot;matrix&quot;, &quot;mode&quot;:&quot;mr&quot;, &quot;cols&quot;:[&quot;&quot;,&quot;&quot;], &quot;rows&quot;:[{&quot;t&quot;:&quot;&quot;,&quot;correct&quot;:[0,1],&quot;r&quot;:&quot;&quot;}] }
+// drag_drop (extended; not every token must be used) + drag-drop cloze
+{ &quot;qtype&quot;:&quot;drag_drop&quot;, &quot;tokens&quot;:[{&quot;id&quot;:&quot;&quot;,&quot;t&quot;:&quot;&quot;}], &quot;targets&quot;:[{&quot;id&quot;:&quot;&quot;,&quot;accepts&quot;:&quot;&quot;,&quot;r&quot;:&quot;&quot;}],
+  &quot;cloze&quot;:false }
+// fill_blank / dosage calculation (numeric entry with tolerance + unit)
+{ &quot;qtype&quot;:&quot;fill_blank&quot;, &quot;answer&quot;:2.5, &quot;unit&quot;:&quot;mL&quot;, &quot;tolerance&quot;:0.01, &quot;formula&quot;:&quot;&quot;, &quot;r&quot;:&quot;&quot; }
+// exhibit / chart (tabbed EHR panels + an mc/sata question)
+{ &quot;qtype&quot;:&quot;exhibit&quot;, &quot;tabs&quot;:[{&quot;label&quot;:&quot;&quot;,&quot;content&quot;:&quot;&quot;}], &quot;question&quot;:{ /* mc|sata payload */ } }
+// graphic (answer choices are images)
+{ &quot;qtype&quot;:&quot;graphic&quot;, &quot;opts&quot;:[{&quot;image_id&quot;:&quot;IMG-..&quot;,&quot;r&quot;:&quot;&quot;}], &quot;correct&quot;:1 }
+// trend (data over time points + mc/sata) ; audio (media_id + mc/sata)
+{ &quot;qtype&quot;:&quot;trend&quot;, &quot;series&quot;:[{&quot;time&quot;:&quot;&quot;,&quot;values&quot;:{}}], &quot;question&quot;:{ /* mc|sata */ } }
+{ &quot;qtype&quot;:&quot;audio&quot;, &quot;media_id&quot;:&quot;&quot;, &quot;question&quot;:{ /* mc|sata */ } }
+// casestudy (unfolding wrapper: 6 items, one per clinical-judgment step)
+{ &quot;qtype&quot;:&quot;casestudy&quot;, &quot;scenario&quot;:&quot;&quot;, &quot;ehr_tabs&quot;:[...],
+  &quot;items&quot;:[{ &quot;cj_step&quot;:&quot;REC&quot;, /* any item-type payload */ }, ...×6] }
 </code></pre>
-
 <p><strong>Rule (validator-enforced): every option/row/blank carries its own rationale (right AND wrong).</strong> Difficulty (1–5) required on every question.</p>
 <hr />
 <h2>5. API contract</h2>
 <p>Base: <code>/api/v1</code>. All list endpoints paginate (§0). Content endpoints auto-filter by entitlement; gated items return a <code>locked:true</code> stub for non-subscribers.</p>
 <h3>Auth</h3>
-<pre class="codehilite"><code>POST /auth/register        {email,password,name}          -&gt; {user, token}
+<pre><code>POST /auth/register        {email,password,name}          -&gt; {user, token}
 POST /auth/login           {email,password}               -&gt; {user, token}
 GET  /me                   -&gt; {user, entitlement, streak}
 PATCH /me                  {exam_date,target,...}
 </code></pre>
-
 <h3>Knowledge (NKE)</h3>
-<pre class="codehilite"><code>GET /node/:id              -&gt; { node, related: {diseases[],meds[],labs[],procedures[],
+<pre><code>GET /node/:id              -&gt; { node, related: {diseases[],meds[],labs[],procedures[],
                                                 questions[],cases[],videos[],flashcards[]},
                                 connections:[{id,title,relation,weight}] }
 GET /nodes?type=&amp;system=&amp;specialty=&amp;difficulty=&amp;status=published
@@ -217,9 +238,8 @@ GET /search?q=lasix        -&gt; unified: { primary, diseases[], meds[], labs[],
                                          esi_hint }
 GET /node/:id/why          -&gt; next &quot;Why?&quot; chain steps (linked nodes)
 </code></pre>
-
 <h3>Questions &amp; practice</h3>
-<pre class="codehilite"><code>GET  /questions?system=&amp;specialty=&amp;type=&amp;difficulty=&amp;client_need=&amp;cj_step=&amp;free=
+<pre><code>GET  /questions?system=&amp;specialty=&amp;type=&amp;difficulty=&amp;client_need=&amp;cj_step=&amp;free=
 GET  /question/:id
 POST /attempt              {question_id, chosen, ms}
                            -&gt; { correct, correct_answer, rationales, tip, pearl,
@@ -227,36 +247,36 @@ POST /attempt              {question_id, chosen, ms}
 GET  /me/next              -&gt; Smart Study: the next best item (adaptive, §6)
 GET  /me/session?mode=tutor|timed&amp;n=  -&gt; a generated set
 </code></pre>
-
 <h3>Dashboard &amp; mastery</h3>
-<pre class="codehilite"><code>GET /me/dashboard          -&gt; { readiness, pass_probability, by_domain:[{system,score}],
+<pre><code>GET /me/dashboard          -&gt; { readiness, pass_probability, by_domain:[{system,score}],
                                 weakest[], strongest[], streak, questions_done,
                                 ngn_score, med_score, lab_score, specialty_readiness[] }
 GET /me/mastery/:node_id
 GET /me/reviews            -&gt; due spaced-repetition items
+GET /me/popquiz            -&gt; short adaptive quiz (5–10 items) built from weak nodes flagged by CAT
+GET /me/mini-prep          -&gt; focused micro-lessons + drills targeting current gaps
+GET /me/progress?range=30d -&gt; improvement over time: per-domain before→now, readiness trend,
+                              pop-quiz score deltas, topics moved weak→strong
 </code></pre>
-
 <h3>Esi (AI)</h3>
-<pre class="codehilite"><code>POST /esi/ask   {message, context?}  -&gt; { answer, cited_node_ids[], follow_up_practice[],
+<pre><code>POST /esi/ask   {message, context?}  -&gt; { answer, cited_node_ids[], follow_up_practice[],
                                           related[] }   // structured content first, then plain language
 </code></pre>
-
 <p>Esi reads the user's mastery/history; subscriber-gated; educational-only disclaimer attached.</p>
 <h3>Community (Twitter-style)</h3>
-<pre class="codehilite"><code>GET  /threads?cursor=      -&gt; feed (readable by visitors)
+<pre><code>GET  /threads?cursor=      -&gt; feed (readable by visitors)
 GET  /thread/:id           -&gt; root + replies
-POST /threads              {body, tags?}          // role &gt;= member; text only
-POST /thread/:id/reply     {body, parent_id?}
-POST /post/:id/like
+POST /media                (multipart) -&gt; {media_id,url,thumb}  // image/video/gif; scanned+transcoded
+POST /threads              {body?, media?[], tags?}   // role &gt;= member; text and/or media
+POST /thread/:id/reply     {body?, media?[], parent_id?}
+POST /post/:id/like  ·  POST /post/:id/repost  ·  POST /post/:id/report {reason}
 </code></pre>
-
-<p>No media-upload endpoint (no user video/image posting). Profiles expose learning stats, <strong>not a feed</strong>.</p>
+<p><strong>Full Twitter/X-style media</strong> — text, images, video, and GIFs. Uploads go through <code>/media</code> (virus scan + video transcode + thumbnail). Profiles expose learning stats, <strong>not a feed</strong>.</p>
 <h3>Entitlements / billing (Phase 2 integration)</h3>
-<pre class="codehilite"><code>GET  /plans                -&gt; [{id:'1mo',price,anchor,save,esi_included:true}, ...]
+<pre><code>GET  /plans                -&gt; [{id:'1mo',price,anchor,save,esi_included:true}, ...]
 POST /checkout             {plan}   -&gt; payment session (Stripe later)
 POST /webhooks/billing     (server-to-server)   -&gt; writes entitlements
 </code></pre>
-
 <hr />
 <h2>6. Adaptive engine (attempt → mastery → next)</h2>
 <ol>
@@ -265,6 +285,8 @@ POST /webhooks/billing     (server-to-server)   -&gt; writes entitlements
 <li><strong>CAT selection (<code>/me/next</code> in exam mode):</strong> maintain the user's <strong>ability estimate</strong> on the difficulty scale; pick the next unseen item whose <code>difficulty</code>/<code>irt_difficulty</code> is nearest the estimate; update estimate after each answer; apply the <strong>75–145 item</strong> window and a confidence stop rule for readiness exams.</li>
 <li><strong>Readiness / pass probability:</strong> logistic function of the ability estimate vs. the passing standard, shown as Low / Borderline / High / Very High on the dashboard and readiness exams.</li>
 <li><strong>Recalibration:</strong> as real <code>attempts</code> accumulate, recompute each item's <code>irt_difficulty</code> from performance (the "pretest" process) — expert Easy/Moderate/Hard is the seed, data is the truth.</li>
+<li><strong>Pop-quiz / mini-prep loop:</strong> the same weak nodes a CAT/readiness exam surfaces are fed into <code>/me/popquiz</code> (short adaptive sets) and <code>/me/mini-prep</code> (targeted micro-lessons + drills). Their attempts update the same <code>mastery</code> store, which re-feeds the next CAT — one closed loop on shared data, not separate systems.</li>
+<li><strong>Show improvement:</strong> snapshot <code>mastery</code> over time so <code>/me/progress</code> returns before→now per domain, readiness trend (Low→Very High), and pop-quiz deltas — the student <em>sees</em> weak areas becoming strong, not just a current score.</li>
 </ol>
 <hr />
 <h2>7. Content workflow, versioning, QC</h2>
