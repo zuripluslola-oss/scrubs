@@ -600,6 +600,70 @@ section { padding-block: clamp(3.6rem, 9vw, 6.5rem); position: relative; }
 .qb-gate .lock-ic svg { width: 26px; height: 26px; }
 .qb-gate p { color: var(--ink-60); margin: 0.5rem auto 1.2rem; }
 
+/* --- Flashcards & Games --- */
+.flash { max-width: 760px; margin: 0 auto; }
+.fc-decks { display: flex; flex-wrap: wrap; gap: 0.45rem; }
+.fc-chip { padding: 0.4rem 0.85rem; border-radius: var(--pill); font-size: 0.76rem; font-weight: 800; border: 1.5px solid rgba(30,18,51,0.14); background: var(--card); color: var(--ink-60); cursor: pointer; transition: all 0.15s; }
+.fc-chip:hover { border-color: var(--coral-500); color: var(--coral-500); }
+.fc-chip.on { background: var(--coral-500); border-color: var(--coral-500); color: #fff; }
+.fc-modes { display: flex; flex-wrap: wrap; gap: 0.5rem; margin: 1rem 0 0.8rem; }
+.fc-mode { padding: 0.55rem 1.1rem; border-radius: 12px; font-weight: 800; font-size: 0.85rem; border: 1.5px solid rgba(30,18,51,0.12); background: var(--card); color: var(--ink); cursor: pointer; }
+.fc-mode.on { background: var(--indigo-900); color: #fff; border-color: var(--indigo-900); }
+.fc-meta { display: flex; gap: 1.2rem; margin-bottom: 1.2rem; }
+.fc-stat { font-size: 0.68rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; color: var(--ink-40); }
+.fc-stat b { display: block; font-family: var(--font-display); font-size: 1.15rem; color: var(--coral-500); letter-spacing: 0; text-transform: none; }
+.fc-progress { height: 6px; background: rgba(30,18,51,0.08); border-radius: var(--pill); overflow: hidden; margin-bottom: 1rem; }
+.fc-progress i { display: block; height: 100%; background: linear-gradient(90deg, var(--coral-500), var(--teal-400)); }
+
+/* animated flip card */
+.fc-card { perspective: 1200px; cursor: pointer; }
+.fc-inner { position: relative; transform-style: preserve-3d; transition: transform 0.55s cubic-bezier(0.4,0.2,0.2,1); min-height: 230px; }
+.fc-card.flipped .fc-inner { transform: rotateY(180deg); }
+.fc-face { position: absolute; inset: 0; backface-visibility: hidden; -webkit-backface-visibility: hidden; border-radius: var(--radius); padding: 1.8rem; display: flex; flex-direction: column; justify-content: center; box-shadow: var(--shadow-2); }
+.fc-front { background: linear-gradient(150deg, var(--indigo-900), var(--indigo-700)); color: #fff; }
+.fc-back { background: var(--card); color: var(--ink); transform: rotateY(180deg); border: 2px solid var(--teal-400); justify-content: flex-start; overflow-y: auto; }
+.fc-tag { font-size: 0.62rem; font-weight: 800; letter-spacing: 0.08em; text-transform: uppercase; color: var(--gold-400); margin-bottom: 0.8rem; }
+.fc-back .fc-tag { color: var(--coral-600); }
+.fc-q { font-family: var(--font-display); font-size: 1.3rem; font-weight: 800; line-height: 1.3; }
+.fc-a { font-family: var(--font-display); font-size: 1.25rem; font-weight: 800; color: var(--teal-600); margin-bottom: 0.6rem; }
+.fc-why { font-size: 0.88rem; color: var(--ink-60); } .fc-why b { color: var(--ink); }
+.fc-hint { font-size: 0.84rem; color: var(--coral-600); margin-top: 0.6rem; font-weight: 600; }
+.fc-flip-hint { position: absolute; bottom: 1rem; right: 1.2rem; font-size: 0.7rem; color: rgba(255,255,255,0.55); font-weight: 700; }
+.fc-rate { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0.5rem; margin-top: 1rem; }
+.fc-r { padding: 0.7rem; border-radius: 12px; font-weight: 800; font-size: 0.85rem; border: 1.5px solid; cursor: pointer; background: var(--card); }
+.fc-r.again { color: #e5484d; border-color: #e5484d; } .fc-r.hard { color: var(--gold-600); border-color: var(--gold-600); }
+.fc-r.good { color: var(--teal-600); border-color: var(--teal-600); } .fc-r.easy { color: #fff; background: var(--teal-600); border-color: var(--teal-600); }
+
+/* quiz (reuses coral/teal states) */
+.fc-quiz .fc-q { color: var(--ink); margin: 0.4rem 0 1rem; }
+.fc-opts { display: grid; gap: 0.55rem; }
+.fc-opt { text-align: left; background: var(--bg); border: 1.5px solid rgba(30,18,51,0.12); border-radius: 12px; padding: 0.8rem 1rem; font-size: 0.9rem; color: var(--ink); cursor: pointer; }
+.fc-opt:hover:not(:disabled) { border-color: var(--coral-500); }
+.fc-opt.right { border-color: var(--teal-600); background: var(--teal-100); }
+.fc-opt.wrong { border-color: #e5484d; background: #fdecec; }
+.fc-reveal { margin-top: 1rem; } .fc-reveal .btn { margin-top: 0.8rem; }
+
+/* match game */
+.fc-match { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+.fc-mcol { display: grid; gap: 0.5rem; }
+.fc-tile { text-align: left; background: var(--card); border: 1.5px solid rgba(30,18,51,0.14); border-radius: 12px; padding: 0.7rem 0.85rem; font-size: 0.82rem; color: var(--ink); cursor: pointer; box-shadow: var(--shadow-1); transition: all 0.12s; }
+.fc-tile:hover { border-color: var(--coral-500); }
+.fc-tile.sel { border-color: var(--coral-500); background: var(--coral-100); }
+.fc-tile.done { border-color: var(--teal-600); background: var(--teal-100); color: var(--teal-600); pointer-events: none; opacity: 0.85; }
+.fc-tile.miss { border-color: #e5484d; background: #fdecec; animation: fcshake 0.4s; }
+@keyframes fcshake { 0%,100%{transform:translateX(0)} 25%{transform:translateX(-4px)} 75%{transform:translateX(4px)} }
+.fc-match-msg { text-align: center; margin-top: 1rem; color: var(--ink-60); font-size: 0.9rem; }
+.fc-match-msg .btn { margin-left: 0.5rem; }
+
+/* speed round */
+.fc-timer { height: 6px; background: rgba(30,18,51,0.08); border-radius: var(--pill); overflow: hidden; margin-bottom: 0.6rem; }
+.fc-timer i { display: block; height: 100%; background: linear-gradient(90deg, var(--coral-500), var(--gold-400)); transition: width 1s linear; }
+.fc-sp-time { font-weight: 800; color: var(--ink-60); font-size: 0.85rem; margin-bottom: 0.8rem; }
+.fc-sp-card { background: var(--card); border-radius: var(--radius); padding: 1.6rem; box-shadow: var(--shadow-1); min-height: 130px; }
+.fc-sp-actions { display: flex; gap: 0.6rem; margin-top: 1rem; }
+.fc-done { text-align: center; background: var(--card); border-radius: var(--radius); padding: 2rem; box-shadow: var(--shadow-1); }
+.fc-done h3 { font-size: 1.4rem; } .fc-done p { color: var(--ink-60); margin: 0.5rem 0 1.2rem; }
+
 /* courses page wide cards */
 .two-up { display: grid; gap: 1rem; grid-template-columns: 1fr; }
 @media (min-width: 720px) { .two-up { grid-template-columns: repeat(2, 1fr); } }

@@ -104,6 +104,7 @@ def chrome(fname, title, desc, body, active=""):
           <li><a href="nclex-complete.html">NCLEX Complete <small>The flagship &middot; plans from $59</small></a></li>
           <li><a href="nclex.html">Free NCLEX Prep <small>RN &amp; LPN &middot; every NGN item type</small></a></li>
           <li><a href="qbank.html">Question Bank <small>Practice with rationales &amp; answer stats</small></a></li>
+          <li><a href="flashcards.html">Flashcards &amp; Games <small>Flip cards, quizzes, match &amp; speed rounds</small></a></li>
           <li><a href="nclex-guide.html">Free Study Guide <small>How to pass &middot; for nurses, by nurses</small></a></li>
           <li><a href="course-lab-values.html">Free NCLEX Practice <small>Start with a free audio scene</small></a></li>
           <li><a href="specialties.html">Specialty Prep <small>22 specialty tracks &middot; rolling out</small></a></li>
@@ -161,6 +162,7 @@ def chrome(fname, title, desc, body, active=""):
         <ul>
           <li><a href="nclex-complete.html">NCLEX Complete</a></li>
           <li><a href="qbank.html">Question Bank</a></li>
+          <li><a href="flashcards.html">Flashcards &amp; Games</a></li>
           <li><a href="nclex-guide.html">Free Study Guide</a></li>
           <li><a href="specialties.html">Specialty Prep</a></li>
           <li><a href="courses.html">Courses</a></li>
@@ -2006,6 +2008,71 @@ QBANK_BODY = f"""  <div class="page-hero">
 PAGES["qbank.html"] = ("NCLEX Question Bank (Free Sample) | Must Love Scrubs",
     "Practice original NCLEX-style questions with a rationale for every option, answer stats, and Mastered/Reviewing/Learning tagging. A free sample of the 2,600+ question bank.",
     QBANK_BODY, "courses")
+
+# ---------------------------------------------------------------- FLASHCARDS + GAMES (adaptive, same difficulty model as CAT)
+
+def _load_flashcards():
+    import glob as _glob
+    cards, seen = [], set()
+    for path in sorted(_glob.glob(os.path.join(ROOT, 'data', 'flashcards', '*.json'))):
+        data = _json.load(open(path, encoding='utf-8'))
+        for c in data.get('cards', []):
+            if not c.get('front') or not c.get('back'): continue
+            if c.get('id') in seen: continue
+            seen.add(c['id'])
+            c.setdefault('difficulty', 3)   # 1..5, same scale as the CAT engine
+            cards.append(c)
+    return cards
+
+FLASH = _load_flashcards()
+FLASH_JSON = _json.dumps(FLASH, ensure_ascii=False).replace('<', '\\u003c').replace('>', '\\u003e').replace('&', '\\u0026')
+FLASH_DECKS = []
+for _c in FLASH:
+    if _c['deck'] not in FLASH_DECKS:
+        FLASH_DECKS.append(_c['deck'])
+
+def flash_deck_chips():
+    out = ['<button class="fc-chip on" data-deck="All">All</button>']
+    for d in FLASH_DECKS:
+        out.append(f'<button class="fc-chip" data-deck="{d}">{d}</button>')
+    return "".join(out)
+
+FLASH_BODY = f"""  <div class="page-hero">
+    <div class="wrap inner">
+      <span class="lesson-label" style="color:var(--gold-400);">Flashcards &amp; Games</span>
+      <h1 style="margin-top:0.6rem;">Flip it. Play it. <span class="em">Remember it.</span></h1>
+      <p>Animated flashcards with a rationale on the back &mdash; then turn the same cards into quizzes, a match game, and a speed round. Adaptive levels (1&ndash;5) rise as you improve, exactly like the CAT engine. Works for NCLEX <b>and</b> specialty prep.</p>
+    </div>
+  </div>
+
+  <section style="background:var(--bg);">
+    <div class="wrap">
+      <div class="flash" data-flash-total="{len(FLASH)}">
+        <script type="application/json" data-flash>{FLASH_JSON}</script>
+        <div class="fc-bar fade-up"><div class="fc-decks">{flash_deck_chips()}</div></div>
+        <div class="fc-modes fade-up">
+          <button class="fc-mode on" data-mode="study">Study</button>
+          <button class="fc-mode" data-mode="quiz">Quiz</button>
+          <button class="fc-mode" data-mode="match">Match game</button>
+          <button class="fc-mode" data-mode="speed">Speed round</button>
+        </div>
+        <div class="fc-meta fade-up">
+          <span class="fc-stat">Level <b data-fc-level>1</b></span>
+          <span class="fc-stat">Mastered <b data-fc-mastered>0</b></span>
+          <span class="fc-stat">Streak <b data-fc-streak>0</b></span>
+          <span class="fc-stat">Deck <b data-fc-count>0</b></span>
+        </div>
+        <div class="fc-stage fade-up" data-fc-stage></div>
+      </div>
+    </div>
+  </section>
+
+  <script src="js/flashcards.js"></script>
+"""
+
+PAGES["flashcards.html"] = ("Nursing Flashcards & Games (Adaptive) | Must Love Scrubs",
+    "Animated nursing flashcards with rationales, plus quizzes, a match game, and a speed round. Adaptive difficulty levels for NCLEX and specialty prep.",
+    FLASH_BODY, "courses")
 
 # ---------------------------------------------------------------- FREE NCLEX STUDY GUIDE / RESOURCES HUB
 
