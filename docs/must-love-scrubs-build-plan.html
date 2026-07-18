@@ -1,0 +1,158 @@
+<!doctype html><html><head><meta charset="utf-8"><title>Must Love Scrubs — Build Plan v1</title><style>
+:root{--vd:#4d2b9e;--ind:#2b1055;--ink:#1e1233;--mintl:#2ad4c4;--bg:#f6f3ff}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font-family:'Iowan Old Style',Palatino,Georgia,serif;line-height:1.55;font-size:14px}
+.sheet{max-width:860px;margin:0 auto;background:#fff;padding:50px 56px;box-shadow:0 20px 60px rgba(30,18,51,.12)}
+h1,h2,h3,h4{font-family:'Helvetica Neue',Arial,sans-serif;line-height:1.2}
+h1{font-size:1.85rem;font-weight:800;color:var(--vd);border-bottom:4px solid var(--mintl);padding-bottom:.4rem;margin:.3rem 0 1rem}
+h2{font-size:1.25rem;color:var(--ind);border-bottom:2px solid rgba(139,92,255,.25);padding-bottom:.3rem;margin:1.8rem 0 .8rem}
+h3{font-size:1.02rem;color:var(--vd);margin:1.2rem 0 .3rem}
+p,li{margin:.45rem 0}strong{color:var(--ink)}ul,ol{padding-left:1.2rem}
+hr{border:none;border-top:1px solid rgba(30,18,51,.12);margin:1.5rem 0}
+code{background:#efeaff;color:var(--vd);padding:0 4px;border-radius:4px;font-size:.85em}
+table{border-collapse:collapse;width:100%;font-size:.85rem;margin:.6rem 0}
+th,td{border:1px solid rgba(30,18,51,.15);padding:.35rem .55rem;text-align:left}th{background:var(--bg)}
+@media print{body{background:#fff}.sheet{box-shadow:none;max-width:none;padding:0 .3in}}@page{margin:.6in}
+</style></head><body><div class="sheet"><h1>Must Love Scrubs — Build Plan &amp; Roadmap (v1)</h1>
+<p><em>Third blueprint doc. The Master Spec says </em><em>what</em><em>, the Database &amp; API doc says </em><em>how</em><em>; this says </em><em>in what order</em><em>, </em><em>who does it</em><em> (AI vs engineer vs nurse SME), and </em><em>where the owner decides</em><em>. Foundation-first, so nothing gets rebuilt.</em></p>
+<p><strong>Status:</strong> plan for approval. We build the <strong>web app</strong> first, native app later. Confirm each step before proceeding.</p>
+<hr />
+<h2>1. Guiding principles</h2>
+<ul>
+<li><strong>Foundation before content.</strong> Stand up the database + API + auth before pouring in thousands of questions, so content lands in a real structure.</li>
+<li><strong>One gold module, then replicate.</strong> Prove a full topic end-to-end (Heart Failure done) before scaling.</li>
+<li><strong>AI drafts, humans approve.</strong> AI generates content/questions in batches; a nurse SME reviews before publish. Never auto-publish clinical content.</li>
+<li><strong>Everything plugs into the NKE.</strong> No one-off pages; every item validates against its template + tags + edges.</li>
+<li><strong>Ship thin slices.</strong> Each phase produces something usable, not a big-bang launch.</li>
+</ul>
+<hr />
+<h2>2. Recommended stack (concrete, so it can be scoped/hired)</h2>
+<ul>
+<li><strong>Web app:</strong> Next.js (React) + the locked Violet &amp; Mint design system → fast, SEO-friendly, mobile-first, one codebase for web now.</li>
+<li><strong>Database:</strong> PostgreSQL. <strong>Supabase</strong> is a strong fit (Postgres + auth + storage + APIs out of the box) and is already connected to this workspace — we can stand up the schema there when approved.</li>
+<li><strong>Auth:</strong> Supabase Auth (or equivalent) — JWT, roles from the API contract.</li>
+<li><strong>Media (community):</strong> object storage + CDN, with virus scan + video transcode (per the community media pipeline).</li>
+<li><strong>AI (Esi):</strong> Claude API, answering from NKE content first (retrieval over our own data), then plain language.</li>
+<li><strong>Native app (later):</strong> React Native / Expo, consuming the <em>same</em> API.</li>
+</ul>
+<p><em>The owner doesn't need to know these tools — this is what an engineer would use; it's here so scoping and hiring are concrete.</em></p>
+<hr />
+<h2>3. Phases (each ends in something real)</h2>
+<h3>Phase A — Foundation <em>(engineer-led)</em></h3>
+<p>Database (nodes, edges, questions-in-nodes, users, entitlements, attempts, mastery, streaks, question_stats, threads/posts/media, reports) · auth + roles · core read/write API (<code>/node</code>, <code>/search</code>, <code>/questions</code>, <code>/attempt</code>, <code>/me/*</code>) · content-ingest pipeline (formalizes today's <code>data/qbank</code> batch flow) · validators for every content + question template.<br />
+<strong>Done when:</strong> a question can be authored → validated → stored → served → answered → recorded, through the real API.</p>
+<h3>Phase B — Content engine <em>(engineer + AI + nurse SME)</em></h3>
+<p>NKE pages (Disease/Med/Lab/Procedure/Skill) rendering from templates with the Clinical Connections sidebar + "Why?" chain · Question Engine implementing item types <strong>incrementally</strong> in the priority order below · unified search.<br />
+<strong>Item-type build order</strong> (built → next): ✅ MC, SATA, Matrix(MC), Bow-Tie → <strong>Extended Multiple Response, Matrix(MR), Cloze/Drop-Down, Highlight, Ordered/Drag-Drop, Fill-in-Blank/Dosage, Hot Spot, Exhibit, Graphic, Trend, Audio, Case Study (6-item)</strong>.<br />
+<strong>Done when:</strong> a learner browses connected content and practices every common item type.</p>
+<h3>Phase C — Learner experience <em>(engineer + AI)</em></h3>
+<p>Dashboard (readiness, pass probability, per-domain mastery, improvement-over-time) · Smart Study (<code>/me/next</code>) · <strong>CAT ↔ pop-quiz ↔ mini-prep loop</strong> · Esi tutoring (structured-first, personalized) · spaced-repetition reviews · flashcards.<br />
+<strong>Done when:</strong> the platform adapts to the learner and visibly shows improvement.</p>
+<h3>Phase D — Community <em>(engineer)</em></h3>
+<p>Twitter/X-style feeds + threads, full media (text, image, video, GIF) with upload pipeline + moderation/reporting. Readable by visitors; posting for members. No profile feed.<br />
+<strong>Done when:</strong> nurses and visitors can post, reply, and share media safely.</p>
+<h3>Phase E — Billing + launch <em>(engineer + owner)</em></h3>
+<p>Plans (1/2/3/6-month, Esi included), checkout (Stripe), entitlement gating, marketing site → web-app funnel, anti-scrape/CDN, analytics.<br />
+<strong>Done when:</strong> a user can subscribe and unlock the full bank; public launch of the web app.</p>
+<h3>Phase F — Native app <em>(later)</em></h3>
+<p>React Native app on the same APIs: offline study, push (Question of the Day), camera OCR, voice quizzes.</p>
+<p><em>(Deferred well beyond launch: Simulation/virtual hospital, 3D models, live tutoring, career center — all plug into the same ecosystem when their time comes.)</em></p>
+<hr />
+<h2>4. Who does what</h2>
+<table>
+<thead>
+<tr>
+<th>Work</th>
+<th>AI (Claude)</th>
+<th>Engineer</th>
+<th>Nurse SME (review)</th>
+<th>Owner (decide)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>This blueprint &amp; specs</td>
+<td>✅ done</td>
+<td>review</td>
+<td>—</td>
+<td>approve</td>
+</tr>
+<tr>
+<td>DB schema + API build</td>
+<td>draft/scaffold</td>
+<td>✅ build</td>
+<td>—</td>
+<td>approve stack</td>
+</tr>
+<tr>
+<td>Content &amp; questions (batches)</td>
+<td>✅ draft</td>
+<td>ingest</td>
+<td>✅ verify before publish</td>
+<td>quality bar</td>
+</tr>
+<tr>
+<td>Item-type interfaces</td>
+<td>prototype</td>
+<td>✅ productionize</td>
+<td>test realism</td>
+<td>—</td>
+</tr>
+<tr>
+<td>Esi prompts/rules</td>
+<td>✅ author</td>
+<td>integrate</td>
+<td>safety review</td>
+<td>tone</td>
+</tr>
+<tr>
+<td>Community + billing</td>
+<td>spec</td>
+<td>✅ build</td>
+<td>—</td>
+<td>pricing/policies</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Bottom line for the owner:</strong> you'll need <strong>an engineer</strong> (or dev shop) for Phases A–E and <strong>at least one nurse SME</strong> to sign off on clinical content. AI (me) can draft specs, content, question batches, Esi logic, and prototype interfaces; a developer turns them into the production web app.</p>
+<hr />
+<h2>5. Content production plan</h2>
+<ul>
+<li><strong>Benchmark-first:</strong> author a <strong>250-question RN benchmark</strong> (≈30 per core category) to lock quality + pipeline, then scale toward the <strong>5,000–8,000 launch milestone</strong>, then beyond.</li>
+<li><strong>Batches of ~25</strong>, each: AI drafts → validator passes → nurse SME approves → publish. Same flow as the current <code>data/qbank</code> pipeline, formalized into the DB.</li>
+<li><strong>Gold modules</strong> (full NKE topics) in parallel: Heart Failure ✅ → <strong>Diabetes</strong> → sepsis, COPD, stroke, renal failure, etc.</li>
+</ul>
+<hr />
+<h2>6. Milestones &amp; definition of done</h2>
+<ol>
+<li><strong>M1 – Blueprint approved</strong> (this + the two specs). <em>You are one approval away.</em></li>
+<li><strong>M2 – Foundation live</strong> (Phase A): author→answer→record works end-to-end.</li>
+<li><strong>M3 – First learning slice</strong> (Phase B partial): Heart Failure module + 250 benchmark questions playable in the web app across built item types.</li>
+<li><strong>M4 – Adaptive learner</strong> (Phase C): dashboard + pop-quiz/mini-prep loop + Esi.</li>
+<li><strong>M5 – Community</strong> (Phase D).</li>
+<li><strong>M6 – Paid launch</strong> (Phase E): subscriptions live, web app public.</li>
+<li><strong>M7 – Native app</strong> (Phase F).</li>
+</ol>
+<hr />
+<h2>7. Where the owner makes the call</h2>
+<ul>
+<li>Approve the stack (or defer to the engineer you hire).</li>
+<li>Approve pricing/policies and the clinical-quality bar.</li>
+<li>Decide the hiring path: solo engineer, dev shop, or AI-drafts + contractor-implements.</li>
+<li>Sign off (via nurse SME) on clinical content before publish.</li>
+</ul>
+<h2>8. Risks &amp; mitigations</h2>
+<ul>
+<li><strong>Clinical accuracy</strong> → nurse-SME review gate; references logged; never auto-publish.</li>
+<li><strong>Scope creep</strong> (the vision is huge) → phase gates; deferred list; thin slices.</li>
+<li><strong>Content scale</strong> → benchmark-first + batch pipeline + validators, not a big unreviewed dump.</li>
+<li><strong>AI safety (Esi)</strong> → educational-only, structured-first, disclaimers, paywalled.</li>
+<li><strong>Community moderation</strong> → reporting + rules from day one (required once video is allowed).</li>
+</ul>
+<hr />
+<h2>9. Recommended immediate next steps (my call)</h2>
+<ol>
+<li><strong>You approve the three blueprint docs</strong> (or mark changes).</li>
+<li>I <strong>draft the second gold module (Diabetes)</strong> to prove the templates across another system — pure content, no engineering needed, and it de-risks the template.</li>
+<li>In parallel, when you're ready for engineering, I can <strong>scaffold the database in Supabase</strong> (schema from the API doc) so the foundation exists to build against.</li>
+</ol>
+<p><em>This plan is the last of the three blueprint documents. Together — Master Spec (what) · Database &amp; API (how) · Build Plan (order/who) — they're a complete, hand-off-ready blueprint.</em></p></div></body></html>
