@@ -1,0 +1,295 @@
+{
+ "batch": "maternal-peds-02",
+ "questions": [
+  {
+   "id": "qb-mp-0101",
+   "exam": "RN",
+   "cat": "Maternal / Newborn",
+   "topic": "Preeclampsia",
+   "difficulty": "Hard",
+   "type": "mc",
+   "stem": "A client at 34 weeks' gestation has a blood pressure of 168/112 mmHg, headache, and visual changes. Magnesium sulfate is started. Which finding indicates magnesium toxicity?",
+   "opts": [
+    {
+     "t": "Deep tendon reflexes of 2+",
+     "r": "Reflexes of 2+ are normal and reassuring."
+    },
+    {
+     "t": "Respiratory rate of 10 breaths/min with absent reflexes",
+     "r": "Correct. Respiratory depression and loss of deep tendon reflexes are hallmark signs of magnesium toxicity."
+    },
+    {
+     "t": "Urine output of 60 mL/hr",
+     "r": "Adequate urine output is reassuring and helps clear magnesium."
+    },
+    {
+     "t": "Blood pressure decreasing toward 140/90 mmHg",
+     "r": "A falling BP is a therapeutic effect, not toxicity."
+    }
+   ],
+   "correct": 1,
+   "tip": "Mag toxicity: lost reflexes → respiratory depression → cardiac arrest. Antidote = calcium gluconate."
+  },
+  {
+   "id": "qb-mp-0102",
+   "exam": "RN",
+   "cat": "Maternal / Newborn",
+   "topic": "Late decelerations",
+   "difficulty": "Hard",
+   "type": "mc",
+   "stem": "A laboring client receiving IV oxytocin shows repetitive late decelerations. What is the nurse's first action?",
+   "opts": [
+    {
+     "t": "Increase the oxytocin infusion rate",
+     "r": "Increasing oxytocin worsens uteroplacental insufficiency — the opposite of what's needed."
+    },
+    {
+     "t": "Stop the oxytocin and reposition the client to her side",
+     "r": "Correct. Late decelerations signal uteroplacental insufficiency; stopping oxytocin and repositioning are first-line intrauterine resuscitation."
+    },
+    {
+     "t": "Document the reassuring tracing and continue",
+     "r": "Late decelerations are non-reassuring and require action."
+    },
+    {
+     "t": "Prepare for immediate forceps delivery",
+     "r": "Delivery is not the first step; correct the cause first."
+    }
+   ],
+   "correct": 1,
+   "tip": "VEAL CHOP — Late decels = Placental insufficiency. Stop Pit, reposition, O₂, IV fluids, notify."
+  },
+  {
+   "id": "qb-mp-0103",
+   "exam": "RN",
+   "cat": "Maternal / Newborn",
+   "topic": "Postpartum hemorrhage",
+   "difficulty": "Hard",
+   "type": "mc",
+   "stem": "One hour after a vaginal delivery, the nurse finds the client's uterus boggy and displaced to the right with heavy lochia. What should the nurse do first?",
+   "opts": [
+    {
+     "t": "Massage the fundus",
+     "r": "Correct. A boggy uterus indicates atony — the leading cause of early postpartum hemorrhage — so fundal massage is the first action."
+    },
+    {
+     "t": "Administer a stool softener",
+     "r": "A stool softener is unrelated to uterine atony."
+    },
+    {
+     "t": "Increase the room temperature",
+     "r": "Room temperature has no effect on uterine tone."
+    },
+    {
+     "t": "Place the client in Trendelenburg immediately",
+     "r": "Address the atony first with massage; positioning is not the initial step."
+    }
+   ],
+   "correct": 0,
+   "tip": "Boggy uterus = atony = #1 cause of early PPH. Massage first; a full bladder displaces the uterus (have her void)."
+  },
+  {
+   "id": "qb-mp-0104",
+   "exam": "RN",
+   "cat": "Maternal / Newborn",
+   "topic": "Newborn assessment",
+   "difficulty": "Moderate",
+   "type": "mc",
+   "stem": "A nurse assesses a newborn 5 minutes after birth. Which finding requires further evaluation?",
+   "opts": [
+    {
+     "t": "Acrocyanosis of the hands and feet",
+     "r": "Acrocyanosis (blue hands/feet) is normal in the early newborn period."
+    },
+    {
+     "t": "Central cyanosis of the lips and trunk",
+     "r": "Correct. Central cyanosis indicates inadequate oxygenation and needs immediate further evaluation."
+    },
+    {
+     "t": "A heart rate of 140 beats/min",
+     "r": "This is within the normal newborn range (110–160)."
+    },
+    {
+     "t": "Presence of vernix caseosa in the skin folds",
+     "r": "Vernix is a normal protective coating."
+    }
+   ],
+   "correct": 1,
+   "tip": "Acrocyanosis (extremities) = normal; central cyanosis (lips/trunk) = abnormal, act."
+  },
+  {
+   "id": "qb-mp-0105",
+   "exam": "RN",
+   "cat": "Pediatrics",
+   "topic": "Epiglottitis",
+   "difficulty": "Hard",
+   "type": "mc",
+   "stem": "A 4-year-old presents with drooling, a tripod posture, high fever, and a muffled voice. Which action should the nurse avoid?",
+   "opts": [
+    {
+     "t": "Keeping the child calm on the parent's lap",
+     "r": "Keeping the child calm and upright is appropriate and prevents airway spasm."
+    },
+    {
+     "t": "Examining the throat with a tongue depressor",
+     "r": "Correct (avoid this). Inspecting the throat can trigger laryngospasm and complete airway obstruction in epiglottitis."
+    },
+    {
+     "t": "Preparing emergency airway equipment",
+     "r": "Having airway equipment ready is appropriate."
+    },
+    {
+     "t": "Notifying the provider immediately",
+     "r": "Prompt escalation is appropriate."
+    }
+   ],
+   "correct": 1,
+   "tip": "Suspected epiglottitis = hands off the throat. No tongue blades, no throat cultures until airway is secured."
+  },
+  {
+   "id": "qb-mp-0106",
+   "exam": "RN",
+   "cat": "Pediatrics",
+   "topic": "Dehydration in infants",
+   "difficulty": "Moderate",
+   "type": "mc",
+   "stem": "Which finding is the most reliable early indicator of dehydration in an infant?",
+   "opts": [
+    {
+     "t": "A sunken anterior fontanel",
+     "r": "A sunken fontanel is a sign but appears with more significant fluid loss."
+    },
+    {
+     "t": "Decreased number of wet diapers",
+     "r": "Correct. A drop in wet diapers (urine output) is an early, reliable indicator of dehydration in infants."
+    },
+    {
+     "t": "Bounding peripheral pulses",
+     "r": "Dehydration causes weak, not bounding, pulses."
+    },
+    {
+     "t": "Increased skin elasticity",
+     "r": "Dehydration causes decreased skin turgor, not increased elasticity."
+    }
+   ],
+   "correct": 1,
+   "tip": "Infant dehydration: fewer wet diapers, sunken fontanel, no tears, dry mucous membranes, poor turgor."
+  },
+  {
+   "id": "qb-mp-0107",
+   "exam": "RN",
+   "cat": "Pediatrics",
+   "topic": "Febrile child teaching",
+   "difficulty": "Easy",
+   "type": "mc",
+   "stem": "A parent asks how to reduce a toddler's fever at home. Which instruction should the nurse provide?",
+   "opts": [
+    {
+     "t": "\"Give aspirin every 4 hours for the fever.\"",
+     "r": "Aspirin is contraindicated in children due to the risk of Reye's syndrome."
+    },
+    {
+     "t": "\"Offer fluids and give weight-based acetaminophen as directed.\"",
+     "r": "Correct. Encouraging fluids and giving weight-appropriate acetaminophen (or ibuprofen) is safe and effective."
+    },
+    {
+     "t": "\"Sponge the child with cold or alcohol baths.\"",
+     "r": "Cold/alcohol baths cause shivering and are unsafe."
+    },
+    {
+     "t": "\"Bundle the child in warm blankets to sweat out the fever.\"",
+     "r": "Over-bundling traps heat and can raise the temperature."
+    }
+   ],
+   "correct": 1,
+   "tip": "Never give aspirin to children (Reye's syndrome). Use weight-based acetaminophen/ibuprofen + fluids."
+  },
+  {
+   "id": "qb-mp-0108",
+   "exam": "RN",
+   "cat": "Pediatrics",
+   "topic": "Cystic fibrosis",
+   "difficulty": "Moderate",
+   "type": "mc",
+   "stem": "A child with cystic fibrosis is prescribed pancreatic enzymes. When should the nurse teach the family to give them?",
+   "opts": [
+    {
+     "t": "At bedtime only",
+     "r": "Enzymes are tied to meals, not a single bedtime dose."
+    },
+    {
+     "t": "With every meal and snack",
+     "r": "Correct. Pancreatic enzymes must be taken with all meals and snacks to aid digestion and nutrient absorption."
+    },
+    {
+     "t": "Only when the child has abdominal pain",
+     "r": "Enzymes are preventive with food, not as-needed for pain."
+    },
+    {
+     "t": "Two hours after eating",
+     "r": "Enzymes must be present during digestion, so they are given with food."
+    }
+   ],
+   "correct": 1,
+   "tip": "CF pancreatic enzymes: with EVERY meal and snack, to absorb fat-soluble vitamins (A, D, E, K)."
+  },
+  {
+   "id": "qb-mp-0109",
+   "exam": "RN",
+   "cat": "Pediatrics",
+   "topic": "Croup vs epiglottitis",
+   "difficulty": "Moderate",
+   "type": "mc",
+   "stem": "A toddler has a barking, seal-like cough and inspiratory stridor that worsen at night but no drooling. Which condition is most consistent with these findings?",
+   "opts": [
+    {
+     "t": "Epiglottitis",
+     "r": "Epiglottitis presents with drooling, tripod posture, and a muffled voice — not a barking cough."
+    },
+    {
+     "t": "Viral croup (laryngotracheobronchitis)",
+     "r": "Correct. A barking, seal-like cough with stridor and no drooling is classic for viral croup."
+    },
+    {
+     "t": "Bacterial pneumonia",
+     "r": "Pneumonia causes fever, crackles, and productive cough, not a barking cough."
+    },
+    {
+     "t": "Asthma exacerbation",
+     "r": "Asthma causes expiratory wheezing, not the classic barking cough and inspiratory stridor."
+    }
+   ],
+   "correct": 1,
+   "tip": "Croup = barking/seal cough + stridor (viral, gradual). Epiglottitis = drooling + tripod (emergency)."
+  },
+  {
+   "id": "qb-mp-0110",
+   "exam": "RN",
+   "cat": "Maternal / Newborn",
+   "topic": "Breastfeeding",
+   "difficulty": "Easy",
+   "type": "mc",
+   "stem": "A postpartum client asks how to know her breastfed newborn is getting enough milk. Which sign should the nurse describe as reassuring?",
+   "opts": [
+    {
+     "t": "The newborn sleeps 6 hours between every feeding",
+     "r": "Long stretches without feeding in a newborn may signal inadequate intake, not adequacy."
+    },
+    {
+     "t": "At least 6 wet diapers per day after the first few days",
+     "r": "Correct. Six or more wet diapers daily (after day 3–4) indicates adequate hydration and milk intake."
+    },
+    {
+     "t": "The newborn loses weight steadily over the first month",
+     "r": "Ongoing weight loss beyond the expected early period is a concern."
+    },
+    {
+     "t": "The breasts feel completely empty and soft before every feeding",
+     "r": "Always-empty breasts before feeding may indicate low supply, not adequacy."
+    }
+   ],
+   "correct": 1,
+   "tip": "Adequate intake in a newborn: 6+ wet diapers/day, regular stools, steady weight gain, contentment after feeds."
+  }
+ ]
+}

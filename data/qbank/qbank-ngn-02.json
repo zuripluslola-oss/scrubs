@@ -1,0 +1,238 @@
+{
+ "batch": "ngn-02",
+ "questions": [
+  {
+   "id": "qb-ngn-0201",
+   "exam": "RN",
+   "cat": "Med-Surg",
+   "topic": "Heart failure teaching",
+   "difficulty": "Hard",
+   "type": "sata",
+   "stem": "A nurse is reinforcing discharge teaching for a client with chronic heart failure. Which client statements indicate correct understanding? Select all that apply.",
+   "opts": [
+    {
+     "t": "\"I'll weigh myself at the same time each morning and report a gain of 2–3 pounds in a day.\"",
+     "r": "Correct. Rapid weight gain signals fluid retention and must be reported early."
+    },
+    {
+     "t": "\"I'll limit the salt in my diet.\"",
+     "r": "Correct. Sodium restriction reduces fluid retention and cardiac workload."
+    },
+    {
+     "t": "\"I'll stop taking my water pill once I feel better.\"",
+     "r": "Incorrect. Diuretics are continued as prescribed; stopping leads to fluid overload."
+    },
+    {
+     "t": "\"I'll report any new shortness of breath or swelling in my ankles.\"",
+     "r": "Correct. New dyspnea or edema indicates worsening heart failure and should be reported."
+    },
+    {
+     "t": "\"I can take an NSAID like ibuprofen daily for my joint pain.\"",
+     "r": "Incorrect. NSAIDs cause sodium/fluid retention and can worsen heart failure."
+    }
+   ],
+   "correct": [
+    0,
+    1,
+    3
+   ],
+   "tip": "HF teaching = daily weights, low sodium, take meds, report dyspnea/edema, avoid NSAIDs."
+  },
+  {
+   "id": "qb-ngn-0202",
+   "exam": "RN",
+   "cat": "Safety",
+   "topic": "Sepsis recognition",
+   "difficulty": "Hard",
+   "type": "sata",
+   "stem": "A nurse assesses a client and suspects early sepsis. Which findings support this concern? Select all that apply.",
+   "opts": [
+    {
+     "t": "Temperature 38.9°C (102°F)",
+     "r": "Correct. Fever is a common sign of infection/sepsis (some clients are hypothermic instead)."
+    },
+    {
+     "t": "Heart rate 118 beats/min",
+     "r": "Correct. Tachycardia is an early compensatory sign of sepsis."
+    },
+    {
+     "t": "Respiratory rate 26 breaths/min",
+     "r": "Correct. Tachypnea is part of the systemic inflammatory response."
+    },
+    {
+     "t": "Blood pressure 148/90 mmHg",
+     "r": "Incorrect. Sepsis typically causes hypotension, not hypertension, as it progresses."
+    },
+    {
+     "t": "New confusion in an older adult",
+     "r": "Correct. Acute mental status change can be an early and important sign of sepsis, especially in older adults."
+    }
+   ],
+   "correct": [
+    0,
+    1,
+    2,
+    4
+   ],
+   "tip": "Sepsis clues: fever OR hypothermia, tachycardia, tachypnea, hypotension, new confusion, high lactate."
+  },
+  {
+   "id": "qb-ngn-0203",
+   "exam": "RN",
+   "cat": "Pharmacology",
+   "topic": "High-alert medications",
+   "difficulty": "Moderate",
+   "type": "sata",
+   "stem": "Which medications are considered high-alert and require an independent double-check per many facility policies? Select all that apply.",
+   "opts": [
+    {
+     "t": "IV heparin",
+     "r": "Correct. Anticoagulants like heparin are classic high-alert medications."
+    },
+    {
+     "t": "IV insulin",
+     "r": "Correct. Insulin is a high-alert medication with serious dosing-error potential."
+    },
+    {
+     "t": "Oral acetaminophen 650 mg",
+     "r": "Incorrect. Standard-dose oral acetaminophen is not typically a high-alert medication."
+    },
+    {
+     "t": "IV potassium chloride",
+     "r": "Correct. Concentrated potassium is high-alert and never given IV push."
+    },
+    {
+     "t": "Oral docusate sodium",
+     "r": "Incorrect. A stool softener is a low-risk medication."
+    }
+   ],
+   "correct": [
+    0,
+    1,
+    3
+   ],
+   "tip": "High-alert: anticoagulants, insulin, opioids, concentrated electrolytes (KCl), chemo. Double-check them."
+  },
+  {
+   "id": "qb-ngn-0204",
+   "exam": "RN",
+   "cat": "Med-Surg",
+   "topic": "Fluid balance",
+   "difficulty": "Hard",
+   "type": "matrix",
+   "stem": "For each assessment finding, indicate whether it is most consistent with fluid volume DEFICIT or fluid volume EXCESS.",
+   "cols": [
+    "Fluid deficit",
+    "Fluid excess"
+   ],
+   "rows": [
+    {
+     "t": "Bounding pulse and distended neck veins",
+     "correct": 1,
+     "r": "Bounding pulse and jugular vein distention reflect fluid overload (excess)."
+    },
+    {
+     "t": "Dry mucous membranes and poor skin turgor",
+     "correct": 0,
+     "r": "Dry mucosa and tenting indicate dehydration (deficit)."
+    },
+    {
+     "t": "Crackles in the lung bases",
+     "correct": 1,
+     "r": "Pulmonary crackles suggest fluid backing up into the lungs (excess)."
+    },
+    {
+     "t": "Hypotension with tachycardia",
+     "correct": 0,
+     "r": "Low blood pressure with a compensatory fast heart rate points to volume deficit."
+    },
+    {
+     "t": "Rapid weight gain and dependent edema",
+     "correct": 1,
+     "r": "Sudden weight gain and edema indicate fluid retention (excess)."
+    }
+   ],
+   "tip": "Deficit = dry, low BP, fast weak pulse. Excess = wet (crackles, edema, JVD), bounding pulse, weight gain."
+  },
+  {
+   "id": "qb-ngn-0205",
+   "exam": "RN",
+   "cat": "Med-Surg",
+   "topic": "Hypoglycemia clinical judgment",
+   "difficulty": "Hard",
+   "type": "bowtie",
+   "stem": "A client with type 1 diabetes is diaphoretic, shaky, and confused. A fingerstick glucose reads 48 mg/dL. Complete the diagram by selecting the condition, the actions to take, and the parameters to monitor.",
+   "condition": {
+    "prompt": "Condition the client is experiencing",
+    "options": [
+     {
+      "t": "Hypoglycemia",
+      "r": "Correct. Glucose of 48 mg/dL with shakiness, diaphoresis, and confusion is hypoglycemia."
+     },
+     {
+      "t": "Diabetic ketoacidosis",
+      "r": "Incorrect. DKA involves high glucose, not a reading of 48 mg/dL."
+     },
+     {
+      "t": "Hyperosmolar hyperglycemic state",
+      "r": "Incorrect. HHS involves extremely high glucose, not hypoglycemia."
+     }
+    ],
+    "correct": 0
+   },
+   "actions": {
+    "prompt": "Actions to take (choose 2)",
+    "pick": 2,
+    "options": [
+     {
+      "t": "Give 15 g of a fast-acting carbohydrate if the client can swallow safely",
+      "r": "Correct. The rule of 15: treat with 15 g fast carbs and recheck in 15 minutes."
+     },
+     {
+      "t": "Recheck the blood glucose in 15 minutes",
+      "r": "Correct. Recheck after 15 minutes and repeat treatment if still low."
+     },
+     {
+      "t": "Administer the client's scheduled insulin dose",
+      "r": "Incorrect. Insulin would lower glucose further and is dangerous now."
+     },
+     {
+      "t": "Withhold all food and fluids",
+      "r": "Incorrect. The client needs carbohydrates, not to be kept NPO."
+     }
+    ],
+    "correct": [
+     0,
+     1
+    ]
+   },
+   "parameters": {
+    "prompt": "Parameters to monitor (choose 2)",
+    "pick": 2,
+    "options": [
+     {
+      "t": "Blood glucose level",
+      "r": "Correct. Recheck glucose to confirm it is rising into a safe range."
+     },
+     {
+      "t": "Level of consciousness",
+      "r": "Correct. Improving alertness confirms the brain is getting glucose."
+     },
+     {
+      "t": "Serum potassium as the only priority",
+      "r": "Incorrect. Potassium is not the immediate monitoring priority in acute hypoglycemia."
+     },
+     {
+      "t": "Daily weight",
+      "r": "Incorrect. Weight is irrelevant to acute hypoglycemia management."
+     }
+    ],
+    "correct": [
+     0,
+     1
+    ]
+   },
+   "tip": "Hypoglycemia: Rule of 15 — 15 g fast carbs, recheck in 15 min. Then a complex carb/protein snack."
+  }
+ ]
+}

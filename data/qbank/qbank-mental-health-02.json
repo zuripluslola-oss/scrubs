@@ -1,0 +1,237 @@
+{
+ "batch": "mental-health-02",
+ "questions": [
+  {
+   "id": "qb-mh-0101",
+   "exam": "RN",
+   "cat": "Mental Health",
+   "topic": "Therapeutic communication",
+   "difficulty": "Moderate",
+   "type": "mc",
+   "stem": "A client newly diagnosed with a terminal illness says, \"I feel like I've already failed my family.\" Which response is most therapeutic?",
+   "opts": [
+    {
+     "t": "\"Don't worry — many people live longer than expected.\"",
+     "r": "False reassurance dismisses the client's feelings and blocks communication."
+    },
+    {
+     "t": "\"It sounds like you're feeling that you've let your family down.\"",
+     "r": "Correct. Reflecting the client's feeling shows empathy and invites them to share more."
+    },
+    {
+     "t": "\"Why would you feel like a failure?\"",
+     "r": "\"Why\" questions can feel confrontational and put the client on the defensive."
+    },
+    {
+     "t": "\"You need to stay strong for your family.\"",
+     "r": "Telling a client how to feel minimizes their distress."
+    }
+   ],
+   "correct": 1,
+   "tip": "Therapeutic responses reflect feelings and keep the focus on the client — not advice, reassurance, or \"why.\""
+  },
+  {
+   "id": "qb-mh-0102",
+   "exam": "RN",
+   "cat": "Mental Health",
+   "topic": "Lithium toxicity",
+   "difficulty": "Hard",
+   "type": "mc",
+   "stem": "A client taking lithium reports coarse hand tremors, vomiting, and confusion. What should the nurse do first?",
+   "opts": [
+    {
+     "t": "Encourage the next scheduled lithium dose to maintain levels",
+     "r": "Giving more lithium during suspected toxicity is dangerous."
+    },
+    {
+     "t": "Hold the lithium and obtain a stat lithium level",
+     "r": "Correct. These are signs of lithium toxicity; hold the dose and draw a level immediately."
+    },
+    {
+     "t": "Restrict the client's fluid and sodium intake",
+     "r": "Low sodium/fluid raises lithium levels and worsens toxicity."
+    },
+    {
+     "t": "Reassure the client that these are expected side effects",
+     "r": "Coarse tremor, vomiting, and confusion are toxicity, not expected effects."
+    }
+   ],
+   "correct": 1,
+   "tip": "Lithium range ~0.6–1.2 mEq/L. Toxicity: coarse tremor, GI upset, confusion. Low Na⁺/dehydration raises levels."
+  },
+  {
+   "id": "qb-mh-0103",
+   "exam": "RN",
+   "cat": "Mental Health",
+   "topic": "Suicide risk",
+   "difficulty": "Hard",
+   "type": "mc",
+   "stem": "A client on an inpatient unit states, \"Everyone would be better off without me, and I have my father's old pistol at home.\" What is the nurse's priority?",
+   "opts": [
+    {
+     "t": "Encourage the client to focus on positive things",
+     "r": "Redirecting to positives ignores an active plan and dismisses risk."
+    },
+    {
+     "t": "Ensure continuous one-to-one observation and safety",
+     "r": "Correct. A stated plan and available means indicate high risk; continuous observation and removing means are the priority to keep the client safe."
+    },
+    {
+     "t": "Schedule a therapy appointment for the following week",
+     "r": "A future appointment does not address immediate, active risk."
+    },
+    {
+     "t": "Document the statement and continue routine checks",
+     "r": "Routine checks are insufficient when the client has a specific plan and means."
+    }
+   ],
+   "correct": 1,
+   "tip": "A plan + available means = high suicide risk. Ensure immediate safety: 1:1 observation, remove means."
+  },
+  {
+   "id": "qb-mh-0104",
+   "exam": "RN",
+   "cat": "Mental Health",
+   "topic": "Alcohol withdrawal",
+   "difficulty": "Hard",
+   "type": "mc",
+   "stem": "A client admitted 48 hours ago after stopping heavy alcohol use develops tremors, tachycardia, diaphoresis, and visual hallucinations. Which prescribed medication should the nurse anticipate?",
+   "opts": [
+    {
+     "t": "A benzodiazepine such as lorazepam",
+     "r": "Correct. Benzodiazepines are first-line to manage alcohol withdrawal and prevent seizures/delirium tremens."
+    },
+    {
+     "t": "An opioid such as morphine",
+     "r": "Opioids do not treat alcohol withdrawal."
+    },
+    {
+     "t": "A stimulant such as methylphenidate",
+     "r": "Stimulants would worsen the hyperadrenergic state of withdrawal."
+    },
+    {
+     "t": "An antipsychotic as the sole treatment",
+     "r": "Antipsychotics may be adjuncts but are not the primary treatment for withdrawal."
+    }
+   ],
+   "correct": 1,
+   "tip": "Alcohol withdrawal (peaks 24–72 hr, DTs are life-threatening) → benzodiazepines + thiamine."
+  },
+  {
+   "id": "qb-mh-0105",
+   "exam": "RN",
+   "cat": "Mental Health",
+   "topic": "Anorexia refeeding",
+   "difficulty": "Hard",
+   "type": "mc",
+   "stem": "A client with severe anorexia nervosa begins nutritional rehabilitation. Which complication should the nurse monitor for during early refeeding?",
+   "opts": [
+    {
+     "t": "Hyperkalemia and hypernatremia",
+     "r": "Refeeding syndrome is marked by low, not high, electrolytes."
+    },
+    {
+     "t": "Hypophosphatemia and cardiac dysrhythmias",
+     "r": "Correct. Refeeding syndrome causes a sharp drop in phosphate (and potassium/magnesium), risking cardiac dysrhythmias and heart failure."
+    },
+    {
+     "t": "Elevated blood glucose with ketosis",
+     "r": "The concern in refeeding is electrolyte shifts, not diabetic ketosis."
+    },
+    {
+     "t": "Rapid, sustained weight gain",
+     "r": "Weight is restored slowly; the acute danger is electrolyte-driven cardiac events."
+    }
+   ],
+   "correct": 1,
+   "tip": "Refeeding syndrome: watch phosphate, potassium, magnesium — go LOW. Advance calories slowly."
+  },
+  {
+   "id": "qb-mh-0106",
+   "exam": "RN",
+   "cat": "Mental Health",
+   "topic": "Bipolar mania",
+   "difficulty": "Moderate",
+   "type": "mc",
+   "stem": "A client in an acute manic episode is unable to sit for meals and has lost weight. Which nursing intervention is most appropriate?",
+   "opts": [
+    {
+     "t": "Serve meals in a large, stimulating group dining room",
+     "r": "A stimulating environment worsens distractibility during mania."
+    },
+    {
+     "t": "Offer high-calorie finger foods the client can eat while moving",
+     "r": "Correct. Portable, high-calorie finger foods meet nutritional needs when a manic client cannot sit still to eat."
+    },
+    {
+     "t": "Require the client to remain seated until the meal is finished",
+     "r": "Forcing a manic client to sit can escalate agitation."
+    },
+    {
+     "t": "Withhold food until the client agrees to sit calmly",
+     "r": "Withholding food is unsafe and non-therapeutic."
+    }
+   ],
+   "correct": 1,
+   "tip": "Acute mania: reduce stimulation and use high-calorie finger foods \"on the go\" to maintain nutrition."
+  },
+  {
+   "id": "qb-mh-0107",
+   "exam": "RN",
+   "cat": "Mental Health",
+   "topic": "SSRI teaching",
+   "difficulty": "Moderate",
+   "type": "mc",
+   "stem": "A client is starting an SSRI for depression. Which teaching point is most important for the nurse to emphasize?",
+   "opts": [
+    {
+     "t": "\"You should feel completely better within 2 to 3 days.\"",
+     "r": "SSRIs typically take 2–6 weeks for full therapeutic effect, not days."
+    },
+    {
+     "t": "\"It may take several weeks to feel the full effect; keep taking it as prescribed.\"",
+     "r": "Correct. SSRIs require consistent use for weeks before full benefit; clients must not stop early."
+    },
+    {
+     "t": "\"Stop the medication immediately if you feel no change in a week.\"",
+     "r": "Stopping abruptly can cause discontinuation symptoms and prevents therapeutic benefit."
+    },
+    {
+     "t": "\"You can double the dose if you have a bad day.\"",
+     "r": "Clients should never adjust their own dose."
+    }
+   ],
+   "correct": 1,
+   "tip": "SSRIs take 2–6 weeks. Watch for increased suicide risk early in treatment, especially in young clients."
+  },
+  {
+   "id": "qb-mh-0108",
+   "exam": "RN",
+   "cat": "Mental Health",
+   "topic": "De-escalation",
+   "difficulty": "Moderate",
+   "type": "mc",
+   "stem": "A client in the psychiatric unit is becoming increasingly loud and clenching their fists. Which nursing action is the priority?",
+   "opts": [
+    {
+     "t": "Move closer and place a hand on the client's shoulder to reassure them",
+     "r": "Invading personal space and touching an escalating client can trigger aggression."
+    },
+    {
+     "t": "Maintain a calm voice, allow personal space, and set clear limits",
+     "r": "Correct. A calm approach, adequate personal space, and clear, simple limits are core de-escalation techniques."
+    },
+    {
+     "t": "Immediately place the client in physical restraints",
+     "r": "Restraints are a last resort after less restrictive measures fail."
+    },
+    {
+     "t": "Tell the client they will lose privileges if they don't stop",
+     "r": "Threats tend to escalate an agitated client."
+    }
+   ],
+   "correct": 1,
+   "tip": "De-escalation: calm voice, give space, simple clear limits, remove triggers. Restraints are last resort."
+  }
+ ]
+}

@@ -1,0 +1,296 @@
+{
+ "batch": "med-surg-02",
+ "questions": [
+  {
+   "id": "qb-ms-0101",
+   "exam": "RN",
+   "cat": "Med-Surg",
+   "topic": "Hyperkalemia",
+   "difficulty": "Hard",
+   "type": "mc",
+   "stem": "A client with chronic kidney disease has a potassium of 6.9 mEq/L. Which finding should the nurse report immediately?",
+   "opts": [
+    {
+     "t": "Peaked T waves on the cardiac monitor",
+     "r": "Correct. Hyperkalemia causes peaked T waves and can progress to lethal dysrhythmias — the priority finding."
+    },
+    {
+     "t": "Blood pressure 128/78 mmHg",
+     "r": "This blood pressure is stable and not the priority."
+    },
+    {
+     "t": "Mild constipation",
+     "r": "Hyperkalemia is more associated with diarrhea/hyperactive bowel; constipation is not the emergency here."
+    },
+    {
+     "t": "Report of feeling thirsty",
+     "r": "Thirst is not the life-threatening concern with hyperkalemia."
+    }
+   ],
+   "correct": 0,
+   "tip": "Hyperkalemia → peaked T waves → wide QRS → arrest. Cardiac changes are always the priority.",
+   "pearl": "**K⁺ high = T's high (peaked).** Treat with calcium gluconate (protect heart), then insulin+D50/albuterol to shift K⁺ in."
+  },
+  {
+   "id": "qb-ms-0102",
+   "exam": "RN",
+   "cat": "Med-Surg",
+   "topic": "COPD oxygen",
+   "difficulty": "Hard",
+   "type": "mc",
+   "stem": "A client with COPD has an oxygen saturation of 90% on 2 L/min nasal cannula and is comfortable. The new nurse wants to increase the oxygen to 6 L/min. What is the best action?",
+   "opts": [
+    {
+     "t": "Increase the oxygen to 6 L/min to normalize the saturation",
+     "r": "High-flow oxygen in COPD can blunt the hypoxic drive and worsen CO₂ retention; an SpO₂ around 88–92% is often the target."
+    },
+    {
+     "t": "Leave the oxygen as ordered and continue to monitor the client",
+     "r": "Correct. An SpO₂ of ~88–92% is an acceptable target in many COPD clients; the client is comfortable, so maintain the current flow and monitor."
+    },
+    {
+     "t": "Remove the oxygen entirely since the client is comfortable",
+     "r": "Removing oxygen from a hypoxic client is unsafe."
+    },
+    {
+     "t": "Place the client on a non-rebreather mask",
+     "r": "A non-rebreather delivers high FiO₂ and is not indicated for a stable, comfortable COPD client."
+    }
+   ],
+   "correct": 1,
+   "tip": "In COPD, target SpO₂ ~88–92%. Don't chase a \"normal\" saturation with high-flow O₂."
+  },
+  {
+   "id": "qb-ms-0103",
+   "exam": "RN",
+   "cat": "Med-Surg",
+   "topic": "Chest tube",
+   "difficulty": "Hard",
+   "type": "mc",
+   "stem": "A nurse is caring for a client with a chest tube connected to a water-seal drainage system. Which finding requires immediate action?",
+   "opts": [
+    {
+     "t": "Gentle tidaling in the water-seal chamber with respirations",
+     "r": "Tidaling is expected and shows the system is patent."
+    },
+    {
+     "t": "Continuous vigorous bubbling in the water-seal chamber",
+     "r": "Correct. Continuous bubbling in the water-seal chamber signals an air leak in the system and needs immediate assessment."
+    },
+    {
+     "t": "100 mL of serosanguineous drainage over the first shift",
+     "r": "This is an expected, moderate amount of drainage early after insertion."
+    },
+    {
+     "t": "The drainage system positioned below the level of the chest",
+     "r": "Keeping the system below the chest is correct to promote drainage."
+    }
+   ],
+   "correct": 0,
+   "tip": "Water-seal chamber: tidaling = good; continuous bubbling = air leak (act). Suction chamber bubbling is expected."
+  },
+  {
+   "id": "qb-ms-0104",
+   "exam": "RN",
+   "cat": "Med-Surg",
+   "topic": "Increased ICP",
+   "difficulty": "Moderate",
+   "type": "mc",
+   "stem": "A client with a head injury is at risk for increased intracranial pressure. Which position should the nurse maintain?",
+   "opts": [
+    {
+     "t": "Head of bed flat with the neck turned to one side",
+     "r": "A flat bed and neck rotation impede venous drainage and raise ICP."
+    },
+    {
+     "t": "Head of bed elevated 30 degrees with the head midline",
+     "r": "Correct. Elevating the head ~30° with the head/neck midline promotes venous drainage and helps lower ICP."
+    },
+    {
+     "t": "Trendelenburg position",
+     "r": "Head-down positioning increases cerebral blood volume and ICP."
+    },
+    {
+     "t": "Prone with the head to the left",
+     "r": "Prone positioning and neck rotation both worsen ICP."
+    }
+   ],
+   "correct": 1,
+   "tip": "ICP care: HOB ~30°, head midline, avoid neck flexion/rotation, prevent Valsalva."
+  },
+  {
+   "id": "qb-ms-0105",
+   "exam": "RN",
+   "cat": "Med-Surg",
+   "topic": "DKA priority",
+   "difficulty": "Hard",
+   "type": "mc",
+   "stem": "A client with type 1 diabetes is admitted with diabetic ketoacidosis. Which is the nurse's priority intervention?",
+   "opts": [
+    {
+     "t": "Administer IV regular insulin as ordered before fluids",
+     "r": "Fluid resuscitation is generally initiated first; insulin is given but rapid volume replacement addresses the immediate deficit."
+    },
+    {
+     "t": "Begin IV isotonic fluid replacement",
+     "r": "Correct. Aggressive IV isotonic fluid (normal saline) replacement is the first priority in DKA to restore perfusion and volume."
+    },
+    {
+     "t": "Give IV potassium immediately on admission",
+     "r": "Potassium is replaced carefully once levels and urine output are known — never blindly on admission."
+    },
+    {
+     "t": "Administer sodium bicarbonate",
+     "r": "Bicarbonate is reserved for severe acidosis and is not the first-line priority."
+    }
+   ],
+   "correct": 1,
+   "tip": "DKA order: Fluids first → then insulin → replace potassium as insulin drives K⁺ into cells."
+  },
+  {
+   "id": "qb-ms-0106",
+   "exam": "RN",
+   "cat": "Med-Surg",
+   "topic": "Stroke swallowing",
+   "difficulty": "Moderate",
+   "type": "mc",
+   "stem": "A client is admitted with a new ischemic stroke. Before offering oral fluids, what should the nurse do first?",
+   "opts": [
+    {
+     "t": "Offer small sips of water to test tolerance",
+     "r": "Giving fluids before a swallow screen risks aspiration."
+    },
+    {
+     "t": "Perform or confirm a swallow screening",
+     "r": "Correct. A dysphagia/swallow screen must be completed before anything by mouth to prevent aspiration after a stroke."
+    },
+    {
+     "t": "Elevate the head of the bed and offer thickened liquids",
+     "r": "Even thickened liquids require a passed swallow screen first."
+    },
+    {
+     "t": "Ask the client if they feel hungry",
+     "r": "Hunger does not indicate a safe swallow."
+    }
+   ],
+   "correct": 1,
+   "tip": "New stroke = NPO until a swallow screen is passed. Aspiration is the danger."
+  },
+  {
+   "id": "qb-ms-0107",
+   "exam": "RN",
+   "cat": "Med-Surg",
+   "topic": "Blood transfusion reaction",
+   "difficulty": "Hard",
+   "type": "mc",
+   "stem": "Fifteen minutes into a blood transfusion, a client develops fever, chills, low back pain, and dark urine. What is the nurse's first action?",
+   "opts": [
+    {
+     "t": "Slow the transfusion and continue to observe",
+     "r": "A suspected hemolytic reaction requires stopping the blood immediately, not slowing it."
+    },
+    {
+     "t": "Stop the transfusion and keep the IV line open with normal saline",
+     "r": "Correct. These signs suggest an acute hemolytic reaction; stop the blood at once and maintain the line with saline through new tubing."
+    },
+    {
+     "t": "Administer acetaminophen and restart the transfusion",
+     "r": "Medicating and restarting a hemolytic reaction is dangerous."
+    },
+    {
+     "t": "Increase the transfusion rate to finish quickly",
+     "r": "Speeding up the transfusion would worsen the reaction."
+    }
+   ],
+   "correct": 1,
+   "tip": "Transfusion reaction: STOP the blood first, saline via new tubing, then assess and notify."
+  },
+  {
+   "id": "qb-ms-0108",
+   "exam": "RN",
+   "cat": "Med-Surg",
+   "topic": "Cirrhosis diet",
+   "difficulty": "Moderate",
+   "type": "mc",
+   "stem": "A client with advanced cirrhosis and hepatic encephalopathy is prescribed lactulose. Which finding indicates the medication is effective?",
+   "opts": [
+    {
+     "t": "The client has 2–3 soft stools per day and is more alert",
+     "r": "Correct. Lactulose reduces ammonia by promoting its excretion in stool; improved mentation with several soft stools shows effectiveness."
+    },
+    {
+     "t": "The client reports no bowel movement in 2 days",
+     "r": "No stooling means ammonia is not being eliminated — the drug is not working."
+    },
+    {
+     "t": "The client's abdominal girth increases",
+     "r": "Increasing girth suggests worsening ascites, not therapeutic effect."
+    },
+    {
+     "t": "The client becomes more lethargic and confused",
+     "r": "Worsening confusion indicates rising ammonia, not improvement."
+    }
+   ],
+   "correct": 0,
+   "tip": "Lactulose works by causing soft stools that carry ammonia out. Titrate to 2–3 stools/day."
+  },
+  {
+   "id": "qb-ms-0109",
+   "exam": "RN",
+   "cat": "Med-Surg",
+   "topic": "Addisonian crisis",
+   "difficulty": "Hard",
+   "type": "mc",
+   "stem": "A client with Addison's disease is admitted with hypotension, weakness, and hyperkalemia. Which prescribed therapy should the nurse implement first?",
+   "opts": [
+    {
+     "t": "Administer IV hydrocortisone and normal saline",
+     "r": "Correct. Addisonian crisis is treated urgently with IV corticosteroids and volume/sodium replacement to reverse hypotension and electrolyte imbalance."
+    },
+    {
+     "t": "Restrict fluids to prevent overload",
+     "r": "Addisonian crisis involves volume depletion; fluids are needed, not restricted."
+    },
+    {
+     "t": "Administer IV potassium",
+     "r": "The client is already hyperkalemic; adding potassium is dangerous."
+    },
+    {
+     "t": "Give oral fludrocortisone with breakfast",
+     "r": "Oral maintenance therapy is too slow for an acute crisis; IV therapy is required."
+    }
+   ],
+   "correct": 0,
+   "tip": "Addison's = too little cortisol/aldosterone → give steroids + saline. (Cushing's is the opposite.)"
+  },
+  {
+   "id": "qb-ms-0110",
+   "exam": "RN",
+   "cat": "Med-Surg",
+   "topic": "Pacemaker teaching",
+   "difficulty": "Easy",
+   "type": "mc",
+   "stem": "A client is discharged after permanent pacemaker insertion. Which statement indicates a need for further teaching?",
+   "opts": [
+    {
+     "t": "\"I'll check my pulse every day as instructed.\"",
+     "r": "Daily pulse checks are appropriate self-monitoring."
+    },
+    {
+     "t": "\"I'll avoid raising my arm above my shoulder on that side for a few weeks.\"",
+     "r": "Limiting arm movement early helps prevent lead dislodgement — this is correct."
+    },
+    {
+     "t": "\"I can stop taking my pulse once I feel fine.\"",
+     "r": "Correct (needs teaching). Clients should continue routine pulse monitoring; stopping because they feel well shows a knowledge gap."
+    },
+    {
+     "t": "\"I'll carry my pacemaker identification card with me.\"",
+     "r": "Carrying the ID card is recommended."
+    }
+   ],
+   "correct": 2,
+   "tip": "\"Needs further teaching\" = pick the WRONG statement. Reverse your thinking."
+  }
+ ]
+}

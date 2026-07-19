@@ -1,0 +1,298 @@
+{
+ "batch": "pharmacology-02",
+ "questions": [
+  {
+   "id": "qb-pharm-0101",
+   "exam": "RN",
+   "cat": "Pharmacology",
+   "topic": "Insulin timing",
+   "difficulty": "Moderate",
+   "type": "mc",
+   "stem": "A nurse administers regular insulin subcutaneously at 0730. At what time should the nurse be most alert for signs of hypoglycemia?",
+   "opts": [
+    {
+     "t": "Around 0745, within 15 minutes",
+     "r": "Regular insulin has an onset of about 30–60 minutes, so a reaction 15 minutes after the dose would be very unusual."
+    },
+    {
+     "t": "Between 0930 and 1130",
+     "r": "Correct. Regular insulin peaks about 2–4 hours after a subcutaneous dose, which is when the risk of hypoglycemia is highest."
+    },
+    {
+     "t": "Around 1600, 8–9 hours later",
+     "r": "This reflects the duration tail, not the peak; hypoglycemia is most likely at the peak."
+    },
+    {
+     "t": "At bedtime",
+     "r": "A dose given at 0730 would be well past its peak by bedtime."
+    }
+   ],
+   "correct": 1,
+   "tip": "Match insulin onset/peak/duration to the clock. Regular (short-acting) peaks in 2–4 hr.",
+   "pearl": "**Regular = Rapidly available:** onset ~30 min, peak 2–4 hr. NPH (cloudy) peaks 4–12 hr."
+  },
+  {
+   "id": "qb-pharm-0102",
+   "exam": "RN",
+   "cat": "Pharmacology",
+   "topic": "Beta-blocker safety",
+   "difficulty": "Moderate",
+   "type": "mc",
+   "stem": "Before giving metoprolol to a client, the nurse checks vital signs. Which finding requires the nurse to hold the dose and notify the provider?",
+   "opts": [
+    {
+     "t": "Heart rate 52 beats/min",
+     "r": "Correct. Metoprolol lowers heart rate; a rate below 60 (especially this low) warrants holding the dose to avoid symptomatic bradycardia."
+    },
+    {
+     "t": "Blood pressure 138/86 mmHg",
+     "r": "This is mildly elevated — a beta-blocker would help, not harm."
+    },
+    {
+     "t": "Respiratory rate 18 breaths/min",
+     "r": "This is within normal limits and unrelated to holding a beta-blocker."
+    },
+    {
+     "t": "Temperature 37.1°C (98.8°F)",
+     "r": "A normal temperature is not a reason to hold metoprolol."
+    }
+   ],
+   "correct": 0,
+   "tip": "For most cardiac beta-blockers, hold and reassess if HR < 60 or SBP < 90–100 per parameters."
+  },
+  {
+   "id": "qb-pharm-0103",
+   "exam": "RN",
+   "cat": "Pharmacology",
+   "topic": "Opioid reversal",
+   "difficulty": "Easy",
+   "type": "mc",
+   "stem": "A client who received IV morphine has a respiratory rate of 6 breaths/min and is difficult to arouse. Which medication should the nurse anticipate administering?",
+   "opts": [
+    {
+     "t": "Flumazenil",
+     "r": "Flumazenil reverses benzodiazepines, not opioids."
+    },
+    {
+     "t": "Naloxone",
+     "r": "Correct. Naloxone is the opioid antagonist used to reverse opioid-induced respiratory depression."
+    },
+    {
+     "t": "Protamine sulfate",
+     "r": "Protamine reverses heparin, not opioids."
+    },
+    {
+     "t": "Acetylcysteine",
+     "r": "Acetylcysteine is the antidote for acetaminophen overdose."
+    }
+   ],
+   "correct": 1,
+   "tip": "Learn antidote pairs: opioid→naloxone, benzo→flumazenil, heparin→protamine, warfarin→vitamin K.",
+   "free": true
+  },
+  {
+   "id": "qb-pharm-0104",
+   "exam": "RN",
+   "cat": "Pharmacology",
+   "topic": "Vancomycin monitoring",
+   "difficulty": "Hard",
+   "type": "mc",
+   "stem": "A client is receiving IV vancomycin. Which set of findings should the nurse prioritize reporting to the provider?",
+   "opts": [
+    {
+     "t": "Rising serum creatinine and decreased urine output",
+     "r": "Correct. Vancomycin is nephrotoxic; a rising creatinine with falling output signals kidney injury and must be reported."
+    },
+    {
+     "t": "Transient flushing of the face and neck during a slow infusion",
+     "r": "Flushing suggests infusion-related reaction; slowing the rate usually manages it and it is not the priority over renal injury."
+    },
+    {
+     "t": "Trough level of 12 mcg/mL",
+     "r": "A trough in the ~10–20 mcg/mL range is generally therapeutic, not alarming."
+    },
+    {
+     "t": "Mild nausea after the dose",
+     "r": "Nausea is a minor side effect and not the priority."
+    }
+   ],
+   "correct": 0,
+   "tip": "Nephrotoxic + ototoxic drugs (vancomycin, aminoglycosides): watch creatinine, urine output, and hearing."
+  },
+  {
+   "id": "qb-pharm-0105",
+   "exam": "RN",
+   "cat": "Pharmacology",
+   "topic": "Furosemide + digoxin",
+   "difficulty": "Hard",
+   "type": "mc",
+   "stem": "A client takes digoxin and furosemide. The nurse reviews morning labs. Which value most increases the risk of digoxin toxicity?",
+   "opts": [
+    {
+     "t": "Potassium 3.1 mEq/L",
+     "r": "Correct. Hypokalemia (common with furosemide) sensitizes the myocardium to digoxin and greatly increases toxicity risk."
+    },
+    {
+     "t": "Sodium 139 mEq/L",
+     "r": "This sodium is normal and not directly linked to digoxin toxicity."
+    },
+    {
+     "t": "Calcium 9.2 mg/dL",
+     "r": "This calcium is within normal limits."
+    },
+    {
+     "t": "Chloride 100 mEq/L",
+     "r": "This chloride is normal."
+    }
+   ],
+   "correct": 0,
+   "tip": "Low K⁺ + digoxin = danger. Keep potassium in range to prevent toxicity.",
+   "pearl": "**\"Dig + low dig-K = toxic.\"** Furosemide wastes potassium; that low K⁺ is what tips digoxin into toxicity."
+  },
+  {
+   "id": "qb-pharm-0106",
+   "exam": "RN",
+   "cat": "Pharmacology",
+   "topic": "Corticosteroid teaching",
+   "difficulty": "Moderate",
+   "type": "mc",
+   "stem": "A client is prescribed long-term oral prednisone. Which instruction is most important for the nurse to include?",
+   "opts": [
+    {
+     "t": "\"Stop the medication as soon as you feel better.\"",
+     "r": "Abruptly stopping corticosteroids can trigger adrenal crisis; they must be tapered."
+    },
+    {
+     "t": "\"Take the dose on an empty stomach for best absorption.\"",
+     "r": "Corticosteroids irritate the GI tract and should be taken with food."
+    },
+    {
+     "t": "\"Do not stop taking this suddenly; the dose must be tapered.\"",
+     "r": "Correct. Long-term steroids suppress the adrenal glands, so the dose must be tapered to avoid adrenal insufficiency."
+    },
+    {
+     "t": "\"Expect your blood sugar to drop while on this medication.\"",
+     "r": "Corticosteroids raise blood glucose, they do not lower it."
+    }
+   ],
+   "correct": 2,
+   "tip": "Never stop chronic steroids abruptly — taper to prevent adrenal crisis."
+  },
+  {
+   "id": "qb-pharm-0107",
+   "exam": "RN",
+   "cat": "Pharmacology",
+   "topic": "ACE inhibitor side effect",
+   "difficulty": "Easy",
+   "type": "mc",
+   "stem": "A client started on lisinopril reports a persistent dry cough. What is the nurse's best response?",
+   "opts": [
+    {
+     "t": "\"This cough means you are having an allergic reaction; stop the drug now.\"",
+     "r": "A dry cough is a known side effect, not anaphylaxis; the client should not stop abruptly without provider guidance."
+    },
+    {
+     "t": "\"A dry cough is a known side effect; I'll let your provider know so they can review your medication.\"",
+     "r": "Correct. ACE inhibitors commonly cause a dry cough from bradykinin buildup; the provider may switch to an ARB."
+    },
+    {
+     "t": "\"Increase your fluid intake and the cough will stop.\"",
+     "r": "Fluids do not resolve an ACE-inhibitor cough."
+    },
+    {
+     "t": "\"This is unrelated to your blood pressure medication.\"",
+     "r": "The cough is directly related to the ACE inhibitor."
+    }
+   ],
+   "correct": 1,
+   "tip": "ACE inhibitors (-pril) → dry cough and risk of angioedema. ARBs (-sartan) are the usual switch."
+  },
+  {
+   "id": "qb-pharm-0108",
+   "exam": "RN",
+   "cat": "Pharmacology",
+   "topic": "Heparin monitoring",
+   "difficulty": "Moderate",
+   "type": "mc",
+   "stem": "A client is receiving a continuous IV heparin infusion. Which laboratory test should the nurse monitor to evaluate its therapeutic effect?",
+   "opts": [
+    {
+     "t": "Prothrombin time (PT/INR)",
+     "r": "PT/INR monitors warfarin, not heparin."
+    },
+    {
+     "t": "Activated partial thromboplastin time (aPTT)",
+     "r": "Correct. aPTT is used to monitor the therapeutic effect of unfractionated heparin."
+    },
+    {
+     "t": "Platelet count only",
+     "r": "Platelets are watched for HIT but do not measure the anticoagulant effect."
+    },
+    {
+     "t": "Bleeding time",
+     "r": "Bleeding time is not used to titrate heparin."
+    }
+   ],
+   "correct": 1,
+   "tip": "Heparin → aPTT; warfarin → PT/INR. Antidotes: protamine and vitamin K, respectively."
+  },
+  {
+   "id": "qb-pharm-0109",
+   "exam": "RN",
+   "cat": "Pharmacology",
+   "topic": "Phenytoin teaching",
+   "difficulty": "Moderate",
+   "type": "mc",
+   "stem": "A nurse reinforces teaching for a client starting phenytoin for seizures. Which statement by the client indicates understanding?",
+   "opts": [
+    {
+     "t": "\"I can skip my dose if I don't have any seizures.\"",
+     "r": "Anticonvulsants must be taken consistently to maintain therapeutic levels; skipping doses risks breakthrough seizures."
+    },
+    {
+     "t": "\"I'll brush and floss carefully and see my dentist regularly.\"",
+     "r": "Correct. Phenytoin commonly causes gingival hyperplasia, so meticulous oral care and dental follow-up are essential."
+    },
+    {
+     "t": "\"It's fine to stop this medication whenever I want.\"",
+     "r": "Stopping abruptly can precipitate status epilepticus."
+    },
+    {
+     "t": "\"I should expect my urine to turn bright blue.\"",
+     "r": "Phenytoin does not turn urine blue; some formulations may cause pink/red-brown urine but not blue."
+    }
+   ],
+   "correct": 1,
+   "tip": "Phenytoin → gingival hyperplasia (gum overgrowth). Emphasize oral hygiene and dental care."
+  },
+  {
+   "id": "qb-pharm-0110",
+   "exam": "RN",
+   "cat": "Pharmacology",
+   "topic": "Albuterol vs steroid inhaler",
+   "difficulty": "Moderate",
+   "type": "mc",
+   "stem": "A client with asthma uses both an albuterol inhaler and an inhaled corticosteroid. Which instruction is correct?",
+   "opts": [
+    {
+     "t": "\"Use the corticosteroid first, then the albuterol.\"",
+     "r": "The bronchodilator should come first to open airways so the steroid can reach the lungs."
+    },
+    {
+     "t": "\"Use the albuterol first, wait a few minutes, then use the corticosteroid.\"",
+     "r": "Correct. Albuterol (bronchodilator) opens the airways first; the steroid then penetrates deeper. Rinse the mouth after the steroid."
+    },
+    {
+     "t": "\"There is no need to rinse your mouth after the steroid inhaler.\"",
+     "r": "Rinsing after an inhaled steroid prevents oral thrush (candidiasis)."
+    },
+    {
+     "t": "\"Take the albuterol on a fixed schedule to prevent all symptoms.\"",
+     "r": "Albuterol is a rescue/as-needed reliever; controller (steroid) medications are the scheduled maintenance drugs."
+    }
+   ],
+   "correct": 1,
+   "tip": "Bronchodilator BEFORE steroid inhaler; rinse mouth after steroids to prevent thrush."
+  }
+ ]
+}

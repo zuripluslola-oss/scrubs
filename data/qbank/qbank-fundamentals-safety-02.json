@@ -1,0 +1,296 @@
+{
+ "batch": "fundamentals-safety-02",
+ "questions": [
+  {
+   "id": "qb-fs-0101",
+   "exam": "RN",
+   "cat": "Safety",
+   "topic": "Priority setting",
+   "difficulty": "Moderate",
+   "type": "mc",
+   "stem": "A nurse receives report on four clients. Which client should the nurse assess first?",
+   "opts": [
+    {
+     "t": "A client 1 day post-op reporting incisional pain of 4/10",
+     "r": "Manageable pain is important but not the most urgent."
+    },
+    {
+     "t": "A client with new-onset confusion and an oxygen saturation of 84%",
+     "r": "Correct. A drop in oxygenation with acute mental status change is an airway/breathing emergency — assess first."
+    },
+    {
+     "t": "A client requesting help to the bathroom",
+     "r": "Assist needs are a lower priority than an unstable client."
+    },
+    {
+     "t": "A client awaiting discharge teaching",
+     "r": "A stable client awaiting discharge is the lowest priority."
+    }
+   ],
+   "correct": 1,
+   "tip": "ABCs first, then acute-over-chronic and unstable-over-stable. Low SpO₂ + confusion wins.",
+   "free": true
+  },
+  {
+   "id": "qb-fs-0102",
+   "exam": "RN",
+   "cat": "Safety",
+   "topic": "Delegation to UAP",
+   "difficulty": "Moderate",
+   "type": "mc",
+   "stem": "Which task is appropriate for the registered nurse to delegate to unlicensed assistive personnel (UAP)?",
+   "opts": [
+    {
+     "t": "Assessing a client's surgical wound",
+     "r": "Assessment requires nursing judgment and cannot be delegated."
+    },
+    {
+     "t": "Obtaining routine vital signs on a stable client",
+     "r": "Correct. Measuring vital signs on a stable client is within the UAP scope and is appropriately delegated."
+    },
+    {
+     "t": "Teaching a client about a new medication",
+     "r": "Client teaching requires a nurse."
+    },
+    {
+     "t": "Evaluating a client's response to pain medication",
+     "r": "Evaluation is a nursing responsibility, not delegable."
+    }
+   ],
+   "correct": 1,
+   "tip": "Don't delegate assess, teach, evaluate, or the unstable client. UAP = stable, routine, standard tasks."
+  },
+  {
+   "id": "qb-fs-0103",
+   "exam": "RN",
+   "cat": "Fundamentals",
+   "topic": "Infection precautions",
+   "difficulty": "Moderate",
+   "type": "mc",
+   "stem": "A client is admitted with suspected pulmonary tuberculosis. Which type of precaution should the nurse initiate?",
+   "opts": [
+    {
+     "t": "Contact precautions with a gown and gloves",
+     "r": "Contact precautions address direct/indirect contact spread, not airborne TB."
+    },
+    {
+     "t": "Droplet precautions with a surgical mask",
+     "r": "Droplet precautions are for larger droplets (e.g., influenza), not TB."
+    },
+    {
+     "t": "Airborne precautions with an N95 respirator and a negative-pressure room",
+     "r": "Correct. TB spreads via airborne droplet nuclei, requiring an N95 respirator and a negative-pressure (AIIR) room."
+    },
+    {
+     "t": "Standard precautions only",
+     "r": "Standard precautions alone are insufficient for airborne TB."
+    }
+   ],
+   "correct": 2,
+   "tip": "Airborne (\"My Chicken Hz TB\"): Measles, Chickenpox/varicella, Herpes zoster (disseminated), TB → N95 + negative-pressure room."
+  },
+  {
+   "id": "qb-fs-0104",
+   "exam": "RN",
+   "cat": "Safety",
+   "topic": "Fall prevention",
+   "difficulty": "Easy",
+   "type": "mc",
+   "stem": "Which intervention is most effective in preventing falls for a hospitalized older adult identified as high risk?",
+   "opts": [
+    {
+     "t": "Keep all four side rails up at all times",
+     "r": "Four raised side rails can be considered a restraint and may increase injury if the client climbs over."
+    },
+    {
+     "t": "Keep the bed in the lowest position with the call light within reach",
+     "r": "Correct. A low bed and an accessible call light are core, evidence-based fall-prevention measures."
+    },
+    {
+     "t": "Restrict the client to bed for the entire shift",
+     "r": "Immobility causes deconditioning and does not safely prevent falls."
+    },
+    {
+     "t": "Dim the lights so the client sleeps more",
+     "r": "Poor lighting increases fall risk."
+    }
+   ],
+   "correct": 1,
+   "tip": "Fall prevention: low bed, call light reachable, non-skid footwear, clear path, scheduled toileting."
+  },
+  {
+   "id": "qb-fs-0105",
+   "exam": "RN",
+   "cat": "Fundamentals",
+   "topic": "NG tube placement",
+   "difficulty": "Hard",
+   "type": "mc",
+   "stem": "After inserting a nasogastric tube, which method is the most reliable for the nurse to confirm placement before use?",
+   "opts": [
+    {
+     "t": "Auscultating air injected into the stomach",
+     "r": "The air-bolus (\"whoosh\") method is unreliable and no longer recommended for verification."
+    },
+    {
+     "t": "Obtaining an X-ray to confirm tip position",
+     "r": "Correct. Radiographic confirmation is the most reliable method to verify NG tube placement before first use."
+    },
+    {
+     "t": "Placing the tube's end in water and watching for bubbles",
+     "r": "Bubbling is not a valid placement check and could indicate airway placement."
+    },
+    {
+     "t": "Asking the client if the tube feels correctly placed",
+     "r": "Client sensation cannot confirm placement."
+    }
+   ],
+   "correct": 1,
+   "tip": "X-ray is the gold standard for initial NG placement. pH testing helps for ongoing checks."
+  },
+  {
+   "id": "qb-fs-0106",
+   "exam": "RN",
+   "cat": "Fundamentals",
+   "topic": "Pressure injury",
+   "difficulty": "Moderate",
+   "type": "mc",
+   "stem": "Which finding is the earliest sign of a developing stage 1 pressure injury over the sacrum?",
+   "opts": [
+    {
+     "t": "An open shallow ulcer with a red-pink wound bed",
+     "r": "An open ulcer with partial-thickness loss describes stage 2, not stage 1."
+    },
+    {
+     "t": "Non-blanchable redness of intact skin",
+     "r": "Correct. Stage 1 is intact skin with localized non-blanchable erythema — the earliest sign."
+    },
+    {
+     "t": "Full-thickness skin loss with visible fat",
+     "r": "Visible subcutaneous fat indicates a stage 3 injury."
+    },
+    {
+     "t": "Exposed bone or tendon in the wound",
+     "r": "Exposed bone/tendon describes a stage 4 injury."
+    }
+   ],
+   "correct": 1,
+   "tip": "Stage 1 = intact skin, non-blanchable redness. If it blanches, it's not a pressure injury yet."
+  },
+  {
+   "id": "qb-fs-0107",
+   "exam": "RN",
+   "cat": "Safety",
+   "topic": "Medication error",
+   "difficulty": "Moderate",
+   "type": "mc",
+   "stem": "A nurse realizes they administered a medication to the wrong client. After ensuring client safety, what is the next priority action?",
+   "opts": [
+    {
+     "t": "Document only if the client shows harm",
+     "r": "All errors must be documented regardless of whether harm occurred."
+    },
+    {
+     "t": "Notify the provider and complete an incident report",
+     "r": "Correct. After protecting the client, the nurse notifies the provider and files an incident/occurrence report per policy."
+    },
+    {
+     "t": "Keep the error confidential to avoid liability",
+     "r": "Concealing errors is unethical, unsafe, and against policy."
+    },
+    {
+     "t": "Wait until the end of shift to report it",
+     "r": "Errors are reported promptly, not deferred."
+    }
+   ],
+   "correct": 1,
+   "tip": "After a med error: assess/protect the client → notify provider → incident report. Never hide it."
+  },
+  {
+   "id": "qb-fs-0108",
+   "exam": "RN",
+   "cat": "Fundamentals",
+   "topic": "Hand hygiene",
+   "difficulty": "Easy",
+   "type": "mc",
+   "stem": "In which situation must the nurse use soap and water rather than alcohol-based hand rub?",
+   "opts": [
+    {
+     "t": "Before entering a routine client's room",
+     "r": "Alcohol-based rub is acceptable when hands are not visibly soiled."
+    },
+    {
+     "t": "After caring for a client with Clostridioides difficile",
+     "r": "Correct. C. difficile spores are not killed by alcohol; soap-and-water washing is required to physically remove them."
+    },
+    {
+     "t": "Before documenting at the computer",
+     "r": "Hand hygiene here can be done with alcohol rub if hands are clean."
+    },
+    {
+     "t": "After removing clean gloves with no visible soil",
+     "r": "Alcohol rub is acceptable when there is no visible soiling."
+    }
+   ],
+   "correct": 1,
+   "tip": "C. diff and norovirus → SOAP AND WATER (spores resist alcohol). Otherwise alcohol rub is fine."
+  },
+  {
+   "id": "qb-fs-0109",
+   "exam": "RN",
+   "cat": "Safety",
+   "topic": "Restraint use",
+   "difficulty": "Hard",
+   "type": "mc",
+   "stem": "A provider orders restraints for an agitated client who is pulling at a life-sustaining device. Which nursing action is correct?",
+   "opts": [
+    {
+     "t": "Apply the restraint and check the client every 4 hours",
+     "r": "Restrained clients require far more frequent monitoring than every 4 hours."
+    },
+    {
+     "t": "Use the least restrictive device and monitor per policy with frequent checks",
+     "r": "Correct. Restraints must be the least restrictive option, ordered, time-limited, and monitored with frequent circulation/skin/needs checks."
+    },
+    {
+     "t": "Tie the restraint to the side rail for quick release",
+     "r": "Restraints are secured to the bed frame, never to side rails, and use a quick-release knot."
+    },
+    {
+     "t": "Leave the restraint in place until discharge",
+     "r": "Restraints require ongoing reassessment and renewal — never indefinite."
+    }
+   ],
+   "correct": 1,
+   "tip": "Restraints: least restrictive, time-limited order, secure to bed frame, quick-release, frequent checks."
+  },
+  {
+   "id": "qb-fs-0110",
+   "exam": "RN",
+   "cat": "Fundamentals",
+   "topic": "Sterile field",
+   "difficulty": "Moderate",
+   "type": "mc",
+   "stem": "While setting up a sterile field, the nurse notices a 1-inch border around the edge of the drape. How should the nurse regard this border?",
+   "opts": [
+    {
+     "t": "It is part of the sterile field and may be used",
+     "r": "The outer border is considered contaminated, not sterile."
+    },
+    {
+     "t": "The outer 1-inch border is considered contaminated",
+     "r": "Correct. The 1-inch (2.5 cm) margin around a sterile field is regarded as non-sterile."
+    },
+    {
+     "t": "The entire drape is sterile once opened",
+     "r": "The edges and anything below the table level are not sterile."
+    },
+    {
+     "t": "Only the center point of the field is sterile",
+     "r": "More than the center is sterile — but the outer 1-inch border is not."
+    }
+   ],
+   "correct": 1,
+   "tip": "Sterile field rules: 1-inch border = contaminated; below waist/table = contaminated; keep it in sight."
+  }
+ ]
+}
