@@ -1,0 +1,55 @@
+name: Deploy site to GitHub Pages
+
+# Publishes the Must Love Scrubs static site so nurses can test it at a
+# public URL. Runs on every push to the build branch, and can be run
+# manually from the Actions tab.
+on:
+  push:
+    branches: [claude/must-love-scrubs-build-yorz07]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# Only one deploy at a time; newest wins.
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Rebuild pages from source
+        run: |
+          python3 tools/build_pages.py
+          python3 tools/bundle_site.py
+
+      - name: Assemble the site to publish
+        run: |
+          mkdir -p _site
+          # copy the generated pages and their assets (skip tooling/source dirs)
+          cp *.html _site/
+          cp -r css js images _site/ 2>/dev/null || true
+          cp robots.txt _site/ 2>/dev/null || true
+
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
