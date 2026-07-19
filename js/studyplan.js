@@ -47,11 +47,11 @@
     read:   { c: 'read',   label: 'Read', link: 'nclex-guide.html' },
     cards:  { c: 'cards',  label: 'Flashcards', link: 'flashcards.html' },
     review: { c: 'review', label: 'Review', link: 'flashcards.html' },
-    quiz:   { c: 'quiz',   label: 'Pop quiz', link: 'qbank.html' },
+    quiz:   { c: 'quiz',   label: 'Pop quiz', link: 'tests.html' },
     case:   { c: 'case',   label: 'Case study', link: 'nclex-complete.html' },
     game:   { c: 'game',   label: 'Mnemonic game', link: 'flashcards.html' },
-    test:   { c: 'test',   label: 'Review test', link: 'qbank.html' },
-    exam:   { c: 'exam',   label: 'Readiness exam', link: 'nclex-complete.html' }
+    test:   { c: 'test',   label: 'Review test', link: 'tests.html' },
+    exam:   { c: 'exam',   label: 'Readiness exam', link: 'tests.html' }
   };
 
   function build() {

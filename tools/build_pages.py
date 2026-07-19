@@ -35,6 +35,10 @@ I = {
     "mental": '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 21v-3.2A7 7 0 1 1 19 11l1.5 3H18v3a2 2 0 0 1-2 2h-2v2"/><path d="M11 8.5a2.5 2.5 0 0 1 5 0c0 1.8-2.5 2-2.5 3.5"/><circle cx="13.5" cy="14.6" r=".5" fill="currentColor"/></svg>',
     "geri":   '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7.5-4.6-7.5-10A4.5 4.5 0 0 1 12 7.5 4.5 4.5 0 0 1 19.5 11c0 5.4-7.5 10-7.5 10z"/><path d="M7 12h3l1.5-2.5L14 13l1.5-1.5H19"/></svg>',
     "dict":   '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 4a1 1 0 0 1 1-1h12v18H6a1 1 0 0 1-1-1z"/><path d="M8 3v18M11 8h5M11 11h5"/></svg>',
+    "bolt":   '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2 5 13h5l-1 9 8-11h-5z"/></svg>',
+    "list":   '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 6h12M8 12h12M8 18h12"/><circle cx="4" cy="6" r="1" fill="currentColor"/><circle cx="4" cy="12" r="1" fill="currentColor"/><circle cx="4" cy="18" r="1" fill="currentColor"/></svg>',
+    "target": '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="8"/><circle cx="12" cy="12" r="4.5"/><circle cx="12" cy="12" r="1" fill="currentColor"/></svg>',
+    "heart":  '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20s-7-4.3-7-9.5A4.2 4.2 0 0 1 12 7a4.2 4.2 0 0 1 7 3.5C19 15.7 12 20 12 20z"/></svg>',
 }
 
 def photo(name, grad, style=""):
@@ -104,6 +108,7 @@ def chrome(fname, title, desc, body, active=""):
           <li><a href="nclex-complete.html">NCLEX Complete <small>The flagship &middot; plans from $59</small></a></li>
           <li><a href="nclex.html">Free NCLEX Prep <small>RN &amp; LPN &middot; every NGN item type</small></a></li>
           <li><a href="qbank.html">Question Bank <small>Practice with rationales &amp; answer stats</small></a></li>
+          <li><a href="tests.html">Tests &amp; Exams <small>Pop quiz, mock NCLEX &amp; specialty exams</small></a></li>
           <li><a href="flashcards.html">Flashcards &amp; Games <small>Flip cards, quizzes, match &amp; speed rounds</small></a></li>
           <li><a href="study-plan.html">Study Plan Calendar <small>Your day-by-day plan to test day</small></a></li>
           <li><a href="nclex-guide.html">Free Study Guide <small>How to pass &middot; for nurses, by nurses</small></a></li>
@@ -163,6 +168,7 @@ def chrome(fname, title, desc, body, active=""):
         <ul>
           <li><a href="nclex-complete.html">NCLEX Complete</a></li>
           <li><a href="qbank.html">Question Bank</a></li>
+          <li><a href="tests.html">Tests &amp; Exams</a></li>
           <li><a href="flashcards.html">Flashcards &amp; Games</a></li>
           <li><a href="study-plan.html">Study Plan Calendar</a></li>
           <li><a href="nclex-guide.html">Free Study Guide</a></li>
@@ -2010,6 +2016,85 @@ QBANK_BODY = f"""  <div class="page-hero">
 PAGES["qbank.html"] = ("NCLEX Question Bank (Free Sample) | Must Love Scrubs",
     "Practice original NCLEX-style questions with a rationale for every option, answer stats, and Mastered/Reviewing/Learning tagging. A free sample of the 2,600+ question bank.",
     QBANK_BODY, "courses")
+
+# ---------------------------------------------------------------- TESTS & EXAMS (pop quiz / basic / NCLEX mock CAT / specialty mock)
+# The engine draws from the whole loaded bank; content scales as batches are added.
+TESTS_JSON = _json.dumps(QBANK, ensure_ascii=False).replace('<', '\\u003c').replace('>', '\\u003e').replace('&', '\\u0026')
+
+def test_specialty_options():
+    out = ['<option value="All">All clinical areas</option>']
+    for c in QB_CATS[1:]:
+        out.append(f'<option value="{c}">{c}</option>')
+    return "".join(out)
+
+TEST_MODES = [
+    ("quiz", I['bolt'], "Pop Quiz", "8 questions", "A fast daily gut-check with instant rationale after every question. Perfect between study blocks or straight off your calendar.", "Start pop quiz", "coral"),
+    ("basic", I['list'], "Basic Test", "20 questions", "A focused 20-question test across mixed topics. Answer straight through, then get your score, weak areas, and a full review.", "Start basic test", "line"),
+    ("nclex", I['target'], "NCLEX Mock Test", "85–150 · adaptive", "The real deal. A full computer-adaptive simulation that gets harder or easier as you go and stops the moment it knows where you stand — exactly like test day.", "Start NCLEX mock", "coral"),
+    ("specialty", I['heart'], "Specialty Mock Test", "100 questions", "A 100-question deep dive in one clinical area — build mastery and confidence in your specialty before the floor or a certification.", "Start specialty mock", "line"),
+]
+
+def test_cards():
+    out = []
+    for slug, icon, title, meta, desc, cta, tone in TEST_MODES:
+        pick = ""
+        if slug == "specialty":
+            pick = f'<select class="ex-select" data-test-specialty aria-label="Choose a specialty">{test_specialty_options()}</select>'
+        out.append(f"""        <div class="ex-card fade-up">
+          <div class="ex-card-ic">{icon}</div>
+          <span class="ex-card-len">{meta}</span>
+          <h3>{title}</h3>
+          <p>{desc}</p>
+          {pick}
+          <button class="btn btn-{tone} ex-card-go" data-test-start="{slug}">{cta} &rarr;</button>
+        </div>""")
+    return "\n".join(out)
+
+TESTS_BODY = f"""  <div class="page-hero">
+    <div class="wrap inner">
+      <span class="lesson-label" style="color:var(--gold-400);">Tests &amp; Exams</span>
+      <h1 style="margin-top:0.6rem;">Test yourself like it’s <span class="em">test day</span>.</h1>
+      <p>Four ways to prove you’re ready &mdash; a quick pop quiz, a basic test, a full computer-adaptive NCLEX mock, or a 100-question specialty deep dive. Every one ends with your score, your weak areas, and a rationale on every question.</p>
+    </div>
+  </div>
+
+  <section style="background:var(--bg);">
+    <div class="wrap">
+      <div class="exam" data-exam>
+        <script type="application/json" data-tests>{TESTS_JSON}</script>
+
+        <div data-exam-setup>
+          <div class="ex-grid">
+{test_cards()}
+          </div>
+          <div class="ex-history" data-exam-history hidden></div>
+          <div class="ex-how fade-up">
+            <h3 class="ex-h">How the adaptive NCLEX mock works</h3>
+            <div class="ex-how-grid">
+              <div><span class="ex-step">1</span><b>Everyone starts at the passing line.</b><p>Your first question sits right at the standard the NCLEX uses to decide pass or fail.</p></div>
+              <div><span class="ex-step">2</span><b>It adapts to you.</b><p>Get one right and the next is harder; miss one and it eases off &mdash; zeroing in on your true ability with each answer.</p></div>
+              <div><span class="ex-step">3</span><b>It stops when it’s sure.</b><p>After 85 items it ends the moment it’s 95% confident you’re clearly above or below the line &mdash; up to a 150-item ceiling. Same rules as the real exam.</p></div>
+            </div>
+          </div>
+        </div>
+
+        <div data-exam-run hidden>
+          <div class="ex-bar" data-exam-bar></div>
+          <div class="ex-stage" data-exam-stage></div>
+          <div class="ex-runfoot"><button class="ex-quit" data-exam-quit>End test</button></div>
+        </div>
+
+        <div class="ex-results" data-exam-results hidden></div>
+      </div>
+    </div>
+  </section>
+
+  <script src="js/tests.js"></script>
+"""
+
+PAGES["tests.html"] = ("NCLEX Practice Tests &amp; Adaptive Mock Exams | Must Love Scrubs",
+    "Take a pop quiz, a basic test, a full adaptive NCLEX mock exam (85–150 questions), or a 100-question specialty mock. Score, weak-area breakdown, and a rationale on every question.",
+    TESTS_BODY, "courses")
 
 # ---------------------------------------------------------------- FLASHCARDS + GAMES (adaptive, same difficulty model as CAT)
 
