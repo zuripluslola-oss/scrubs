@@ -110,6 +110,7 @@ def chrome(fname, title, desc, body, active=""):
           <li><a href="qbank.html">Question Bank <small>Practice with rationales &amp; answer stats</small></a></li>
           <li><a href="tests.html">Tests &amp; Exams <small>Pop quiz, mock NCLEX &amp; specialty exams</small></a></li>
           <li><a href="flashcards.html">Flashcards &amp; Games <small>Flip cards, quizzes, match &amp; speed rounds</small></a></li>
+          <li><a href="drugs.html">Drug Cards <small>Pharmacology library &middot; drill by system</small></a></li>
           <li><a href="study-plan.html">Study Plan Calendar <small>Your day-by-day plan to test day</small></a></li>
           <li><a href="nclex-guide.html">Free Study Guide <small>How to pass &middot; for nurses, by nurses</small></a></li>
           <li><a href="course-lab-values.html">Free NCLEX Practice <small>Start with a free audio scene</small></a></li>
@@ -170,6 +171,7 @@ def chrome(fname, title, desc, body, active=""):
           <li><a href="qbank.html">Question Bank</a></li>
           <li><a href="tests.html">Tests &amp; Exams</a></li>
           <li><a href="flashcards.html">Flashcards &amp; Games</a></li>
+          <li><a href="drugs.html">Drug Cards</a></li>
           <li><a href="study-plan.html">Study Plan Calendar</a></li>
           <li><a href="nclex-guide.html">Free Study Guide</a></li>
           <li><a href="specialties.html">Specialty Prep</a></li>
@@ -2164,6 +2166,80 @@ FLASH_BODY = f"""  <div class="page-hero">
 PAGES["flashcards.html"] = ("Nursing Flashcards & Games (Adaptive) | Must Love Scrubs",
     "Animated nursing flashcards with rationales, plus quizzes, a match game, and a speed round. Adaptive difficulty levels for NCLEX and specialty prep.",
     FLASH_BODY, "courses")
+
+# ---------------------------------------------------------------- DRUG CARDS (structured medication library + drill)
+
+def _load_drugs():
+    import glob as _glob
+    drugs, seen = [], set()
+    for path in sorted(_glob.glob(os.path.join(ROOT, 'data', 'drugs', '*.json'))):
+        data = _json.load(open(path, encoding='utf-8'))
+        for x in data.get('drugs', []):
+            if not x.get('generic') or not x.get('class'): continue
+            if x.get('id') in seen: continue
+            seen.add(x['id'])
+            drugs.append(x)
+    drugs.sort(key=lambda x: x['generic'].lower())
+    return drugs
+
+DRUGS = _load_drugs()
+DRUGS_JSON = _json.dumps(DRUGS, ensure_ascii=False).replace('<', '\\u003c').replace('>', '\\u003e').replace('&', '\\u0026')
+DRUG_SYSTEMS = []
+for _x in DRUGS:
+    if _x['system'] not in DRUG_SYSTEMS:
+        DRUG_SYSTEMS.append(_x['system'])
+DRUG_SYSTEMS.sort()
+
+def drug_sys_chips():
+    out = ['<button class="dc-chip on" data-sys="All">All systems</button>']
+    for s in DRUG_SYSTEMS:
+        out.append(f'<button class="dc-chip" data-sys="{s}">{s}</button>')
+    return "".join(out)
+
+DRUGS_BODY = f"""  <div class="page-hero">
+    <div class="wrap inner">
+      <span class="lesson-label" style="color:var(--gold-400);">Drug Cards</span>
+      <h1 style="margin-top:0.6rem;">Every drug, the <span class="em">same way</span>.</h1>
+      <p>Pharmacology is the #1 place NCLEX trips nurses up. Each card gives you one medication in the exact same shape &mdash; class, how it works, uses, side effects, the nursing considerations that matter, and the antidote &mdash; so your brain can pattern-match on test day. Search it, filter by body system, then <b>drill</b> it like flashcards.</p>
+    </div>
+  </div>
+
+  <section style="background:var(--bg);">
+    <div class="wrap">
+      <div class="drugcards" data-drugs-total="{len(DRUGS)}">
+        <script type="application/json" data-drugs>{DRUGS_JSON}</script>
+        <div class="dc-tools fade-up">
+          <div class="dc-search">
+            {I['search']}
+            <input type="search" placeholder="Search a drug, brand, or class&hellip;" aria-label="Search drug cards" data-dc-search>
+          </div>
+          <div class="dc-modes">
+            <button class="dc-mode on" data-dc-mode="browse">Browse</button>
+            <button class="dc-mode" data-dc-mode="drill">Drill</button>
+          </div>
+        </div>
+        <div class="dc-chips fade-up" data-dc-chips>{drug_sys_chips()}</div>
+        <p class="dc-count fade-up"><b data-dc-count>{len(DRUGS)}</b> drug cards &middot; growing every week</p>
+        <div class="dc-grid fade-up" data-dc-grid></div>
+        <div class="dc-drill fade-up" data-dc-drill hidden></div>
+        <div class="dc-empty" data-dc-empty hidden><p><b>No match yet.</b> This library grows every week &mdash; tell us what to add at hello@mustlovescrubs.com.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section style="background:var(--card);">
+    <div class="wrap" style="text-align:center;">
+      <div class="section-head fade-up" style="margin-inline:auto;"><span class="lesson-label" style="color:var(--teal-600);">Go deeper</span><h2>Turn these into a <span class="em">quiz</span>.</h2><p style="margin-inline:auto;">Drug cards feed the same adaptive engine as the question bank &mdash; drill them here, then test yourself in the question bank and mock exams.</p></div>
+      <div class="hero-cta" style="justify-content:center;"><a class="btn btn-coral" href="qbank.html">Practice questions</a><a class="btn btn-line" href="tests.html">Take a test</a></div>
+    </div>
+  </section>
+
+  <script src="js/drugs.js"></script>
+"""
+
+PAGES["drugs.html"] = ("NCLEX Drug Cards &mdash; Nursing Pharmacology Library | Must Love Scrubs",
+    "A searchable library of nursing drug cards: class, mechanism, uses, side effects, nursing considerations, and antidotes for the highest-yield NCLEX medications. Drill them like flashcards.",
+    DRUGS_BODY, "courses")
 
 # ---------------------------------------------------------------- STUDY CALENDAR (the conductor)
 

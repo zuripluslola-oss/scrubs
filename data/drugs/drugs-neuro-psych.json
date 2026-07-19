@@ -1,0 +1,331 @@
+{
+ "batch": "neuro-psych-01",
+ "drugs": [
+  {
+   "id": "morphine",
+   "generic": "morphine",
+   "brand": "MS Contin",
+   "class": "Opioid analgesic",
+   "system": "Neuro / Pain",
+   "moa": "Binds opioid receptors in the CNS to relieve moderate-to-severe pain.",
+   "uses": [
+    "Severe pain",
+    "Acute MI pain",
+    "Palliative care"
+   ],
+   "dose": "Individualized",
+   "route": "PO, IV, IM, SC",
+   "side": [
+    "Constipation",
+    "Sedation",
+    "Nausea"
+   ],
+   "adverse": [
+    "Respiratory depression",
+    "Hypotension",
+    "Dependence"
+   ],
+   "nursing": [
+    "Assess respiratory rate before and after (hold if RR < 12)",
+    "Have naloxone available",
+    "Start a bowel regimen to prevent constipation"
+   ],
+   "labs": [
+    "Respiratory rate",
+    "Pain score",
+    "Blood pressure",
+    "Sedation level"
+   ],
+   "contra": [
+    "Respiratory depression",
+    "Paralytic ileus",
+    "Severe hypotension"
+   ],
+   "teaching": [
+    "Report slow/shallow breathing",
+    "Prevent constipation with fluids and fiber",
+    "Do not drive while sedated"
+   ],
+   "antidote": "Naloxone (Narcan)",
+   "highalert": true,
+   "prototype": true,
+   "tip": "Opioids: watch RESPIRATORY RATE (hold if <12), cause constipation, antidote = naloxone. Have Narcan ready.",
+   "pearl": "**Opioids → respiratory depression + constipation.** Reverse with naloxone."
+  },
+  {
+   "id": "naloxone",
+   "generic": "naloxone",
+   "brand": "Narcan",
+   "class": "Opioid antagonist",
+   "system": "Neuro / Pain",
+   "moa": "Displaces opioids from their receptors, rapidly reversing respiratory depression and sedation.",
+   "uses": [
+    "Opioid overdose / respiratory depression"
+   ],
+   "dose": "0.4–2 mg; repeat as needed",
+   "route": "IV, IM, SC, intranasal",
+   "side": [
+    "Acute opioid withdrawal (agitation, sweating, nausea)"
+   ],
+   "adverse": [
+    "Recurrence of respiratory depression as it wears off"
+   ],
+   "nursing": [
+    "Short duration — the opioid may outlast it, so keep monitoring",
+    "Reassess respiratory status frequently",
+    "May need repeat doses"
+   ],
+   "labs": [
+    "Respiratory rate",
+    "Level of consciousness"
+   ],
+   "contra": [
+    "Hypersensitivity"
+   ],
+   "teaching": [
+    "The person must be watched after a dose — it can wear off before the opioid does"
+   ],
+   "antidote": "N/A (this IS the antidote)",
+   "highalert": false,
+   "prototype": false,
+   "tip": "Naloxone reverses opioids but is SHORT-acting — the opioid can outlast it. Keep monitoring; repeat if needed."
+  },
+  {
+   "id": "lorazepam",
+   "generic": "lorazepam",
+   "brand": "Ativan",
+   "class": "Benzodiazepine",
+   "system": "Neuro / Psych",
+   "moa": "Enhances GABA in the CNS, producing sedation, anti-anxiety, and anticonvulsant effects.",
+   "uses": [
+    "Anxiety",
+    "Status epilepticus/seizures",
+    "Alcohol withdrawal",
+    "Sedation"
+   ],
+   "dose": "0.5–2 mg",
+   "route": "PO, IV, IM",
+   "side": [
+    "Drowsiness",
+    "Dizziness",
+    "Confusion (especially older adults)"
+   ],
+   "adverse": [
+    "Respiratory depression",
+    "Dependence",
+    "Paradoxical agitation"
+   ],
+   "nursing": [
+    "Monitor respiratory status with IV use",
+    "Fall precautions",
+    "Avoid abrupt discontinuation"
+   ],
+   "labs": [
+    "Respiratory rate",
+    "Level of consciousness"
+   ],
+   "contra": [
+    "Severe respiratory depression",
+    "Narrow-angle glaucoma"
+   ],
+   "teaching": [
+    "Avoid alcohol and other CNS depressants",
+    "Don't stop suddenly",
+    "Change positions slowly"
+   ],
+   "antidote": "Flumazenil",
+   "highalert": true,
+   "prototype": true,
+   "tip": "Benzodiazepines (-lam/-pam): CNS + respiratory depression, antidote = flumazenil. Don't stop abruptly."
+  },
+  {
+   "id": "phenytoin",
+   "generic": "phenytoin",
+   "brand": "Dilantin",
+   "class": "Anticonvulsant",
+   "system": "Neuro / Psych",
+   "moa": "Stabilizes neuronal membranes and limits seizure spread.",
+   "uses": [
+    "Seizure disorders",
+    "Status epilepticus"
+   ],
+   "dose": "Individualized to level (therapeutic 10–20 mcg/mL)",
+   "route": "PO, IV",
+   "side": [
+    "Gingival hyperplasia",
+    "Drowsiness",
+    "Nystagmus"
+   ],
+   "adverse": [
+    "Stevens–Johnson syndrome",
+    "Blood dyscrasias",
+    "IV: hypotension/dysrhythmias if pushed fast"
+   ],
+   "nursing": [
+    "Give IV slowly with normal saline only (precipitates in dextrose)",
+    "Meticulous oral care for gum overgrowth",
+    "Take consistently; don't stop abruptly"
+   ],
+   "labs": [
+    "Phenytoin level (10–20)",
+    "CBC",
+    "Oral exam"
+   ],
+   "contra": [
+    "Sinus bradycardia",
+    "Heart block"
+   ],
+   "teaching": [
+    "Brush and floss well; see your dentist regularly",
+    "Never stop suddenly",
+    "Report rash immediately"
+   ],
+   "antidote": "None (supportive)",
+   "highalert": false,
+   "prototype": true,
+   "tip": "Phenytoin: level 10–20, gingival hyperplasia (oral care!), IV in NS only & slow, watch for rash (SJS).",
+   "pearl": "**Dilantin → Dental care** (gum overgrowth). Level 10–20."
+  },
+  {
+   "id": "sertraline",
+   "generic": "sertraline",
+   "brand": "Zoloft",
+   "class": "SSRI antidepressant",
+   "system": "Neuro / Psych",
+   "moa": "Increases serotonin availability in the brain to improve mood and anxiety.",
+   "uses": [
+    "Depression",
+    "Anxiety disorders",
+    "OCD",
+    "PTSD"
+   ],
+   "dose": "25–200 mg daily",
+   "route": "PO",
+   "side": [
+    "Nausea",
+    "Insomnia",
+    "Sexual dysfunction",
+    "Headache"
+   ],
+   "adverse": [
+    "Serotonin syndrome",
+    "Increased suicidal thoughts early in treatment (esp. young adults)"
+   ],
+   "nursing": [
+    "Full effect takes 2–6 weeks",
+    "Monitor mood and suicide risk early on",
+    "Don't combine with MAOIs or other serotonergic drugs"
+   ],
+   "labs": [
+    "Mood/suicide risk",
+    "Signs of serotonin syndrome"
+   ],
+   "contra": [
+    "Concurrent MAOI use"
+   ],
+   "teaching": [
+    "It takes weeks to work — keep taking it",
+    "Report worsening mood or thoughts of self-harm",
+    "Don't stop abruptly (discontinuation symptoms)"
+   ],
+   "antidote": "None (stop drug; supportive)",
+   "highalert": false,
+   "prototype": true,
+   "tip": "SSRIs: 2–6 weeks to work, monitor suicide risk early, watch serotonin syndrome, no MAOIs.",
+   "pearl": "**Serotonin syndrome:** high fever, agitation, tremor, sweating, hyperreflexia."
+  },
+  {
+   "id": "lithium",
+   "generic": "lithium",
+   "brand": "Lithobid",
+   "class": "Mood stabilizer",
+   "system": "Neuro / Psych",
+   "moa": "Stabilizes mood; exact mechanism unclear. Narrow therapeutic range.",
+   "uses": [
+    "Bipolar disorder (mania)"
+   ],
+   "dose": "Individualized to level (0.6–1.2 mEq/L)",
+   "route": "PO",
+   "side": [
+    "Fine tremor",
+    "Increased thirst/urination",
+    "Weight gain"
+   ],
+   "adverse": [
+    "Lithium toxicity (coarse tremor, vomiting, confusion, seizures)"
+   ],
+   "nursing": [
+    "Maintain steady sodium and fluid intake (low sodium/dehydration raises levels)",
+    "Monitor lithium levels regularly",
+    "Teach signs of toxicity"
+   ],
+   "labs": [
+    "Lithium level (0.6–1.2)",
+    "Sodium",
+    "Renal & thyroid function"
+   ],
+   "contra": [
+    "Severe renal or cardiac disease",
+    "Dehydration"
+   ],
+   "teaching": [
+    "Drink plenty of fluids and keep salt intake steady",
+    "Get levels checked as scheduled",
+    "Report vomiting, diarrhea, coarse tremor, or confusion"
+   ],
+   "antidote": "None (dialysis for severe toxicity)",
+   "highalert": false,
+   "prototype": true,
+   "tip": "Lithium level 0.6–1.2 (narrow!). Low sodium/dehydration → toxicity. Coarse tremor = toxic; fine tremor = expected.",
+   "pearl": "**Steady salt & water keep lithium safe.**"
+  },
+  {
+   "id": "haloperidol",
+   "generic": "haloperidol",
+   "brand": "Haldol",
+   "class": "Typical (first-gen) antipsychotic",
+   "system": "Neuro / Psych",
+   "moa": "Blocks dopamine receptors to reduce psychotic symptoms and agitation.",
+   "uses": [
+    "Schizophrenia",
+    "Acute agitation/psychosis"
+   ],
+   "dose": "0.5–5 mg",
+   "route": "PO, IM, IV",
+   "side": [
+    "Sedation",
+    "Dry mouth",
+    "Extrapyramidal symptoms (EPS)"
+   ],
+   "adverse": [
+    "Neuroleptic malignant syndrome (NMS)",
+    "Tardive dyskinesia",
+    "QT prolongation"
+   ],
+   "nursing": [
+    "Watch for EPS (tremor, rigidity, restlessness)",
+    "Watch for NMS: high fever, rigidity, altered mental status, autonomic instability",
+    "Monitor for involuntary movements"
+   ],
+   "labs": [
+    "EPS/AIMS assessment",
+    "Temperature",
+    "ECG (QT)"
+   ],
+   "contra": [
+    "Parkinson's disease",
+    "Severe CNS depression"
+   ],
+   "teaching": [
+    "Report muscle stiffness, high fever, or uncontrollable movements",
+    "Rise slowly",
+    "Avoid alcohol"
+   ],
+   "antidote": "Dantrolene / bromocriptine for NMS",
+   "highalert": false,
+   "prototype": true,
+   "tip": "Antipsychotics: watch EPS and NMS (high fever + rigidity = emergency). Tardive dyskinesia with long-term use.",
+   "pearl": "**NMS = Fever + Rigid + Altered mental + Vitals unstable** → stop drug, emergency."
+  }
+ ]
+}

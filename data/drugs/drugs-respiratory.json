@@ -1,0 +1,135 @@
+{
+ "batch": "respiratory-01",
+ "drugs": [
+  {
+   "id": "albuterol",
+   "generic": "albuterol",
+   "brand": "ProAir, Ventolin",
+   "class": "Short-acting beta-2 agonist (SABA)",
+   "system": "Respiratory",
+   "moa": "Stimulates beta-2 receptors to relax bronchial smooth muscle and open airways quickly.",
+   "uses": [
+    "Acute asthma/bronchospasm",
+    "COPD"
+   ],
+   "dose": "1–2 puffs every 4–6 hr PRN",
+   "route": "Inhaled (MDI, nebulizer)",
+   "side": [
+    "Tremor",
+    "Tachycardia",
+    "Nervousness"
+   ],
+   "adverse": [
+    "Paradoxical bronchospasm",
+    "Dysrhythmias with overuse"
+   ],
+   "nursing": [
+    "It's a RESCUE inhaler for acute symptoms",
+    "Use BEFORE a steroid inhaler",
+    "Overuse can signal poor asthma control"
+   ],
+   "labs": [
+    "Heart rate",
+    "Respiratory status",
+    "Peak flow"
+   ],
+   "contra": [
+    "Hypersensitivity"
+   ],
+   "teaching": [
+    "This is your quick-relief inhaler",
+    "Use it first, then wait a few minutes before the steroid inhaler",
+    "Report needing it more than usual"
+   ],
+   "antidote": "None",
+   "highalert": false,
+   "prototype": true,
+   "tip": "Albuterol = RESCUE (SABA). Use BEFORE the steroid inhaler. Side effects: tremor, tachycardia.",
+   "pearl": "**Bronchodilator first, steroid second.**"
+  },
+  {
+   "id": "fluticasone",
+   "generic": "fluticasone",
+   "brand": "Flovent",
+   "class": "Inhaled corticosteroid (ICS)",
+   "system": "Respiratory",
+   "moa": "Reduces airway inflammation over time to prevent asthma symptoms — a controller, not a rescue drug.",
+   "uses": [
+    "Asthma maintenance",
+    "COPD"
+   ],
+   "dose": "1–2 puffs twice daily",
+   "route": "Inhaled",
+   "side": [
+    "Hoarseness",
+    "Oral thrush (candidiasis)"
+   ],
+   "adverse": [
+    "Rare systemic effects with high doses"
+   ],
+   "nursing": [
+    "It's a daily CONTROLLER, not for acute attacks",
+    "Rinse the mouth after each use to prevent thrush",
+    "Use a spacer to improve delivery"
+   ],
+   "labs": [
+    "Respiratory status",
+    "Oral mucosa"
+   ],
+   "contra": [
+    "Acute asthma attack (won't work fast)",
+    "Untreated oral infection"
+   ],
+   "teaching": [
+    "Use every day, even when you feel well",
+    "Rinse and spit after each use",
+    "This will not stop a sudden attack"
+   ],
+   "antidote": "None",
+   "highalert": false,
+   "prototype": true,
+   "tip": "Inhaled steroids = CONTROLLER (daily). Rinse mouth after use → prevents oral thrush. Not for acute attacks."
+  },
+  {
+   "id": "ipratropium",
+   "generic": "ipratropium",
+   "brand": "Atrovent",
+   "class": "Anticholinergic bronchodilator",
+   "system": "Respiratory",
+   "moa": "Blocks acetylcholine in the airways, causing bronchodilation.",
+   "uses": [
+    "COPD maintenance",
+    "Asthma (adjunct)"
+   ],
+   "dose": "2 puffs 4 times daily",
+   "route": "Inhaled",
+   "side": [
+    "Dry mouth",
+    "Cough"
+   ],
+   "adverse": [
+    "Rare: paradoxical bronchospasm"
+   ],
+   "nursing": [
+    "Not a first-line rescue drug (slower onset)",
+    "Avoid getting spray in the eyes",
+    "Good oral care for dry mouth"
+   ],
+   "labs": [
+    "Respiratory status"
+   ],
+   "contra": [
+    "Peanut/soy allergy (some older formulations)",
+    "Narrow-angle glaucoma (caution)"
+   ],
+   "teaching": [
+    "Rinse mouth/sip water for dryness",
+    "Keep spray out of your eyes"
+   ],
+   "antidote": "None",
+   "highalert": false,
+   "prototype": false,
+   "tip": "Ipratropium: anticholinergic → dry mouth. \"Can't see, can't pee, can't spit, can't poop\" anticholinergic effects."
+  }
+ ]
+}

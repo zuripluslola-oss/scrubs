@@ -1,0 +1,217 @@
+{
+ "batch": "gi-antiinfective-01",
+ "drugs": [
+  {
+   "id": "omeprazole",
+   "generic": "omeprazole",
+   "brand": "Prilosec",
+   "class": "Proton pump inhibitor (PPI)",
+   "system": "GI",
+   "moa": "Blocks the stomach's proton pump, sharply reducing acid production.",
+   "uses": [
+    "GERD",
+    "Peptic ulcer disease",
+    "H. pylori (with antibiotics)"
+   ],
+   "dose": "20–40 mg daily",
+   "route": "PO, IV",
+   "side": [
+    "Headache",
+    "Diarrhea"
+   ],
+   "adverse": [
+    "Long-term: fractures, low magnesium, B12 deficiency, C. diff"
+   ],
+   "nursing": [
+    "Take before meals (30–60 min before breakfast)",
+    "Long-term use has risks — use lowest effective dose"
+   ],
+   "labs": [
+    "Magnesium (long-term)",
+    "Signs of GI bleed"
+   ],
+   "contra": [
+    "Hypersensitivity"
+   ],
+   "teaching": [
+    "Take before your first meal",
+    "Report black stools or trouble swallowing",
+    "Long-term use is monitored"
+   ],
+   "antidote": "None",
+   "highalert": false,
+   "prototype": true,
+   "tip": "PPIs (-prazole): take before meals; long-term → fractures, low Mg²⁺, B12 deficiency, C. diff risk."
+  },
+  {
+   "id": "ondansetron",
+   "generic": "ondansetron",
+   "brand": "Zofran",
+   "class": "Antiemetic (5-HT3 antagonist)",
+   "system": "GI",
+   "moa": "Blocks serotonin receptors in the gut and brain to prevent nausea and vomiting.",
+   "uses": [
+    "Nausea/vomiting (chemo, post-op, pregnancy)"
+   ],
+   "dose": "4–8 mg",
+   "route": "PO, IV, ODT",
+   "side": [
+    "Headache",
+    "Constipation"
+   ],
+   "adverse": [
+    "QT prolongation",
+    "Serotonin syndrome (with other serotonergic drugs)"
+   ],
+   "nursing": [
+    "Monitor QT interval, especially IV",
+    "Assess for constipation"
+   ],
+   "labs": [
+    "ECG (QT)",
+    "Bowel function"
+   ],
+   "contra": [
+    "Congenital long QT syndrome"
+   ],
+   "teaching": [
+    "Report palpitations or fainting",
+    "May cause constipation"
+   ],
+   "antidote": "None",
+   "highalert": false,
+   "prototype": false,
+   "tip": "Ondansetron (-setron): antiemetic, watch QT prolongation. Give slow IV."
+  },
+  {
+   "id": "vancomycin",
+   "generic": "vancomycin",
+   "brand": "Vancocin",
+   "class": "Glycopeptide antibiotic",
+   "system": "Anti-infective",
+   "moa": "Kills gram-positive bacteria (including MRSA) by disrupting cell-wall synthesis.",
+   "uses": [
+    "MRSA",
+    "Serious gram-positive infections",
+    "Oral: C. difficile colitis"
+   ],
+   "dose": "IV dosed by weight/level",
+   "route": "IV (systemic), PO (for C. diff only)",
+   "side": [
+    "Infusion-related flushing if given too fast"
+   ],
+   "adverse": [
+    "Nephrotoxicity",
+    "Ototoxicity",
+    "Vancomycin infusion reaction (\"red man\") if rapid"
+   ],
+   "nursing": [
+    "Infuse slowly over at least 60 minutes to prevent flushing reaction",
+    "Monitor trough levels",
+    "Watch kidney function and hearing"
+   ],
+   "labs": [
+    "Trough level",
+    "BUN/creatinine",
+    "Hearing"
+   ],
+   "contra": [
+    "Hypersensitivity"
+   ],
+   "teaching": [
+    "Report ringing in the ears or decreased urine output"
+   ],
+   "antidote": "None (supportive)",
+   "highalert": false,
+   "prototype": true,
+   "tip": "Vancomycin: nephro- + ototoxic, monitor trough & creatinine, infuse SLOW (≥60 min) to avoid flushing reaction.",
+   "pearl": "**Slow the vanc** — rapid infusion causes the flushing (\"red man\") reaction."
+  },
+  {
+   "id": "acetaminophen",
+   "generic": "acetaminophen",
+   "brand": "Tylenol",
+   "class": "Non-opioid analgesic / antipyretic",
+   "system": "Neuro / Pain",
+   "moa": "Relieves pain and reduces fever centrally; minimal anti-inflammatory effect.",
+   "uses": [
+    "Mild-moderate pain",
+    "Fever"
+   ],
+   "dose": "≤ 3–4 g per day maximum",
+   "route": "PO, IV, rectal",
+   "side": [
+    "Generally well tolerated"
+   ],
+   "adverse": [
+    "Hepatotoxicity (liver failure) with overdose"
+   ],
+   "nursing": [
+    "Do not exceed the daily maximum (watch hidden acetaminophen in combo products)",
+    "Assess for liver disease and alcohol use"
+   ],
+   "labs": [
+    "Liver enzymes",
+    "Total daily dose from all sources"
+   ],
+   "contra": [
+    "Severe liver disease"
+   ],
+   "teaching": [
+    "Never exceed the daily limit",
+    "Check other medicines for acetaminophen",
+    "Limit alcohol"
+   ],
+   "antidote": "Acetylcysteine (Mucomyst)",
+   "highalert": false,
+   "prototype": true,
+   "tip": "Acetaminophen: max ~3–4 g/day, overdose → liver failure, antidote = acetylcysteine. Watch combo products."
+  },
+  {
+   "id": "ketorolac",
+   "generic": "ketorolac",
+   "brand": "Toradol",
+   "class": "NSAID (analgesic)",
+   "system": "Neuro / Pain",
+   "moa": "Blocks prostaglandins to relieve moderate pain and inflammation.",
+   "uses": [
+    "Short-term moderate pain"
+   ],
+   "dose": "Limited to ≤ 5 days total",
+   "route": "PO, IV, IM",
+   "side": [
+    "GI upset",
+    "Dizziness"
+   ],
+   "adverse": [
+    "GI bleeding/ulcers",
+    "Kidney injury",
+    "Bleeding risk"
+   ],
+   "nursing": [
+    "Limit to 5 days (bleeding/renal risk)",
+    "Give with food",
+    "Assess renal function and for GI bleeding"
+   ],
+   "labs": [
+    "Renal function",
+    "Signs of GI bleed",
+    "Hemoglobin"
+   ],
+   "contra": [
+    "Active GI bleed",
+    "Renal impairment",
+    "Peri-operative CABG"
+   ],
+   "teaching": [
+    "Take with food",
+    "Report black stools or stomach pain",
+    "Don't combine with other NSAIDs"
+   ],
+   "antidote": "None (supportive)",
+   "highalert": false,
+   "prototype": false,
+   "tip": "Ketorolac (NSAID): max 5 days, GI bleed + renal risk, take with food. Don't stack NSAIDs."
+  }
+ ]
+}

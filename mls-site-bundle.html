@@ -826,6 +826,73 @@ section { padding-block: clamp(3.6rem, 9vw, 6.5rem); position: relative; }
 .ex-hist-s { font-family: var(--font-display); font-weight: 800; }
 .ex-hist.pass .ex-hist-s { color: var(--teal-600); } .ex-hist.border .ex-hist-s { color: #b47b00; } .ex-hist.fail .ex-hist-s { color: var(--coral-600); }
 
+/* ===== Drug Cards ===== */
+.dc-tools { display: flex; gap: 0.8rem; flex-wrap: wrap; align-items: center; }
+.dc-search { flex: 1; min-width: 220px; display: flex; align-items: center; gap: 0.6rem; background: var(--card); border: 1px solid rgba(30,18,51,0.14); border-radius: 14px; padding: 0.7rem 1rem; box-shadow: var(--shadow-1); }
+.dc-search svg { width: 20px; height: 20px; color: var(--ink-40); flex-shrink: 0; }
+.dc-search input { border: none; background: transparent; font: inherit; color: var(--ink); width: 100%; outline: none; }
+.dc-modes { display: inline-flex; background: var(--card); border: 1px solid rgba(30,18,51,0.12); border-radius: 12px; padding: 0.2rem; }
+.dc-mode { border: none; background: transparent; padding: 0.5rem 1rem; border-radius: 10px; font: inherit; font-weight: 700; font-size: 0.85rem; color: var(--ink-60); cursor: pointer; }
+.dc-mode.on { background: var(--coral-500); color: #fff; }
+.dc-chips { display: flex; gap: 0.5rem; flex-wrap: wrap; margin-top: 1rem; }
+.dc-chip { border: 1px solid rgba(30,18,51,0.14); background: var(--card); color: var(--ink-60); padding: 0.45rem 0.9rem; border-radius: 999px; font: inherit; font-size: 0.8rem; font-weight: 700; cursor: pointer; }
+.dc-chip.on { background: var(--ink); color: #fff; border-color: var(--ink); }
+.dc-count { font-size: 0.85rem; color: var(--ink-40); margin: 0.9rem 0; }
+.dc-count b { color: var(--coral-600); }
+
+.dc-grid { display: grid; gap: 0.7rem; grid-template-columns: 1fr; }
+.dc-grid[hidden], .dc-drill[hidden], .dc-drill-actions[hidden] { display: none; }
+@media (min-width: 760px) { .dc-grid { grid-template-columns: repeat(2, 1fr); align-items: start; } }
+.dc-card { background: var(--card); border: 1px solid rgba(30,18,51,0.09); border-radius: var(--radius); box-shadow: var(--shadow-1); overflow: hidden; }
+.dc-card.is-alert { border-left: 3px solid var(--gold-400); }
+.dc-head { width: 100%; display: flex; align-items: center; flex-wrap: wrap; gap: 0.5rem; padding: 1rem 1.2rem; background: transparent; border: none; cursor: pointer; font: inherit; text-align: left; }
+.dc-head-main { display: flex; flex-direction: column; }
+.dc-generic { font-size: 1.05rem; text-transform: capitalize; }
+.dc-brand { font-size: 0.78rem; color: var(--ink-40); font-style: italic; }
+.dc-class { font-size: 0.72rem; font-weight: 800; letter-spacing: 0.03em; text-transform: uppercase; color: var(--teal-600); background: rgba(42,212,196,0.12); padding: 0.22rem 0.6rem; border-radius: 999px; }
+.dc-badge { font-size: 0.65rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.04em; padding: 0.2rem 0.5rem; border-radius: 999px; }
+.dc-badge.proto { background: rgba(139,92,255,0.14); color: var(--coral-600); }
+.dc-badge.alert { background: rgba(255,194,61,0.2); color: #a06b00; }
+.dc-caret { margin-left: auto; color: var(--ink-40); transition: transform 0.2s ease; }
+.dc-card.open .dc-caret { transform: rotate(180deg); }
+.dc-body { display: none; padding: 0 1.2rem 1.2rem; }
+.dc-card.open .dc-body { display: block; }
+.dc-row { display: grid; grid-template-columns: 1fr; gap: 0.1rem; padding: 0.6rem 0; border-top: 1px solid rgba(30,18,51,0.07); }
+@media (min-width: 460px) { .dc-row { grid-template-columns: 128px 1fr; gap: 0.8rem; } }
+.dc-lbl { font-size: 0.72rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.04em; color: var(--ink-40); padding-top: 0.1rem; }
+.dc-val p { font-size: 0.88rem; } .dc-val i { color: var(--ink-60); }
+.dc-val ul { list-style: none; display: flex; flex-direction: column; gap: 0.2rem; }
+.dc-val li { font-size: 0.86rem; padding-left: 0.9rem; position: relative; }
+.dc-val li::before { content: '·'; position: absolute; left: 0.1rem; color: var(--coral-500); font-weight: 800; }
+.dc-row.adverse .dc-val li::before { content: '!'; color: var(--coral-600); }
+.dc-row.adverse .dc-lbl { color: var(--coral-600); }
+.dc-row.nursing .dc-lbl { color: var(--teal-600); }
+.dc-row.antidote .dc-val p { font-weight: 800; color: var(--teal-600); }
+.dc-tip { margin-top: 0.8rem; font-size: 0.83rem; background: rgba(139,92,255,0.07); border-left: 3px solid var(--coral-500); border-radius: 8px; padding: 0.7rem 0.9rem; }
+.dc-tip.pearl { background: rgba(255,194,61,0.12); border-left-color: var(--gold-400); }
+
+/* drill mode */
+.dc-drill { max-width: 460px; margin-inline: auto; }
+.dc-drill-meta { display: flex; justify-content: space-between; font-size: 0.8rem; color: var(--ink-40); margin-bottom: 0.6rem; }
+.dc-flip { perspective: 1200px; cursor: pointer; }
+.dc-flip-inner { position: relative; transform-style: preserve-3d; transition: transform 0.5s ease; min-height: 260px; }
+.dc-flip.flipped .dc-flip-inner { transform: rotateY(180deg); }
+.dc-flip-face { position: absolute; inset: 0; backface-visibility: hidden; -webkit-backface-visibility: hidden; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; padding: 1.6rem; border-radius: var(--radius); box-shadow: var(--shadow-2); }
+.dc-front { background: linear-gradient(155deg, var(--coral-500), var(--coral-600)); color: #fff; }
+.dc-flip-hint { font-size: 0.8rem; opacity: 0.9; }
+.dc-flip-name { font-family: var(--font-display); font-size: 2rem; margin: 0.6rem 0 0.2rem; text-transform: capitalize; }
+.dc-front .dc-brand { color: rgba(255,255,255,0.85); }
+.dc-flip-tap { margin-top: 1.2rem; font-size: 0.78rem; opacity: 0.85; border: 1px solid rgba(255,255,255,0.5); padding: 0.3rem 0.8rem; border-radius: 999px; }
+.dc-back { background: var(--card); transform: rotateY(180deg); justify-content: flex-start; align-items: stretch; text-align: left; overflow-y: auto; }
+.dc-flip-moa { font-size: 0.9rem; margin: 0.7rem 0; }
+.dc-flip-key { background: rgba(42,212,196,0.1); border-radius: 10px; padding: 0.7rem 0.9rem; }
+.dc-flip-key b { font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.04em; color: var(--teal-600); }
+.dc-flip-key p { font-size: 0.86rem; margin-top: 0.2rem; }
+.dc-flip-anti { margin-top: 0.7rem; font-size: 0.85rem; } .dc-flip-anti b { color: var(--coral-600); }
+.dc-drill-actions { display: flex; gap: 0.7rem; margin-top: 1rem; }
+.dc-drill-actions .btn { flex: 1; }
+.dc-empty { text-align: center; padding: 2rem; color: var(--ink-60); }
+
 /* courses page wide cards */
 .two-up { display: grid; gap: 1rem; grid-template-columns: 1fr; }
 @media (min-width: 720px) { .two-up { grid-template-columns: repeat(2, 1fr); } }
@@ -1773,6 +1840,7 @@ body.mls-paid .gate { display: none; }
           <li><a href="qbank.html">Question Bank <small>Practice with rationales &amp; answer stats</small></a></li>
           <li><a href="tests.html">Tests &amp; Exams <small>Pop quiz, mock NCLEX &amp; specialty exams</small></a></li>
           <li><a href="flashcards.html">Flashcards &amp; Games <small>Flip cards, quizzes, match &amp; speed rounds</small></a></li>
+          <li><a href="drugs.html">Drug Cards <small>Pharmacology library &middot; drill by system</small></a></li>
           <li><a href="study-plan.html">Study Plan Calendar <small>Your day-by-day plan to test day</small></a></li>
           <li><a href="nclex-guide.html">Free Study Guide <small>How to pass &middot; for nurses, by nurses</small></a></li>
           <li><a href="course-lab-values.html">Free NCLEX Practice <small>Start with a free audio scene</small></a></li>
@@ -3976,6 +4044,46 @@ body.mls-paid .gate { display: none; }
     <div class="wrap" style="text-align:center;">
       <div class="section-head fade-up" style="margin-inline:auto;"><span class="lesson-label" style="color:var(--teal-600);">Stuck on a term?</span><h2>Esi can explain <span class="em">anything</span>.</h2><p style="margin-inline:auto;">Every definition here is free. For a term walked through your way &mdash; with examples and a quick check &mdash; Esi is one tap away.</p></div>
       <a class="btn btn-coral" href="esi.html">Meet Esi</a>
+    </div>
+  </section>
+
+</div>
+<div class="mls-route" data-route="drugs.html" hidden>
+  <div class="page-hero">
+    <div class="wrap inner">
+      <span class="lesson-label" style="color:var(--gold-400);">Drug Cards</span>
+      <h1 style="margin-top:0.6rem;">Every drug, the <span class="em">same way</span>.</h1>
+      <p>Pharmacology is the #1 place NCLEX trips nurses up. Each card gives you one medication in the exact same shape &mdash; class, how it works, uses, side effects, the nursing considerations that matter, and the antidote &mdash; so your brain can pattern-match on test day. Search it, filter by body system, then <b>drill</b> it like flashcards.</p>
+    </div>
+  </div>
+
+  <section style="background:var(--bg);">
+    <div class="wrap">
+      <div class="drugcards" data-drugs-total="30">
+        <script type="application/json" data-drugs>[{"id": "acetaminophen", "generic": "acetaminophen", "brand": "Tylenol", "class": "Non-opioid analgesic / antipyretic", "system": "Neuro / Pain", "moa": "Relieves pain and reduces fever centrally; minimal anti-inflammatory effect.", "uses": ["Mild-moderate pain", "Fever"], "dose": "≤ 3–4 g per day maximum", "route": "PO, IV, rectal", "side": ["Generally well tolerated"], "adverse": ["Hepatotoxicity (liver failure) with overdose"], "nursing": ["Do not exceed the daily maximum (watch hidden acetaminophen in combo products)", "Assess for liver disease and alcohol use"], "labs": ["Liver enzymes", "Total daily dose from all sources"], "contra": ["Severe liver disease"], "teaching": ["Never exceed the daily limit", "Check other medicines for acetaminophen", "Limit alcohol"], "antidote": "Acetylcysteine (Mucomyst)", "highalert": false, "prototype": true, "tip": "Acetaminophen: max ~3–4 g/day, overdose → liver failure, antidote = acetylcysteine. Watch combo products."}, {"id": "albuterol", "generic": "albuterol", "brand": "ProAir, Ventolin", "class": "Short-acting beta-2 agonist (SABA)", "system": "Respiratory", "moa": "Stimulates beta-2 receptors to relax bronchial smooth muscle and open airways quickly.", "uses": ["Acute asthma/bronchospasm", "COPD"], "dose": "1–2 puffs every 4–6 hr PRN", "route": "Inhaled (MDI, nebulizer)", "side": ["Tremor", "Tachycardia", "Nervousness"], "adverse": ["Paradoxical bronchospasm", "Dysrhythmias with overuse"], "nursing": ["It's a RESCUE inhaler for acute symptoms", "Use BEFORE a steroid inhaler", "Overuse can signal poor asthma control"], "labs": ["Heart rate", "Respiratory status", "Peak flow"], "contra": ["Hypersensitivity"], "teaching": ["This is your quick-relief inhaler", "Use it first, then wait a few minutes before the steroid inhaler", "Report needing it more than usual"], "antidote": "None", "highalert": false, "prototype": true, "tip": "Albuterol = RESCUE (SABA). Use BEFORE the steroid inhaler. Side effects: tremor, tachycardia.", "pearl": "**Bronchodilator first, steroid second.**"}, {"id": "atorvastatin", "generic": "atorvastatin", "brand": "Lipitor", "class": "Statin (HMG-CoA reductase inhibitor)", "system": "Cardiovascular", "moa": "Blocks cholesterol synthesis in the liver, lowering LDL cholesterol.", "uses": ["High cholesterol", "Cardiovascular risk reduction"], "dose": "10–80 mg daily", "route": "PO", "side": ["Headache", "GI upset"], "adverse": ["Myopathy / rhabdomyolysis", "Liver injury"], "nursing": ["Report unexplained muscle pain, tenderness, or weakness", "Monitor liver enzymes", "Usually taken in the evening"], "labs": ["Liver enzymes (AST/ALT)", "Lipid panel", "CK if muscle pain"], "contra": ["Active liver disease", "Pregnancy"], "teaching": ["Report muscle pain or dark urine (rhabdomyolysis)", "Avoid grapefruit juice", "Take in the evening"], "antidote": "None (stop drug)", "highalert": false, "prototype": true, "tip": "Statins: report muscle pain (rhabdomyolysis), watch liver enzymes, avoid grapefruit juice.", "pearl": "**Statins → muscle \u0026 liver.** Muscle pain + dark urine = stop and report."}, {"id": "digoxin", "generic": "digoxin", "brand": "Lanoxin", "class": "Cardiac glycoside", "system": "Cardiovascular", "moa": "Increases the force of heart contraction and slows the heart rate.", "uses": ["Heart failure", "Atrial fibrillation"], "dose": "0.125–0.25 mg daily (narrow range)", "route": "PO, IV", "side": ["Nausea", "Fatigue"], "adverse": ["Digoxin toxicity", "Life-threatening dysrhythmias", "Yellow-green visual halos"], "nursing": ["Check apical pulse for a full minute; hold if \u003c 60", "Assess for toxicity (nausea, anorexia, visual halos)", "Low potassium increases toxicity risk"], "labs": ["Digoxin level (0.5–2 ng/mL)", "Potassium"], "contra": ["Ventricular dysrhythmias", "HR \u003c 60"], "teaching": ["Take your pulse before each dose", "Report nausea, loss of appetite, or yellow-green vision", "Do not double doses"], "antidote": "Digoxin immune Fab (DigiFab)", "highalert": false, "prototype": true, "tip": "Dig toxicity: nausea, anorexia, yellow-green halos. Low K⁺ raises the risk. Hold if apical HR \u003c 60.", "pearl": "**Dig level 0.5–2; hold if pulse \u003c 60.** Antidote = Digibind (Fab)."}, {"id": "fluticasone", "generic": "fluticasone", "brand": "Flovent", "class": "Inhaled corticosteroid (ICS)", "system": "Respiratory", "moa": "Reduces airway inflammation over time to prevent asthma symptoms — a controller, not a rescue drug.", "uses": ["Asthma maintenance", "COPD"], "dose": "1–2 puffs twice daily", "route": "Inhaled", "side": ["Hoarseness", "Oral thrush (candidiasis)"], "adverse": ["Rare systemic effects with high doses"], "nursing": ["It's a daily CONTROLLER, not for acute attacks", "Rinse the mouth after each use to prevent thrush", "Use a spacer to improve delivery"], "labs": ["Respiratory status", "Oral mucosa"], "contra": ["Acute asthma attack (won't work fast)", "Untreated oral infection"], "teaching": ["Use every day, even when you feel well", "Rinse and spit after each use", "This will not stop a sudden attack"], "antidote": "None", "highalert": false, "prototype": true, "tip": "Inhaled steroids = CONTROLLER (daily). Rinse mouth after use → prevents oral thrush. Not for acute attacks."}, {"id": "furosemide", "generic": "furosemide", "brand": "Lasix", "class": "Loop diuretic", "system": "Cardiovascular", "moa": "Blocks sodium and chloride reabsorption in the loop of Henle, causing rapid, powerful diuresis.", "uses": ["Pulmonary edema", "Heart failure", "Hypertension", "Edema"], "dose": "20–80 mg; titrated to response", "route": "PO, IV, IM", "side": ["Increased urination", "Dizziness", "Orthostatic hypotension"], "adverse": ["Hypokalemia", "Dehydration", "Ototoxicity with rapid IV push"], "nursing": ["Give IV slowly to protect hearing", "Monitor daily weight and I\u0026O", "Watch for signs of low potassium", "Give early in the day to avoid nighttime urination"], "labs": ["Potassium", "Sodium", "BUN/creatinine"], "contra": ["Anuria", "Severe electrolyte depletion", "Sulfa allergy (caution)"], "teaching": ["Change positions slowly", "Eat potassium-rich foods (bananas, oranges) unless told otherwise", "Report muscle cramps or weakness"], "antidote": "None (supportive care)", "highalert": false, "prototype": true, "tip": "Loop \u0026 thiazide diuretics WASTE potassium; watch for hypokalemia. Give IV push slowly (ototoxicity).", "pearl": "**\"Lasix Loses potassium.\"** Push slow to save the ears."}, {"id": "haloperidol", "generic": "haloperidol", "brand": "Haldol", "class": "Typical (first-gen) antipsychotic", "system": "Neuro / Psych", "moa": "Blocks dopamine receptors to reduce psychotic symptoms and agitation.", "uses": ["Schizophrenia", "Acute agitation/psychosis"], "dose": "0.5–5 mg", "route": "PO, IM, IV", "side": ["Sedation", "Dry mouth", "Extrapyramidal symptoms (EPS)"], "adverse": ["Neuroleptic malignant syndrome (NMS)", "Tardive dyskinesia", "QT prolongation"], "nursing": ["Watch for EPS (tremor, rigidity, restlessness)", "Watch for NMS: high fever, rigidity, altered mental status, autonomic instability", "Monitor for involuntary movements"], "labs": ["EPS/AIMS assessment", "Temperature", "ECG (QT)"], "contra": ["Parkinson's disease", "Severe CNS depression"], "teaching": ["Report muscle stiffness, high fever, or uncontrollable movements", "Rise slowly", "Avoid alcohol"], "antidote": "Dantrolene / bromocriptine for NMS", "highalert": false, "prototype": true, "tip": "Antipsychotics: watch EPS and NMS (high fever + rigidity = emergency). Tardive dyskinesia with long-term use.", "pearl": "**NMS = Fever + Rigid + Altered mental + Vitals unstable** → stop drug, emergency."}, {"id": "heparin", "generic": "heparin", "brand": "(unfractionated heparin)", "class": "Anticoagulant", "system": "Cardiovascular", "moa": "Activates antithrombin, rapidly inhibiting thrombin and clot formation.", "uses": ["DVT/PE treatment and prevention", "Acute coronary syndrome"], "dose": "Weight-based; titrated to aPTT", "route": "IV, subcutaneous", "side": ["Injection-site bruising"], "adverse": ["Bleeding", "Heparin-induced thrombocytopenia (HIT)"], "nursing": ["Monitor aPTT (therapeutic ~1.5–2.5x control)", "Never aspirate or massage SC injections", "Watch platelet count for HIT"], "labs": ["aPTT", "Platelet count", "Hemoglobin/hematocrit"], "contra": ["Active bleeding", "Severe thrombocytopenia", "History of HIT"], "teaching": ["Report bleeding or unusual bruising", "Injection-site rotation for SC doses"], "antidote": "Protamine sulfate", "highalert": true, "prototype": true, "tip": "Heparin → monitor aPTT, antidote protamine. Watch platelets for HIT. Give SC deep, don't rub.", "pearl": "**Heparin = aPTT + Protamine.** Warfarin = PT/INR + vitamin K."}, {"id": "ipratropium", "generic": "ipratropium", "brand": "Atrovent", "class": "Anticholinergic bronchodilator", "system": "Respiratory", "moa": "Blocks acetylcholine in the airways, causing bronchodilation.", "uses": ["COPD maintenance", "Asthma (adjunct)"], "dose": "2 puffs 4 times daily", "route": "Inhaled", "side": ["Dry mouth", "Cough"], "adverse": ["Rare: paradoxical bronchospasm"], "nursing": ["Not a first-line rescue drug (slower onset)", "Avoid getting spray in the eyes", "Good oral care for dry mouth"], "labs": ["Respiratory status"], "contra": ["Peanut/soy allergy (some older formulations)", "Narrow-angle glaucoma (caution)"], "teaching": ["Rinse mouth/sip water for dryness", "Keep spray out of your eyes"], "antidote": "None", "highalert": false, "prototype": false, "tip": "Ipratropium: anticholinergic → dry mouth. \"Can't see, can't pee, can't spit, can't poop\" anticholinergic effects."}, {"id": "ketorolac", "generic": "ketorolac", "brand": "Toradol", "class": "NSAID (analgesic)", "system": "Neuro / Pain", "moa": "Blocks prostaglandins to relieve moderate pain and inflammation.", "uses": ["Short-term moderate pain"], "dose": "Limited to ≤ 5 days total", "route": "PO, IV, IM", "side": ["GI upset", "Dizziness"], "adverse": ["GI bleeding/ulcers", "Kidney injury", "Bleeding risk"], "nursing": ["Limit to 5 days (bleeding/renal risk)", "Give with food", "Assess renal function and for GI bleeding"], "labs": ["Renal function", "Signs of GI bleed", "Hemoglobin"], "contra": ["Active GI bleed", "Renal impairment", "Peri-operative CABG"], "teaching": ["Take with food", "Report black stools or stomach pain", "Don't combine with other NSAIDs"], "antidote": "None (supportive)", "highalert": false, "prototype": false, "tip": "Ketorolac (NSAID): max 5 days, GI bleed + renal risk, take with food. Don't stack NSAIDs."}, {"id": "levothyroxine", "generic": "levothyroxine", "brand": "Synthroid", "class": "Thyroid hormone replacement", "system": "Endocrine", "moa": "Replaces thyroid hormone (T4) in hypothyroidism, restoring normal metabolism.", "uses": ["Hypothyroidism", "Myxedema"], "dose": "Individualized (mcg)", "route": "PO, IV", "side": ["Usually none at correct dose"], "adverse": ["Signs of hyperthyroidism if overdosed (palpitations, weight loss, insomnia)"], "nursing": ["Give in the morning on an empty stomach", "Full effect takes weeks", "Lifelong therapy"], "labs": ["TSH", "Free T4"], "contra": ["Recent MI", "Untreated adrenal insufficiency", "Thyrotoxicosis"], "teaching": ["Take on an empty stomach, same time each morning", "Do not stop — it's lifelong", "Report chest pain or palpitations"], "antidote": "None", "highalert": false, "prototype": true, "tip": "Levothyroxine: morning, empty stomach, lifelong. Overdose = hyperthyroid signs (palpitations, weight loss)."}, {"id": "lisinopril", "generic": "lisinopril", "brand": "Prinivil, Zestril", "class": "ACE inhibitor", "system": "Cardiovascular", "moa": "Blocks conversion of angiotensin I to II, lowering vasoconstriction and aldosterone → lower blood pressure.", "uses": ["Hypertension", "Heart failure", "Kidney protection in diabetes"], "dose": "10–40 mg daily", "route": "PO", "side": ["Dry, persistent cough", "Dizziness", "Headache"], "adverse": ["Angioedema", "Hyperkalemia", "First-dose hypotension"], "nursing": ["Monitor for swelling of face/lips (angioedema)", "Assess blood pressure", "Watch potassium"], "labs": ["Potassium", "BUN/creatinine", "Blood pressure"], "contra": ["Pregnancy", "History of angioedema", "Bilateral renal artery stenosis"], "teaching": ["Report a persistent dry cough or any facial/tongue swelling", "Rise slowly", "Avoid salt substitutes"], "antidote": "None (supportive)", "highalert": false, "prototype": true, "tip": "ACE inhibitors (-pril): dry Cough, Angioedema, high potassium (K⁺), Cough. Pregnancy category = avoid.", "pearl": "**ACE = \"CAPS\":** Cough, Angioedema, Pregnancy risk, hyperkalemia (potassium up)."}, {"id": "lithium", "generic": "lithium", "brand": "Lithobid", "class": "Mood stabilizer", "system": "Neuro / Psych", "moa": "Stabilizes mood; exact mechanism unclear. Narrow therapeutic range.", "uses": ["Bipolar disorder (mania)"], "dose": "Individualized to level (0.6–1.2 mEq/L)", "route": "PO", "side": ["Fine tremor", "Increased thirst/urination", "Weight gain"], "adverse": ["Lithium toxicity (coarse tremor, vomiting, confusion, seizures)"], "nursing": ["Maintain steady sodium and fluid intake (low sodium/dehydration raises levels)", "Monitor lithium levels regularly", "Teach signs of toxicity"], "labs": ["Lithium level (0.6–1.2)", "Sodium", "Renal \u0026 thyroid function"], "contra": ["Severe renal or cardiac disease", "Dehydration"], "teaching": ["Drink plenty of fluids and keep salt intake steady", "Get levels checked as scheduled", "Report vomiting, diarrhea, coarse tremor, or confusion"], "antidote": "None (dialysis for severe toxicity)", "highalert": false, "prototype": true, "tip": "Lithium level 0.6–1.2 (narrow!). Low sodium/dehydration → toxicity. Coarse tremor = toxic; fine tremor = expected.", "pearl": "**Steady salt \u0026 water keep lithium safe.**"}, {"id": "lorazepam", "generic": "lorazepam", "brand": "Ativan", "class": "Benzodiazepine", "system": "Neuro / Psych", "moa": "Enhances GABA in the CNS, producing sedation, anti-anxiety, and anticonvulsant effects.", "uses": ["Anxiety", "Status epilepticus/seizures", "Alcohol withdrawal", "Sedation"], "dose": "0.5–2 mg", "route": "PO, IV, IM", "side": ["Drowsiness", "Dizziness", "Confusion (especially older adults)"], "adverse": ["Respiratory depression", "Dependence", "Paradoxical agitation"], "nursing": ["Monitor respiratory status with IV use", "Fall precautions", "Avoid abrupt discontinuation"], "labs": ["Respiratory rate", "Level of consciousness"], "contra": ["Severe respiratory depression", "Narrow-angle glaucoma"], "teaching": ["Avoid alcohol and other CNS depressants", "Don't stop suddenly", "Change positions slowly"], "antidote": "Flumazenil", "highalert": true, "prototype": true, "tip": "Benzodiazepines (-lam/-pam): CNS + respiratory depression, antidote = flumazenil. Don't stop abruptly."}, {"id": "losartan", "generic": "losartan", "brand": "Cozaar", "class": "ARB (angiotensin II receptor blocker)", "system": "Cardiovascular", "moa": "Blocks angiotensin II at its receptor, causing vasodilation and lower blood pressure — without the bradykinin cough.", "uses": ["Hypertension", "Heart failure", "Diabetic kidney protection"], "dose": "25–100 mg daily", "route": "PO", "side": ["Dizziness", "Fatigue", "Headache"], "adverse": ["Angioedema (rare)", "Hyperkalemia", "Hypotension"], "nursing": ["Often used when an ACE inhibitor causes cough", "Monitor blood pressure and potassium"], "labs": ["Potassium", "Renal function", "Blood pressure"], "contra": ["Pregnancy", "Bilateral renal artery stenosis"], "teaching": ["Rise slowly", "Report swelling", "Avoid salt substitutes"], "antidote": "None (supportive)", "highalert": false, "prototype": false, "tip": "ARBs (-sartan) are the go-to switch when ACE inhibitors cause a dry cough — no bradykinin, no cough."}, {"id": "metformin", "generic": "metformin", "brand": "Glucophage", "class": "Biguanide (oral antidiabetic)", "system": "Endocrine", "moa": "Decreases glucose production by the liver and improves insulin sensitivity — does not cause hypoglycemia alone.", "uses": ["Type 2 diabetes", "Prediabetes"], "dose": "500–2000 mg daily in divided doses", "route": "PO", "side": ["GI upset", "Diarrhea", "Metallic taste"], "adverse": ["Lactic acidosis (rare but serious)"], "nursing": ["Hold before and 48 hr after iodinated IV contrast (lactic acidosis risk)", "Take with meals to reduce GI upset", "Does not itself cause hypoglycemia"], "labs": ["Renal function", "Blood glucose", "A1C"], "contra": ["Renal impairment", "Metabolic acidosis"], "teaching": ["Take with food", "Hold around contrast dye/imaging as instructed", "Report muscle pain, trouble breathing, or unusual fatigue"], "antidote": "None (supportive; treat acidosis)", "highalert": false, "prototype": true, "tip": "Metformin: hold before/after IV contrast (lactic acidosis). Take with food. No hypoglycemia on its own.", "pearl": "**Hold metformin around contrast dye** — lactic acidosis risk."}, {"id": "metoprolol", "generic": "metoprolol", "brand": "Lopressor, Toprol-XL", "class": "Beta-blocker (cardioselective)", "system": "Cardiovascular", "moa": "Blocks beta-1 receptors in the heart, lowering heart rate, contractility, and blood pressure.", "uses": ["Hypertension", "Angina", "Heart failure", "Post–myocardial infarction"], "dose": "25–100 mg; varies by form", "route": "PO, IV", "side": ["Fatigue", "Dizziness", "Bradycardia"], "adverse": ["Symptomatic bradycardia", "Hypotension", "Masking of hypoglycemia symptoms"], "nursing": ["Hold and notify provider if HR \u003c 60 or SBP low per parameters", "Do not stop abruptly (rebound)", "Assess apical pulse before giving"], "labs": ["Heart rate", "Blood pressure", "Blood glucose in diabetics"], "contra": ["Severe bradycardia", "Heart block", "Decompensated heart failure"], "teaching": ["Check your pulse before taking", "Never stop suddenly", "Rise slowly", "Diabetics: a fast heartbeat may not warn you of low sugar"], "antidote": "Glucagon / atropine for overdose", "highalert": false, "prototype": true, "tip": "Beta-blockers (-olol): hold if HR \u003c 60. Never stop abruptly (rebound tachycardia/angina). Mask hypoglycemia.", "pearl": "**\"-olol slows it all.\"** Check the apical pulse first."}, {"id": "morphine", "generic": "morphine", "brand": "MS Contin", "class": "Opioid analgesic", "system": "Neuro / Pain", "moa": "Binds opioid receptors in the CNS to relieve moderate-to-severe pain.", "uses": ["Severe pain", "Acute MI pain", "Palliative care"], "dose": "Individualized", "route": "PO, IV, IM, SC", "side": ["Constipation", "Sedation", "Nausea"], "adverse": ["Respiratory depression", "Hypotension", "Dependence"], "nursing": ["Assess respiratory rate before and after (hold if RR \u003c 12)", "Have naloxone available", "Start a bowel regimen to prevent constipation"], "labs": ["Respiratory rate", "Pain score", "Blood pressure", "Sedation level"], "contra": ["Respiratory depression", "Paralytic ileus", "Severe hypotension"], "teaching": ["Report slow/shallow breathing", "Prevent constipation with fluids and fiber", "Do not drive while sedated"], "antidote": "Naloxone (Narcan)", "highalert": true, "prototype": true, "tip": "Opioids: watch RESPIRATORY RATE (hold if \u003c12), cause constipation, antidote = naloxone. Have Narcan ready.", "pearl": "**Opioids → respiratory depression + constipation.** Reverse with naloxone."}, {"id": "naloxone", "generic": "naloxone", "brand": "Narcan", "class": "Opioid antagonist", "system": "Neuro / Pain", "moa": "Displaces opioids from their receptors, rapidly reversing respiratory depression and sedation.", "uses": ["Opioid overdose / respiratory depression"], "dose": "0.4–2 mg; repeat as needed", "route": "IV, IM, SC, intranasal", "side": ["Acute opioid withdrawal (agitation, sweating, nausea)"], "adverse": ["Recurrence of respiratory depression as it wears off"], "nursing": ["Short duration — the opioid may outlast it, so keep monitoring", "Reassess respiratory status frequently", "May need repeat doses"], "labs": ["Respiratory rate", "Level of consciousness"], "contra": ["Hypersensitivity"], "teaching": ["The person must be watched after a dose — it can wear off before the opioid does"], "antidote": "N/A (this IS the antidote)", "highalert": false, "prototype": false, "tip": "Naloxone reverses opioids but is SHORT-acting — the opioid can outlast it. Keep monitoring; repeat if needed."}, {"id": "nitroglycerin", "generic": "nitroglycerin", "brand": "Nitrostat", "class": "Nitrate (vasodilator)", "system": "Cardiovascular", "moa": "Dilates blood vessels (especially veins), reducing cardiac workload and oxygen demand; relieves angina.", "uses": ["Angina", "Acute chest pain", "Heart failure"], "dose": "0.4 mg SL every 5 min x3 for chest pain", "route": "SL, transdermal, IV, spray", "side": ["Headache", "Flushing", "Dizziness"], "adverse": ["Severe hypotension", "Reflex tachycardia"], "nursing": ["For chest pain: 1 tablet SL, repeat every 5 min up to 3, call 911 if unrelieved", "Sit or lie down before taking", "Store SL tablets in the original dark bottle"], "labs": ["Blood pressure", "Heart rate"], "contra": ["Severe hypotension", "Use of PDE-5 inhibitors (sildenafil) within 24–48 hr"], "teaching": ["Sit down before taking (may cause dizziness)", "A headache is expected", "Never combine with erectile-dysfunction drugs", "Replace tablets every 6 months"], "antidote": "None (supportive; IV fluids for hypotension)", "highalert": false, "prototype": true, "tip": "SL nitro: 1 tab q5min x3, sit down first, expect headache. NEVER with sildenafil (fatal hypotension).", "pearl": "**Nitro dilates — sit before you take it.** No ED drugs within 24 hr."}, {"id": "insulin-nph", "generic": "NPH insulin", "brand": "Humulin N, Novolin N", "class": "Intermediate-acting insulin", "system": "Endocrine", "moa": "Provides a longer, intermediate duration of glucose control.", "uses": ["Diabetes mellitus (basal coverage)"], "dose": "Individualized", "route": "SC only", "side": ["Hypoglycemia"], "adverse": ["Severe hypoglycemia"], "nursing": ["Cloudy suspension — gently roll to mix, never shake", "Peak 4–12 hr — teach the client when hypoglycemia is most likely", "Never give IV"], "labs": ["Blood glucose"], "contra": ["Hypoglycemia"], "teaching": ["Know your insulin's peak time", "Carry a fast sugar source", "Gently roll the vial to mix"], "antidote": "Dextrose / glucagon", "highalert": true, "prototype": false, "tip": "NPH is cloudy, SC only, peaks 4–12 hr. Roll to mix, never shake. Never IV.", "pearl": "**NPH = No IV, cloudy, iNtermediate.**"}, {"id": "omeprazole", "generic": "omeprazole", "brand": "Prilosec", "class": "Proton pump inhibitor (PPI)", "system": "GI", "moa": "Blocks the stomach's proton pump, sharply reducing acid production.", "uses": ["GERD", "Peptic ulcer disease", "H. pylori (with antibiotics)"], "dose": "20–40 mg daily", "route": "PO, IV", "side": ["Headache", "Diarrhea"], "adverse": ["Long-term: fractures, low magnesium, B12 deficiency, C. diff"], "nursing": ["Take before meals (30–60 min before breakfast)", "Long-term use has risks — use lowest effective dose"], "labs": ["Magnesium (long-term)", "Signs of GI bleed"], "contra": ["Hypersensitivity"], "teaching": ["Take before your first meal", "Report black stools or trouble swallowing", "Long-term use is monitored"], "antidote": "None", "highalert": false, "prototype": true, "tip": "PPIs (-prazole): take before meals; long-term → fractures, low Mg²⁺, B12 deficiency, C. diff risk."}, {"id": "ondansetron", "generic": "ondansetron", "brand": "Zofran", "class": "Antiemetic (5-HT3 antagonist)", "system": "GI", "moa": "Blocks serotonin receptors in the gut and brain to prevent nausea and vomiting.", "uses": ["Nausea/vomiting (chemo, post-op, pregnancy)"], "dose": "4–8 mg", "route": "PO, IV, ODT", "side": ["Headache", "Constipation"], "adverse": ["QT prolongation", "Serotonin syndrome (with other serotonergic drugs)"], "nursing": ["Monitor QT interval, especially IV", "Assess for constipation"], "labs": ["ECG (QT)", "Bowel function"], "contra": ["Congenital long QT syndrome"], "teaching": ["Report palpitations or fainting", "May cause constipation"], "antidote": "None", "highalert": false, "prototype": false, "tip": "Ondansetron (-setron): antiemetic, watch QT prolongation. Give slow IV."}, {"id": "phenytoin", "generic": "phenytoin", "brand": "Dilantin", "class": "Anticonvulsant", "system": "Neuro / Psych", "moa": "Stabilizes neuronal membranes and limits seizure spread.", "uses": ["Seizure disorders", "Status epilepticus"], "dose": "Individualized to level (therapeutic 10–20 mcg/mL)", "route": "PO, IV", "side": ["Gingival hyperplasia", "Drowsiness", "Nystagmus"], "adverse": ["Stevens–Johnson syndrome", "Blood dyscrasias", "IV: hypotension/dysrhythmias if pushed fast"], "nursing": ["Give IV slowly with normal saline only (precipitates in dextrose)", "Meticulous oral care for gum overgrowth", "Take consistently; don't stop abruptly"], "labs": ["Phenytoin level (10–20)", "CBC", "Oral exam"], "contra": ["Sinus bradycardia", "Heart block"], "teaching": ["Brush and floss well; see your dentist regularly", "Never stop suddenly", "Report rash immediately"], "antidote": "None (supportive)", "highalert": false, "prototype": true, "tip": "Phenytoin: level 10–20, gingival hyperplasia (oral care!), IV in NS only \u0026 slow, watch for rash (SJS).", "pearl": "**Dilantin → Dental care** (gum overgrowth). Level 10–20."}, {"id": "prednisone", "generic": "prednisone", "brand": "Deltasone", "class": "Corticosteroid (glucocorticoid)", "system": "Endocrine", "moa": "Suppresses inflammation and the immune response.", "uses": ["Inflammatory and autoimmune conditions", "Asthma/COPD flares", "Transplant"], "dose": "Varies widely; tapered", "route": "PO", "side": ["Increased appetite", "Mood changes", "Insomnia"], "adverse": ["Hyperglycemia", "Immunosuppression/infection", "Adrenal crisis if stopped abruptly", "Osteoporosis with long-term use"], "nursing": ["Never stop abruptly — must taper", "Monitor blood glucose and for infection", "Take with food"], "labs": ["Blood glucose", "Weight", "Blood pressure", "Signs of infection"], "contra": ["Systemic fungal infection", "Live vaccines during therapy"], "teaching": ["Do not stop suddenly — taper as directed", "Take with food", "Report signs of infection", "Blood sugar may rise"], "antidote": "None", "highalert": false, "prototype": true, "tip": "Steroids: taper (never stop abruptly → adrenal crisis), raise glucose, mask/increase infection, take with food.", "pearl": "**Steroids = Sugar up, Susceptible to infection, Swelling, Slow tapering.**"}, {"id": "insulin-regular", "generic": "regular insulin", "brand": "Humulin R, Novolin R", "class": "Short-acting insulin", "system": "Endocrine", "moa": "Replaces or supplements insulin to move glucose into cells and lower blood sugar.", "uses": ["Diabetes mellitus", "Diabetic ketoacidosis (IV)", "Hyperkalemia"], "dose": "Individualized by blood glucose", "route": "SC, IV (only regular can go IV)", "side": ["Hypoglycemia", "Injection-site reactions"], "adverse": ["Severe hypoglycemia", "Hypokalemia"], "nursing": ["Onset ~30 min, peak 2–4 hr — watch for hypoglycemia at the peak", "Only regular insulin may be given IV", "When mixing, draw up regular (clear) before NPH (cloudy)"], "labs": ["Blood glucose", "Potassium"], "contra": ["Hypoglycemia"], "teaching": ["Recognize hypoglycemia: shaky, sweaty, confused → 15 g fast carbs", "Rotate injection sites", "Eat after dosing to match the peak"], "antidote": "Dextrose (D50) / glucagon", "highalert": true, "prototype": true, "tip": "Regular insulin: peak 2–4 hr (hypoglycemia risk), ONLY insulin given IV. Clear before cloudy when mixing.", "pearl": "**\"Clear before cloudy.\"** Regular (clear) is drawn up first; only regular goes IV."}, {"id": "sertraline", "generic": "sertraline", "brand": "Zoloft", "class": "SSRI antidepressant", "system": "Neuro / Psych", "moa": "Increases serotonin availability in the brain to improve mood and anxiety.", "uses": ["Depression", "Anxiety disorders", "OCD", "PTSD"], "dose": "25–200 mg daily", "route": "PO", "side": ["Nausea", "Insomnia", "Sexual dysfunction", "Headache"], "adverse": ["Serotonin syndrome", "Increased suicidal thoughts early in treatment (esp. young adults)"], "nursing": ["Full effect takes 2–6 weeks", "Monitor mood and suicide risk early on", "Don't combine with MAOIs or other serotonergic drugs"], "labs": ["Mood/suicide risk", "Signs of serotonin syndrome"], "contra": ["Concurrent MAOI use"], "teaching": ["It takes weeks to work — keep taking it", "Report worsening mood or thoughts of self-harm", "Don't stop abruptly (discontinuation symptoms)"], "antidote": "None (stop drug; supportive)", "highalert": false, "prototype": true, "tip": "SSRIs: 2–6 weeks to work, monitor suicide risk early, watch serotonin syndrome, no MAOIs.", "pearl": "**Serotonin syndrome:** high fever, agitation, tremor, sweating, hyperreflexia."}, {"id": "spironolactone", "generic": "spironolactone", "brand": "Aldactone", "class": "Potassium-sparing diuretic", "system": "Cardiovascular", "moa": "Blocks aldosterone, so the body excretes sodium and water while keeping potassium.", "uses": ["Heart failure", "Hypertension", "Edema", "Hyperaldosteronism"], "dose": "25–100 mg daily", "route": "PO", "side": ["Increased urination", "Gynecomastia", "Menstrual changes"], "adverse": ["Hyperkalemia", "Dysrhythmias from high potassium"], "nursing": ["Avoid potassium supplements and salt substitutes", "Monitor potassium closely", "Watch for signs of hyperkalemia"], "labs": ["Potassium", "Sodium", "Renal function"], "contra": ["Hyperkalemia", "Severe renal impairment"], "teaching": ["Avoid salt substitutes (they contain potassium)", "Report muscle weakness or irregular heartbeat"], "antidote": "None (treat hyperkalemia)", "highalert": false, "prototype": false, "tip": "Spironolactone SPARES potassium → risk of HYPERkalemia. Opposite of loop/thiazide diuretics.", "pearl": "**\"Spare-onolactone\"** keeps potassium — avoid salt substitutes."}, {"id": "vancomycin", "generic": "vancomycin", "brand": "Vancocin", "class": "Glycopeptide antibiotic", "system": "Anti-infective", "moa": "Kills gram-positive bacteria (including MRSA) by disrupting cell-wall synthesis.", "uses": ["MRSA", "Serious gram-positive infections", "Oral: C. difficile colitis"], "dose": "IV dosed by weight/level", "route": "IV (systemic), PO (for C. diff only)", "side": ["Infusion-related flushing if given too fast"], "adverse": ["Nephrotoxicity", "Ototoxicity", "Vancomycin infusion reaction (\"red man\") if rapid"], "nursing": ["Infuse slowly over at least 60 minutes to prevent flushing reaction", "Monitor trough levels", "Watch kidney function and hearing"], "labs": ["Trough level", "BUN/creatinine", "Hearing"], "contra": ["Hypersensitivity"], "teaching": ["Report ringing in the ears or decreased urine output"], "antidote": "None (supportive)", "highalert": false, "prototype": true, "tip": "Vancomycin: nephro- + ototoxic, monitor trough \u0026 creatinine, infuse SLOW (≥60 min) to avoid flushing reaction.", "pearl": "**Slow the vanc** — rapid infusion causes the flushing (\"red man\") reaction."}, {"id": "warfarin", "generic": "warfarin", "brand": "Coumadin", "class": "Anticoagulant (vitamin K antagonist)", "system": "Cardiovascular", "moa": "Inhibits vitamin K–dependent clotting factors, preventing new clot formation.", "uses": ["Atrial fibrillation", "DVT/PE", "Mechanical heart valves"], "dose": "Individualized to INR goal (usually 2–3)", "route": "PO", "side": ["Minor bruising"], "adverse": ["Major bleeding", "Hemorrhage"], "nursing": ["Monitor INR regularly", "Keep vitamin K intake (leafy greens) consistent", "Assess for bleeding"], "labs": ["INR", "PT", "Hemoglobin/hematocrit"], "contra": ["Active bleeding", "Pregnancy", "Severe liver disease"], "teaching": ["Keep green-vegetable intake steady (don't avoid, don't overload)", "Use a soft toothbrush and electric razor", "Report unusual bleeding or dark stools"], "antidote": "Vitamin K (phytonadione); FFP/PCC for severe bleed", "highalert": true, "prototype": true, "tip": "Warfarin → monitor INR (goal 2–3), antidote vitamin K. Keep vitamin K foods CONSISTENT, not avoided.", "pearl": "**Warfarin = watch INR; antidote vitamin K.** Consistency with greens is the key teaching."}]</script>
+        <div class="dc-tools fade-up">
+          <div class="dc-search">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+            <input type="search" placeholder="Search a drug, brand, or class&hellip;" aria-label="Search drug cards" data-dc-search>
+          </div>
+          <div class="dc-modes">
+            <button class="dc-mode on" data-dc-mode="browse">Browse</button>
+            <button class="dc-mode" data-dc-mode="drill">Drill</button>
+          </div>
+        </div>
+        <div class="dc-chips fade-up" data-dc-chips><button class="dc-chip on" data-sys="All">All systems</button><button class="dc-chip" data-sys="Anti-infective">Anti-infective</button><button class="dc-chip" data-sys="Cardiovascular">Cardiovascular</button><button class="dc-chip" data-sys="Endocrine">Endocrine</button><button class="dc-chip" data-sys="GI">GI</button><button class="dc-chip" data-sys="Neuro / Pain">Neuro / Pain</button><button class="dc-chip" data-sys="Neuro / Psych">Neuro / Psych</button><button class="dc-chip" data-sys="Respiratory">Respiratory</button></div>
+        <p class="dc-count fade-up"><b data-dc-count>30</b> drug cards &middot; growing every week</p>
+        <div class="dc-grid fade-up" data-dc-grid></div>
+        <div class="dc-drill fade-up" data-dc-drill hidden></div>
+        <div class="dc-empty" data-dc-empty hidden><p><b>No match yet.</b> This library grows every week &mdash; tell us what to add at hello@mustlovescrubs.com.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section style="background:var(--card);">
+    <div class="wrap" style="text-align:center;">
+      <div class="section-head fade-up" style="margin-inline:auto;"><span class="lesson-label" style="color:var(--teal-600);">Go deeper</span><h2>Turn these into a <span class="em">quiz</span>.</h2><p style="margin-inline:auto;">Drug cards feed the same adaptive engine as the question bank &mdash; drill them here, then test yourself in the question bank and mock exams.</p></div>
+      <div class="hero-cta" style="justify-content:center;"><a class="btn btn-coral" href="qbank.html">Practice questions</a><a class="btn btn-line" href="tests.html">Take a test</a></div>
     </div>
   </section>
 
@@ -7544,6 +7652,7 @@ body.mls-paid .gate { display: none; }
           <li><a href="qbank.html">Question Bank</a></li>
           <li><a href="tests.html">Tests &amp; Exams</a></li>
           <li><a href="flashcards.html">Flashcards &amp; Games</a></li>
+          <li><a href="drugs.html">Drug Cards</a></li>
           <li><a href="study-plan.html">Study Plan Calendar</a></li>
           <li><a href="nclex-guide.html">Free Study Guide</a></li>
           <li><a href="specialties.html">Specialty Prep</a></li>
@@ -9276,6 +9385,151 @@ body.mls-paid .gate { display: none; }
   root.querySelectorAll('.fc-chip').forEach(function (chip) { chip.addEventListener('click', function () { root.querySelectorAll('.fc-chip').forEach(function (c) { c.classList.remove('on'); }); chip.classList.add('on'); deck = chip.getAttribute('data-deck'); render(); }); });
   root.querySelectorAll('.fc-mode').forEach(function (m) { m.addEventListener('click', function () { root.querySelectorAll('.fc-mode').forEach(function (x) { x.classList.remove('on'); }); m.classList.add('on'); mode = m.getAttribute('data-mode'); render(); }); });
   render();
+})();
+
+
+/* ===== drugs.js ===== */
+/* Must Love Scrubs — Drug Cards.
+   A searchable, filterable library of structured medication cards, plus a
+   Drill mode that flips each drug into a recall card (name → class + key
+   nursing point) so you study them, not just read them. Demo. */
+
+(function () {
+  'use strict';
+  var root = document.querySelector('.drugcards');
+  if (!root) return;
+
+  var ALL = JSON.parse(root.querySelector('script[data-drugs]').textContent);
+  var grid = root.querySelector('[data-dc-grid]');
+  var drill = root.querySelector('[data-dc-drill]');
+  var chipsWrap = root.querySelector('[data-dc-chips]');
+  var searchInp = root.querySelector('[data-dc-search]');
+  var countEl = root.querySelector('[data-dc-count]');
+  var emptyEl = root.querySelector('[data-dc-empty]');
+
+  var sys = 'All', q = '', mode = 'browse';
+
+  function esc(s) { return String(s == null ? '' : s); }
+  function list(arr) { return '<ul>' + (arr || []).map(function (x) { return '<li>' + esc(x) + '</li>'; }).join('') + '</ul>'; }
+
+  function filtered() {
+    var qq = q.trim().toLowerCase();
+    return ALL.filter(function (x) {
+      if (sys !== 'All' && x.system !== sys) return false;
+      if (!qq) return true;
+      return (x.generic + ' ' + x.brand + ' ' + x.class + ' ' + x.system + ' ' + (x.uses || []).join(' ')).toLowerCase().indexOf(qq) >= 0;
+    });
+  }
+
+  /* ---------- browse: structured cards ---------- */
+  function cardHTML(x, i) {
+    var badges =
+      (x.prototype ? '<span class="dc-badge proto">Prototype</span>' : '') +
+      (x.highalert ? '<span class="dc-badge alert">High-alert</span>' : '');
+    var head =
+      '<button class="dc-head" data-i="' + i + '">' +
+        '<div class="dc-head-main"><b class="dc-generic">' + esc(x.generic) + '</b>' +
+        (x.brand ? '<span class="dc-brand">' + esc(x.brand) + '</span>' : '') + '</div>' +
+        '<span class="dc-class">' + esc(x.class) + '</span>' + badges +
+        '<span class="dc-caret">▾</span>' +
+      '</button>';
+    var body =
+      '<div class="dc-body">' +
+        row('How it works', '<p>' + esc(x.moa) + '</p>') +
+        row('Uses', list(x.uses)) +
+        row('Dose &amp; route', '<p>' + esc(x.dose) + ' &middot; <i>' + esc(x.route) + '</i></p>') +
+        row('Side effects', list(x.side)) +
+        row('Serious / adverse', list(x.adverse), 'adverse') +
+        row('Nursing considerations', list(x.nursing), 'nursing') +
+        row('Monitor', list(x.labs)) +
+        row('Contraindications', list(x.contra)) +
+        row('Patient teaching', list(x.teaching)) +
+        row('Antidote', '<p>' + esc(x.antidote) + '</p>', x.antidote && x.antidote !== 'None' ? 'antidote' : '') +
+        (x.tip ? '<div class="dc-tip"><b>📝 NCLEX tip.</b> ' + esc(x.tip) + '</div>' : '') +
+        (x.pearl ? '<div class="dc-tip pearl"><b>💡 Memory trick.</b> ' + md(x.pearl) + '</div>' : '') +
+      '</div>';
+    return '<div class="dc-card' + (x.highalert ? ' is-alert' : '') + '">' + head + body + '</div>';
+  }
+  function row(label, inner, cls) { return '<div class="dc-row ' + (cls || '') + '"><span class="dc-lbl">' + label + '</span><div class="dc-val">' + inner + '</div></div>'; }
+  function md(s) { return String(s == null ? '' : s).replace(/\*\*(.+?)\*\*/g, '<b>$1</b>'); }
+
+  function renderBrowse() {
+    drill.hidden = true; grid.hidden = false;
+    var items = filtered();
+    countEl.textContent = items.length;
+    emptyEl.hidden = items.length > 0;
+    grid.innerHTML = items.map(cardHTML).join('');
+    grid.querySelectorAll('.dc-head').forEach(function (h) {
+      h.addEventListener('click', function () { h.parentNode.classList.toggle('open'); });
+    });
+  }
+
+  /* ---------- drill: recall cards ---------- */
+  var order = [], di = 0, seen, right;
+  function startDrill() {
+    grid.hidden = true; drill.hidden = false;
+    order = shuffle(filtered()); di = 0; seen = 0; right = 0;
+    if (!order.length) { drill.innerHTML = '<div class="fc-done"><h3>No cards in this filter</h3><p>Pick another system or clear your search.</p></div>'; return; }
+    renderDrill();
+  }
+  function shuffle(a) { a = a.slice(); for (var i = a.length - 1; i > 0; i--) { var j = Math.floor(Math.random() * (i + 1)); var t = a[i]; a[i] = a[j]; a[j] = t; } return a; }
+
+  function renderDrill() {
+    if (di >= order.length) {
+      drill.innerHTML = '<div class="fc-done"><h3>Deck complete 🎉</h3><p>You reviewed <b>' + order.length + '</b> drug cards. ' +
+        'Rated yourself solid on <b>' + right + '</b>.</p>' +
+        '<button class="btn btn-coral" data-dc-restart>Drill again</button></div>';
+      drill.querySelector('[data-dc-restart]').addEventListener('click', startDrill);
+      return;
+    }
+    var x = order[di];
+    drill.innerHTML =
+      '<div class="dc-drill-meta"><span>Card ' + (di + 1) + ' / ' + order.length + '</span><span>' + esc(x.system) + '</span></div>' +
+      '<div class="dc-flip" data-dc-flip>' +
+        '<div class="dc-flip-inner">' +
+          '<div class="dc-flip-face dc-front">' +
+            '<span class="dc-flip-hint">What class? What\'s the #1 nursing point?</span>' +
+            '<b class="dc-flip-name">' + esc(x.generic) + '</b>' +
+            (x.brand ? '<span class="dc-brand">' + esc(x.brand) + '</span>' : '') +
+            '<span class="dc-flip-tap">Tap to reveal</span>' +
+          '</div>' +
+          '<div class="dc-flip-face dc-back">' +
+            '<span class="dc-class">' + esc(x.class) + '</span>' +
+            '<p class="dc-flip-moa">' + esc(x.moa) + '</p>' +
+            '<div class="dc-flip-key"><b>Key nursing point</b><p>' + esc((x.nursing && x.nursing[0]) || x.tip || '') + '</p></div>' +
+            (x.antidote && x.antidote !== 'None' ? '<div class="dc-flip-anti"><b>Antidote:</b> ' + esc(x.antidote) + '</div>' : '') +
+          '</div>' +
+        '</div>' +
+      '</div>' +
+      '<div class="dc-drill-actions" data-dc-rate hidden>' +
+        '<button class="btn btn-line" data-dc-again>Still learning</button>' +
+        '<button class="btn btn-coral" data-dc-got>Got it &rarr;</button>' +
+      '</div>';
+    var flip = drill.querySelector('[data-dc-flip]');
+    var rate = drill.querySelector('[data-dc-rate]');
+    flip.addEventListener('click', function () { flip.classList.add('flipped'); rate.hidden = false; });
+    drill.querySelector('[data-dc-got]').addEventListener('click', function () { right++; seen++; di++; renderDrill(); });
+    drill.querySelector('[data-dc-again]').addEventListener('click', function () { seen++; order.push(x); di++; renderDrill(); });
+  }
+
+  function render() { if (mode === 'drill') startDrill(); else renderBrowse(); }
+
+  /* ---------- wire controls ---------- */
+  chipsWrap.querySelectorAll('.dc-chip').forEach(function (c) {
+    c.addEventListener('click', function () {
+      chipsWrap.querySelectorAll('.dc-chip').forEach(function (x) { x.classList.remove('on'); });
+      c.classList.add('on'); sys = c.getAttribute('data-sys'); render();
+    });
+  });
+  root.querySelectorAll('.dc-mode').forEach(function (m) {
+    m.addEventListener('click', function () {
+      root.querySelectorAll('.dc-mode').forEach(function (x) { x.classList.remove('on'); });
+      m.classList.add('on'); mode = m.getAttribute('data-dc-mode'); render();
+    });
+  });
+  searchInp.addEventListener('input', function () { q = searchInp.value; render(); });
+
+  renderBrowse();
 })();
 
 

@@ -1,0 +1,486 @@
+{
+ "batch": "cardiovascular-01",
+ "drugs": [
+  {
+   "id": "furosemide",
+   "generic": "furosemide",
+   "brand": "Lasix",
+   "class": "Loop diuretic",
+   "system": "Cardiovascular",
+   "moa": "Blocks sodium and chloride reabsorption in the loop of Henle, causing rapid, powerful diuresis.",
+   "uses": [
+    "Pulmonary edema",
+    "Heart failure",
+    "Hypertension",
+    "Edema"
+   ],
+   "dose": "20–80 mg; titrated to response",
+   "route": "PO, IV, IM",
+   "side": [
+    "Increased urination",
+    "Dizziness",
+    "Orthostatic hypotension"
+   ],
+   "adverse": [
+    "Hypokalemia",
+    "Dehydration",
+    "Ototoxicity with rapid IV push"
+   ],
+   "nursing": [
+    "Give IV slowly to protect hearing",
+    "Monitor daily weight and I&O",
+    "Watch for signs of low potassium",
+    "Give early in the day to avoid nighttime urination"
+   ],
+   "labs": [
+    "Potassium",
+    "Sodium",
+    "BUN/creatinine"
+   ],
+   "contra": [
+    "Anuria",
+    "Severe electrolyte depletion",
+    "Sulfa allergy (caution)"
+   ],
+   "teaching": [
+    "Change positions slowly",
+    "Eat potassium-rich foods (bananas, oranges) unless told otherwise",
+    "Report muscle cramps or weakness"
+   ],
+   "antidote": "None (supportive care)",
+   "highalert": false,
+   "prototype": true,
+   "tip": "Loop & thiazide diuretics WASTE potassium; watch for hypokalemia. Give IV push slowly (ototoxicity).",
+   "pearl": "**\"Lasix Loses potassium.\"** Push slow to save the ears."
+  },
+  {
+   "id": "spironolactone",
+   "generic": "spironolactone",
+   "brand": "Aldactone",
+   "class": "Potassium-sparing diuretic",
+   "system": "Cardiovascular",
+   "moa": "Blocks aldosterone, so the body excretes sodium and water while keeping potassium.",
+   "uses": [
+    "Heart failure",
+    "Hypertension",
+    "Edema",
+    "Hyperaldosteronism"
+   ],
+   "dose": "25–100 mg daily",
+   "route": "PO",
+   "side": [
+    "Increased urination",
+    "Gynecomastia",
+    "Menstrual changes"
+   ],
+   "adverse": [
+    "Hyperkalemia",
+    "Dysrhythmias from high potassium"
+   ],
+   "nursing": [
+    "Avoid potassium supplements and salt substitutes",
+    "Monitor potassium closely",
+    "Watch for signs of hyperkalemia"
+   ],
+   "labs": [
+    "Potassium",
+    "Sodium",
+    "Renal function"
+   ],
+   "contra": [
+    "Hyperkalemia",
+    "Severe renal impairment"
+   ],
+   "teaching": [
+    "Avoid salt substitutes (they contain potassium)",
+    "Report muscle weakness or irregular heartbeat"
+   ],
+   "antidote": "None (treat hyperkalemia)",
+   "highalert": false,
+   "prototype": false,
+   "tip": "Spironolactone SPARES potassium → risk of HYPERkalemia. Opposite of loop/thiazide diuretics.",
+   "pearl": "**\"Spare-onolactone\"** keeps potassium — avoid salt substitutes."
+  },
+  {
+   "id": "lisinopril",
+   "generic": "lisinopril",
+   "brand": "Prinivil, Zestril",
+   "class": "ACE inhibitor",
+   "system": "Cardiovascular",
+   "moa": "Blocks conversion of angiotensin I to II, lowering vasoconstriction and aldosterone → lower blood pressure.",
+   "uses": [
+    "Hypertension",
+    "Heart failure",
+    "Kidney protection in diabetes"
+   ],
+   "dose": "10–40 mg daily",
+   "route": "PO",
+   "side": [
+    "Dry, persistent cough",
+    "Dizziness",
+    "Headache"
+   ],
+   "adverse": [
+    "Angioedema",
+    "Hyperkalemia",
+    "First-dose hypotension"
+   ],
+   "nursing": [
+    "Monitor for swelling of face/lips (angioedema)",
+    "Assess blood pressure",
+    "Watch potassium"
+   ],
+   "labs": [
+    "Potassium",
+    "BUN/creatinine",
+    "Blood pressure"
+   ],
+   "contra": [
+    "Pregnancy",
+    "History of angioedema",
+    "Bilateral renal artery stenosis"
+   ],
+   "teaching": [
+    "Report a persistent dry cough or any facial/tongue swelling",
+    "Rise slowly",
+    "Avoid salt substitutes"
+   ],
+   "antidote": "None (supportive)",
+   "highalert": false,
+   "prototype": true,
+   "tip": "ACE inhibitors (-pril): dry Cough, Angioedema, high potassium (K⁺), Cough. Pregnancy category = avoid.",
+   "pearl": "**ACE = \"CAPS\":** Cough, Angioedema, Pregnancy risk, hyperkalemia (potassium up)."
+  },
+  {
+   "id": "losartan",
+   "generic": "losartan",
+   "brand": "Cozaar",
+   "class": "ARB (angiotensin II receptor blocker)",
+   "system": "Cardiovascular",
+   "moa": "Blocks angiotensin II at its receptor, causing vasodilation and lower blood pressure — without the bradykinin cough.",
+   "uses": [
+    "Hypertension",
+    "Heart failure",
+    "Diabetic kidney protection"
+   ],
+   "dose": "25–100 mg daily",
+   "route": "PO",
+   "side": [
+    "Dizziness",
+    "Fatigue",
+    "Headache"
+   ],
+   "adverse": [
+    "Angioedema (rare)",
+    "Hyperkalemia",
+    "Hypotension"
+   ],
+   "nursing": [
+    "Often used when an ACE inhibitor causes cough",
+    "Monitor blood pressure and potassium"
+   ],
+   "labs": [
+    "Potassium",
+    "Renal function",
+    "Blood pressure"
+   ],
+   "contra": [
+    "Pregnancy",
+    "Bilateral renal artery stenosis"
+   ],
+   "teaching": [
+    "Rise slowly",
+    "Report swelling",
+    "Avoid salt substitutes"
+   ],
+   "antidote": "None (supportive)",
+   "highalert": false,
+   "prototype": false,
+   "tip": "ARBs (-sartan) are the go-to switch when ACE inhibitors cause a dry cough — no bradykinin, no cough."
+  },
+  {
+   "id": "metoprolol",
+   "generic": "metoprolol",
+   "brand": "Lopressor, Toprol-XL",
+   "class": "Beta-blocker (cardioselective)",
+   "system": "Cardiovascular",
+   "moa": "Blocks beta-1 receptors in the heart, lowering heart rate, contractility, and blood pressure.",
+   "uses": [
+    "Hypertension",
+    "Angina",
+    "Heart failure",
+    "Post–myocardial infarction"
+   ],
+   "dose": "25–100 mg; varies by form",
+   "route": "PO, IV",
+   "side": [
+    "Fatigue",
+    "Dizziness",
+    "Bradycardia"
+   ],
+   "adverse": [
+    "Symptomatic bradycardia",
+    "Hypotension",
+    "Masking of hypoglycemia symptoms"
+   ],
+   "nursing": [
+    "Hold and notify provider if HR < 60 or SBP low per parameters",
+    "Do not stop abruptly (rebound)",
+    "Assess apical pulse before giving"
+   ],
+   "labs": [
+    "Heart rate",
+    "Blood pressure",
+    "Blood glucose in diabetics"
+   ],
+   "contra": [
+    "Severe bradycardia",
+    "Heart block",
+    "Decompensated heart failure"
+   ],
+   "teaching": [
+    "Check your pulse before taking",
+    "Never stop suddenly",
+    "Rise slowly",
+    "Diabetics: a fast heartbeat may not warn you of low sugar"
+   ],
+   "antidote": "Glucagon / atropine for overdose",
+   "highalert": false,
+   "prototype": true,
+   "tip": "Beta-blockers (-olol): hold if HR < 60. Never stop abruptly (rebound tachycardia/angina). Mask hypoglycemia.",
+   "pearl": "**\"-olol slows it all.\"** Check the apical pulse first."
+  },
+  {
+   "id": "digoxin",
+   "generic": "digoxin",
+   "brand": "Lanoxin",
+   "class": "Cardiac glycoside",
+   "system": "Cardiovascular",
+   "moa": "Increases the force of heart contraction and slows the heart rate.",
+   "uses": [
+    "Heart failure",
+    "Atrial fibrillation"
+   ],
+   "dose": "0.125–0.25 mg daily (narrow range)",
+   "route": "PO, IV",
+   "side": [
+    "Nausea",
+    "Fatigue"
+   ],
+   "adverse": [
+    "Digoxin toxicity",
+    "Life-threatening dysrhythmias",
+    "Yellow-green visual halos"
+   ],
+   "nursing": [
+    "Check apical pulse for a full minute; hold if < 60",
+    "Assess for toxicity (nausea, anorexia, visual halos)",
+    "Low potassium increases toxicity risk"
+   ],
+   "labs": [
+    "Digoxin level (0.5–2 ng/mL)",
+    "Potassium"
+   ],
+   "contra": [
+    "Ventricular dysrhythmias",
+    "HR < 60"
+   ],
+   "teaching": [
+    "Take your pulse before each dose",
+    "Report nausea, loss of appetite, or yellow-green vision",
+    "Do not double doses"
+   ],
+   "antidote": "Digoxin immune Fab (DigiFab)",
+   "highalert": false,
+   "prototype": true,
+   "tip": "Dig toxicity: nausea, anorexia, yellow-green halos. Low K⁺ raises the risk. Hold if apical HR < 60.",
+   "pearl": "**Dig level 0.5–2; hold if pulse < 60.** Antidote = Digibind (Fab)."
+  },
+  {
+   "id": "nitroglycerin",
+   "generic": "nitroglycerin",
+   "brand": "Nitrostat",
+   "class": "Nitrate (vasodilator)",
+   "system": "Cardiovascular",
+   "moa": "Dilates blood vessels (especially veins), reducing cardiac workload and oxygen demand; relieves angina.",
+   "uses": [
+    "Angina",
+    "Acute chest pain",
+    "Heart failure"
+   ],
+   "dose": "0.4 mg SL every 5 min x3 for chest pain",
+   "route": "SL, transdermal, IV, spray",
+   "side": [
+    "Headache",
+    "Flushing",
+    "Dizziness"
+   ],
+   "adverse": [
+    "Severe hypotension",
+    "Reflex tachycardia"
+   ],
+   "nursing": [
+    "For chest pain: 1 tablet SL, repeat every 5 min up to 3, call 911 if unrelieved",
+    "Sit or lie down before taking",
+    "Store SL tablets in the original dark bottle"
+   ],
+   "labs": [
+    "Blood pressure",
+    "Heart rate"
+   ],
+   "contra": [
+    "Severe hypotension",
+    "Use of PDE-5 inhibitors (sildenafil) within 24–48 hr"
+   ],
+   "teaching": [
+    "Sit down before taking (may cause dizziness)",
+    "A headache is expected",
+    "Never combine with erectile-dysfunction drugs",
+    "Replace tablets every 6 months"
+   ],
+   "antidote": "None (supportive; IV fluids for hypotension)",
+   "highalert": false,
+   "prototype": true,
+   "tip": "SL nitro: 1 tab q5min x3, sit down first, expect headache. NEVER with sildenafil (fatal hypotension).",
+   "pearl": "**Nitro dilates — sit before you take it.** No ED drugs within 24 hr."
+  },
+  {
+   "id": "atorvastatin",
+   "generic": "atorvastatin",
+   "brand": "Lipitor",
+   "class": "Statin (HMG-CoA reductase inhibitor)",
+   "system": "Cardiovascular",
+   "moa": "Blocks cholesterol synthesis in the liver, lowering LDL cholesterol.",
+   "uses": [
+    "High cholesterol",
+    "Cardiovascular risk reduction"
+   ],
+   "dose": "10–80 mg daily",
+   "route": "PO",
+   "side": [
+    "Headache",
+    "GI upset"
+   ],
+   "adverse": [
+    "Myopathy / rhabdomyolysis",
+    "Liver injury"
+   ],
+   "nursing": [
+    "Report unexplained muscle pain, tenderness, or weakness",
+    "Monitor liver enzymes",
+    "Usually taken in the evening"
+   ],
+   "labs": [
+    "Liver enzymes (AST/ALT)",
+    "Lipid panel",
+    "CK if muscle pain"
+   ],
+   "contra": [
+    "Active liver disease",
+    "Pregnancy"
+   ],
+   "teaching": [
+    "Report muscle pain or dark urine (rhabdomyolysis)",
+    "Avoid grapefruit juice",
+    "Take in the evening"
+   ],
+   "antidote": "None (stop drug)",
+   "highalert": false,
+   "prototype": true,
+   "tip": "Statins: report muscle pain (rhabdomyolysis), watch liver enzymes, avoid grapefruit juice.",
+   "pearl": "**Statins → muscle & liver.** Muscle pain + dark urine = stop and report."
+  },
+  {
+   "id": "warfarin",
+   "generic": "warfarin",
+   "brand": "Coumadin",
+   "class": "Anticoagulant (vitamin K antagonist)",
+   "system": "Cardiovascular",
+   "moa": "Inhibits vitamin K–dependent clotting factors, preventing new clot formation.",
+   "uses": [
+    "Atrial fibrillation",
+    "DVT/PE",
+    "Mechanical heart valves"
+   ],
+   "dose": "Individualized to INR goal (usually 2–3)",
+   "route": "PO",
+   "side": [
+    "Minor bruising"
+   ],
+   "adverse": [
+    "Major bleeding",
+    "Hemorrhage"
+   ],
+   "nursing": [
+    "Monitor INR regularly",
+    "Keep vitamin K intake (leafy greens) consistent",
+    "Assess for bleeding"
+   ],
+   "labs": [
+    "INR",
+    "PT",
+    "Hemoglobin/hematocrit"
+   ],
+   "contra": [
+    "Active bleeding",
+    "Pregnancy",
+    "Severe liver disease"
+   ],
+   "teaching": [
+    "Keep green-vegetable intake steady (don't avoid, don't overload)",
+    "Use a soft toothbrush and electric razor",
+    "Report unusual bleeding or dark stools"
+   ],
+   "antidote": "Vitamin K (phytonadione); FFP/PCC for severe bleed",
+   "highalert": true,
+   "prototype": true,
+   "tip": "Warfarin → monitor INR (goal 2–3), antidote vitamin K. Keep vitamin K foods CONSISTENT, not avoided.",
+   "pearl": "**Warfarin = watch INR; antidote vitamin K.** Consistency with greens is the key teaching."
+  },
+  {
+   "id": "heparin",
+   "generic": "heparin",
+   "brand": "(unfractionated heparin)",
+   "class": "Anticoagulant",
+   "system": "Cardiovascular",
+   "moa": "Activates antithrombin, rapidly inhibiting thrombin and clot formation.",
+   "uses": [
+    "DVT/PE treatment and prevention",
+    "Acute coronary syndrome"
+   ],
+   "dose": "Weight-based; titrated to aPTT",
+   "route": "IV, subcutaneous",
+   "side": [
+    "Injection-site bruising"
+   ],
+   "adverse": [
+    "Bleeding",
+    "Heparin-induced thrombocytopenia (HIT)"
+   ],
+   "nursing": [
+    "Monitor aPTT (therapeutic ~1.5–2.5x control)",
+    "Never aspirate or massage SC injections",
+    "Watch platelet count for HIT"
+   ],
+   "labs": [
+    "aPTT",
+    "Platelet count",
+    "Hemoglobin/hematocrit"
+   ],
+   "contra": [
+    "Active bleeding",
+    "Severe thrombocytopenia",
+    "History of HIT"
+   ],
+   "teaching": [
+    "Report bleeding or unusual bruising",
+    "Injection-site rotation for SC doses"
+   ],
+   "antidote": "Protamine sulfate",
+   "highalert": true,
+   "prototype": true,
+   "tip": "Heparin → monitor aPTT, antidote protamine. Watch platelets for HIT. Give SC deep, don't rub.",
+   "pearl": "**Heparin = aPTT + Protamine.** Warfarin = PT/INR + vitamin K."
+  }
+ ]
+}

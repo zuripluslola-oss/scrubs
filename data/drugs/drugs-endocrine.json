@@ -1,0 +1,231 @@
+{
+ "batch": "endocrine-01",
+ "drugs": [
+  {
+   "id": "insulin-regular",
+   "generic": "regular insulin",
+   "brand": "Humulin R, Novolin R",
+   "class": "Short-acting insulin",
+   "system": "Endocrine",
+   "moa": "Replaces or supplements insulin to move glucose into cells and lower blood sugar.",
+   "uses": [
+    "Diabetes mellitus",
+    "Diabetic ketoacidosis (IV)",
+    "Hyperkalemia"
+   ],
+   "dose": "Individualized by blood glucose",
+   "route": "SC, IV (only regular can go IV)",
+   "side": [
+    "Hypoglycemia",
+    "Injection-site reactions"
+   ],
+   "adverse": [
+    "Severe hypoglycemia",
+    "Hypokalemia"
+   ],
+   "nursing": [
+    "Onset ~30 min, peak 2–4 hr — watch for hypoglycemia at the peak",
+    "Only regular insulin may be given IV",
+    "When mixing, draw up regular (clear) before NPH (cloudy)"
+   ],
+   "labs": [
+    "Blood glucose",
+    "Potassium"
+   ],
+   "contra": [
+    "Hypoglycemia"
+   ],
+   "teaching": [
+    "Recognize hypoglycemia: shaky, sweaty, confused → 15 g fast carbs",
+    "Rotate injection sites",
+    "Eat after dosing to match the peak"
+   ],
+   "antidote": "Dextrose (D50) / glucagon",
+   "highalert": true,
+   "prototype": true,
+   "tip": "Regular insulin: peak 2–4 hr (hypoglycemia risk), ONLY insulin given IV. Clear before cloudy when mixing.",
+   "pearl": "**\"Clear before cloudy.\"** Regular (clear) is drawn up first; only regular goes IV."
+  },
+  {
+   "id": "insulin-nph",
+   "generic": "NPH insulin",
+   "brand": "Humulin N, Novolin N",
+   "class": "Intermediate-acting insulin",
+   "system": "Endocrine",
+   "moa": "Provides a longer, intermediate duration of glucose control.",
+   "uses": [
+    "Diabetes mellitus (basal coverage)"
+   ],
+   "dose": "Individualized",
+   "route": "SC only",
+   "side": [
+    "Hypoglycemia"
+   ],
+   "adverse": [
+    "Severe hypoglycemia"
+   ],
+   "nursing": [
+    "Cloudy suspension — gently roll to mix, never shake",
+    "Peak 4–12 hr — teach the client when hypoglycemia is most likely",
+    "Never give IV"
+   ],
+   "labs": [
+    "Blood glucose"
+   ],
+   "contra": [
+    "Hypoglycemia"
+   ],
+   "teaching": [
+    "Know your insulin's peak time",
+    "Carry a fast sugar source",
+    "Gently roll the vial to mix"
+   ],
+   "antidote": "Dextrose / glucagon",
+   "highalert": true,
+   "prototype": false,
+   "tip": "NPH is cloudy, SC only, peaks 4–12 hr. Roll to mix, never shake. Never IV.",
+   "pearl": "**NPH = No IV, cloudy, iNtermediate.**"
+  },
+  {
+   "id": "metformin",
+   "generic": "metformin",
+   "brand": "Glucophage",
+   "class": "Biguanide (oral antidiabetic)",
+   "system": "Endocrine",
+   "moa": "Decreases glucose production by the liver and improves insulin sensitivity — does not cause hypoglycemia alone.",
+   "uses": [
+    "Type 2 diabetes",
+    "Prediabetes"
+   ],
+   "dose": "500–2000 mg daily in divided doses",
+   "route": "PO",
+   "side": [
+    "GI upset",
+    "Diarrhea",
+    "Metallic taste"
+   ],
+   "adverse": [
+    "Lactic acidosis (rare but serious)"
+   ],
+   "nursing": [
+    "Hold before and 48 hr after iodinated IV contrast (lactic acidosis risk)",
+    "Take with meals to reduce GI upset",
+    "Does not itself cause hypoglycemia"
+   ],
+   "labs": [
+    "Renal function",
+    "Blood glucose",
+    "A1C"
+   ],
+   "contra": [
+    "Renal impairment",
+    "Metabolic acidosis"
+   ],
+   "teaching": [
+    "Take with food",
+    "Hold around contrast dye/imaging as instructed",
+    "Report muscle pain, trouble breathing, or unusual fatigue"
+   ],
+   "antidote": "None (supportive; treat acidosis)",
+   "highalert": false,
+   "prototype": true,
+   "tip": "Metformin: hold before/after IV contrast (lactic acidosis). Take with food. No hypoglycemia on its own.",
+   "pearl": "**Hold metformin around contrast dye** — lactic acidosis risk."
+  },
+  {
+   "id": "levothyroxine",
+   "generic": "levothyroxine",
+   "brand": "Synthroid",
+   "class": "Thyroid hormone replacement",
+   "system": "Endocrine",
+   "moa": "Replaces thyroid hormone (T4) in hypothyroidism, restoring normal metabolism.",
+   "uses": [
+    "Hypothyroidism",
+    "Myxedema"
+   ],
+   "dose": "Individualized (mcg)",
+   "route": "PO, IV",
+   "side": [
+    "Usually none at correct dose"
+   ],
+   "adverse": [
+    "Signs of hyperthyroidism if overdosed (palpitations, weight loss, insomnia)"
+   ],
+   "nursing": [
+    "Give in the morning on an empty stomach",
+    "Full effect takes weeks",
+    "Lifelong therapy"
+   ],
+   "labs": [
+    "TSH",
+    "Free T4"
+   ],
+   "contra": [
+    "Recent MI",
+    "Untreated adrenal insufficiency",
+    "Thyrotoxicosis"
+   ],
+   "teaching": [
+    "Take on an empty stomach, same time each morning",
+    "Do not stop — it's lifelong",
+    "Report chest pain or palpitations"
+   ],
+   "antidote": "None",
+   "highalert": false,
+   "prototype": true,
+   "tip": "Levothyroxine: morning, empty stomach, lifelong. Overdose = hyperthyroid signs (palpitations, weight loss)."
+  },
+  {
+   "id": "prednisone",
+   "generic": "prednisone",
+   "brand": "Deltasone",
+   "class": "Corticosteroid (glucocorticoid)",
+   "system": "Endocrine",
+   "moa": "Suppresses inflammation and the immune response.",
+   "uses": [
+    "Inflammatory and autoimmune conditions",
+    "Asthma/COPD flares",
+    "Transplant"
+   ],
+   "dose": "Varies widely; tapered",
+   "route": "PO",
+   "side": [
+    "Increased appetite",
+    "Mood changes",
+    "Insomnia"
+   ],
+   "adverse": [
+    "Hyperglycemia",
+    "Immunosuppression/infection",
+    "Adrenal crisis if stopped abruptly",
+    "Osteoporosis with long-term use"
+   ],
+   "nursing": [
+    "Never stop abruptly — must taper",
+    "Monitor blood glucose and for infection",
+    "Take with food"
+   ],
+   "labs": [
+    "Blood glucose",
+    "Weight",
+    "Blood pressure",
+    "Signs of infection"
+   ],
+   "contra": [
+    "Systemic fungal infection",
+    "Live vaccines during therapy"
+   ],
+   "teaching": [
+    "Do not stop suddenly — taper as directed",
+    "Take with food",
+    "Report signs of infection",
+    "Blood sugar may rise"
+   ],
+   "antidote": "None",
+   "highalert": false,
+   "prototype": true,
+   "tip": "Steroids: taper (never stop abruptly → adrenal crisis), raise glucose, mask/increase infection, take with food.",
+   "pearl": "**Steroids = Sugar up, Susceptible to infection, Swelling, Slow tapering.**"
+  }
+ ]
+}
