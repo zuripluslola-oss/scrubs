@@ -25,11 +25,6 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Configure GitHub Pages (auto-enable)
-        uses: actions/configure-pages@v5
-        with:
-          enablement: true
-
       - name: Rebuild pages from source
         run: |
           python3 tools/build_pages.py
