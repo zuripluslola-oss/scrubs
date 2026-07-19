@@ -105,6 +105,7 @@ def chrome(fname, title, desc, body, active=""):
           <li><a href="nclex.html">Free NCLEX Prep <small>RN &amp; LPN &middot; every NGN item type</small></a></li>
           <li><a href="qbank.html">Question Bank <small>Practice with rationales &amp; answer stats</small></a></li>
           <li><a href="flashcards.html">Flashcards &amp; Games <small>Flip cards, quizzes, match &amp; speed rounds</small></a></li>
+          <li><a href="study-plan.html">Study Plan Calendar <small>Your day-by-day plan to test day</small></a></li>
           <li><a href="nclex-guide.html">Free Study Guide <small>How to pass &middot; for nurses, by nurses</small></a></li>
           <li><a href="course-lab-values.html">Free NCLEX Practice <small>Start with a free audio scene</small></a></li>
           <li><a href="specialties.html">Specialty Prep <small>22 specialty tracks &middot; rolling out</small></a></li>
@@ -116,7 +117,7 @@ def chrome(fname, title, desc, body, active=""):
       <div>
         <h4>Community</h4>
         <ul class="mega-links">
-          <li><a href="dictionary.html">Scrubs Dictionary <small>Every term, in plain language</small></a></li>
+          <li><a href="dictionary.html">Nurses Index <small>Every term, in plain language</small></a></li>
           <li><a href="spotlight.html">Nurse Spotlight <small>Real stories, beautifully told</small></a></li>
           <li><a href="jobs.html">Job Search <small>A small Indeed, just for nurses</small></a></li>
           <li><a href="blog.html">Blog <small>News, tips &amp; nurse life</small></a></li>
@@ -163,6 +164,7 @@ def chrome(fname, title, desc, body, active=""):
           <li><a href="nclex-complete.html">NCLEX Complete</a></li>
           <li><a href="qbank.html">Question Bank</a></li>
           <li><a href="flashcards.html">Flashcards &amp; Games</a></li>
+          <li><a href="study-plan.html">Study Plan Calendar</a></li>
           <li><a href="nclex-guide.html">Free Study Guide</a></li>
           <li><a href="specialties.html">Specialty Prep</a></li>
           <li><a href="courses.html">Courses</a></li>
@@ -174,7 +176,7 @@ def chrome(fname, title, desc, body, active=""):
       <div class="footer-col">
         <h5>Discover</h5>
         <ul>
-          <li><a href="dictionary.html">Scrubs Dictionary</a></li>
+          <li><a href="dictionary.html">Nurses Index</a></li>
           <li><a href="spotlight.html">Spotlight</a></li>
           <li><a href="jobs.html">Job Search</a></li>
           <li><a href="blog.html">Blog</a></li>
@@ -203,7 +205,7 @@ def chrome(fname, title, desc, body, active=""):
     <a class="bn-item{' active' if active == 'home' else ''}" href="index.html">{I['home']}<span>Home</span></a>
     <a class="bn-item{' active' if active == 'courses' else ''}" href="courses.html">{I['book']}<span>Courses</span></a>
     <a class="bn-item bn-center" href="scrubtv.html"><span class="puck">{I['play']}</span><span>Scrub TV</span></a>
-    <a class="bn-item{' active' if active == 'dictionary' else ''}" href="dictionary.html">{I['dict']}<span>Dictionary</span></a>
+    <a class="bn-item{' active' if active == 'dictionary' else ''}" href="dictionary.html">{I['dict']}<span>Index</span></a>
     <a class="bn-item{' active' if active == 'profile' else ''}" href="profile.html">{I['user']}<span>Profile</span></a>
   </nav>
 
@@ -300,7 +302,7 @@ TIER_FEATURES = [
     "Personalized study schedule &amp; calendar",
     "Mastered / Reviewing / Learning tagging",
     "Performance by subject area",
-    "140+ cheat sheets &amp; the Scrubs Dictionary",
+    "140+ cheat sheets &amp; the Nurses Index",
 ]
 
 def pricing_tiers(cta="join.html"):
@@ -379,7 +381,7 @@ FAQS = [
     ("Is it updated for the Next Gen NCLEX (NGN)?", "Completely. Every item type on the current test plan is here — case studies, bow-tie, trend, matrix, select-all, and more — and our practice exams run on a real computer-adaptive engine, so test day feels familiar."),
     ("Can I use it for the NCLEX-PN (LPN)?", "Yes — the question bank has both an RN and a PN track. Pick your exam and the questions adapt to your scope of practice."),
     ("Is Esi, the AI tutor, included?", "Yes — Esi comes with every plan at no extra cost. She tracks your weak areas, builds your study plan, and turns every miss into a targeted drill. There's no separate add-on."),
-    ("What's free versus paid?", "Free forever: NCLEX practice with every item type, four Scrub TV lessons a month, the Scrubs Dictionary, and daily points. Paid unlocks the full question bank, case studies, readiness exams, schedules, the workbook, and Esi."),
+    ("What's free versus paid?", "Free forever: NCLEX practice with every item type, four Scrub TV lessons a month, the Nurses Index, and daily points. Paid unlocks the full question bank, case studies, readiness exams, schedules, the workbook, and Esi."),
     ("Can I study on my phone?", "Absolutely — the entire experience is mobile-first with app-style navigation. Study on the bus, in the break room, or on the couch."),
 ]
 
@@ -571,7 +573,7 @@ INDEX_BODY = f"""  <main>
           <article class="why-card fade-up">
             <span class="num">04</span>
             <h3>Free that beats their paid</h3>
-            <p>Your free account already includes NCLEX practice with every NGN item type, four full lessons a month, and the Scrubs Dictionary — deeper than what most sites put behind a paywall.</p>
+            <p>Your free account already includes NCLEX practice with every NGN item type, four full lessons a month, and the Nurses Index — deeper than what most sites put behind a paywall.</p>
           </article>
         </div>
       </div>
@@ -597,12 +599,12 @@ INDEX_BODY = f"""  <main>
       <div class="wrap fade-up">
         <span class="eyebrow" style="color:var(--gold-400);">Points &amp; rewards</span>
         <h2 style="font-size:clamp(2rem,6vw,3rem);max-width:18ch;">Get <span class="hl">points</span> for learning.</h2>
-        <p style="margin-top:1rem;max-width:54ch;color:rgba(255,255,255,0.82);">Every lesson you finish and every practice test you pass earns points &mdash; then redeem them for course discounts, downloads, and the Scrubs Dictionary. Your prep literally pays you back.</p>
+        <p style="margin-top:1rem;max-width:54ch;color:rgba(255,255,255,0.82);">Every lesson you finish and every practice test you pass earns points &mdash; then redeem them for course discounts, downloads, and the Nurses Index. Your prep literally pays you back.</p>
         <div style="display:grid;gap:1rem;margin-top:2.4rem;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));">
           <div style="background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.16);border-radius:var(--radius);padding:1.4rem;"><div style="font-family:var(--font-display);font-size:1.6rem;color:var(--gold-400);font-weight:800;">01</div><b style="display:block;margin-top:0.4rem;">Learn &amp; prep</b><span style="font-size:0.85rem;color:rgba(255,255,255,0.7);">Any Scrub TV lesson or free NCLEX practice earns points.</span></div>
           <div style="background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.16);border-radius:var(--radius);padding:1.4rem;"><div style="font-family:var(--font-display);font-size:1.6rem;color:var(--gold-400);font-weight:800;">02</div><b style="display:block;margin-top:0.4rem;">Pass a test</b><span style="font-size:0.85rem;color:rgba(255,255,255,0.7);">Quizzes and practice tests pay out more the better you score.</span></div>
           <div style="background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.16);border-radius:var(--radius);padding:1.4rem;"><div style="font-family:var(--font-display);font-size:1.6rem;color:var(--gold-400);font-weight:800;">03</div><b style="display:block;margin-top:0.4rem;">Bank points + streak</b><span style="font-size:0.85rem;color:rgba(255,255,255,0.7);">10 free a day, plus quiz, test &amp; streak bonuses.</span></div>
-          <div style="background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.16);border-radius:var(--radius);padding:1.4rem;"><div style="font-family:var(--font-display);font-size:1.6rem;color:var(--gold-400);font-weight:800;">04</div><b style="display:block;margin-top:0.4rem;">Redeem the reward</b><span style="font-size:0.85rem;color:rgba(255,255,255,0.7);">Course discounts, store downloads &amp; the Scrubs Dictionary.</span></div>
+          <div style="background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.16);border-radius:var(--radius);padding:1.4rem;"><div style="font-family:var(--font-display);font-size:1.6rem;color:var(--gold-400);font-weight:800;">04</div><b style="display:block;margin-top:0.4rem;">Redeem the reward</b><span style="font-size:0.85rem;color:rgba(255,255,255,0.7);">Course discounts, store downloads &amp; the Nurses Index.</span></div>
         </div>
       </div>
     </section>
@@ -613,10 +615,10 @@ INDEX_BODY = f"""  <main>
           <div class="art" style="background:url(images/dictionary.jpg) center/cover no-repeat, radial-gradient(circle at 70% 25%, rgba(255,201,77,0.4), transparent 50%), radial-gradient(circle at 20% 80%, rgba(139,92,255,0.5), transparent 55%), linear-gradient(150deg,#2b1055,#4d2b9e);"></div>
           <div class="body">
             <div class="chip-row"><span class="chip gold">NEW TOOL</span><span class="chip teal">217+ terms</span></div>
-            <h3>The Scrubs Dictionary</h3>
+            <h3>The Nurses Index</h3>
             <p>Every term, abbreviation, and bit of nurse-speak &mdash; in plain language. <b>Free to search online.</b> Or get the full download: every word with a <b>real clinical example + rationale</b>, so it actually sticks.</p>
             <div class="price-line"><span class="price">$4.99</span><span class="per">download &middot; or unlock with points &middot; free with any course</span></div>
-            <div class="hero-cta" style="margin-top:0.4rem;"><a class="btn btn-coral" href="dictionary.html">Open the Dictionary</a><a class="btn btn-line" href="dictionary.html#download">Get the download</a></div>
+            <div class="hero-cta" style="margin-top:0.4rem;"><a class="btn btn-coral" href="dictionary.html">Open the Nurses Index</a><a class="btn btn-line" href="dictionary.html#download">Get the download</a></div>
           </div>
         </div>
       </div>
@@ -723,7 +725,7 @@ PAGES["courses.html"] = ("Courses — Must Love Scrubs",
       </div>
       {home_spec_carousel()}
 
-      <div class="section-head fade-up" style="margin-top:3.5rem;"><span class="eyebrow gold">Free to start</span><h2>Free that beats their <span class="hl">paid.</span></h2><p>Four full lessons a month, free NCLEX practice, and the Scrubs Dictionary &mdash; no card required.</p></div>
+      <div class="section-head fade-up" style="margin-top:3.5rem;"><span class="eyebrow gold">Free to start</span><h2>Free that beats their <span class="hl">paid.</span></h2><p>Four full lessons a month, free NCLEX practice, and the Nurses Index &mdash; no card required.</p></div>
       {home_lessons()}
       <div class="two-up fade-up" style="margin-top:1.2rem;">
         <a class="wide-card" href="nclex.html">
@@ -733,7 +735,7 @@ PAGES["courses.html"] = ("Courses — Must Love Scrubs",
         </a>
         <a class="wide-card" href="dictionary.html">
           <span class="wc-ic" style="background:linear-gradient(140deg,#2ad4c4,#1a0942);">{I['dict']}</span>
-          <div><b>Scrubs Dictionary</b><p>Every term in plain language, free to search. Own the download for the bonus scenarios.</p></div>
+          <div><b>Nurses Index</b><p>Every term in plain language, free to search. Own the download for the bonus scenarios.</p></div>
           <span class="wc-go">{I['check']}</span>
         </a>
       </div>
@@ -1037,11 +1039,11 @@ PAGES["profile.html"] = ("Profile Dashboard — Must Love Scrubs",
       </div>
       <div class="tile span2 fade-up" data-downloads>
         <div style="display:flex;align-items:center;justify-content:space-between;gap:1rem;flex-wrap:wrap;"><span class="tag">My downloads</span><span class="badge-new" data-dl-badge hidden><span class="spark"></span> Updated &middot; free</span></div>
-        <h3>Scrubs Dictionary</h3>
+        <h3>Nurses Index</h3>
         <div data-dl-owned hidden>
           <div class="update-card" style="margin-top:0.8rem;">
             <div class="uc-body">
-              <b>Scrubs Dictionary <span data-dl-ver>Core Release 2</span></b>
+              <b>Nurses Index <span data-dl-ver>Core Release 2</span></b>
               <p data-dl-msg>You own this. It's yours for life — every future expansion lands here free, automatically.</p>
               <span class="uc-ver" data-dl-note></span>
             </div>
@@ -1050,7 +1052,7 @@ PAGES["profile.html"] = ("Profile Dashboard — Must Love Scrubs",
         </div>
         <div data-dl-unowned>
           <p style="margin-top:0.6rem;">You don't own the download yet. Buy it once for $4.99 (or unlock with points) — then every future expansion is <b>free forever</b>, with the new words waiting right here.</p>
-          <div class="hero-cta" style="margin-top:1rem;"><a class="btn btn-coral" href="dictionary.html#download">Get the Dictionary</a><button class="btn btn-line" data-dl-demo>Unlock (demo)</button></div>
+          <div class="hero-cta" style="margin-top:1rem;"><a class="btn btn-coral" href="dictionary.html#download">Get the Nurses Index</a><button class="btn btn-line" data-dl-demo>Unlock (demo)</button></div>
         </div>
       </div>
       <div class="tile fade-up"><span class="tag">Saved</span><h3>Your library</h3><p>Saved videos, courses, and downloads live here for quick return.</p></div>
@@ -2017,9 +2019,12 @@ def _load_flashcards():
     for path in sorted(_glob.glob(os.path.join(ROOT, 'data', 'flashcards', '*.json'))):
         data = _json.load(open(path, encoding='utf-8'))
         for c in data.get('cards', []):
-            if not c.get('front') or not c.get('back'): continue
+            if not c.get('front'): continue
+            kind = c.get('kind', 'qa')
+            if kind == 'qa' and not c.get('back'): continue   # flip cards need a back
             if c.get('id') in seen: continue
             seen.add(c['id'])
+            c.setdefault('kind', 'qa')
             c.setdefault('difficulty', 3)   # 1..5, same scale as the CAT engine
             cards.append(c)
     return cards
@@ -2052,6 +2057,7 @@ FLASH_BODY = f"""  <div class="page-hero">
         <div class="fc-bar fade-up"><div class="fc-decks">{flash_deck_chips()}</div></div>
         <div class="fc-modes fade-up">
           <button class="fc-mode on" data-mode="study">Study</button>
+          <button class="fc-mode" data-mode="challenge">Challenge</button>
           <button class="fc-mode" data-mode="quiz">Quiz</button>
           <button class="fc-mode" data-mode="match">Match game</button>
           <button class="fc-mode" data-mode="speed">Speed round</button>
@@ -2073,6 +2079,69 @@ FLASH_BODY = f"""  <div class="page-hero">
 PAGES["flashcards.html"] = ("Nursing Flashcards & Games (Adaptive) | Must Love Scrubs",
     "Animated nursing flashcards with rationales, plus quizzes, a match game, and a speed round. Adaptive difficulty levels for NCLEX and specialty prep.",
     FLASH_BODY, "courses")
+
+# ---------------------------------------------------------------- STUDY CALENDAR (the conductor)
+
+STUDYPLAN_BODY = f"""  <div class="page-hero">
+    <div class="wrap inner">
+      <span class="lesson-label" style="color:var(--gold-400);">Study Plan</span>
+      <h1 style="margin-top:0.6rem;">Your plan, run like a <span class="em">class</span>.</h1>
+      <p>Pick your test date and we build a day-by-day calendar that runs the whole system for you &mdash; reading, flashcards, case studies, pop quizzes, mnemonic games, and weekly review tests &mdash; on the learning science that makes it stick: spaced repetition, active recall, and interleaving.</p>
+    </div>
+  </div>
+
+  <section style="background:var(--bg);">
+    <div class="wrap">
+      <div class="planner" data-planner>
+        <div class="plan-controls fade-up">
+          <div class="pc-row">
+            <label>Plan length
+              <div class="seg pc-len" data-plan-len>
+                <button data-len="1">1 mo</button>
+                <button class="on" data-len="2">2 mo</button>
+                <button data-len="3">3 mo</button>
+                <button data-len="6">6 mo</button>
+              </div>
+            </label>
+            <label>Start date <input type="date" data-plan-start></label>
+            <button class="btn btn-coral" data-plan-go>Build my plan</button>
+          </div>
+          <div class="pc-meta">
+            <span class="fc-stat">Days done <b data-plan-done>0</b></span>
+            <span class="fc-stat">Total days <b data-plan-total>0</b></span>
+            <span class="fc-stat">Streak <b data-plan-streak>0</b></span>
+            <div class="plan-progress"><i data-plan-bar style="width:0%"></i></div>
+          </div>
+          <div class="plan-legend">
+            <span class="lg lg-read">Read</span><span class="lg lg-cards">Flashcards</span>
+            <span class="lg lg-review">Review</span><span class="lg lg-quiz">Pop quiz</span>
+            <span class="lg lg-case">Case study</span><span class="lg lg-game">Mnemonic game</span>
+            <span class="lg lg-test">Review test</span><span class="lg lg-exam">Readiness exam</span>
+            <span class="lg lg-rest">Rest</span>
+          </div>
+        </div>
+        <div class="plan-cal fade-up" data-plan-cal></div>
+      </div>
+      <div class="plan-why fade-up">
+        <h3>Why a calendar beats “just do questions”</h3>
+        <p>Cramming fades; <b>spaced repetition</b> (revisiting a topic right before you'd forget it), <b>active recall</b> (retrieving instead of rereading), and <b>interleaving</b> (mixing topics) are the most evidence-backed ways to learn faster and remember longer. The calendar schedules all three automatically, then re-weights toward whatever you keep missing.</p>
+      </div>
+    </div>
+  </section>
+
+  <div class="plan-day-modal" data-plan-modal hidden>
+    <div class="pdm-card">
+      <button class="pdm-close" data-plan-close aria-label="Close">&times;</button>
+      <div data-plan-modal-body></div>
+    </div>
+  </div>
+
+  <script src="js/studyplan.js"></script>
+"""
+
+PAGES["study-plan.html"] = ("NCLEX Study Plan Calendar (Day-by-Day) | Must Love Scrubs",
+    "Build a personalized day-by-day NCLEX study calendar that runs reading, flashcards, case studies, pop quizzes, mnemonic games, and review tests on spaced repetition and active recall.",
+    STUDYPLAN_BODY, "courses")
 
 # ---------------------------------------------------------------- FREE NCLEX STUDY GUIDE / RESOURCES HUB
 
@@ -2486,7 +2555,7 @@ def dict_chips():
 DICT_BODY = f"""  <div class="page-hero">
     <div class="wrap inner">
       <span class="lesson-label" style="color:var(--gold-400);">Free tool</span>
-      <h1 style="margin-top:0.6rem;">The Scrubs <span class="em">Dictionary</span>.</h1>
+      <h1 style="margin-top:0.6rem;">The Nurses <span class="em">Index</span>.</h1>
       <p>Every term, abbreviation, and bit of nurse-speak &mdash; in plain language. Search it, filter it, learn it. Free to search, forever, and always growing.</p>
     </div>
   </div>
@@ -2552,7 +2621,7 @@ DICT_BODY = f"""  <div class="page-hero">
   <script src="js/dictionary.js"></script>
 """
 
-PAGES["dictionary.html"] = ("Scrubs Dictionary &mdash; Must Love Scrubs",
+PAGES["dictionary.html"] = ("Nurses Index &mdash; Must Love Scrubs",
     "A free, searchable dictionary of 217+ nursing and medical terms, abbreviations, and plain-language definitions. Download with examples and rationales.",
     DICT_BODY, "dictionary")
 

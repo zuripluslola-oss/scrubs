@@ -86,7 +86,7 @@ anchor + "Save $X"). Esi's AI cost is ~$25/mo, so every tier clears cost + margi
 - **6 Months — $199** (anchor $349, Save $150). $33/mo. *Best value* (teal). Pass Guarantee.
 - **Pass Guarantee** on 2/3/6-month plans: finish the program, full refund if you don't pass.
 - Helper `pricing_tiers()` renders 4 cards; `TIERS` holds the data (`rec`, `feat`, `permo`). `nclex-complete.html` is the flagship page.
-- Specialty courses $49–$79 · Scrubs Dictionary download $4.99 (or points, free with any course).
+- Specialty courses $49–$79 · Nurses Index download $4.99 (or points, free with any course).
 - Free account: free tier (NCLEX practice + 4 Scrub TV lessons + dictionary search), points, dashboard.
 
 ## NCLEX Complete flagship page (owner-locked — benchmarked to beat NCLEX Bootcamp)
@@ -159,7 +159,7 @@ original content and MLS branding** — never copy their text, never use the nam
 | 4 full-length readiness exams + pass prediction | Readiness meter Low/Borderline/High/Very High (NCLEX Complete) |
 | Study Schedule Creator (1/2/3-mo calendar) | Study schedules + plan quiz (NCLEX Complete) |
 | Pass Targets Tracker | Mastered/Reviewing/Learning tagging + performance-by-subject bars |
-| 140+ printable cheat sheets | Store digital downloads + Scrubs Dictionary + the 50-Q workbook |
+| 140+ printable cheat sheets | Store digital downloads + Nurses Index + the 50-Q workbook |
 | Ask Bootcamp AI | **Esi** (our differentiator — included in every plan) |
 | Free NCLEX Study Guide (lead-magnet doc) | `nclex-guide.html` — "for nurses, by nurses" (below) |
 | NCLEX 101 info (register / exam day / fees / test plan) | Sections in `nclex-guide.html` (placeholder external links to add) |
@@ -199,13 +199,13 @@ replaced the old "A–Z" block). See `images/README.md`.
 - Scrub TV free lessons render on **one line** (`.course-shelf.one-line`); button reads "Free lessons".
 - Dictionary shows a **free-vs-paid "with bonus" comparison** (`.compare-grid`) so buyers see the paid value.
 
-## Scrubs Dictionary (owner-locked tool)
+## Nurses Index (owner-locked tool)
 
 A searchable index of medical/nursing terms and definitions — free tool at
 `dictionary.html`. Search box + A–Z filter + category chips. Great for SEO and
 daily-return habit. Grows over time.
 
-## Scrubs Dictionary = a product (owner-locked)
+## Nurses Index = a product (owner-locked)
 
 Data lives in `data/nurse-dictionary.json` (+ .csv); `dictionary.html` is generated
 from it (217+ curated terms, 32 categories mapped to 7 filter groups). No duplicates.
@@ -217,7 +217,7 @@ from it (217+ curated terms, 32 categories mapped to 7 filter groups). No duplic
 ## Points — what unlocks with points (owner-locked + roadmap)
 
 Earn: 10/day daily claim + quiz/streak/contest bonuses. Redeemable for:
-Scrubs Dictionary download · store digital downloads (brain sheets, planners, drug
+Nurses Index download · store digital downloads (brain sheets, planners, drug
 cards) · course discount dollars · (roadmap: mock-exam retakes, streak freezes,
 Esi day-passes, exclusive Scrub TV drops, merch discount codes, spotlight submission boosts).
 

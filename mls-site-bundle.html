@@ -672,6 +672,90 @@ section { padding-block: clamp(3.6rem, 9vw, 6.5rem); position: relative; }
 .fc-done { text-align: center; background: var(--card); border-radius: var(--radius); padding: 2rem; box-shadow: var(--shadow-1); }
 .fc-done h3 { font-size: 1.4rem; } .fc-done p { color: var(--ink-60); margin: 0.5rem 0 1.2rem; }
 
+/* interactive card kinds (mc / tf / fill / odd / order / bowtie) */
+.fc-inter { background: var(--card); border: 1px solid rgba(30,18,51,0.08); border-radius: var(--radius); padding: 1.6rem; box-shadow: var(--shadow-1); }
+.fc-inter .fc-q { color: var(--ink); margin: 0.4rem 0 1rem; }
+.fc-sub { font-size: 0.85rem; color: var(--ink-60); margin-bottom: 0.7rem; }
+.fc-tf { grid-template-columns: 1fr 1fr; }
+.fc-fill { display: flex; gap: 0.5rem; flex-wrap: wrap; }
+.fc-input { flex: 1; min-width: 200px; border: 1.5px solid rgba(30,18,51,0.16); border-radius: 12px; padding: 0.75rem 1rem; font-size: 0.95rem; }
+.fc-input.right { border-color: var(--teal-600); background: var(--teal-100); }
+.fc-input.wrong { border-color: #e5484d; background: #fdecec; }
+.fc-order { display: grid; gap: 0.5rem; }
+.fc-ord { position: relative; text-align: left; background: var(--bg); border: 1.5px solid rgba(30,18,51,0.12); border-radius: 12px; padding: 0.75rem 1rem 0.75rem 2.6rem; font-size: 0.9rem; color: var(--ink); cursor: pointer; }
+.fc-ord.picked { border-color: var(--coral-500); background: var(--coral-100); }
+.fc-ord.right { border-color: var(--teal-600); background: var(--teal-100); }
+.fc-ord.wrong { border-color: #e5484d; background: #fdecec; }
+.fc-ord .fc-num { position: absolute; left: 0.6rem; top: 50%; transform: translateY(-50%); width: 22px; height: 22px; border-radius: 50%; background: var(--coral-500); color: #fff; font-size: 0.75rem; font-weight: 800; display: grid; place-items: center; }
+.fc-correct-order { margin: 0.4rem 0 0 1.1rem; font-size: 0.86rem; }
+.fc-actions { display: flex; gap: 0.6rem; margin-top: 1rem; flex-wrap: wrap; }
+/* bow-tie mini */
+.fc-bt { display: grid; gap: 0.8rem; grid-template-columns: 1fr; margin-top: 0.3rem; }
+@media (min-width: 720px) { .fc-bt { grid-template-columns: 1fr 1.05fr 1fr; align-items: start; } }
+.fc-bt-col { display: grid; gap: 0.4rem; align-content: start; }
+.fc-bt-col .fc-bt-label { font-size: 0.62rem; font-weight: 800; letter-spacing: 0.07em; text-transform: uppercase; color: var(--coral-500); text-align: center; }
+.fc-bt-opt { text-align: center; background: var(--bg); border: 1.5px solid rgba(30,18,51,0.14); border-radius: 11px; padding: 0.6rem 0.7rem; font-size: 0.8rem; font-weight: 600; color: var(--ink); cursor: pointer; }
+.fc-bt-opt.sel { border-color: var(--coral-500); background: var(--coral-100); }
+.fc-bt-opt.right { border-color: var(--teal-600); background: var(--teal-100); }
+.fc-bt-opt.missed { border-color: var(--teal-600); border-style: dashed; }
+.fc-bt-opt.wrong { border-color: #e5484d; background: #fdecec; }
+/* feedback slot */
+.fc-fb { margin-top: 1.1rem; border-top: 1px solid rgba(30,18,51,0.08); padding-top: 1rem; }
+.fc-verdict { display: inline-block; font-weight: 800; font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.05em; padding: 0.28rem 0.8rem; border-radius: var(--pill); }
+.fc-fb.ok .fc-verdict { color: var(--teal-600); background: var(--teal-100); }
+.fc-fb.no .fc-verdict { color: #e5484d; background: #fdecec; }
+.fc-ans-line { font-size: 0.9rem; margin: 0.6rem 0; }
+.fc-fb .fc-why { font-size: 0.88rem; color: var(--ink-60); margin-top: 0.5rem; } .fc-fb .fc-why b { color: var(--ink); }
+.fc-fb .fc-hint { font-size: 0.84rem; color: var(--coral-600); margin-top: 0.4rem; }
+.fc-fb .fc-next { margin-top: 0.9rem; }
+
+/* --- Study Plan Calendar --- */
+.plan-controls { background: var(--card); border: 1px solid rgba(30,18,51,0.08); border-radius: var(--radius); padding: 1.4rem 1.6rem; box-shadow: var(--shadow-1); margin-bottom: 1.4rem; }
+.pc-row { display: flex; flex-wrap: wrap; gap: 1rem; align-items: flex-end; }
+.pc-row label { font-size: 0.72rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.06em; color: var(--ink-60); display: grid; gap: 0.4rem; }
+.pc-row input[type="date"] { border: 1.5px solid rgba(30,18,51,0.16); border-radius: 12px; padding: 0.6rem 0.8rem; font-size: 0.95rem; font-family: inherit; }
+.pc-len { display: inline-flex; gap: 0.2rem; background: var(--bg); border-radius: var(--pill); padding: 0.25rem; }
+.pc-len button { border: none; background: transparent; color: var(--ink-60); font-weight: 800; font-size: 0.82rem; padding: 0.45rem 0.9rem; border-radius: var(--pill); cursor: pointer; }
+.pc-len button.on { background: var(--coral-500); color: #fff; }
+.pc-meta { display: flex; flex-wrap: wrap; gap: 1.2rem; align-items: center; margin-top: 1.2rem; }
+.plan-progress { flex: 1; min-width: 160px; height: 8px; background: rgba(30,18,51,0.08); border-radius: var(--pill); overflow: hidden; }
+.plan-progress i { display: block; height: 100%; background: linear-gradient(90deg, var(--coral-500), var(--teal-400)); transition: width 0.4s; }
+.plan-legend { display: flex; flex-wrap: wrap; gap: 0.5rem 0.9rem; margin-top: 1.1rem; }
+.plan-legend .lg { font-size: 0.72rem; font-weight: 700; color: var(--ink-60); display: inline-flex; align-items: center; gap: 0.35rem; }
+.plan-legend .lg::before { content: ""; width: 10px; height: 10px; border-radius: 50%; }
+.lg-read::before, .cal-dot.read { background: #8b5cff; } .lg-cards::before, .cal-dot.cards { background: #ff6b9d; }
+.lg-review::before, .cal-dot.review { background: #2ad4c4; } .lg-quiz::before, .cal-dot.quiz { background: #ffc23d; }
+.lg-case::before, .cal-dot.case { background: #4d2b9e; } .lg-game::before, .cal-dot.game { background: #14b8a8; }
+.lg-test::before, .cal-dot.test { background: #e5484d; } .lg-exam::before, .cal-dot.exam { background: #1a0942; }
+.lg-rest::before, .cal-dot.rest { background: #9aa0b4; }
+
+.plan-cal { overflow-x: auto; }
+.cal-grid { display: grid; grid-template-columns: repeat(7, minmax(84px, 1fr)); gap: 6px; min-width: 620px; }
+.cal-wd { font-size: 0.66rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.06em; color: var(--ink-40); text-align: center; padding-bottom: 2px; }
+.cal-cell { position: relative; min-height: 74px; background: var(--card); border: 1px solid rgba(30,18,51,0.08); border-radius: 12px; padding: 0.4rem; cursor: pointer; text-align: left; transition: transform 0.1s, box-shadow 0.1s; }
+.cal-cell:hover { transform: translateY(-2px); box-shadow: var(--shadow-1); border-color: var(--coral-500); }
+.cal-cell.empty { background: transparent; border: none; cursor: default; }
+.cal-cell.rest { background: repeating-linear-gradient(45deg, var(--bg), var(--bg) 6px, #eee 6px, #eee 7px); }
+.cal-cell.today { border: 2px solid var(--coral-500); }
+.cal-cell.done { background: var(--teal-100); border-color: var(--teal-600); }
+.cal-cell.milestone { box-shadow: inset 0 3px 0 var(--gold-400); }
+.cal-num { font-family: var(--font-display); font-weight: 800; font-size: 0.9rem; color: var(--ink); }
+.cal-check { position: absolute; top: 0.35rem; right: 0.45rem; color: var(--teal-600); font-weight: 800; }
+.cal-dots { position: absolute; bottom: 0.4rem; left: 0.4rem; display: flex; flex-wrap: wrap; gap: 3px; }
+.cal-dot { width: 8px; height: 8px; border-radius: 50%; }
+
+.plan-why { max-width: 760px; margin: 2rem auto 0; background: var(--card); border-left: 4px solid var(--teal-400); border-radius: 0 12px 12px 0; padding: 1.2rem 1.4rem; box-shadow: var(--shadow-1); }
+.plan-why h3 { font-size: 1.1rem; } .plan-why p { color: var(--ink-60); font-size: 0.9rem; margin-top: 0.4rem; }
+
+.plan-day-modal { position: fixed; inset: 0; z-index: 120; background: rgba(20,10,40,0.55); display: grid; place-items: center; padding: 1rem; }
+.plan-day-modal[hidden] { display: none; }
+.pdm-card { position: relative; background: var(--card); border-radius: var(--radius); max-width: 560px; width: 100%; max-height: 86vh; overflow-y: auto; padding: 1.8rem; box-shadow: var(--shadow-2); }
+.pdm-close { position: absolute; top: 0.8rem; right: 1rem; border: none; background: transparent; font-size: 1.6rem; line-height: 1; color: var(--ink-60); cursor: pointer; }
+.pd-act { display: flex; align-items: flex-start; gap: 0.7rem; padding: 0.8rem 0; border-top: 1px solid rgba(30,18,51,0.08); }
+.pd-act .cal-dot { margin-top: 5px; flex-shrink: 0; }
+.pd-act-body { flex: 1; } .pd-act-body b { font-size: 0.92rem; } .pd-act-body p { font-size: 0.83rem; color: var(--ink-60); margin-top: 0.2rem; }
+.pd-go { font-size: 0.78rem; padding: 0.45rem 0.9rem; flex-shrink: 0; align-self: center; }
+
 /* courses page wide cards */
 .two-up { display: grid; gap: 1rem; grid-template-columns: 1fr; }
 @media (min-width: 720px) { .two-up { grid-template-columns: repeat(2, 1fr); } }
@@ -1618,6 +1702,7 @@ body.mls-paid .gate { display: none; }
           <li><a href="nclex.html">Free NCLEX Prep <small>RN &amp; LPN &middot; every NGN item type</small></a></li>
           <li><a href="qbank.html">Question Bank <small>Practice with rationales &amp; answer stats</small></a></li>
           <li><a href="flashcards.html">Flashcards &amp; Games <small>Flip cards, quizzes, match &amp; speed rounds</small></a></li>
+          <li><a href="study-plan.html">Study Plan Calendar <small>Your day-by-day plan to test day</small></a></li>
           <li><a href="nclex-guide.html">Free Study Guide <small>How to pass &middot; for nurses, by nurses</small></a></li>
           <li><a href="course-lab-values.html">Free NCLEX Practice <small>Start with a free audio scene</small></a></li>
           <li><a href="specialties.html">Specialty Prep <small>22 specialty tracks &middot; rolling out</small></a></li>
@@ -1629,7 +1714,7 @@ body.mls-paid .gate { display: none; }
       <div>
         <h4>Community</h4>
         <ul class="mega-links">
-          <li><a href="dictionary.html">Scrubs Dictionary <small>Every term, in plain language</small></a></li>
+          <li><a href="dictionary.html">Nurses Index <small>Every term, in plain language</small></a></li>
           <li><a href="spotlight.html">Nurse Spotlight <small>Real stories, beautifully told</small></a></li>
           <li><a href="jobs.html">Job Search <small>A small Indeed, just for nurses</small></a></li>
           <li><a href="blog.html">Blog <small>News, tips &amp; nurse life</small></a></li>
@@ -1800,7 +1885,7 @@ body.mls-paid .gate { display: none; }
           <article class="why-card fade-up">
             <span class="num">04</span>
             <h3>Free that beats their paid</h3>
-            <p>Your free account already includes NCLEX practice with every NGN item type, four full lessons a month, and the Scrubs Dictionary — deeper than what most sites put behind a paywall.</p>
+            <p>Your free account already includes NCLEX practice with every NGN item type, four full lessons a month, and the Nurses Index — deeper than what most sites put behind a paywall.</p>
           </article>
         </div>
       </div>
@@ -1861,12 +1946,12 @@ body.mls-paid .gate { display: none; }
       <div class="wrap fade-up">
         <span class="eyebrow" style="color:var(--gold-400);">Points &amp; rewards</span>
         <h2 style="font-size:clamp(2rem,6vw,3rem);max-width:18ch;">Get <span class="hl">points</span> for learning.</h2>
-        <p style="margin-top:1rem;max-width:54ch;color:rgba(255,255,255,0.82);">Every lesson you finish and every practice test you pass earns points &mdash; then redeem them for course discounts, downloads, and the Scrubs Dictionary. Your prep literally pays you back.</p>
+        <p style="margin-top:1rem;max-width:54ch;color:rgba(255,255,255,0.82);">Every lesson you finish and every practice test you pass earns points &mdash; then redeem them for course discounts, downloads, and the Nurses Index. Your prep literally pays you back.</p>
         <div style="display:grid;gap:1rem;margin-top:2.4rem;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));">
           <div style="background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.16);border-radius:var(--radius);padding:1.4rem;"><div style="font-family:var(--font-display);font-size:1.6rem;color:var(--gold-400);font-weight:800;">01</div><b style="display:block;margin-top:0.4rem;">Learn &amp; prep</b><span style="font-size:0.85rem;color:rgba(255,255,255,0.7);">Any Scrub TV lesson or free NCLEX practice earns points.</span></div>
           <div style="background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.16);border-radius:var(--radius);padding:1.4rem;"><div style="font-family:var(--font-display);font-size:1.6rem;color:var(--gold-400);font-weight:800;">02</div><b style="display:block;margin-top:0.4rem;">Pass a test</b><span style="font-size:0.85rem;color:rgba(255,255,255,0.7);">Quizzes and practice tests pay out more the better you score.</span></div>
           <div style="background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.16);border-radius:var(--radius);padding:1.4rem;"><div style="font-family:var(--font-display);font-size:1.6rem;color:var(--gold-400);font-weight:800;">03</div><b style="display:block;margin-top:0.4rem;">Bank points + streak</b><span style="font-size:0.85rem;color:rgba(255,255,255,0.7);">10 free a day, plus quiz, test &amp; streak bonuses.</span></div>
-          <div style="background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.16);border-radius:var(--radius);padding:1.4rem;"><div style="font-family:var(--font-display);font-size:1.6rem;color:var(--gold-400);font-weight:800;">04</div><b style="display:block;margin-top:0.4rem;">Redeem the reward</b><span style="font-size:0.85rem;color:rgba(255,255,255,0.7);">Course discounts, store downloads &amp; the Scrubs Dictionary.</span></div>
+          <div style="background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.16);border-radius:var(--radius);padding:1.4rem;"><div style="font-family:var(--font-display);font-size:1.6rem;color:var(--gold-400);font-weight:800;">04</div><b style="display:block;margin-top:0.4rem;">Redeem the reward</b><span style="font-size:0.85rem;color:rgba(255,255,255,0.7);">Course discounts, store downloads &amp; the Nurses Index.</span></div>
         </div>
       </div>
     </section>
@@ -1877,10 +1962,10 @@ body.mls-paid .gate { display: none; }
           <div class="art" style="background:none center/cover no-repeat, radial-gradient(circle at 70% 25%, rgba(255,201,77,0.4), transparent 50%), radial-gradient(circle at 20% 80%, rgba(139,92,255,0.5), transparent 55%), linear-gradient(150deg,#2b1055,#4d2b9e);"></div>
           <div class="body">
             <div class="chip-row"><span class="chip gold">NEW TOOL</span><span class="chip teal">217+ terms</span></div>
-            <h3>The Scrubs Dictionary</h3>
+            <h3>The Nurses Index</h3>
             <p>Every term, abbreviation, and bit of nurse-speak &mdash; in plain language. <b>Free to search online.</b> Or get the full download: every word with a <b>real clinical example + rationale</b>, so it actually sticks.</p>
             <div class="price-line"><span class="price">$4.99</span><span class="per">download &middot; or unlock with points &middot; free with any course</span></div>
-            <div class="hero-cta" style="margin-top:0.4rem;"><a class="btn btn-coral" href="dictionary.html">Open the Dictionary</a><a class="btn btn-line" href="dictionary.html#download">Get the download</a></div>
+            <div class="hero-cta" style="margin-top:0.4rem;"><a class="btn btn-coral" href="dictionary.html">Open the Nurses Index</a><a class="btn btn-line" href="dictionary.html#download">Get the download</a></div>
           </div>
         </div>
       </div>
@@ -1958,7 +2043,7 @@ body.mls-paid .gate { display: none; }
           <div class="faq-a"><p>Yes — Esi comes with every plan at no extra cost. She tracks your weak areas, builds your study plan, and turns every miss into a targeted drill. There's no separate add-on.</p></div>
         </div><div class="faq-item">
           <button class="faq-q">What's free versus paid? <svg class="chev" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="m6 9 6 6 6-6"/></svg></button>
-          <div class="faq-a"><p>Free forever: NCLEX practice with every item type, four Scrub TV lessons a month, the Scrubs Dictionary, and daily points. Paid unlocks the full question bank, case studies, readiness exams, schedules, the workbook, and Esi.</p></div>
+          <div class="faq-a"><p>Free forever: NCLEX practice with every item type, four Scrub TV lessons a month, the Nurses Index, and daily points. Paid unlocks the full question bank, case studies, readiness exams, schedules, the workbook, and Esi.</p></div>
         </div><div class="faq-item">
           <button class="faq-q">Can I study on my phone? <svg class="chev" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="m6 9 6 6 6-6"/></svg></button>
           <div class="faq-a"><p>Absolutely — the entire experience is mobile-first with app-style navigation. Study on the bus, in the break room, or on the couch.</p></div>
@@ -2643,7 +2728,7 @@ body.mls-paid .gate { display: none; }
           <div class="foot"><span class="price">$69</span><span class="go">Preview &rarr;</span></div>
         </a></div>
 
-      <div class="section-head fade-up" style="margin-top:3.5rem;"><span class="eyebrow gold">Free to start</span><h2>Free that beats their <span class="hl">paid.</span></h2><p>Four full lessons a month, free NCLEX practice, and the Scrubs Dictionary &mdash; no card required.</p></div>
+      <div class="section-head fade-up" style="margin-top:3.5rem;"><span class="eyebrow gold">Free to start</span><h2>Free that beats their <span class="hl">paid.</span></h2><p>Four full lessons a month, free NCLEX practice, and the Nurses Index &mdash; no card required.</p></div>
       <div class="course-shelf"><a class="course-card fade-up" href="course-lab-values.html"><div class="cover" style="background:linear-gradient(135deg,#4d2b9e,#14b8a8);">01</div><div class="body"><b>Critical Lab Values</b><small>Audio scene + 4 tests &middot; Free</small><div class="foot"><span class="p" style="color:var(--teal-600);">Free</span><span style="font-size:0.82rem;font-weight:700;color:var(--coral-500);">Start &rarr;</span></div></div></a><a class="course-card fade-up" href="course-prioritization.html"><div class="cover" style="background:linear-gradient(135deg,#2b1055,#8b5cff);">02</div><div class="body"><b>Prioritization &amp; Delegation</b><small>Audio scene + 4 tests &middot; Free</small><div class="foot"><span class="p" style="color:var(--teal-600);">Free</span><span style="font-size:0.82rem;font-weight:700;color:var(--coral-500);">Start &rarr;</span></div></div></a><a class="course-card fade-up" href="course-med-safety.html"><div class="cover" style="background:linear-gradient(135deg,#4d2b9e,#ffb038);">03</div><div class="body"><b>Medication Safety</b><small>Audio scene + 4 tests &middot; Free</small><div class="foot"><span class="p" style="color:var(--teal-600);">Free</span><span style="font-size:0.82rem;font-weight:700;color:var(--coral-500);">Start &rarr;</span></div></div></a><a class="course-card fade-up" href="course-deterioration.html"><div class="cover" style="background:linear-gradient(135deg,#2b1055,#e5484d);">04</div><div class="body"><b>Spot the Deterioration</b><small>Audio scene + 4 tests &middot; Free</small><div class="foot"><span class="p" style="color:var(--teal-600);">Free</span><span style="font-size:0.82rem;font-weight:700;color:var(--coral-500);">Start &rarr;</span></div></div></a></div>
       <div class="two-up fade-up" style="margin-top:1.2rem;">
         <a class="wide-card" href="nclex.html">
@@ -2653,7 +2738,7 @@ body.mls-paid .gate { display: none; }
         </a>
         <a class="wide-card" href="dictionary.html">
           <span class="wc-ic" style="background:linear-gradient(140deg,#2ad4c4,#1a0942);"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 4a1 1 0 0 1 1-1h12v18H6a1 1 0 0 1-1-1z"/><path d="M8 3v18M11 8h5M11 11h5"/></svg></span>
-          <div><b>Scrubs Dictionary</b><p>Every term in plain language, free to search. Own the download for the bonus scenarios.</p></div>
+          <div><b>Nurses Index</b><p>Every term in plain language, free to search. Own the download for the bonus scenarios.</p></div>
           <span class="wc-go"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="m4 12.5 5 5L20 6.5"/></svg></span>
         </a>
       </div>
@@ -2675,7 +2760,7 @@ body.mls-paid .gate { display: none; }
   <div class="page-hero">
     <div class="wrap inner">
       <span class="lesson-label" style="color:var(--gold-400);">Free tool</span>
-      <h1 style="margin-top:0.6rem;">The Scrubs <span class="em">Dictionary</span>.</h1>
+      <h1 style="margin-top:0.6rem;">The Nurses <span class="em">Index</span>.</h1>
       <p>Every term, abbreviation, and bit of nurse-speak &mdash; in plain language. Search it, filter it, learn it. Free to search, forever, and always growing.</p>
     </div>
   </div>
@@ -3894,11 +3979,12 @@ body.mls-paid .gate { display: none; }
 
   <section style="background:var(--bg);">
     <div class="wrap">
-      <div class="flash" data-flash-total="52">
-        <script type="application/json" data-flash>[{"id": "fc-pharm-0001", "deck": "NCLEX · Pharmacology", "topic": "Antidotes", "difficulty": 2, "front": "Antidote for heparin?", "back": "Protamine sulfate", "rationale": "Heparin is monitored with aPTT; protamine sulfate reverses it.", "hint": "“P for heParin.”"}, {"id": "fc-pharm-0002", "deck": "NCLEX · Pharmacology", "topic": "Antidotes", "difficulty": 2, "front": "Antidote for warfarin?", "back": "Vitamin K", "rationale": "Warfarin is monitored with PT/INR; vitamin K reverses it.", "hint": "“K for Koumadin.”"}, {"id": "fc-pharm-0003", "deck": "NCLEX · Pharmacology", "topic": "Cardiac", "difficulty": 3, "front": "Signs of digoxin toxicity?", "back": "Nausea/vomiting, anorexia, yellow-green halos, bradycardia", "rationale": "Hold digoxin for an apical pulse \u003c 60; low potassium worsens toxicity.", "hint": "“Sick, slow, and see yellow.”"}, {"id": "fc-pharm-0004", "deck": "NCLEX · Pharmacology", "topic": "Diuretics", "difficulty": 2, "front": "Furosemide — key electrolyte to watch?", "back": "Potassium (it is potassium-wasting → hypokalemia)", "rationale": "Loop/thiazide diuretics lose potassium; spironolactone keeps it.", "hint": "“Furosemide → Falling K.”"}, {"id": "fc-pharm-0005", "deck": "NCLEX · Pharmacology", "topic": "Cardiac", "difficulty": 2, "front": "Hold a beta-blocker (“-olol”) if…", "back": "Apical pulse \u003c 60 (or per parameters)", "rationale": "Beta-blockers slow heart rate; never stop them abruptly (rebound).", "hint": "“Beta blocks the beats.”"}, {"id": "fc-pharm-0006", "deck": "NCLEX · Pharmacology", "topic": "Antidotes", "difficulty": 2, "front": "Antidote for opioids?", "back": "Naloxone (Narcan)", "rationale": "A respiratory rate \u003c 12 after an opioid is the red flag.", "hint": "“Naloxone Negates Narcotics.”"}, {"id": "fc-pharm-0007", "deck": "NCLEX · Pharmacology", "topic": "Antidotes", "difficulty": 3, "front": "Antidote for benzodiazepines?", "back": "Flumazenil", "rationale": "Reverses benzo sedation/respiratory depression; use cautiously (seizure risk).", "hint": "“Flu-ma-zenil for the -zepams.”"}, {"id": "fc-pharm-0008", "deck": "NCLEX · Pharmacology", "topic": "Antidotes", "difficulty": 3, "front": "Antidote for acetaminophen overdose?", "back": "N-acetylcysteine (NAC)", "rationale": "Protects the liver; most effective given early after overdose.", "hint": "“N-A-C for the Tylenol.”"}, {"id": "fc-pharm-0009", "deck": "NCLEX · Pharmacology", "topic": "Maternity", "difficulty": 3, "front": "Antidote for magnesium sulfate toxicity?", "back": "Calcium gluconate", "rationale": "Watch respirations ≥12, present DTRs, and urine output ≥30 mL/hr.", "hint": "“Mag sags — calcium saves.”"}, {"id": "fc-pharm-0010", "deck": "NCLEX · Pharmacology", "topic": "Mental Health", "difficulty": 3, "front": "Therapeutic lithium level?", "back": "0.6–1.2 mEq/L", "rationale": "Narrow range; dehydration or low sodium raises the level toward toxicity.", "hint": "“0.6 to 1.2, keep it true.”"}, {"id": "fc-lab-0001", "deck": "NCLEX · Lab Values", "topic": "Electrolytes", "difficulty": 1, "front": "Normal potassium?", "back": "3.5–5.0 mEq/L", "rationale": "Both high and low potassium cause life-threatening dysrhythmias.", "hint": "“3.5 to 5, keeps the heart alive.”"}, {"id": "fc-lab-0002", "deck": "NCLEX · Lab Values", "topic": "Electrolytes", "difficulty": 1, "front": "Normal sodium?", "back": "135–145 mEq/L", "rationale": "Sodium drives fluid balance and neuro status.", "hint": "“135 to 145.”"}, {"id": "fc-lab-0003", "deck": "NCLEX · Lab Values", "topic": "Drug levels", "difficulty": 3, "front": "Therapeutic digoxin level?", "back": "0.5–2.0 ng/mL", "rationale": "Above 2.0 → toxicity; check potassium alongside it.", "hint": "Narrow window — know it cold."}, {"id": "fc-lab-0004", "deck": "NCLEX · Lab Values", "topic": "Coagulation", "difficulty": 2, "front": "Therapeutic INR on warfarin?", "back": "2.0–3.0 (up to 3.5 for some clients)", "rationale": "Too high = bleeding; too low = clot risk.", "hint": "“warfarin → watch the INR.”"}, {"id": "fc-lab-0005", "deck": "NCLEX · Lab Values", "topic": "Coagulation", "difficulty": 3, "front": "Therapeutic aPTT on heparin?", "back": "1.5–2.5× the control", "rationale": "aPTT monitors heparin; PT/INR monitors warfarin.", "hint": "aPTT → heParin."}, {"id": "fc-lab-0006", "deck": "NCLEX · Lab Values", "topic": "Metabolic", "difficulty": 1, "front": "Normal fasting glucose?", "back": "70–110 mg/dL", "rationale": "Below 70 = hypoglycemia (treat fast carbs); high = hyperglycemia.", "hint": "“70 to 110.”"}, {"id": "fc-lab-0007", "deck": "NCLEX · Lab Values", "topic": "Renal", "difficulty": 2, "front": "Normal creatinine?", "back": "0.6–1.2 mg/dL", "rationale": "Best single marker of kidney function; rises as function drops.", "hint": "Creatinine climbs as kidneys quit."}, {"id": "fc-lab-0008", "deck": "NCLEX · Lab Values", "topic": "Hematology", "difficulty": 2, "front": "Critical platelet level?", "back": "\u003c 50,000/µL (normal 150k–400k)", "rationale": "Below 50k sharply raises bleeding risk; below 20k = spontaneous bleeding.", "hint": "Under 50k — bleeding on the way."}, {"id": "fc-lab-0009", "deck": "NCLEX · Lab Values", "topic": "Electrolytes", "difficulty": 3, "front": "Potassium 6.8 — what and what do you see?", "back": "Hyperkalemia → tall, peaked T waves; cardiac emergency", "rationale": "Calcium protects the heart; insulin+D50 shifts K into cells; dialysis removes it.", "hint": "Peaked T = too much K."}, {"id": "fc-lab-0010", "deck": "NCLEX · Lab Values", "topic": "ABGs", "difficulty": 4, "front": "pH 7.30, CO₂ 55 — interpretation?", "back": "Respiratory acidosis", "rationale": "Low pH + high CO₂ = hypoventilation (COPD, sedation).", "hint": "ROME: Respiratory Opposite."}, {"id": "fc-safe-0001", "deck": "NCLEX · Fundamentals \u0026 Safety", "topic": "Infection control", "difficulty": 3, "front": "Airborne precautions — which diseases?", "back": "Measles, TB, Varicella (chickenpox) — N95 + negative-pressure room", "rationale": "Contact = C. diff/MRSA; Droplet = flu/meningitis/pertussis.", "hint": "“My Chicken Hez TB.”"}, {"id": "fc-safe-0002", "deck": "NCLEX · Fundamentals \u0026 Safety", "topic": "Infection control", "difficulty": 2, "front": "C. diff — precautions \u0026 hand hygiene?", "back": "Contact precautions; wash with soap and water (not alcohol gel)", "rationale": "Alcohol doesn’t kill C. diff spores — friction with soap removes them.", "hint": "“Spores need soap.”"}, {"id": "fc-safe-0003", "deck": "NCLEX · Fundamentals \u0026 Safety", "topic": "Prioritization", "difficulty": 1, "front": "First priority framework?", "back": "ABCs — Airway, Breathing, Circulation", "rationale": "Then acute-over-chronic and unstable-over-stable.", "hint": "Air goes first."}, {"id": "fc-safe-0004", "deck": "NCLEX · Fundamentals \u0026 Safety", "topic": "Emergency", "difficulty": 2, "front": "Fire response acronym?", "back": "RACE — Rescue, Alarm, Contain, Extinguish", "rationale": "To use an extinguisher: PASS (Pull, Aim, Squeeze, Sweep).", "hint": "RACE to the fire."}, {"id": "fc-safe-0005", "deck": "NCLEX · Fundamentals \u0026 Safety", "topic": "Delegation", "difficulty": 2, "front": "What can you delegate to a UAP?", "back": "Stable, routine tasks: vitals, hygiene, feeding, ambulating, I\u0026O", "rationale": "The RN keeps Assess, Teach, Evaluate, and nursing judgment/meds.", "hint": "If it needs a nurse’s brain, it stays with the nurse."}, {"id": "fc-safe-0006", "deck": "NCLEX · Fundamentals \u0026 Safety", "topic": "Skills", "difficulty": 2, "front": "Gold standard to confirm NG tube placement?", "back": "X-ray after insertion", "rationale": "The air/auscultation test is unreliable; gastric aspirate pH ≤5 supports placement.", "hint": "When in doubt, X-ray it out."}, {"id": "fc-safe-0007", "deck": "NCLEX · Fundamentals \u0026 Safety", "topic": "Skills", "difficulty": 2, "front": "Two ways to break a sterile field?", "back": "Reaching across it, or letting it get wet; the outer 1-inch border is contaminated", "rationale": "Keep it above the waist and in sight; when in doubt, throw it out.", "hint": "Below the waist or out of sight isn’t sterile."}, {"id": "fc-safe-0008", "deck": "NCLEX · Fundamentals \u0026 Safety", "topic": "Safety", "difficulty": 1, "front": "First-line fall prevention?", "back": "Least restrictive: bed low, call light in reach, nonslip footwear, frequent rounding", "rationale": "Restraints and 4 side rails are last resort (they ARE restraints).", "hint": "Least restrictive, first and best."}, {"id": "fc-icu-0001", "deck": "Specialty · Critical Care / ICU", "topic": "Hemodynamics", "difficulty": 3, "front": "Minimum MAP to perfuse organs?", "back": "≥ 65 mmHg (normal 70–100)", "rationale": "Below 65, vital organs (brain, kidneys) lose perfusion.", "hint": "“65 to stay alive.”"}, {"id": "fc-icu-0002", "deck": "Specialty · Critical Care / ICU", "topic": "Sepsis", "difficulty": 3, "front": "Sepsis hour-1 bundle?", "back": "Cultures → antibiotics → IV fluids → recheck lactate", "rationale": "Draw cultures before antibiotics so the organism can be identified.", "hint": "“Culture, Cover, Fluids, Lactate.”"}, {"id": "fc-icu-0003", "deck": "Specialty · Critical Care / ICU", "topic": "Shock", "difficulty": 4, "front": "First-line vasopressor for septic shock?", "back": "Norepinephrine", "rationale": "Given after adequate fluid resuscitation to restore MAP.", "hint": "“Norepi is number one.”"}, {"id": "fc-icu-0004", "deck": "Specialty · Critical Care / ICU", "topic": "Ventilation", "difficulty": 3, "front": "Ventilator high-pressure alarm — think…", "back": "Obstruction: kink, secretions (suction), biting, mucus plug", "rationale": "Low-pressure alarm = disconnection or leak instead.", "hint": "High = something Hindering flow."}, {"id": "fc-icu-0005", "deck": "Specialty · Critical Care / ICU", "topic": "Neuro", "difficulty": 4, "front": "Normal ICP + first positioning step for high ICP?", "back": "5–15 mmHg; elevate HOB ~30° and keep head midline", "rationale": "Promotes venous drainage; avoid neck flexion and hip flexion.", "hint": "Head up, midline."}, {"id": "fc-icu-0006", "deck": "Specialty · Critical Care / ICU", "topic": "Respiratory", "difficulty": 4, "front": "Hallmark of ARDS?", "back": "Refractory hypoxemia with bilateral infiltrates", "rationale": "Low oxygen that doesn’t improve with supplemental O₂; needs PEEP.", "hint": "Won’t come up with oxygen."}, {"id": "fc-icu-0007", "deck": "Specialty · Critical Care / ICU", "topic": "Lines", "difficulty": 3, "front": "Complication during central line insertion (subclavian)?", "back": "Pneumothorax", "rationale": "Confirm placement with a chest X-ray before use.", "hint": "Needle near the lung."}, {"id": "fc-icu-0008", "deck": "Specialty · Critical Care / ICU", "topic": "Deterioration", "difficulty": 3, "front": "Earliest sign a patient is deteriorating?", "back": "Change in level of consciousness / new restlessness", "rationale": "Read the trend — rising HR/RR with falling BP = compensating shock.", "hint": "The brain complains first."}, {"id": "fc-er-0001", "deck": "Specialty · Emergency / ER", "topic": "Emergency drugs", "difficulty": 3, "front": "First drug for anaphylaxis?", "back": "Epinephrine IM", "rationale": "Antihistamines and steroids are adjuncts, not first-line.", "hint": "“Epi first.”"}, {"id": "fc-er-0002", "deck": "Specialty · Emergency / ER", "topic": "Cardiac", "difficulty": 2, "front": "Acute chest pain bundle?", "back": "MONA — Morphine, Oxygen, Nitroglycerin, Aspirin (aspirin early) + ECG, keep at rest", "rationale": "Never ambulate a client with possible cardiac chest pain.", "hint": "MONA greets the chest pain."}, {"id": "fc-er-0003", "deck": "Specialty · Emergency / ER", "topic": "Neuro", "difficulty": 3, "front": "Before giving tPA for stroke, confirm…", "back": "Exact symptom-onset time and rule out hemorrhage (CT)", "rationale": "tPA is time-limited and contraindicated with bleeding/recent surgery.", "hint": "“Time is brain.” FAST."}, {"id": "fc-er-0004", "deck": "Specialty · Emergency / ER", "topic": "Trauma", "difficulty": 4, "front": "Tension pneumothorax signs + action?", "back": "Tracheal deviation, absent breath sounds, hypotension → needle decompression", "rationale": "Air trapped under pressure collapses the lung and shifts the mediastinum.", "hint": "Trachea runs away from the bad side."}, {"id": "fc-er-0005", "deck": "Specialty · Emergency / ER", "topic": "Burns", "difficulty": 4, "front": "First priority in a major burn?", "back": "Airway (assess for inhalation injury), then fluid resuscitation (Parkland)", "rationale": "Facial burns/soot/hoarseness signal impending airway loss.", "hint": "Airway before fluids."}, {"id": "fc-er-0006", "deck": "Specialty · Emergency / ER", "topic": "Shock", "difficulty": 3, "front": "Signs of hypovolemic shock?", "back": "Tachycardia, hypotension, low urine output, cool/clammy, thirst", "rationale": "Stop the loss, replace the volume — in that order.", "hint": "Fast pulse, low pressure, low urine."}, {"id": "fc-er-0007", "deck": "Specialty · Emergency / ER", "topic": "Triage", "difficulty": 3, "front": "Who do you see first?", "back": "The airway/breathing problem — unstable over stable, acute over chronic", "rationale": "New shortness of breath with low SpO₂ beats pain or discharge tasks.", "hint": "ABCs, then acuity."}, {"id": "fc-er-0008", "deck": "Specialty · Emergency / ER", "topic": "Toxicology", "difficulty": 3, "front": "Antidote for acetaminophen overdose?", "back": "N-acetylcysteine (NAC)", "rationale": "Give early to prevent hepatic failure.", "hint": "NAC saves the liver."}, {"id": "fc-ob-0001", "deck": "Specialty · Maternal / OB", "topic": "Fetal monitoring", "difficulty": 3, "front": "Late decelerations mean… and first action?", "back": "Uteroplacental insufficiency → stop oxytocin, turn to side, give O₂, IV fluids", "rationale": "“Late is bad” — the fetus isn’t getting enough oxygen.", "hint": "VEAL CHOP: Late → Placental."}, {"id": "fc-ob-0002", "deck": "Specialty · Maternal / OB", "topic": "Fetal monitoring", "difficulty": 2, "front": "Early decelerations mean…?", "back": "Head compression — benign, mirror the contraction", "rationale": "No action needed; contrast with late (placental) and variable (cord).", "hint": "Early = head, and okay."}, {"id": "fc-ob-0003", "deck": "Specialty · Maternal / OB", "topic": "Postpartum", "difficulty": 3, "front": "#1 cause of early postpartum hemorrhage + first action?", "back": "Uterine atony → massage the fundus", "rationale": "A boggy fundus displaced upward/right suggests a full bladder — empty it next.", "hint": "Boggy = massage first."}, {"id": "fc-ob-0004", "deck": "Specialty · Maternal / OB", "topic": "Preeclampsia", "difficulty": 3, "front": "Preeclampsia danger signs to report?", "back": "Severe headache, visual changes, epigastric/RUQ pain", "rationale": "These warn of impending eclampsia (seizure).", "hint": "Head, eyes, belly = seizure coming."}, {"id": "fc-ob-0005", "deck": "Specialty · Maternal / OB", "topic": "Pharmacology", "difficulty": 4, "front": "Magnesium sulfate toxicity signs?", "back": "Absent DTRs, respirations \u003c 12, low urine output → give calcium gluconate", "rationale": "Monitor reflexes, respirations, and output during the infusion.", "hint": "“Mag makes it all sag.”"}, {"id": "fc-ob-0006", "deck": "Specialty · Maternal / OB", "topic": "Newborn", "difficulty": 1, "front": "Normal fetal heart rate?", "back": "110–160 bpm", "rationale": "Bradycardia/tachycardia or loss of variability is concerning.", "hint": "110 to 160."}, {"id": "fc-ob-0007", "deck": "Specialty · Maternal / OB", "topic": "Preterm labor", "difficulty": 2, "front": "Purpose of betamethasone in preterm labor?", "back": "Accelerates fetal lung maturity (surfactant)", "rationale": "Given to mom, works on the baby’s lungs; tocolytics stop contractions.", "hint": "“Beta-methasone = better breathing.”"}, {"id": "fc-ob-0008", "deck": "Specialty · Maternal / OB", "topic": "Newborn", "difficulty": 2, "front": "Normal newborn finding: acrocyanosis?", "back": "Yes — blue hands/feet with a pink trunk is normal in the first 24–48h", "rationale": "Central cyanosis (lips/trunk) is never normal — that’s an emergency.", "hint": "Blue ends okay, blue center not."}]</script>
-        <div class="fc-bar fade-up"><div class="fc-decks"><button class="fc-chip on" data-deck="All">All</button><button class="fc-chip" data-deck="NCLEX · Pharmacology">NCLEX · Pharmacology</button><button class="fc-chip" data-deck="NCLEX · Lab Values">NCLEX · Lab Values</button><button class="fc-chip" data-deck="NCLEX · Fundamentals & Safety">NCLEX · Fundamentals & Safety</button><button class="fc-chip" data-deck="Specialty · Critical Care / ICU">Specialty · Critical Care / ICU</button><button class="fc-chip" data-deck="Specialty · Emergency / ER">Specialty · Emergency / ER</button><button class="fc-chip" data-deck="Specialty · Maternal / OB">Specialty · Maternal / OB</button></div></div>
+      <div class="flash" data-flash-total="108">
+        <script type="application/json" data-flash>[{"id": "fc-mc-0001", "kind": "mc", "deck": "NCLEX · Pharmacology", "topic": "Antidotes", "difficulty": 2, "front": "Which is the antidote for warfarin?", "options": ["Protamine sulfate", "Vitamin K", "Naloxone", "Flumazenil"], "correct": 1, "rationale": "Vitamin K reverses warfarin (monitored by PT/INR); protamine is for heparin.", "hint": "K for Koumadin."}, {"id": "fc-mc-0002", "kind": "mc", "deck": "NCLEX · Cardiovascular", "topic": "ACS", "difficulty": 2, "front": "First medication (chewed) for a suspected MI?", "options": ["Nitroglycerin", "Aspirin", "Morphine", "Heparin"], "correct": 1, "rationale": "Chewed aspirin inhibits platelets immediately; part of MONA.", "hint": "Chew it early."}, {"id": "fc-mc-0003", "kind": "mc", "deck": "Specialty · Emergency / ER", "topic": "Anaphylaxis", "difficulty": 3, "front": "First-line drug for anaphylaxis?", "options": ["Diphenhydramine", "Epinephrine", "Methylprednisolone", "Albuterol"], "correct": 1, "rationale": "Epinephrine first, every time; antihistamines/steroids are adjuncts.", "hint": "Epi first."}, {"id": "fc-tf-0001", "kind": "tf", "deck": "NCLEX · Pharmacology", "topic": "Cardiac", "difficulty": 2, "front": "You should give the next digoxin dose when the apical pulse is 52.", "correct": false, "rationale": "Hold digoxin for an apical pulse \u003c 60 and notify the provider.", "hint": "Under 60 = hold."}, {"id": "fc-tf-0002", "kind": "tf", "deck": "NCLEX · Fundamentals \u0026 Safety", "topic": "Infection control", "difficulty": 2, "front": "Alcohol-based hand sanitizer kills C. difficile spores.", "correct": false, "rationale": "Spores survive alcohol — wash with soap and water.", "hint": "Spores need soap."}, {"id": "fc-tf-0003", "kind": "tf", "deck": "Specialty · Maternal / OB", "topic": "Fetal monitoring", "difficulty": 2, "front": "Late decelerations are a benign, expected finding.", "correct": false, "rationale": "Late decels signal uteroplacental insufficiency — act (stop pit, reposition, O₂).", "hint": "Late is bad."}, {"id": "fc-fill-0001", "kind": "fill", "deck": "NCLEX · Lab Values", "topic": "Electrolytes", "difficulty": 1, "front": "Normal serum potassium is ____ to 5.0 mEq/L.", "answer": "3.5", "accept": ["3.5 mEq/L"], "rationale": "Potassium 3.5–5.0 mEq/L; outside this range risks dysrhythmias.", "hint": "Between 3-and-a-half and 5."}, {"id": "fc-fill-0002", "kind": "fill", "deck": "NCLEX · Pharmacology", "topic": "Antidotes", "difficulty": 2, "front": "The antidote for an opioid overdose is __________.", "answer": "naloxone", "accept": ["narcan"], "rationale": "Naloxone (Narcan) reverses opioid respiratory depression.", "hint": "Narcan’s generic name."}, {"id": "fc-fill-0003", "kind": "fill", "deck": "Specialty · Maternal / OB", "topic": "Pharmacology", "difficulty": 3, "front": "The antidote for magnesium sulfate toxicity is __________ __________.", "answer": "calcium gluconate", "accept": ["ca gluconate"], "rationale": "Calcium gluconate reverses mag toxicity; watch RR, DTRs, urine output.", "hint": "A calcium salt."}, {"id": "fc-odd-0001", "kind": "odd", "deck": "NCLEX · Pharmacology", "topic": "Diuretics", "difficulty": 3, "front": "Which does NOT belong with furosemide?", "options": ["Hypokalemia", "Diuresis", "Hyperkalemia", "Fluid loss"], "correct": 2, "rationale": "Furosemide is potassium-WASTING (hypokalemia). Spironolactone raises potassium.", "hint": "Loop = lose K."}, {"id": "fc-odd-0002", "kind": "odd", "deck": "NCLEX · Cardiovascular", "topic": "Neuro/ICP", "difficulty": 3, "front": "Which is NOT an EARLY sign of increased ICP?", "options": ["Restlessness", "Decreasing level of consciousness", "New confusion", "Bradycardia with widening pulse pressure"], "correct": 3, "rationale": "Cushing’s triad (bradycardia, widening pulse pressure) is a LATE sign.", "hint": "Cushing’s = late."}, {"id": "fc-odd-0003", "kind": "odd", "deck": "NCLEX · Fundamentals \u0026 Safety", "topic": "Precautions", "difficulty": 2, "front": "Which does NOT require airborne precautions?", "options": ["Measles", "Tuberculosis", "Varicella", "Influenza"], "correct": 3, "rationale": "Flu is droplet; airborne = Measles, TB, Varicella (‘My Chicken Hez TB’).", "hint": "Flu flies shorter."}, {"id": "fc-ord-0001", "kind": "order", "deck": "NCLEX · Fundamentals \u0026 Safety", "topic": "Transfusion", "difficulty": 3, "front": "Order the steps for a suspected transfusion reaction:", "items": ["Stop the transfusion", "Keep the vein open with normal saline", "Stay and assess the client", "Notify the provider and blood bank"], "rationale": "Stop – Saline – Stay – Send. Stopping the blood is always first.", "hint": "Stop the blood first."}, {"id": "fc-ord-0002", "kind": "order", "deck": "NCLEX · Endocrine", "topic": "Hypoglycemia", "difficulty": 2, "front": "Order the response to symptomatic hypoglycemia (awake client):", "items": ["Check the blood glucose", "Give 15 g fast-acting carbohydrate", "Recheck glucose in 15 minutes", "Give a complex carb + protein snack"], "rationale": "Rule of 15: treat, recheck at 15 min, then a lasting snack.", "hint": "Rule of 15."}, {"id": "fc-ord-0003", "kind": "order", "deck": "Specialty · Emergency / ER", "topic": "Chain of survival", "difficulty": 2, "front": "Order the first steps for an unresponsive adult:", "items": ["Check responsiveness", "Call for help / activate code", "Check pulse \u0026 breathing", "Begin CPR if no pulse"], "rationale": "Assess, get help, check pulse, then compressions.", "hint": "Check → call → CPR."}, {"id": "fc-bt-0001", "kind": "bowtie", "deck": "Specialty · Critical Care / ICU", "topic": "Sepsis", "difficulty": 4, "front": "A client: temp 39.2°C, HR 122, BP 88/50, rising lactate.", "condition": {"options": ["Sepsis", "Fluid overload", "Anaphylaxis"], "correct": 0}, "actions": {"pick": 2, "options": ["Draw cultures, then start antibiotics", "Begin IV fluid resuscitation", "Restrict all fluids", "Give a diuretic"], "correct": [0, 1]}, "parameters": {"pick": 2, "options": ["Serum lactate", "Urine output", "Serum calcium", "Deep tendon reflexes"], "correct": [0, 1]}, "rationale": "Sepsis: culture → cover (antibiotics) → fluids; monitor lactate and urine output for perfusion.", "hint": "Culture, Cover, Fluids, Lactate."}, {"id": "fc-bt-0002", "kind": "bowtie", "deck": "Specialty · Emergency / ER", "topic": "Shock", "difficulty": 4, "front": "Post-op: HR 124, BP 92/58, urine 15 mL/2h, bright-red bleeding through the dressing.", "condition": {"options": ["Hypovolemic shock", "Cardiogenic shock", "Neurogenic shock"], "correct": 0}, "actions": {"pick": 2, "options": ["Apply firm pressure to the site", "Increase IV fluids and notify the surgeon", "Give the next pain dose", "Slow the IV fluids"], "correct": [0, 1]}, "parameters": {"pick": 2, "options": ["Blood pressure", "Urine output", "Serum sodium", "Reflexes"], "correct": [0, 1]}, "rationale": "Hemorrhagic/hypovolemic shock: stop the loss + replace volume; monitor BP and urine output.", "hint": "Stop the loss, replace the volume."}, {"id": "fc-pharm-0001", "deck": "NCLEX · Pharmacology", "topic": "Antidotes", "difficulty": 2, "front": "Antidote for heparin?", "back": "Protamine sulfate", "rationale": "Heparin is monitored with aPTT; protamine sulfate reverses it.", "hint": "“P for heParin.”", "kind": "qa"}, {"id": "fc-pharm-0002", "deck": "NCLEX · Pharmacology", "topic": "Antidotes", "difficulty": 2, "front": "Antidote for warfarin?", "back": "Vitamin K", "rationale": "Warfarin is monitored with PT/INR; vitamin K reverses it.", "hint": "“K for Koumadin.”", "kind": "qa"}, {"id": "fc-pharm-0003", "deck": "NCLEX · Pharmacology", "topic": "Cardiac", "difficulty": 3, "front": "Signs of digoxin toxicity?", "back": "Nausea/vomiting, anorexia, yellow-green halos, bradycardia", "rationale": "Hold digoxin for an apical pulse \u003c 60; low potassium worsens toxicity.", "hint": "“Sick, slow, and see yellow.”", "kind": "qa"}, {"id": "fc-pharm-0004", "deck": "NCLEX · Pharmacology", "topic": "Diuretics", "difficulty": 2, "front": "Furosemide — key electrolyte to watch?", "back": "Potassium (it is potassium-wasting → hypokalemia)", "rationale": "Loop/thiazide diuretics lose potassium; spironolactone keeps it.", "hint": "“Furosemide → Falling K.”", "kind": "qa"}, {"id": "fc-pharm-0005", "deck": "NCLEX · Pharmacology", "topic": "Cardiac", "difficulty": 2, "front": "Hold a beta-blocker (“-olol”) if…", "back": "Apical pulse \u003c 60 (or per parameters)", "rationale": "Beta-blockers slow heart rate; never stop them abruptly (rebound).", "hint": "“Beta blocks the beats.”", "kind": "qa"}, {"id": "fc-pharm-0006", "deck": "NCLEX · Pharmacology", "topic": "Antidotes", "difficulty": 2, "front": "Antidote for opioids?", "back": "Naloxone (Narcan)", "rationale": "A respiratory rate \u003c 12 after an opioid is the red flag.", "hint": "“Naloxone Negates Narcotics.”", "kind": "qa"}, {"id": "fc-pharm-0007", "deck": "NCLEX · Pharmacology", "topic": "Antidotes", "difficulty": 3, "front": "Antidote for benzodiazepines?", "back": "Flumazenil", "rationale": "Reverses benzo sedation/respiratory depression; use cautiously (seizure risk).", "hint": "“Flu-ma-zenil for the -zepams.”", "kind": "qa"}, {"id": "fc-pharm-0008", "deck": "NCLEX · Pharmacology", "topic": "Antidotes", "difficulty": 3, "front": "Antidote for acetaminophen overdose?", "back": "N-acetylcysteine (NAC)", "rationale": "Protects the liver; most effective given early after overdose.", "hint": "“N-A-C for the Tylenol.”", "kind": "qa"}, {"id": "fc-pharm-0009", "deck": "NCLEX · Pharmacology", "topic": "Maternity", "difficulty": 3, "front": "Antidote for magnesium sulfate toxicity?", "back": "Calcium gluconate", "rationale": "Watch respirations ≥12, present DTRs, and urine output ≥30 mL/hr.", "hint": "“Mag sags — calcium saves.”", "kind": "qa"}, {"id": "fc-pharm-0010", "deck": "NCLEX · Pharmacology", "topic": "Mental Health", "difficulty": 3, "front": "Therapeutic lithium level?", "back": "0.6–1.2 mEq/L", "rationale": "Narrow range; dehydration or low sodium raises the level toward toxicity.", "hint": "“0.6 to 1.2, keep it true.”", "kind": "qa"}, {"id": "fc-lab-0001", "deck": "NCLEX · Lab Values", "topic": "Electrolytes", "difficulty": 1, "front": "Normal potassium?", "back": "3.5–5.0 mEq/L", "rationale": "Both high and low potassium cause life-threatening dysrhythmias.", "hint": "“3.5 to 5, keeps the heart alive.”", "kind": "qa"}, {"id": "fc-lab-0002", "deck": "NCLEX · Lab Values", "topic": "Electrolytes", "difficulty": 1, "front": "Normal sodium?", "back": "135–145 mEq/L", "rationale": "Sodium drives fluid balance and neuro status.", "hint": "“135 to 145.”", "kind": "qa"}, {"id": "fc-lab-0003", "deck": "NCLEX · Lab Values", "topic": "Drug levels", "difficulty": 3, "front": "Therapeutic digoxin level?", "back": "0.5–2.0 ng/mL", "rationale": "Above 2.0 → toxicity; check potassium alongside it.", "hint": "Narrow window — know it cold.", "kind": "qa"}, {"id": "fc-lab-0004", "deck": "NCLEX · Lab Values", "topic": "Coagulation", "difficulty": 2, "front": "Therapeutic INR on warfarin?", "back": "2.0–3.0 (up to 3.5 for some clients)", "rationale": "Too high = bleeding; too low = clot risk.", "hint": "“warfarin → watch the INR.”", "kind": "qa"}, {"id": "fc-lab-0005", "deck": "NCLEX · Lab Values", "topic": "Coagulation", "difficulty": 3, "front": "Therapeutic aPTT on heparin?", "back": "1.5–2.5× the control", "rationale": "aPTT monitors heparin; PT/INR monitors warfarin.", "hint": "aPTT → heParin.", "kind": "qa"}, {"id": "fc-lab-0006", "deck": "NCLEX · Lab Values", "topic": "Metabolic", "difficulty": 1, "front": "Normal fasting glucose?", "back": "70–110 mg/dL", "rationale": "Below 70 = hypoglycemia (treat fast carbs); high = hyperglycemia.", "hint": "“70 to 110.”", "kind": "qa"}, {"id": "fc-lab-0007", "deck": "NCLEX · Lab Values", "topic": "Renal", "difficulty": 2, "front": "Normal creatinine?", "back": "0.6–1.2 mg/dL", "rationale": "Best single marker of kidney function; rises as function drops.", "hint": "Creatinine climbs as kidneys quit.", "kind": "qa"}, {"id": "fc-lab-0008", "deck": "NCLEX · Lab Values", "topic": "Hematology", "difficulty": 2, "front": "Critical platelet level?", "back": "\u003c 50,000/µL (normal 150k–400k)", "rationale": "Below 50k sharply raises bleeding risk; below 20k = spontaneous bleeding.", "hint": "Under 50k — bleeding on the way.", "kind": "qa"}, {"id": "fc-lab-0009", "deck": "NCLEX · Lab Values", "topic": "Electrolytes", "difficulty": 3, "front": "Potassium 6.8 — what and what do you see?", "back": "Hyperkalemia → tall, peaked T waves; cardiac emergency", "rationale": "Calcium protects the heart; insulin+D50 shifts K into cells; dialysis removes it.", "hint": "Peaked T = too much K.", "kind": "qa"}, {"id": "fc-lab-0010", "deck": "NCLEX · Lab Values", "topic": "ABGs", "difficulty": 4, "front": "pH 7.30, CO₂ 55 — interpretation?", "back": "Respiratory acidosis", "rationale": "Low pH + high CO₂ = hypoventilation (COPD, sedation).", "hint": "ROME: Respiratory Opposite.", "kind": "qa"}, {"id": "fc-safe-0001", "deck": "NCLEX · Fundamentals \u0026 Safety", "topic": "Infection control", "difficulty": 3, "front": "Airborne precautions — which diseases?", "back": "Measles, TB, Varicella (chickenpox) — N95 + negative-pressure room", "rationale": "Contact = C. diff/MRSA; Droplet = flu/meningitis/pertussis.", "hint": "“My Chicken Hez TB.”", "kind": "qa"}, {"id": "fc-safe-0002", "deck": "NCLEX · Fundamentals \u0026 Safety", "topic": "Infection control", "difficulty": 2, "front": "C. diff — precautions \u0026 hand hygiene?", "back": "Contact precautions; wash with soap and water (not alcohol gel)", "rationale": "Alcohol doesn’t kill C. diff spores — friction with soap removes them.", "hint": "“Spores need soap.”", "kind": "qa"}, {"id": "fc-safe-0003", "deck": "NCLEX · Fundamentals \u0026 Safety", "topic": "Prioritization", "difficulty": 1, "front": "First priority framework?", "back": "ABCs — Airway, Breathing, Circulation", "rationale": "Then acute-over-chronic and unstable-over-stable.", "hint": "Air goes first.", "kind": "qa"}, {"id": "fc-safe-0004", "deck": "NCLEX · Fundamentals \u0026 Safety", "topic": "Emergency", "difficulty": 2, "front": "Fire response acronym?", "back": "RACE — Rescue, Alarm, Contain, Extinguish", "rationale": "To use an extinguisher: PASS (Pull, Aim, Squeeze, Sweep).", "hint": "RACE to the fire.", "kind": "qa"}, {"id": "fc-safe-0005", "deck": "NCLEX · Fundamentals \u0026 Safety", "topic": "Delegation", "difficulty": 2, "front": "What can you delegate to a UAP?", "back": "Stable, routine tasks: vitals, hygiene, feeding, ambulating, I\u0026O", "rationale": "The RN keeps Assess, Teach, Evaluate, and nursing judgment/meds.", "hint": "If it needs a nurse’s brain, it stays with the nurse.", "kind": "qa"}, {"id": "fc-safe-0006", "deck": "NCLEX · Fundamentals \u0026 Safety", "topic": "Skills", "difficulty": 2, "front": "Gold standard to confirm NG tube placement?", "back": "X-ray after insertion", "rationale": "The air/auscultation test is unreliable; gastric aspirate pH ≤5 supports placement.", "hint": "When in doubt, X-ray it out.", "kind": "qa"}, {"id": "fc-safe-0007", "deck": "NCLEX · Fundamentals \u0026 Safety", "topic": "Skills", "difficulty": 2, "front": "Two ways to break a sterile field?", "back": "Reaching across it, or letting it get wet; the outer 1-inch border is contaminated", "rationale": "Keep it above the waist and in sight; when in doubt, throw it out.", "hint": "Below the waist or out of sight isn’t sterile.", "kind": "qa"}, {"id": "fc-safe-0008", "deck": "NCLEX · Fundamentals \u0026 Safety", "topic": "Safety", "difficulty": 1, "front": "First-line fall prevention?", "back": "Least restrictive: bed low, call light in reach, nonslip footwear, frequent rounding", "rationale": "Restraints and 4 side rails are last resort (they ARE restraints).", "hint": "Least restrictive, first and best.", "kind": "qa"}, {"id": "fc-cv-0001", "deck": "NCLEX · Cardiovascular", "topic": "ACS", "difficulty": 2, "front": "First medication to give (chewed) for suspected MI?", "back": "Aspirin", "rationale": "Chewed aspirin is given early to inhibit platelets; part of MONA.", "hint": "Chew it, don’t wait.", "kind": "qa"}, {"id": "fc-cv-0002", "deck": "NCLEX · Cardiovascular", "topic": "Angina", "difficulty": 2, "front": "Nitroglycerin (SL) teaching for chest pain?", "back": "Sit down; take 1 tab, repeat every 5 min up to 3; call 911 if unrelieved after the first", "rationale": "NTG dilates vessels and drops BP — sitting prevents falls.", "hint": "1 every 5, max 3.", "kind": "qa"}, {"id": "fc-cv-0003", "deck": "NCLEX · Cardiovascular", "topic": "Heart failure", "difficulty": 2, "front": "Weight gain to report in heart failure?", "back": "2–3 lb in a day (or ~5 lb in a week)", "rationale": "Sudden gain signals fluid retention and worsening HF.", "hint": "2–3 in a day = call.", "kind": "qa"}, {"id": "fc-cv-0004", "deck": "NCLEX · Cardiovascular", "topic": "Heart failure", "difficulty": 2, "front": "Left- vs right-sided HF — where does fluid back up?", "back": "Left → Lungs (crackles, dyspnea); Right → Rest of body (edema, JVD, ascites)", "rationale": "“Left = Lungs, Right = Rest of body.”", "hint": "L for Lungs.", "kind": "qa"}, {"id": "fc-cv-0005", "deck": "NCLEX · Cardiovascular", "topic": "Dysrhythmia", "difficulty": 3, "front": "Main risk of atrial fibrillation + prevention?", "back": "Clot → stroke; prevent with anticoagulation", "rationale": "Blood pools in the fibrillating atria and forms clots.", "hint": "A-fib → anticoagulate.", "kind": "qa"}, {"id": "fc-cv-0006", "deck": "NCLEX · Cardiovascular", "topic": "Vascular", "difficulty": 3, "front": "Signs of DVT — and what NOT to do?", "back": "Unilateral calf swelling, warmth, redness; do NOT massage the leg", "rationale": "Massage can dislodge the clot into a pulmonary embolism.", "hint": "Never rub a clot.", "kind": "qa"}, {"id": "fc-cv-0007", "deck": "NCLEX · Cardiovascular", "topic": "Emergency", "difficulty": 4, "front": "Beck’s triad (cardiac tamponade)?", "back": "Hypotension, jugular vein distention, muffled heart sounds", "rationale": "Fluid in the pericardium compresses the heart → treat with pericardiocentesis.", "hint": "Low BP, big necks, quiet heart.", "kind": "qa"}, {"id": "fc-cv-0008", "deck": "NCLEX · Cardiovascular", "topic": "Perfusion", "difficulty": 2, "front": "6 P’s of acute arterial occlusion?", "back": "Pain, Pallor, Pulselessness, Paresthesia, Paralysis, Poikilothermia (cold)", "rationale": "Arterial = the limb is cold, pale, pulseless; a surgical emergency.", "hint": "Six P’s, all bad.", "kind": "qa"}, {"id": "fc-resp-0001", "deck": "NCLEX · Respiratory", "topic": "COPD", "difficulty": 2, "front": "Target SpO₂ for chronic COPD?", "back": "88–92%", "rationale": "Over-oxygenating can blunt the hypoxic drive; never withhold O₂ from a hypoxic client.", "hint": "COPD: low and slow.", "kind": "qa"}, {"id": "fc-resp-0002", "deck": "NCLEX · Respiratory", "topic": "Asthma", "difficulty": 2, "front": "Quick-relief (rescue) inhaler for asthma?", "back": "Short-acting beta-agonist — albuterol (SABA)", "rationale": "Steroid inhalers are controllers, not rescue; rinse mouth after steroids.", "hint": "Albuterol = rescue.", "kind": "qa"}, {"id": "fc-resp-0003", "deck": "NCLEX · Respiratory", "topic": "Asthma", "difficulty": 4, "front": "Ominous sign in a severe asthma attack?", "back": "A silent chest / absent wheezing", "rationale": "No air movement means airflow has nearly stopped — respiratory failure.", "hint": "Silence is scary.", "kind": "qa"}, {"id": "fc-resp-0004", "deck": "NCLEX · Respiratory", "topic": "PE", "difficulty": 3, "front": "Classic signs of pulmonary embolism?", "back": "Sudden dyspnea, pleuritic chest pain, tachycardia, anxiety", "rationale": "Often follows DVT/immobility; give O₂, elevate HOB, anticoagulate.", "hint": "Sudden and short of breath.", "kind": "qa"}, {"id": "fc-resp-0005", "deck": "NCLEX · Respiratory", "topic": "Chest tube", "difficulty": 3, "front": "Continuous vigorous bubbling in the water-seal chamber means…?", "back": "An air leak in the system", "rationale": "Intermittent bubbling/tidaling is normal; continuous = check connections.", "hint": "Continuous = a clue (leak).", "kind": "qa"}, {"id": "fc-resp-0006", "deck": "NCLEX · Respiratory", "topic": "TB", "difficulty": 3, "front": "Rifampin teaching side effect?", "back": "Turns body fluids (urine, tears, sweat) orange", "rationale": "Harmless but expected; can stain contact lenses. TB = airborne precautions.", "hint": "Rifampin = red-orange.", "kind": "qa"}, {"id": "fc-resp-0007", "deck": "NCLEX · Respiratory", "topic": "Oxygenation", "difficulty": 2, "front": "Causes of a falsely low pulse-ox reading?", "back": "Cold/poor perfusion, movement, dark nail polish, low BP", "rationale": "Correlate the number with how the client actually looks.", "hint": "Cold fingers lie.", "kind": "qa"}, {"id": "fc-endo-0001", "deck": "NCLEX · Endocrine", "topic": "DKA", "difficulty": 4, "front": "Order of treatment in DKA?", "back": "IV fluids first → insulin → watch potassium closely", "rationale": "Insulin drives potassium into cells; it can drop dangerously.", "hint": "Fluids, insulin, watch the K.", "kind": "qa"}, {"id": "fc-endo-0002", "deck": "NCLEX · Endocrine", "topic": "Glucose", "difficulty": 2, "front": "Treatment for symptomatic hypoglycemia (awake)?", "back": "15 g fast-acting carbohydrate, recheck in 15 minutes", "rationale": "Never give insulin; repeat if still low, then a protein/complex carb.", "hint": "Rule of 15.", "kind": "qa"}, {"id": "fc-endo-0003", "deck": "NCLEX · Endocrine", "topic": "Glucose", "difficulty": 2, "front": "Signs of hypoglycemia?", "back": "Shaky, sweaty, tachycardic, hungry, confused/irritable", "rationale": "Adrenergic + neuro symptoms; beta-blockers can mask them.", "hint": "Cold and clammy → need candy.", "kind": "qa"}, {"id": "fc-endo-0004", "deck": "NCLEX · Endocrine", "topic": "Adrenal", "difficulty": 3, "front": "Cushing’s vs Addison’s in one line?", "back": "Cushing’s = everything HIGH (cortisol, glucose, weight, BP); Addison’s = everything LOW (BP, Na, glucose) with HIGH K", "rationale": "Addisonian crisis = vascular collapse → fluids + hydrocortisone.", "hint": "Cushing up, Addison down.", "kind": "qa"}, {"id": "fc-endo-0005", "deck": "NCLEX · Endocrine", "topic": "Thyroid", "difficulty": 3, "front": "Hypothyroid vs hyperthyroid — the theme?", "back": "Hypo = everything slow (cold, fatigue, weight gain); Hyper = everything fast (heat, weight loss, tachycardia)", "rationale": "Thyroid storm (hyper crisis) = fever, tachycardia, agitation — emergency.", "hint": "Low thyroid = low and slow.", "kind": "qa"}, {"id": "fc-endo-0006", "deck": "NCLEX · Endocrine", "topic": "Fluid balance", "difficulty": 4, "front": "SIADH vs Diabetes Insipidus?", "back": "SIADH = retain water → dilute (low) sodium, fluid restriction; DI = huge dilute urine → dehydration, high sodium", "rationale": "SIADH = ‘Soaked Inside’; DI = ‘Dry Inside.’", "hint": "SIADH soaks, DI dries.", "kind": "qa"}, {"id": "fc-peds-0001", "deck": "Specialty · Pediatrics", "topic": "Airway", "difficulty": 4, "front": "Suspected epiglottitis — what must you NOT do?", "back": "Do not inspect the throat / use a tongue depressor", "rationale": "It can trigger laryngospasm and total airway obstruction; keep the child calm.", "hint": "Hands off the throat.", "kind": "qa"}, {"id": "fc-peds-0002", "deck": "Specialty · Pediatrics", "topic": "Airway", "difficulty": 2, "front": "Croup — hallmark cough and comfort measure?", "back": "Barky/‘seal’ cough; cool humidified air (or cool night air)", "rationale": "Croup is usually viral and milder than epiglottitis.", "hint": "Barky = croup.", "kind": "qa"}, {"id": "fc-peds-0003", "deck": "Specialty · Pediatrics", "topic": "Cardiac", "difficulty": 4, "front": "Position for a ‘tet spell’ (Tetralogy of Fallot)?", "back": "Knee-to-chest", "rationale": "Increases systemic vascular resistance, reducing the right-to-left shunt.", "hint": "Knees to chest, lungs their best.", "kind": "qa"}, {"id": "fc-peds-0004", "deck": "Specialty · Pediatrics", "topic": "Fluids", "difficulty": 2, "front": "Most reliable indicator of a child’s fluid status?", "back": "Daily weight (same scale, same time)", "rationale": "1 kg ≈ 1 L; more precise than diaper counts. Also watch fontanels/tears.", "hint": "The scale tells the tale.", "kind": "qa"}, {"id": "fc-peds-0005", "deck": "Specialty · Pediatrics", "topic": "GI", "difficulty": 3, "front": "Projectile vomiting + palpable ‘olive’ mass in an infant?", "back": "Pyloric stenosis", "rationale": "Leads to dehydration and metabolic alkalosis; treated surgically.", "hint": "Olive + projectile = pylorus.", "kind": "qa"}, {"id": "fc-peds-0006", "deck": "Specialty · Pediatrics", "topic": "Safety", "difficulty": 2, "front": "During a febrile seizure, the nurse should…?", "back": "Protect the airway, keep them safe, do NOT restrain or put anything in the mouth", "rationale": "Time the seizure; lower fever after it ends.", "hint": "Protect, don’t restrain.", "kind": "qa"}, {"id": "fc-ms-0001", "deck": "Specialty · Med-Surg", "topic": "Neuro", "difficulty": 3, "front": "Earliest sign of increased intracranial pressure?", "back": "A change in level of consciousness", "rationale": "Cushing’s triad (high BP/widening pulse pressure, bradycardia, irregular resp) is LATE.", "hint": "LOC drops first.", "kind": "qa"}, {"id": "fc-ms-0002", "deck": "Specialty · Med-Surg", "topic": "GI", "difficulty": 3, "front": "Appendicitis — location and what to avoid?", "back": "RLQ pain (McBurney’s point); keep NPO, no heat, no laxatives/enemas", "rationale": "Heat or stimulation can cause rupture; sudden pain relief may mean rupture.", "hint": "RLQ, NPO, no heat.", "kind": "qa"}, {"id": "fc-ms-0003", "deck": "Specialty · Med-Surg", "topic": "GI", "difficulty": 3, "front": "Cirrhosis with confusion (encephalopathy) — key drug and goal?", "back": "Lactulose, titrated to 2–3 soft stools/day to clear ammonia", "rationale": "Rising ammonia worsens confusion; lactulose traps and expels it.", "hint": "Lactulose loses the ammonia.", "kind": "qa"}, {"id": "fc-ms-0004", "deck": "Specialty · Med-Surg", "topic": "Transfusion", "difficulty": 3, "front": "First action for a suspected transfusion reaction?", "back": "STOP the blood; keep the line open with normal saline", "rationale": "Then stay with the client, assess, and notify provider + blood bank.", "hint": "Stop – Saline – Stay – Send.", "kind": "qa"}, {"id": "fc-ms-0005", "deck": "Specialty · Med-Surg", "topic": "Neuro", "difficulty": 4, "front": "Autonomic dysreflexia — first action?", "back": "Sit the client up and find the trigger (usually a full bladder)", "rationale": "A hypertensive emergency in spinal cord injury ≥ T6; check the catheter first.", "hint": "Sit up, find the cause.", "kind": "qa"}, {"id": "fc-ms-0006", "deck": "Specialty · Med-Surg", "topic": "Endocrine", "difficulty": 3, "front": "Thyroidectomy — what must be at the bedside?", "back": "Calcium gluconate (for hypocalcemia) + tracheostomy/suction", "rationale": "Watch for airway swelling and Chvostek/Trousseau signs of low calcium.", "hint": "Neck surgery = airway + calcium.", "kind": "qa"}, {"id": "fc-psy-0001", "deck": "Specialty · Mental Health", "topic": "Communication", "difficulty": 2, "front": "Most therapeutic response style?", "back": "Reflect the client’s feeling and stay open-ended (keep focus on them)", "rationale": "Avoid false reassurance, ‘why’ questions, advice, and changing the subject.", "hint": "Name the feeling, hand it back.", "kind": "qa"}, {"id": "fc-psy-0002", "deck": "Specialty · Mental Health", "topic": "Safety", "difficulty": 3, "front": "Client hints at suicide — priority?", "back": "Ask directly about a plan/means and ensure safety (don’t leave alone, remove means)", "rationale": "Asking does not plant the idea; a specific plan + means = high risk.", "hint": "Ask, remove means, never alone.", "kind": "qa"}, {"id": "fc-psy-0003", "deck": "Specialty · Mental Health", "topic": "Substance", "difficulty": 3, "front": "Alcohol withdrawal — mainstay drug and peak DT risk?", "back": "Benzodiazepines; delirium tremens peaks 48–72 hours after the last drink", "rationale": "Give thiamine before glucose to prevent Wernicke’s.", "hint": "Benzos calm the withdrawal.", "kind": "qa"}, {"id": "fc-psy-0004", "deck": "Specialty · Mental Health", "topic": "Pharmacology", "difficulty": 3, "front": "SSRIs — onset and dangerous combo?", "back": "Full effect in 4–6 weeks; combining serotonergic drugs → serotonin syndrome", "rationale": "Serotonin syndrome: agitation, hyperthermia, tremor, hyperreflexia.", "hint": "Weeks to work; don’t stack serotonin.", "kind": "qa"}, {"id": "fc-psy-0005", "deck": "Specialty · Mental Health", "topic": "Eating disorders", "difficulty": 4, "front": "Priority concern in severe anorexia during refeeding?", "back": "Cardiac/electrolyte collapse — refeeding syndrome (low phosphate/K/Mg)", "rationale": "Reintroduce nutrition slowly and monitor electrolytes + heart.", "hint": "Refeed slow, watch the heart.", "kind": "qa"}, {"id": "fc-psy-0006", "deck": "Specialty · Mental Health", "topic": "Mania", "difficulty": 2, "front": "Nutrition for a client in acute mania?", "back": "High-calorie finger foods they can eat on the move", "rationale": "They can’t sit to eat; reduce stimulation in the environment too.", "hint": "Food they can carry.", "kind": "qa"}, {"id": "fc-icu-0001", "deck": "Specialty · Critical Care / ICU", "topic": "Hemodynamics", "difficulty": 3, "front": "Minimum MAP to perfuse organs?", "back": "≥ 65 mmHg (normal 70–100)", "rationale": "Below 65, vital organs (brain, kidneys) lose perfusion.", "hint": "“65 to stay alive.”", "kind": "qa"}, {"id": "fc-icu-0002", "deck": "Specialty · Critical Care / ICU", "topic": "Sepsis", "difficulty": 3, "front": "Sepsis hour-1 bundle?", "back": "Cultures → antibiotics → IV fluids → recheck lactate", "rationale": "Draw cultures before antibiotics so the organism can be identified.", "hint": "“Culture, Cover, Fluids, Lactate.”", "kind": "qa"}, {"id": "fc-icu-0003", "deck": "Specialty · Critical Care / ICU", "topic": "Shock", "difficulty": 4, "front": "First-line vasopressor for septic shock?", "back": "Norepinephrine", "rationale": "Given after adequate fluid resuscitation to restore MAP.", "hint": "“Norepi is number one.”", "kind": "qa"}, {"id": "fc-icu-0004", "deck": "Specialty · Critical Care / ICU", "topic": "Ventilation", "difficulty": 3, "front": "Ventilator high-pressure alarm — think…", "back": "Obstruction: kink, secretions (suction), biting, mucus plug", "rationale": "Low-pressure alarm = disconnection or leak instead.", "hint": "High = something Hindering flow.", "kind": "qa"}, {"id": "fc-icu-0005", "deck": "Specialty · Critical Care / ICU", "topic": "Neuro", "difficulty": 4, "front": "Normal ICP + first positioning step for high ICP?", "back": "5–15 mmHg; elevate HOB ~30° and keep head midline", "rationale": "Promotes venous drainage; avoid neck flexion and hip flexion.", "hint": "Head up, midline.", "kind": "qa"}, {"id": "fc-icu-0006", "deck": "Specialty · Critical Care / ICU", "topic": "Respiratory", "difficulty": 4, "front": "Hallmark of ARDS?", "back": "Refractory hypoxemia with bilateral infiltrates", "rationale": "Low oxygen that doesn’t improve with supplemental O₂; needs PEEP.", "hint": "Won’t come up with oxygen.", "kind": "qa"}, {"id": "fc-icu-0007", "deck": "Specialty · Critical Care / ICU", "topic": "Lines", "difficulty": 3, "front": "Complication during central line insertion (subclavian)?", "back": "Pneumothorax", "rationale": "Confirm placement with a chest X-ray before use.", "hint": "Needle near the lung.", "kind": "qa"}, {"id": "fc-icu-0008", "deck": "Specialty · Critical Care / ICU", "topic": "Deterioration", "difficulty": 3, "front": "Earliest sign a patient is deteriorating?", "back": "Change in level of consciousness / new restlessness", "rationale": "Read the trend — rising HR/RR with falling BP = compensating shock.", "hint": "The brain complains first.", "kind": "qa"}, {"id": "fc-er-0001", "deck": "Specialty · Emergency / ER", "topic": "Emergency drugs", "difficulty": 3, "front": "First drug for anaphylaxis?", "back": "Epinephrine IM", "rationale": "Antihistamines and steroids are adjuncts, not first-line.", "hint": "“Epi first.”", "kind": "qa"}, {"id": "fc-er-0002", "deck": "Specialty · Emergency / ER", "topic": "Cardiac", "difficulty": 2, "front": "Acute chest pain bundle?", "back": "MONA — Morphine, Oxygen, Nitroglycerin, Aspirin (aspirin early) + ECG, keep at rest", "rationale": "Never ambulate a client with possible cardiac chest pain.", "hint": "MONA greets the chest pain.", "kind": "qa"}, {"id": "fc-er-0003", "deck": "Specialty · Emergency / ER", "topic": "Neuro", "difficulty": 3, "front": "Before giving tPA for stroke, confirm…", "back": "Exact symptom-onset time and rule out hemorrhage (CT)", "rationale": "tPA is time-limited and contraindicated with bleeding/recent surgery.", "hint": "“Time is brain.” FAST.", "kind": "qa"}, {"id": "fc-er-0004", "deck": "Specialty · Emergency / ER", "topic": "Trauma", "difficulty": 4, "front": "Tension pneumothorax signs + action?", "back": "Tracheal deviation, absent breath sounds, hypotension → needle decompression", "rationale": "Air trapped under pressure collapses the lung and shifts the mediastinum.", "hint": "Trachea runs away from the bad side.", "kind": "qa"}, {"id": "fc-er-0005", "deck": "Specialty · Emergency / ER", "topic": "Burns", "difficulty": 4, "front": "First priority in a major burn?", "back": "Airway (assess for inhalation injury), then fluid resuscitation (Parkland)", "rationale": "Facial burns/soot/hoarseness signal impending airway loss.", "hint": "Airway before fluids.", "kind": "qa"}, {"id": "fc-er-0006", "deck": "Specialty · Emergency / ER", "topic": "Shock", "difficulty": 3, "front": "Signs of hypovolemic shock?", "back": "Tachycardia, hypotension, low urine output, cool/clammy, thirst", "rationale": "Stop the loss, replace the volume — in that order.", "hint": "Fast pulse, low pressure, low urine.", "kind": "qa"}, {"id": "fc-er-0007", "deck": "Specialty · Emergency / ER", "topic": "Triage", "difficulty": 3, "front": "Who do you see first?", "back": "The airway/breathing problem — unstable over stable, acute over chronic", "rationale": "New shortness of breath with low SpO₂ beats pain or discharge tasks.", "hint": "ABCs, then acuity.", "kind": "qa"}, {"id": "fc-er-0008", "deck": "Specialty · Emergency / ER", "topic": "Toxicology", "difficulty": 3, "front": "Antidote for acetaminophen overdose?", "back": "N-acetylcysteine (NAC)", "rationale": "Give early to prevent hepatic failure.", "hint": "NAC saves the liver.", "kind": "qa"}, {"id": "fc-ob-0001", "deck": "Specialty · Maternal / OB", "topic": "Fetal monitoring", "difficulty": 3, "front": "Late decelerations mean… and first action?", "back": "Uteroplacental insufficiency → stop oxytocin, turn to side, give O₂, IV fluids", "rationale": "“Late is bad” — the fetus isn’t getting enough oxygen.", "hint": "VEAL CHOP: Late → Placental.", "kind": "qa"}, {"id": "fc-ob-0002", "deck": "Specialty · Maternal / OB", "topic": "Fetal monitoring", "difficulty": 2, "front": "Early decelerations mean…?", "back": "Head compression — benign, mirror the contraction", "rationale": "No action needed; contrast with late (placental) and variable (cord).", "hint": "Early = head, and okay.", "kind": "qa"}, {"id": "fc-ob-0003", "deck": "Specialty · Maternal / OB", "topic": "Postpartum", "difficulty": 3, "front": "#1 cause of early postpartum hemorrhage + first action?", "back": "Uterine atony → massage the fundus", "rationale": "A boggy fundus displaced upward/right suggests a full bladder — empty it next.", "hint": "Boggy = massage first.", "kind": "qa"}, {"id": "fc-ob-0004", "deck": "Specialty · Maternal / OB", "topic": "Preeclampsia", "difficulty": 3, "front": "Preeclampsia danger signs to report?", "back": "Severe headache, visual changes, epigastric/RUQ pain", "rationale": "These warn of impending eclampsia (seizure).", "hint": "Head, eyes, belly = seizure coming.", "kind": "qa"}, {"id": "fc-ob-0005", "deck": "Specialty · Maternal / OB", "topic": "Pharmacology", "difficulty": 4, "front": "Magnesium sulfate toxicity signs?", "back": "Absent DTRs, respirations \u003c 12, low urine output → give calcium gluconate", "rationale": "Monitor reflexes, respirations, and output during the infusion.", "hint": "“Mag makes it all sag.”", "kind": "qa"}, {"id": "fc-ob-0006", "deck": "Specialty · Maternal / OB", "topic": "Newborn", "difficulty": 1, "front": "Normal fetal heart rate?", "back": "110–160 bpm", "rationale": "Bradycardia/tachycardia or loss of variability is concerning.", "hint": "110 to 160.", "kind": "qa"}, {"id": "fc-ob-0007", "deck": "Specialty · Maternal / OB", "topic": "Preterm labor", "difficulty": 2, "front": "Purpose of betamethasone in preterm labor?", "back": "Accelerates fetal lung maturity (surfactant)", "rationale": "Given to mom, works on the baby’s lungs; tocolytics stop contractions.", "hint": "“Beta-methasone = better breathing.”", "kind": "qa"}, {"id": "fc-ob-0008", "deck": "Specialty · Maternal / OB", "topic": "Newborn", "difficulty": 2, "front": "Normal newborn finding: acrocyanosis?", "back": "Yes — blue hands/feet with a pink trunk is normal in the first 24–48h", "rationale": "Central cyanosis (lips/trunk) is never normal — that’s an emergency.", "hint": "Blue ends okay, blue center not.", "kind": "qa"}]</script>
+        <div class="fc-bar fade-up"><div class="fc-decks"><button class="fc-chip on" data-deck="All">All</button><button class="fc-chip" data-deck="NCLEX · Pharmacology">NCLEX · Pharmacology</button><button class="fc-chip" data-deck="NCLEX · Cardiovascular">NCLEX · Cardiovascular</button><button class="fc-chip" data-deck="Specialty · Emergency / ER">Specialty · Emergency / ER</button><button class="fc-chip" data-deck="NCLEX · Fundamentals & Safety">NCLEX · Fundamentals & Safety</button><button class="fc-chip" data-deck="Specialty · Maternal / OB">Specialty · Maternal / OB</button><button class="fc-chip" data-deck="NCLEX · Lab Values">NCLEX · Lab Values</button><button class="fc-chip" data-deck="NCLEX · Endocrine">NCLEX · Endocrine</button><button class="fc-chip" data-deck="Specialty · Critical Care / ICU">Specialty · Critical Care / ICU</button><button class="fc-chip" data-deck="NCLEX · Respiratory">NCLEX · Respiratory</button><button class="fc-chip" data-deck="Specialty · Pediatrics">Specialty · Pediatrics</button><button class="fc-chip" data-deck="Specialty · Med-Surg">Specialty · Med-Surg</button><button class="fc-chip" data-deck="Specialty · Mental Health">Specialty · Mental Health</button></div></div>
         <div class="fc-modes fade-up">
           <button class="fc-mode on" data-mode="study">Study</button>
+          <button class="fc-mode" data-mode="challenge">Challenge</button>
           <button class="fc-mode" data-mode="quiz">Quiz</button>
           <button class="fc-mode" data-mode="match">Match game</button>
           <button class="fc-mode" data-mode="speed">Speed round</button>
@@ -4238,7 +4324,7 @@ body.mls-paid .gate { display: none; }
           <p class="blurb">Testing soon and just need reps and a plan? Start here.</p>
           <a class="btn btn-line tier-cta" href="join.html">Get 1 Month</a>
           <div class="esi-in"><span class="orb"></span> Esi AI tutor included &mdash; free</div>
-          <ul><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="m4 12.5 5 5L20 6.5"/></svg>2,600+ original NCLEX questions &mdash; RN &amp; PN</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="m4 12.5 5 5L20 6.5"/></svg>50 Next Gen case studies with walkthroughs</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="m4 12.5 5 5L20 6.5"/></svg>4 full-length CAT readiness exams</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="m4 12.5 5 5L20 6.5"/></svg>Next Gen strategy video course</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="m4 12.5 5 5L20 6.5"/></svg>Personalized study schedule &amp; calendar</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="m4 12.5 5 5L20 6.5"/></svg>Mastered / Reviewing / Learning tagging</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="m4 12.5 5 5L20 6.5"/></svg>Performance by subject area</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="m4 12.5 5 5L20 6.5"/></svg>140+ cheat sheets &amp; the Scrubs Dictionary</li></ul>
+          <ul><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="m4 12.5 5 5L20 6.5"/></svg>2,600+ original NCLEX questions &mdash; RN &amp; PN</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="m4 12.5 5 5L20 6.5"/></svg>50 Next Gen case studies with walkthroughs</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="m4 12.5 5 5L20 6.5"/></svg>4 full-length CAT readiness exams</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="m4 12.5 5 5L20 6.5"/></svg>Next Gen strategy video course</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="m4 12.5 5 5L20 6.5"/></svg>Personalized study schedule &amp; calendar</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="m4 12.5 5 5L20 6.5"/></svg>Mastered / Reviewing / Learning tagging</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="m4 12.5 5 5L20 6.5"/></svg>Performance by subject area</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="m4 12.5 5 5L20 6.5"/></svg>140+ cheat sheets &amp; the Nurses Index</li></ul>
         </div><div class="tier feat fade-up">
           <span class="rec-tab">Most popular</span>
           <div class="dur">2 Months<small>of full access</small></div>
@@ -4248,7 +4334,7 @@ body.mls-paid .gate { display: none; }
           <p class="blurb">The timeline most students choose &mdash; room to fix every weak area.</p>
           <a class="btn btn-coral tier-cta" href="join.html">Get 2 Months</a>
           <div class="esi-in"><span class="orb"></span> Esi AI tutor included &mdash; free</div>
-          <ul><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="m4 12.5 5 5L20 6.5"/></svg>2,600+ original NCLEX questions &mdash; RN &amp; PN</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="m4 12.5 5 5L20 6.5"/></svg>50 Next Gen case studies with walkthroughs</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="m4 12.5 5 5L20 6.5"/></svg>4 full-length CAT readiness exams</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="m4 12.5 5 5L20 6.5"/></svg>Next Gen strategy video course</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="m4 12.5 5 5L20 6.5"/></svg>Personalized study schedule &amp; calendar</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="m4 12.5 5 5L20 6.5"/></svg>Mastered / Reviewing / Learning tagging</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="m4 12.5 5 5L20 6.5"/></svg>Performance by subject area</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="m4 12.5 5 5L20 6.5"/></svg>140+ cheat sheets &amp; the Scrubs Dictionary</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l8 3v6c0 4.5-3.2 7.6-8 9-4.8-1.4-8-4.5-8-9V6z"/><path d="m8.8 12 2.2 2.2 4.2-4.4"/></svg><b style="color:var(--teal-600);">Pass Guarantee</b> &mdash; full refund if you don't pass</li></ul>
+          <ul><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="m4 12.5 5 5L20 6.5"/></svg>2,600+ original NCLEX questions &mdash; RN &amp; PN</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="m4 12.5 5 5L20 6.5"/></svg>50 Next Gen case studies with walkthroughs</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="m4 12.5 5 5L20 6.5"/></svg>4 full-length CAT readiness exams</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="m4 12.5 5 5L20 6.5"/></svg>Next Gen strategy video course</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="m4 12.5 5 5L20 6.5"/></svg>Personalized study schedule &amp; calendar</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="m4 12.5 5 5L20 6.5"/></svg>Mastered / Reviewing / Learning tagging</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="m4 12.5 5 5L20 6.5"/></svg>Performance by subject area</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="m4 12.5 5 5L20 6.5"/></svg>140+ cheat sheets &amp; the Nurses Index</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l8 3v6c0 4.5-3.2 7.6-8 9-4.8-1.4-8-4.5-8-9V6z"/><path d="m8.8 12 2.2 2.2 4.2-4.4"/></svg><b style="color:var(--teal-600);">Pass Guarantee</b> &mdash; full refund if you don't pass</li></ul>
         </div><div class="tier fade-up">
           
           <div class="dur">3 Months<small>of full access</small></div>
@@ -4258,7 +4344,7 @@ body.mls-paid .gate { display: none; }
           <p class="blurb">Working full-time or rebuilding your foundation? This fits.</p>
           <a class="btn btn-line tier-cta" href="join.html">Get 3 Months</a>
           <div class="esi-in"><span class="orb"></span> Esi AI tutor included &mdash; free</div>
-          <ul><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="m4 12.5 5 5L20 6.5"/></svg>2,600+ original NCLEX questions &mdash; RN &amp; PN</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="m4 12.5 5 5L20 6.5"/></svg>50 Next Gen case studies with walkthroughs</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="m4 12.5 5 5L20 6.5"/></svg>4 full-length CAT readiness exams</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="m4 12.5 5 5L20 6.5"/></svg>Next Gen strategy video course</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="m4 12.5 5 5L20 6.5"/></svg>Personalized study schedule &amp; calendar</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="m4 12.5 5 5L20 6.5"/></svg>Mastered / Reviewing / Learning tagging</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="m4 12.5 5 5L20 6.5"/></svg>Performance by subject area</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="m4 12.5 5 5L20 6.5"/></svg>140+ cheat sheets &amp; the Scrubs Dictionary</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l8 3v6c0 4.5-3.2 7.6-8 9-4.8-1.4-8-4.5-8-9V6z"/><path d="m8.8 12 2.2 2.2 4.2-4.4"/></svg><b style="color:var(--teal-600);">Pass Guarantee</b> &mdash; full refund if you don't pass</li></ul>
+          <ul><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="m4 12.5 5 5L20 6.5"/></svg>2,600+ original NCLEX questions &mdash; RN &amp; PN</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="m4 12.5 5 5L20 6.5"/></svg>50 Next Gen case studies with walkthroughs</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="m4 12.5 5 5L20 6.5"/></svg>4 full-length CAT readiness exams</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="m4 12.5 5 5L20 6.5"/></svg>Next Gen strategy video course</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="m4 12.5 5 5L20 6.5"/></svg>Personalized study schedule &amp; calendar</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="m4 12.5 5 5L20 6.5"/></svg>Mastered / Reviewing / Learning tagging</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="m4 12.5 5 5L20 6.5"/></svg>Performance by subject area</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="m4 12.5 5 5L20 6.5"/></svg>140+ cheat sheets &amp; the Nurses Index</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l8 3v6c0 4.5-3.2 7.6-8 9-4.8-1.4-8-4.5-8-9V6z"/><path d="m8.8 12 2.2 2.2 4.2-4.4"/></svg><b style="color:var(--teal-600);">Pass Guarantee</b> &mdash; full refund if you don't pass</li></ul>
         </div><div class="tier best fade-up">
           <span class="rec-tab alt">Best value</span>
           <div class="dur">6 Months<small>of full access</small></div>
@@ -4268,7 +4354,7 @@ body.mls-paid .gate { display: none; }
           <p class="blurb">The lowest price per month &mdash; go at your own pace, stress-free.</p>
           <a class="btn btn-line tier-cta" href="join.html">Get 6 Months</a>
           <div class="esi-in"><span class="orb"></span> Esi AI tutor included &mdash; free</div>
-          <ul><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="m4 12.5 5 5L20 6.5"/></svg>2,600+ original NCLEX questions &mdash; RN &amp; PN</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="m4 12.5 5 5L20 6.5"/></svg>50 Next Gen case studies with walkthroughs</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="m4 12.5 5 5L20 6.5"/></svg>4 full-length CAT readiness exams</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="m4 12.5 5 5L20 6.5"/></svg>Next Gen strategy video course</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="m4 12.5 5 5L20 6.5"/></svg>Personalized study schedule &amp; calendar</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="m4 12.5 5 5L20 6.5"/></svg>Mastered / Reviewing / Learning tagging</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="m4 12.5 5 5L20 6.5"/></svg>Performance by subject area</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="m4 12.5 5 5L20 6.5"/></svg>140+ cheat sheets &amp; the Scrubs Dictionary</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l8 3v6c0 4.5-3.2 7.6-8 9-4.8-1.4-8-4.5-8-9V6z"/><path d="m8.8 12 2.2 2.2 4.2-4.4"/></svg><b style="color:var(--teal-600);">Pass Guarantee</b> &mdash; full refund if you don't pass</li></ul>
+          <ul><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="m4 12.5 5 5L20 6.5"/></svg>2,600+ original NCLEX questions &mdash; RN &amp; PN</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="m4 12.5 5 5L20 6.5"/></svg>50 Next Gen case studies with walkthroughs</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="m4 12.5 5 5L20 6.5"/></svg>4 full-length CAT readiness exams</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="m4 12.5 5 5L20 6.5"/></svg>Next Gen strategy video course</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="m4 12.5 5 5L20 6.5"/></svg>Personalized study schedule &amp; calendar</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="m4 12.5 5 5L20 6.5"/></svg>Mastered / Reviewing / Learning tagging</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="m4 12.5 5 5L20 6.5"/></svg>Performance by subject area</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="m4 12.5 5 5L20 6.5"/></svg>140+ cheat sheets &amp; the Nurses Index</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l8 3v6c0 4.5-3.2 7.6-8 9-4.8-1.4-8-4.5-8-9V6z"/><path d="m8.8 12 2.2 2.2 4.2-4.4"/></svg><b style="color:var(--teal-600);">Pass Guarantee</b> &mdash; full refund if you don't pass</li></ul>
         </div></div>
       <div class="guarantee fade-up">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l8 3v6c0 4.5-3.2 7.6-8 9-4.8-1.4-8-4.5-8-9V6z"/><path d="m8.8 12 2.2 2.2 4.2-4.4"/></svg>
@@ -4720,11 +4806,11 @@ body.mls-paid .gate { display: none; }
       </div>
       <div class="tile span2 fade-up" data-downloads>
         <div style="display:flex;align-items:center;justify-content:space-between;gap:1rem;flex-wrap:wrap;"><span class="tag">My downloads</span><span class="badge-new" data-dl-badge hidden><span class="spark"></span> Updated &middot; free</span></div>
-        <h3>Scrubs Dictionary</h3>
+        <h3>Nurses Index</h3>
         <div data-dl-owned hidden>
           <div class="update-card" style="margin-top:0.8rem;">
             <div class="uc-body">
-              <b>Scrubs Dictionary <span data-dl-ver>Core Release 2</span></b>
+              <b>Nurses Index <span data-dl-ver>Core Release 2</span></b>
               <p data-dl-msg>You own this. It's yours for life — every future expansion lands here free, automatically.</p>
               <span class="uc-ver" data-dl-note></span>
             </div>
@@ -4733,7 +4819,7 @@ body.mls-paid .gate { display: none; }
         </div>
         <div data-dl-unowned>
           <p style="margin-top:0.6rem;">You don't own the download yet. Buy it once for $4.99 (or unlock with points) — then every future expansion is <b>free forever</b>, with the new words waiting right here.</p>
-          <div class="hero-cta" style="margin-top:1rem;"><a class="btn btn-coral" href="dictionary.html#download">Get the Dictionary</a><button class="btn btn-line" data-dl-demo>Unlock (demo)</button></div>
+          <div class="hero-cta" style="margin-top:1rem;"><a class="btn btn-coral" href="dictionary.html#download">Get the Nurses Index</a><button class="btn btn-line" data-dl-demo>Unlock (demo)</button></div>
         </div>
       </div>
       <div class="tile fade-up"><span class="tag">Saved</span><h3>Your library</h3><p>Saved videos, courses, and downloads live here for quick return.</p></div>
@@ -7190,6 +7276,62 @@ body.mls-paid .gate { display: none; }
   </main>
 
 </div>
+<div class="mls-route" data-route="study-plan.html" hidden>
+  <div class="page-hero">
+    <div class="wrap inner">
+      <span class="lesson-label" style="color:var(--gold-400);">Study Plan</span>
+      <h1 style="margin-top:0.6rem;">Your plan, run like a <span class="em">class</span>.</h1>
+      <p>Pick your test date and we build a day-by-day calendar that runs the whole system for you &mdash; reading, flashcards, case studies, pop quizzes, mnemonic games, and weekly review tests &mdash; on the learning science that makes it stick: spaced repetition, active recall, and interleaving.</p>
+    </div>
+  </div>
+
+  <section style="background:var(--bg);">
+    <div class="wrap">
+      <div class="planner" data-planner>
+        <div class="plan-controls fade-up">
+          <div class="pc-row">
+            <label>Plan length
+              <div class="seg pc-len" data-plan-len>
+                <button data-len="1">1 mo</button>
+                <button class="on" data-len="2">2 mo</button>
+                <button data-len="3">3 mo</button>
+                <button data-len="6">6 mo</button>
+              </div>
+            </label>
+            <label>Start date <input type="date" data-plan-start></label>
+            <button class="btn btn-coral" data-plan-go>Build my plan</button>
+          </div>
+          <div class="pc-meta">
+            <span class="fc-stat">Days done <b data-plan-done>0</b></span>
+            <span class="fc-stat">Total days <b data-plan-total>0</b></span>
+            <span class="fc-stat">Streak <b data-plan-streak>0</b></span>
+            <div class="plan-progress"><i data-plan-bar style="width:0%"></i></div>
+          </div>
+          <div class="plan-legend">
+            <span class="lg lg-read">Read</span><span class="lg lg-cards">Flashcards</span>
+            <span class="lg lg-review">Review</span><span class="lg lg-quiz">Pop quiz</span>
+            <span class="lg lg-case">Case study</span><span class="lg lg-game">Mnemonic game</span>
+            <span class="lg lg-test">Review test</span><span class="lg lg-exam">Readiness exam</span>
+            <span class="lg lg-rest">Rest</span>
+          </div>
+        </div>
+        <div class="plan-cal fade-up" data-plan-cal></div>
+      </div>
+      <div class="plan-why fade-up">
+        <h3>Why a calendar beats “just do questions”</h3>
+        <p>Cramming fades; <b>spaced repetition</b> (revisiting a topic right before you'd forget it), <b>active recall</b> (retrieving instead of rereading), and <b>interleaving</b> (mixing topics) are the most evidence-backed ways to learn faster and remember longer. The calendar schedules all three automatically, then re-weights toward whatever you keep missing.</p>
+      </div>
+    </div>
+  </section>
+
+  <div class="plan-day-modal" data-plan-modal hidden>
+    <div class="pdm-card">
+      <button class="pdm-close" data-plan-close aria-label="Close">&times;</button>
+      <div data-plan-modal-body></div>
+    </div>
+  </div>
+
+</div>
 <div class="mls-route" data-route="support.html" hidden>
   <div class="page-hero">
     <div class="wrap inner">
@@ -7258,6 +7400,7 @@ body.mls-paid .gate { display: none; }
           <li><a href="nclex-complete.html">NCLEX Complete</a></li>
           <li><a href="qbank.html">Question Bank</a></li>
           <li><a href="flashcards.html">Flashcards &amp; Games</a></li>
+          <li><a href="study-plan.html">Study Plan Calendar</a></li>
           <li><a href="nclex-guide.html">Free Study Guide</a></li>
           <li><a href="specialties.html">Specialty Prep</a></li>
           <li><a href="courses.html">Courses</a></li>
@@ -7269,7 +7412,7 @@ body.mls-paid .gate { display: none; }
       <div class="footer-col">
         <h5>Discover</h5>
         <ul>
-          <li><a href="dictionary.html">Scrubs Dictionary</a></li>
+          <li><a href="dictionary.html">Nurses Index</a></li>
           <li><a href="spotlight.html">Spotlight</a></li>
           <li><a href="jobs.html">Job Search</a></li>
           <li><a href="blog.html">Blog</a></li>
@@ -7298,7 +7441,7 @@ body.mls-paid .gate { display: none; }
     <a class="bn-item active" href="index.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11.5 12 4l9 7.5"/><path d="M5 10v10h5v-6h4v6h5V10"/></svg><span>Home</span></a>
     <a class="bn-item" href="courses.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5a2 2 0 0 1 2-2h13v18H6a2 2 0 0 0-2 2z"/><path d="M4 19a2 2 0 0 1 2-2h13"/><path d="M11 7h4M13 5v4"/></svg><span>Courses</span></a>
     <a class="bn-item bn-center" href="scrubtv.html"><span class="puck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="4"/><path d="M10 9.5v5l4.5-2.5z" fill="currentColor" stroke="none"/></svg></span><span>Scrub TV</span></a>
-    <a class="bn-item" href="dictionary.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 4a1 1 0 0 1 1-1h12v18H6a1 1 0 0 1-1-1z"/><path d="M8 3v18M11 8h5M11 11h5"/></svg><span>Dictionary</span></a>
+    <a class="bn-item" href="dictionary.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 4a1 1 0 0 1 1-1h12v18H6a1 1 0 0 1-1-1z"/><path d="M8 3v18M11 8h5M11 11h5"/></svg><span>Index</span></a>
     <a class="bn-item" href="profile.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 21c1.5-3.5 4.5-5 8-5s6.5 1.5 8 5"/></svg><span>Profile</span></a>
   </nav>
 
@@ -7999,7 +8142,7 @@ body.mls-paid .gate { display: none; }
 
 
 /* ===== dictionary.js ===== */
-/* Must Love Scrubs — Scrubs Dictionary: live search + category filter. */
+/* Must Love Scrubs — Nurses Index: live search + category filter. */
 (function () {
   'use strict';
   var input = document.querySelector('.dict-search input');
@@ -8353,10 +8496,11 @@ body.mls-paid .gate { display: none; }
 
 
 /* ===== flashcards.js ===== */
-/* Must Love Scrubs — Flashcards & Games (adaptive).
-   Study (animated flip + confidence + spaced levels), Quiz (MC from cards),
-   Match game, Speed round. Difficulty 1-5 mirrors the CAT engine; level rises
-   with mastery. Demo persistence via localStorage. */
+/* Must Love Scrubs — Flashcards & Games (adaptive, multi-format).
+   Card kinds: qa (flip), mc, tf, fill, odd, order, bowtie.
+   Modes: Study (flip qa + interactive others), Challenge (mixed interactive),
+   Quiz (MC from qa cards), Match game, Speed round. Difficulty 1-5 = CAT scale;
+   level rises with mastery. Demo persistence via localStorage. */
 
 (function () {
   'use strict';
@@ -8364,210 +8508,408 @@ body.mls-paid .gate { display: none; }
   if (!root) return;
   var ALL = JSON.parse(root.querySelector('script[data-flash]').textContent);
   function md(s) { return String(s == null ? '' : s).replace(/\*\*(.+?)\*\*/g, '<b>$1</b>'); }
+  function esc(s) { return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
   function shuffle(a) { a = a.slice(); for (var i = a.length - 1; i > 0; i--) { var j = Math.floor(Math.random() * (i + 1)); var t = a[i]; a[i] = a[j]; a[j] = t; } return a; }
+  var INTERACTIVE = ['mc','tf','fill','odd','order','bowtie'];
 
   var stage = root.querySelector('[data-fc-stage]');
-  var levelEl = root.querySelector('[data-fc-level]');
-  var mastEl = root.querySelector('[data-fc-mastered]');
-  var streakEl = root.querySelector('[data-fc-streak]');
-  var countEl = root.querySelector('[data-fc-count]');
+  var levelEl = root.querySelector('[data-fc-level]'), mastEl = root.querySelector('[data-fc-mastered]');
+  var streakEl = root.querySelector('[data-fc-streak]'), countEl = root.querySelector('[data-fc-count]');
 
-  var S;
-  try { S = JSON.parse(localStorage.getItem('mlsFlash')) || {}; } catch (e) { S = {}; }
+  var S; try { S = JSON.parse(localStorage.getItem('mlsFlash')) || {}; } catch (e) { S = {}; }
   S.level = S.level || 1; S.mastered = S.mastered || {}; S.streak = S.streak || 0;
   function save() { try { localStorage.setItem('mlsFlash', JSON.stringify(S)); } catch (e) {} }
 
   var deck = 'All', mode = 'study';
   function pool() { return deck === 'All' ? ALL : ALL.filter(function (c) { return c.deck === deck; }); }
-  function meta() {
-    levelEl.textContent = S.level;
-    mastEl.textContent = Object.keys(S.mastered).length;
-    streakEl.textContent = S.streak;
-    countEl.textContent = pool().length;
+  function qaPool() { return pool().filter(function (c) { return (c.kind || 'qa') === 'qa' && c.back; }); }
+  function interPool() { return pool().filter(function (c) { return INTERACTIVE.indexOf(c.kind) >= 0; }); }
+  function meta() { levelEl.textContent = S.level; mastEl.textContent = Object.keys(S.mastered).length; streakEl.textContent = S.streak; countEl.textContent = pool().length; }
+  function applyResult(correct, c) {
+    if (correct) { S.mastered[c.id] = true; S.streak++; if (S.streak % 4 === 0 && S.level < 5) S.level++; }
+    else { S.streak = 0; }
+    save(); meta();
+  }
+  function feedbackHTML(correct, c, answerLine) {
+    return '<div class="fc-fb ' + (correct ? 'ok' : 'no') + '">' +
+      '<span class="fc-verdict">' + (correct ? '✓ Correct' : '✗ Not quite') + '</span>' +
+      (answerLine ? '<p class="fc-ans-line">' + answerLine + '</p>' : '') +
+      (c.rationale ? '<p class="fc-why"><b>Why:</b> ' + md(c.rationale) + '</p>' : '') +
+      (c.hint ? '<p class="fc-hint">💡 ' + md(c.hint) + '</p>' : '') +
+      '<button class="btn btn-coral fc-next">Next →</button></div>';
   }
 
-  /* ---------- STUDY (adaptive flip) ---------- */
-  var sQ = [], sI = 0;
-  function buildStudy() {
-    var cap = Math.min(5, S.level + 1);           // adaptive: don't show far-above-level cards
-    var p = pool().filter(function (c) { return c.difficulty <= cap; });
-    // unmastered first (easier first), then mastered for review
-    p.sort(function (a, b) {
-      var am = S.mastered[a.id] ? 1 : 0, bm = S.mastered[b.id] ? 1 : 0;
-      return am - bm || a.difficulty - b.difficulty;
-    });
-    sQ = p; sI = 0;
+  /* ============ interactive kinds ============ */
+  function renderInteractive(c, onNext) {
+    var head = '<span class="fc-tag">' + esc(c.deck) + ' · L' + c.difficulty + ' · ' + (c.kind || '').toUpperCase() + '</span>' +
+               '<p class="fc-q">' + md(c.front) + '</p>';
+    if (c.kind === 'mc' || c.kind === 'odd') return interChoice(c, head, onNext);
+    if (c.kind === 'tf') return interTF(c, head, onNext);
+    if (c.kind === 'fill') return interFill(c, head, onNext);
+    if (c.kind === 'order') return interOrder(c, head, onNext);
+    if (c.kind === 'bowtie') return interBowtie(c, head, onNext);
   }
-  function renderStudy() {
-    if (!sQ.length) buildStudy();
-    if (sI >= sQ.length) {
-      stage.innerHTML = '<div class="fc-done"><h3>Deck complete 🎉</h3><p>You worked ' + sQ.length + ' cards at level ' + S.level + '. Level up by rating cards “Good/Easy”.</p><button class="btn btn-coral" data-fc-restart>Go again</button></div>';
-      stage.querySelector('[data-fc-restart]').addEventListener('click', function () { buildStudy(); renderStudy(); });
-      return;
-    }
-    var c = sQ[sI];
-    stage.innerHTML =
-      '<div class="fc-progress"><i style="width:' + Math.round(sI / sQ.length * 100) + '%"></i></div>' +
-      '<div class="fc-card" data-flip>' +
-        '<div class="fc-inner">' +
-          '<div class="fc-face fc-front"><span class="fc-tag">' + c.deck + ' · L' + c.difficulty + '</span>' +
-            '<p class="fc-q">' + md(c.front) + '</p><span class="fc-flip-hint">Tap to flip</span></div>' +
-          '<div class="fc-face fc-back"><p class="fc-a">' + md(c.back) + '</p>' +
-            (c.rationale ? '<p class="fc-why"><b>Why:</b> ' + md(c.rationale) + '</p>' : '') +
-            (c.hint ? '<p class="fc-hint">💡 ' + md(c.hint) + '</p>' : '') + '</div>' +
-        '</div>' +
-      '</div>' +
-      '<div class="fc-rate" hidden>' +
-        '<button class="fc-r again" data-r="again">Again</button>' +
-        '<button class="fc-r hard" data-r="hard">Hard</button>' +
-        '<button class="fc-r good" data-r="good">Good</button>' +
-        '<button class="fc-r easy" data-r="easy">Easy</button>' +
-      '</div>';
-    var card = stage.querySelector('.fc-card'), rate = stage.querySelector('.fc-rate');
-    card.addEventListener('click', function () { card.classList.add('flipped'); rate.hidden = false; });
-    rate.querySelectorAll('.fc-r').forEach(function (b) {
-      b.addEventListener('click', function () {
-        var r = b.getAttribute('data-r');
-        if (r === 'good' || r === 'easy') {
-          S.mastered[c.id] = true; S.streak++;
-          if (S.streak > 0 && S.streak % 4 === 0 && S.level < 5) S.level++;
-        } else { S.streak = 0; if (r === 'again') delete S.mastered[c.id]; }
-        save(); meta(); sI++; renderStudy();
-      });
-    });
-    meta();
-  }
+  function wireNext(onNext) { var n = stage.querySelector('.fc-next'); if (n) n.addEventListener('click', onNext); }
 
-  /* ---------- QUIZ (MC generated from cards) ---------- */
-  var qQ = [], qI = 0;
-  function renderQuiz() {
-    if (!qQ.length || qI >= qQ.length) { qQ = shuffle(pool()); qI = 0; }
-    var p = pool(); var c = qQ[qI];
-    var distract = shuffle(p.filter(function (x) { return x.id !== c.id; })).slice(0, 3).map(function (x) { return x.back; });
-    var opts = shuffle([c.back].concat(distract));
-    stage.innerHTML =
-      '<div class="fc-quiz"><span class="fc-tag">' + c.deck + '</span>' +
-      '<p class="fc-q">' + md(c.front) + '</p><div class="fc-opts">' +
-      opts.map(function (o) { return '<button class="fc-opt">' + md(o) + '</button>'; }).join('') +
-      '</div><div class="fc-reveal" hidden></div></div>';
-    var reveal = stage.querySelector('.fc-reveal');
+  function interChoice(c, head, onNext) {
+    stage.innerHTML = '<div class="fc-inter">' + head + '<div class="fc-opts">' +
+      c.options.map(function (o, i) { return '<button class="fc-opt" data-i="' + i + '">' + md(o) + '</button>'; }).join('') +
+      '</div><div class="fc-slot"></div></div>';
     stage.querySelectorAll('.fc-opt').forEach(function (b) {
       b.addEventListener('click', function () {
-        if (reveal.dataset.done) return; reveal.dataset.done = '1';
-        var ok = b.textContent === c.back.replace(/\*\*/g, '');
-        stage.querySelectorAll('.fc-opt').forEach(function (x) {
-          x.disabled = true;
-          if (x.textContent === c.back.replace(/\*\*/g, '')) x.classList.add('right');
-          else if (x === b) x.classList.add('wrong');
-        });
-        if (ok) { S.streak++; S.mastered[c.id] = true; } else { S.streak = 0; }
-        save(); meta();
-        reveal.hidden = false;
-        reveal.innerHTML = '<div class="fc-why"><b>' + (ok ? 'Correct — ' : 'Answer: ' + md(c.back) + '. ') + '</b>' + md(c.rationale || '') + '</div>' +
-          '<button class="btn btn-coral" data-fc-next>Next card →</button>';
-        reveal.querySelector('[data-fc-next]').addEventListener('click', function () { qI++; renderQuiz(); });
+        var i = +b.getAttribute('data-i'); var ok = i === c.correct;
+        stage.querySelectorAll('.fc-opt').forEach(function (x, xi) { x.disabled = true; if (xi === c.correct) x.classList.add('right'); else if (xi === i) x.classList.add('wrong'); });
+        applyResult(ok, c);
+        stage.querySelector('.fc-slot').innerHTML = feedbackHTML(ok, c, ok ? '' : 'Answer: <b>' + md(c.options[c.correct]) + '</b>');
+        wireNext(onNext);
       });
     });
-    meta();
+  }
+  function interTF(c, head, onNext) {
+    stage.innerHTML = '<div class="fc-inter">' + head + '<div class="fc-opts fc-tf">' +
+      '<button class="fc-opt" data-v="true">True</button><button class="fc-opt" data-v="false">False</button>' +
+      '</div><div class="fc-slot"></div></div>';
+    stage.querySelectorAll('.fc-opt').forEach(function (b) {
+      b.addEventListener('click', function () {
+        var v = b.getAttribute('data-v') === 'true'; var ok = v === c.correct;
+        stage.querySelectorAll('.fc-opt').forEach(function (x) { x.disabled = true; if ((x.getAttribute('data-v') === 'true') === c.correct) x.classList.add('right'); else if (x === b) x.classList.add('wrong'); });
+        applyResult(ok, c);
+        stage.querySelector('.fc-slot').innerHTML = feedbackHTML(ok, c, 'Answer: <b>' + (c.correct ? 'True' : 'False') + '</b>');
+        wireNext(onNext);
+      });
+    });
+  }
+  function interFill(c, head, onNext) {
+    stage.innerHTML = '<div class="fc-inter">' + head + '<div class="fc-fill"><input type="text" class="fc-input" placeholder="Type your answer…" autocomplete="off"><button class="btn btn-coral fc-check">Check</button></div><div class="fc-slot"></div></div>';
+    var input = stage.querySelector('.fc-input');
+    function norm(s) { return String(s).toLowerCase().replace(/[^a-z0-9. ]/g, '').replace(/\s+/g, ' ').trim(); }
+    function check() {
+      var accept = [c.answer].concat(c.accept || []).map(norm);
+      var ok = accept.indexOf(norm(input.value)) >= 0;
+      input.disabled = true; stage.querySelector('.fc-check').disabled = true;
+      input.classList.add(ok ? 'right' : 'wrong');
+      applyResult(ok, c);
+      stage.querySelector('.fc-slot').innerHTML = feedbackHTML(ok, c, 'Answer: <b>' + md(c.answer) + '</b>');
+      wireNext(onNext);
+    }
+    stage.querySelector('.fc-check').addEventListener('click', check);
+    input.addEventListener('keydown', function (e) { if (e.key === 'Enter') check(); });
+    input.focus();
+  }
+  function interOrder(c, head, onNext) {
+    var shuffled = shuffle(c.items.map(function (t, i) { return { t: t, i: i }; }));
+    var chosen = [];
+    stage.innerHTML = '<div class="fc-inter">' + head + '<p class="fc-sub">Tap the steps in the correct order:</p>' +
+      '<div class="fc-order">' + shuffled.map(function (x) { return '<button class="fc-ord" data-t="' + esc(x.t) + '">' + md(x.t) + '</button>'; }).join('') + '</div>' +
+      '<div class="fc-actions"><button class="btn btn-line fc-reset">Reset</button><button class="btn btn-coral fc-check" disabled>Check order</button></div><div class="fc-slot"></div></div>';
+    function refresh() {
+      stage.querySelectorAll('.fc-ord').forEach(function (b) { var idx = chosen.indexOf(b.getAttribute('data-t')); b.classList.toggle('picked', idx >= 0); b.querySelector('.fc-num') && b.querySelector('.fc-num').remove(); if (idx >= 0) { var s = document.createElement('span'); s.className = 'fc-num'; s.textContent = (idx + 1); b.prepend(s); } });
+      stage.querySelector('.fc-check').disabled = chosen.length !== c.items.length;
+    }
+    stage.querySelectorAll('.fc-ord').forEach(function (b) {
+      b.addEventListener('click', function () { var t = b.getAttribute('data-t'); var i = chosen.indexOf(t); if (i >= 0) chosen.splice(i, 1); else chosen.push(t); refresh(); });
+    });
+    stage.querySelector('.fc-reset').addEventListener('click', function () { chosen = []; refresh(); });
+    stage.querySelector('.fc-check').addEventListener('click', function () {
+      var ok = chosen.join('||') === c.items.join('||');
+      stage.querySelectorAll('.fc-ord').forEach(function (b) { b.disabled = true; var pos = chosen.indexOf(b.getAttribute('data-t')); var correctPos = c.items.indexOf(b.getAttribute('data-t')); b.classList.add(pos === correctPos ? 'right' : 'wrong'); });
+      applyResult(ok, c);
+      var correctList = '<ol class="fc-correct-order">' + c.items.map(function (t) { return '<li>' + md(t) + '</li>'; }).join('') + '</ol>';
+      stage.querySelector('.fc-slot').innerHTML = feedbackHTML(ok, c, ok ? '' : 'Correct order:' + correctList);
+      wireNext(onNext);
+    });
+  }
+  function interBowtie(c, head, onNext) {
+    function grp(key, label) {
+      var g = c[key];
+      return '<div class="fc-bt-col"><span class="fc-bt-label">' + label + (g.pick ? ' (' + g.pick + ')' : '') + '</span>' +
+        g.options.map(function (o, i) { return '<button class="fc-bt-opt" data-g="' + key + '" data-i="' + i + '">' + md(o) + '</button>'; }).join('') + '</div>';
+    }
+    stage.innerHTML = '<div class="fc-inter">' + head +
+      '<div class="fc-bt">' + grp('actions', 'Actions') + grp('condition', 'Condition') + grp('parameters', 'Monitor') + '</div>' +
+      '<div class="fc-actions"><button class="btn btn-coral fc-check" disabled>Check</button></div><div class="fc-slot"></div></div>';
+    var pick = { condition: null, actions: {}, parameters: {} };
+    function complete() { return pick.condition != null && Object.keys(pick.actions).length === (c.actions.pick || 2) && Object.keys(pick.parameters).length === (c.parameters.pick || 2); }
+    stage.querySelectorAll('.fc-bt-opt').forEach(function (b) {
+      b.addEventListener('click', function () {
+        var g = b.getAttribute('data-g'), i = +b.getAttribute('data-i');
+        if (g === 'condition') { stage.querySelectorAll('[data-g="condition"]').forEach(function (x) { x.classList.remove('sel'); }); b.classList.add('sel'); pick.condition = i; }
+        else { var cap = c[g].pick || 2; if (pick[g][i]) { delete pick[g][i]; b.classList.remove('sel'); } else if (Object.keys(pick[g]).length < cap) { pick[g][i] = true; b.classList.add('sel'); } }
+        stage.querySelector('.fc-check').disabled = !complete();
+      });
+    });
+    stage.querySelector('.fc-check').addEventListener('click', function () {
+      function set(arr) { var o = {}; arr.forEach(function (i) { o[i] = true; }); return o; }
+      var cc = pick.condition === c.condition.correct;
+      var ac = Object.keys(pick.actions).length === c.actions.correct.length && c.actions.correct.every(function (i) { return pick.actions[i]; });
+      var pc = Object.keys(pick.parameters).length === c.parameters.correct.length && c.parameters.correct.every(function (i) { return pick.parameters[i]; });
+      var ok = cc && ac && pc;
+      [['condition', c.condition.correct], ['actions', c.actions.correct], ['parameters', c.parameters.correct]].forEach(function (pair) {
+        var key = pair[0], cset = (key === 'condition') ? set([pair[1]]) : set(pair[1]);
+        stage.querySelectorAll('[data-g="' + key + '"]').forEach(function (b) {
+          var i = +b.getAttribute('data-i'); b.disabled = true;
+          var sel = key === 'condition' ? (pick.condition === i) : !!pick[key][i];
+          if (cset[i] && sel) b.classList.add('right'); else if (cset[i]) b.classList.add('missed'); else if (sel) b.classList.add('wrong');
+        });
+      });
+      applyResult(ok, c);
+      stage.querySelector('.fc-slot').innerHTML = feedbackHTML(ok, c, '');
+      wireNext(onNext);
+    });
   }
 
-  /* ---------- MATCH GAME ---------- */
+  /* ============ STUDY (flip qa + interactive others) ============ */
+  var sQ = [], sI = 0;
+  function buildStudy() {
+    var cap = Math.min(5, S.level + 1);
+    var p = pool().filter(function (c) { return c.difficulty <= cap; });
+    p.sort(function (a, b) { var am = S.mastered[a.id] ? 1 : 0, bm = S.mastered[b.id] ? 1 : 0; return am - bm || a.difficulty - b.difficulty; });
+    sQ = p; sI = 0;
+  }
+  function studyNext() { sI++; renderStudy(); }
+  function renderStudy() {
+    if (!sQ.length) buildStudy();
+    if (sI >= sQ.length) { doneScreen('Deck complete 🎉', 'You worked ' + sQ.length + ' cards at level ' + S.level + '.', function () { buildStudy(); renderStudy(); }); return; }
+    var c = sQ[sI];
+    if ((c.kind || 'qa') !== 'qa') { renderInteractive(c, studyNext); prog(); return; }
+    stage.innerHTML = progBar() +
+      '<div class="fc-card" data-flip><div class="fc-inner">' +
+      '<div class="fc-face fc-front"><span class="fc-tag">' + esc(c.deck) + ' · L' + c.difficulty + '</span><p class="fc-q">' + md(c.front) + '</p><span class="fc-flip-hint">Tap to flip</span></div>' +
+      '<div class="fc-face fc-back"><p class="fc-a">' + md(c.back) + '</p>' + (c.rationale ? '<p class="fc-why"><b>Why:</b> ' + md(c.rationale) + '</p>' : '') + (c.hint ? '<p class="fc-hint">💡 ' + md(c.hint) + '</p>' : '') + '</div>' +
+      '</div></div>' +
+      '<div class="fc-rate" hidden><button class="fc-r again" data-r="again">Again</button><button class="fc-r hard" data-r="hard">Hard</button><button class="fc-r good" data-r="good">Good</button><button class="fc-r easy" data-r="easy">Easy</button></div>';
+    var card = stage.querySelector('.fc-card'), rate = stage.querySelector('.fc-rate');
+    card.addEventListener('click', function () { card.classList.add('flipped'); rate.hidden = false; });
+    rate.querySelectorAll('.fc-r').forEach(function (b) { b.addEventListener('click', function () { var r = b.getAttribute('data-r'); applyResult(r === 'good' || r === 'easy', c); if (r === 'again') delete S.mastered[c.id]; save(); studyNext(); }); });
+  }
+  function prog() {}
+  function progBar() { return '<div class="fc-progress"><i style="width:' + Math.round(sI / Math.max(1, sQ.length) * 100) + '%"></i></div>'; }
+
+  /* ============ CHALLENGE (mixed interactive) ============ */
+  var cQ = [], cI = 0;
+  function renderChallenge() {
+    if (!cQ.length || cI >= cQ.length) {
+      var p = interPool().filter(function (c) { return c.difficulty <= Math.min(5, S.level + 1); });
+      if (!p.length) { stage.innerHTML = '<div class="fc-done"><h3>No challenge cards here yet</h3><p>Pick “All” or another deck — Challenge uses multiple-choice, true/false, fill-in, odd-one-out, ordering, and bow-tie cards.</p></div>'; return; }
+      cQ = shuffle(p); cI = 0;
+    }
+    renderInteractive(cQ[cI], function () { cI++; renderChallenge(); });
+  }
+
+  /* ============ QUIZ (MC from qa cards) ============ */
+  var qQ = [], qI = 0;
+  function renderQuiz() {
+    var p = qaPool();
+    if (p.length < 2) { stage.innerHTML = '<div class="fc-done"><h3>Quiz needs flip cards</h3><p>Choose “All” or a deck with term/definition cards.</p></div>'; return; }
+    if (!qQ.length || qI >= qQ.length) { qQ = shuffle(p); qI = 0; }
+    var c = qQ[qI];
+    var distract = shuffle(p.filter(function (x) { return x.id !== c.id; })).slice(0, 3).map(function (x) { return x.back; });
+    var opts = shuffle([c.back].concat(distract));
+    stage.innerHTML = '<div class="fc-inter"><span class="fc-tag">' + esc(c.deck) + '</span><p class="fc-q">' + md(c.front) + '</p><div class="fc-opts">' +
+      opts.map(function (o) { return '<button class="fc-opt">' + md(o) + '</button>'; }).join('') + '</div><div class="fc-slot"></div></div>';
+    stage.querySelectorAll('.fc-opt').forEach(function (b) {
+      b.addEventListener('click', function () {
+        var ok = b.textContent === String(c.back).replace(/\*\*/g, '');
+        stage.querySelectorAll('.fc-opt').forEach(function (x) { x.disabled = true; if (x.textContent === String(c.back).replace(/\*\*/g, '')) x.classList.add('right'); else if (x === b) x.classList.add('wrong'); });
+        applyResult(ok, c);
+        stage.querySelector('.fc-slot').innerHTML = feedbackHTML(ok, c, ok ? '' : 'Answer: <b>' + md(c.back) + '</b>');
+        wireNext(function () { qI++; renderQuiz(); });
+      });
+    });
+  }
+
+  /* ============ MATCH ============ */
   function renderMatch() {
-    var p = shuffle(pool()).slice(0, Math.min(6, pool().length));
+    var p = shuffle(qaPool()).slice(0, 6);
+    if (p.length < 3) { stage.innerHTML = '<div class="fc-done"><h3>Match needs flip cards</h3><p>Choose “All” or a term/definition deck.</p></div>'; return; }
     var lefts = p.map(function (c) { return { id: c.id, t: c.front }; });
     var rights = shuffle(p.map(function (c) { return { id: c.id, t: c.back }; }));
     var start = Date.now(), matched = 0, pickL = null;
-    stage.innerHTML = '<div class="fc-match"><div class="fc-mcol" data-side="l">' +
-      lefts.map(function (x) { return '<button class="fc-tile" data-id="' + x.id + '">' + md(x.t) + '</button>'; }).join('') +
-      '</div><div class="fc-mcol" data-side="r">' +
-      rights.map(function (x) { return '<button class="fc-tile" data-id="' + x.id + '">' + md(x.t) + '</button>'; }).join('') +
-      '</div></div><p class="fc-match-msg">Tap a term on the left, then its match on the right.</p>';
+    stage.innerHTML = '<div class="fc-match"><div class="fc-mcol" data-side="l">' + lefts.map(function (x) { return '<button class="fc-tile" data-id="' + x.id + '">' + md(x.t) + '</button>'; }).join('') +
+      '</div><div class="fc-mcol" data-side="r">' + rights.map(function (x) { return '<button class="fc-tile" data-id="' + x.id + '">' + md(x.t) + '</button>'; }).join('') + '</div></div><p class="fc-match-msg">Tap a term, then its match.</p>';
     var msg = stage.querySelector('.fc-match-msg');
-    function done() {
-      var secs = Math.round((Date.now() - start) / 1000);
-      S.streak++; save(); meta();
-      msg.innerHTML = '<b>Matched all ' + p.length + ' in ' + secs + 's! 🎉</b> <button class="btn btn-coral" data-fc-again>Play again</button>';
-      msg.querySelector('[data-fc-again]').addEventListener('click', renderMatch);
-    }
-    stage.querySelectorAll('.fc-mcol[data-side="l"] .fc-tile').forEach(function (b) {
-      b.addEventListener('click', function () {
-        if (b.classList.contains('done')) return;
-        stage.querySelectorAll('[data-side="l"] .fc-tile').forEach(function (x) { x.classList.remove('sel'); });
-        b.classList.add('sel'); pickL = b;
-      });
-    });
-    stage.querySelectorAll('.fc-mcol[data-side="r"] .fc-tile').forEach(function (b) {
+    stage.querySelectorAll('[data-side="l"] .fc-tile').forEach(function (b) { b.addEventListener('click', function () { if (b.classList.contains('done')) return; stage.querySelectorAll('[data-side="l"] .fc-tile').forEach(function (x) { x.classList.remove('sel'); }); b.classList.add('sel'); pickL = b; }); });
+    stage.querySelectorAll('[data-side="r"] .fc-tile').forEach(function (b) {
       b.addEventListener('click', function () {
         if (!pickL || b.classList.contains('done')) return;
-        if (b.getAttribute('data-id') === pickL.getAttribute('data-id')) {
-          b.classList.add('done'); pickL.classList.add('done'); pickL.classList.remove('sel'); pickL = null;
-          matched++; if (matched === p.length) done();
-        } else {
-          b.classList.add('miss'); var bad = b; setTimeout(function () { bad.classList.remove('miss'); }, 400);
-        }
+        if (b.getAttribute('data-id') === pickL.getAttribute('data-id')) { b.classList.add('done'); pickL.classList.add('done'); pickL.classList.remove('sel'); pickL = null; matched++; if (matched === p.length) { var secs = Math.round((Date.now() - start) / 1000); S.streak++; save(); meta(); msg.innerHTML = '<b>Matched all ' + p.length + ' in ' + secs + 's! 🎉</b> <button class="btn btn-coral fc-again">Play again</button>'; msg.querySelector('.fc-again').addEventListener('click', renderMatch); } }
+        else { var bad = b; b.classList.add('miss'); setTimeout(function () { bad.classList.remove('miss'); }, 400); }
       });
     });
-    meta();
   }
 
-  /* ---------- SPEED ROUND (brain teaser, 60s) ---------- */
+  /* ============ SPEED (qa flip, 60s) ============ */
   function renderSpeed() {
-    var q = shuffle(pool()), i = 0, hits = 0, secs = 60, timer;
+    var p = qaPool();
+    if (!p.length) { stage.innerHTML = '<div class="fc-done"><h3>Speed round needs flip cards</h3><p>Choose “All” or a term/definition deck.</p></div>'; return; }
+    var q = shuffle(p), i = 0, hits = 0, secs = 60, timer;
     function draw() {
-      if (i >= q.length) q = shuffle(pool()), i = 0;
-      var c = q[i];
-      stage.innerHTML = '<div class="fc-speed"><div class="fc-timer"><i></i></div>' +
-        '<div class="fc-sp-time">' + secs + 's · <b>' + hits + '</b> correct</div>' +
-        '<div class="fc-sp-card"><p class="fc-q">' + md(c.front) + '</p>' +
-        '<div class="fc-sp-ans" hidden><p class="fc-a">' + md(c.back) + '</p></div></div>' +
-        '<div class="fc-sp-actions"><button class="btn btn-line" data-sp="reveal">Reveal</button>' +
-        '<button class="btn btn-coral" data-sp="got" hidden>Got it</button>' +
-        '<button class="btn btn-line" data-sp="miss" hidden>Missed</button></div></div>';
-      var ans = stage.querySelector('.fc-sp-ans');
-      stage.querySelector('[data-sp="reveal"]').addEventListener('click', function () {
-        ans.hidden = false; this.hidden = true;
-        stage.querySelector('[data-sp="got"]').hidden = false;
-        stage.querySelector('[data-sp="miss"]').hidden = false;
-      });
+      if (i >= q.length) { q = shuffle(p); i = 0; } var c = q[i];
+      stage.innerHTML = '<div class="fc-speed"><div class="fc-timer"><i style="width:' + (secs / 60 * 100) + '%"></i></div><div class="fc-sp-time">' + secs + 's · <b>' + hits + '</b> correct</div>' +
+        '<div class="fc-sp-card"><p class="fc-q">' + md(c.front) + '</p><div class="fc-sp-ans" hidden><p class="fc-a">' + md(c.back) + '</p></div></div>' +
+        '<div class="fc-actions"><button class="btn btn-line" data-sp="reveal">Reveal</button><button class="btn btn-coral" data-sp="got" hidden>Got it</button><button class="btn btn-line" data-sp="miss" hidden>Missed</button></div></div>';
+      stage.querySelector('[data-sp="reveal"]').addEventListener('click', function () { stage.querySelector('.fc-sp-ans').hidden = false; this.hidden = true; stage.querySelector('[data-sp="got"]').hidden = false; stage.querySelector('[data-sp="miss"]').hidden = false; });
       stage.querySelector('[data-sp="got"]').addEventListener('click', function () { hits++; i++; draw(); });
       stage.querySelector('[data-sp="miss"]').addEventListener('click', function () { i++; draw(); });
-      var bar = stage.querySelector('.fc-timer i'); if (bar) bar.style.width = (secs / 60 * 100) + '%';
-    }
-    function end() {
-      clearInterval(timer);
-      S.streak = 0; save(); meta();
-      stage.innerHTML = '<div class="fc-done"><h3>Time! ⏱️</h3><p>You recalled <b>' + hits + '</b> cards in 60 seconds.</p><button class="btn btn-coral" data-fc-again>Run it back</button></div>';
-      stage.querySelector('[data-fc-again]').addEventListener('click', renderSpeed);
     }
     draw();
-    timer = setInterval(function () { secs--; var t = stage.querySelector('.fc-sp-time'); var bar = stage.querySelector('.fc-timer i'); if (t) t.innerHTML = secs + 's · <b>' + hits + '</b> correct'; if (bar) bar.style.width = (secs / 60 * 100) + '%'; if (secs <= 0) end(); }, 1000);
-    // stop timer if user leaves the mode
-    root._speedTimer = timer;
+    timer = setInterval(function () { secs--; var t = stage.querySelector('.fc-sp-time'), bar = stage.querySelector('.fc-timer i'); if (t) t.innerHTML = secs + 's · <b>' + hits + '</b> correct'; if (bar) bar.style.width = (secs / 60 * 100) + '%'; if (secs <= 0) { clearInterval(timer); doneScreen('Time! ⏱️', 'You recalled ' + hits + ' cards in 60 seconds.', renderSpeed); } }, 1000);
+    root._t = timer;
   }
 
+  function doneScreen(h, p, again) { stage.innerHTML = '<div class="fc-done"><h3>' + h + '</h3><p>' + p + '</p><button class="btn btn-coral fc-again">Go again</button></div>'; stage.querySelector('.fc-again').addEventListener('click', again); }
+
   function render() {
-    if (root._speedTimer) { clearInterval(root._speedTimer); root._speedTimer = null; }
+    if (root._t) { clearInterval(root._t); root._t = null; }
     if (mode === 'study') { buildStudy(); renderStudy(); }
+    else if (mode === 'challenge') { cQ = []; renderChallenge(); }
     else if (mode === 'quiz') { qQ = []; renderQuiz(); }
     else if (mode === 'match') renderMatch();
     else if (mode === 'speed') renderSpeed();
     meta();
   }
-
-  root.querySelectorAll('.fc-chip').forEach(function (chip) {
-    chip.addEventListener('click', function () {
-      root.querySelectorAll('.fc-chip').forEach(function (c) { c.classList.remove('on'); });
-      chip.classList.add('on'); deck = chip.getAttribute('data-deck'); render();
-    });
-  });
-  root.querySelectorAll('.fc-mode').forEach(function (m) {
-    m.addEventListener('click', function () {
-      root.querySelectorAll('.fc-mode').forEach(function (x) { x.classList.remove('on'); });
-      m.classList.add('on'); mode = m.getAttribute('data-mode'); render();
-    });
-  });
-
+  root.querySelectorAll('.fc-chip').forEach(function (chip) { chip.addEventListener('click', function () { root.querySelectorAll('.fc-chip').forEach(function (c) { c.classList.remove('on'); }); chip.classList.add('on'); deck = chip.getAttribute('data-deck'); render(); }); });
+  root.querySelectorAll('.fc-mode').forEach(function (m) { m.addEventListener('click', function () { root.querySelectorAll('.fc-mode').forEach(function (x) { x.classList.remove('on'); }); m.classList.add('on'); mode = m.getAttribute('data-mode'); render(); }); });
   render();
+})();
+
+
+/* ===== studyplan.js ===== */
+/* Must Love Scrubs — Study Plan Calendar (the conductor).
+   Builds a day-by-day plan from proven learning science: spaced repetition,
+   active recall, interleaving. Each day schedules real activities (read,
+   flashcards, review, pop quiz, case study, mnemonic game, review test,
+   readiness exam) that link to the actual tools. Demo state via localStorage. */
+
+(function () {
+  'use strict';
+  var root = document.querySelector('[data-planner]');
+  if (!root) return;
+
+  var TOPICS = [
+    { t: 'Pharmacology', link: 'flashcards.html' },
+    { t: 'Lab Values', link: 'flashcards.html' },
+    { t: 'Cardiovascular', link: 'flashcards.html' },
+    { t: 'Respiratory', link: 'flashcards.html' },
+    { t: 'Endocrine', link: 'flashcards.html' },
+    { t: 'Fundamentals & Safety', link: 'flashcards.html' },
+    { t: 'Maternal / Newborn', link: 'flashcards.html' },
+    { t: 'Pediatrics', link: 'flashcards.html' },
+    { t: 'Critical Care / ICU', link: 'flashcards.html' },
+    { t: 'Emergency / ER', link: 'flashcards.html' },
+    { t: 'Mental Health', link: 'flashcards.html' },
+    { t: 'Med-Surg', link: 'flashcards.html' }
+  ];
+  var WEEKS = { 1: 4, 2: 8, 3: 13, 6: 26 };
+
+  var lenWrap = root.querySelector('[data-plan-len]');
+  var startInp = root.querySelector('[data-plan-start]');
+  var goBtn = root.querySelector('[data-plan-go]');
+  var cal = root.querySelector('[data-plan-cal]');
+  var doneEl = root.querySelector('[data-plan-done]'), totalEl = root.querySelector('[data-plan-total]');
+  var streakEl = root.querySelector('[data-plan-streak]'), bar = root.querySelector('[data-plan-bar]');
+  var modal = document.querySelector('[data-plan-modal]'), modalBody = document.querySelector('[data-plan-modal-body]');
+
+  var len = 2, days = [], done = {};
+  try { var saved = JSON.parse(localStorage.getItem('mlsPlan')) || {}; done = saved.done || {}; if (saved.len) len = saved.len; if (saved.start) startInp.value = saved.start; } catch (e) {}
+  if (!startInp.value) startInp.value = new Date().toISOString().slice(0, 10);
+  lenWrap.querySelectorAll('button').forEach(function (b) { b.classList.toggle('on', +b.getAttribute('data-len') === len); });
+
+  function save() { try { localStorage.setItem('mlsPlan', JSON.stringify({ len: len, start: startInp.value, done: done })); } catch (e) {} }
+  function key(d) { return d.toISOString().slice(0, 10); }
+  function addDays(d, n) { var x = new Date(d); x.setDate(x.getDate() + n); return x; }
+  function fmt(d) { return d.toLocaleDateString(undefined, { weekday: 'long', month: 'long', day: 'numeric' }); }
+
+  var A = {
+    read:   { c: 'read',   label: 'Read', link: 'nclex-guide.html' },
+    cards:  { c: 'cards',  label: 'Flashcards', link: 'flashcards.html' },
+    review: { c: 'review', label: 'Review', link: 'flashcards.html' },
+    quiz:   { c: 'quiz',   label: 'Pop quiz', link: 'qbank.html' },
+    case:   { c: 'case',   label: 'Case study', link: 'nclex-complete.html' },
+    game:   { c: 'game',   label: 'Mnemonic game', link: 'flashcards.html' },
+    test:   { c: 'test',   label: 'Review test', link: 'qbank.html' },
+    exam:   { c: 'exam',   label: 'Readiness exam', link: 'nclex-complete.html' }
+  };
+
+  function build() {
+    var start = new Date(startInp.value + 'T00:00:00');
+    var total = WEEKS[len] * 7;
+    days = [];
+    var studyIdx = 0;
+    for (var i = 0; i < total; i++) {
+      var d = addDays(start, i), dow = d.getDay();
+      var day = { date: d, key: key(d), acts: [], rest: false, milestone: false };
+      if (dow === 0) { day.rest = true; day.acts = [{ c: 'rest', label: 'Rest & recharge', link: null, detail: 'Recovery matters — sleep consolidates memory. Optional: 10 min light flashcard review.' }]; }
+      else {
+        var focus = TOPICS[studyIdx % TOPICS.length];
+        day.focus = focus.t;
+        day.acts.push(mk('read', focus.t, 'Read the ' + focus.t + ' overview — build the concept first.'));
+        day.acts.push(mk('cards', focus.t, 'New ' + focus.t + ' flashcards (active recall).', 'flashcards.html'));
+        if (studyIdx >= 3) { var rev = TOPICS[(studyIdx - 3) % TOPICS.length].t; day.acts.push(mk('review', rev, 'Spaced review: ' + rev + ' (you learned it a few days ago — revisit before you forget).', 'flashcards.html')); }
+        day.acts.push(mk('quiz', focus.t, '10-question pop quiz on ' + focus.t + ' — retrieve, don\'t reread.'));
+        if (dow === 2 || dow === 5) day.acts.push(mk('case', focus.t, 'Work a Next Gen case study — clinical judgment in action.'));
+        if (dow === 1 || dow === 4) day.acts.push(mk('game', focus.t, 'Mnemonic game (Match or Speed round) to lock in the memory tricks.'));
+        if (dow === 6) { day.acts.push(mk('test', 'This week', 'Weekly review test — mixed topics from the past week (interleaving).')); day.milestone = true; }
+        if (i > 0 && i % 14 === 0) { day.acts.push(mk('exam', 'Milestone', 'Full-length readiness exam — see your pass-chance and weakest areas.')); day.milestone = true; }
+        studyIdx++;
+      }
+      days.push(day);
+    }
+    save(); render();
+  }
+  function mk(type, topic, detail, link) { var a = A[type]; return { c: a.c, label: a.label, topic: topic, detail: detail, link: link || a.link }; }
+
+  function studyDayCount() { return days.filter(function (d) { return !d.rest; }).length; }
+  function meta() {
+    var total = studyDayCount();
+    var completed = days.filter(function (d) { return !d.rest && done[d.key]; }).length;
+    doneEl.textContent = completed; totalEl.textContent = total;
+    bar.style.width = total ? Math.round(completed / total * 100) + '%' : '0%';
+    // streak: consecutive completed study days ending at the most recent completed
+    var s = 0; for (var i = days.length - 1; i >= 0; i--) { if (days[i].rest) continue; if (done[days[i].key]) s++; else if (s > 0) break; }
+    streakEl.textContent = s;
+  }
+
+  function render() {
+    var todayKey = key(new Date());
+    // pad to start on Sunday
+    var first = days[0].date, pad = first.getDay();
+    var cells = [];
+    for (var p = 0; p < pad; p++) cells.push('<div class="cal-cell empty"></div>');
+    days.forEach(function (d, idx) {
+      var chips = d.acts.slice(0, 4).map(function (a) { return '<span class="cal-dot ' + a.c + '"></span>'; }).join('');
+      var cls = 'cal-cell' + (d.rest ? ' rest' : '') + (d.key === todayKey ? ' today' : '') + (done[d.key] ? ' done' : '') + (d.milestone ? ' milestone' : '');
+      cells.push('<button class="' + cls + '" data-idx="' + idx + '">' +
+        '<span class="cal-num">' + d.date.getDate() + '</span>' +
+        (done[d.key] ? '<span class="cal-check">✓</span>' : '') +
+        '<span class="cal-dots">' + chips + '</span></button>');
+    });
+    var wk = ['Sun','Mon','Tue','Wed','Thu','Fri','Sat'].map(function (w) { return '<div class="cal-wd">' + w + '</div>'; }).join('');
+    cal.innerHTML = '<div class="cal-grid">' + wk + cells.join('') + '</div>';
+    cal.querySelectorAll('.cal-cell[data-idx]').forEach(function (b) { b.addEventListener('click', function () { openDay(days[+b.getAttribute('data-idx')]); }); });
+    meta();
+  }
+
+  function openDay(d) {
+    var acts = d.acts.map(function (a) {
+      var link = a.link ? '<a class="btn btn-line pd-go" href="' + a.link + '">Start &rarr;</a>' : '';
+      return '<div class="pd-act"><span class="cal-dot ' + a.c + '"></span><div class="pd-act-body"><b>' + a.label + (a.topic ? ' · ' + a.topic : '') + '</b><p>' + a.detail + '</p></div>' + link + '</div>';
+    }).join('');
+    var doneBtn = d.rest ? '' : '<button class="btn btn-coral pd-complete">' + (done[d.key] ? '✓ Completed — undo' : 'Mark day complete') + '</button>';
+    modalBody.innerHTML = '<span class="lesson-label" style="color:var(--coral-500);">' + (d.milestone ? 'Milestone day' : d.rest ? 'Rest day' : 'Study day') + '</span>' +
+      '<h3 style="margin:0.3rem 0 1rem;">' + fmt(d.date) + '</h3>' + acts +
+      '<div style="margin-top:1.2rem;">' + doneBtn + '</div>';
+    var cb = modalBody.querySelector('.pd-complete');
+    if (cb) cb.addEventListener('click', function () { if (done[d.key]) delete done[d.key]; else done[d.key] = true; save(); render(); openDay(d); });
+    modal.hidden = false;
+  }
+  function close() { modal.hidden = true; }
+  document.querySelector('[data-plan-close]').addEventListener('click', close);
+  modal.addEventListener('click', function (e) { if (e.target === modal) close(); });
+
+  lenWrap.querySelectorAll('button').forEach(function (b) { b.addEventListener('click', function () { lenWrap.querySelectorAll('button').forEach(function (x) { x.classList.remove('on'); }); b.classList.add('on'); len = +b.getAttribute('data-len'); }); });
+  goBtn.addEventListener('click', build);
+  build();
 })();
 
 </script>
