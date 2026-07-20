@@ -1065,6 +1065,27 @@ section { padding-block: clamp(3.6rem, 9vw, 6.5rem); position: relative; }
 
 /* ---------- Esi floating widget ---------- */
 
+.feedback-fab {
+  position: fixed;
+  left: 0.8rem;
+  bottom: calc(var(--bottomnav-h) + 0.7rem);
+  z-index: 85;
+  display: flex; align-items: center; gap: 0.35rem;
+  padding: 0.32rem 0.7rem;
+  border-radius: var(--pill);
+  background: var(--teal-600);
+  color: #fff;
+  font-weight: 800;
+  font-size: 0.72rem;
+  text-decoration: none;
+  opacity: 0.9;
+  box-shadow: 0 6px 18px rgba(18, 19, 43, 0.28);
+  transition: transform 0.22s ease, opacity 0.22s ease;
+}
+.feedback-fab svg { width: 16px; height: 16px; }
+.feedback-fab:hover { transform: translateY(-2px); opacity: 1; }
+@media (min-width: 900px) { .feedback-fab { bottom: 1rem; } }
+
 .esi-fab {
   position: fixed;
   right: 0.8rem;

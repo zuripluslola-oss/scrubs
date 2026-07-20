@@ -1073,6 +1073,27 @@ section { padding-block: clamp(3.6rem, 9vw, 6.5rem); position: relative; }
 
 /* ---------- Esi floating widget ---------- */
 
+.feedback-fab {
+  position: fixed;
+  left: 0.8rem;
+  bottom: calc(var(--bottomnav-h) + 0.7rem);
+  z-index: 85;
+  display: flex; align-items: center; gap: 0.35rem;
+  padding: 0.32rem 0.7rem;
+  border-radius: var(--pill);
+  background: var(--teal-600);
+  color: #fff;
+  font-weight: 800;
+  font-size: 0.72rem;
+  text-decoration: none;
+  opacity: 0.9;
+  box-shadow: 0 6px 18px rgba(18, 19, 43, 0.28);
+  transition: transform 0.22s ease, opacity 0.22s ease;
+}
+.feedback-fab svg { width: 16px; height: 16px; }
+.feedback-fab:hover { transform: translateY(-2px); opacity: 1; }
+@media (min-width: 900px) { .feedback-fab { bottom: 1rem; } }
+
 .esi-fab {
   position: fixed;
   right: 0.8rem;
@@ -7702,6 +7723,11 @@ body.mls-paid .gate { display: none; }
     <span class="orb"></span>
     <span>Esi</span>
   </button>
+
+  <a class="feedback-fab" href="mailto:zuripluslola@gmail.com?subject=Must%20Love%20Scrubs%20feedback&amp;body=What%20I%20tried%3A%0A%0AWhat%20I%20loved%3A%0A%0AWhat%20was%20confusing%20or%20missing%3A%0A%0AWould%20I%20use%20this%20to%20study%3F%20" aria-label="Send feedback">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a8 8 0 0 1-11.5 7.2L4 20l0.9-4.4A8 8 0 1 1 21 12z"/><path d="M9 11h6M9 14h4"/></svg>
+    <span>Feedback</span>
+  </a>
 
   <script>
 

@@ -39,6 +39,7 @@ I = {
     "list":   '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 6h12M8 12h12M8 18h12"/><circle cx="4" cy="6" r="1" fill="currentColor"/><circle cx="4" cy="12" r="1" fill="currentColor"/><circle cx="4" cy="18" r="1" fill="currentColor"/></svg>',
     "target": '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="8"/><circle cx="12" cy="12" r="4.5"/><circle cx="12" cy="12" r="1" fill="currentColor"/></svg>',
     "heart":  '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20s-7-4.3-7-9.5A4.2 4.2 0 0 1 12 7a4.2 4.2 0 0 1 7 3.5C19 15.7 12 20 12 20z"/></svg>',
+    "chat":   '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a8 8 0 0 1-11.5 7.2L4 20l0.9-4.4A8 8 0 1 1 21 12z"/><path d="M9 11h6M9 14h4"/></svg>',
 }
 
 def photo(name, grad, style=""):
@@ -221,6 +222,11 @@ def chrome(fname, title, desc, body, active=""):
     <span class="orb"></span>
     <span>Esi</span>
   </button>
+
+  <a class="feedback-fab" href="mailto:zuripluslola@gmail.com?subject=Must%20Love%20Scrubs%20feedback&amp;body=What%20I%20tried%3A%0A%0AWhat%20I%20loved%3A%0A%0AWhat%20was%20confusing%20or%20missing%3A%0A%0AWould%20I%20use%20this%20to%20study%3F%20" aria-label="Send feedback">
+    {I['chat']}
+    <span>Feedback</span>
+  </a>
 
   <script src="js/main.js"></script>
 </body>
