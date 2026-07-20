@@ -1,22 +1,30 @@
-# Must Love Scrubs 🩺♥
+# Must Love Scrubs 🩺💜
 
-The nurse lifestyle community platform — built pillar by pillar.
+**The Everything Platform for Nurses** — mobile-first NCLEX prep + nurse community.
 
-**Eight pillars:** Ask Esi (AI nurse) · Education · Forum · ScrubTV · Jobs · Store · Nurse Spotlight · Contests
+## Two parts of this repo
 
-## Running the site
+- **The working prototype** (repo root) — a static, self-contained web app.
+  Interactive tests, adaptive NCLEX mock, study calendar, flashcard games,
+  drug cards, question bank, Nurses Index. Runs with no backend.
+- **The production app** (`web/`) — a Next.js + Supabase skeleton to add real
+  user accounts and saved progress. See `SETUP.md`.
 
-It's a static site — open `index.html` in a browser, or serve it:
-
+## Run the prototype
+```bash
+python3 tools/build_pages.py    # regenerate pages after any change
+python3 tools/bundle_site.py    # regenerate the single-file preview
+python3 -m http.server 8000     # then open http://localhost:8000
 ```
-python3 -m http.server 8000
-```
 
-then visit http://localhost:8000.
+## Start here
+- **`HANDOFF.md`** — full project map: what exists, how it's built, conventions,
+  and how to continue in ChatGPT / Codex / another tool.
+- **`SETUP.md`** — turn the prototype into the full app (accounts, database).
+- **`docs/`** — the product blueprint (spec, data model & API, build plan).
+- **`.claude/skills/mls-design-system/SKILL.md`** — the design bible. Read
+  before changing any styling.
 
-## Project rules
-
-The design bible lives at `.claude/skills/mls-design-system/SKILL.md`.
-Read it before building anything. Highlights: mobile first, $10,000 quality,
-parallax scrolling, Esi ticker above the header, floating Ask Esi widget on
-every page, legal disclaimer wherever Esi appears.
+## Add content (no code)
+Drop a JSON file into `data/qbank/`, `data/flashcards/`, or `data/drugs/`
+following the existing shape, then rebuild. It appears automatically.
