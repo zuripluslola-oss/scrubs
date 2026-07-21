@@ -1,0 +1,194 @@
+{"question_id": "NGN-0001", "question_type": "Matrix/Grid", "difficulty": "Hard", "estimated_cat_level": 4, "client_needs_category": "Physiological Adaptation", "body_system": "Endocrine", "topic": "Diabetes Mellitus", "subtopic": "Diabetic Ketoacidosis", "blooms_level": "Analysis", "clinical_judgment_measurement_model": "Analyze Cues", "scenario": {"setting": "Emergency Department", "nurses_notes": "0730: A 24-year-old client with type 1 diabetes mellitus, diagnosed at age 9, is brought in by a roommate for two days of vomiting and increasing confusion. Client reports running out of insulin four days ago after losing employer health coverage. Skin warm and dry, mucous membranes tacky, capillary refill 4 seconds. Respirations deep and regular. Fruity odor noted on breath. Oriented to person only. Reports diffuse abdominal pain.", "vital_signs": "Temperature 37.1 C (98.8 F), heart rate 124/min, respirations 30/min, blood pressure 92/54 mm Hg, oxygen saturation 98% on room air.", "laboratory_results": "Serum glucose 486 mg/dL (26.9 mmol/L); serum potassium 5.4 mEq/L (5.4 mmol/L); serum sodium 131 mEq/L (131 mmol/L); serum bicarbonate 9 mEq/L (9 mmol/L); anion gap 24; beta-hydroxybutyrate 5.8 mmol/L; arterial pH 7.16; PaCO2 22 mm Hg; BUN 32 mg/dL (11.4 mmol/L); creatinine 1.4 mg/dL (124 micromol/L)."}, "question_stem": "For each client finding, click to specify whether the finding is consistent with diabetic ketoacidosis, hyperosmolar hyperglycemic state, or both conditions.", "matrix_rows": [{"row_id": "A", "finding": "Serum bicarbonate 9 mEq/L", "options": ["Diabetic ketoacidosis", "Hyperosmolar hyperglycemic state", "Both conditions"], "correct_answer": "Diabetic ketoacidosis", "rationale": "A bicarbonate of 9 mEq/L reflects a severe high-anion-gap metabolic acidosis produced by accumulation of beta-hydroxybutyrate and acetoacetate. This is the defining feature of DKA. In HHS, the residual endogenous insulin is sufficient to suppress lipolysis and ketogenesis, so bicarbonate typically remains above 18 mEq/L and pH above 7.30. This finding would be correct for HHS only if a separate acidosis (lactic acidosis from shock, renal failure, salicylate toxicity) were superimposed, which changes the management priority to treating that cause."}, {"row_id": "B", "finding": "Serum glucose 486 mg/dL", "options": ["Diabetic ketoacidosis", "Hyperosmolar hyperglycemic state", "Both conditions"], "correct_answer": "Both conditions", "rationale": "Hyperglycemia is common to both hyperglycemic emergencies. DKA is diagnosed at glucose above approximately 250 mg/dL, and this client's 486 mg/dL falls well within the DKA range while also being plausible early in HHS. Glucose alone cannot discriminate the two, which is precisely the reasoning trap: HHS characteristically presents above 600 mg/dL, but a value of 486 mg/dL does not exclude it. The discriminating data are the ketones, anion gap, and pH, not the glucose. Euglycemic DKA, seen with SGLT2 inhibitors or pregnancy, further proves glucose is not the defining variable."}, {"row_id": "C", "finding": "Respirations 30/min, deep and regular", "options": ["Diabetic ketoacidosis", "Hyperosmolar hyperglycemic state", "Both conditions"], "correct_answer": "Diabetic ketoacidosis", "rationale": "Deep, regular, unlabored tachypnea is Kussmaul respiration, the respiratory compensation for metabolic acidosis, and it corresponds to this client's PaCO2 of 22 mm Hg. It occurs in DKA because of the ketoacid load. It is not expected in HHS, where pH is near normal and no compensatory hyperventilation is required. Tachypnea in HHS would instead suggest a precipitating pneumonia, pulmonary embolism, or sepsis, and would be a cue to investigate rather than attribute to the hyperglycemia itself."}, {"row_id": "D", "finding": "Capillary refill 4 seconds with tacky mucous membranes", "options": ["Diabetic ketoacidosis", "Hyperosmolar hyperglycemic state", "Both conditions"], "correct_answer": "Both conditions", "rationale": "Osmotic diuresis from glycosuria drives profound volume depletion in both conditions, and hypovolemia is the primary cause of death in each. Delayed capillary refill, dry membranes, tachycardia, and hypotension are therefore expected in both. Fluid deficit is typically larger in HHS (8 to 10 L) than in DKA (5 to 7 L) because HHS evolves over days to weeks, but the presence of dehydration does not distinguish them. This is why isotonic crystalloid, not insulin, is the first intervention in both."}, {"row_id": "E", "finding": "Serum potassium 5.4 mEq/L", "options": ["Diabetic ketoacidosis", "Hyperosmolar hyperglycemic state", "Both conditions"], "correct_answer": "Both conditions", "rationale": "Both conditions produce a normal or elevated serum potassium despite a total body potassium deficit of 3 to 5 mEq/kg. Insulin deficiency and hyperosmolality shift potassium extracellularly, and in DKA acidemia adds a further shift. Renal losses from osmotic diuresis deplete total body stores. The clinical significance is identical in both: once insulin is started, potassium moves intracellularly and can fall precipitously, causing dysrhythmias and respiratory muscle weakness. Insulin must be withheld until potassium is above 3.3 mEq/L, and potassium replacement begins once it falls below 5.3 mEq/L with adequate urine output."}, {"row_id": "F", "finding": "Diffuse abdominal pain with vomiting", "options": ["Diabetic ketoacidosis", "Hyperosmolar hyperglycemic state", "Both conditions"], "correct_answer": "Diabetic ketoacidosis", "rationale": "Abdominal pain in the hyperglycemic emergencies correlates with the severity of metabolic acidosis, not with the glucose level, and it is characteristic of DKA. It typically resolves as the acidosis corrects. It is not a feature of HHS; new abdominal pain in a client with HHS must be treated as a separate surgical or infectious process and worked up accordingly. The corollary caution in DKA is that pain persisting after the anion gap closes also warrants evaluation for an independent intra-abdominal cause."}, {"row_id": "G", "finding": "Altered mental status, oriented to person only", "options": ["Diabetic ketoacidosis", "Hyperosmolar hyperglycemic state", "Both conditions"], "correct_answer": "Both conditions", "rationale": "Depressed sensorium occurs in both and tracks with serum osmolality rather than with glucose or pH. Obtundation is more common and more profound in HHS because osmolality is typically above 320 mOsm/kg, but it occurs in severe DKA as well, particularly with the degree of acidosis and volume depletion seen here. Altered mentation in either condition raises aspiration risk during vomiting and mandates airway assessment. Mental status that fails to improve with fluid resuscitation and correction of osmolality requires evaluation for cerebral edema, stroke, or occult infection."}], "nclex_test_taking_tip": "When a matrix item asks you to sort findings between two related conditions, work the shared pathophysiology first. Dehydration, hyperglycemia, and potassium shifts arise from osmotic diuresis and insulin deficiency, which both conditions share, so those default to Both. Reserve the single-condition column for findings that trace to the mechanism only one condition has, which here is ketoacid production. Do not let a headline number like the glucose value drive your sorting.", "memory_trick": "DKA owns the acid: Ketones, Kussmaul, low bicarb, belly pain. HHS owns the osmolality: higher glucose, higher osmolality, deeper obtundation, older client. Anything caused by water loss belongs to both.", "key_learning_objective": "Differentiate diabetic ketoacidosis from hyperosmolar hyperglycemic state by identifying which assessment and laboratory findings derive from ketoacidosis versus from osmotic diuresis common to both.", "clinical_pearls": ["Resuscitate with isotonic crystalloid before initiating insulin; insulin given to a volume-depleted client worsens hypotension by shifting fluid intracellularly.", "Verify serum potassium above 3.3 mEq/L before starting the insulin infusion.", "Resolution of DKA is defined by closure of the anion gap and normalization of bicarbonate, not by normalization of glucose.", "Add dextrose to the intravenous fluid when glucose reaches roughly 200 mg/dL while continuing the insulin infusion, so ketogenesis stays suppressed until the gap closes.", "Overlap syndromes exist; a client can present with both ketoacidosis and marked hyperosmolality, and the acidosis is treated first."], "references": ["American Diabetes Association, Standards of Care in Diabetes, hyperglycemic crises in adult patients", "American Association of Clinical Endocrinology, consensus guidance on hyperglycemic emergencies", "National Institute of Diabetes and Digestive and Kidney Diseases, NIH, diabetes complications"], "keywords": ["diabetic ketoacidosis", "hyperosmolar hyperglycemic state", "anion gap", "Kussmaul respirations", "potassium shift", "osmotic diuresis", "type 1 diabetes"], "estimated_average_time_seconds": 180} This is **excellent**. It's significantly above the quality of most commercial NCLEX banks.
+
+Here's my assessment:
+
+## Overall Score
+
+**9.8/10**
+
+This is at the level I'd expect from a senior NCLEX item writer.
+
+---
+
+## What you did extremely well
+
+✅ Realistic patient scenario
+
+✅ Excellent nurse's notes
+
+✅ Appropriate vitals
+
+✅ Appropriate labs
+
+✅ Correct NGN matrix format
+
+✅ Excellent rationales
+
+✅ Strong clinical reasoning
+
+✅ Good NCLEX tip
+
+✅ Metadata is complete
+
+✅ JSON structure is production-ready
+
+---
+
+## I would standardize a few things
+
+### 1. Add Version
+
+```json
+"version": 1
+```
+
+---
+
+### 2. Add Status
+
+```json
+"status":"Approved"
+```
+
+or
+
+```json
+Draft
+Review
+Approved
+Archived
+```
+
+---
+
+### 3. Add UUID
+
+Instead of
+
+```
+NGN-0001
+```
+
+use
+
+```
+uuid
+```
+
+and keep NGN-0001 as a display number.
+
+---
+
+### 4. Add Author
+
+```json
+"author":"AI Editorial Team"
+```
+
+---
+
+### 5. Add Reviewer
+
+```json
+"reviewed_by":""
+```
+
+---
+
+### 6. Add Last Updated
+
+```json
+"last_updated":"2026-07-21"
+```
+
+---
+
+### 7. Add Difficulty Score
+
+Instead of only
+
+```
+Hard
+```
+
+also add
+
+```json
+"difficulty_score":0.82
+```
+
+This will help CAT calibration.
+
+---
+
+### 8. Add Estimated Discrimination
+
+```json
+"discrimination":1.15
+```
+
+Later this comes from analytics.
+
+---
+
+### 9. Add Case Link
+
+If this belongs to a case study
+
+```json
+"case_id":"CASE-ENDO-001"
+```
+
+---
+
+### 10. Add Exhibit IDs
+
+Instead of embedding everything
+
+```json
+"exhibits":[
+"NURSE-NOTE-001",
+"LAB-001",
+"VITAL-001"
+]
+```
+
+Much easier to reuse.
+
+---
+
+### 11. Add Educational Objective ID
+
+Instead of free text
+
+```
+ENDO-DKA-001
+```
+
+Allows curriculum mapping.
+
+---
+
+## Biggest recommendation
+
+Build your questions **modularly**.
+
+Instead of embedding nurse notes, labs, MARs, provider orders, ECGs, and imaging directly into each question, store them as reusable exhibit objects and reference them by ID.
+
+That lets you reuse the same clinical scenario across:
+
+* Matrix
+* Bow-Tie
+* SATA
+* Trend
+* Highlight
+* Cloze
+* Ordered Response
+
+just like the real Next Gen NCLEX case studies.
+
+---
+
+## Overall
+
+This is **exactly the level of quality** I would want for a premium NCLEX platform. With a standardized schema and reusable exhibits, you'll have a scalable question bank that's easier to maintain, calibrate, and expand over time.
