@@ -885,6 +885,43 @@ section { padding-block: clamp(3.6rem, 9vw, 6.5rem); position: relative; }
 .dc-drill-actions .btn { flex: 1; }
 .dc-empty { text-align: center; padding: 2rem; color: var(--ink-60); }
 
+/* ===== Cheat Sheets ===== */
+.cs-tools { display: flex; gap: 0.8rem; flex-wrap: wrap; align-items: center; }
+.cs-search { flex: 1; min-width: 220px; display: flex; align-items: center; gap: 0.6rem; background: var(--card); border: 1px solid rgba(30,18,51,0.14); border-radius: 14px; padding: 0.7rem 1rem; box-shadow: var(--shadow-1); }
+.cs-search svg { width: 20px; height: 20px; color: var(--ink-40); flex-shrink: 0; }
+.cs-search input { border: none; background: transparent; font: inherit; color: var(--ink); width: 100%; outline: none; }
+.cs-chips { display: flex; gap: 0.5rem; flex-wrap: wrap; margin-top: 1rem; }
+.cs-chip { border: 1px solid rgba(30,18,51,0.14); background: var(--card); color: var(--ink-60); padding: 0.45rem 0.9rem; border-radius: 999px; font: inherit; font-size: 0.8rem; font-weight: 700; cursor: pointer; }
+.cs-chip.on { background: var(--ink); color: #fff; border-color: var(--ink); }
+.cs-count { font-size: 0.85rem; color: var(--ink-40); margin: 0.9rem 0; }
+.cs-count b { color: var(--coral-600); }
+
+.cs-grid { display: grid; gap: 0.7rem; grid-template-columns: 1fr; }
+@media (min-width: 760px) { .cs-grid { grid-template-columns: repeat(2, 1fr); align-items: start; } }
+.cs-card { background: var(--card); border: 1px solid rgba(30,18,51,0.09); border-radius: var(--radius); box-shadow: var(--shadow-1); overflow: hidden; }
+.cs-head { width: 100%; display: flex; align-items: center; gap: 0.7rem; padding: 1rem 1.1rem; background: transparent; border: none; cursor: pointer; font: inherit; text-align: left; }
+.cs-ic { width: 38px; height: 38px; border-radius: 11px; flex-shrink: 0; display: grid; place-items: center; color: #fff; background: linear-gradient(150deg, var(--teal-400), var(--teal-600)); }
+.cs-ic svg { width: 20px; height: 20px; }
+.cs-head-txt { display: flex; flex-direction: column; flex: 1; min-width: 0; }
+.cs-head-txt b { font-size: 1.02rem; }
+.cs-head-txt small { font-size: 0.78rem; color: var(--ink-60); }
+.cs-cat-tag { font-size: 0.66rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.04em; color: var(--coral-600); background: rgba(139,92,255,0.12); padding: 0.2rem 0.5rem; border-radius: 999px; flex-shrink: 0; }
+.cs-caret { color: var(--ink-40); transition: transform 0.2s ease; flex-shrink: 0; }
+.cs-card.open .cs-caret { transform: rotate(180deg); }
+.cs-body { display: none; padding: 0 1.1rem 1.1rem; }
+.cs-card.open .cs-body { display: block; }
+.cs-sec { margin-top: 0.9rem; }
+.cs-sec h4 { font-size: 0.74rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--teal-600); margin-bottom: 0.3rem; }
+.cs-table { width: 100%; border-collapse: collapse; }
+.cs-table td { padding: 0.4rem 0.5rem; border-top: 1px solid rgba(30,18,51,0.07); vertical-align: top; font-size: 0.85rem; }
+.cs-k { font-weight: 700; width: 34%; }
+.cs-v { color: var(--coral-600); font-weight: 700; white-space: nowrap; }
+.cs-note { color: var(--ink-60); font-size: 0.8rem; }
+@media (max-width: 520px) { .cs-table, .cs-table tbody, .cs-table tr, .cs-table td { display: block; } .cs-k { width: auto; padding-bottom: 0; } .cs-v { padding-top: 0.1rem; } .cs-note { padding-top: 0.1rem; border-top: none; } .cs-table tr { border-top: 1px solid rgba(30,18,51,0.07); padding: 0.3rem 0; } .cs-table td { border-top: none; } }
+.cs-pearl { margin-top: 1rem; font-size: 0.83rem; background: rgba(255,194,61,0.12); border-left: 3px solid var(--gold-400); border-radius: 8px; padding: 0.7rem 0.9rem; }
+.cs-empty { text-align: center; padding: 2rem; color: var(--ink-60); }
+@media print { .site-header, .mega-nav, .ticker, .bottom-nav, .esi-fab, .feedback-fab, .tv-btn, .cs-tools, .cs-chips, .cs-count, .site-footer { display: none !important; } .cs-body { display: block !important; } .cs-caret { display: none; } }
+
 /* courses page wide cards */
 .two-up { display: grid; gap: 1rem; grid-template-columns: 1fr; }
 @media (min-width: 720px) { .two-up { grid-template-columns: repeat(2, 1fr); } }

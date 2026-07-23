@@ -40,6 +40,11 @@ I = {
     "target": '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="8"/><circle cx="12" cy="12" r="4.5"/><circle cx="12" cy="12" r="1" fill="currentColor"/></svg>',
     "heart":  '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20s-7-4.3-7-9.5A4.2 4.2 0 0 1 12 7a4.2 4.2 0 0 1 7 3.5C19 15.7 12 20 12 20z"/></svg>',
     "chat":   '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a8 8 0 0 1-11.5 7.2L4 20l0.9-4.4A8 8 0 1 1 21 12z"/><path d="M9 11h6M9 14h4"/></svg>',
+    "flask":  '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 3h6M10 3v6l-5 8.5A2 2 0 0 0 6.7 21h10.6a2 2 0 0 0 1.7-3.5L14 9V3"/><path d="M7.5 15h9"/></svg>',
+    "lungs":  '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v9"/><path d="M12 9c0 5-1.5 8-4.5 8C5 17 4 15 4 12c0-2 .5-4 2-5.5"/><path d="M12 9c0 5 1.5 8 4.5 8 2.5 0 3.5-2 3.5-5 0-2-.5-4-2-5.5"/></svg>',
+    "drop":   '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3s6 6.5 6 11a6 6 0 0 1-12 0c0-4.5 6-11 6-11z"/></svg>',
+    "heartbeat":'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12h4l2-5 3 9 2-5h4"/></svg>',
+    "sheet":  '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2h9l5 5v15H6z"/><path d="M14 2v6h6M9 13h7M9 17h7"/></svg>',
 }
 
 def photo(name, grad, style=""):
@@ -112,6 +117,7 @@ def chrome(fname, title, desc, body, active=""):
           <li><a href="tests.html">Tests &amp; Exams <small>Pop quiz, mock NCLEX &amp; specialty exams</small></a></li>
           <li><a href="flashcards.html">Flashcards &amp; Games <small>Flip cards, quizzes, match &amp; speed rounds</small></a></li>
           <li><a href="drugs.html">Drug Cards <small>Pharmacology library &middot; drill by system</small></a></li>
+          <li><a href="cheatsheets.html">Cheat Sheets <small>Lab values, ABGs, antidotes &amp; more</small></a></li>
           <li><a href="study-plan.html">Study Plan Calendar <small>Your day-by-day plan to test day</small></a></li>
           <li><a href="nclex-guide.html">Free Study Guide <small>How to pass &middot; for nurses, by nurses</small></a></li>
           <li><a href="course-lab-values.html">Free NCLEX Practice <small>Start with a free audio scene</small></a></li>
@@ -173,6 +179,7 @@ def chrome(fname, title, desc, body, active=""):
           <li><a href="tests.html">Tests &amp; Exams</a></li>
           <li><a href="flashcards.html">Flashcards &amp; Games</a></li>
           <li><a href="drugs.html">Drug Cards</a></li>
+          <li><a href="cheatsheets.html">Cheat Sheets</a></li>
           <li><a href="study-plan.html">Study Plan Calendar</a></li>
           <li><a href="nclex-guide.html">Free Study Guide</a></li>
           <li><a href="specialties.html">Specialty Prep</a></li>
@@ -2246,6 +2253,66 @@ DRUGS_BODY = f"""  <div class="page-hero">
 PAGES["drugs.html"] = ("NCLEX Drug Cards &mdash; Nursing Pharmacology Library | Must Love Scrubs",
     "A searchable library of nursing drug cards: class, mechanism, uses, side effects, nursing considerations, and antidotes for the highest-yield NCLEX medications. Drill them like flashcards.",
     DRUGS_BODY, "courses")
+
+# ---------------------------------------------------------------- CHEAT SHEETS (searchable clinical reference)
+
+def _load_cheatsheets():
+    import glob as _glob
+    sheets, seen = [], set()
+    for path in sorted(_glob.glob(os.path.join(ROOT, 'data', 'cheatsheets', '*.json'))):
+        data = _json.load(open(path, encoding='utf-8'))
+        for s in data.get('sheets', []):
+            if not s.get('title') or not s.get('sections'): continue
+            if s.get('id') in seen: continue
+            seen.add(s['id']); sheets.append(s)
+    return sheets
+
+CHEATS = _load_cheatsheets()
+CHEATS_JSON = _json.dumps(CHEATS, ensure_ascii=False).replace('<', '\\u003c').replace('>', '\\u003e').replace('&', '\\u0026')
+CHEAT_CATS = []
+for _s in CHEATS:
+    if _s['category'] not in CHEAT_CATS:
+        CHEAT_CATS.append(_s['category'])
+CHEAT_CATS.sort()
+
+def cheat_cat_chips():
+    out = ['<button class="cs-chip on" data-cat="All">All</button>']
+    for c in CHEAT_CATS:
+        out.append(f'<button class="cs-chip" data-cat="{c}">{c}</button>')
+    return "".join(out)
+
+CHEATS_BODY = f"""  <div class="page-hero">
+    <div class="wrap inner">
+      <span class="lesson-label" style="color:var(--gold-400);">Cheat Sheets</span>
+      <h1 style="margin-top:0.6rem;">Every high-yield fact, <span class="em">one tap away</span>.</h1>
+      <p>Pocket-sized clinical reference sheets &mdash; lab values, ABGs, fluids &amp; electrolytes, antidotes, isolation precautions &mdash; searchable, filterable, and printable. The stuff you want the night before an exam and on the floor.</p>
+    </div>
+  </div>
+
+  <section style="background:var(--bg);">
+    <div class="wrap">
+      <div class="cheats" data-cheats-total="{len(CHEATS)}">
+        <script type="application/json" data-cheats>{CHEATS_JSON}</script>
+        <div class="cs-tools fade-up">
+          <div class="cs-search">
+            {I['search']}
+            <input type="search" placeholder="Search a sheet or a value&hellip;" aria-label="Search cheat sheets" data-cs-search>
+          </div>
+        </div>
+        <div class="cs-chips fade-up" data-cs-chips>{cheat_cat_chips()}</div>
+        <p class="cs-count fade-up"><b data-cs-count>{len(CHEATS)}</b> cheat sheets &middot; growing every week</p>
+        <div class="cs-grid fade-up" data-cs-grid></div>
+        <div class="cs-empty" data-cs-empty hidden><p><b>No match yet.</b> Tell us what to add at hello@mustlovescrubs.com.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <script src="js/cheatsheets.js"></script>
+"""
+
+PAGES["cheatsheets.html"] = ("NCLEX Nursing Cheat Sheets &mdash; Lab Values, ABGs, Antidotes | Must Love Scrubs",
+    "Free searchable nursing cheat sheets: lab values, ABGs, fluid & electrolytes, medication antidotes, isolation precautions, and vital signs by age. Printable clinical reference for students and nurses.",
+    CHEATS_BODY, "courses")
 
 # ---------------------------------------------------------------- STUDY CALENDAR (the conductor)
 
