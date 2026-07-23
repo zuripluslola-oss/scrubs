@@ -1,0 +1,823 @@
+{
+ "batch": "moc-specialty-seed-01",
+ "questions": [
+  {
+   "id": "moc-0101",
+   "exam": "RN",
+   "exams": [
+    "RN"
+   ],
+   "cat": "Safety",
+   "client_needs": "Management of Care",
+   "topic": "Assigning to a float nurse",
+   "difficulty": "Hard",
+   "level": 4,
+   "type": "mc",
+   "cjmm_step": "Take Actions",
+   "scoring": "dichotomous",
+   "stem": "A charge nurse is assigning clients to a nurse floated from a medical unit to the ICU. Which client is most appropriate to assign to the float nurse?",
+   "opts": [
+    {
+     "t": "A stable client transferring out to a step-down unit",
+     "r": "Correct. A stable, transfer-ready client matches the float nurse's competency."
+    },
+    {
+     "t": "A client on a titrated vasopressor drip",
+     "r": "Titrating vasoactive drips requires ICU competency."
+    },
+    {
+     "t": "A newly intubated client on mechanical ventilation",
+     "r": "A newly intubated, unstable client needs an experienced ICU nurse."
+    },
+    {
+     "t": "A client requiring continuous renal replacement therapy",
+     "r": "CRRT requires specialized ICU training."
+    }
+   ],
+   "correct": 0,
+   "tracks": [
+    "nclex",
+    "critical-care"
+   ],
+   "tip": "Float/less-experienced staff get the MOST STABLE clients."
+  },
+  {
+   "id": "moc-0102",
+   "exam": "RN",
+   "exams": [
+    "RN",
+    "PN"
+   ],
+   "cat": "Safety",
+   "client_needs": "Management of Care",
+   "topic": "ER triage priority",
+   "difficulty": "Hard",
+   "level": 4,
+   "type": "mc",
+   "cjmm_step": "Prioritize Hypotheses",
+   "scoring": "dichotomous",
+   "stem": "Four clients arrive in the emergency department at once. Which should be seen first?",
+   "opts": [
+    {
+     "t": "An adult with crushing chest pain and diaphoresis",
+     "r": "Correct. Possible acute coronary syndrome — an airway/circulation emergency, seen first."
+    },
+    {
+     "t": "A child with a simple forearm fracture",
+     "r": "Urgent but stable; not first."
+    },
+    {
+     "t": "An adult with a 2 cm laceration needing sutures",
+     "r": "Non-urgent."
+    },
+    {
+     "t": "An adult with a sprained ankle",
+     "r": "Non-urgent."
+    }
+   ],
+   "correct": 0,
+   "tracks": [
+    "nclex",
+    "emergency",
+    "cardiac"
+   ],
+   "tip": "ER: life-threatening ABC problems first — chest pain/ACS beats orthopedic injuries."
+  },
+  {
+   "id": "moc-0103",
+   "exam": "RN",
+   "exams": [
+    "RN",
+    "PN"
+   ],
+   "cat": "Safety",
+   "client_needs": "Management of Care",
+   "topic": "Telemetry prioritization",
+   "difficulty": "Hard",
+   "level": 4,
+   "type": "mc",
+   "cjmm_step": "Prioritize Hypotheses",
+   "scoring": "dichotomous",
+   "stem": "A nurse monitoring several telemetry clients notes the rhythms below. Which requires the most immediate response?",
+   "opts": [
+    {
+     "t": "Ventricular tachycardia in a client who is now unresponsive",
+     "r": "Correct. Pulseless/unresponsive VT is a code situation — the highest priority."
+    },
+    {
+     "t": "Sinus tachycardia at 104 in a febrile client",
+     "r": "Expected with fever; not the priority."
+    },
+    {
+     "t": "Occasional premature atrial contractions",
+     "r": "Usually benign."
+    },
+    {
+     "t": "First-degree AV block with a stable client",
+     "r": "Generally stable and monitored."
+    }
+   ],
+   "correct": 0,
+   "tracks": [
+    "nclex",
+    "cardiac",
+    "critical-care"
+   ],
+   "tip": "Match the rhythm to the CLIENT — unresponsive + VT = act now."
+  },
+  {
+   "id": "moc-0104",
+   "exam": "RN",
+   "exams": [
+    "RN",
+    "PN"
+   ],
+   "cat": "Safety",
+   "client_needs": "Management of Care",
+   "topic": "Delegation with parameters",
+   "difficulty": "Moderate",
+   "level": 3,
+   "type": "mc",
+   "cjmm_step": "n/a",
+   "scoring": "dichotomous",
+   "stem": "A nurse delegates vital-sign monitoring to a UAP. Which instruction is most appropriate?",
+   "opts": [
+    {
+     "t": "“Take the vitals and report a systolic BP below 90 or above 180 to me right away.”",
+     "r": "Correct. Delegation includes clear parameters for what to report and when."
+    },
+    {
+     "t": "“Just let me know if anything seems off.”",
+     "r": "Vague instructions are unsafe delegation."
+    },
+    {
+     "t": "“Interpret the blood pressure and adjust the medication.”",
+     "r": "Interpretation and medication changes are nursing/provider tasks."
+    },
+    {
+     "t": "“Only take vitals if the client complains.”",
+     "r": "Scheduled monitoring should not depend on complaints."
+    }
+   ],
+   "correct": 0,
+   "tracks": [
+    "nclex",
+    "fundamentals"
+   ],
+   "tip": "Good delegation = clear task + specific reporting parameters."
+  },
+  {
+   "id": "moc-0105",
+   "exam": "RN",
+   "exams": [
+    "RN",
+    "PN"
+   ],
+   "cat": "Safety",
+   "client_needs": "Management of Care",
+   "topic": "Client refusal / AMA",
+   "difficulty": "Moderate",
+   "level": 3,
+   "type": "mc",
+   "cjmm_step": "n/a",
+   "scoring": "dichotomous",
+   "stem": "A competent adult states they want to leave the hospital against medical advice (AMA). What is the nurse's best action?",
+   "opts": [
+    {
+     "t": "Notify the provider and document the client's decision and the risks explained",
+     "r": "Correct. A competent client may leave; the nurse informs the provider, explains risks, and documents."
+    },
+    {
+     "t": "Physically prevent the client from leaving",
+     "r": "Restraining a competent client is false imprisonment."
+    },
+    {
+     "t": "Tell the client they cannot leave until discharged",
+     "r": "A competent client cannot be held against their will."
+    },
+    {
+     "t": "Refuse to give any discharge information",
+     "r": "Withholding safety information is unsafe and unethical."
+    }
+   ],
+   "correct": 0,
+   "tracks": [
+    "nclex"
+   ],
+   "tip": "Competent clients can refuse care/leave AMA — inform, document, don't restrain."
+  },
+  {
+   "id": "moc-0106",
+   "exam": "RN",
+   "exams": [
+    "RN",
+    "PN"
+   ],
+   "cat": "Safety",
+   "client_needs": "Management of Care",
+   "topic": "Mandatory reporting",
+   "difficulty": "Moderate",
+   "level": 3,
+   "type": "mc",
+   "cjmm_step": "n/a",
+   "scoring": "dichotomous",
+   "stem": "A home-health nurse suspects an older adult client is being financially and physically abused by a caregiver. What is the nurse's legal obligation?",
+   "opts": [
+    {
+     "t": "Report the suspected abuse to the appropriate authorities",
+     "r": "Correct. Nurses are mandatory reporters of suspected abuse of vulnerable adults."
+    },
+    {
+     "t": "Confront the caregiver directly and demand it stop",
+     "r": "Confrontation may endanger the client and is not the nurse's role."
+    },
+    {
+     "t": "Wait until there is definitive proof before acting",
+     "r": "Reporting is based on reasonable suspicion, not proof."
+    },
+    {
+     "t": "Keep it confidential to preserve the relationship",
+     "r": "Confidentiality does not override mandatory reporting laws."
+    }
+   ],
+   "correct": 0,
+   "tracks": [
+    "nclex",
+    "home-health",
+    "geriatrics"
+   ],
+   "tip": "Suspected abuse of children/elders/vulnerable adults = mandatory report on reasonable suspicion."
+  },
+  {
+   "id": "moc-0107",
+   "exam": "RN",
+   "exams": [
+    "RN",
+    "PN"
+   ],
+   "cat": "Safety",
+   "client_needs": "Management of Care",
+   "topic": "Questioning an unsafe order",
+   "difficulty": "Hard",
+   "level": 4,
+   "type": "mc",
+   "cjmm_step": "Take Actions",
+   "scoring": "dichotomous",
+   "stem": "A nurse receives an order for a medication dose that is 10 times the usual amount. What should the nurse do first?",
+   "opts": [
+    {
+     "t": "Hold the dose and clarify the order with the prescribing provider",
+     "r": "Correct. The nurse must question and clarify an order that appears unsafe before giving it."
+    },
+    {
+     "t": "Administer the dose because a provider ordered it",
+     "r": "Following an unsafe order does not relieve the nurse of liability."
+    },
+    {
+     "t": "Give half the dose as a compromise",
+     "r": "Altering a dose independently is outside the nurse's scope."
+    },
+    {
+     "t": "Ask another nurse to give it instead",
+     "r": "Passing the task along does not resolve the safety concern."
+    }
+   ],
+   "correct": 0,
+   "tracks": [
+    "nclex"
+   ],
+   "tip": "An unsafe order must be questioned/clarified — 'the provider ordered it' is not a defense."
+  },
+  {
+   "id": "moc-0108",
+   "exam": "RN",
+   "exams": [
+    "RN",
+    "PN"
+   ],
+   "cat": "Pediatrics",
+   "client_needs": "Management of Care",
+   "topic": "Isolation cohorting",
+   "difficulty": "Moderate",
+   "level": 3,
+   "type": "mc",
+   "cjmm_step": "n/a",
+   "scoring": "dichotomous",
+   "stem": "A pediatric charge nurse is assigning rooms. Which two children can most appropriately share a room?",
+   "opts": [
+    {
+     "t": "Two children both with confirmed respiratory syncytial virus (RSV)",
+     "r": "Correct. Cohorting clients with the same confirmed infection is appropriate."
+    },
+    {
+     "t": "A child with RSV and a child post-chemotherapy who is neutropenic",
+     "r": "An immunocompromised child must not share with an infectious one."
+    },
+    {
+     "t": "A child with chickenpox and a child with a fractured arm",
+     "r": "Chickenpox requires airborne isolation, not a shared room."
+    },
+    {
+     "t": "A child with pertussis and a newborn",
+     "r": "Exposing a newborn to pertussis is dangerous."
+    }
+   ],
+   "correct": 0,
+   "tracks": [
+    "nclex",
+    "pediatrics"
+   ],
+   "tip": "Cohort only SAME confirmed infection; never mix infectious with immunocompromised."
+  },
+  {
+   "id": "moc-0109",
+   "exam": "RN",
+   "exams": [
+    "RN",
+    "PN"
+   ],
+   "cat": "Safety",
+   "client_needs": "Management of Care",
+   "topic": "Prioritizing call lights",
+   "difficulty": "Moderate",
+   "level": 3,
+   "type": "mc",
+   "cjmm_step": "Prioritize Hypotheses",
+   "scoring": "dichotomous",
+   "stem": "A nurse responds to several call lights. Which client should the nurse attend to first?",
+   "opts": [
+    {
+     "t": "A client reporting new chest tightness and shortness of breath",
+     "r": "Correct. New chest/breathing symptoms take priority (ABCs)."
+    },
+    {
+     "t": "A client requesting fresh ice water",
+     "r": "A comfort request — lowest priority."
+    },
+    {
+     "t": "A client asking for the television remote",
+     "r": "Non-urgent."
+    },
+    {
+     "t": "A client wanting to know the lunch menu",
+     "r": "Non-urgent."
+    }
+   ],
+   "correct": 0,
+   "tracks": [
+    "nclex",
+    "fundamentals"
+   ],
+   "tip": "Sort call lights by ABCs and acuity, not by order received."
+  },
+  {
+   "id": "moc-0110",
+   "exam": "RN",
+   "exams": [
+    "RN",
+    "PN"
+   ],
+   "cat": "Mental Health",
+   "client_needs": "Management of Care",
+   "topic": "Interdisciplinary referral",
+   "difficulty": "Easy",
+   "level": 2,
+   "type": "mc",
+   "cjmm_step": "n/a",
+   "scoring": "dichotomous",
+   "stem": "A client recovering from a stroke will need help with bathing and dressing after discharge. Which referral is most appropriate for the nurse to initiate?",
+   "opts": [
+    {
+     "t": "Occupational therapy",
+     "r": "Correct. OT focuses on activities of daily living such as bathing and dressing."
+    },
+    {
+     "t": "Speech-language pathology",
+     "r": "SLP addresses swallowing and communication, not ADLs like dressing."
+    },
+    {
+     "t": "Respiratory therapy",
+     "r": "RT manages breathing treatments, not ADLs."
+    },
+    {
+     "t": "Registered dietitian",
+     "r": "Dietitians address nutrition, not dressing/bathing."
+    }
+   ],
+   "correct": 0,
+   "tracks": [
+    "nclex",
+    "rehabilitation"
+   ],
+   "tip": "OT = ADLs/fine motor; PT = mobility/gait; SLP = speech/swallow."
+  },
+  {
+   "id": "moc-0111",
+   "exam": "RN",
+   "exams": [
+    "RN"
+   ],
+   "cat": "Safety",
+   "client_needs": "Management of Care",
+   "topic": "Assignment by acuity",
+   "difficulty": "Hard",
+   "level": 4,
+   "type": "mc",
+   "cjmm_step": "n/a",
+   "scoring": "dichotomous",
+   "stem": "Which client is most appropriate to assign to a newly licensed nurse still in orientation?",
+   "opts": [
+    {
+     "t": "A stable client with well-controlled diabetes awaiting routine teaching",
+     "r": "Correct. A stable, predictable client is appropriate for a new nurse."
+    },
+    {
+     "t": "A client becoming hemodynamically unstable after surgery",
+     "r": "An unstable client needs an experienced nurse."
+    },
+    {
+     "t": "A client requiring complex multi-drip titration",
+     "r": "Complex titration exceeds a new nurse's readiness."
+    },
+    {
+     "t": "A client actively deteriorating with a rapid response called",
+     "r": "A crisis needs experienced staff."
+    }
+   ],
+   "correct": 0,
+   "tracks": [
+    "nclex"
+   ],
+   "tip": "New/orienting nurses get stable, predictable clients."
+  },
+  {
+   "id": "moc-0112",
+   "exam": "RN",
+   "exams": [
+    "RN",
+    "PN"
+   ],
+   "cat": "Safety",
+   "client_needs": "Management of Care",
+   "topic": "Chain of command",
+   "difficulty": "Moderate",
+   "level": 3,
+   "type": "mc",
+   "cjmm_step": "Take Actions",
+   "scoring": "dichotomous",
+   "stem": "A nurse believes a provider's plan is unsafe, but the provider refuses to change it. What is the nurse's next step?",
+   "opts": [
+    {
+     "t": "Escalate the concern through the nursing chain of command",
+     "r": "Correct. When a safety concern is unresolved, the nurse escalates up the chain of command."
+    },
+    {
+     "t": "Carry out the plan to avoid conflict",
+     "r": "Proceeding with an unsafe plan endangers the client."
+    },
+    {
+     "t": "Refuse to speak to the provider again",
+     "r": "Refusing communication does not protect the client."
+    },
+    {
+     "t": "Document the disagreement and take no further action",
+     "r": "Documentation alone does not resolve an active safety risk."
+    }
+   ],
+   "correct": 0,
+   "tracks": [
+    "nclex"
+   ],
+   "tip": "Unresolved safety concern → go up the chain of command; don't just comply."
+  },
+  {
+   "id": "rr-0101",
+   "exam": "RN",
+   "exams": [
+    "RN",
+    "PN"
+   ],
+   "cat": "Med-Surg",
+   "client_needs": "Reduction of Risk Potential",
+   "topic": "Ventricular tachycardia",
+   "difficulty": "Hard",
+   "level": 4,
+   "type": "mc",
+   "cjmm_step": "Take Actions",
+   "scoring": "dichotomous",
+   "stem": "A cardiac monitor shows ventricular tachycardia in a client who has a pulse and is symptomatic (BP 84/50, chest pain). What should the nurse prepare for?",
+   "opts": [
+    {
+     "t": "Synchronized cardioversion per ACLS",
+     "r": "Correct. Unstable VT with a pulse is treated with synchronized cardioversion."
+    },
+    {
+     "t": "Immediate defibrillation",
+     "r": "Defibrillation is for pulseless VT/VF, not VT with a pulse."
+    },
+    {
+     "t": "Vagal maneuvers only",
+     "r": "Vagal maneuvers are for stable SVT, not unstable VT."
+    },
+    {
+     "t": "Routine observation",
+     "r": "Symptomatic, unstable VT requires urgent intervention."
+    }
+   ],
+   "correct": 0,
+   "tracks": [
+    "nclex",
+    "cardiac",
+    "critical-care"
+   ],
+   "tip": "Unstable VT WITH pulse = synchronized cardioversion. Pulseless VT/VF = defibrillate."
+  },
+  {
+   "id": "rr-0102",
+   "exam": "RN",
+   "exams": [
+    "RN"
+   ],
+   "cat": "Med-Surg",
+   "client_needs": "Reduction of Risk Potential",
+   "topic": "Arterial line / MAP",
+   "difficulty": "Hard",
+   "level": 4,
+   "type": "mc",
+   "cjmm_step": "Analyze Cues",
+   "scoring": "dichotomous",
+   "stem": "A critically ill client has an arterial line. The nurse notes a mean arterial pressure (MAP) of 58 mmHg. What is the significance of this value?",
+   "opts": [
+    {
+     "t": "It is below the level generally needed to perfuse vital organs",
+     "r": "Correct. A MAP below ~65 mmHg risks inadequate organ perfusion and needs intervention."
+    },
+    {
+     "t": "It indicates dangerously high blood pressure",
+     "r": "A MAP of 58 is low, not high."
+    },
+    {
+     "t": "It is a normal, reassuring finding",
+     "r": "A MAP under 65 is concerning, not reassuring."
+    },
+    {
+     "t": "It means the arterial line must be removed",
+     "r": "A low MAP is a perfusion concern, not an automatic reason to remove the line."
+    }
+   ],
+   "correct": 0,
+   "tracks": [
+    "nclex",
+    "critical-care"
+   ],
+   "tip": "Keep MAP ≥ 65 mmHg to perfuse organs."
+  },
+  {
+   "id": "rr-0103",
+   "exam": "RN",
+   "exams": [
+    "RN",
+    "PN"
+   ],
+   "cat": "Med-Surg",
+   "client_needs": "Reduction of Risk Potential",
+   "topic": "Compartment syndrome",
+   "difficulty": "Hard",
+   "level": 4,
+   "type": "mc",
+   "cjmm_step": "Recognize Cues",
+   "scoring": "dichotomous",
+   "stem": "A client with a casted lower leg reports severe, unrelenting pain not relieved by opioids, with numbness in the toes. What should the nurse suspect and do?",
+   "opts": [
+    {
+     "t": "Suspect compartment syndrome and notify the provider immediately",
+     "r": "Correct. Escalating pain out of proportion with neurovascular changes suggests compartment syndrome — an emergency."
+    },
+    {
+     "t": "Reassure the client this is normal cast discomfort",
+     "r": "Unrelenting pain with numbness is not normal."
+    },
+    {
+     "t": "Administer more opioids and reassess in an hour",
+     "r": "Delaying evaluation risks permanent tissue/nerve damage."
+    },
+    {
+     "t": "Elevate the leg above the heart and apply ice tightly",
+     "r": "Tight wrapping/excess elevation can worsen perfusion in suspected compartment syndrome."
+    }
+   ],
+   "correct": 0,
+   "tracks": [
+    "nclex",
+    "emergency",
+    "rehabilitation"
+   ],
+   "tip": "Pain out of proportion + neurovascular changes under a cast = compartment syndrome (emergency)."
+  },
+  {
+   "id": "rr-0104",
+   "exam": "RN",
+   "exams": [
+    "RN"
+   ],
+   "cat": "Med-Surg",
+   "client_needs": "Reduction of Risk Potential",
+   "topic": "Ventilator high-pressure alarm",
+   "difficulty": "Hard",
+   "level": 4,
+   "type": "mc",
+   "cjmm_step": "Analyze Cues",
+   "scoring": "dichotomous",
+   "stem": "A mechanically ventilated client triggers a high-pressure alarm. Which is a likely cause the nurse should assess first?",
+   "opts": [
+    {
+     "t": "Secretions or a kink obstructing the airway/tubing",
+     "r": "Correct. High-pressure alarms often indicate increased resistance — secretions, biting, or kinked tubing."
+    },
+    {
+     "t": "A disconnection in the circuit",
+     "r": "A disconnection causes a LOW-pressure alarm."
+    },
+    {
+     "t": "A cuff leak around the tube",
+     "r": "A leak causes low pressure/volume alarms."
+    },
+    {
+     "t": "The client is fully sedated and relaxed",
+     "r": "Relaxation would lower, not raise, airway pressure."
+    }
+   ],
+   "correct": 0,
+   "tracks": [
+    "nclex",
+    "critical-care"
+   ],
+   "tip": "HIGH-pressure alarm = obstruction/resistance (secretions, kink, biting). LOW = leak/disconnect."
+  },
+  {
+   "id": "rr-0105",
+   "exam": "RN",
+   "exams": [
+    "RN",
+    "PN"
+   ],
+   "cat": "Med-Surg",
+   "client_needs": "Reduction of Risk Potential",
+   "topic": "Post-MI complication",
+   "difficulty": "Hard",
+   "level": 4,
+   "type": "mc",
+   "cjmm_step": "Recognize Cues",
+   "scoring": "dichotomous",
+   "stem": "A client 3 days after a myocardial infarction develops a new loud systolic murmur, worsening dyspnea, and crackles. What complication should the nurse suspect?",
+   "opts": [
+    {
+     "t": "Papillary muscle rupture with acute mitral regurgitation",
+     "r": "Correct. A new murmur with acute pulmonary congestion post-MI suggests papillary muscle rupture — a mechanical emergency."
+    },
+    {
+     "t": "Simple anxiety",
+     "r": "Anxiety does not produce a new murmur and crackles."
+    },
+    {
+     "t": "Expected healing of the myocardium",
+     "r": "A new murmur with dyspnea is a complication, not normal healing."
+    },
+    {
+     "t": "Dehydration",
+     "r": "Dehydration would not cause a new murmur and pulmonary congestion."
+    }
+   ],
+   "correct": 0,
+   "tracks": [
+    "nclex",
+    "cardiac",
+    "critical-care"
+   ],
+   "tip": "New murmur + pulmonary edema days after MI = mechanical complication (papillary muscle rupture)."
+  },
+  {
+   "id": "rr-0106",
+   "exam": "RN",
+   "exams": [
+    "RN"
+   ],
+   "cat": "Pharmacology",
+   "client_needs": "Reduction of Risk Potential",
+   "topic": "Epinephrine drip monitoring",
+   "difficulty": "Hard",
+   "level": 4,
+   "type": "mc",
+   "cjmm_step": "Take Actions",
+   "scoring": "dichotomous",
+   "stem": "A client in anaphylaxis is started on a continuous epinephrine infusion. Which parameter is most important for the nurse to monitor?",
+   "opts": [
+    {
+     "t": "Heart rate and blood pressure continuously",
+     "r": "Correct. Epinephrine can cause tachycardia, dysrhythmias, and hypertension; continuous hemodynamic monitoring is essential."
+    },
+    {
+     "t": "Daily weight",
+     "r": "Not the priority during an acute infusion."
+    },
+    {
+     "t": "Bowel sounds every shift",
+     "r": "Not the acute monitoring priority."
+    },
+    {
+     "t": "Serum calcium level",
+     "r": "Not directly related to epinephrine infusion monitoring."
+    }
+   ],
+   "correct": 0,
+   "tracks": [
+    "nclex",
+    "emergency",
+    "critical-care"
+   ],
+   "tip": "Vasoactive drips (epinephrine) → continuous HR/BP/rhythm monitoring."
+  },
+  {
+   "id": "rr-0107",
+   "exam": "RN",
+   "exams": [
+    "RN",
+    "PN"
+   ],
+   "cat": "Med-Surg",
+   "client_needs": "Reduction of Risk Potential",
+   "topic": "Sepsis lactate trend",
+   "difficulty": "Hard",
+   "level": 4,
+   "type": "mc",
+   "cjmm_step": "Evaluate Outcomes",
+   "scoring": "dichotomous",
+   "stem": "A client with suspected sepsis has a lactate that rose from 2.0 to 4.5 mmol/L after initial treatment. What does this trend indicate?",
+   "opts": [
+    {
+     "t": "Worsening tissue perfusion requiring escalation of care",
+     "r": "Correct. A rising lactate signals ongoing hypoperfusion and worsening sepsis — escalate treatment."
+    },
+    {
+     "t": "Successful resolution of sepsis",
+     "r": "A rising lactate is the opposite of improvement."
+    },
+    {
+     "t": "A normal expected fluctuation",
+     "r": "A doubling lactate is clinically significant, not normal."
+    },
+    {
+     "t": "A laboratory error to ignore",
+     "r": "A worsening trend should be acted on, not dismissed."
+    }
+   ],
+   "correct": 0,
+   "tracks": [
+    "nclex",
+    "critical-care",
+    "emergency"
+   ],
+   "tip": "Rising lactate = worsening perfusion. Falling lactate = treatment working."
+  },
+  {
+   "id": "rr-0108",
+   "exam": "RN",
+   "exams": [
+    "RN"
+   ],
+   "cat": "Med-Surg",
+   "client_needs": "Reduction of Risk Potential",
+   "topic": "Central line air embolism",
+   "difficulty": "Hard",
+   "level": 4,
+   "type": "mc",
+   "cjmm_step": "Take Actions",
+   "scoring": "dichotomous",
+   "stem": "While a central venous catheter is being removed, the client suddenly develops dyspnea, chest pain, and hypotension. What should the nurse do first?",
+   "opts": [
+    {
+     "t": "Place the client in left lateral Trendelenburg position",
+     "r": "Correct. This position traps a suspected air embolism in the right atrium, away from the pulmonary outflow."
+    },
+    {
+     "t": "Sit the client fully upright",
+     "r": "Upright positioning can worsen an air embolism reaching the lungs."
+    },
+    {
+     "t": "Apply a warm compress to the site",
+     "r": "Does not address a life-threatening air embolism."
+    },
+    {
+     "t": "Encourage the client to take deep breaths and bear down",
+     "r": "Bearing down during the event can worsen air entry."
+    }
+   ],
+   "correct": 0,
+   "tracks": [
+    "nclex",
+    "critical-care"
+   ],
+   "tip": "Suspected air embolism → left lateral Trendelenburg (traps air in right atrium)."
+  }
+ ]
+}
