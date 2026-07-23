@@ -1,377 +1,425 @@
 {
-  "batch": "workbook-med-surg",
-  "questions": [
+ "batch": "workbook-med-surg",
+ "questions": [
+  {
+   "id": "med-surg-0001",
+   "exam": "RN",
+   "cat": "Med-Surg",
+   "topic": "Chest tube management",
+   "difficulty": "Moderate",
+   "type": "mc",
+   "stem": "A client has a chest tube connected to a water-seal drainage system after a spontaneous pneumothorax. The nurse observes **continuous vigorous bubbling** in the water-seal chamber. What does this finding most likely indicate?",
+   "opts": [
     {
-      "id": "med-surg-0001",
-      "exam": "RN",
-      "cat": "Med-Surg",
-      "topic": "Chest tube management",
-      "difficulty": "Moderate",
-      "type": "mc",
-      "stem": "A client has a chest tube connected to a water-seal drainage system after a spontaneous pneumothorax. The nurse observes **continuous vigorous bubbling** in the water-seal chamber. What does this finding most likely indicate?",
-      "opts": [
-        {
-          "t": "Normal, expected function of the drainage system",
-          "r": "*Intermittent* bubbling in the water-seal chamber with respiration can be normal, but **continuous vigorous** bubbling is not."
-        },
-        {
-          "t": "An air leak in the system or tubing connections",
-          "r": "Continuous bubbling in the water-seal chamber signals an **air leak** — air is entering the system from a loose connection, a dislodged dressing, or the pleural space. The nurse checks all connections first."
-        },
-        {
-          "t": "Complete lung re-expansion",
-          "r": "With full lung re-expansion, bubbling and tidaling **stop** — the opposite of this finding."
-        },
-        {
-          "t": "Obstruction of the chest tube",
-          "r": "An obstruction would reduce or stop drainage and tidaling, not cause continuous bubbling."
-        }
-      ],
-      "correct": 1,
-      "tip": "Learn the chambers: **water-seal = bubbling/tidaling info; suction-control = gentle continuous bubbling is normal there.** Continuous bubbling in the *water-seal* chamber = **air leak.**",
-      "pearl": "\"**Tidaling is fine, continuous is a sign.**\" If the tube is ever pulled out, cover with a sterile occlusive dressing taped on **three sides.**",
-      "free": true
+     "t": "Normal, expected function of the drainage system",
+     "r": "*Intermittent* bubbling in the water-seal chamber with respiration can be normal, but **continuous vigorous** bubbling is not."
     },
     {
-      "id": "med-surg-0002",
-      "exam": "RN",
-      "cat": "Med-Surg",
-      "topic": "Increased intracranial pressure",
-      "difficulty": "Hard",
-      "type": "mc",
-      "stem": "A client with a traumatic brain injury is being monitored for increased intracranial pressure (ICP). Which set of findings should the nurse report immediately as an early sign of",
-      "opts": [
-        {
-          "t": "Restlessness and a decreasing level of consciousness",
-          "r": "The **earliest** and most sensitive sign of rising ICP is a **change in level of consciousness** — restlessness, confusion, or a subtle decline. Catching it early is what protects the brain."
-        },
-        {
-          "t": "Bradycardia, widening pulse pressure, and irregular respirations",
-          "r": "Bradycardia, widening pulse pressure, and irregular respirations (**Cushing's triad**) are **late, ominous** signs of severely elevated ICP — important, but not *early*."
-        },
-        {
-          "t": "Hypotension and tachycardia",
-          "r": "Hypotension and tachycardia point toward shock/hypovolemia, not classic ICP changes."
-        },
-        {
-          "t": "Constricted, briskly reactive pupils",
-          "r": "Rising ICP tends to cause a **dilated, sluggish or fixed** pupil, not constricted and brisk."
-        }
-      ],
-      "correct": 0,
-      "tip": "Read carefully for **\"early\" vs \"late.\"** Early ICP = **LOC change.** Late ICP = **Cushing's triad.** The same topic has two different \"right\" answers depending on that one word.",
-      "pearl": "**Cushing's triad = \"high, low, slow, and odd\"**: **high** systolic/**widening pulse pressure, low** heart rate (**slow**), and **odd/irregular** breathing. Keep the HOB at **30°** and the head midline to promote venous drainage.",
-      "free": true
+     "t": "An air leak in the system or tubing connections",
+     "r": "Continuous bubbling in the water-seal chamber signals an **air leak** — air is entering the system from a loose connection, a dislodged dressing, or the pleural space. The nurse checks all connections first."
     },
     {
-      "id": "med-surg-0003",
-      "exam": "RN",
-      "cat": "Med-Surg",
-      "topic": "Postoperative DVT prevention",
-      "difficulty": "Easy",
-      "type": "mc",
-      "stem": "A client is on the first postoperative day after abdominal surgery and is reluctant to move. Which nursing action best helps prevent deep vein thrombosis (DVT)?",
-      "opts": [
-        {
-          "t": "Massage the calves firmly twice per shift.",
-          "r": "**Never massage** the legs of a client at risk for DVT — a clot could dislodge and become an embolus."
-        },
-        {
-          "t": "Encourage early ambulation and leg exercises.",
-          "r": "**Early ambulation** plus ankle pumps and leg exercises promote venous return and are first-line DVT prevention, along with compression devices and prescribed anticoagulants."
-        },
-        {
-          "t": "Keep the knee gatch of the bed elevated continuously.",
-          "r": "A continuously elevated knee gatch causes popliteal compression and venous pooling — it *increases* DVT risk."
-        },
-        {
-          "t": "Maintain strict bed rest until the client is pain-free.",
-          "r": "Prolonged immobility is a leading cause of DVT, not a prevention strategy."
-        }
-      ],
-      "correct": 1,
-      "tip": "When the answer choices include **\"massage the calf,\"** it's almost always the wrong (dangerous) option in an at-risk client.",
-      "pearl": "DVT prevention = **\"Move, Squeeze, Thin\"**: **Move** (ambulate/leg exercises), **Squeeze** (SCDs/compression), and",
-      "free": false
+     "t": "Complete lung re-expansion",
+     "r": "With full lung re-expansion, bubbling and tidaling **stop** — the opposite of this finding."
     },
     {
-      "id": "med-surg-0004",
-      "exam": "RN",
-      "cat": "Med-Surg",
-      "topic": "Adrenal insufficiency (Addisonian crisis)",
-      "difficulty": "Hard",
-      "type": "mc",
-      "stem": "A client with Addison's disease is admitted after several days of vomiting and diarrhea. The nurse notes blood pressure 82/50 mm Hg, weakness, and a serum sodium of 128 mEq/L. Which finding requires the nurse's most immediate attention?",
-      "opts": [
-        {
-          "t": "Bronzed skin pigmentation",
-          "r": "Hyperpigmentation is a classic *chronic* Addison's finding, not an emergency."
-        },
-        {
-          "t": "Blood pressure of 82/50 mm Hg",
-          "r": "In **Addisonian crisis**, the lack of cortisol and aldosterone causes **profound hypotension and vascular collapse.** The BP of 82/50 is life-threatening and needs immediate IV fluids and IV hydrocortisone."
-        },
-        {
-          "t": "Craving for salty foods",
-          "r": "Salt craving reflects aldosterone deficiency but is not the acute priority."
-        },
-        {
-          "t": "Report of chronic fatigue",
-          "r": "Fatigue is expected in Addison's and is not urgent."
-        }
-      ],
-      "correct": 1,
-      "tip": "**Addison's = \"everything low\"** (low cortisol, low BP, low sodium, low glucose, high potassium). **Cushing's = \"everything high.\"** Crisis = treat the **shock** first.",
-      "pearl": "\"**Add**ison's = you have to **add** the steroids.\" Priorities in crisis: **fluids, hydrocortisone, and correct the electrolytes.**",
-      "free": false
-    },
-    {
-      "id": "med-surg-0005",
-      "exam": "RN",
-      "cat": "Med-Surg",
-      "topic": "Diabetic ketoacidosis",
-      "difficulty": "Hard",
-      "type": "mc",
-      "stem": "A client with type 1 diabetes is admitted with diabetic ketoacidosis (DKA): glucose 560 mg/dL, pH 7.20, and potassium 5.8 mEq/L. An IV insulin infusion and IV fluids are started.",
-      "opts": [
-        {
-          "t": "Rising sodium",
-          "r": "Sodium shifts occur but are not the priority monitoring concern as insulin acts."
-        },
-        {
-          "t": "Falling potassium",
-          "r": "Insulin drives **potassium back into the cells**, so a serum potassium that started high can **fall rapidly** into a dangerous low range. The nurse monitors potassium closely and anticipates replacement."
-        },
-        {
-          "t": "Rising calcium",
-          "r": "Calcium is not the key electrolyte in DKA management."
-        },
-        {
-          "t": "Falling glucose only, with no electrolyte concern",
-          "r": "Glucose does fall, but ignoring potassium could be fatal — hypokalemia causes lethal dysrhythmias."
-        }
-      ],
-      "correct": 1,
-      "tip": "In DKA, **insulin lowers glucose *and* potassium.** The test loves the moment when initial hyperkalemia flips to hypokalemia. Never give IV insulin if potassium is already low without replacing it.",
-      "pearl": "\"**Insulin pushes K into the cell.**\" Follow the sequence: **fluids first, then insulin, and watch the potassium the whole way down.**",
-      "free": false
-    },
-    {
-      "id": "med-surg-0006",
-      "exam": "RN",
-      "cat": "Med-Surg",
-      "topic": "Ischemic stroke and thrombolytics",
-      "difficulty": "Moderate",
-      "type": "mc",
-      "stem": "A client arrives in the emergency department with sudden left-sided weakness and slurred speech that began 90 minutes ago. A CT scan rules out hemorrhage, and the provider considers alteplase (tPA). Which piece of information is most important for the nurse to verify before tPA",
-      "opts": [
-        {
-          "t": "The client's usual blood pressure at home",
-          "r": "Current BP matters for tPA parameters, but the *usual home* BP is not the critical screening item."
-        },
-        {
-          "t": "The exact time of symptom onset and any recent bleeding or surgery",
-          "r": "tPA is time-limited (a narrow window from **symptom onset**) and is contraindicated with recent bleeding, surgery, or hemorrhagic stroke. Confirming **onset time** and **bleeding risk** is essential to give it safely."
-        },
-        {
-          "t": "Whether the client has eaten in the last 8 hours",
-          "r": "Fasting status is not the key thrombolytic screening question."
-        },
-        {
-          "t": "The client's preferred language",
-          "r": "Preferred language matters for communication but is not the safety priority before a clot-buster."
-        }
-      ],
-      "correct": 1,
-      "tip": "For thrombolytics, think **\"time and bleeding.\"** If you don't know the *exact* onset time, or there's recent bleeding/surgery, tPA is unsafe.",
-      "pearl": "Stroke mantra: **\"Time is brain.\"** Act",
-      "free": false
-    },
-    {
-      "id": "med-surg-0007",
-      "exam": "RN",
-      "cat": "Med-Surg",
-      "topic": "Hemodialysis access care",
-      "difficulty": "Moderate",
-      "type": "mc",
-      "stem": "A client has a newly matured arteriovenous (AV) fistula in the left arm for hemodialysis. Which nursing action protects the fistula?",
-      "opts": [
-        {
-          "t": "Take blood pressures and draw blood from the left arm for convenience.",
-          "r": "**No BP cuffs, blood draws, or IVs** in the fistula arm — these can clot or damage the access."
-        },
-        {
-          "t": "Assess for a thrill (buzz) and bruit, and avoid constriction of the left arm.",
-          "r": "The nurse confirms patency by **palpating the thrill** and **auscultating the bruit** each shift, and protects the arm from anything that compresses it (tight sleeves, cuffs, sleeping on it)."
-        },
-        {
-          "t": "Keep a tight blood-pressure cuff inflated on the left arm to reduce bleeding.",
-          "r": "A constantly inflated cuff would occlude the fistula and cause it to clot."
-        },
-        {
-          "t": "Apply a heating pad continuously over the fistula site.",
-          "r": "Continuous heat is not standard fistula care and risks burns/vasodilation problems."
-        }
-      ],
-      "correct": 1,
-      "tip": "Fistula assessment = **\"feel the thrill, hear the bruit.\"** Their absence means the access may have **clotted** — report immediately.",
-      "pearl": "Protect the access arm: **\"No BP, no sticks, no squeeze.\"** A palpable **thrill** and audible **bruit** mean it's flowing.",
-      "free": false
-    },
-    {
-      "id": "med-surg-0008",
-      "exam": "RN",
-      "cat": "Med-Surg",
-      "topic": "Hepatic encephalopathy",
-      "difficulty": "Moderate",
-      "type": "mc",
-      "stem": "A client with cirrhosis is admitted with confusion and asterixis (a flapping hand tremor). The provider prescribes lactulose. Which outcome tells the nurse the lactulose is working as intended?",
-      "opts": [
-        {
-          "t": "The client has two to three soft stools per day and improving mental status.",
-          "r": "Lactulose treats **hepatic encephalopathy** by trapping ammonia in the gut and expelling it in stool. The therapeutic goal is **2–3 soft stools daily**, which lowers ammonia and **improves mental status.**"
-        },
-        {
-          "t": "The client reports relief of abdominal pain.",
-          "r": "Lactulose is not an analgesic; pain relief is not its purpose or measure of effect."
-        },
-        {
-          "t": "The client's blood pressure decreases.",
-          "r": "Lactulose does not act primarily on blood pressure."
-        },
-        {
-          "t": "The client has no bowel movements for 24 hours.",
-          "r": "No bowel movements means the drug is **not** clearing ammonia — the opposite of the goal (and a sign the dose is too low)."
-        }
-      ],
-      "correct": 0,
-      "tip": "For lactulose, **more stools is the goal, not a side effect.** Titrate to 2–3 soft stools/day. Rising ammonia → worsening confusion.",
-      "pearl": "\"**Lactulose loses the ammonia** — out the back door.\" Falling ammonia + clearer thinking = success.",
-      "free": false
-    },
-    {
-      "id": "med-surg-0009",
-      "exam": "RN",
-      "cat": "Med-Surg",
-      "topic": "Acute pancreatitis",
-      "difficulty": "Moderate",
-      "type": "mc",
-      "stem": "A client is admitted with acute pancreatitis and severe epigastric pain radiating to the back. Which position and intervention will best promote comfort?",
-      "opts": [
-        {
-          "t": "Supine and flat with the legs extended",
-          "r": "Lying flat with legs extended stretches the abdomen and typically worsens pancreatic pain."
-        },
-        {
-          "t": "Side-lying with knees drawn up toward the chest (fetal position)",
-          "r": "A **side-lying, knees-to-chest (fetal)** position reduces tension on the inflamed pancreas and eases pain. The client is also kept **NPO** to rest the gland."
-        },
-        {
-          "t": "High-Fowler's with a large meal to settle the stomach",
-          "r": "Eating stimulates pancreatic enzyme secretion and intensifies pain — clients are NPO, not fed."
-        },
-        {
-          "t": "Prone with the head turned to the side",
-          "r": "Prone positioning does not relieve pancreatic pain and is impractical."
-        }
-      ],
-      "correct": 1,
-      "tip": "Pancreatitis care = **rest the pancreas**: NPO, IV fluids, pain control, and a position that *unstretches* the abdomen (fetal/leaning forward).",
-      "pearl": "\"**Curl up to calm the pancreas.**\" Remember the enzymes: **amylase and lipase rise** (lipase is more specific).",
-      "free": false
-    },
-    {
-      "id": "med-surg-0010",
-      "exam": "RN",
-      "cat": "Med-Surg",
-      "topic": "Autonomic dysreflexia",
-      "difficulty": "Hard",
-      "type": "mc",
-      "stem": "A client with a spinal cord injury at the T4 level suddenly develops a pounding headache, blood pressure 200/110 mm Hg, flushing above the injury, and sweating. What should the nurse do first?",
-      "opts": [
-        {
-          "t": "Lay the client flat and elevate the legs.",
-          "r": "Lying flat and raising the legs would *increase* an already dangerously high blood pressure."
-        },
-        {
-          "t": "Raise the head of the bed to a sitting position and look for the trigger (often a full bladder).",
-          "r": "Autonomic dysreflexia is a hypertensive emergency. The nurse immediately **sits the client up** (to lower BP by orthostasis) and **removes the trigger** — most commonly a **distended bladder** (kinked catheter), impacted stool, or tight clothing."
-        },
-        {
-          "t": "Administer an as-needed sedative and dim the lights.",
-          "r": "Sedation and dim lights do not address the surging blood pressure or its cause."
-        },
-        {
-          "t": "Notify the provider and wait for orders before acting.",
-          "r": "This is time-critical; the nurse acts first (sit up, find the trigger) *and* notifies the provider — not waits idly."
-        }
-      ],
-      "correct": 1,
-      "tip": "Autonomic dysreflexia = **the one time you raise the head and lower the legs for high BP.** Then hunt the trigger: **bladder → bowel → skin.**",
-      "pearl": "\"**Sit them up, find the cause.**\" The culprit is usually a **full bladder** — check the catheter first. Untreated, it can cause a stroke or seizure.",
-      "free": false
-    },
-    {
-      "id": "med-surg-0011",
-      "exam": "RN",
-      "cat": "Med-Surg",
-      "topic": "Hyperkalemia",
-      "difficulty": "Hard",
-      "type": "mc",
-      "stem": "A client with acute kidney injury has a serum potassium of 6.9 mEq/L. The cardiac monitor shows tall, peaked T waves. Which action should the nurse take first?",
-      "opts": [
-        {
-          "t": "Encourage the client to eat a banana for energy.",
-          "r": "Bananas are **high in potassium** — exactly wrong for hyperkalemia."
-        },
-        {
-          "t": "Notify the provider and prepare to treat the hyperkalemia while monitoring the ECG.",
-          "r": "A potassium of 6.9 with **peaked T waves** is a cardiac emergency. The nurse **notifies the provider and prepares treatment** (e.g., IV calcium gluconate to protect the heart; insulin with dextrose and/or a beta-agonist to shift potassium into cells; and measures to remove it) while watching the ECG."
-        },
-        {
-          "t": "Administer a potassium supplement as previously scheduled.",
-          "r": "Giving more potassium to a hyperkalemic client could be lethal — always reassess \"scheduled\" electrolytes against current labs."
-        },
-        {
-          "t": "Restrict the client's fluids and recheck the potassium in the morning.",
-          "r": "Waiting until morning with a life-threatening level and ECG changes is unsafe."
-        }
-      ],
-      "correct": 1,
-      "tip": "Match the ECG to the electrolyte: **hyperkalemia → tall, peaked T waves; hypokalemia → flat T waves and U waves.** Peaked T's + high K = act now.",
-      "pearl": "Emergency hyperkalemia order: **\"Calcium protects, insulin + D50 shifts, and dialysis/kayexalate removes.\"** Calcium guards the heart first; it doesn't lower the potassium itself.",
-      "free": false
-    },
-    {
-      "id": "med-surg-0012",
-      "exam": "RN",
-      "cat": "Med-Surg",
-      "topic": "Acute chest pain",
-      "difficulty": "Moderate",
-      "type": "mc",
-      "stem": "A client on a med-surg unit suddenly reports crushing substernal chest pressure radiating to the left arm, with nausea and diaphoresis. Which is the nurse's first action?",
-      "opts": [
-        {
-          "t": "Call the client's family to notify them of the change.",
-          "r": "Notifying family is not the immediate priority during a possible heart attack."
-        },
-        {
-          "t": "Stay with the client, call for help/activate the response, and prepare to give oxygen and obtain an ECG.",
-          "r": "Suspected **acute coronary syndrome** demands the nurse **stay with the client, summon help/activate the rapid response or protocol, apply oxygen if indicated, obtain a 12-lead ECG, and anticipate aspirin, nitroglycerin, and continuous monitoring.**"
-        },
-        {
-          "t": "Have the client walk to the nurses' station for evaluation.",
-          "r": "**Never ambulate** a client with possible cardiac chest pain — exertion increases oxygen demand and risk."
-        },
-        {
-          "t": "Give a full glass of water and wait to see if the pain resolves.",
-          "r": "Water and watchful waiting delay life-saving care."
-        }
-      ],
-      "correct": 1,
-      "tip": "Cardiac chest pain = **rest + oxygen + ECG + meds**, and keep the client **still.** Any answer that makes the client exert is wrong.",
-      "pearl": "Remember the classic bundle **\"MONA\"** —",
-      "free": false
+     "t": "Obstruction of the chest tube",
+     "r": "An obstruction would reduce or stop drainage and tidaling, not cause continuous bubbling."
     }
-  ]
+   ],
+   "correct": 1,
+   "tip": "Learn the chambers: **water-seal = bubbling/tidaling info; suction-control = gentle continuous bubbling is normal there.** Continuous bubbling in the *water-seal* chamber = **air leak.**",
+   "pearl": "\"**Tidaling is fine, continuous is a sign.**\" If the tube is ever pulled out, cover with a sterile occlusive dressing taped on **three sides.**",
+   "free": true,
+   "client_needs": "Physiological Adaptation",
+   "scoring": "dichotomous",
+   "cjmm_step": "n/a",
+   "level": 3
+  },
+  {
+   "id": "med-surg-0002",
+   "exam": "RN",
+   "cat": "Med-Surg",
+   "topic": "Increased intracranial pressure",
+   "difficulty": "Hard",
+   "type": "mc",
+   "stem": "A client with a traumatic brain injury is being monitored for increased intracranial pressure (ICP). Which set of findings should the nurse report immediately as an early sign of",
+   "opts": [
+    {
+     "t": "Restlessness and a decreasing level of consciousness",
+     "r": "The **earliest** and most sensitive sign of rising ICP is a **change in level of consciousness** — restlessness, confusion, or a subtle decline. Catching it early is what protects the brain."
+    },
+    {
+     "t": "Bradycardia, widening pulse pressure, and irregular respirations",
+     "r": "Bradycardia, widening pulse pressure, and irregular respirations (**Cushing's triad**) are **late, ominous** signs of severely elevated ICP — important, but not *early*."
+    },
+    {
+     "t": "Hypotension and tachycardia",
+     "r": "Hypotension and tachycardia point toward shock/hypovolemia, not classic ICP changes."
+    },
+    {
+     "t": "Constricted, briskly reactive pupils",
+     "r": "Rising ICP tends to cause a **dilated, sluggish or fixed** pupil, not constricted and brisk."
+    }
+   ],
+   "correct": 0,
+   "tip": "Read carefully for **\"early\" vs \"late.\"** Early ICP = **LOC change.** Late ICP = **Cushing's triad.** The same topic has two different \"right\" answers depending on that one word.",
+   "pearl": "**Cushing's triad = \"high, low, slow, and odd\"**: **high** systolic/**widening pulse pressure, low** heart rate (**slow**), and **odd/irregular** breathing. Keep the HOB at **30°** and the head midline to promote venous drainage.",
+   "free": true,
+   "client_needs": "Physiological Adaptation",
+   "scoring": "dichotomous",
+   "cjmm_step": "n/a",
+   "level": 4
+  },
+  {
+   "id": "med-surg-0003",
+   "exam": "RN",
+   "cat": "Med-Surg",
+   "topic": "Postoperative DVT prevention",
+   "difficulty": "Easy",
+   "type": "mc",
+   "stem": "A client is on the first postoperative day after abdominal surgery and is reluctant to move. Which nursing action best helps prevent deep vein thrombosis (DVT)?",
+   "opts": [
+    {
+     "t": "Massage the calves firmly twice per shift.",
+     "r": "**Never massage** the legs of a client at risk for DVT — a clot could dislodge and become an embolus."
+    },
+    {
+     "t": "Encourage early ambulation and leg exercises.",
+     "r": "**Early ambulation** plus ankle pumps and leg exercises promote venous return and are first-line DVT prevention, along with compression devices and prescribed anticoagulants."
+    },
+    {
+     "t": "Keep the knee gatch of the bed elevated continuously.",
+     "r": "A continuously elevated knee gatch causes popliteal compression and venous pooling — it *increases* DVT risk."
+    },
+    {
+     "t": "Maintain strict bed rest until the client is pain-free.",
+     "r": "Prolonged immobility is a leading cause of DVT, not a prevention strategy."
+    }
+   ],
+   "correct": 1,
+   "tip": "When the answer choices include **\"massage the calf,\"** it's almost always the wrong (dangerous) option in an at-risk client.",
+   "pearl": "DVT prevention = **\"Move, Squeeze, Thin\"**: **Move** (ambulate/leg exercises), **Squeeze** (SCDs/compression), and",
+   "free": false,
+   "client_needs": "Physiological Adaptation",
+   "scoring": "dichotomous",
+   "cjmm_step": "n/a",
+   "level": 2
+  },
+  {
+   "id": "med-surg-0004",
+   "exam": "RN",
+   "cat": "Med-Surg",
+   "topic": "Adrenal insufficiency (Addisonian crisis)",
+   "difficulty": "Hard",
+   "type": "mc",
+   "stem": "A client with Addison's disease is admitted after several days of vomiting and diarrhea. The nurse notes blood pressure 82/50 mm Hg, weakness, and a serum sodium of 128 mEq/L. Which finding requires the nurse's most immediate attention?",
+   "opts": [
+    {
+     "t": "Bronzed skin pigmentation",
+     "r": "Hyperpigmentation is a classic *chronic* Addison's finding, not an emergency."
+    },
+    {
+     "t": "Blood pressure of 82/50 mm Hg",
+     "r": "In **Addisonian crisis**, the lack of cortisol and aldosterone causes **profound hypotension and vascular collapse.** The BP of 82/50 is life-threatening and needs immediate IV fluids and IV hydrocortisone."
+    },
+    {
+     "t": "Craving for salty foods",
+     "r": "Salt craving reflects aldosterone deficiency but is not the acute priority."
+    },
+    {
+     "t": "Report of chronic fatigue",
+     "r": "Fatigue is expected in Addison's and is not urgent."
+    }
+   ],
+   "correct": 1,
+   "tip": "**Addison's = \"everything low\"** (low cortisol, low BP, low sodium, low glucose, high potassium). **Cushing's = \"everything high.\"** Crisis = treat the **shock** first.",
+   "pearl": "\"**Add**ison's = you have to **add** the steroids.\" Priorities in crisis: **fluids, hydrocortisone, and correct the electrolytes.**",
+   "free": false,
+   "client_needs": "Physiological Adaptation",
+   "scoring": "dichotomous",
+   "cjmm_step": "n/a",
+   "level": 4
+  },
+  {
+   "id": "med-surg-0005",
+   "exam": "RN",
+   "cat": "Med-Surg",
+   "topic": "Diabetic ketoacidosis",
+   "difficulty": "Hard",
+   "type": "mc",
+   "stem": "A client with type 1 diabetes is admitted with diabetic ketoacidosis (DKA): glucose 560 mg/dL, pH 7.20, and potassium 5.8 mEq/L. An IV insulin infusion and IV fluids are started.",
+   "opts": [
+    {
+     "t": "Rising sodium",
+     "r": "Sodium shifts occur but are not the priority monitoring concern as insulin acts."
+    },
+    {
+     "t": "Falling potassium",
+     "r": "Insulin drives **potassium back into the cells**, so a serum potassium that started high can **fall rapidly** into a dangerous low range. The nurse monitors potassium closely and anticipates replacement."
+    },
+    {
+     "t": "Rising calcium",
+     "r": "Calcium is not the key electrolyte in DKA management."
+    },
+    {
+     "t": "Falling glucose only, with no electrolyte concern",
+     "r": "Glucose does fall, but ignoring potassium could be fatal — hypokalemia causes lethal dysrhythmias."
+    }
+   ],
+   "correct": 1,
+   "tip": "In DKA, **insulin lowers glucose *and* potassium.** The test loves the moment when initial hyperkalemia flips to hypokalemia. Never give IV insulin if potassium is already low without replacing it.",
+   "pearl": "\"**Insulin pushes K into the cell.**\" Follow the sequence: **fluids first, then insulin, and watch the potassium the whole way down.**",
+   "free": false,
+   "client_needs": "Physiological Adaptation",
+   "scoring": "dichotomous",
+   "cjmm_step": "n/a",
+   "level": 4
+  },
+  {
+   "id": "med-surg-0006",
+   "exam": "RN",
+   "cat": "Med-Surg",
+   "topic": "Ischemic stroke and thrombolytics",
+   "difficulty": "Moderate",
+   "type": "mc",
+   "stem": "A client arrives in the emergency department with sudden left-sided weakness and slurred speech that began 90 minutes ago. A CT scan rules out hemorrhage, and the provider considers alteplase (tPA). Which piece of information is most important for the nurse to verify before tPA",
+   "opts": [
+    {
+     "t": "The client's usual blood pressure at home",
+     "r": "Current BP matters for tPA parameters, but the *usual home* BP is not the critical screening item."
+    },
+    {
+     "t": "The exact time of symptom onset and any recent bleeding or surgery",
+     "r": "tPA is time-limited (a narrow window from **symptom onset**) and is contraindicated with recent bleeding, surgery, or hemorrhagic stroke. Confirming **onset time** and **bleeding risk** is essential to give it safely."
+    },
+    {
+     "t": "Whether the client has eaten in the last 8 hours",
+     "r": "Fasting status is not the key thrombolytic screening question."
+    },
+    {
+     "t": "The client's preferred language",
+     "r": "Preferred language matters for communication but is not the safety priority before a clot-buster."
+    }
+   ],
+   "correct": 1,
+   "tip": "For thrombolytics, think **\"time and bleeding.\"** If you don't know the *exact* onset time, or there's recent bleeding/surgery, tPA is unsafe.",
+   "pearl": "Stroke mantra: **\"Time is brain.\"** Act",
+   "free": false,
+   "client_needs": "Physiological Adaptation",
+   "scoring": "dichotomous",
+   "cjmm_step": "n/a",
+   "level": 3
+  },
+  {
+   "id": "med-surg-0007",
+   "exam": "RN",
+   "cat": "Med-Surg",
+   "topic": "Hemodialysis access care",
+   "difficulty": "Moderate",
+   "type": "mc",
+   "stem": "A client has a newly matured arteriovenous (AV) fistula in the left arm for hemodialysis. Which nursing action protects the fistula?",
+   "opts": [
+    {
+     "t": "Take blood pressures and draw blood from the left arm for convenience.",
+     "r": "**No BP cuffs, blood draws, or IVs** in the fistula arm — these can clot or damage the access."
+    },
+    {
+     "t": "Assess for a thrill (buzz) and bruit, and avoid constriction of the left arm.",
+     "r": "The nurse confirms patency by **palpating the thrill** and **auscultating the bruit** each shift, and protects the arm from anything that compresses it (tight sleeves, cuffs, sleeping on it)."
+    },
+    {
+     "t": "Keep a tight blood-pressure cuff inflated on the left arm to reduce bleeding.",
+     "r": "A constantly inflated cuff would occlude the fistula and cause it to clot."
+    },
+    {
+     "t": "Apply a heating pad continuously over the fistula site.",
+     "r": "Continuous heat is not standard fistula care and risks burns/vasodilation problems."
+    }
+   ],
+   "correct": 1,
+   "tip": "Fistula assessment = **\"feel the thrill, hear the bruit.\"** Their absence means the access may have **clotted** — report immediately.",
+   "pearl": "Protect the access arm: **\"No BP, no sticks, no squeeze.\"** A palpable **thrill** and audible **bruit** mean it's flowing.",
+   "free": false,
+   "client_needs": "Physiological Adaptation",
+   "scoring": "dichotomous",
+   "cjmm_step": "n/a",
+   "level": 3
+  },
+  {
+   "id": "med-surg-0008",
+   "exam": "RN",
+   "cat": "Med-Surg",
+   "topic": "Hepatic encephalopathy",
+   "difficulty": "Moderate",
+   "type": "mc",
+   "stem": "A client with cirrhosis is admitted with confusion and asterixis (a flapping hand tremor). The provider prescribes lactulose. Which outcome tells the nurse the lactulose is working as intended?",
+   "opts": [
+    {
+     "t": "The client has two to three soft stools per day and improving mental status.",
+     "r": "Lactulose treats **hepatic encephalopathy** by trapping ammonia in the gut and expelling it in stool. The therapeutic goal is **2–3 soft stools daily**, which lowers ammonia and **improves mental status.**"
+    },
+    {
+     "t": "The client reports relief of abdominal pain.",
+     "r": "Lactulose is not an analgesic; pain relief is not its purpose or measure of effect."
+    },
+    {
+     "t": "The client's blood pressure decreases.",
+     "r": "Lactulose does not act primarily on blood pressure."
+    },
+    {
+     "t": "The client has no bowel movements for 24 hours.",
+     "r": "No bowel movements means the drug is **not** clearing ammonia — the opposite of the goal (and a sign the dose is too low)."
+    }
+   ],
+   "correct": 0,
+   "tip": "For lactulose, **more stools is the goal, not a side effect.** Titrate to 2–3 soft stools/day. Rising ammonia → worsening confusion.",
+   "pearl": "\"**Lactulose loses the ammonia** — out the back door.\" Falling ammonia + clearer thinking = success.",
+   "free": false,
+   "client_needs": "Physiological Adaptation",
+   "scoring": "dichotomous",
+   "cjmm_step": "n/a",
+   "level": 3
+  },
+  {
+   "id": "med-surg-0009",
+   "exam": "RN",
+   "cat": "Med-Surg",
+   "topic": "Acute pancreatitis",
+   "difficulty": "Moderate",
+   "type": "mc",
+   "stem": "A client is admitted with acute pancreatitis and severe epigastric pain radiating to the back. Which position and intervention will best promote comfort?",
+   "opts": [
+    {
+     "t": "Supine and flat with the legs extended",
+     "r": "Lying flat with legs extended stretches the abdomen and typically worsens pancreatic pain."
+    },
+    {
+     "t": "Side-lying with knees drawn up toward the chest (fetal position)",
+     "r": "A **side-lying, knees-to-chest (fetal)** position reduces tension on the inflamed pancreas and eases pain. The client is also kept **NPO** to rest the gland."
+    },
+    {
+     "t": "High-Fowler's with a large meal to settle the stomach",
+     "r": "Eating stimulates pancreatic enzyme secretion and intensifies pain — clients are NPO, not fed."
+    },
+    {
+     "t": "Prone with the head turned to the side",
+     "r": "Prone positioning does not relieve pancreatic pain and is impractical."
+    }
+   ],
+   "correct": 1,
+   "tip": "Pancreatitis care = **rest the pancreas**: NPO, IV fluids, pain control, and a position that *unstretches* the abdomen (fetal/leaning forward).",
+   "pearl": "\"**Curl up to calm the pancreas.**\" Remember the enzymes: **amylase and lipase rise** (lipase is more specific).",
+   "free": false,
+   "client_needs": "Physiological Adaptation",
+   "scoring": "dichotomous",
+   "cjmm_step": "n/a",
+   "level": 3
+  },
+  {
+   "id": "med-surg-0010",
+   "exam": "RN",
+   "cat": "Med-Surg",
+   "topic": "Autonomic dysreflexia",
+   "difficulty": "Hard",
+   "type": "mc",
+   "stem": "A client with a spinal cord injury at the T4 level suddenly develops a pounding headache, blood pressure 200/110 mm Hg, flushing above the injury, and sweating. What should the nurse do first?",
+   "opts": [
+    {
+     "t": "Lay the client flat and elevate the legs.",
+     "r": "Lying flat and raising the legs would *increase* an already dangerously high blood pressure."
+    },
+    {
+     "t": "Raise the head of the bed to a sitting position and look for the trigger (often a full bladder).",
+     "r": "Autonomic dysreflexia is a hypertensive emergency. The nurse immediately **sits the client up** (to lower BP by orthostasis) and **removes the trigger** — most commonly a **distended bladder** (kinked catheter), impacted stool, or tight clothing."
+    },
+    {
+     "t": "Administer an as-needed sedative and dim the lights.",
+     "r": "Sedation and dim lights do not address the surging blood pressure or its cause."
+    },
+    {
+     "t": "Notify the provider and wait for orders before acting.",
+     "r": "This is time-critical; the nurse acts first (sit up, find the trigger) *and* notifies the provider — not waits idly."
+    }
+   ],
+   "correct": 1,
+   "tip": "Autonomic dysreflexia = **the one time you raise the head and lower the legs for high BP.** Then hunt the trigger: **bladder → bowel → skin.**",
+   "pearl": "\"**Sit them up, find the cause.**\" The culprit is usually a **full bladder** — check the catheter first. Untreated, it can cause a stroke or seizure.",
+   "free": false,
+   "client_needs": "Physiological Adaptation",
+   "scoring": "dichotomous",
+   "cjmm_step": "n/a",
+   "level": 4
+  },
+  {
+   "id": "med-surg-0011",
+   "exam": "RN",
+   "cat": "Med-Surg",
+   "topic": "Hyperkalemia",
+   "difficulty": "Hard",
+   "type": "mc",
+   "stem": "A client with acute kidney injury has a serum potassium of 6.9 mEq/L. The cardiac monitor shows tall, peaked T waves. Which action should the nurse take first?",
+   "opts": [
+    {
+     "t": "Encourage the client to eat a banana for energy.",
+     "r": "Bananas are **high in potassium** — exactly wrong for hyperkalemia."
+    },
+    {
+     "t": "Notify the provider and prepare to treat the hyperkalemia while monitoring the ECG.",
+     "r": "A potassium of 6.9 with **peaked T waves** is a cardiac emergency. The nurse **notifies the provider and prepares treatment** (e.g., IV calcium gluconate to protect the heart; insulin with dextrose and/or a beta-agonist to shift potassium into cells; and measures to remove it) while watching the ECG."
+    },
+    {
+     "t": "Administer a potassium supplement as previously scheduled.",
+     "r": "Giving more potassium to a hyperkalemic client could be lethal — always reassess \"scheduled\" electrolytes against current labs."
+    },
+    {
+     "t": "Restrict the client's fluids and recheck the potassium in the morning.",
+     "r": "Waiting until morning with a life-threatening level and ECG changes is unsafe."
+    }
+   ],
+   "correct": 1,
+   "tip": "Match the ECG to the electrolyte: **hyperkalemia → tall, peaked T waves; hypokalemia → flat T waves and U waves.** Peaked T's + high K = act now.",
+   "pearl": "Emergency hyperkalemia order: **\"Calcium protects, insulin + D50 shifts, and dialysis/kayexalate removes.\"** Calcium guards the heart first; it doesn't lower the potassium itself.",
+   "free": false,
+   "client_needs": "Physiological Adaptation",
+   "scoring": "dichotomous",
+   "cjmm_step": "n/a",
+   "level": 4
+  },
+  {
+   "id": "med-surg-0012",
+   "exam": "RN",
+   "cat": "Med-Surg",
+   "topic": "Acute chest pain",
+   "difficulty": "Moderate",
+   "type": "mc",
+   "stem": "A client on a med-surg unit suddenly reports crushing substernal chest pressure radiating to the left arm, with nausea and diaphoresis. Which is the nurse's first action?",
+   "opts": [
+    {
+     "t": "Call the client's family to notify them of the change.",
+     "r": "Notifying family is not the immediate priority during a possible heart attack."
+    },
+    {
+     "t": "Stay with the client, call for help/activate the response, and prepare to give oxygen and obtain an ECG.",
+     "r": "Suspected **acute coronary syndrome** demands the nurse **stay with the client, summon help/activate the rapid response or protocol, apply oxygen if indicated, obtain a 12-lead ECG, and anticipate aspirin, nitroglycerin, and continuous monitoring.**"
+    },
+    {
+     "t": "Have the client walk to the nurses' station for evaluation.",
+     "r": "**Never ambulate** a client with possible cardiac chest pain — exertion increases oxygen demand and risk."
+    },
+    {
+     "t": "Give a full glass of water and wait to see if the pain resolves.",
+     "r": "Water and watchful waiting delay life-saving care."
+    }
+   ],
+   "correct": 1,
+   "tip": "Cardiac chest pain = **rest + oxygen + ECG + meds**, and keep the client **still.** Any answer that makes the client exert is wrong.",
+   "pearl": "Remember the classic bundle **\"MONA\"** —",
+   "free": false,
+   "client_needs": "Physiological Adaptation",
+   "scoring": "dichotomous",
+   "cjmm_step": "n/a",
+   "level": 3
+  }
+ ]
 }

@@ -29,7 +29,11 @@
    ],
    "correct": 1,
    "tip": "Match insulin onset/peak/duration to the clock. Regular (short-acting) peaks in 2–4 hr.",
-   "pearl": "**Regular = Rapidly available:** onset ~30 min, peak 2–4 hr. NPH (cloudy) peaks 4–12 hr."
+   "pearl": "**Regular = Rapidly available:** onset ~30 min, peak 2–4 hr. NPH (cloudy) peaks 4–12 hr.",
+   "client_needs": "Pharmacological and Parenteral Therapies",
+   "scoring": "dichotomous",
+   "cjmm_step": "n/a",
+   "level": 3
   },
   {
    "id": "qb-pharm-0102",
@@ -58,7 +62,11 @@
     }
    ],
    "correct": 0,
-   "tip": "For most cardiac beta-blockers, hold and reassess if HR < 60 or SBP < 90–100 per parameters."
+   "tip": "For most cardiac beta-blockers, hold and reassess if HR < 60 or SBP < 90–100 per parameters.",
+   "client_needs": "Pharmacological and Parenteral Therapies",
+   "scoring": "dichotomous",
+   "cjmm_step": "n/a",
+   "level": 3
   },
   {
    "id": "qb-pharm-0103",
@@ -88,7 +96,11 @@
    ],
    "correct": 1,
    "tip": "Learn antidote pairs: opioid→naloxone, benzo→flumazenil, heparin→protamine, warfarin→vitamin K.",
-   "free": true
+   "free": true,
+   "client_needs": "Pharmacological and Parenteral Therapies",
+   "scoring": "dichotomous",
+   "cjmm_step": "n/a",
+   "level": 2
   },
   {
    "id": "qb-pharm-0104",
@@ -117,7 +129,11 @@
     }
    ],
    "correct": 0,
-   "tip": "Nephrotoxic + ototoxic drugs (vancomycin, aminoglycosides): watch creatinine, urine output, and hearing."
+   "tip": "Nephrotoxic + ototoxic drugs (vancomycin, aminoglycosides): watch creatinine, urine output, and hearing.",
+   "client_needs": "Pharmacological and Parenteral Therapies",
+   "scoring": "dichotomous",
+   "cjmm_step": "n/a",
+   "level": 4
   },
   {
    "id": "qb-pharm-0105",
@@ -147,7 +163,11 @@
    ],
    "correct": 0,
    "tip": "Low K⁺ + digoxin = danger. Keep potassium in range to prevent toxicity.",
-   "pearl": "**\"Dig + low dig-K = toxic.\"** Furosemide wastes potassium; that low K⁺ is what tips digoxin into toxicity."
+   "pearl": "**\"Dig + low dig-K = toxic.\"** Furosemide wastes potassium; that low K⁺ is what tips digoxin into toxicity.",
+   "client_needs": "Pharmacological and Parenteral Therapies",
+   "scoring": "dichotomous",
+   "cjmm_step": "n/a",
+   "level": 4
   },
   {
    "id": "qb-pharm-0106",
@@ -176,7 +196,11 @@
     }
    ],
    "correct": 2,
-   "tip": "Never stop chronic steroids abruptly — taper to prevent adrenal crisis."
+   "tip": "Never stop chronic steroids abruptly — taper to prevent adrenal crisis.",
+   "client_needs": "Pharmacological and Parenteral Therapies",
+   "scoring": "dichotomous",
+   "cjmm_step": "n/a",
+   "level": 3
   },
   {
    "id": "qb-pharm-0107",
@@ -205,7 +229,11 @@
     }
    ],
    "correct": 1,
-   "tip": "ACE inhibitors (-pril) → dry cough and risk of angioedema. ARBs (-sartan) are the usual switch."
+   "tip": "ACE inhibitors (-pril) → dry cough and risk of angioedema. ARBs (-sartan) are the usual switch.",
+   "client_needs": "Pharmacological and Parenteral Therapies",
+   "scoring": "dichotomous",
+   "cjmm_step": "n/a",
+   "level": 2
   },
   {
    "id": "qb-pharm-0108",
@@ -234,7 +262,11 @@
     }
    ],
    "correct": 1,
-   "tip": "Heparin → aPTT; warfarin → PT/INR. Antidotes: protamine and vitamin K, respectively."
+   "tip": "Heparin → aPTT; warfarin → PT/INR. Antidotes: protamine and vitamin K, respectively.",
+   "client_needs": "Pharmacological and Parenteral Therapies",
+   "scoring": "dichotomous",
+   "cjmm_step": "n/a",
+   "level": 3
   },
   {
    "id": "qb-pharm-0109",
@@ -263,7 +295,11 @@
     }
    ],
    "correct": 1,
-   "tip": "Phenytoin → gingival hyperplasia (gum overgrowth). Emphasize oral hygiene and dental care."
+   "tip": "Phenytoin → gingival hyperplasia (gum overgrowth). Emphasize oral hygiene and dental care.",
+   "client_needs": "Pharmacological and Parenteral Therapies",
+   "scoring": "dichotomous",
+   "cjmm_step": "n/a",
+   "level": 3
   },
   {
    "id": "qb-pharm-0110",
@@ -292,7 +328,11 @@
     }
    ],
    "correct": 1,
-   "tip": "Bronchodilator BEFORE steroid inhaler; rinse mouth after steroids to prevent thrush."
+   "tip": "Bronchodilator BEFORE steroid inhaler; rinse mouth after steroids to prevent thrush.",
+   "client_needs": "Pharmacological and Parenteral Therapies",
+   "scoring": "dichotomous",
+   "cjmm_step": "n/a",
+   "level": 3
   }
  ]
 }

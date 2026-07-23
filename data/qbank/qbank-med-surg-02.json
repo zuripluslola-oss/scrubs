@@ -29,7 +29,11 @@
    ],
    "correct": 0,
    "tip": "Hyperkalemia → peaked T waves → wide QRS → arrest. Cardiac changes are always the priority.",
-   "pearl": "**K⁺ high = T's high (peaked).** Treat with calcium gluconate (protect heart), then insulin+D50/albuterol to shift K⁺ in."
+   "pearl": "**K⁺ high = T's high (peaked).** Treat with calcium gluconate (protect heart), then insulin+D50/albuterol to shift K⁺ in.",
+   "client_needs": "Physiological Adaptation",
+   "scoring": "dichotomous",
+   "cjmm_step": "n/a",
+   "level": 4
   },
   {
    "id": "qb-ms-0102",
@@ -58,7 +62,11 @@
     }
    ],
    "correct": 1,
-   "tip": "In COPD, target SpO₂ ~88–92%. Don't chase a \"normal\" saturation with high-flow O₂."
+   "tip": "In COPD, target SpO₂ ~88–92%. Don't chase a \"normal\" saturation with high-flow O₂.",
+   "client_needs": "Physiological Adaptation",
+   "scoring": "dichotomous",
+   "cjmm_step": "n/a",
+   "level": 4
   },
   {
    "id": "qb-ms-0103",
@@ -87,7 +95,11 @@
     }
    ],
    "correct": 0,
-   "tip": "Water-seal chamber: tidaling = good; continuous bubbling = air leak (act). Suction chamber bubbling is expected."
+   "tip": "Water-seal chamber: tidaling = good; continuous bubbling = air leak (act). Suction chamber bubbling is expected.",
+   "client_needs": "Physiological Adaptation",
+   "scoring": "dichotomous",
+   "cjmm_step": "n/a",
+   "level": 4
   },
   {
    "id": "qb-ms-0104",
@@ -116,7 +128,11 @@
     }
    ],
    "correct": 1,
-   "tip": "ICP care: HOB ~30°, head midline, avoid neck flexion/rotation, prevent Valsalva."
+   "tip": "ICP care: HOB ~30°, head midline, avoid neck flexion/rotation, prevent Valsalva.",
+   "client_needs": "Physiological Adaptation",
+   "scoring": "dichotomous",
+   "cjmm_step": "n/a",
+   "level": 3
   },
   {
    "id": "qb-ms-0105",
@@ -145,7 +161,11 @@
     }
    ],
    "correct": 1,
-   "tip": "DKA order: Fluids first → then insulin → replace potassium as insulin drives K⁺ into cells."
+   "tip": "DKA order: Fluids first → then insulin → replace potassium as insulin drives K⁺ into cells.",
+   "client_needs": "Physiological Adaptation",
+   "scoring": "dichotomous",
+   "cjmm_step": "n/a",
+   "level": 4
   },
   {
    "id": "qb-ms-0106",
@@ -174,7 +194,11 @@
     }
    ],
    "correct": 1,
-   "tip": "New stroke = NPO until a swallow screen is passed. Aspiration is the danger."
+   "tip": "New stroke = NPO until a swallow screen is passed. Aspiration is the danger.",
+   "client_needs": "Physiological Adaptation",
+   "scoring": "dichotomous",
+   "cjmm_step": "n/a",
+   "level": 3
   },
   {
    "id": "qb-ms-0107",
@@ -203,7 +227,11 @@
     }
    ],
    "correct": 1,
-   "tip": "Transfusion reaction: STOP the blood first, saline via new tubing, then assess and notify."
+   "tip": "Transfusion reaction: STOP the blood first, saline via new tubing, then assess and notify.",
+   "client_needs": "Physiological Adaptation",
+   "scoring": "dichotomous",
+   "cjmm_step": "n/a",
+   "level": 4
   },
   {
    "id": "qb-ms-0108",
@@ -232,7 +260,11 @@
     }
    ],
    "correct": 0,
-   "tip": "Lactulose works by causing soft stools that carry ammonia out. Titrate to 2–3 stools/day."
+   "tip": "Lactulose works by causing soft stools that carry ammonia out. Titrate to 2–3 stools/day.",
+   "client_needs": "Physiological Adaptation",
+   "scoring": "dichotomous",
+   "cjmm_step": "n/a",
+   "level": 3
   },
   {
    "id": "qb-ms-0109",
@@ -261,7 +293,11 @@
     }
    ],
    "correct": 0,
-   "tip": "Addison's = too little cortisol/aldosterone → give steroids + saline. (Cushing's is the opposite.)"
+   "tip": "Addison's = too little cortisol/aldosterone → give steroids + saline. (Cushing's is the opposite.)",
+   "client_needs": "Physiological Adaptation",
+   "scoring": "dichotomous",
+   "cjmm_step": "n/a",
+   "level": 4
   },
   {
    "id": "qb-ms-0110",
@@ -290,7 +326,11 @@
     }
    ],
    "correct": 2,
-   "tip": "\"Needs further teaching\" = pick the WRONG statement. Reverse your thinking."
+   "tip": "\"Needs further teaching\" = pick the WRONG statement. Reverse your thinking.",
+   "client_needs": "Physiological Adaptation",
+   "scoring": "dichotomous",
+   "cjmm_step": "n/a",
+   "level": 2
   }
  ]
 }

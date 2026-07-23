@@ -1,160 +1,180 @@
 {
-  "batch": "workbook-pediatrics",
-  "questions": [
+ "batch": "workbook-pediatrics",
+ "questions": [
+  {
+   "id": "pediatrics-0001",
+   "exam": "RN",
+   "cat": "Pediatrics",
+   "topic": "Infant safe sleep",
+   "difficulty": "Easy",
+   "type": "mc",
+   "stem": "A nurse is teaching new parents about reducing the risk of sudden infant death syndrome (SIDS). Which instruction should the nurse include?",
+   "opts": [
     {
-      "id": "pediatrics-0001",
-      "exam": "RN",
-      "cat": "Pediatrics",
-      "topic": "Infant safe sleep",
-      "difficulty": "Easy",
-      "type": "mc",
-      "stem": "A nurse is teaching new parents about reducing the risk of sudden infant death syndrome (SIDS). Which instruction should the nurse include?",
-      "opts": [
-        {
-          "t": "\"Place your baby on the stomach to sleep to prevent choking.\"",
-          "r": "**Stomach (prone) sleeping raises SIDS risk** — the outdated choking fear is not supported; healthy infants protect their airway on their backs."
-        },
-        {
-          "t": "\"Put your baby to sleep on the back on a firm, flat surface with no soft bedding.\"",
-          "r": "\"**Back to sleep**\" on a **firm, flat, bare surface** — no pillows, bumpers, or loose blankets — is the evidence-based standard to reduce SIDS."
-        },
-        {
-          "t": "\"Use a soft pillow and plush blankets to keep the baby comfortable.\"",
-          "r": "Soft pillows and plush bedding are suffocation hazards."
-        },
-        {
-          "t": "\"Let the baby sleep in your bed so you can watch them closely.\"",
-          "r": "Bed-sharing increases the risk of suffocation and SIDS; room-sharing (separate sleep surface) is what's recommended."
-        }
-      ],
-      "correct": 1,
-      "tip": "Safe sleep = **Back, Bare, Alone (own surface).** Any answer adding pillows, blankets, or prone positioning is wrong.",
-      "pearl": "\"**Back to sleep, tummy to play.**\" The crib should be **boring** — nothing in it but the baby.",
-      "free": true
+     "t": "\"Place your baby on the stomach to sleep to prevent choking.\"",
+     "r": "**Stomach (prone) sleeping raises SIDS risk** — the outdated choking fear is not supported; healthy infants protect their airway on their backs."
     },
     {
-      "id": "pediatrics-0002",
-      "exam": "RN",
-      "cat": "Pediatrics",
-      "topic": "Suspected epiglottitis",
-      "difficulty": "Hard",
-      "type": "mc",
-      "stem": "A 4-year-old arrives drooling, leaning forward in a tripod position, with a high fever, muffled voice, and refusal to swallow. Epiglottitis is suspected. Which action should the nurse avoid?",
-      "opts": [
-        {
-          "t": "Keeping the child calm and in a position of comfort on the parent's lap",
-          "r": "Keeping the child calm and upright prevents further airway spasm — a correct action, so it is not what the nurse avoids."
-        },
-        {
-          "t": "Examining the throat with a tongue depressor to visualize the epiglottis",
-          "r": "**Never inspect the throat or use a tongue depressor** with suspected epiglottitis — it can trigger laryngospasm and complete airway obstruction. Visualization is done only where an emergency airway can be secured."
-        },
-        {
-          "t": "Preparing emergency airway equipment at the bedside",
-          "r": "Having airway/intubation equipment ready is essential."
-        },
-        {
-          "t": "Notifying the provider and staying with the child",
-          "r": "Staying with the child and notifying the provider is correct."
-        }
-      ],
-      "correct": 1,
-      "tip": "This is a **negative-style** item (\"which should you AVOID\"). Read the stem twice — the *right answer is the wrong action.* For epiglottitis:",
-      "pearl": "Epiglottitis \"**tripod, drool, and muffled**\" = airway emergency. Remember the **4 D's: Drooling, Dysphagia, Dysphonia, Distress.** Don't touch the throat.",
-      "free": true
+     "t": "\"Put your baby to sleep on the back on a firm, flat surface with no soft bedding.\"",
+     "r": "\"**Back to sleep**\" on a **firm, flat, bare surface** — no pillows, bumpers, or loose blankets — is the evidence-based standard to reduce SIDS."
     },
     {
-      "id": "pediatrics-0003",
-      "exam": "RN",
-      "cat": "Pediatrics",
-      "topic": "Pediatric dehydration",
-      "difficulty": "Moderate",
-      "type": "mc",
-      "stem": "A nurse is monitoring an infant admitted with several days of vomiting and diarrhea. Which finding is the most reliable indicator of the infant's fluid status?",
-      "opts": [
-        {
-          "t": "Skin color",
-          "r": "Skin color is nonspecific and affected by many factors."
-        },
-        {
-          "t": "Daily weight",
-          "r": "**Daily weight** measured on the same scale is the **most accurate, objective indicator of fluid balance** in infants and children — 1 kg ≈ 1 L of fluid. Rapid weight loss quantifies dehydration."
-        },
-        {
-          "t": "Reported number of wet diapers by phone",
-          "r": "Diaper counts help but are subjective and less precise than measured weight."
-        },
-        {
-          "t": "Presence of tears when crying",
-          "r": "Absence of tears and a sunken fontanel are *signs* of dehydration but don't measure it as reliably as weight."
-        }
-      ],
-      "correct": 1,
-      "tip": "When a question asks for the **best/most reliable** measure of fluid status, **daily weight** usually wins over intake/output estimates.",
-      "pearl": "\"**The scale tells the tale.**\" Other infant dehydration clues: **sunken fontanel, no tears, dry mucous membranes, and decreased urine output (< 1 mL/kg/hr).**",
-      "free": false
+     "t": "\"Use a soft pillow and plush blankets to keep the baby comfortable.\"",
+     "r": "Soft pillows and plush bedding are suffocation hazards."
     },
     {
-      "id": "pediatrics-0004",
-      "exam": "RN",
-      "cat": "Pediatrics",
-      "topic": "Cystic fibrosis nutrition",
-      "difficulty": "Moderate",
-      "type": "mc",
-      "stem": "A child with cystic fibrosis is prescribed pancreatic enzyme replacement. Which instruction should the nurse give the caregivers?",
-      "opts": [
-        {
-          "t": "\"Give the enzymes only at bedtime on an empty stomach.\"",
-          "r": "Enzymes must be taken **with food** to help digest it, not on an empty stomach."
-        },
-        {
-          "t": "\"Give the enzymes with every meal and snack.\"",
-          "r": "In cystic fibrosis, thick secretions block pancreatic enzymes, causing malabsorption. **Pancreatic enzymes are given with every meal and snack** so nutrients (especially fats and fat-soluble vitamins) can be absorbed."
-        },
-        {
-          "t": "\"Restrict the child's fat and calorie intake.\"",
-          "r": "These children need a **high-calorie, high-protein** diet — fat is not restricted; it's supported with enzymes."
-        },
-        {
-          "t": "\"Skip the enzymes on days the child feels well.\"",
-          "r": "Enzymes are needed with all food, every day — not skipped."
-        }
-      ],
-      "correct": 1,
-      "tip": "Rule of thumb for replacement enzymes: **\"No food, no enzyme; food, then enzyme.\"** CF kids need **more** calories, not fewer.",
-      "pearl": "CF = **\"salty, sticky, and hungry.\"** Salty sweat (diagnostic sweat chloride), sticky mucus, and a big appetite need to",
-      "free": false
-    },
-    {
-      "id": "pediatrics-0005",
-      "exam": "RN",
-      "cat": "Pediatrics",
-      "topic": "Tetralogy of Fallot \"tet spell\"",
-      "difficulty": "Hard",
-      "type": "mc",
-      "stem": "A toddler with tetralogy of Fallot suddenly becomes acutely cyanotic and irritable during crying (a hypercyanotic \"tet\" spell). What should the nurse do first?",
-      "opts": [
-        {
-          "t": "Lay the child flat and extend the legs.",
-          "r": "Lying flat with legs extended reduces systemic resistance and worsens the right-to-left shunt and cyanosis."
-        },
-        {
-          "t": "Place the child in a knee-to-chest position.",
-          "r": "The **knee-to-chest** position **increases systemic vascular resistance**, which reduces the right-to-left shunt and directs more blood to the lungs — relieving the cyanotic spell. Oxygen and calming the child follow."
-        },
-        {
-          "t": "Encourage vigorous physical activity to improve circulation.",
-          "r": "Activity increases oxygen demand and deepens cyanosis."
-        },
-        {
-          "t": "Withhold oxygen to avoid drying the airways.",
-          "r": "Oxygen is *given*, not withheld, during a hypercyanotic spell."
-        }
-      ],
-      "correct": 1,
-      "tip": "For a tet spell, the magic position is **knee-to-chest** (older children may squat). Both increase systemic resistance and ease the shunt.",
-      "pearl": "\"**Knees to chest gives the lungs their best.**\" Squatting/knee-chest is the toddler's own instinct to abort a tet spell.",
-      "free": false
+     "t": "\"Let the baby sleep in your bed so you can watch them closely.\"",
+     "r": "Bed-sharing increases the risk of suffocation and SIDS; room-sharing (separate sleep surface) is what's recommended."
     }
-  ]
+   ],
+   "correct": 1,
+   "tip": "Safe sleep = **Back, Bare, Alone (own surface).** Any answer adding pillows, blankets, or prone positioning is wrong.",
+   "pearl": "\"**Back to sleep, tummy to play.**\" The crib should be **boring** — nothing in it but the baby.",
+   "free": true,
+   "client_needs": "Health Promotion and Maintenance",
+   "scoring": "dichotomous",
+   "cjmm_step": "n/a",
+   "level": 2
+  },
+  {
+   "id": "pediatrics-0002",
+   "exam": "RN",
+   "cat": "Pediatrics",
+   "topic": "Suspected epiglottitis",
+   "difficulty": "Hard",
+   "type": "mc",
+   "stem": "A 4-year-old arrives drooling, leaning forward in a tripod position, with a high fever, muffled voice, and refusal to swallow. Epiglottitis is suspected. Which action should the nurse avoid?",
+   "opts": [
+    {
+     "t": "Keeping the child calm and in a position of comfort on the parent's lap",
+     "r": "Keeping the child calm and upright prevents further airway spasm — a correct action, so it is not what the nurse avoids."
+    },
+    {
+     "t": "Examining the throat with a tongue depressor to visualize the epiglottis",
+     "r": "**Never inspect the throat or use a tongue depressor** with suspected epiglottitis — it can trigger laryngospasm and complete airway obstruction. Visualization is done only where an emergency airway can be secured."
+    },
+    {
+     "t": "Preparing emergency airway equipment at the bedside",
+     "r": "Having airway/intubation equipment ready is essential."
+    },
+    {
+     "t": "Notifying the provider and staying with the child",
+     "r": "Staying with the child and notifying the provider is correct."
+    }
+   ],
+   "correct": 1,
+   "tip": "This is a **negative-style** item (\"which should you AVOID\"). Read the stem twice — the *right answer is the wrong action.* For epiglottitis:",
+   "pearl": "Epiglottitis \"**tripod, drool, and muffled**\" = airway emergency. Remember the **4 D's: Drooling, Dysphagia, Dysphonia, Distress.** Don't touch the throat.",
+   "free": true,
+   "client_needs": "Health Promotion and Maintenance",
+   "scoring": "dichotomous",
+   "cjmm_step": "n/a",
+   "level": 4
+  },
+  {
+   "id": "pediatrics-0003",
+   "exam": "RN",
+   "cat": "Pediatrics",
+   "topic": "Pediatric dehydration",
+   "difficulty": "Moderate",
+   "type": "mc",
+   "stem": "A nurse is monitoring an infant admitted with several days of vomiting and diarrhea. Which finding is the most reliable indicator of the infant's fluid status?",
+   "opts": [
+    {
+     "t": "Skin color",
+     "r": "Skin color is nonspecific and affected by many factors."
+    },
+    {
+     "t": "Daily weight",
+     "r": "**Daily weight** measured on the same scale is the **most accurate, objective indicator of fluid balance** in infants and children — 1 kg ≈ 1 L of fluid. Rapid weight loss quantifies dehydration."
+    },
+    {
+     "t": "Reported number of wet diapers by phone",
+     "r": "Diaper counts help but are subjective and less precise than measured weight."
+    },
+    {
+     "t": "Presence of tears when crying",
+     "r": "Absence of tears and a sunken fontanel are *signs* of dehydration but don't measure it as reliably as weight."
+    }
+   ],
+   "correct": 1,
+   "tip": "When a question asks for the **best/most reliable** measure of fluid status, **daily weight** usually wins over intake/output estimates.",
+   "pearl": "\"**The scale tells the tale.**\" Other infant dehydration clues: **sunken fontanel, no tears, dry mucous membranes, and decreased urine output (< 1 mL/kg/hr).**",
+   "free": false,
+   "client_needs": "Health Promotion and Maintenance",
+   "scoring": "dichotomous",
+   "cjmm_step": "n/a",
+   "level": 3
+  },
+  {
+   "id": "pediatrics-0004",
+   "exam": "RN",
+   "cat": "Pediatrics",
+   "topic": "Cystic fibrosis nutrition",
+   "difficulty": "Moderate",
+   "type": "mc",
+   "stem": "A child with cystic fibrosis is prescribed pancreatic enzyme replacement. Which instruction should the nurse give the caregivers?",
+   "opts": [
+    {
+     "t": "\"Give the enzymes only at bedtime on an empty stomach.\"",
+     "r": "Enzymes must be taken **with food** to help digest it, not on an empty stomach."
+    },
+    {
+     "t": "\"Give the enzymes with every meal and snack.\"",
+     "r": "In cystic fibrosis, thick secretions block pancreatic enzymes, causing malabsorption. **Pancreatic enzymes are given with every meal and snack** so nutrients (especially fats and fat-soluble vitamins) can be absorbed."
+    },
+    {
+     "t": "\"Restrict the child's fat and calorie intake.\"",
+     "r": "These children need a **high-calorie, high-protein** diet — fat is not restricted; it's supported with enzymes."
+    },
+    {
+     "t": "\"Skip the enzymes on days the child feels well.\"",
+     "r": "Enzymes are needed with all food, every day — not skipped."
+    }
+   ],
+   "correct": 1,
+   "tip": "Rule of thumb for replacement enzymes: **\"No food, no enzyme; food, then enzyme.\"** CF kids need **more** calories, not fewer.",
+   "pearl": "CF = **\"salty, sticky, and hungry.\"** Salty sweat (diagnostic sweat chloride), sticky mucus, and a big appetite need to",
+   "free": false,
+   "client_needs": "Health Promotion and Maintenance",
+   "scoring": "dichotomous",
+   "cjmm_step": "n/a",
+   "level": 3
+  },
+  {
+   "id": "pediatrics-0005",
+   "exam": "RN",
+   "cat": "Pediatrics",
+   "topic": "Tetralogy of Fallot \"tet spell\"",
+   "difficulty": "Hard",
+   "type": "mc",
+   "stem": "A toddler with tetralogy of Fallot suddenly becomes acutely cyanotic and irritable during crying (a hypercyanotic \"tet\" spell). What should the nurse do first?",
+   "opts": [
+    {
+     "t": "Lay the child flat and extend the legs.",
+     "r": "Lying flat with legs extended reduces systemic resistance and worsens the right-to-left shunt and cyanosis."
+    },
+    {
+     "t": "Place the child in a knee-to-chest position.",
+     "r": "The **knee-to-chest** position **increases systemic vascular resistance**, which reduces the right-to-left shunt and directs more blood to the lungs — relieving the cyanotic spell. Oxygen and calming the child follow."
+    },
+    {
+     "t": "Encourage vigorous physical activity to improve circulation.",
+     "r": "Activity increases oxygen demand and deepens cyanosis."
+    },
+    {
+     "t": "Withhold oxygen to avoid drying the airways.",
+     "r": "Oxygen is *given*, not withheld, during a hypercyanotic spell."
+    }
+   ],
+   "correct": 1,
+   "tip": "For a tet spell, the magic position is **knee-to-chest** (older children may squat). Both increase systemic resistance and ease the shunt.",
+   "pearl": "\"**Knees to chest gives the lungs their best.**\" Squatting/knee-chest is the toddler's own instinct to abort a tet spell.",
+   "free": false,
+   "client_needs": "Health Promotion and Maintenance",
+   "scoring": "dichotomous",
+   "cjmm_step": "n/a",
+   "level": 4
+  }
+ ]
 }

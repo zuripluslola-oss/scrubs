@@ -36,7 +36,11 @@
     1,
     3
    ],
-   "tip": "HF teaching = daily weights, low sodium, take meds, report dyspnea/edema, avoid NSAIDs."
+   "tip": "HF teaching = daily weights, low sodium, take meds, report dyspnea/edema, avoid NSAIDs.",
+   "client_needs": "Physiological Adaptation",
+   "scoring": "dichotomous",
+   "cjmm_step": "n/a",
+   "level": 4
   },
   {
    "id": "qb-ngn-0202",
@@ -74,7 +78,11 @@
     2,
     4
    ],
-   "tip": "Sepsis clues: fever OR hypothermia, tachycardia, tachypnea, hypotension, new confusion, high lactate."
+   "tip": "Sepsis clues: fever OR hypothermia, tachycardia, tachypnea, hypotension, new confusion, high lactate.",
+   "client_needs": "Safety and Infection Control",
+   "scoring": "dichotomous",
+   "cjmm_step": "n/a",
+   "level": 4
   },
   {
    "id": "qb-ngn-0203",
@@ -111,7 +119,11 @@
     1,
     3
    ],
-   "tip": "High-alert: anticoagulants, insulin, opioids, concentrated electrolytes (KCl), chemo. Double-check them."
+   "tip": "High-alert: anticoagulants, insulin, opioids, concentrated electrolytes (KCl), chemo. Double-check them.",
+   "client_needs": "Pharmacological and Parenteral Therapies",
+   "scoring": "dichotomous",
+   "cjmm_step": "n/a",
+   "level": 3
   },
   {
    "id": "qb-ngn-0204",
@@ -152,7 +164,11 @@
      "r": "Sudden weight gain and edema indicate fluid retention (excess)."
     }
    ],
-   "tip": "Deficit = dry, low BP, fast weak pulse. Excess = wet (crackles, edema, JVD), bounding pulse, weight gain."
+   "tip": "Deficit = dry, low BP, fast weak pulse. Excess = wet (crackles, edema, JVD), bounding pulse, weight gain.",
+   "client_needs": "Physiological Adaptation",
+   "scoring": "dichotomous",
+   "cjmm_step": "n/a",
+   "level": 4
   },
   {
    "id": "qb-ngn-0205",
@@ -232,7 +248,11 @@
      1
     ]
    },
-   "tip": "Hypoglycemia: Rule of 15 — 15 g fast carbs, recheck in 15 min. Then a complex carb/protein snack."
+   "tip": "Hypoglycemia: Rule of 15 — 15 g fast carbs, recheck in 15 min. Then a complex carb/protein snack.",
+   "client_needs": "Physiological Adaptation",
+   "scoring": "partial_credit",
+   "cjmm_step": "Take Actions",
+   "level": 4
   }
  ]
 }

@@ -1,6 +1,6 @@
 {
- "title": "Must Love Scrubs — full question bank export",
- "count": 106,
+ "title": "MLSCLEX — full question bank export",
+ "count": 127,
  "questions": [
   {
    "id": "sata-0001",
@@ -40,7 +40,11 @@
     4
    ],
    "tip": "In SATA, weigh **each option as its own true/false.** One clearly harmful choice (“withhold fluids”) is almost always false.",
-   "pearl": "Sepsis hour-1 bundle: **Culture, Cover, Fluids, Lactate.**"
+   "pearl": "Sepsis hour-1 bundle: **Culture, Cover, Fluids, Lactate.**",
+   "client_needs": "Safety and Infection Control",
+   "scoring": "dichotomous",
+   "cjmm_step": "n/a",
+   "level": 4
   },
   {
    "id": "sata-0002",
@@ -80,7 +84,11 @@
     4
    ],
    "tip": "SATA is all-or-nothing here — the **banana** is the classic trap.",
-   "pearl": "Hyperkalemia: **Calcium protects** the heart, **insulin + D50 shifts** K into cells, **dialysis/kayexalate removes** it."
+   "pearl": "Hyperkalemia: **Calcium protects** the heart, **insulin + D50 shifts** K into cells, **dialysis/kayexalate removes** it.",
+   "client_needs": "Pharmacological and Parenteral Therapies",
+   "scoring": "dichotomous",
+   "cjmm_step": "n/a",
+   "level": 3
   },
   {
    "id": "matrix-0001",
@@ -124,7 +132,11 @@
    ],
    "rationale": "Low urine output (20 mL/hr) and new confusion with tachycardia signal deterioration — **act.** A mild temp, improving pain, and a clean, approximated incision are **expected** post-op findings.",
    "tip": "Matrix items: judge **each row independently** — is this expected, or does it need action?",
-   "pearl": "Trend beats a single number: new confusion + rising HR + falling urine = the body's early alarm."
+   "pearl": "Trend beats a single number: new confusion + rising HR + falling urine = the body's early alarm.",
+   "client_needs": "Physiological Adaptation",
+   "scoring": "dichotomous",
+   "cjmm_step": "n/a",
+   "level": 3
   },
   {
    "id": "matrix-0002",
@@ -168,7 +180,11 @@
    ],
    "rationale": "Critical: potassium 6.8 (>5.0), glucose 45 (<70), platelets 40k (<50k). Normal: sodium 139 (135–145) and hemoglobin 13 (about 12–17).",
    "tip": "Know your normal ranges cold — the matrix rewards fast recognition of what's out of range.",
-   "pearl": "Potassium **3.5–5.0**, sodium **135–145**, glucose **70–110** fasting — the ranges the test leans on most."
+   "pearl": "Potassium **3.5–5.0**, sodium **135–145**, glucose **70–110** fasting — the ranges the test leans on most.",
+   "client_needs": "Physiological Adaptation",
+   "scoring": "dichotomous",
+   "cjmm_step": "n/a",
+   "level": 3
   },
   {
    "id": "bowtie-0001",
@@ -254,7 +270,1242 @@
     ]
    },
    "tip": "Bow-tie tests the whole loop: **recognize** the condition → decide what to **do** → decide what to **watch.**",
-   "pearl": "Shock = fast pulse, low pressure, low urine, cool & thirsty. Hypovolemic: **stop the loss, replace the volume.**"
+   "pearl": "Shock = fast pulse, low pressure, low urine, cool & thirsty. Hypovolemic: **stop the loss, replace the volume.**",
+   "client_needs": "Management of Care",
+   "scoring": "partial_credit",
+   "cjmm_step": "Take Actions",
+   "level": 4
+  },
+  {
+   "id": "ms-mc-0001",
+   "exam": "RN",
+   "cat": "Pharmacology",
+   "client_needs": "Pharmacological and Parenteral Therapies",
+   "topic": "Nitroglycerin teaching",
+   "difficulty": "Moderate",
+   "level": 3,
+   "type": "mc",
+   "cjmm_step": "n/a",
+   "scoring": "dichotomous",
+   "stem": "A client is prescribed sublingual nitroglycerin for angina. Which statement indicates correct understanding?",
+   "media": null,
+   "tip": "SL nitro: sit down, 1 tab every 5 min x3, call 911 if unrelieved.",
+   "opts": [
+    {
+     "t": "“I’ll sit down before I place the tablet under my tongue.”",
+     "r": "Correct. Nitroglycerin causes vasodilation and can drop blood pressure, so sitting prevents falls from dizziness."
+    },
+    {
+     "t": "“I’ll swallow the tablet with a full glass of water.”",
+     "r": "Sublingual tablets dissolve under the tongue; swallowing bypasses the intended absorption."
+    },
+    {
+     "t": "“If my chest pain continues, I’ll wait 30 minutes before taking another.”",
+     "r": "The interval is every 5 minutes up to 3 doses — 30 minutes delays needed care."
+    },
+    {
+     "t": "“I’ll keep the tablets in a clear plastic pill organizer.”",
+     "r": "Nitroglycerin degrades in light; it must stay in its original dark glass bottle."
+    }
+   ],
+   "correct": 0
+  },
+  {
+   "id": "ms-sata-0001",
+   "exam": "RN",
+   "cat": "Safety",
+   "client_needs": "Safety and Infection Control",
+   "topic": "Fall prevention",
+   "difficulty": "Moderate",
+   "level": 3,
+   "type": "sata",
+   "cjmm_step": "n/a",
+   "scoring": "dichotomous",
+   "stem": "A nurse is planning fall-prevention measures for a high-risk older adult. Which interventions are appropriate? Select all that apply.",
+   "media": null,
+   "opts": [
+    {
+     "t": "Keep the bed in the lowest position",
+     "r": "Correct. A low bed reduces injury if the client attempts to get up."
+    },
+    {
+     "t": "Ensure the call light is within reach",
+     "r": "Correct. Easy access lets the client summon help instead of getting up alone."
+    },
+    {
+     "t": "Raise all four side rails",
+     "r": "Incorrect. Four raised rails are a restraint and can worsen injury if the client climbs over."
+    },
+    {
+     "t": "Provide non-skid footwear",
+     "r": "Correct. Non-skid soles reduce slipping."
+    },
+    {
+     "t": "Keep the room dimly lit at all times",
+     "r": "Incorrect. Poor lighting increases fall risk; provide adequate lighting."
+    }
+   ],
+   "correct": [
+    0,
+    1,
+    3
+   ]
+  },
+  {
+   "id": "ms-seln-0001",
+   "exam": "RN",
+   "cat": "Med-Surg",
+   "client_needs": "Reduction of Risk Potential",
+   "topic": "Post-op complications",
+   "difficulty": "Hard",
+   "level": 4,
+   "type": "select_n",
+   "cjmm_step": "Recognize Cues",
+   "scoring": "dichotomous",
+   "stem": "A nurse assesses a client 6 hours after abdominal surgery. Select the 3 findings that require immediate follow-up.",
+   "media": null,
+   "pick": 3,
+   "opts": [
+    {
+     "t": "Oxygen saturation 88% on room air",
+     "r": "Correct. Hypoxemia needs prompt intervention (positioning, oxygen)."
+    },
+    {
+     "t": "Urine output 15 mL over the last 2 hours",
+     "r": "Correct. Oliguria (<30 mL/hr) may signal hypovolemia or shock."
+    },
+    {
+     "t": "Rigid, distended abdomen with rebound tenderness",
+     "r": "Correct. Signs of possible internal bleeding or peritonitis."
+    },
+    {
+     "t": "Pain rated 4/10 relieved by repositioning",
+     "r": "Incorrect. Mild, relieved pain is expected post-op."
+    },
+    {
+     "t": "Serosanguineous drainage lightly staining the dressing",
+     "r": "Incorrect. A small amount of serosanguineous drainage is expected early."
+    }
+   ],
+   "correct": [
+    0,
+    1,
+    2
+   ]
+  },
+  {
+   "id": "ms-grp-0001",
+   "exam": "RN",
+   "cat": "Maternal / Newborn",
+   "client_needs": "Health Promotion and Maintenance",
+   "topic": "Newborn assessment",
+   "difficulty": "Moderate",
+   "level": 3,
+   "type": "grouping",
+   "cjmm_step": "Analyze Cues",
+   "scoring": "dichotomous",
+   "stem": "Sort each newborn finding as Expected or Requires follow-up.",
+   "media": null,
+   "groups": [
+    {
+     "label": "Expected",
+     "items": [
+      0,
+      2
+     ]
+    },
+    {
+     "label": "Requires follow-up",
+     "items": [
+      1,
+      3
+     ]
+    }
+   ],
+   "opts": [
+    {
+     "t": "Acrocyanosis of the hands and feet",
+     "r": "Expected. Bluish extremities are normal in the early newborn period."
+    },
+    {
+     "t": "Central cyanosis of the lips and trunk",
+     "r": "Requires follow-up. Central cyanosis indicates inadequate oxygenation."
+    },
+    {
+     "t": "Heart rate 140 beats/min",
+     "r": "Expected. Normal newborn range is 110–160."
+    },
+    {
+     "t": "A single palmar crease with low-set ears",
+     "r": "Requires follow-up. May indicate a chromosomal condition needing evaluation."
+    }
+   ],
+   "answer": {
+    "0": "Expected",
+    "1": "Requires follow-up",
+    "2": "Expected",
+    "3": "Requires follow-up"
+   }
+  },
+  {
+   "id": "ms-fib-0001",
+   "exam": "RN",
+   "cat": "Pharmacology",
+   "client_needs": "Pharmacological and Parenteral Therapies",
+   "topic": "IV heparin calculation",
+   "difficulty": "Hard",
+   "level": 4,
+   "type": "fill_blank",
+   "cjmm_step": "n/a",
+   "scoring": "dichotomous",
+   "stem": "Order: heparin infusion 25,000 units in 250 mL D5W at 800 units/hour. At how many mL/hour should the nurse set the pump? Record to the nearest whole number.",
+   "media": null,
+   "tip": "Concentration = 25,000 units / 250 mL = 100 units/mL. Rate = 800 ÷ 100.",
+   "answer": {
+    "value": 8,
+    "unit": "mL/hr",
+    "accept": [
+     8
+    ]
+   },
+   "r": "25,000 units ÷ 250 mL = 100 units/mL. 800 units/hr ÷ 100 units/mL = 8 mL/hr."
+  },
+  {
+   "id": "ms-ord-0001",
+   "exam": "RN",
+   "cat": "Fundamentals",
+   "client_needs": "Safety and Infection Control",
+   "topic": "Donning PPE",
+   "difficulty": "Moderate",
+   "level": 3,
+   "type": "ordered",
+   "cjmm_step": "n/a",
+   "scoring": "dichotomous",
+   "stem": "Place the steps for donning personal protective equipment (PPE) in the correct order.",
+   "media": null,
+   "items": [
+    {
+     "t": "Perform hand hygiene",
+     "r": "Hand hygiene comes first, before any PPE."
+    },
+    {
+     "t": "Put on the gown",
+     "r": "The gown is donned first among the garments."
+    },
+    {
+     "t": "Put on the mask or respirator",
+     "r": "The mask follows the gown."
+    },
+    {
+     "t": "Put on goggles or face shield",
+     "r": "Eye protection follows the mask."
+    },
+    {
+     "t": "Put on gloves",
+     "r": "Gloves go on last, pulled over the gown cuffs."
+    }
+   ]
+  },
+  {
+   "id": "ms-hot-0001",
+   "exam": "RN",
+   "cat": "Fundamentals",
+   "client_needs": "Physiological Adaptation",
+   "topic": "Apical pulse landmark",
+   "difficulty": "Moderate",
+   "level": 3,
+   "type": "hotspot",
+   "cjmm_step": "n/a",
+   "scoring": "dichotomous",
+   "stem": "A nurse will auscultate the apical pulse (point of maximal impulse). Identify the correct location on the chest diagram.",
+   "media": "Anterior chest diagram with labeled regions: (a) 2nd intercostal space right sternal border, (b) 2nd intercostal space left sternal border, (c) left 5th intercostal space at the midclavicular line, (d) right lower costal margin.",
+   "regions": [
+    {
+     "id": "a",
+     "label": "2nd ICS, right sternal border",
+     "correct": false,
+     "r": "This is the aortic area, not the PMI."
+    },
+    {
+     "id": "b",
+     "label": "2nd ICS, left sternal border",
+     "correct": false,
+     "r": "This is the pulmonic area."
+    },
+    {
+     "id": "c",
+     "label": "Left 5th ICS, midclavicular line",
+     "correct": true,
+     "r": "Correct. The apical pulse/PMI is auscultated here (mitral area)."
+    },
+    {
+     "id": "d",
+     "label": "Right lower costal margin",
+     "correct": false,
+     "r": "This overlies the liver, not the apex of the heart."
+    }
+   ]
+  },
+  {
+   "id": "ms-exh-0001",
+   "exam": "RN",
+   "cat": "Med-Surg",
+   "client_needs": "Physiological Adaptation",
+   "topic": "Prioritizing from the record",
+   "difficulty": "Hard",
+   "level": 4,
+   "type": "exhibit",
+   "cjmm_step": "Prioritize Hypotheses",
+   "scoring": "dichotomous",
+   "stem": "Review the client's record. Which finding requires the nurse to intervene first?",
+   "media": "Tabbed EHR: Vitals, Labs, Orders, Nurses' Notes.",
+   "tabs": {
+    "vitals": "BP 88/54, HR 122, RR 26, SpO2 90%, Temp 38.9°C",
+    "labs": "WBC 18,000, Lactate 4.1 mmol/L",
+    "orders": "IV normal saline bolus, blood cultures x2, broad-spectrum antibiotics",
+    "notes": "Client confused, skin warm and flushed, urine output 15 mL last hour"
+   },
+   "opts": [
+    {
+     "t": "Hypotension with tachycardia and elevated lactate",
+     "r": "Correct. These signal septic shock — the priority requiring immediate fluid resuscitation."
+    },
+    {
+     "t": "Temperature of 38.9°C",
+     "r": "Fever is expected in infection but is not the most urgent finding here."
+    },
+    {
+     "t": "White blood cell count of 18,000",
+     "r": "Leukocytosis supports infection but is not the immediate life threat."
+    },
+    {
+     "t": "Warm, flushed skin",
+     "r": "A finding of early/warm shock, but the hemodynamic instability is the priority."
+    }
+   ],
+   "correct": 0
+  },
+  {
+   "id": "ms-gra-0001",
+   "exam": "RN",
+   "cat": "Med-Surg",
+   "client_needs": "Physiological Adaptation",
+   "topic": "Rhythm identification",
+   "difficulty": "Hard",
+   "level": 4,
+   "type": "graphic",
+   "cjmm_step": "n/a",
+   "scoring": "dichotomous",
+   "stem": "The monitor shows the rhythm below. Which rhythm strip matches a client in ventricular fibrillation?",
+   "media": "Four described ECG strips shown as answer options.",
+   "opts": [
+    {
+     "t": "A chaotic, irregular waveform with no identifiable P waves, QRS, or T waves",
+     "r": "Correct. V-fib is disorganized electrical activity with no discernible complexes — a shockable emergency."
+    },
+    {
+     "t": "A regular narrow-complex rhythm at 80 bpm with a P wave before each QRS",
+     "r": "This is normal sinus rhythm."
+    },
+    {
+     "t": "A sawtooth baseline with regular atrial waves at ~300/min",
+     "r": "This describes atrial flutter."
+    },
+    {
+     "t": "A completely flat line",
+     "r": "This is asystole, not V-fib."
+    }
+   ],
+   "correct": 0
+  },
+  {
+   "id": "ms-aud-0001",
+   "exam": "RN",
+   "cat": "Med-Surg",
+   "client_needs": "Physiological Adaptation",
+   "topic": "Adventitious lung sounds",
+   "difficulty": "Moderate",
+   "level": 3,
+   "type": "audio",
+   "cjmm_step": "n/a",
+   "scoring": "dichotomous",
+   "stem": "Listen to the recorded breath sounds auscultated at the bases. Which finding is most consistent with what is heard?",
+   "media": "Audio clip: fine, high-pitched crackling sounds heard on inspiration at the lung bases.",
+   "opts": [
+    {
+     "t": "Fine crackles suggesting fluid in the alveoli",
+     "r": "Correct. Fine inspiratory crackles at the bases suggest fluid, as in heart failure or pneumonia."
+    },
+    {
+     "t": "Expiratory wheezes from bronchoconstriction",
+     "r": "Wheezes are musical and expiratory, not crackling."
+    },
+    {
+     "t": "A pleural friction rub",
+     "r": "A rub is a grating sound, not fine crackles."
+    },
+    {
+     "t": "Normal vesicular breath sounds",
+     "r": "Crackles are adventitious — not normal breath sounds."
+    }
+   ],
+   "correct": 0
+  },
+  {
+   "id": "ms-tab-0001",
+   "exam": "RN",
+   "cat": "Fundamentals",
+   "client_needs": "Basic Care and Comfort",
+   "topic": "Fluid balance",
+   "difficulty": "Moderate",
+   "level": 3,
+   "type": "table",
+   "cjmm_step": "n/a",
+   "scoring": "dichotomous",
+   "stem": "Review the client's 8-hour intake and output below. What is the nurse's best interpretation?",
+   "media": "I&O table.",
+   "table": {
+    "cols": [
+     "Source",
+     "Amount (mL)"
+    ],
+    "rows": [
+     [
+      "IV fluids",
+      "800"
+     ],
+     [
+      "Oral intake",
+      "400"
+     ],
+     [
+      "Urine output",
+      "250"
+     ],
+     [
+      "Emesis",
+      "150"
+     ]
+    ]
+   },
+   "opts": [
+    {
+     "t": "The client has a net positive fluid balance and reduced urine output",
+     "r": "Correct. Intake 1200 vs output 400 = +800 mL, and urine 250 mL/8 hr is low — monitor for retention/overload."
+    },
+    {
+     "t": "The client is dehydrated and needs fluid restriction",
+     "r": "Intake exceeds output; fluid restriction would be inappropriate reasoning here."
+    },
+    {
+     "t": "Intake and output are balanced",
+     "r": "They are not — intake far exceeds output."
+    },
+    {
+     "t": "Urine output is within expected limits",
+     "r": "250 mL over 8 hr (~31 mL/hr) is at the low end and warrants monitoring."
+    }
+   ],
+   "correct": 0
+  },
+  {
+   "id": "ms-bow-0001",
+   "exam": "RN",
+   "cat": "Med-Surg",
+   "client_needs": "Physiological Adaptation",
+   "topic": "Anaphylaxis clinical judgment",
+   "difficulty": "Hard",
+   "level": 4,
+   "type": "bowtie",
+   "cjmm_step": "Take Actions",
+   "scoring": "partial_credit",
+   "stem": "A client receiving an IV antibiotic suddenly develops hives, lip swelling, wheezing, and BP 82/40. Complete the diagram by selecting the condition, the actions to take, and the parameters to monitor.",
+   "media": null,
+   "condition": {
+    "prompt": "Condition the client is experiencing",
+    "options": [
+     {
+      "t": "Anaphylaxis",
+      "r": "Correct. Acute onset of hives, airway swelling, wheezing, and hypotension after a drug is anaphylaxis."
+     },
+     {
+      "t": "Panic attack",
+      "r": "A panic attack does not cause hives, lip swelling, or hypotension."
+     },
+     {
+      "t": "Fluid volume overload",
+      "r": "Overload causes crackles and hypertension, not hives and hypotension."
+     }
+    ],
+    "correct": 0
+   },
+   "actions": {
+    "prompt": "Actions to take",
+    "pick": 2,
+    "options": [
+     {
+      "t": "Stop the antibiotic infusion immediately",
+      "r": "Correct. Removing the trigger is essential."
+     },
+     {
+      "t": "Prepare to administer intramuscular epinephrine",
+      "r": "Correct. Epinephrine is the first-line drug for anaphylaxis."
+     },
+     {
+      "t": "Administer the next scheduled dose of the antibiotic",
+      "r": "Incorrect and dangerous — continuing the trigger worsens the reaction."
+     },
+     {
+      "t": "Place the client in a high-Fowler’s position and restrict fluids",
+      "r": "Incorrect. The client needs fluids for hypotension, not restriction."
+     }
+    ],
+    "correct": [
+     0,
+     1
+    ]
+   },
+   "parameters": {
+    "prompt": "Parameters to monitor",
+    "pick": 2,
+    "options": [
+     {
+      "t": "Airway and respiratory status",
+      "r": "Correct. Airway swelling can progress to obstruction."
+     },
+     {
+      "t": "Blood pressure",
+      "r": "Correct. Monitor for worsening or resolving distributive shock."
+     },
+     {
+      "t": "Daily weight",
+      "r": "Not the acute monitoring priority in anaphylaxis."
+     },
+     {
+      "t": "Bowel sounds",
+      "r": "Not the acute priority here."
+     }
+    ],
+    "correct": [
+     0,
+     1
+    ]
+   }
+  },
+  {
+   "id": "ms-trn-0001",
+   "exam": "RN",
+   "cat": "Med-Surg",
+   "client_needs": "Physiological Adaptation",
+   "topic": "Recognizing deterioration",
+   "difficulty": "Hard",
+   "level": 4,
+   "type": "trend",
+   "cjmm_step": "Analyze Cues",
+   "scoring": "dichotomous",
+   "stem": "The client's vital signs are trended below over 6 hours. What is the nurse's best interpretation of the trend?",
+   "media": "Timeline of vital signs across 0800, 1000, 1200, 1400.",
+   "timeline": [
+    {
+     "time": "0800",
+     "data": {
+      "HR": 88,
+      "BP": "118/72",
+      "RR": 16,
+      "SpO2": 98
+     }
+    },
+    {
+     "time": "1000",
+     "data": {
+      "HR": 102,
+      "BP": "108/66",
+      "RR": 20,
+      "SpO2": 95
+     }
+    },
+    {
+     "time": "1200",
+     "data": {
+      "HR": 118,
+      "BP": "96/58",
+      "RR": 24,
+      "SpO2": 92
+     }
+    },
+    {
+     "time": "1400",
+     "data": {
+      "HR": 130,
+      "BP": "84/50",
+      "RR": 28,
+      "SpO2": 89
+     }
+    }
+   ],
+   "opts": [
+    {
+     "t": "The client is deteriorating toward shock and needs urgent intervention",
+     "r": "Correct. Rising HR/RR with falling BP and SpO2 is a classic worsening-shock trend."
+    },
+    {
+     "t": "The client is stable and improving",
+     "r": "The trend is clearly worsening, not improving."
+    },
+    {
+     "t": "The changes are expected and need no action",
+     "r": "A progressive decline in perfusion always warrants action."
+    },
+    {
+     "t": "The client is over-sedated",
+     "r": "Sedation would lower HR/RR, not raise them."
+    }
+   ],
+   "correct": 0
+  },
+  {
+   "id": "ms-mtx-0001",
+   "exam": "RN",
+   "cat": "Med-Surg",
+   "client_needs": "Physiological Adaptation",
+   "topic": "Fluid balance findings",
+   "difficulty": "Hard",
+   "level": 4,
+   "type": "matrix",
+   "cjmm_step": "Analyze Cues",
+   "scoring": "dichotomous",
+   "stem": "For each assessment finding, indicate whether it suggests fluid volume DEFICIT or fluid volume EXCESS.",
+   "media": null,
+   "cols": [
+    "Fluid deficit",
+    "Fluid excess"
+   ],
+   "rows": [
+    {
+     "t": "Bounding pulse and distended neck veins",
+     "correct": 1,
+     "r": "Bounding pulse and JVD reflect fluid overload."
+    },
+    {
+     "t": "Dry mucous membranes and poor skin turgor",
+     "correct": 0,
+     "r": "Dry mucosa and tenting indicate deficit."
+    },
+    {
+     "t": "Crackles in the lung bases",
+     "correct": 1,
+     "r": "Pulmonary crackles suggest fluid overload."
+    },
+    {
+     "t": "Hypotension with tachycardia",
+     "correct": 0,
+     "r": "Low BP with compensatory tachycardia points to deficit."
+    }
+   ]
+  },
+  {
+   "id": "ms-mtxmr-0001",
+   "exam": "RN",
+   "cat": "Pharmacology",
+   "client_needs": "Pharmacological and Parenteral Therapies",
+   "topic": "Medication routes",
+   "difficulty": "Moderate",
+   "level": 3,
+   "type": "matrix_mr",
+   "cjmm_step": "n/a",
+   "scoring": "dichotomous",
+   "stem": "For each medication, select ALL routes by which it can be safely administered.",
+   "media": null,
+   "cols": [
+    "PO",
+    "IV",
+    "Subcutaneous"
+   ],
+   "rows": [
+    {
+     "t": "Regular insulin",
+     "correct": [
+      1,
+      2
+     ],
+     "r": "Regular insulin is the only insulin given IV, and is also given subcutaneously — never PO (destroyed by digestion)."
+    },
+    {
+     "t": "Warfarin",
+     "correct": [
+      0
+     ],
+     "r": "Warfarin is administered orally."
+    },
+    {
+     "t": "Heparin (unfractionated)",
+     "correct": [
+      1,
+      2
+     ],
+     "r": "Heparin is given IV or subcutaneously, not orally."
+    }
+   ]
+  },
+  {
+   "id": "ms-ddt-0001",
+   "exam": "RN",
+   "cat": "Med-Surg",
+   "client_needs": "Reduction of Risk Potential",
+   "topic": "Lab interpretation",
+   "difficulty": "Hard",
+   "level": 4,
+   "type": "dropdown_table",
+   "cjmm_step": "Analyze Cues",
+   "scoring": "dichotomous",
+   "stem": "For each laboratory value, select whether it is LOW, WITHIN NORMAL LIMITS, or HIGH.",
+   "media": null,
+   "cols_prompt": "Interpretation",
+   "rows": [
+    {
+     "t": "Potassium 2.9 mEq/L",
+     "options": [
+      {
+       "t": "Low",
+       "r": "Correct. Normal potassium is 3.5–5.0 mEq/L; 2.9 is low."
+      },
+      {
+       "t": "Within normal limits",
+       "r": "2.9 is below the normal range."
+      },
+      {
+       "t": "High",
+       "r": "2.9 is low, not high."
+      }
+     ],
+     "correct": 0
+    },
+    {
+     "t": "Sodium 140 mEq/L",
+     "options": [
+      {
+       "t": "Low",
+       "r": "140 is normal."
+      },
+      {
+       "t": "Within normal limits",
+       "r": "Correct. Normal sodium is 135–145 mEq/L."
+      },
+      {
+       "t": "High",
+       "r": "140 is normal."
+      }
+     ],
+     "correct": 1
+    },
+    {
+     "t": "Glucose 320 mg/dL",
+     "options": [
+      {
+       "t": "Low",
+       "r": "320 is elevated, not low."
+      },
+      {
+       "t": "Within normal limits",
+       "r": "Fasting normal is ~70–110 mg/dL."
+      },
+      {
+       "t": "High",
+       "r": "Correct. 320 mg/dL is hyperglycemic."
+      }
+     ],
+     "correct": 2
+    }
+   ]
+  },
+  {
+   "id": "ms-ddc-0001",
+   "exam": "RN",
+   "cat": "Med-Surg",
+   "client_needs": "Physiological Adaptation",
+   "topic": "Hypoglycemia action",
+   "difficulty": "Moderate",
+   "level": 3,
+   "type": "dropdown_cloze",
+   "cjmm_step": "Take Actions",
+   "scoring": "dichotomous",
+   "stem": "Complete the sentence by selecting the correct options.",
+   "media": null,
+   "sentence": "For a conscious client with a blood glucose of 52 mg/dL, the nurse should first {{0}} and then {{1}}.",
+   "blanks": [
+    {
+     "options": [
+      {
+       "t": "give 15 g of a fast-acting carbohydrate",
+       "r": "Correct. The Rule of 15: treat with 15 g fast carbs."
+      },
+      {
+       "t": "administer the client’s scheduled insulin",
+       "r": "Incorrect — insulin lowers glucose further."
+      },
+      {
+       "t": "keep the client NPO",
+       "r": "Incorrect — the client needs carbohydrate."
+      }
+     ],
+     "correct": 0
+    },
+    {
+     "options": [
+      {
+       "t": "recheck the blood glucose in 15 minutes",
+       "r": "Correct. Recheck in 15 minutes and repeat if still low."
+      },
+      {
+       "t": "wait one hour before rechecking",
+       "r": "Too long — recheck at 15 minutes."
+      },
+      {
+       "t": "notify the dietitian",
+       "r": "Not the immediate next step."
+      }
+     ],
+     "correct": 0
+    }
+   ]
+  },
+  {
+   "id": "ms-ddr-0001",
+   "exam": "RN",
+   "cat": "Med-Surg",
+   "client_needs": "Physiological Adaptation",
+   "topic": "Digoxin toxicity reasoning",
+   "difficulty": "Hard",
+   "level": 4,
+   "type": "dropdown_rationale",
+   "cjmm_step": "Analyze Cues",
+   "scoring": "dichotomous",
+   "stem": "Complete the sentence to explain the nurse's clinical reasoning.",
+   "media": null,
+   "sentence": "The client is most likely experiencing {{0}} as evidenced by {{1}}.",
+   "blanks": [
+    {
+     "options": [
+      {
+       "t": "digoxin toxicity",
+       "r": "Correct. Nausea, anorexia, and yellow-green vision with a low potassium point to digoxin toxicity."
+      },
+      {
+       "t": "a myocardial infarction",
+       "r": "MI presents with chest pain and ECG changes, not yellow-green vision."
+      },
+      {
+       "t": "a hypoglycemic episode",
+       "r": "Hypoglycemia causes shakiness and diaphoresis, not visual halos."
+      }
+     ],
+     "correct": 0
+    },
+    {
+     "options": [
+      {
+       "t": "nausea, anorexia, and yellow-green visual halos with a potassium of 3.1",
+       "r": "Correct. These are classic toxicity signs; hypokalemia increases the risk."
+      },
+      {
+       "t": "a fever of 38.9°C and productive cough",
+       "r": "These suggest infection, not digoxin toxicity."
+      },
+      {
+       "t": "a blood pressure of 150/92",
+       "r": "Hypertension alone does not indicate digoxin toxicity."
+      }
+     ],
+     "correct": 0
+    }
+   ]
+  },
+  {
+   "id": "ms-hlt-0001",
+   "exam": "RN",
+   "cat": "Med-Surg",
+   "client_needs": "Reduction of Risk Potential",
+   "topic": "Recognize cues in a note",
+   "difficulty": "Hard",
+   "level": 4,
+   "type": "highlight_text",
+   "cjmm_step": "Recognize Cues",
+   "scoring": "dichotomous",
+   "stem": "Highlight the findings in the nurse's note that require immediate follow-up.",
+   "media": null,
+   "segments": [
+    {
+     "t": "Client resting in bed.",
+     "r": "Normal — no follow-up needed.",
+     "correct": false
+    },
+    {
+     "t": "Reports new shortness of breath and chest tightness.",
+     "r": "Requires follow-up — possible cardiac or pulmonary emergency.",
+     "correct": true
+    },
+    {
+     "t": "Oxygen saturation 88% on room air.",
+     "r": "Requires follow-up — hypoxemia.",
+     "correct": true
+    },
+    {
+     "t": "Skin warm and dry.",
+     "r": "Normal finding.",
+     "correct": false
+    },
+    {
+     "t": "Left calf swollen, red, and tender to touch.",
+     "r": "Requires follow-up — possible DVT.",
+     "correct": true
+    }
+   ]
+  },
+  {
+   "id": "ms-hltb-0001",
+   "exam": "RN",
+   "cat": "Med-Surg",
+   "client_needs": "Reduction of Risk Potential",
+   "topic": "Abnormal vital signs",
+   "difficulty": "Moderate",
+   "level": 3,
+   "type": "highlight_table",
+   "cjmm_step": "Recognize Cues",
+   "scoring": "dichotomous",
+   "stem": "Highlight each vital sign value that is outside normal limits for an adult.",
+   "media": "Vital signs table.",
+   "cols": [
+    "Vital sign",
+    "Value"
+   ],
+   "rows": [
+    {
+     "t": "Heart rate",
+     "cells": [
+      {
+       "t": "Heart rate",
+       "r": "Row label.",
+       "correct": false
+      },
+      {
+       "t": "128 bpm",
+       "r": "Highlight — tachycardia (normal 60–100).",
+       "correct": true
+      }
+     ]
+    },
+    {
+     "t": "Blood pressure",
+     "cells": [
+      {
+       "t": "Blood pressure",
+       "r": "Row label.",
+       "correct": false
+      },
+      {
+       "t": "88/54 mmHg",
+       "r": "Highlight — hypotension.",
+       "correct": true
+      }
+     ]
+    },
+    {
+     "t": "Respiratory rate",
+     "cells": [
+      {
+       "t": "Respiratory rate",
+       "r": "Row label.",
+       "correct": false
+      },
+      {
+       "t": "16 breaths/min",
+       "r": "Normal — do not highlight.",
+       "correct": false
+      }
+     ]
+    },
+    {
+     "t": "Temperature",
+     "cells": [
+      {
+       "t": "Temperature",
+       "r": "Row label.",
+       "correct": false
+      },
+      {
+       "t": "38.9°C (102°F)",
+       "r": "Highlight — fever.",
+       "correct": true
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "ms-case-0001",
+   "exam": "RN",
+   "cat": "Med-Surg",
+   "client_needs": "Physiological Adaptation",
+   "topic": "Heart failure unfolding case",
+   "difficulty": "Hard",
+   "level": 4,
+   "type": "casestudy",
+   "cjmm_step": "Recognize Cues",
+   "scoring": "partial_credit",
+   "stem": "A 68-year-old client with a history of heart failure presents to the clinic. Use the record to answer the six questions.",
+   "media": null,
+   "scenario": "A 68-year-old client with chronic heart failure reports 3 days of worsening shortness of breath, trouble sleeping flat, and swelling in both legs.",
+   "tabs": {
+    "history": "Chronic heart failure, hypertension, type 2 diabetes.",
+    "vitals": "BP 158/94, HR 104, RR 24, SpO2 90% on room air, weight up 4 kg in 3 days.",
+    "labs": "BNP elevated; potassium 3.4 mEq/L.",
+    "orders": "IV furosemide, daily weights, 2 g sodium diet, oxygen to keep SpO2 >94%.",
+    "nurses_notes": "Bilateral crackles to mid-lung fields; 2+ pitting edema to the knees; jugular venous distention noted.",
+    "mar": "Furosemide, lisinopril, metoprolol, metformin."
+   },
+   "questions": [
+    {
+     "id": "ms-case-0001-q1",
+     "exam": "RN",
+     "cat": "Med-Surg",
+     "client_needs": "Physiological Adaptation",
+     "topic": "Heart failure",
+     "difficulty": "Moderate",
+     "level": 3,
+     "type": "sata",
+     "cjmm_step": "Recognize Cues",
+     "scoring": "dichotomous",
+     "stem": "Which findings are consistent with worsening heart failure? Select all that apply.",
+     "media": null,
+     "opts": [
+      {
+       "t": "Bilateral crackles and SpO2 90%",
+       "r": "Correct. Pulmonary congestion and hypoxemia reflect fluid backing into the lungs."
+      },
+      {
+       "t": "4 kg weight gain in 3 days",
+       "r": "Correct. Rapid weight gain signals fluid retention."
+      },
+      {
+       "t": "2+ pitting edema and jugular venous distention",
+       "r": "Correct. Signs of fluid overload."
+      },
+      {
+       "t": "Blood pressure 158/94",
+       "r": "Correct. Elevated afterload is consistent with decompensation."
+      },
+      {
+       "t": "Potassium 3.4 mEq/L",
+       "r": "Incorrect for this item — hypokalemia is a lab concern (diuretic-related) but not a direct sign of worsening congestion."
+      }
+     ],
+     "correct": [
+      0,
+      1,
+      2,
+      3
+     ]
+    },
+    {
+     "id": "ms-case-0001-q2",
+     "exam": "RN",
+     "cat": "Med-Surg",
+     "client_needs": "Physiological Adaptation",
+     "topic": "Heart failure",
+     "difficulty": "Hard",
+     "level": 4,
+     "type": "matrix",
+     "cjmm_step": "Analyze Cues",
+     "scoring": "dichotomous",
+     "stem": "For each finding, indicate whether it reflects FLUID OVERLOAD or a MEDICATION side effect to monitor.",
+     "media": null,
+     "cols": [
+      "Fluid overload",
+      "Medication concern"
+     ],
+     "rows": [
+      {
+       "t": "Jugular venous distention",
+       "correct": 0,
+       "r": "JVD reflects volume overload."
+      },
+      {
+       "t": "Potassium 3.4 mEq/L",
+       "correct": 1,
+       "r": "Hypokalemia is a furosemide side effect to monitor."
+      },
+      {
+       "t": "Bilateral crackles",
+       "correct": 0,
+       "r": "Pulmonary congestion is overload."
+      },
+      {
+       "t": "Rising serum creatinine",
+       "correct": 1,
+       "r": "Over-diuresis/ACE inhibitor can affect renal function — a medication concern."
+      }
+     ]
+    },
+    {
+     "id": "ms-case-0001-q3",
+     "exam": "RN",
+     "cat": "Med-Surg",
+     "client_needs": "Physiological Adaptation",
+     "topic": "Heart failure",
+     "difficulty": "Moderate",
+     "level": 3,
+     "type": "mc",
+     "cjmm_step": "Prioritize Hypotheses",
+     "scoring": "dichotomous",
+     "stem": "Which problem should the nurse prioritize?",
+     "media": null,
+     "opts": [
+      {
+       "t": "Impaired gas exchange related to pulmonary congestion",
+       "r": "Correct. Airway/breathing and oxygenation take priority (SpO2 90% with crackles)."
+      },
+      {
+       "t": "Risk for impaired skin integrity related to edema",
+       "r": "A valid concern but not the immediate priority over oxygenation."
+      },
+      {
+       "t": "Deficient knowledge related to diet",
+       "r": "Important for teaching later, not the acute priority."
+      },
+      {
+       "t": "Fatigue related to poor sleep",
+       "r": "Lowest priority compared with gas exchange."
+      }
+     ],
+     "correct": 0
+    },
+    {
+     "id": "ms-case-0001-q4",
+     "exam": "RN",
+     "cat": "Med-Surg",
+     "client_needs": "Physiological Adaptation",
+     "topic": "Heart failure",
+     "difficulty": "Moderate",
+     "level": 3,
+     "type": "select_n",
+     "cjmm_step": "Generate Solutions",
+     "scoring": "dichotomous",
+     "stem": "Select the 3 most appropriate interventions to include in the plan of care.",
+     "media": null,
+     "pick": 3,
+     "opts": [
+      {
+       "t": "Administer IV furosemide as prescribed",
+       "r": "Correct. Diuresis reduces fluid overload."
+      },
+      {
+       "t": "Apply oxygen to maintain SpO2 above 94%",
+       "r": "Correct. Corrects hypoxemia."
+      },
+      {
+       "t": "Position the client in high-Fowler’s",
+       "r": "Correct. Upright positioning eases breathing and reduces preload."
+      },
+      {
+       "t": "Encourage increased oral fluids",
+       "r": "Incorrect — the client is fluid overloaded."
+      },
+      {
+       "t": "Provide a high-sodium diet",
+       "r": "Incorrect — sodium is restricted in heart failure."
+      }
+     ],
+     "correct": [
+      0,
+      1,
+      2
+     ]
+    },
+    {
+     "id": "ms-case-0001-q5",
+     "exam": "RN",
+     "cat": "Med-Surg",
+     "client_needs": "Physiological Adaptation",
+     "topic": "Heart failure",
+     "difficulty": "Moderate",
+     "level": 3,
+     "type": "dropdown_cloze",
+     "cjmm_step": "Take Actions",
+     "scoring": "dichotomous",
+     "stem": "Complete the nurse's next action.",
+     "media": null,
+     "sentence": "Because the client is receiving furosemide with a potassium of 3.4, the nurse should {{0}} and {{1}}.",
+     "blanks": [
+      {
+       "options": [
+        {
+         "t": "monitor potassium and cardiac rhythm",
+         "r": "Correct. Furosemide wastes potassium; hypokalemia risks dysrhythmias."
+        },
+        {
+         "t": "restrict all dietary potassium",
+         "r": "Incorrect — the client is already low."
+        },
+        {
+         "t": "hold all cardiac medications",
+         "r": "Incorrect — not indicated."
+        }
+       ],
+       "correct": 0
+      },
+      {
+       "options": [
+        {
+         "t": "anticipate potassium replacement per protocol",
+         "r": "Correct. Low potassium is typically replaced."
+        },
+        {
+         "t": "increase the furosemide dose",
+         "r": "Incorrect — would worsen hypokalemia."
+        },
+        {
+         "t": "stop monitoring daily weights",
+         "r": "Incorrect — weights track fluid status."
+        }
+       ],
+       "correct": 0
+      }
+     ]
+    },
+    {
+     "id": "ms-case-0001-q6",
+     "exam": "RN",
+     "cat": "Med-Surg",
+     "client_needs": "Physiological Adaptation",
+     "topic": "Heart failure",
+     "difficulty": "Moderate",
+     "level": 3,
+     "type": "mc",
+     "cjmm_step": "Evaluate Outcomes",
+     "scoring": "dichotomous",
+     "stem": "After treatment, which finding best indicates the interventions were effective?",
+     "media": null,
+     "opts": [
+      {
+       "t": "SpO2 96%, clear lung sounds, and 2 kg weight loss",
+       "r": "Correct. Improved oxygenation, clearing congestion, and fluid loss show effective treatment."
+      },
+      {
+       "t": "Weight increased by another 1 kg",
+       "r": "Weight gain indicates worsening fluid retention."
+      },
+      {
+       "t": "Crackles now heard throughout all lung fields",
+       "r": "Worsening crackles show the congestion is not resolving."
+      },
+      {
+       "t": "Urine output of 10 mL over 4 hours",
+       "r": "Very low output suggests diuresis is not working or worsening renal perfusion."
+      }
+     ],
+     "correct": 0
+    }
+   ]
   },
   {
    "id": "qb-fs-0101",
@@ -284,7 +1535,11 @@
    ],
    "correct": 1,
    "tip": "ABCs first, then acute-over-chronic and unstable-over-stable. Low SpO₂ + confusion wins.",
-   "free": true
+   "free": true,
+   "client_needs": "Safety and Infection Control",
+   "scoring": "dichotomous",
+   "cjmm_step": "n/a",
+   "level": 3
   },
   {
    "id": "qb-fs-0102",
@@ -313,7 +1568,11 @@
     }
    ],
    "correct": 1,
-   "tip": "Don't delegate assess, teach, evaluate, or the unstable client. UAP = stable, routine, standard tasks."
+   "tip": "Don't delegate assess, teach, evaluate, or the unstable client. UAP = stable, routine, standard tasks.",
+   "client_needs": "Safety and Infection Control",
+   "scoring": "dichotomous",
+   "cjmm_step": "n/a",
+   "level": 3
   },
   {
    "id": "qb-fs-0103",
@@ -342,7 +1601,11 @@
     }
    ],
    "correct": 2,
-   "tip": "Airborne (\"My Chicken Hz TB\"): Measles, Chickenpox/varicella, Herpes zoster (disseminated), TB → N95 + negative-pressure room."
+   "tip": "Airborne (\"My Chicken Hz TB\"): Measles, Chickenpox/varicella, Herpes zoster (disseminated), TB → N95 + negative-pressure room.",
+   "client_needs": "Basic Care and Comfort",
+   "scoring": "dichotomous",
+   "cjmm_step": "n/a",
+   "level": 3
   },
   {
    "id": "qb-fs-0104",
@@ -371,7 +1634,11 @@
     }
    ],
    "correct": 1,
-   "tip": "Fall prevention: low bed, call light reachable, non-skid footwear, clear path, scheduled toileting."
+   "tip": "Fall prevention: low bed, call light reachable, non-skid footwear, clear path, scheduled toileting.",
+   "client_needs": "Safety and Infection Control",
+   "scoring": "dichotomous",
+   "cjmm_step": "n/a",
+   "level": 2
   },
   {
    "id": "qb-fs-0105",
@@ -400,7 +1667,11 @@
     }
    ],
    "correct": 1,
-   "tip": "X-ray is the gold standard for initial NG placement. pH testing helps for ongoing checks."
+   "tip": "X-ray is the gold standard for initial NG placement. pH testing helps for ongoing checks.",
+   "client_needs": "Basic Care and Comfort",
+   "scoring": "dichotomous",
+   "cjmm_step": "n/a",
+   "level": 4
   },
   {
    "id": "qb-fs-0106",
@@ -429,7 +1700,11 @@
     }
    ],
    "correct": 1,
-   "tip": "Stage 1 = intact skin, non-blanchable redness. If it blanches, it's not a pressure injury yet."
+   "tip": "Stage 1 = intact skin, non-blanchable redness. If it blanches, it's not a pressure injury yet.",
+   "client_needs": "Basic Care and Comfort",
+   "scoring": "dichotomous",
+   "cjmm_step": "n/a",
+   "level": 3
   },
   {
    "id": "qb-fs-0107",
@@ -458,7 +1733,11 @@
     }
    ],
    "correct": 1,
-   "tip": "After a med error: assess/protect the client → notify provider → incident report. Never hide it."
+   "tip": "After a med error: assess/protect the client → notify provider → incident report. Never hide it.",
+   "client_needs": "Safety and Infection Control",
+   "scoring": "dichotomous",
+   "cjmm_step": "n/a",
+   "level": 3
   },
   {
    "id": "qb-fs-0108",
@@ -487,7 +1766,11 @@
     }
    ],
    "correct": 1,
-   "tip": "C. diff and norovirus → SOAP AND WATER (spores resist alcohol). Otherwise alcohol rub is fine."
+   "tip": "C. diff and norovirus → SOAP AND WATER (spores resist alcohol). Otherwise alcohol rub is fine.",
+   "client_needs": "Basic Care and Comfort",
+   "scoring": "dichotomous",
+   "cjmm_step": "n/a",
+   "level": 2
   },
   {
    "id": "qb-fs-0109",
@@ -516,7 +1799,11 @@
     }
    ],
    "correct": 1,
-   "tip": "Restraints: least restrictive, time-limited order, secure to bed frame, quick-release, frequent checks."
+   "tip": "Restraints: least restrictive, time-limited order, secure to bed frame, quick-release, frequent checks.",
+   "client_needs": "Safety and Infection Control",
+   "scoring": "dichotomous",
+   "cjmm_step": "n/a",
+   "level": 4
   },
   {
    "id": "qb-fs-0110",
@@ -545,7 +1832,11 @@
     }
    ],
    "correct": 1,
-   "tip": "Sterile field rules: 1-inch border = contaminated; below waist/table = contaminated; keep it in sight."
+   "tip": "Sterile field rules: 1-inch border = contaminated; below waist/table = contaminated; keep it in sight.",
+   "client_needs": "Basic Care and Comfort",
+   "scoring": "dichotomous",
+   "cjmm_step": "n/a",
+   "level": 3
   },
   {
    "id": "qb-mp-0101",
@@ -574,7 +1865,11 @@
     }
    ],
    "correct": 1,
-   "tip": "Mag toxicity: lost reflexes → respiratory depression → cardiac arrest. Antidote = calcium gluconate."
+   "tip": "Mag toxicity: lost reflexes → respiratory depression → cardiac arrest. Antidote = calcium gluconate.",
+   "client_needs": "Health Promotion and Maintenance",
+   "scoring": "dichotomous",
+   "cjmm_step": "n/a",
+   "level": 4
   },
   {
    "id": "qb-mp-0102",
@@ -603,7 +1898,11 @@
     }
    ],
    "correct": 1,
-   "tip": "VEAL CHOP — Late decels = Placental insufficiency. Stop Pit, reposition, O₂, IV fluids, notify."
+   "tip": "VEAL CHOP — Late decels = Placental insufficiency. Stop Pit, reposition, O₂, IV fluids, notify.",
+   "client_needs": "Health Promotion and Maintenance",
+   "scoring": "dichotomous",
+   "cjmm_step": "n/a",
+   "level": 4
   },
   {
    "id": "qb-mp-0103",
@@ -632,7 +1931,11 @@
     }
    ],
    "correct": 0,
-   "tip": "Boggy uterus = atony = #1 cause of early PPH. Massage first; a full bladder displaces the uterus (have her void)."
+   "tip": "Boggy uterus = atony = #1 cause of early PPH. Massage first; a full bladder displaces the uterus (have her void).",
+   "client_needs": "Health Promotion and Maintenance",
+   "scoring": "dichotomous",
+   "cjmm_step": "n/a",
+   "level": 4
   },
   {
    "id": "qb-mp-0104",
@@ -661,7 +1964,11 @@
     }
    ],
    "correct": 1,
-   "tip": "Acrocyanosis (extremities) = normal; central cyanosis (lips/trunk) = abnormal, act."
+   "tip": "Acrocyanosis (extremities) = normal; central cyanosis (lips/trunk) = abnormal, act.",
+   "client_needs": "Health Promotion and Maintenance",
+   "scoring": "dichotomous",
+   "cjmm_step": "n/a",
+   "level": 3
   },
   {
    "id": "qb-mp-0105",
@@ -690,7 +1997,11 @@
     }
    ],
    "correct": 1,
-   "tip": "Suspected epiglottitis = hands off the throat. No tongue blades, no throat cultures until airway is secured."
+   "tip": "Suspected epiglottitis = hands off the throat. No tongue blades, no throat cultures until airway is secured.",
+   "client_needs": "Health Promotion and Maintenance",
+   "scoring": "dichotomous",
+   "cjmm_step": "n/a",
+   "level": 4
   },
   {
    "id": "qb-mp-0106",
@@ -719,7 +2030,11 @@
     }
    ],
    "correct": 1,
-   "tip": "Infant dehydration: fewer wet diapers, sunken fontanel, no tears, dry mucous membranes, poor turgor."
+   "tip": "Infant dehydration: fewer wet diapers, sunken fontanel, no tears, dry mucous membranes, poor turgor.",
+   "client_needs": "Health Promotion and Maintenance",
+   "scoring": "dichotomous",
+   "cjmm_step": "n/a",
+   "level": 3
   },
   {
    "id": "qb-mp-0107",
@@ -748,7 +2063,11 @@
     }
    ],
    "correct": 1,
-   "tip": "Never give aspirin to children (Reye's syndrome). Use weight-based acetaminophen/ibuprofen + fluids."
+   "tip": "Never give aspirin to children (Reye's syndrome). Use weight-based acetaminophen/ibuprofen + fluids.",
+   "client_needs": "Health Promotion and Maintenance",
+   "scoring": "dichotomous",
+   "cjmm_step": "n/a",
+   "level": 2
   },
   {
    "id": "qb-mp-0108",
@@ -777,7 +2096,11 @@
     }
    ],
    "correct": 1,
-   "tip": "CF pancreatic enzymes: with EVERY meal and snack, to absorb fat-soluble vitamins (A, D, E, K)."
+   "tip": "CF pancreatic enzymes: with EVERY meal and snack, to absorb fat-soluble vitamins (A, D, E, K).",
+   "client_needs": "Health Promotion and Maintenance",
+   "scoring": "dichotomous",
+   "cjmm_step": "n/a",
+   "level": 3
   },
   {
    "id": "qb-mp-0109",
@@ -806,7 +2129,11 @@
     }
    ],
    "correct": 1,
-   "tip": "Croup = barking/seal cough + stridor (viral, gradual). Epiglottitis = drooling + tripod (emergency)."
+   "tip": "Croup = barking/seal cough + stridor (viral, gradual). Epiglottitis = drooling + tripod (emergency).",
+   "client_needs": "Health Promotion and Maintenance",
+   "scoring": "dichotomous",
+   "cjmm_step": "n/a",
+   "level": 3
   },
   {
    "id": "qb-mp-0110",
@@ -835,7 +2162,11 @@
     }
    ],
    "correct": 1,
-   "tip": "Adequate intake in a newborn: 6+ wet diapers/day, regular stools, steady weight gain, contentment after feeds."
+   "tip": "Adequate intake in a newborn: 6+ wet diapers/day, regular stools, steady weight gain, contentment after feeds.",
+   "client_needs": "Health Promotion and Maintenance",
+   "scoring": "dichotomous",
+   "cjmm_step": "n/a",
+   "level": 2
   },
   {
    "id": "qb-ms-0101",
@@ -865,7 +2196,11 @@
    ],
    "correct": 0,
    "tip": "Hyperkalemia → peaked T waves → wide QRS → arrest. Cardiac changes are always the priority.",
-   "pearl": "**K⁺ high = T's high (peaked).** Treat with calcium gluconate (protect heart), then insulin+D50/albuterol to shift K⁺ in."
+   "pearl": "**K⁺ high = T's high (peaked).** Treat with calcium gluconate (protect heart), then insulin+D50/albuterol to shift K⁺ in.",
+   "client_needs": "Physiological Adaptation",
+   "scoring": "dichotomous",
+   "cjmm_step": "n/a",
+   "level": 4
   },
   {
    "id": "qb-ms-0102",
@@ -894,7 +2229,11 @@
     }
    ],
    "correct": 1,
-   "tip": "In COPD, target SpO₂ ~88–92%. Don't chase a \"normal\" saturation with high-flow O₂."
+   "tip": "In COPD, target SpO₂ ~88–92%. Don't chase a \"normal\" saturation with high-flow O₂.",
+   "client_needs": "Physiological Adaptation",
+   "scoring": "dichotomous",
+   "cjmm_step": "n/a",
+   "level": 4
   },
   {
    "id": "qb-ms-0103",
@@ -923,7 +2262,11 @@
     }
    ],
    "correct": 0,
-   "tip": "Water-seal chamber: tidaling = good; continuous bubbling = air leak (act). Suction chamber bubbling is expected."
+   "tip": "Water-seal chamber: tidaling = good; continuous bubbling = air leak (act). Suction chamber bubbling is expected.",
+   "client_needs": "Physiological Adaptation",
+   "scoring": "dichotomous",
+   "cjmm_step": "n/a",
+   "level": 4
   },
   {
    "id": "qb-ms-0104",
@@ -952,7 +2295,11 @@
     }
    ],
    "correct": 1,
-   "tip": "ICP care: HOB ~30°, head midline, avoid neck flexion/rotation, prevent Valsalva."
+   "tip": "ICP care: HOB ~30°, head midline, avoid neck flexion/rotation, prevent Valsalva.",
+   "client_needs": "Physiological Adaptation",
+   "scoring": "dichotomous",
+   "cjmm_step": "n/a",
+   "level": 3
   },
   {
    "id": "qb-ms-0105",
@@ -981,7 +2328,11 @@
     }
    ],
    "correct": 1,
-   "tip": "DKA order: Fluids first → then insulin → replace potassium as insulin drives K⁺ into cells."
+   "tip": "DKA order: Fluids first → then insulin → replace potassium as insulin drives K⁺ into cells.",
+   "client_needs": "Physiological Adaptation",
+   "scoring": "dichotomous",
+   "cjmm_step": "n/a",
+   "level": 4
   },
   {
    "id": "qb-ms-0106",
@@ -1010,7 +2361,11 @@
     }
    ],
    "correct": 1,
-   "tip": "New stroke = NPO until a swallow screen is passed. Aspiration is the danger."
+   "tip": "New stroke = NPO until a swallow screen is passed. Aspiration is the danger.",
+   "client_needs": "Physiological Adaptation",
+   "scoring": "dichotomous",
+   "cjmm_step": "n/a",
+   "level": 3
   },
   {
    "id": "qb-ms-0107",
@@ -1039,7 +2394,11 @@
     }
    ],
    "correct": 1,
-   "tip": "Transfusion reaction: STOP the blood first, saline via new tubing, then assess and notify."
+   "tip": "Transfusion reaction: STOP the blood first, saline via new tubing, then assess and notify.",
+   "client_needs": "Physiological Adaptation",
+   "scoring": "dichotomous",
+   "cjmm_step": "n/a",
+   "level": 4
   },
   {
    "id": "qb-ms-0108",
@@ -1068,7 +2427,11 @@
     }
    ],
    "correct": 0,
-   "tip": "Lactulose works by causing soft stools that carry ammonia out. Titrate to 2–3 stools/day."
+   "tip": "Lactulose works by causing soft stools that carry ammonia out. Titrate to 2–3 stools/day.",
+   "client_needs": "Physiological Adaptation",
+   "scoring": "dichotomous",
+   "cjmm_step": "n/a",
+   "level": 3
   },
   {
    "id": "qb-ms-0109",
@@ -1097,7 +2460,11 @@
     }
    ],
    "correct": 0,
-   "tip": "Addison's = too little cortisol/aldosterone → give steroids + saline. (Cushing's is the opposite.)"
+   "tip": "Addison's = too little cortisol/aldosterone → give steroids + saline. (Cushing's is the opposite.)",
+   "client_needs": "Physiological Adaptation",
+   "scoring": "dichotomous",
+   "cjmm_step": "n/a",
+   "level": 4
   },
   {
    "id": "qb-ms-0110",
@@ -1126,7 +2493,11 @@
     }
    ],
    "correct": 2,
-   "tip": "\"Needs further teaching\" = pick the WRONG statement. Reverse your thinking."
+   "tip": "\"Needs further teaching\" = pick the WRONG statement. Reverse your thinking.",
+   "client_needs": "Physiological Adaptation",
+   "scoring": "dichotomous",
+   "cjmm_step": "n/a",
+   "level": 2
   },
   {
    "id": "qb-mh-0101",
@@ -1155,7 +2526,11 @@
     }
    ],
    "correct": 1,
-   "tip": "Therapeutic responses reflect feelings and keep the focus on the client — not advice, reassurance, or \"why.\""
+   "tip": "Therapeutic responses reflect feelings and keep the focus on the client — not advice, reassurance, or \"why.\"",
+   "client_needs": "Psychosocial Integrity",
+   "scoring": "dichotomous",
+   "cjmm_step": "n/a",
+   "level": 3
   },
   {
    "id": "qb-mh-0102",
@@ -1184,7 +2559,11 @@
     }
    ],
    "correct": 1,
-   "tip": "Lithium range ~0.6–1.2 mEq/L. Toxicity: coarse tremor, GI upset, confusion. Low Na⁺/dehydration raises levels."
+   "tip": "Lithium range ~0.6–1.2 mEq/L. Toxicity: coarse tremor, GI upset, confusion. Low Na⁺/dehydration raises levels.",
+   "client_needs": "Psychosocial Integrity",
+   "scoring": "dichotomous",
+   "cjmm_step": "n/a",
+   "level": 4
   },
   {
    "id": "qb-mh-0103",
@@ -1213,7 +2592,11 @@
     }
    ],
    "correct": 1,
-   "tip": "A plan + available means = high suicide risk. Ensure immediate safety: 1:1 observation, remove means."
+   "tip": "A plan + available means = high suicide risk. Ensure immediate safety: 1:1 observation, remove means.",
+   "client_needs": "Psychosocial Integrity",
+   "scoring": "dichotomous",
+   "cjmm_step": "n/a",
+   "level": 4
   },
   {
    "id": "qb-mh-0104",
@@ -1242,7 +2625,11 @@
     }
    ],
    "correct": 1,
-   "tip": "Alcohol withdrawal (peaks 24–72 hr, DTs are life-threatening) → benzodiazepines + thiamine."
+   "tip": "Alcohol withdrawal (peaks 24–72 hr, DTs are life-threatening) → benzodiazepines + thiamine.",
+   "client_needs": "Psychosocial Integrity",
+   "scoring": "dichotomous",
+   "cjmm_step": "n/a",
+   "level": 4
   },
   {
    "id": "qb-mh-0105",
@@ -1271,7 +2658,11 @@
     }
    ],
    "correct": 1,
-   "tip": "Refeeding syndrome: watch phosphate, potassium, magnesium — go LOW. Advance calories slowly."
+   "tip": "Refeeding syndrome: watch phosphate, potassium, magnesium — go LOW. Advance calories slowly.",
+   "client_needs": "Psychosocial Integrity",
+   "scoring": "dichotomous",
+   "cjmm_step": "n/a",
+   "level": 4
   },
   {
    "id": "qb-mh-0106",
@@ -1300,7 +2691,11 @@
     }
    ],
    "correct": 1,
-   "tip": "Acute mania: reduce stimulation and use high-calorie finger foods \"on the go\" to maintain nutrition."
+   "tip": "Acute mania: reduce stimulation and use high-calorie finger foods \"on the go\" to maintain nutrition.",
+   "client_needs": "Psychosocial Integrity",
+   "scoring": "dichotomous",
+   "cjmm_step": "n/a",
+   "level": 3
   },
   {
    "id": "qb-mh-0107",
@@ -1329,7 +2724,11 @@
     }
    ],
    "correct": 1,
-   "tip": "SSRIs take 2–6 weeks. Watch for increased suicide risk early in treatment, especially in young clients."
+   "tip": "SSRIs take 2–6 weeks. Watch for increased suicide risk early in treatment, especially in young clients.",
+   "client_needs": "Psychosocial Integrity",
+   "scoring": "dichotomous",
+   "cjmm_step": "n/a",
+   "level": 3
   },
   {
    "id": "qb-mh-0108",
@@ -1358,7 +2757,11 @@
     }
    ],
    "correct": 1,
-   "tip": "De-escalation: calm voice, give space, simple clear limits, remove triggers. Restraints are last resort."
+   "tip": "De-escalation: calm voice, give space, simple clear limits, remove triggers. Restraints are last resort.",
+   "client_needs": "Psychosocial Integrity",
+   "scoring": "dichotomous",
+   "cjmm_step": "n/a",
+   "level": 3
   },
   {
    "id": "qb-ngn-0201",
@@ -1395,7 +2798,11 @@
     1,
     3
    ],
-   "tip": "HF teaching = daily weights, low sodium, take meds, report dyspnea/edema, avoid NSAIDs."
+   "tip": "HF teaching = daily weights, low sodium, take meds, report dyspnea/edema, avoid NSAIDs.",
+   "client_needs": "Physiological Adaptation",
+   "scoring": "dichotomous",
+   "cjmm_step": "n/a",
+   "level": 4
   },
   {
    "id": "qb-ngn-0202",
@@ -1433,7 +2840,11 @@
     2,
     4
    ],
-   "tip": "Sepsis clues: fever OR hypothermia, tachycardia, tachypnea, hypotension, new confusion, high lactate."
+   "tip": "Sepsis clues: fever OR hypothermia, tachycardia, tachypnea, hypotension, new confusion, high lactate.",
+   "client_needs": "Safety and Infection Control",
+   "scoring": "dichotomous",
+   "cjmm_step": "n/a",
+   "level": 4
   },
   {
    "id": "qb-ngn-0203",
@@ -1470,7 +2881,11 @@
     1,
     3
    ],
-   "tip": "High-alert: anticoagulants, insulin, opioids, concentrated electrolytes (KCl), chemo. Double-check them."
+   "tip": "High-alert: anticoagulants, insulin, opioids, concentrated electrolytes (KCl), chemo. Double-check them.",
+   "client_needs": "Pharmacological and Parenteral Therapies",
+   "scoring": "dichotomous",
+   "cjmm_step": "n/a",
+   "level": 3
   },
   {
    "id": "qb-ngn-0204",
@@ -1511,7 +2926,11 @@
      "r": "Sudden weight gain and edema indicate fluid retention (excess)."
     }
    ],
-   "tip": "Deficit = dry, low BP, fast weak pulse. Excess = wet (crackles, edema, JVD), bounding pulse, weight gain."
+   "tip": "Deficit = dry, low BP, fast weak pulse. Excess = wet (crackles, edema, JVD), bounding pulse, weight gain.",
+   "client_needs": "Physiological Adaptation",
+   "scoring": "dichotomous",
+   "cjmm_step": "n/a",
+   "level": 4
   },
   {
    "id": "qb-ngn-0205",
@@ -1591,7 +3010,11 @@
      1
     ]
    },
-   "tip": "Hypoglycemia: Rule of 15 — 15 g fast carbs, recheck in 15 min. Then a complex carb/protein snack."
+   "tip": "Hypoglycemia: Rule of 15 — 15 g fast carbs, recheck in 15 min. Then a complex carb/protein snack.",
+   "client_needs": "Physiological Adaptation",
+   "scoring": "partial_credit",
+   "cjmm_step": "Take Actions",
+   "level": 4
   },
   {
    "id": "qb-pharm-0101",
@@ -1621,7 +3044,11 @@
    ],
    "correct": 1,
    "tip": "Match insulin onset/peak/duration to the clock. Regular (short-acting) peaks in 2–4 hr.",
-   "pearl": "**Regular = Rapidly available:** onset ~30 min, peak 2–4 hr. NPH (cloudy) peaks 4–12 hr."
+   "pearl": "**Regular = Rapidly available:** onset ~30 min, peak 2–4 hr. NPH (cloudy) peaks 4–12 hr.",
+   "client_needs": "Pharmacological and Parenteral Therapies",
+   "scoring": "dichotomous",
+   "cjmm_step": "n/a",
+   "level": 3
   },
   {
    "id": "qb-pharm-0102",
@@ -1650,7 +3077,11 @@
     }
    ],
    "correct": 0,
-   "tip": "For most cardiac beta-blockers, hold and reassess if HR < 60 or SBP < 90–100 per parameters."
+   "tip": "For most cardiac beta-blockers, hold and reassess if HR < 60 or SBP < 90–100 per parameters.",
+   "client_needs": "Pharmacological and Parenteral Therapies",
+   "scoring": "dichotomous",
+   "cjmm_step": "n/a",
+   "level": 3
   },
   {
    "id": "qb-pharm-0103",
@@ -1680,7 +3111,11 @@
    ],
    "correct": 1,
    "tip": "Learn antidote pairs: opioid→naloxone, benzo→flumazenil, heparin→protamine, warfarin→vitamin K.",
-   "free": true
+   "free": true,
+   "client_needs": "Pharmacological and Parenteral Therapies",
+   "scoring": "dichotomous",
+   "cjmm_step": "n/a",
+   "level": 2
   },
   {
    "id": "qb-pharm-0104",
@@ -1709,7 +3144,11 @@
     }
    ],
    "correct": 0,
-   "tip": "Nephrotoxic + ototoxic drugs (vancomycin, aminoglycosides): watch creatinine, urine output, and hearing."
+   "tip": "Nephrotoxic + ototoxic drugs (vancomycin, aminoglycosides): watch creatinine, urine output, and hearing.",
+   "client_needs": "Pharmacological and Parenteral Therapies",
+   "scoring": "dichotomous",
+   "cjmm_step": "n/a",
+   "level": 4
   },
   {
    "id": "qb-pharm-0105",
@@ -1739,7 +3178,11 @@
    ],
    "correct": 0,
    "tip": "Low K⁺ + digoxin = danger. Keep potassium in range to prevent toxicity.",
-   "pearl": "**\"Dig + low dig-K = toxic.\"** Furosemide wastes potassium; that low K⁺ is what tips digoxin into toxicity."
+   "pearl": "**\"Dig + low dig-K = toxic.\"** Furosemide wastes potassium; that low K⁺ is what tips digoxin into toxicity.",
+   "client_needs": "Pharmacological and Parenteral Therapies",
+   "scoring": "dichotomous",
+   "cjmm_step": "n/a",
+   "level": 4
   },
   {
    "id": "qb-pharm-0106",
@@ -1768,7 +3211,11 @@
     }
    ],
    "correct": 2,
-   "tip": "Never stop chronic steroids abruptly — taper to prevent adrenal crisis."
+   "tip": "Never stop chronic steroids abruptly — taper to prevent adrenal crisis.",
+   "client_needs": "Pharmacological and Parenteral Therapies",
+   "scoring": "dichotomous",
+   "cjmm_step": "n/a",
+   "level": 3
   },
   {
    "id": "qb-pharm-0107",
@@ -1797,7 +3244,11 @@
     }
    ],
    "correct": 1,
-   "tip": "ACE inhibitors (-pril) → dry cough and risk of angioedema. ARBs (-sartan) are the usual switch."
+   "tip": "ACE inhibitors (-pril) → dry cough and risk of angioedema. ARBs (-sartan) are the usual switch.",
+   "client_needs": "Pharmacological and Parenteral Therapies",
+   "scoring": "dichotomous",
+   "cjmm_step": "n/a",
+   "level": 2
   },
   {
    "id": "qb-pharm-0108",
@@ -1826,7 +3277,11 @@
     }
    ],
    "correct": 1,
-   "tip": "Heparin → aPTT; warfarin → PT/INR. Antidotes: protamine and vitamin K, respectively."
+   "tip": "Heparin → aPTT; warfarin → PT/INR. Antidotes: protamine and vitamin K, respectively.",
+   "client_needs": "Pharmacological and Parenteral Therapies",
+   "scoring": "dichotomous",
+   "cjmm_step": "n/a",
+   "level": 3
   },
   {
    "id": "qb-pharm-0109",
@@ -1855,7 +3310,11 @@
     }
    ],
    "correct": 1,
-   "tip": "Phenytoin → gingival hyperplasia (gum overgrowth). Emphasize oral hygiene and dental care."
+   "tip": "Phenytoin → gingival hyperplasia (gum overgrowth). Emphasize oral hygiene and dental care.",
+   "client_needs": "Pharmacological and Parenteral Therapies",
+   "scoring": "dichotomous",
+   "cjmm_step": "n/a",
+   "level": 3
   },
   {
    "id": "qb-pharm-0110",
@@ -1884,7 +3343,11 @@
     }
    ],
    "correct": 1,
-   "tip": "Bronchodilator BEFORE steroid inhaler; rinse mouth after steroids to prevent thrush."
+   "tip": "Bronchodilator BEFORE steroid inhaler; rinse mouth after steroids to prevent thrush.",
+   "client_needs": "Pharmacological and Parenteral Therapies",
+   "scoring": "dichotomous",
+   "cjmm_step": "n/a",
+   "level": 3
   },
   {
    "id": "clinical-judgment-0001",
@@ -1915,7 +3378,11 @@
    "correct": 1,
    "tip": "Next Gen NCLEX loves **trends over time.** Up-HR + up-RR + down-BP + new restlessness = **compensating shock** — recognize and **escalate early.**",
    "pearl": "\"**The story is in the trend.**\" Restlessness and a climbing heart/resp rate are often the body's **first quiet alarm** before pressure ever drops far.",
-   "free": true
+   "free": true,
+   "client_needs": "Management of Care",
+   "scoring": "dichotomous",
+   "cjmm_step": "n/a",
+   "level": 4
   },
   {
    "id": "fundamentals-0001",
@@ -1946,7 +3413,11 @@
    "correct": 0,
    "tip": "Cuff-size errors: **too small → too high; too big → too low.** Also, an arm **below** heart level reads high; **above** heart level reads low.",
    "pearl": "\"**Small cuff, big number.**\" When a value surprises you, **recheck technique before treating the number.**",
-   "free": true
+   "free": true,
+   "client_needs": "Basic Care and Comfort",
+   "scoring": "dichotomous",
+   "cjmm_step": "n/a",
+   "level": 2
   },
   {
    "id": "fundamentals-0002",
@@ -1977,7 +3448,11 @@
    "correct": 2,
    "tip": "Sterile rules to bank: **keep it in sight, above the waist; 1-inch border is dirty; never turn your back on it; never reach across it; wet = contaminated.**",
    "pearl": "\"**Below the waist or out of sight = it isn't sterile — not quite.**\" When in doubt, throw it out and restart.",
-   "free": true
+   "free": true,
+   "client_needs": "Basic Care and Comfort",
+   "scoring": "dichotomous",
+   "cjmm_step": "n/a",
+   "level": 3
   },
   {
    "id": "fundamentals-0003",
@@ -2008,7 +3483,11 @@
    "correct": 2,
    "tip": "For **initial** NG placement, the answer is **X-ray.** Ongoing checks may use **pH of aspirate** and measuring the external length — but never the air-auscultation method as confirmation.",
    "pearl": "\"**When in doubt, X-ray it out.**\" Gastric aspirate is usually **acidic (pH ≤ 5)**; respiratory/intestinal fluid is more alkaline.",
-   "free": false
+   "free": false,
+   "client_needs": "Basic Care and Comfort",
+   "scoring": "dichotomous",
+   "cjmm_step": "n/a",
+   "level": 3
   },
   {
    "id": "fundamentals-0004",
@@ -2039,7 +3518,11 @@
    "correct": 1,
    "tip": "Always choose the **least restrictive** safe option first. Restraints and four side rails are **restraints** — near the bottom of the list, never the first answer.",
    "pearl": "\"**Least restrictive, first and best.**\" Restraints need an **order, a time limit, and regular checks** — never PRN, never for staff convenience.",
-   "free": false
+   "free": false,
+   "client_needs": "Basic Care and Comfort",
+   "scoring": "dichotomous",
+   "cjmm_step": "n/a",
+   "level": 2
   },
   {
    "id": "fundamentals-0005",
@@ -2070,7 +3553,11 @@
    "correct": 1,
    "tip": "Remember the \"spore rule\": for **C. diff (and norovirus)**, use",
    "pearl": "\"**Spores need soap.**\" Match the bug to the precaution: **Contact** (C. diff, MRSA), **Droplet** (flu, meningitis, pertussis), **Airborne** (**M**easles, **T**B, **V**aricella — \"**My Chicken Hez TB**\").",
-   "free": false
+   "free": false,
+   "client_needs": "Basic Care and Comfort",
+   "scoring": "dichotomous",
+   "cjmm_step": "n/a",
+   "level": 3
   },
   {
    "id": "fundamentals-0006",
@@ -2101,7 +3588,11 @@
    "correct": 1,
    "tip": "UAPs handle **stable, routine, standard** tasks — vitals, hygiene, feeding, ambulating, I&O. The RN keeps the **\"AT-E\"**: **A**ssess,",
    "pearl": "\"**If it takes a nurse's brain, it stays with the nurse.**\" Delegate the **stable and predictable**, keep the **unstable and the teaching.**",
-   "free": false
+   "free": false,
+   "client_needs": "Basic Care and Comfort",
+   "scoring": "dichotomous",
+   "cjmm_step": "n/a",
+   "level": 3
   },
   {
    "id": "maternal-newborn-0001",
@@ -2132,7 +3623,11 @@
    "correct": 1,
    "tip": "Before and during a magnesium infusion, the test wants you checking three things: **respirations (≥12), deep tendon reflexes (present), and urine output (≥30 mL/hr).** Lose any one → suspect toxicity.",
    "pearl": "\"**Mag** makes it all **sag**\" — reflexes, respirations, and BP drop. Antidote rhymes: **\"Mag toxicity? Give calcium gluconate quickly.\"**",
-   "free": true
+   "free": true,
+   "client_needs": "Health Promotion and Maintenance",
+   "scoring": "dichotomous",
+   "cjmm_step": "n/a",
+   "level": 4
   },
   {
    "id": "maternal-newborn-0002",
@@ -2163,7 +3658,11 @@
    "correct": 1,
    "tip": "The preeclampsia danger trio to report: **severe headache, visual changes, and epigastric/RUQ pain.** These warn of impending eclampsia.",
    "pearl": "\"**Head, eyes, and belly = seizure on the way.**\" Epigastric pain in preeclampsia is a **liver alarm**, not indigestion.",
-   "free": true
+   "free": true,
+   "client_needs": "Health Promotion and Maintenance",
+   "scoring": "dichotomous",
+   "cjmm_step": "n/a",
+   "level": 3
   },
   {
    "id": "maternal-newborn-0003",
@@ -2194,7 +3693,11 @@
    "correct": 1,
    "tip": "Memorize the pattern letters: **VEAL CHOP.** **L**ate decels →",
    "pearl": "Intrauterine resuscitation = **\"Turn, O₂, IV, stop the Pit.\"** Late = **late is bad** (placental problem); early decels mirror the contraction and are usually benign (head compression).",
-   "free": false
+   "free": false,
+   "client_needs": "Health Promotion and Maintenance",
+   "scoring": "dichotomous",
+   "cjmm_step": "n/a",
+   "level": 4
   },
   {
    "id": "maternal-newborn-0004",
@@ -2225,7 +3728,11 @@
    "correct": 0,
    "tip": "Boggy uterus = **massage first.** A uterus pushed up and to the",
    "pearl": "\"**Firm it up.**\" If massage alone doesn't work, expect uterotonics (**oxytocin, methylergonovine, carboprost**) — but",
-   "free": false
+   "free": false,
+   "client_needs": "Health Promotion and Maintenance",
+   "scoring": "dichotomous",
+   "cjmm_step": "n/a",
+   "level": 3
   },
   {
    "id": "maternal-newborn-0005",
@@ -2256,7 +3763,11 @@
    "correct": 0,
    "tip": "Distinguish **acrocyanosis (normal, peripheral)** from",
    "pearl": "Newborn normals to bank: **HR 110–160, RR 30–60, temp ~36.5–37.5°C, glucose ≥ 40.** Blue *ends* okay, blue *center* not.",
-   "free": false
+   "free": false,
+   "client_needs": "Health Promotion and Maintenance",
+   "scoring": "dichotomous",
+   "cjmm_step": "n/a",
+   "level": 2
   },
   {
    "id": "maternal-newborn-0006",
@@ -2287,7 +3798,11 @@
    "correct": 1,
    "tip": "Separate the two preterm-labor drugs: **tocolytics buy time** (stop contractions); **corticosteroids mature the lungs.** Betamethasone = lungs.",
    "pearl": "\"**Beta-methasone = better breathing.**\" Given to mom, works on the **baby's lungs.**",
-   "free": false
+   "free": false,
+   "client_needs": "Health Promotion and Maintenance",
+   "scoring": "dichotomous",
+   "cjmm_step": "n/a",
+   "level": 3
   },
   {
    "id": "med-surg-0001",
@@ -2318,7 +3833,11 @@
    "correct": 1,
    "tip": "Learn the chambers: **water-seal = bubbling/tidaling info; suction-control = gentle continuous bubbling is normal there.** Continuous bubbling in the *water-seal* chamber = **air leak.**",
    "pearl": "\"**Tidaling is fine, continuous is a sign.**\" If the tube is ever pulled out, cover with a sterile occlusive dressing taped on **three sides.**",
-   "free": true
+   "free": true,
+   "client_needs": "Physiological Adaptation",
+   "scoring": "dichotomous",
+   "cjmm_step": "n/a",
+   "level": 3
   },
   {
    "id": "med-surg-0002",
@@ -2349,7 +3868,11 @@
    "correct": 0,
    "tip": "Read carefully for **\"early\" vs \"late.\"** Early ICP = **LOC change.** Late ICP = **Cushing's triad.** The same topic has two different \"right\" answers depending on that one word.",
    "pearl": "**Cushing's triad = \"high, low, slow, and odd\"**: **high** systolic/**widening pulse pressure, low** heart rate (**slow**), and **odd/irregular** breathing. Keep the HOB at **30°** and the head midline to promote venous drainage.",
-   "free": true
+   "free": true,
+   "client_needs": "Physiological Adaptation",
+   "scoring": "dichotomous",
+   "cjmm_step": "n/a",
+   "level": 4
   },
   {
    "id": "med-surg-0003",
@@ -2380,7 +3903,11 @@
    "correct": 1,
    "tip": "When the answer choices include **\"massage the calf,\"** it's almost always the wrong (dangerous) option in an at-risk client.",
    "pearl": "DVT prevention = **\"Move, Squeeze, Thin\"**: **Move** (ambulate/leg exercises), **Squeeze** (SCDs/compression), and",
-   "free": false
+   "free": false,
+   "client_needs": "Physiological Adaptation",
+   "scoring": "dichotomous",
+   "cjmm_step": "n/a",
+   "level": 2
   },
   {
    "id": "med-surg-0004",
@@ -2411,7 +3938,11 @@
    "correct": 1,
    "tip": "**Addison's = \"everything low\"** (low cortisol, low BP, low sodium, low glucose, high potassium). **Cushing's = \"everything high.\"** Crisis = treat the **shock** first.",
    "pearl": "\"**Add**ison's = you have to **add** the steroids.\" Priorities in crisis: **fluids, hydrocortisone, and correct the electrolytes.**",
-   "free": false
+   "free": false,
+   "client_needs": "Physiological Adaptation",
+   "scoring": "dichotomous",
+   "cjmm_step": "n/a",
+   "level": 4
   },
   {
    "id": "med-surg-0005",
@@ -2442,7 +3973,11 @@
    "correct": 1,
    "tip": "In DKA, **insulin lowers glucose *and* potassium.** The test loves the moment when initial hyperkalemia flips to hypokalemia. Never give IV insulin if potassium is already low without replacing it.",
    "pearl": "\"**Insulin pushes K into the cell.**\" Follow the sequence: **fluids first, then insulin, and watch the potassium the whole way down.**",
-   "free": false
+   "free": false,
+   "client_needs": "Physiological Adaptation",
+   "scoring": "dichotomous",
+   "cjmm_step": "n/a",
+   "level": 4
   },
   {
    "id": "med-surg-0006",
@@ -2473,7 +4008,11 @@
    "correct": 1,
    "tip": "For thrombolytics, think **\"time and bleeding.\"** If you don't know the *exact* onset time, or there's recent bleeding/surgery, tPA is unsafe.",
    "pearl": "Stroke mantra: **\"Time is brain.\"** Act",
-   "free": false
+   "free": false,
+   "client_needs": "Physiological Adaptation",
+   "scoring": "dichotomous",
+   "cjmm_step": "n/a",
+   "level": 3
   },
   {
    "id": "med-surg-0007",
@@ -2504,7 +4043,11 @@
    "correct": 1,
    "tip": "Fistula assessment = **\"feel the thrill, hear the bruit.\"** Their absence means the access may have **clotted** — report immediately.",
    "pearl": "Protect the access arm: **\"No BP, no sticks, no squeeze.\"** A palpable **thrill** and audible **bruit** mean it's flowing.",
-   "free": false
+   "free": false,
+   "client_needs": "Physiological Adaptation",
+   "scoring": "dichotomous",
+   "cjmm_step": "n/a",
+   "level": 3
   },
   {
    "id": "med-surg-0008",
@@ -2535,7 +4078,11 @@
    "correct": 0,
    "tip": "For lactulose, **more stools is the goal, not a side effect.** Titrate to 2–3 soft stools/day. Rising ammonia → worsening confusion.",
    "pearl": "\"**Lactulose loses the ammonia** — out the back door.\" Falling ammonia + clearer thinking = success.",
-   "free": false
+   "free": false,
+   "client_needs": "Physiological Adaptation",
+   "scoring": "dichotomous",
+   "cjmm_step": "n/a",
+   "level": 3
   },
   {
    "id": "med-surg-0009",
@@ -2566,7 +4113,11 @@
    "correct": 1,
    "tip": "Pancreatitis care = **rest the pancreas**: NPO, IV fluids, pain control, and a position that *unstretches* the abdomen (fetal/leaning forward).",
    "pearl": "\"**Curl up to calm the pancreas.**\" Remember the enzymes: **amylase and lipase rise** (lipase is more specific).",
-   "free": false
+   "free": false,
+   "client_needs": "Physiological Adaptation",
+   "scoring": "dichotomous",
+   "cjmm_step": "n/a",
+   "level": 3
   },
   {
    "id": "med-surg-0010",
@@ -2597,7 +4148,11 @@
    "correct": 1,
    "tip": "Autonomic dysreflexia = **the one time you raise the head and lower the legs for high BP.** Then hunt the trigger: **bladder → bowel → skin.**",
    "pearl": "\"**Sit them up, find the cause.**\" The culprit is usually a **full bladder** — check the catheter first. Untreated, it can cause a stroke or seizure.",
-   "free": false
+   "free": false,
+   "client_needs": "Physiological Adaptation",
+   "scoring": "dichotomous",
+   "cjmm_step": "n/a",
+   "level": 4
   },
   {
    "id": "med-surg-0011",
@@ -2628,7 +4183,11 @@
    "correct": 1,
    "tip": "Match the ECG to the electrolyte: **hyperkalemia → tall, peaked T waves; hypokalemia → flat T waves and U waves.** Peaked T's + high K = act now.",
    "pearl": "Emergency hyperkalemia order: **\"Calcium protects, insulin + D50 shifts, and dialysis/kayexalate removes.\"** Calcium guards the heart first; it doesn't lower the potassium itself.",
-   "free": false
+   "free": false,
+   "client_needs": "Physiological Adaptation",
+   "scoring": "dichotomous",
+   "cjmm_step": "n/a",
+   "level": 4
   },
   {
    "id": "med-surg-0012",
@@ -2659,7 +4218,11 @@
    "correct": 1,
    "tip": "Cardiac chest pain = **rest + oxygen + ECG + meds**, and keep the client **still.** Any answer that makes the client exert is wrong.",
    "pearl": "Remember the classic bundle **\"MONA\"** —",
-   "free": false
+   "free": false,
+   "client_needs": "Physiological Adaptation",
+   "scoring": "dichotomous",
+   "cjmm_step": "n/a",
+   "level": 3
   },
   {
    "id": "mental-health-0001",
@@ -2690,7 +4253,11 @@
    "correct": 1,
    "tip": "Lithium and sodium travel together in the body. **Low sodium or low fluid = higher lithium = toxicity.** Watch for sweating, vomiting, and diuretics.",
    "pearl": "Lithium range **\"0.6 to 1.2, keep it true.\"** Early toxicity: **GI upset + fine tremor**. Worsening toxicity:",
-   "free": true
+   "free": true,
+   "client_needs": "Psychosocial Integrity",
+   "scoring": "dichotomous",
+   "cjmm_step": "n/a",
+   "level": 3
   },
   {
    "id": "mental-health-0002",
@@ -2721,7 +4288,11 @@
    "correct": 1,
    "tip": "Therapeutic answers usually **reflect feelings, stay open, and keep the focus on the client.** Avoid false reassurance, \"why\" questions, giving advice, and changing the subject.",
    "pearl": "When two answers both look kind, pick the one that **names the feeling and hands the conversation back to the client.** Silence and reflection beat cheerleading.",
-   "free": true
+   "free": true,
+   "client_needs": "Psychosocial Integrity",
+   "scoring": "dichotomous",
+   "cjmm_step": "n/a",
+   "level": 3
   },
   {
    "id": "mental-health-0003",
@@ -2752,7 +4323,11 @@
    "correct": 1,
    "tip": "Safety is always the priority in suicide items. A client with a",
    "pearl": "\"**Ask the question, remove the means, never leave alone.**\" The more specific the **plan** and the more available the",
-   "free": false
+   "free": false,
+   "client_needs": "Psychosocial Integrity",
+   "scoring": "dichotomous",
+   "cjmm_step": "n/a",
+   "level": 4
   },
   {
    "id": "mental-health-0004",
@@ -2783,7 +4358,11 @@
    "correct": 1,
    "tip": "Alcohol withdrawal = **hyperactivity** (up HR, up BP, tremor, agitation). Peak DT risk is **48–72 hours** after the last drink. Benzodiazepines are the mainstay.",
    "pearl": "\"**Withdrawal winds you up.**\" Give",
-   "free": false
+   "free": false,
+   "client_needs": "Psychosocial Integrity",
+   "scoring": "dichotomous",
+   "cjmm_step": "n/a",
+   "level": 3
   },
   {
    "id": "mental-health-0005",
@@ -2814,7 +4393,11 @@
    "correct": 2,
    "tip": "Watch for **negative-polarity** stems (\"need for further teaching,\" \"requires follow-up\") — you're hunting the **wrong** statement.",
    "pearl": "Lithium loves **steady salt and steady water.** Sudden **low sodium or dehydration = rising lithium = toxicity.**",
-   "free": false
+   "free": false,
+   "client_needs": "Psychosocial Integrity",
+   "scoring": "dichotomous",
+   "cjmm_step": "n/a",
+   "level": 2
   },
   {
    "id": "pediatrics-0001",
@@ -2845,7 +4428,11 @@
    "correct": 1,
    "tip": "Safe sleep = **Back, Bare, Alone (own surface).** Any answer adding pillows, blankets, or prone positioning is wrong.",
    "pearl": "\"**Back to sleep, tummy to play.**\" The crib should be **boring** — nothing in it but the baby.",
-   "free": true
+   "free": true,
+   "client_needs": "Health Promotion and Maintenance",
+   "scoring": "dichotomous",
+   "cjmm_step": "n/a",
+   "level": 2
   },
   {
    "id": "pediatrics-0002",
@@ -2876,7 +4463,11 @@
    "correct": 1,
    "tip": "This is a **negative-style** item (\"which should you AVOID\"). Read the stem twice — the *right answer is the wrong action.* For epiglottitis:",
    "pearl": "Epiglottitis \"**tripod, drool, and muffled**\" = airway emergency. Remember the **4 D's: Drooling, Dysphagia, Dysphonia, Distress.** Don't touch the throat.",
-   "free": true
+   "free": true,
+   "client_needs": "Health Promotion and Maintenance",
+   "scoring": "dichotomous",
+   "cjmm_step": "n/a",
+   "level": 4
   },
   {
    "id": "pediatrics-0003",
@@ -2907,7 +4498,11 @@
    "correct": 1,
    "tip": "When a question asks for the **best/most reliable** measure of fluid status, **daily weight** usually wins over intake/output estimates.",
    "pearl": "\"**The scale tells the tale.**\" Other infant dehydration clues: **sunken fontanel, no tears, dry mucous membranes, and decreased urine output (< 1 mL/kg/hr).**",
-   "free": false
+   "free": false,
+   "client_needs": "Health Promotion and Maintenance",
+   "scoring": "dichotomous",
+   "cjmm_step": "n/a",
+   "level": 3
   },
   {
    "id": "pediatrics-0004",
@@ -2938,7 +4533,11 @@
    "correct": 1,
    "tip": "Rule of thumb for replacement enzymes: **\"No food, no enzyme; food, then enzyme.\"** CF kids need **more** calories, not fewer.",
    "pearl": "CF = **\"salty, sticky, and hungry.\"** Salty sweat (diagnostic sweat chloride), sticky mucus, and a big appetite need to",
-   "free": false
+   "free": false,
+   "client_needs": "Health Promotion and Maintenance",
+   "scoring": "dichotomous",
+   "cjmm_step": "n/a",
+   "level": 3
   },
   {
    "id": "pediatrics-0005",
@@ -2969,7 +4568,11 @@
    "correct": 1,
    "tip": "For a tet spell, the magic position is **knee-to-chest** (older children may squat). Both increase systemic resistance and ease the shunt.",
    "pearl": "\"**Knees to chest gives the lungs their best.**\" Squatting/knee-chest is the toddler's own instinct to abort a tet spell.",
-   "free": false
+   "free": false,
+   "client_needs": "Health Promotion and Maintenance",
+   "scoring": "dichotomous",
+   "cjmm_step": "n/a",
+   "level": 4
   },
   {
    "id": "pharmacology-0001",
@@ -3000,7 +4603,11 @@
    "correct": 1,
    "tip": "When a question offers \"avoid all vitamin K foods,\" it's a trap. The correct anticoagulation teaching is almost always **consistency**, not elimination.",
    "pearl": "**W**arfarin → **W**atch the **INR**; antidote is **vitamin K**. Heparin → watch the **aPTT**; antidote is",
-   "free": true
+   "free": true,
+   "client_needs": "Pharmacological and Parenteral Therapies",
+   "scoring": "dichotomous",
+   "cjmm_step": "n/a",
+   "level": 3
   },
   {
    "id": "pharmacology-0002",
@@ -3031,7 +4638,11 @@
    "correct": 1,
    "tip": "If a client on digoxin *also* takes a loop or thiazide diuretic, the test wants you to connect **low potassium → higher toxicity risk.**",
    "pearl": "\"**Dig** makes you **sick, slow, and see yellow**\": GI upset, **brady**cardia, and yellow/green vision. Hold for an apical pulse **< 60**.",
-   "free": true
+   "free": true,
+   "client_needs": "Pharmacological and Parenteral Therapies",
+   "scoring": "dichotomous",
+   "cjmm_step": "n/a",
+   "level": 3
   },
   {
    "id": "pharmacology-0003",
@@ -3062,7 +4673,11 @@
    "correct": 1,
    "tip": "Match the diuretic to the electrolyte: **loop and thiazide → lose potassium; spironolactone → keep (raise) potassium.**",
    "pearl": "\"**F**urosemide → **F**alling K.\" Normal potassium is **3.5–5.0 mEq/L** — memorize this range cold; it shows up everywhere.",
-   "free": false
+   "free": false,
+   "client_needs": "Pharmacological and Parenteral Therapies",
+   "scoring": "dichotomous",
+   "cjmm_step": "n/a",
+   "level": 2
   },
   {
    "id": "pharmacology-0004",
@@ -3093,7 +4708,11 @@
    "correct": 1,
    "tip": "For any insulin question, ask: *when does it peak?* — that's when the client is most likely to go low. Peak = highest risk.",
    "pearl": "\"**R**egular is **R**eady in a half hour,",
-   "free": false
+   "free": false,
+   "client_needs": "Pharmacological and Parenteral Therapies",
+   "scoring": "dichotomous",
+   "cjmm_step": "n/a",
+   "level": 3
   },
   {
    "id": "pharmacology-0005",
@@ -3124,7 +4743,11 @@
    "correct": 1,
    "tip": "For *any* transfusion reaction, the first step is always the same: **STOP the blood.** Then saline, then assess, then notify. Order matters.",
    "pearl": "\"**Stop – Saline – Stay – Send**\": Stop the unit, hang **Saline**, **Stay** with the client and assess, **Send** the blood and tubing back to the blood bank.",
-   "free": false
+   "free": false,
+   "client_needs": "Pharmacological and Parenteral Therapies",
+   "scoring": "dichotomous",
+   "cjmm_step": "n/a",
+   "level": 3
   },
   {
    "id": "pharmacology-0006",
@@ -3155,7 +4778,11 @@
    "correct": 1,
    "tip": "For chronic COPD the safe goal is a **lower** SpO₂ target (88–92%). Beware answers that push COPD clients to 100% — over-oxygenation is the trap.",
    "pearl": "\"In COPD, **low and slow**\": low-flow O₂, target in the **high 80s to low 90s.** Never *withhold* oxygen from a hypoxic person — treat the hypoxia, just don't overshoot.",
-   "free": false
+   "free": false,
+   "client_needs": "Pharmacological and Parenteral Therapies",
+   "scoring": "dichotomous",
+   "cjmm_step": "n/a",
+   "level": 3
   },
   {
    "id": "pharmacology-0007",
@@ -3186,7 +4813,11 @@
    "correct": 1,
    "tip": "Any drug ending in **\"-olol\"** is a beta-blocker: expect teaching about **checking the pulse, rising slowly, and never stopping abruptly.**",
    "pearl": "\"**Beta blocks the beats**\" — it lowers",
-   "free": false
+   "free": false,
+   "client_needs": "Pharmacological and Parenteral Therapies",
+   "scoring": "dichotomous",
+   "cjmm_step": "n/a",
+   "level": 2
   },
   {
    "id": "pharmacology-0008",
@@ -3217,7 +4848,11 @@
    "correct": 1,
    "tip": "A respiratory rate **below 12/min** after an opioid is the red flag. The antidote **naloxone** is the answer whenever opioid over-sedation is described.",
    "pearl": "\"**N**aloxone **N**egates **N**arcotics.\" Watch the number: **RR < 12 = hold and reassess; RR ≤ 8 with sedation = act now.**",
-   "free": false
+   "free": false,
+   "client_needs": "Pharmacological and Parenteral Therapies",
+   "scoring": "dichotomous",
+   "cjmm_step": "n/a",
+   "level": 3
   },
   {
    "id": "safety-0001",
@@ -3248,7 +4883,11 @@
    "correct": 1,
    "tip": "Use **ABCs, then Maslow, then acute-over-chronic, then unstable-over-stable.** A breathing problem almost always outranks pain, discharge, or expected findings.",
    "pearl": "\"**Air goes first.**\" Rank with **ABC** — then remember that **new/sudden and unstable** beats **chronic and expected** every time.",
-   "free": true
+   "free": true,
+   "client_needs": "Safety and Infection Control",
+   "scoring": "dichotomous",
+   "cjmm_step": "n/a",
+   "level": 4
   },
   {
    "id": "safety-0002",
@@ -3279,7 +4918,11 @@
    "correct": 0,
    "tip": "\"Who can you discharge/transfer?\" flips normal priority: you pick the **most stable** client, not the sickest. Read whether the stem wants *who to see first* vs *who can leave.*",
    "pearl": "In disaster/staffing questions, **the boring, stable client is the right answer** — they can safely go. Keep the unstable ones close.",
-   "free": true
+   "free": true,
+   "client_needs": "Safety and Infection Control",
+   "scoring": "dichotomous",
+   "cjmm_step": "n/a",
+   "level": 3
   },
   {
    "id": "safety-0003",
@@ -3310,7 +4953,11 @@
    "correct": 2,
    "tip": "The nurse is the **last safety check.** Any unclear, incomplete, or unsafe-looking order is **clarified before administration** — never assumed.",
    "pearl": "\"**If it isn't right, don't write (or give).**\" Remember the **rights** of medication administration — right client, drug, dose, route, time, documentation, reason, response.",
-   "free": false
+   "free": false,
+   "client_needs": "Safety and Infection Control",
+   "scoring": "dichotomous",
+   "cjmm_step": "n/a",
+   "level": 2
   },
   {
    "id": "safety-0004",
@@ -3341,7 +4988,11 @@
    "correct": 1,
    "tip": "Anaphylaxis first-line = **epinephrine**, every time. Antihistamines and steroids are **adjuncts**, not the priority.",
    "pearl": "\"**Epi first, and don't rehearse.**\" Stop the trigger → **epinephrine** → airway/oxygen → fluids for the pressure.",
-   "free": false
+   "free": false,
+   "client_needs": "Safety and Infection Control",
+   "scoring": "dichotomous",
+   "cjmm_step": "n/a",
+   "level": 4
   },
   {
    "id": "safety-0005",
@@ -3372,7 +5023,11 @@
    "correct": 1,
    "tip": "Oxygen safety = **no flames, no petroleum products, no static-prone fabrics.** Any answer that allows smoking near oxygen is wrong.",
    "pearl": "\"**Oxygen doesn't burn — it makes everything else burn faster.**\" Keep flames, grease (petroleum), and sparks far away.",
-   "free": false
+   "free": false,
+   "client_needs": "Safety and Infection Control",
+   "scoring": "dichotomous",
+   "cjmm_step": "n/a",
+   "level": 2
   }
  ]
 }

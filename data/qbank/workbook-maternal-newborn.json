@@ -1,191 +1,215 @@
 {
-  "batch": "workbook-maternal-newborn",
-  "questions": [
+ "batch": "workbook-maternal-newborn",
+ "questions": [
+  {
+   "id": "maternal-newborn-0001",
+   "exam": "RN",
+   "cat": "Maternal / Newborn",
+   "topic": "Magnesium sulfate in preeclampsia",
+   "difficulty": "Hard",
+   "type": "mc",
+   "stem": "A client at 34 weeks' gestation with severe preeclampsia is receiving IV magnesium sulfate. The nurse notes a respiratory rate of 10/min, absent deep tendon reflexes, and urine output of 20 mL over the last hour. What is the nurse's priority action?",
+   "opts": [
     {
-      "id": "maternal-newborn-0001",
-      "exam": "RN",
-      "cat": "Maternal / Newborn",
-      "topic": "Magnesium sulfate in preeclampsia",
-      "difficulty": "Hard",
-      "type": "mc",
-      "stem": "A client at 34 weeks' gestation with severe preeclampsia is receiving IV magnesium sulfate. The nurse notes a respiratory rate of 10/min, absent deep tendon reflexes, and urine output of 20 mL over the last hour. What is the nurse's priority action?",
-      "opts": [
-        {
-          "t": "Increase the magnesium sulfate infusion rate.",
-          "r": "Increasing the rate would deepen magnesium toxicity and could stop respirations."
-        },
-        {
-          "t": "Stop the infusion and prepare to administer calcium gluconate.",
-          "r": "Respiratory depression, **absent deep tendon reflexes**, and **oliguria** are signs of magnesium toxicity. The nurse **stops the infusion** and gives the antidote, **calcium gluconate.**"
-        },
-        {
-          "t": "Place the client in a supine position and continue the infusion.",
-          "r": "Supine positioning risks aortocaval compression and does nothing about the toxicity; the infusion must stop."
-        },
-        {
-          "t": "Document the findings and reassess in one hour.",
-          "r": "Waiting an hour during respiratory depression is unsafe."
-        }
-      ],
-      "correct": 1,
-      "tip": "Before and during a magnesium infusion, the test wants you checking three things: **respirations (≥12), deep tendon reflexes (present), and urine output (≥30 mL/hr).** Lose any one → suspect toxicity.",
-      "pearl": "\"**Mag** makes it all **sag**\" — reflexes, respirations, and BP drop. Antidote rhymes: **\"Mag toxicity? Give calcium gluconate quickly.\"**",
-      "free": true
+     "t": "Increase the magnesium sulfate infusion rate.",
+     "r": "Increasing the rate would deepen magnesium toxicity and could stop respirations."
     },
     {
-      "id": "maternal-newborn-0002",
-      "exam": "RN",
-      "cat": "Maternal / Newborn",
-      "topic": "Preeclampsia warning sign",
-      "difficulty": "Moderate",
-      "type": "mc",
-      "stem": "A client at 37 weeks' gestation with preeclampsia is being monitored on the antepartum unit. Which new report should the nurse recognize as a sign of worsening disease and",
-      "opts": [
-        {
-          "t": "Mild ankle edema at the end of the day",
-          "r": "Dependent ankle edema is common in late pregnancy and, by itself, is not an emergency."
-        },
-        {
-          "t": "Epigastric or right-upper-quadrant pain",
-          "r": "**Epigastric or RUQ pain** signals liver involvement (hepatic distention, possible HELLP syndrome) and often precedes a **seizure (eclampsia).** It is an urgent finding."
-        },
-        {
-          "t": "Occasional fetal hiccups",
-          "r": "Fetal hiccups are a normal, reassuring finding."
-        },
-        {
-          "t": "Braxton Hicks contractions that stop with rest",
-          "r": "Braxton Hicks contractions that resolve with rest are normal and not a sign of worsening preeclampsia."
-        }
-      ],
-      "correct": 1,
-      "tip": "The preeclampsia danger trio to report: **severe headache, visual changes, and epigastric/RUQ pain.** These warn of impending eclampsia.",
-      "pearl": "\"**Head, eyes, and belly = seizure on the way.**\" Epigastric pain in preeclampsia is a **liver alarm**, not indigestion.",
-      "free": true
+     "t": "Stop the infusion and prepare to administer calcium gluconate.",
+     "r": "Respiratory depression, **absent deep tendon reflexes**, and **oliguria** are signs of magnesium toxicity. The nurse **stops the infusion** and gives the antidote, **calcium gluconate.**"
     },
     {
-      "id": "maternal-newborn-0003",
-      "exam": "RN",
-      "cat": "Maternal / Newborn",
-      "topic": "Fetal heart rate: late decelerations",
-      "difficulty": "Hard",
-      "type": "mc",
-      "stem": "A laboring client receiving IV oxytocin shows **late decelerations** on the fetal monitor — the fetal heart rate drops after the peak of each contraction and returns to baseline after the contraction ends. What is the nurse's first action?",
-      "opts": [
-        {
-          "t": "Increase the oxytocin infusion to strengthen contractions.",
-          "r": "Increasing oxytocin worsens uteroplacental insufficiency and the decelerations — exactly the wrong move."
-        },
-        {
-          "t": "Stop the oxytocin, reposition the client to her side, and give oxygen.",
-          "r": "Late decelerations indicate **uteroplacental insufficiency** (the fetus isn't getting enough oxygen). Intrauterine resuscitation is priority: **stop the oxytocin, turn the client on her side, give oxygen, and increase IV fluids.**"
-        },
-        {
-          "t": "Encourage the client to hold her breath and push with each contraction.",
-          "r": "Pushing does not correct the underlying oxygen problem."
-        },
-        {
-          "t": "Document the reassuring tracing and continue routine care.",
-          "r": "Late decelerations are **non-reassuring**, not normal — they require action."
-        }
-      ],
-      "correct": 1,
-      "tip": "Memorize the pattern letters: **VEAL CHOP.** **L**ate decels →",
-      "pearl": "Intrauterine resuscitation = **\"Turn, O₂, IV, stop the Pit.\"** Late = **late is bad** (placental problem); early decels mirror the contraction and are usually benign (head compression).",
-      "free": false
+     "t": "Place the client in a supine position and continue the infusion.",
+     "r": "Supine positioning risks aortocaval compression and does nothing about the toxicity; the infusion must stop."
     },
     {
-      "id": "maternal-newborn-0004",
-      "exam": "RN",
-      "cat": "Maternal / Newborn",
-      "topic": "Postpartum hemorrhage",
-      "difficulty": "Moderate",
-      "type": "mc",
-      "stem": "One hour after a vaginal birth, the nurse finds the client's uterine fundus **boggy (soft)** and displaced above and to the right of the umbilicus, with a large amount of vaginal bleeding. What should the nurse do first?",
-      "opts": [
-        {
-          "t": "Massage the fundus while supporting the lower uterine segment.",
-          "r": "A **boggy fundus** means the uterus isn't contracting (uterine atony), the leading cause of early postpartum hemorrhage. **Fundal massage** is the immediate action to firm the uterus and control bleeding. (A displaced fundus also hints at a full bladder, which should be emptied next.)"
-        },
-        {
-          "t": "Administer a prescribed analgesic for afterbirth pains.",
-          "r": "Pain control does not address the active hemorrhage."
-        },
-        {
-          "t": "Increase the rate of the IV fluids and recheck in 30 minutes.",
-          "r": "Fluids support volume but do not stop the bleeding; waiting 30 minutes is unsafe."
-        },
-        {
-          "t": "Place the client in reverse Trendelenburg position.",
-          "r": "Positioning does not treat uterine atony."
-        }
-      ],
-      "correct": 0,
-      "tip": "Boggy uterus = **massage first.** A uterus pushed up and to the",
-      "pearl": "\"**Firm it up.**\" If massage alone doesn't work, expect uterotonics (**oxytocin, methylergonovine, carboprost**) — but",
-      "free": false
-    },
-    {
-      "id": "maternal-newborn-0005",
-      "exam": "RN",
-      "cat": "Maternal / Newborn",
-      "topic": "Normal newborn assessment",
-      "difficulty": "Easy",
-      "type": "mc",
-      "stem": "A nurse assesses a 2-hour-old term newborn. Which finding is normal and requires no further action?",
-      "opts": [
-        {
-          "t": "Bluish discoloration of the hands and feet (acrocyanosis)",
-          "r": "**Acrocyanosis** (blue hands and feet with a pink trunk) is a normal newborn finding in the first 24–48 hours due to immature peripheral circulation."
-        },
-        {
-          "t": "A respiratory rate of 22/min",
-          "r": "Normal newborn respirations are **30–60/min**; 22 is too low and needs evaluation."
-        },
-        {
-          "t": "Central cyanosis of the lips and trunk",
-          "r": "**Central** cyanosis (lips, tongue, trunk) is never normal and signals hypoxia — an emergency."
-        },
-        {
-          "t": "A blood glucose of 30 mg/dL",
-          "r": "Newborn glucose below **40 mg/dL** suggests hypoglycemia and requires intervention (feeding, rechecking)."
-        }
-      ],
-      "correct": 0,
-      "tip": "Distinguish **acrocyanosis (normal, peripheral)** from",
-      "pearl": "Newborn normals to bank: **HR 110–160, RR 30–60, temp ~36.5–37.5°C, glucose ≥ 40.** Blue *ends* okay, blue *center* not.",
-      "free": false
-    },
-    {
-      "id": "maternal-newborn-0006",
-      "exam": "RN",
-      "cat": "Maternal / Newborn",
-      "topic": "Antenatal corticosteroids",
-      "difficulty": "Moderate",
-      "type": "mc",
-      "stem": "A client in preterm labor at 30 weeks receives IM betamethasone. The client asks why it was given. Which response by the nurse is accurate?",
-      "opts": [
-        {
-          "t": "\"It stops your contractions so labor won't progress.\"",
-          "r": "Betamethasone does not stop contractions — that's the role of tocolytics (e.g., magnesium sulfate, nifedipine)."
-        },
-        {
-          "t": "\"It helps your baby's lungs mature more quickly in case of early birth.\"",
-          "r": "Antenatal corticosteroids like **betamethasone accelerate fetal lung maturity** (surfactant production), reducing respiratory distress syndrome if the baby is born preterm."
-        },
-        {
-          "t": "\"It treats an infection that may have triggered your labor.\"",
-          "r": "It is not an antibiotic and does not treat infection."
-        },
-        {
-          "t": "\"It raises your blood pressure to protect the placenta.\"",
-          "r": "Its purpose is fetal lung maturation, not raising maternal blood pressure."
-        }
-      ],
-      "correct": 1,
-      "tip": "Separate the two preterm-labor drugs: **tocolytics buy time** (stop contractions); **corticosteroids mature the lungs.** Betamethasone = lungs.",
-      "pearl": "\"**Beta-methasone = better breathing.**\" Given to mom, works on the **baby's lungs.**",
-      "free": false
+     "t": "Document the findings and reassess in one hour.",
+     "r": "Waiting an hour during respiratory depression is unsafe."
     }
-  ]
+   ],
+   "correct": 1,
+   "tip": "Before and during a magnesium infusion, the test wants you checking three things: **respirations (≥12), deep tendon reflexes (present), and urine output (≥30 mL/hr).** Lose any one → suspect toxicity.",
+   "pearl": "\"**Mag** makes it all **sag**\" — reflexes, respirations, and BP drop. Antidote rhymes: **\"Mag toxicity? Give calcium gluconate quickly.\"**",
+   "free": true,
+   "client_needs": "Health Promotion and Maintenance",
+   "scoring": "dichotomous",
+   "cjmm_step": "n/a",
+   "level": 4
+  },
+  {
+   "id": "maternal-newborn-0002",
+   "exam": "RN",
+   "cat": "Maternal / Newborn",
+   "topic": "Preeclampsia warning sign",
+   "difficulty": "Moderate",
+   "type": "mc",
+   "stem": "A client at 37 weeks' gestation with preeclampsia is being monitored on the antepartum unit. Which new report should the nurse recognize as a sign of worsening disease and",
+   "opts": [
+    {
+     "t": "Mild ankle edema at the end of the day",
+     "r": "Dependent ankle edema is common in late pregnancy and, by itself, is not an emergency."
+    },
+    {
+     "t": "Epigastric or right-upper-quadrant pain",
+     "r": "**Epigastric or RUQ pain** signals liver involvement (hepatic distention, possible HELLP syndrome) and often precedes a **seizure (eclampsia).** It is an urgent finding."
+    },
+    {
+     "t": "Occasional fetal hiccups",
+     "r": "Fetal hiccups are a normal, reassuring finding."
+    },
+    {
+     "t": "Braxton Hicks contractions that stop with rest",
+     "r": "Braxton Hicks contractions that resolve with rest are normal and not a sign of worsening preeclampsia."
+    }
+   ],
+   "correct": 1,
+   "tip": "The preeclampsia danger trio to report: **severe headache, visual changes, and epigastric/RUQ pain.** These warn of impending eclampsia.",
+   "pearl": "\"**Head, eyes, and belly = seizure on the way.**\" Epigastric pain in preeclampsia is a **liver alarm**, not indigestion.",
+   "free": true,
+   "client_needs": "Health Promotion and Maintenance",
+   "scoring": "dichotomous",
+   "cjmm_step": "n/a",
+   "level": 3
+  },
+  {
+   "id": "maternal-newborn-0003",
+   "exam": "RN",
+   "cat": "Maternal / Newborn",
+   "topic": "Fetal heart rate: late decelerations",
+   "difficulty": "Hard",
+   "type": "mc",
+   "stem": "A laboring client receiving IV oxytocin shows **late decelerations** on the fetal monitor — the fetal heart rate drops after the peak of each contraction and returns to baseline after the contraction ends. What is the nurse's first action?",
+   "opts": [
+    {
+     "t": "Increase the oxytocin infusion to strengthen contractions.",
+     "r": "Increasing oxytocin worsens uteroplacental insufficiency and the decelerations — exactly the wrong move."
+    },
+    {
+     "t": "Stop the oxytocin, reposition the client to her side, and give oxygen.",
+     "r": "Late decelerations indicate **uteroplacental insufficiency** (the fetus isn't getting enough oxygen). Intrauterine resuscitation is priority: **stop the oxytocin, turn the client on her side, give oxygen, and increase IV fluids.**"
+    },
+    {
+     "t": "Encourage the client to hold her breath and push with each contraction.",
+     "r": "Pushing does not correct the underlying oxygen problem."
+    },
+    {
+     "t": "Document the reassuring tracing and continue routine care.",
+     "r": "Late decelerations are **non-reassuring**, not normal — they require action."
+    }
+   ],
+   "correct": 1,
+   "tip": "Memorize the pattern letters: **VEAL CHOP.** **L**ate decels →",
+   "pearl": "Intrauterine resuscitation = **\"Turn, O₂, IV, stop the Pit.\"** Late = **late is bad** (placental problem); early decels mirror the contraction and are usually benign (head compression).",
+   "free": false,
+   "client_needs": "Health Promotion and Maintenance",
+   "scoring": "dichotomous",
+   "cjmm_step": "n/a",
+   "level": 4
+  },
+  {
+   "id": "maternal-newborn-0004",
+   "exam": "RN",
+   "cat": "Maternal / Newborn",
+   "topic": "Postpartum hemorrhage",
+   "difficulty": "Moderate",
+   "type": "mc",
+   "stem": "One hour after a vaginal birth, the nurse finds the client's uterine fundus **boggy (soft)** and displaced above and to the right of the umbilicus, with a large amount of vaginal bleeding. What should the nurse do first?",
+   "opts": [
+    {
+     "t": "Massage the fundus while supporting the lower uterine segment.",
+     "r": "A **boggy fundus** means the uterus isn't contracting (uterine atony), the leading cause of early postpartum hemorrhage. **Fundal massage** is the immediate action to firm the uterus and control bleeding. (A displaced fundus also hints at a full bladder, which should be emptied next.)"
+    },
+    {
+     "t": "Administer a prescribed analgesic for afterbirth pains.",
+     "r": "Pain control does not address the active hemorrhage."
+    },
+    {
+     "t": "Increase the rate of the IV fluids and recheck in 30 minutes.",
+     "r": "Fluids support volume but do not stop the bleeding; waiting 30 minutes is unsafe."
+    },
+    {
+     "t": "Place the client in reverse Trendelenburg position.",
+     "r": "Positioning does not treat uterine atony."
+    }
+   ],
+   "correct": 0,
+   "tip": "Boggy uterus = **massage first.** A uterus pushed up and to the",
+   "pearl": "\"**Firm it up.**\" If massage alone doesn't work, expect uterotonics (**oxytocin, methylergonovine, carboprost**) — but",
+   "free": false,
+   "client_needs": "Health Promotion and Maintenance",
+   "scoring": "dichotomous",
+   "cjmm_step": "n/a",
+   "level": 3
+  },
+  {
+   "id": "maternal-newborn-0005",
+   "exam": "RN",
+   "cat": "Maternal / Newborn",
+   "topic": "Normal newborn assessment",
+   "difficulty": "Easy",
+   "type": "mc",
+   "stem": "A nurse assesses a 2-hour-old term newborn. Which finding is normal and requires no further action?",
+   "opts": [
+    {
+     "t": "Bluish discoloration of the hands and feet (acrocyanosis)",
+     "r": "**Acrocyanosis** (blue hands and feet with a pink trunk) is a normal newborn finding in the first 24–48 hours due to immature peripheral circulation."
+    },
+    {
+     "t": "A respiratory rate of 22/min",
+     "r": "Normal newborn respirations are **30–60/min**; 22 is too low and needs evaluation."
+    },
+    {
+     "t": "Central cyanosis of the lips and trunk",
+     "r": "**Central** cyanosis (lips, tongue, trunk) is never normal and signals hypoxia — an emergency."
+    },
+    {
+     "t": "A blood glucose of 30 mg/dL",
+     "r": "Newborn glucose below **40 mg/dL** suggests hypoglycemia and requires intervention (feeding, rechecking)."
+    }
+   ],
+   "correct": 0,
+   "tip": "Distinguish **acrocyanosis (normal, peripheral)** from",
+   "pearl": "Newborn normals to bank: **HR 110–160, RR 30–60, temp ~36.5–37.5°C, glucose ≥ 40.** Blue *ends* okay, blue *center* not.",
+   "free": false,
+   "client_needs": "Health Promotion and Maintenance",
+   "scoring": "dichotomous",
+   "cjmm_step": "n/a",
+   "level": 2
+  },
+  {
+   "id": "maternal-newborn-0006",
+   "exam": "RN",
+   "cat": "Maternal / Newborn",
+   "topic": "Antenatal corticosteroids",
+   "difficulty": "Moderate",
+   "type": "mc",
+   "stem": "A client in preterm labor at 30 weeks receives IM betamethasone. The client asks why it was given. Which response by the nurse is accurate?",
+   "opts": [
+    {
+     "t": "\"It stops your contractions so labor won't progress.\"",
+     "r": "Betamethasone does not stop contractions — that's the role of tocolytics (e.g., magnesium sulfate, nifedipine)."
+    },
+    {
+     "t": "\"It helps your baby's lungs mature more quickly in case of early birth.\"",
+     "r": "Antenatal corticosteroids like **betamethasone accelerate fetal lung maturity** (surfactant production), reducing respiratory distress syndrome if the baby is born preterm."
+    },
+    {
+     "t": "\"It treats an infection that may have triggered your labor.\"",
+     "r": "It is not an antibiotic and does not treat infection."
+    },
+    {
+     "t": "\"It raises your blood pressure to protect the placenta.\"",
+     "r": "Its purpose is fetal lung maturation, not raising maternal blood pressure."
+    }
+   ],
+   "correct": 1,
+   "tip": "Separate the two preterm-labor drugs: **tocolytics buy time** (stop contractions); **corticosteroids mature the lungs.** Betamethasone = lungs.",
+   "pearl": "\"**Beta-methasone = better breathing.**\" Given to mom, works on the **baby's lungs.**",
+   "free": false,
+   "client_needs": "Health Promotion and Maintenance",
+   "scoring": "dichotomous",
+   "cjmm_step": "n/a",
+   "level": 3
+  }
+ ]
 }

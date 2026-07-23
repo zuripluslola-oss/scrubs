@@ -28,7 +28,11 @@
     }
    ],
    "correct": 1,
-   "tip": "Therapeutic responses reflect feelings and keep the focus on the client — not advice, reassurance, or \"why.\""
+   "tip": "Therapeutic responses reflect feelings and keep the focus on the client — not advice, reassurance, or \"why.\"",
+   "client_needs": "Psychosocial Integrity",
+   "scoring": "dichotomous",
+   "cjmm_step": "n/a",
+   "level": 3
   },
   {
    "id": "qb-mh-0102",
@@ -57,7 +61,11 @@
     }
    ],
    "correct": 1,
-   "tip": "Lithium range ~0.6–1.2 mEq/L. Toxicity: coarse tremor, GI upset, confusion. Low Na⁺/dehydration raises levels."
+   "tip": "Lithium range ~0.6–1.2 mEq/L. Toxicity: coarse tremor, GI upset, confusion. Low Na⁺/dehydration raises levels.",
+   "client_needs": "Psychosocial Integrity",
+   "scoring": "dichotomous",
+   "cjmm_step": "n/a",
+   "level": 4
   },
   {
    "id": "qb-mh-0103",
@@ -86,7 +94,11 @@
     }
    ],
    "correct": 1,
-   "tip": "A plan + available means = high suicide risk. Ensure immediate safety: 1:1 observation, remove means."
+   "tip": "A plan + available means = high suicide risk. Ensure immediate safety: 1:1 observation, remove means.",
+   "client_needs": "Psychosocial Integrity",
+   "scoring": "dichotomous",
+   "cjmm_step": "n/a",
+   "level": 4
   },
   {
    "id": "qb-mh-0104",
@@ -115,7 +127,11 @@
     }
    ],
    "correct": 1,
-   "tip": "Alcohol withdrawal (peaks 24–72 hr, DTs are life-threatening) → benzodiazepines + thiamine."
+   "tip": "Alcohol withdrawal (peaks 24–72 hr, DTs are life-threatening) → benzodiazepines + thiamine.",
+   "client_needs": "Psychosocial Integrity",
+   "scoring": "dichotomous",
+   "cjmm_step": "n/a",
+   "level": 4
   },
   {
    "id": "qb-mh-0105",
@@ -144,7 +160,11 @@
     }
    ],
    "correct": 1,
-   "tip": "Refeeding syndrome: watch phosphate, potassium, magnesium — go LOW. Advance calories slowly."
+   "tip": "Refeeding syndrome: watch phosphate, potassium, magnesium — go LOW. Advance calories slowly.",
+   "client_needs": "Psychosocial Integrity",
+   "scoring": "dichotomous",
+   "cjmm_step": "n/a",
+   "level": 4
   },
   {
    "id": "qb-mh-0106",
@@ -173,7 +193,11 @@
     }
    ],
    "correct": 1,
-   "tip": "Acute mania: reduce stimulation and use high-calorie finger foods \"on the go\" to maintain nutrition."
+   "tip": "Acute mania: reduce stimulation and use high-calorie finger foods \"on the go\" to maintain nutrition.",
+   "client_needs": "Psychosocial Integrity",
+   "scoring": "dichotomous",
+   "cjmm_step": "n/a",
+   "level": 3
   },
   {
    "id": "qb-mh-0107",
@@ -202,7 +226,11 @@
     }
    ],
    "correct": 1,
-   "tip": "SSRIs take 2–6 weeks. Watch for increased suicide risk early in treatment, especially in young clients."
+   "tip": "SSRIs take 2–6 weeks. Watch for increased suicide risk early in treatment, especially in young clients.",
+   "client_needs": "Psychosocial Integrity",
+   "scoring": "dichotomous",
+   "cjmm_step": "n/a",
+   "level": 3
   },
   {
    "id": "qb-mh-0108",
@@ -231,7 +259,11 @@
     }
    ],
    "correct": 1,
-   "tip": "De-escalation: calm voice, give space, simple clear limits, remove triggers. Restraints are last resort."
+   "tip": "De-escalation: calm voice, give space, simple clear limits, remove triggers. Restraints are last resort.",
+   "client_needs": "Psychosocial Integrity",
+   "scoring": "dichotomous",
+   "cjmm_step": "n/a",
+   "level": 3
   }
  ]
 }

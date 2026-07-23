@@ -1,191 +1,215 @@
 {
-  "batch": "workbook-fundamentals",
-  "questions": [
+ "batch": "workbook-fundamentals",
+ "questions": [
+  {
+   "id": "fundamentals-0001",
+   "exam": "RN",
+   "cat": "Fundamentals",
+   "topic": "Blood pressure measurement error",
+   "difficulty": "Easy",
+   "type": "mc",
+   "stem": "A nurse obtains an unexpectedly high blood pressure reading on a client. Which factor could falsely elevate the reading?",
+   "opts": [
     {
-      "id": "fundamentals-0001",
-      "exam": "RN",
-      "cat": "Fundamentals",
-      "topic": "Blood pressure measurement error",
-      "difficulty": "Easy",
-      "type": "mc",
-      "stem": "A nurse obtains an unexpectedly high blood pressure reading on a client. Which factor could falsely elevate the reading?",
-      "opts": [
-        {
-          "t": "Using a cuff that is too small (narrow) for the client's arm",
-          "r": "A cuff that is **too small/narrow** for the arm gives a **falsely high** reading. (A cuff too large reads falsely low.)"
-        },
-        {
-          "t": "Positioning the arm at the level of the heart",
-          "r": "Arm at heart level is the **correct** technique and yields an accurate reading."
-        },
-        {
-          "t": "Allowing the client to rest quietly for five minutes first",
-          "r": "Resting quietly first prevents falsely high readings — good technique."
-        },
-        {
-          "t": "Using a cuff that covers about 80% of the upper arm circumference",
-          "r": "A properly sized cuff (bladder covering ~80% of the arm) is correct and improves accuracy."
-        }
-      ],
-      "correct": 0,
-      "tip": "Cuff-size errors: **too small → too high; too big → too low.** Also, an arm **below** heart level reads high; **above** heart level reads low.",
-      "pearl": "\"**Small cuff, big number.**\" When a value surprises you, **recheck technique before treating the number.**",
-      "free": true
+     "t": "Using a cuff that is too small (narrow) for the client's arm",
+     "r": "A cuff that is **too small/narrow** for the arm gives a **falsely high** reading. (A cuff too large reads falsely low.)"
     },
     {
-      "id": "fundamentals-0002",
-      "exam": "RN",
-      "cat": "Fundamentals",
-      "topic": "Sterile field / surgical asepsis",
-      "difficulty": "Moderate",
-      "type": "mc",
-      "stem": "A nurse is setting up a sterile field for a bedside procedure. Which action breaks sterile technique and requires the nurse to start over?",
-      "opts": [
-        {
-          "t": "Holding sterile items above waist level and within view",
-          "r": "Keeping sterile items **above the waist and in sight** maintains sterility."
-        },
-        {
-          "t": "Considering the outer one-inch border of the sterile drape contaminated",
-          "r": "The **outer 1-inch border** of a sterile field is treated as **contaminated** — standard practice."
-        },
-        {
-          "t": "Reaching across the sterile field to place an item on the far side",
-          "r": "**Reaching across a sterile field** contaminates it — the unsterile arm passes over sterile items. The nurse must set up so items are reached from the side, not over the top."
-        },
-        {
-          "t": "Opening the outermost flap of a sterile package away from the body first",
-          "r": "Opening the **first flap away** from the body prevents reaching over the sterile contents."
-        }
-      ],
-      "correct": 2,
-      "tip": "Sterile rules to bank: **keep it in sight, above the waist; 1-inch border is dirty; never turn your back on it; never reach across it; wet = contaminated.**",
-      "pearl": "\"**Below the waist or out of sight = it isn't sterile — not quite.**\" When in doubt, throw it out and restart.",
-      "free": true
+     "t": "Positioning the arm at the level of the heart",
+     "r": "Arm at heart level is the **correct** technique and yields an accurate reading."
     },
     {
-      "id": "fundamentals-0003",
-      "exam": "RN",
-      "cat": "Fundamentals",
-      "topic": "Nasogastric tube placement verification",
-      "difficulty": "Moderate",
-      "type": "mc",
-      "stem": "A nurse prepares to give medication through a newly inserted nasogastric (NG) tube. Which method is the most reliable for verifying correct tube placement?",
-      "opts": [
-        {
-          "t": "Auscultating air injected into the tube over the stomach",
-          "r": "The **air/auscultation (\"whoosh\") test is unreliable** — sounds can transmit even if the tube is in the lung. It's no longer recommended as confirmation."
-        },
-        {
-          "t": "Checking that the client is not coughing",
-          "r": "Absence of coughing does not confirm gastric placement; a tube can be misplaced without coughing."
-        },
-        {
-          "t": "Reviewing the X-ray obtained after insertion",
-          "r": "**Radiographic (X-ray) confirmation** is the **gold standard** for verifying placement after initial insertion, before using the tube."
-        },
-        {
-          "t": "Confirming the external tube length looks about right",
-          "r": "External length is a rough check for migration, not proof of correct initial placement."
-        }
-      ],
-      "correct": 2,
-      "tip": "For **initial** NG placement, the answer is **X-ray.** Ongoing checks may use **pH of aspirate** and measuring the external length — but never the air-auscultation method as confirmation.",
-      "pearl": "\"**When in doubt, X-ray it out.**\" Gastric aspirate is usually **acidic (pH ≤ 5)**; respiratory/intestinal fluid is more alkaline.",
-      "free": false
+     "t": "Allowing the client to rest quietly for five minutes first",
+     "r": "Resting quietly first prevents falsely high readings — good technique."
     },
     {
-      "id": "fundamentals-0004",
-      "exam": "RN",
-      "cat": "Fundamentals",
-      "topic": "Fall risk / restraint alternatives",
-      "difficulty": "Easy",
-      "type": "mc",
-      "stem": "A confused older adult is at high risk for falls. The nurse plans care to keep the client safe. Which intervention should the nurse implement first?",
-      "opts": [
-        {
-          "t": "Apply a vest restraint to keep the client in bed.",
-          "r": "Restraints are a **last resort**, require an order, and can increase injury — not a first-line fall strategy."
-        },
-        {
-          "t": "Place the bed in the lowest position with the call light in reach and initiate frequent rounding.",
-          "r": "The **least restrictive** measures come first: **low bed, call light within reach, nonslip footwear, a clear path, bed/chair alarms, and frequent (hourly) rounding.**"
-        },
-        {
-          "t": "Raise all four side rails to prevent the client from getting up.",
-          "r": "**Four raised side rails are considered a restraint** and can cause serious injury if the client climbs over."
-        },
-        {
-          "t": "Keep the room dark and quiet at all times to reduce stimulation.",
-          "r": "A completely dark room can increase confusion and fall risk; some soft lighting aids orientation."
-        }
-      ],
-      "correct": 1,
-      "tip": "Always choose the **least restrictive** safe option first. Restraints and four side rails are **restraints** — near the bottom of the list, never the first answer.",
-      "pearl": "\"**Least restrictive, first and best.**\" Restraints need an **order, a time limit, and regular checks** — never PRN, never for staff convenience.",
-      "free": false
-    },
-    {
-      "id": "fundamentals-0005",
-      "exam": "RN",
-      "cat": "Fundamentals",
-      "topic": "Hand hygiene and C. difficile",
-      "difficulty": "Moderate",
-      "type": "mc",
-      "stem": "A nurse cares for a client with *Clostridioides difficile* (C. diff) infection. Which infection-control action is correct?",
-      "opts": [
-        {
-          "t": "Use alcohol-based hand sanitizer after removing gloves.",
-          "r": "**Alcohol sanitizer does not kill C. diff spores** — soap and water friction is required to physically remove them."
-        },
-        {
-          "t": "Wash hands with soap and water, and use contact precautions with gown and gloves.",
-          "r": "C. diff requires **contact precautions (gown and gloves)** and **handwashing with soap and water.** Dedicated equipment and bleach-based cleaning are also used."
-        },
-        {
-          "t": "Place the client on airborne precautions with an N95 respirator.",
-          "r": "C. diff spreads by contact/fecal-oral, **not airborne** — an N95 is unnecessary."
-        },
-        {
-          "t": "No special precautions are needed if the client uses a private bathroom.",
-          "r": "Precautions are absolutely required; a private bathroom does not replace contact isolation."
-        }
-      ],
-      "correct": 1,
-      "tip": "Remember the \"spore rule\": for **C. diff (and norovirus)**, use",
-      "pearl": "\"**Spores need soap.**\" Match the bug to the precaution: **Contact** (C. diff, MRSA), **Droplet** (flu, meningitis, pertussis), **Airborne** (**M**easles, **T**B, **V**aricella — \"**My Chicken Hez TB**\").",
-      "free": false
-    },
-    {
-      "id": "fundamentals-0006",
-      "exam": "RN",
-      "cat": "Fundamentals",
-      "topic": "Delegation to unlicensed assistive personnel",
-      "difficulty": "Moderate",
-      "type": "mc",
-      "stem": "A registered nurse (RN) is delegating tasks to unlicensed assistive personnel (UAP) on a busy med-surg unit. Which task is appropriate for the RN to delegate to the UAP?",
-      "opts": [
-        {
-          "t": "Performing the admission assessment on a new client",
-          "r": "**Assessment** is an RN responsibility and cannot be delegated."
-        },
-        {
-          "t": "Recording the intake and output of a stable client",
-          "r": "Recording **intake and output** for a **stable** client is a routine, standardized task within the UAP's scope."
-        },
-        {
-          "t": "Teaching a client how to use an incentive spirometer for the first time",
-          "r": "**Teaching** (client education) is an RN function, especially first-time instruction."
-        },
-        {
-          "t": "Adjusting the flow rate of a client's IV fluids",
-          "r": "Titrating/adjusting IV fluids involves nursing judgment and is not delegated to a UAP."
-        }
-      ],
-      "correct": 1,
-      "tip": "UAPs handle **stable, routine, standard** tasks — vitals, hygiene, feeding, ambulating, I&O. The RN keeps the **\"AT-E\"**: **A**ssess,",
-      "pearl": "\"**If it takes a nurse's brain, it stays with the nurse.**\" Delegate the **stable and predictable**, keep the **unstable and the teaching.**",
-      "free": false
+     "t": "Using a cuff that covers about 80% of the upper arm circumference",
+     "r": "A properly sized cuff (bladder covering ~80% of the arm) is correct and improves accuracy."
     }
-  ]
+   ],
+   "correct": 0,
+   "tip": "Cuff-size errors: **too small → too high; too big → too low.** Also, an arm **below** heart level reads high; **above** heart level reads low.",
+   "pearl": "\"**Small cuff, big number.**\" When a value surprises you, **recheck technique before treating the number.**",
+   "free": true,
+   "client_needs": "Basic Care and Comfort",
+   "scoring": "dichotomous",
+   "cjmm_step": "n/a",
+   "level": 2
+  },
+  {
+   "id": "fundamentals-0002",
+   "exam": "RN",
+   "cat": "Fundamentals",
+   "topic": "Sterile field / surgical asepsis",
+   "difficulty": "Moderate",
+   "type": "mc",
+   "stem": "A nurse is setting up a sterile field for a bedside procedure. Which action breaks sterile technique and requires the nurse to start over?",
+   "opts": [
+    {
+     "t": "Holding sterile items above waist level and within view",
+     "r": "Keeping sterile items **above the waist and in sight** maintains sterility."
+    },
+    {
+     "t": "Considering the outer one-inch border of the sterile drape contaminated",
+     "r": "The **outer 1-inch border** of a sterile field is treated as **contaminated** — standard practice."
+    },
+    {
+     "t": "Reaching across the sterile field to place an item on the far side",
+     "r": "**Reaching across a sterile field** contaminates it — the unsterile arm passes over sterile items. The nurse must set up so items are reached from the side, not over the top."
+    },
+    {
+     "t": "Opening the outermost flap of a sterile package away from the body first",
+     "r": "Opening the **first flap away** from the body prevents reaching over the sterile contents."
+    }
+   ],
+   "correct": 2,
+   "tip": "Sterile rules to bank: **keep it in sight, above the waist; 1-inch border is dirty; never turn your back on it; never reach across it; wet = contaminated.**",
+   "pearl": "\"**Below the waist or out of sight = it isn't sterile — not quite.**\" When in doubt, throw it out and restart.",
+   "free": true,
+   "client_needs": "Basic Care and Comfort",
+   "scoring": "dichotomous",
+   "cjmm_step": "n/a",
+   "level": 3
+  },
+  {
+   "id": "fundamentals-0003",
+   "exam": "RN",
+   "cat": "Fundamentals",
+   "topic": "Nasogastric tube placement verification",
+   "difficulty": "Moderate",
+   "type": "mc",
+   "stem": "A nurse prepares to give medication through a newly inserted nasogastric (NG) tube. Which method is the most reliable for verifying correct tube placement?",
+   "opts": [
+    {
+     "t": "Auscultating air injected into the tube over the stomach",
+     "r": "The **air/auscultation (\"whoosh\") test is unreliable** — sounds can transmit even if the tube is in the lung. It's no longer recommended as confirmation."
+    },
+    {
+     "t": "Checking that the client is not coughing",
+     "r": "Absence of coughing does not confirm gastric placement; a tube can be misplaced without coughing."
+    },
+    {
+     "t": "Reviewing the X-ray obtained after insertion",
+     "r": "**Radiographic (X-ray) confirmation** is the **gold standard** for verifying placement after initial insertion, before using the tube."
+    },
+    {
+     "t": "Confirming the external tube length looks about right",
+     "r": "External length is a rough check for migration, not proof of correct initial placement."
+    }
+   ],
+   "correct": 2,
+   "tip": "For **initial** NG placement, the answer is **X-ray.** Ongoing checks may use **pH of aspirate** and measuring the external length — but never the air-auscultation method as confirmation.",
+   "pearl": "\"**When in doubt, X-ray it out.**\" Gastric aspirate is usually **acidic (pH ≤ 5)**; respiratory/intestinal fluid is more alkaline.",
+   "free": false,
+   "client_needs": "Basic Care and Comfort",
+   "scoring": "dichotomous",
+   "cjmm_step": "n/a",
+   "level": 3
+  },
+  {
+   "id": "fundamentals-0004",
+   "exam": "RN",
+   "cat": "Fundamentals",
+   "topic": "Fall risk / restraint alternatives",
+   "difficulty": "Easy",
+   "type": "mc",
+   "stem": "A confused older adult is at high risk for falls. The nurse plans care to keep the client safe. Which intervention should the nurse implement first?",
+   "opts": [
+    {
+     "t": "Apply a vest restraint to keep the client in bed.",
+     "r": "Restraints are a **last resort**, require an order, and can increase injury — not a first-line fall strategy."
+    },
+    {
+     "t": "Place the bed in the lowest position with the call light in reach and initiate frequent rounding.",
+     "r": "The **least restrictive** measures come first: **low bed, call light within reach, nonslip footwear, a clear path, bed/chair alarms, and frequent (hourly) rounding.**"
+    },
+    {
+     "t": "Raise all four side rails to prevent the client from getting up.",
+     "r": "**Four raised side rails are considered a restraint** and can cause serious injury if the client climbs over."
+    },
+    {
+     "t": "Keep the room dark and quiet at all times to reduce stimulation.",
+     "r": "A completely dark room can increase confusion and fall risk; some soft lighting aids orientation."
+    }
+   ],
+   "correct": 1,
+   "tip": "Always choose the **least restrictive** safe option first. Restraints and four side rails are **restraints** — near the bottom of the list, never the first answer.",
+   "pearl": "\"**Least restrictive, first and best.**\" Restraints need an **order, a time limit, and regular checks** — never PRN, never for staff convenience.",
+   "free": false,
+   "client_needs": "Basic Care and Comfort",
+   "scoring": "dichotomous",
+   "cjmm_step": "n/a",
+   "level": 2
+  },
+  {
+   "id": "fundamentals-0005",
+   "exam": "RN",
+   "cat": "Fundamentals",
+   "topic": "Hand hygiene and C. difficile",
+   "difficulty": "Moderate",
+   "type": "mc",
+   "stem": "A nurse cares for a client with *Clostridioides difficile* (C. diff) infection. Which infection-control action is correct?",
+   "opts": [
+    {
+     "t": "Use alcohol-based hand sanitizer after removing gloves.",
+     "r": "**Alcohol sanitizer does not kill C. diff spores** — soap and water friction is required to physically remove them."
+    },
+    {
+     "t": "Wash hands with soap and water, and use contact precautions with gown and gloves.",
+     "r": "C. diff requires **contact precautions (gown and gloves)** and **handwashing with soap and water.** Dedicated equipment and bleach-based cleaning are also used."
+    },
+    {
+     "t": "Place the client on airborne precautions with an N95 respirator.",
+     "r": "C. diff spreads by contact/fecal-oral, **not airborne** — an N95 is unnecessary."
+    },
+    {
+     "t": "No special precautions are needed if the client uses a private bathroom.",
+     "r": "Precautions are absolutely required; a private bathroom does not replace contact isolation."
+    }
+   ],
+   "correct": 1,
+   "tip": "Remember the \"spore rule\": for **C. diff (and norovirus)**, use",
+   "pearl": "\"**Spores need soap.**\" Match the bug to the precaution: **Contact** (C. diff, MRSA), **Droplet** (flu, meningitis, pertussis), **Airborne** (**M**easles, **T**B, **V**aricella — \"**My Chicken Hez TB**\").",
+   "free": false,
+   "client_needs": "Basic Care and Comfort",
+   "scoring": "dichotomous",
+   "cjmm_step": "n/a",
+   "level": 3
+  },
+  {
+   "id": "fundamentals-0006",
+   "exam": "RN",
+   "cat": "Fundamentals",
+   "topic": "Delegation to unlicensed assistive personnel",
+   "difficulty": "Moderate",
+   "type": "mc",
+   "stem": "A registered nurse (RN) is delegating tasks to unlicensed assistive personnel (UAP) on a busy med-surg unit. Which task is appropriate for the RN to delegate to the UAP?",
+   "opts": [
+    {
+     "t": "Performing the admission assessment on a new client",
+     "r": "**Assessment** is an RN responsibility and cannot be delegated."
+    },
+    {
+     "t": "Recording the intake and output of a stable client",
+     "r": "Recording **intake and output** for a **stable** client is a routine, standardized task within the UAP's scope."
+    },
+    {
+     "t": "Teaching a client how to use an incentive spirometer for the first time",
+     "r": "**Teaching** (client education) is an RN function, especially first-time instruction."
+    },
+    {
+     "t": "Adjusting the flow rate of a client's IV fluids",
+     "r": "Titrating/adjusting IV fluids involves nursing judgment and is not delegated to a UAP."
+    }
+   ],
+   "correct": 1,
+   "tip": "UAPs handle **stable, routine, standard** tasks — vitals, hygiene, feeding, ambulating, I&O. The RN keeps the **\"AT-E\"**: **A**ssess,",
+   "pearl": "\"**If it takes a nurse's brain, it stays with the nurse.**\" Delegate the **stable and predictable**, keep the **unstable and the teaching.**",
+   "free": false,
+   "client_needs": "Basic Care and Comfort",
+   "scoring": "dichotomous",
+   "cjmm_step": "n/a",
+   "level": 3
+  }
+ ]
 }

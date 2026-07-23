@@ -1,160 +1,180 @@
 {
-  "batch": "workbook-mental-health",
-  "questions": [
+ "batch": "workbook-mental-health",
+ "questions": [
+  {
+   "id": "mental-health-0001",
+   "exam": "RN",
+   "cat": "Mental Health",
+   "topic": "Lithium therapy",
+   "difficulty": "Moderate",
+   "type": "mc",
+   "stem": "A client with bipolar disorder takes lithium. During a summer heat wave, the client reports vomiting, coarse hand tremors, and slurred speech. Which action should the nurse take first?",
+   "opts": [
     {
-      "id": "mental-health-0001",
-      "exam": "RN",
-      "cat": "Mental Health",
-      "topic": "Lithium therapy",
-      "difficulty": "Moderate",
-      "type": "mc",
-      "stem": "A client with bipolar disorder takes lithium. During a summer heat wave, the client reports vomiting, coarse hand tremors, and slurred speech. Which action should the nurse take first?",
-      "opts": [
-        {
-          "t": "Reassure the client that these are normal, expected effects of lithium.",
-          "r": "Coarse tremors, vomiting, and slurred speech are signs of **lithium toxicity**, not benign side effects (a fine hand tremor can be expected; a *coarse* tremor is not)."
-        },
-        {
-          "t": "Hold the next dose and obtain a serum lithium level.",
-          "r": "These findings suggest toxicity, which is more likely when dehydration or sodium loss concentrates the drug (as in a heat wave). The nurse **holds the dose and checks the level.** Therapeutic range is narrow: **0.6–1.2 mEq/L.**"
-        },
-        {
-          "t": "Encourage the client to restrict all fluids and salt.",
-          "r": "Restricting fluids and salt *worsens* lithium toxicity. Adequate, consistent sodium and fluid intake keep the level stable."
-        },
-        {
-          "t": "Increase the lithium dose to control the tremor.",
-          "r": "Adding drug to a toxic client is dangerous."
-        }
-      ],
-      "correct": 1,
-      "tip": "Lithium and sodium travel together in the body. **Low sodium or low fluid = higher lithium = toxicity.** Watch for sweating, vomiting, and diuretics.",
-      "pearl": "Lithium range **\"0.6 to 1.2, keep it true.\"** Early toxicity: **GI upset + fine tremor**. Worsening toxicity:",
-      "free": true
+     "t": "Reassure the client that these are normal, expected effects of lithium.",
+     "r": "Coarse tremors, vomiting, and slurred speech are signs of **lithium toxicity**, not benign side effects (a fine hand tremor can be expected; a *coarse* tremor is not)."
     },
     {
-      "id": "mental-health-0002",
-      "exam": "RN",
-      "cat": "Mental Health",
-      "topic": "Therapeutic communication",
-      "difficulty": "Moderate",
-      "type": "mc",
-      "stem": "A client newly diagnosed with cancer says, \"I don't even know how to tell my kids. I feel like I've already let them down.\" Which response by the nurse is most therapeutic?",
-      "opts": [
-        {
-          "t": "\"Don't worry — plenty of people beat cancer these days.\"",
-          "r": "False reassurance (\"plenty of people beat cancer\") dismisses the client's feelings and shuts down communication."
-        },
-        {
-          "t": "\"It sounds like you're feeling overwhelmed about facing your children.\"",
-          "r": "**Reflecting the client's feeling** (\"it sounds like you're feeling overwhelmed\") shows empathy, validates the emotion, and invites the client to say more — the heart of therapeutic communication."
-        },
-        {
-          "t": "\"Why would you feel like you've let them down? You didn't cause this.\"",
-          "r": "\"Why\" questions can sound challenging and put the client on the defensive."
-        },
-        {
-          "t": "\"You should focus on staying positive for your family's sake.\"",
-          "r": "Telling the client to \"stay positive\" minimizes real distress and imposes the nurse's agenda."
-        }
-      ],
-      "correct": 1,
-      "tip": "Therapeutic answers usually **reflect feelings, stay open, and keep the focus on the client.** Avoid false reassurance, \"why\" questions, giving advice, and changing the subject.",
-      "pearl": "When two answers both look kind, pick the one that **names the feeling and hands the conversation back to the client.** Silence and reflection beat cheerleading.",
-      "free": true
+     "t": "Hold the next dose and obtain a serum lithium level.",
+     "r": "These findings suggest toxicity, which is more likely when dehydration or sodium loss concentrates the drug (as in a heat wave). The nurse **holds the dose and checks the level.** Therapeutic range is narrow: **0.6–1.2 mEq/L.**"
     },
     {
-      "id": "mental-health-0003",
-      "exam": "RN",
-      "cat": "Mental Health",
-      "topic": "Suicide risk priority",
-      "difficulty": "Hard",
-      "type": "mc",
-      "stem": "During an assessment, a client with depression states, \"I've been saving up my pills, and soon it won't matter anymore.\" What is the nurse's priority action?",
-      "opts": [
-        {
-          "t": "Encourage the client to focus on reasons for living.",
-          "r": "Reasons for living may come later, but they do not address the immediate danger."
-        },
-        {
-          "t": "Ask the client directly whether they have a plan to harm themselves and ensure safety.",
-          "r": "The statement suggests a **plan and means** (saved pills). The nurse must **ask directly about suicidal intent and plan** and **institute safety measures** immediately (do not leave the client alone, remove means). Asking directly does not \"plant the idea.\""
-        },
-        {
-          "t": "Document the statement and continue the scheduled assessment.",
-          "r": "Documenting without acting leaves the client in danger."
-        },
-        {
-          "t": "Reassure the client that things will improve with medication.",
-          "r": "Reassurance ignores an active safety threat."
-        }
-      ],
-      "correct": 1,
-      "tip": "Safety is always the priority in suicide items. A client with a",
-      "pearl": "\"**Ask the question, remove the means, never leave alone.**\" The more specific the **plan** and the more available the",
-      "free": false
+     "t": "Encourage the client to restrict all fluids and salt.",
+     "r": "Restricting fluids and salt *worsens* lithium toxicity. Adequate, consistent sodium and fluid intake keep the level stable."
     },
     {
-      "id": "mental-health-0004",
-      "exam": "RN",
-      "cat": "Mental Health",
-      "topic": "Alcohol withdrawal",
-      "difficulty": "Moderate",
-      "type": "mc",
-      "stem": "A client admitted 24 hours ago after a fall reports the last alcoholic drink was \"yesterday morning.\" The nurse notes tremors, diaphoresis, heart rate 118/min, blood pressure 168/96, and rising anxiety. Which is the nurse's priority concern?",
-      "opts": [
-        {
-          "t": "These findings are expected and require no action.",
-          "r": "Escalating autonomic signs are **not** benign — untreated, withdrawal can progress to seizures and **delirium tremens (DTs)**, which can be fatal."
-        },
-        {
-          "t": "The client is at risk for worsening withdrawal, including seizures and delirium tremens.",
-          "r": "Tremor, diaphoresis, tachycardia, hypertension, and anxiety 1–2 days after the last drink signal **alcohol withdrawal.** The nurse anticipates **benzodiazepines** (per protocol/CIWA scoring), thiamine, a calm environment, and seizure precautions."
-        },
-        {
-          "t": "The client is likely experiencing an allergic reaction.",
-          "r": "There is no allergen described; the picture is autonomic hyperactivity, not anaphylaxis."
-        },
-        {
-          "t": "The client is showing signs of opioid intoxication.",
-          "r": "Opioid intoxication causes **sedation and slowed breathing** — the opposite of this hyperadrenergic state."
-        }
-      ],
-      "correct": 1,
-      "tip": "Alcohol withdrawal = **hyperactivity** (up HR, up BP, tremor, agitation). Peak DT risk is **48–72 hours** after the last drink. Benzodiazepines are the mainstay.",
-      "pearl": "\"**Withdrawal winds you up.**\" Give",
-      "free": false
-    },
-    {
-      "id": "mental-health-0005",
-      "exam": "RN",
-      "cat": "Mental Health",
-      "topic": "Lithium and fluid balance teaching",
-      "difficulty": "Easy",
-      "type": "mc",
-      "stem": "A nurse is teaching a client starting lithium about self-care at home. Which client statement indicates a need for further teaching?",
-      "opts": [
-        {
-          "t": "\"I'll drink plenty of water and keep my salt intake steady.\"",
-          "r": "Adequate fluids and **consistent** sodium keep lithium levels stable — good teaching."
-        },
-        {
-          "t": "\"I'll get my blood levels checked as scheduled.\"",
-          "r": "Regular level monitoring is essential with lithium's narrow therapeutic range."
-        },
-        {
-          "t": "\"I'll start a strict low-sodium diet to be healthier.\"",
-          "r": "A **low-sodium diet is dangerous** with lithium — low sodium makes the kidneys retain lithium, raising it toward toxicity. This shows a knowledge gap."
-        },
-        {
-          "t": "\"I'll call my provider if I have vomiting or diarrhea.\"",
-          "r": "Vomiting and diarrhea cause fluid/ sodium loss and toxicity risk, so reporting them is correct."
-        }
-      ],
-      "correct": 2,
-      "tip": "Watch for **negative-polarity** stems (\"need for further teaching,\" \"requires follow-up\") — you're hunting the **wrong** statement.",
-      "pearl": "Lithium loves **steady salt and steady water.** Sudden **low sodium or dehydration = rising lithium = toxicity.**",
-      "free": false
+     "t": "Increase the lithium dose to control the tremor.",
+     "r": "Adding drug to a toxic client is dangerous."
     }
-  ]
+   ],
+   "correct": 1,
+   "tip": "Lithium and sodium travel together in the body. **Low sodium or low fluid = higher lithium = toxicity.** Watch for sweating, vomiting, and diuretics.",
+   "pearl": "Lithium range **\"0.6 to 1.2, keep it true.\"** Early toxicity: **GI upset + fine tremor**. Worsening toxicity:",
+   "free": true,
+   "client_needs": "Psychosocial Integrity",
+   "scoring": "dichotomous",
+   "cjmm_step": "n/a",
+   "level": 3
+  },
+  {
+   "id": "mental-health-0002",
+   "exam": "RN",
+   "cat": "Mental Health",
+   "topic": "Therapeutic communication",
+   "difficulty": "Moderate",
+   "type": "mc",
+   "stem": "A client newly diagnosed with cancer says, \"I don't even know how to tell my kids. I feel like I've already let them down.\" Which response by the nurse is most therapeutic?",
+   "opts": [
+    {
+     "t": "\"Don't worry — plenty of people beat cancer these days.\"",
+     "r": "False reassurance (\"plenty of people beat cancer\") dismisses the client's feelings and shuts down communication."
+    },
+    {
+     "t": "\"It sounds like you're feeling overwhelmed about facing your children.\"",
+     "r": "**Reflecting the client's feeling** (\"it sounds like you're feeling overwhelmed\") shows empathy, validates the emotion, and invites the client to say more — the heart of therapeutic communication."
+    },
+    {
+     "t": "\"Why would you feel like you've let them down? You didn't cause this.\"",
+     "r": "\"Why\" questions can sound challenging and put the client on the defensive."
+    },
+    {
+     "t": "\"You should focus on staying positive for your family's sake.\"",
+     "r": "Telling the client to \"stay positive\" minimizes real distress and imposes the nurse's agenda."
+    }
+   ],
+   "correct": 1,
+   "tip": "Therapeutic answers usually **reflect feelings, stay open, and keep the focus on the client.** Avoid false reassurance, \"why\" questions, giving advice, and changing the subject.",
+   "pearl": "When two answers both look kind, pick the one that **names the feeling and hands the conversation back to the client.** Silence and reflection beat cheerleading.",
+   "free": true,
+   "client_needs": "Psychosocial Integrity",
+   "scoring": "dichotomous",
+   "cjmm_step": "n/a",
+   "level": 3
+  },
+  {
+   "id": "mental-health-0003",
+   "exam": "RN",
+   "cat": "Mental Health",
+   "topic": "Suicide risk priority",
+   "difficulty": "Hard",
+   "type": "mc",
+   "stem": "During an assessment, a client with depression states, \"I've been saving up my pills, and soon it won't matter anymore.\" What is the nurse's priority action?",
+   "opts": [
+    {
+     "t": "Encourage the client to focus on reasons for living.",
+     "r": "Reasons for living may come later, but they do not address the immediate danger."
+    },
+    {
+     "t": "Ask the client directly whether they have a plan to harm themselves and ensure safety.",
+     "r": "The statement suggests a **plan and means** (saved pills). The nurse must **ask directly about suicidal intent and plan** and **institute safety measures** immediately (do not leave the client alone, remove means). Asking directly does not \"plant the idea.\""
+    },
+    {
+     "t": "Document the statement and continue the scheduled assessment.",
+     "r": "Documenting without acting leaves the client in danger."
+    },
+    {
+     "t": "Reassure the client that things will improve with medication.",
+     "r": "Reassurance ignores an active safety threat."
+    }
+   ],
+   "correct": 1,
+   "tip": "Safety is always the priority in suicide items. A client with a",
+   "pearl": "\"**Ask the question, remove the means, never leave alone.**\" The more specific the **plan** and the more available the",
+   "free": false,
+   "client_needs": "Psychosocial Integrity",
+   "scoring": "dichotomous",
+   "cjmm_step": "n/a",
+   "level": 4
+  },
+  {
+   "id": "mental-health-0004",
+   "exam": "RN",
+   "cat": "Mental Health",
+   "topic": "Alcohol withdrawal",
+   "difficulty": "Moderate",
+   "type": "mc",
+   "stem": "A client admitted 24 hours ago after a fall reports the last alcoholic drink was \"yesterday morning.\" The nurse notes tremors, diaphoresis, heart rate 118/min, blood pressure 168/96, and rising anxiety. Which is the nurse's priority concern?",
+   "opts": [
+    {
+     "t": "These findings are expected and require no action.",
+     "r": "Escalating autonomic signs are **not** benign — untreated, withdrawal can progress to seizures and **delirium tremens (DTs)**, which can be fatal."
+    },
+    {
+     "t": "The client is at risk for worsening withdrawal, including seizures and delirium tremens.",
+     "r": "Tremor, diaphoresis, tachycardia, hypertension, and anxiety 1–2 days after the last drink signal **alcohol withdrawal.** The nurse anticipates **benzodiazepines** (per protocol/CIWA scoring), thiamine, a calm environment, and seizure precautions."
+    },
+    {
+     "t": "The client is likely experiencing an allergic reaction.",
+     "r": "There is no allergen described; the picture is autonomic hyperactivity, not anaphylaxis."
+    },
+    {
+     "t": "The client is showing signs of opioid intoxication.",
+     "r": "Opioid intoxication causes **sedation and slowed breathing** — the opposite of this hyperadrenergic state."
+    }
+   ],
+   "correct": 1,
+   "tip": "Alcohol withdrawal = **hyperactivity** (up HR, up BP, tremor, agitation). Peak DT risk is **48–72 hours** after the last drink. Benzodiazepines are the mainstay.",
+   "pearl": "\"**Withdrawal winds you up.**\" Give",
+   "free": false,
+   "client_needs": "Psychosocial Integrity",
+   "scoring": "dichotomous",
+   "cjmm_step": "n/a",
+   "level": 3
+  },
+  {
+   "id": "mental-health-0005",
+   "exam": "RN",
+   "cat": "Mental Health",
+   "topic": "Lithium and fluid balance teaching",
+   "difficulty": "Easy",
+   "type": "mc",
+   "stem": "A nurse is teaching a client starting lithium about self-care at home. Which client statement indicates a need for further teaching?",
+   "opts": [
+    {
+     "t": "\"I'll drink plenty of water and keep my salt intake steady.\"",
+     "r": "Adequate fluids and **consistent** sodium keep lithium levels stable — good teaching."
+    },
+    {
+     "t": "\"I'll get my blood levels checked as scheduled.\"",
+     "r": "Regular level monitoring is essential with lithium's narrow therapeutic range."
+    },
+    {
+     "t": "\"I'll start a strict low-sodium diet to be healthier.\"",
+     "r": "A **low-sodium diet is dangerous** with lithium — low sodium makes the kidneys retain lithium, raising it toward toxicity. This shows a knowledge gap."
+    },
+    {
+     "t": "\"I'll call my provider if I have vomiting or diarrhea.\"",
+     "r": "Vomiting and diarrhea cause fluid/ sodium loss and toxicity risk, so reporting them is correct."
+    }
+   ],
+   "correct": 2,
+   "tip": "Watch for **negative-polarity** stems (\"need for further teaching,\" \"requires follow-up\") — you're hunting the **wrong** statement.",
+   "pearl": "Lithium loves **steady salt and steady water.** Sudden **low sodium or dehydration = rising lithium = toxicity.**",
+   "free": false,
+   "client_needs": "Psychosocial Integrity",
+   "scoring": "dichotomous",
+   "cjmm_step": "n/a",
+   "level": 2
+  }
+ ]
 }

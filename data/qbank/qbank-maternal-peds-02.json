@@ -28,7 +28,11 @@
     }
    ],
    "correct": 1,
-   "tip": "Mag toxicity: lost reflexes → respiratory depression → cardiac arrest. Antidote = calcium gluconate."
+   "tip": "Mag toxicity: lost reflexes → respiratory depression → cardiac arrest. Antidote = calcium gluconate.",
+   "client_needs": "Health Promotion and Maintenance",
+   "scoring": "dichotomous",
+   "cjmm_step": "n/a",
+   "level": 4
   },
   {
    "id": "qb-mp-0102",
@@ -57,7 +61,11 @@
     }
    ],
    "correct": 1,
-   "tip": "VEAL CHOP — Late decels = Placental insufficiency. Stop Pit, reposition, O₂, IV fluids, notify."
+   "tip": "VEAL CHOP — Late decels = Placental insufficiency. Stop Pit, reposition, O₂, IV fluids, notify.",
+   "client_needs": "Health Promotion and Maintenance",
+   "scoring": "dichotomous",
+   "cjmm_step": "n/a",
+   "level": 4
   },
   {
    "id": "qb-mp-0103",
@@ -86,7 +94,11 @@
     }
    ],
    "correct": 0,
-   "tip": "Boggy uterus = atony = #1 cause of early PPH. Massage first; a full bladder displaces the uterus (have her void)."
+   "tip": "Boggy uterus = atony = #1 cause of early PPH. Massage first; a full bladder displaces the uterus (have her void).",
+   "client_needs": "Health Promotion and Maintenance",
+   "scoring": "dichotomous",
+   "cjmm_step": "n/a",
+   "level": 4
   },
   {
    "id": "qb-mp-0104",
@@ -115,7 +127,11 @@
     }
    ],
    "correct": 1,
-   "tip": "Acrocyanosis (extremities) = normal; central cyanosis (lips/trunk) = abnormal, act."
+   "tip": "Acrocyanosis (extremities) = normal; central cyanosis (lips/trunk) = abnormal, act.",
+   "client_needs": "Health Promotion and Maintenance",
+   "scoring": "dichotomous",
+   "cjmm_step": "n/a",
+   "level": 3
   },
   {
    "id": "qb-mp-0105",
@@ -144,7 +160,11 @@
     }
    ],
    "correct": 1,
-   "tip": "Suspected epiglottitis = hands off the throat. No tongue blades, no throat cultures until airway is secured."
+   "tip": "Suspected epiglottitis = hands off the throat. No tongue blades, no throat cultures until airway is secured.",
+   "client_needs": "Health Promotion and Maintenance",
+   "scoring": "dichotomous",
+   "cjmm_step": "n/a",
+   "level": 4
   },
   {
    "id": "qb-mp-0106",
@@ -173,7 +193,11 @@
     }
    ],
    "correct": 1,
-   "tip": "Infant dehydration: fewer wet diapers, sunken fontanel, no tears, dry mucous membranes, poor turgor."
+   "tip": "Infant dehydration: fewer wet diapers, sunken fontanel, no tears, dry mucous membranes, poor turgor.",
+   "client_needs": "Health Promotion and Maintenance",
+   "scoring": "dichotomous",
+   "cjmm_step": "n/a",
+   "level": 3
   },
   {
    "id": "qb-mp-0107",
@@ -202,7 +226,11 @@
     }
    ],
    "correct": 1,
-   "tip": "Never give aspirin to children (Reye's syndrome). Use weight-based acetaminophen/ibuprofen + fluids."
+   "tip": "Never give aspirin to children (Reye's syndrome). Use weight-based acetaminophen/ibuprofen + fluids.",
+   "client_needs": "Health Promotion and Maintenance",
+   "scoring": "dichotomous",
+   "cjmm_step": "n/a",
+   "level": 2
   },
   {
    "id": "qb-mp-0108",
@@ -231,7 +259,11 @@
     }
    ],
    "correct": 1,
-   "tip": "CF pancreatic enzymes: with EVERY meal and snack, to absorb fat-soluble vitamins (A, D, E, K)."
+   "tip": "CF pancreatic enzymes: with EVERY meal and snack, to absorb fat-soluble vitamins (A, D, E, K).",
+   "client_needs": "Health Promotion and Maintenance",
+   "scoring": "dichotomous",
+   "cjmm_step": "n/a",
+   "level": 3
   },
   {
    "id": "qb-mp-0109",
@@ -260,7 +292,11 @@
     }
    ],
    "correct": 1,
-   "tip": "Croup = barking/seal cough + stridor (viral, gradual). Epiglottitis = drooling + tripod (emergency)."
+   "tip": "Croup = barking/seal cough + stridor (viral, gradual). Epiglottitis = drooling + tripod (emergency).",
+   "client_needs": "Health Promotion and Maintenance",
+   "scoring": "dichotomous",
+   "cjmm_step": "n/a",
+   "level": 3
   },
   {
    "id": "qb-mp-0110",
@@ -289,7 +325,11 @@
     }
    ],
    "correct": 1,
-   "tip": "Adequate intake in a newborn: 6+ wet diapers/day, regular stools, steady weight gain, contentment after feeds."
+   "tip": "Adequate intake in a newborn: 6+ wet diapers/day, regular stools, steady weight gain, contentment after feeds.",
+   "client_needs": "Health Promotion and Maintenance",
+   "scoring": "dichotomous",
+   "cjmm_step": "n/a",
+   "level": 2
   }
  ]
 }

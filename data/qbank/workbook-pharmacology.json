@@ -1,253 +1,285 @@
 {
-  "batch": "workbook-pharmacology",
-  "questions": [
+ "batch": "workbook-pharmacology",
+ "questions": [
+  {
+   "id": "pharmacology-0001",
+   "exam": "RN",
+   "cat": "Pharmacology",
+   "topic": "Anticoagulation teaching",
+   "difficulty": "Moderate",
+   "type": "mc",
+   "stem": "A 72-year-old client with chronic atrial fibrillation is being discharged home on warfarin. The nurse is reinforcing discharge teaching. Which client statement indicates that teaching has been effective?",
+   "opts": [
     {
-      "id": "pharmacology-0001",
-      "exam": "RN",
-      "cat": "Pharmacology",
-      "topic": "Anticoagulation teaching",
-      "difficulty": "Moderate",
-      "type": "mc",
-      "stem": "A 72-year-old client with chronic atrial fibrillation is being discharged home on warfarin. The nurse is reinforcing discharge teaching. Which client statement indicates that teaching has been effective?",
-      "opts": [
-        {
-          "t": "\"I'll double my dose if I ever miss a day.\"",
-          "r": "Doubling a dose to \"catch up\" can push the INR into a dangerous range and cause bleeding. A missed dose is reported to the provider, not doubled."
-        },
-        {
-          "t": "\"I'll keep the amount of leafy green vegetables I eat about the same each week.\"",
-          "r": "Warfarin works by antagonizing vitamin K. Green leafy vegetables are high in vitamin K, so the goal is **consistency**, not avoidance — a steady weekly intake keeps the INR stable."
-        },
-        {
-          "t": "\"I can take ibuprofen for my arthritis whenever I need it.\"",
-          "r": "NSAIDs like ibuprofen increase bleeding risk (antiplatelet effect plus GI irritation) and should not be taken freely with warfarin."
-        },
-        {
-          "t": "\"I'll stop the medication as soon as my heartbeat feels regular.\"",
-          "r": "Warfarin is prescribed to prevent clot formation in atrial fibrillation regardless of how the rhythm *feels*; stopping it abruptly raises stroke risk. Clients do not self-discontinue."
-        }
-      ],
-      "correct": 1,
-      "tip": "When a question offers \"avoid all vitamin K foods,\" it's a trap. The correct anticoagulation teaching is almost always **consistency**, not elimination.",
-      "pearl": "**W**arfarin → **W**atch the **INR**; antidote is **vitamin K**. Heparin → watch the **aPTT**; antidote is",
-      "free": true
+     "t": "\"I'll double my dose if I ever miss a day.\"",
+     "r": "Doubling a dose to \"catch up\" can push the INR into a dangerous range and cause bleeding. A missed dose is reported to the provider, not doubled."
     },
     {
-      "id": "pharmacology-0002",
-      "exam": "RN",
-      "cat": "Pharmacology",
-      "topic": "Digoxin toxicity",
-      "difficulty": "Moderate",
-      "type": "mc",
-      "stem": "A nurse is caring for an older adult who takes digoxin and furosemide for heart failure. The client reports nausea, \"yellow-green halos\" around lights, and no appetite. What is the nurse's priority action?",
-      "opts": [
-        {
-          "t": "Administer the next scheduled dose of digoxin as ordered.",
-          "r": "Giving more digoxin to a client showing classic toxicity signs could be fatal. Never administer the next dose until toxicity is ruled out."
-        },
-        {
-          "t": "Hold the digoxin and obtain a serum digoxin and potassium level.",
-          "r": "Nausea, anorexia, and **visual disturbances (yellow-green halos)** are hallmark signs of digoxin toxicity. The nurse holds the drug and checks the digoxin level *and* potassium, because **hypokalemia** (which furosemide can cause) potentiates digoxin toxicity."
-        },
-        {
-          "t": "Encourage a high-potassium breakfast and reassess in an hour.",
-          "r": "Diet alone won't correct active toxicity, and delaying assessment risks a lethal arrhythmia."
-        },
-        {
-          "t": "Document the findings as expected side effects of heart failure.",
-          "r": "These are not expected heart-failure findings — they are a medication emergency that must be acted on."
-        }
-      ],
-      "correct": 1,
-      "tip": "If a client on digoxin *also* takes a loop or thiazide diuretic, the test wants you to connect **low potassium → higher toxicity risk.**",
-      "pearl": "\"**Dig** makes you **sick, slow, and see yellow**\": GI upset, **brady**cardia, and yellow/green vision. Hold for an apical pulse **< 60**.",
-      "free": true
+     "t": "\"I'll keep the amount of leafy green vegetables I eat about the same each week.\"",
+     "r": "Warfarin works by antagonizing vitamin K. Green leafy vegetables are high in vitamin K, so the goal is **consistency**, not avoidance — a steady weekly intake keeps the INR stable."
     },
     {
-      "id": "pharmacology-0003",
-      "exam": "RN",
-      "cat": "Pharmacology",
-      "topic": "Loop diuretic monitoring",
-      "difficulty": "Easy",
-      "type": "mc",
-      "stem": "A client is started on IV furosemide for pulmonary edema. Which laboratory value is most important for the nurse to monitor?",
-      "opts": [
-        {
-          "t": "Serum sodium",
-          "r": "Furosemide can lower sodium, but hyponatremia is generally less immediately dangerous than the potassium loss it causes."
-        },
-        {
-          "t": "Serum potassium",
-          "r": "Furosemide is a **potassium-wasting** loop diuretic. Hypokalemia is the priority concern because it can trigger life-threatening cardiac dysrhythmias — especially if the client also takes digoxin."
-        },
-        {
-          "t": "Serum calcium",
-          "r": "Loop diuretics can slightly lower calcium, but this is not the priority monitoring parameter."
-        },
-        {
-          "t": "Serum magnesium",
-          "r": "Magnesium can drop with loop diuretics and matters, but **potassium** is the classic, highest-priority answer the test is looking for."
-        }
-      ],
-      "correct": 1,
-      "tip": "Match the diuretic to the electrolyte: **loop and thiazide → lose potassium; spironolactone → keep (raise) potassium.**",
-      "pearl": "\"**F**urosemide → **F**alling K.\" Normal potassium is **3.5–5.0 mEq/L** — memorize this range cold; it shows up everywhere.",
-      "free": false
+     "t": "\"I can take ibuprofen for my arthritis whenever I need it.\"",
+     "r": "NSAIDs like ibuprofen increase bleeding risk (antiplatelet effect plus GI irritation) and should not be taken freely with warfarin."
     },
     {
-      "id": "pharmacology-0004",
-      "exam": "RN",
-      "cat": "Pharmacology",
-      "topic": "Insulin onset and peak",
-      "difficulty": "Moderate",
-      "type": "mc",
-      "stem": "A client receives regular (short-acting) insulin at 0730 before breakfast. At which time should the nurse be most alert for signs of hypoglycemia?",
-      "opts": [
-        {
-          "t": "0745",
-          "r": "Regular insulin's onset is about 30 minutes; at 15 minutes it has barely begun working."
-        },
-        {
-          "t": "1000",
-          "r": "Regular insulin **peaks about 2–3 hours** after administration. Given at 0730, its peak — and the highest hypoglycemia risk — falls around **1000**, which is why a mid-morning snack is often timed here."
-        },
-        {
-          "t": "1400",
-          "r": "By 1400 (6+ hours) regular insulin's effect is waning."
-        },
-        {
-          "t": "1900",
-          "r": "1900 is far outside regular insulin's duration (about 5–8 hours)."
-        }
-      ],
-      "correct": 1,
-      "tip": "For any insulin question, ask: *when does it peak?* — that's when the client is most likely to go low. Peak = highest risk.",
-      "pearl": "\"**R**egular is **R**eady in a half hour,",
-      "free": false
-    },
-    {
-      "id": "pharmacology-0005",
-      "exam": "RN",
-      "cat": "Pharmacology",
-      "topic": "Acute transfusion reaction",
-      "difficulty": "Moderate",
-      "type": "mc",
-      "stem": "Fifteen minutes into a unit of packed red blood cells, a client develops chills, flank pain, and a temperature rise from 37.0°C to 38.6°C. What is the nurse's first action?",
-      "opts": [
-        {
-          "t": "Slow the transfusion and continue to monitor.",
-          "r": "Slowing the transfusion still infuses incompatible blood. Any acute reaction means the blood must **stop**, not just slow."
-        },
-        {
-          "t": "Stop the transfusion and keep the vein open with normal saline.",
-          "r": "The priority in a suspected acute hemolytic reaction is to **stop the blood immediately** and **maintain IV access with normal saline through fresh tubing** to preserve the line and support the kidneys. Then notify the provider and blood bank."
-        },
-        {
-          "t": "Administer acetaminophen and reassess in 30 minutes.",
-          "r": "Medicating and waiting delays life-saving action during a possible hemolytic reaction."
-        },
-        {
-          "t": "Notify the blood bank to prepare the next unit.",
-          "r": "Preparing another unit is premature and unsafe until the reaction is investigated."
-        }
-      ],
-      "correct": 1,
-      "tip": "For *any* transfusion reaction, the first step is always the same: **STOP the blood.** Then saline, then assess, then notify. Order matters.",
-      "pearl": "\"**Stop – Saline – Stay – Send**\": Stop the unit, hang **Saline**, **Stay** with the client and assess, **Send** the blood and tubing back to the blood bank.",
-      "free": false
-    },
-    {
-      "id": "pharmacology-0006",
-      "exam": "RN",
-      "cat": "Pharmacology",
-      "topic": "Oxygen therapy in COPD",
-      "difficulty": "Moderate",
-      "type": "mc",
-      "stem": "A client with chronic COPD is admitted with shortness of breath. The provider orders oxygen. The client's baseline SpO₂ runs 88–92%. Which oxygen delivery is most appropriate for the nurse to initiate?",
-      "opts": [
-        {
-          "t": "Non-rebreather mask at 15 L/min",
-          "r": "High-flow oxygen can be appropriate in an emergency, but as a routine start in stable COPD it may blunt the hypoxic drive and is more than needed to reach the target."
-        },
-        {
-          "t": "Nasal cannula at 2 L/min, titrated to keep SpO₂ 88–92%",
-          "r": "Clients with chronic COPD are treated to a **target SpO₂ of about 88–92%**, not 100%. Low-flow oxygen titrated to that range relieves hypoxia without over-oxygenating."
-        },
-        {
-          "t": "Room air only, because oxygen is unsafe in COPD",
-          "r": "Withholding oxygen from a hypoxic client is dangerous — hypoxia will harm them long before the theoretical drive concern does."
-        },
-        {
-          "t": "Simple face mask at 10 L/min",
-          "r": "A simple mask at 10 L/min delivers far more oxygen than the target requires."
-        }
-      ],
-      "correct": 1,
-      "tip": "For chronic COPD the safe goal is a **lower** SpO₂ target (88–92%). Beware answers that push COPD clients to 100% — over-oxygenation is the trap.",
-      "pearl": "\"In COPD, **low and slow**\": low-flow O₂, target in the **high 80s to low 90s.** Never *withhold* oxygen from a hypoxic person — treat the hypoxia, just don't overshoot.",
-      "free": false
-    },
-    {
-      "id": "pharmacology-0007",
-      "exam": "RN",
-      "cat": "Pharmacology",
-      "topic": "Beta-blocker teaching",
-      "difficulty": "Easy",
-      "type": "mc",
-      "stem": "A client newly prescribed metoprolol asks the nurse how to take it safely at home. Which instruction should the nurse include?",
-      "opts": [
-        {
-          "t": "\"Stop the medication right away if your heart rate feels slow.\"",
-          "r": "Beta-blockers should **never be stopped abruptly** — rebound tachycardia, hypertension, and even ischemia can result. They are tapered."
-        },
-        {
-          "t": "\"Check your pulse before each dose and hold it if it's below 60.\"",
-          "r": "Beta-blockers slow heart rate, so clients are taught to **check the pulse and hold the dose for a rate below 60** (per parameters) and notify the provider."
-        },
-        {
-          "t": "\"Rise quickly from sitting to avoid getting dizzy.\"",
-          "r": "Beta-blockers can cause orthostatic hypotension; clients should rise **slowly**, not quickly."
-        },
-        {
-          "t": "\"You can stop taking it once your blood pressure is normal.\"",
-          "r": "The medication controls blood pressure only while taken; stopping it lets pressure climb back up."
-        }
-      ],
-      "correct": 1,
-      "tip": "Any drug ending in **\"-olol\"** is a beta-blocker: expect teaching about **checking the pulse, rising slowly, and never stopping abruptly.**",
-      "pearl": "\"**Beta blocks the beats**\" — it lowers",
-      "free": false
-    },
-    {
-      "id": "pharmacology-0008",
-      "exam": "RN",
-      "cat": "Pharmacology",
-      "topic": "Opioid administration safety",
-      "difficulty": "Moderate",
-      "type": "mc",
-      "stem": "A client recovering from surgery received IV morphine 20 minutes ago. The nurse finds the client difficult to arouse with a respiratory rate of 7/min. Which action should the nurse take first?",
-      "opts": [
-        {
-          "t": "Administer the next scheduled dose of morphine.",
-          "r": "More opioid to a client in respiratory depression could stop breathing entirely."
-        },
-        {
-          "t": "Stimulate the client, support breathing, and prepare to give naloxone.",
-          "r": "A respiratory rate of 7/min with sedation signals **opioid-induced respiratory depression.** The nurse stimulates the client, supports ventilation/oxygenation, and prepares the antidote **naloxone (Narcan).**"
-        },
-        {
-          "t": "Place the client flat and darken the room to promote rest.",
-          "r": "Lying flat and reducing stimulation would worsen sedation and hypoventilation."
-        },
-        {
-          "t": "Wait 15 minutes and reassess the respiratory rate.",
-          "r": "Waiting during respiratory depression risks respiratory arrest."
-        }
-      ],
-      "correct": 1,
-      "tip": "A respiratory rate **below 12/min** after an opioid is the red flag. The antidote **naloxone** is the answer whenever opioid over-sedation is described.",
-      "pearl": "\"**N**aloxone **N**egates **N**arcotics.\" Watch the number: **RR < 12 = hold and reassess; RR ≤ 8 with sedation = act now.**",
-      "free": false
+     "t": "\"I'll stop the medication as soon as my heartbeat feels regular.\"",
+     "r": "Warfarin is prescribed to prevent clot formation in atrial fibrillation regardless of how the rhythm *feels*; stopping it abruptly raises stroke risk. Clients do not self-discontinue."
     }
-  ]
+   ],
+   "correct": 1,
+   "tip": "When a question offers \"avoid all vitamin K foods,\" it's a trap. The correct anticoagulation teaching is almost always **consistency**, not elimination.",
+   "pearl": "**W**arfarin → **W**atch the **INR**; antidote is **vitamin K**. Heparin → watch the **aPTT**; antidote is",
+   "free": true,
+   "client_needs": "Pharmacological and Parenteral Therapies",
+   "scoring": "dichotomous",
+   "cjmm_step": "n/a",
+   "level": 3
+  },
+  {
+   "id": "pharmacology-0002",
+   "exam": "RN",
+   "cat": "Pharmacology",
+   "topic": "Digoxin toxicity",
+   "difficulty": "Moderate",
+   "type": "mc",
+   "stem": "A nurse is caring for an older adult who takes digoxin and furosemide for heart failure. The client reports nausea, \"yellow-green halos\" around lights, and no appetite. What is the nurse's priority action?",
+   "opts": [
+    {
+     "t": "Administer the next scheduled dose of digoxin as ordered.",
+     "r": "Giving more digoxin to a client showing classic toxicity signs could be fatal. Never administer the next dose until toxicity is ruled out."
+    },
+    {
+     "t": "Hold the digoxin and obtain a serum digoxin and potassium level.",
+     "r": "Nausea, anorexia, and **visual disturbances (yellow-green halos)** are hallmark signs of digoxin toxicity. The nurse holds the drug and checks the digoxin level *and* potassium, because **hypokalemia** (which furosemide can cause) potentiates digoxin toxicity."
+    },
+    {
+     "t": "Encourage a high-potassium breakfast and reassess in an hour.",
+     "r": "Diet alone won't correct active toxicity, and delaying assessment risks a lethal arrhythmia."
+    },
+    {
+     "t": "Document the findings as expected side effects of heart failure.",
+     "r": "These are not expected heart-failure findings — they are a medication emergency that must be acted on."
+    }
+   ],
+   "correct": 1,
+   "tip": "If a client on digoxin *also* takes a loop or thiazide diuretic, the test wants you to connect **low potassium → higher toxicity risk.**",
+   "pearl": "\"**Dig** makes you **sick, slow, and see yellow**\": GI upset, **brady**cardia, and yellow/green vision. Hold for an apical pulse **< 60**.",
+   "free": true,
+   "client_needs": "Pharmacological and Parenteral Therapies",
+   "scoring": "dichotomous",
+   "cjmm_step": "n/a",
+   "level": 3
+  },
+  {
+   "id": "pharmacology-0003",
+   "exam": "RN",
+   "cat": "Pharmacology",
+   "topic": "Loop diuretic monitoring",
+   "difficulty": "Easy",
+   "type": "mc",
+   "stem": "A client is started on IV furosemide for pulmonary edema. Which laboratory value is most important for the nurse to monitor?",
+   "opts": [
+    {
+     "t": "Serum sodium",
+     "r": "Furosemide can lower sodium, but hyponatremia is generally less immediately dangerous than the potassium loss it causes."
+    },
+    {
+     "t": "Serum potassium",
+     "r": "Furosemide is a **potassium-wasting** loop diuretic. Hypokalemia is the priority concern because it can trigger life-threatening cardiac dysrhythmias — especially if the client also takes digoxin."
+    },
+    {
+     "t": "Serum calcium",
+     "r": "Loop diuretics can slightly lower calcium, but this is not the priority monitoring parameter."
+    },
+    {
+     "t": "Serum magnesium",
+     "r": "Magnesium can drop with loop diuretics and matters, but **potassium** is the classic, highest-priority answer the test is looking for."
+    }
+   ],
+   "correct": 1,
+   "tip": "Match the diuretic to the electrolyte: **loop and thiazide → lose potassium; spironolactone → keep (raise) potassium.**",
+   "pearl": "\"**F**urosemide → **F**alling K.\" Normal potassium is **3.5–5.0 mEq/L** — memorize this range cold; it shows up everywhere.",
+   "free": false,
+   "client_needs": "Pharmacological and Parenteral Therapies",
+   "scoring": "dichotomous",
+   "cjmm_step": "n/a",
+   "level": 2
+  },
+  {
+   "id": "pharmacology-0004",
+   "exam": "RN",
+   "cat": "Pharmacology",
+   "topic": "Insulin onset and peak",
+   "difficulty": "Moderate",
+   "type": "mc",
+   "stem": "A client receives regular (short-acting) insulin at 0730 before breakfast. At which time should the nurse be most alert for signs of hypoglycemia?",
+   "opts": [
+    {
+     "t": "0745",
+     "r": "Regular insulin's onset is about 30 minutes; at 15 minutes it has barely begun working."
+    },
+    {
+     "t": "1000",
+     "r": "Regular insulin **peaks about 2–3 hours** after administration. Given at 0730, its peak — and the highest hypoglycemia risk — falls around **1000**, which is why a mid-morning snack is often timed here."
+    },
+    {
+     "t": "1400",
+     "r": "By 1400 (6+ hours) regular insulin's effect is waning."
+    },
+    {
+     "t": "1900",
+     "r": "1900 is far outside regular insulin's duration (about 5–8 hours)."
+    }
+   ],
+   "correct": 1,
+   "tip": "For any insulin question, ask: *when does it peak?* — that's when the client is most likely to go low. Peak = highest risk.",
+   "pearl": "\"**R**egular is **R**eady in a half hour,",
+   "free": false,
+   "client_needs": "Pharmacological and Parenteral Therapies",
+   "scoring": "dichotomous",
+   "cjmm_step": "n/a",
+   "level": 3
+  },
+  {
+   "id": "pharmacology-0005",
+   "exam": "RN",
+   "cat": "Pharmacology",
+   "topic": "Acute transfusion reaction",
+   "difficulty": "Moderate",
+   "type": "mc",
+   "stem": "Fifteen minutes into a unit of packed red blood cells, a client develops chills, flank pain, and a temperature rise from 37.0°C to 38.6°C. What is the nurse's first action?",
+   "opts": [
+    {
+     "t": "Slow the transfusion and continue to monitor.",
+     "r": "Slowing the transfusion still infuses incompatible blood. Any acute reaction means the blood must **stop**, not just slow."
+    },
+    {
+     "t": "Stop the transfusion and keep the vein open with normal saline.",
+     "r": "The priority in a suspected acute hemolytic reaction is to **stop the blood immediately** and **maintain IV access with normal saline through fresh tubing** to preserve the line and support the kidneys. Then notify the provider and blood bank."
+    },
+    {
+     "t": "Administer acetaminophen and reassess in 30 minutes.",
+     "r": "Medicating and waiting delays life-saving action during a possible hemolytic reaction."
+    },
+    {
+     "t": "Notify the blood bank to prepare the next unit.",
+     "r": "Preparing another unit is premature and unsafe until the reaction is investigated."
+    }
+   ],
+   "correct": 1,
+   "tip": "For *any* transfusion reaction, the first step is always the same: **STOP the blood.** Then saline, then assess, then notify. Order matters.",
+   "pearl": "\"**Stop – Saline – Stay – Send**\": Stop the unit, hang **Saline**, **Stay** with the client and assess, **Send** the blood and tubing back to the blood bank.",
+   "free": false,
+   "client_needs": "Pharmacological and Parenteral Therapies",
+   "scoring": "dichotomous",
+   "cjmm_step": "n/a",
+   "level": 3
+  },
+  {
+   "id": "pharmacology-0006",
+   "exam": "RN",
+   "cat": "Pharmacology",
+   "topic": "Oxygen therapy in COPD",
+   "difficulty": "Moderate",
+   "type": "mc",
+   "stem": "A client with chronic COPD is admitted with shortness of breath. The provider orders oxygen. The client's baseline SpO₂ runs 88–92%. Which oxygen delivery is most appropriate for the nurse to initiate?",
+   "opts": [
+    {
+     "t": "Non-rebreather mask at 15 L/min",
+     "r": "High-flow oxygen can be appropriate in an emergency, but as a routine start in stable COPD it may blunt the hypoxic drive and is more than needed to reach the target."
+    },
+    {
+     "t": "Nasal cannula at 2 L/min, titrated to keep SpO₂ 88–92%",
+     "r": "Clients with chronic COPD are treated to a **target SpO₂ of about 88–92%**, not 100%. Low-flow oxygen titrated to that range relieves hypoxia without over-oxygenating."
+    },
+    {
+     "t": "Room air only, because oxygen is unsafe in COPD",
+     "r": "Withholding oxygen from a hypoxic client is dangerous — hypoxia will harm them long before the theoretical drive concern does."
+    },
+    {
+     "t": "Simple face mask at 10 L/min",
+     "r": "A simple mask at 10 L/min delivers far more oxygen than the target requires."
+    }
+   ],
+   "correct": 1,
+   "tip": "For chronic COPD the safe goal is a **lower** SpO₂ target (88–92%). Beware answers that push COPD clients to 100% — over-oxygenation is the trap.",
+   "pearl": "\"In COPD, **low and slow**\": low-flow O₂, target in the **high 80s to low 90s.** Never *withhold* oxygen from a hypoxic person — treat the hypoxia, just don't overshoot.",
+   "free": false,
+   "client_needs": "Pharmacological and Parenteral Therapies",
+   "scoring": "dichotomous",
+   "cjmm_step": "n/a",
+   "level": 3
+  },
+  {
+   "id": "pharmacology-0007",
+   "exam": "RN",
+   "cat": "Pharmacology",
+   "topic": "Beta-blocker teaching",
+   "difficulty": "Easy",
+   "type": "mc",
+   "stem": "A client newly prescribed metoprolol asks the nurse how to take it safely at home. Which instruction should the nurse include?",
+   "opts": [
+    {
+     "t": "\"Stop the medication right away if your heart rate feels slow.\"",
+     "r": "Beta-blockers should **never be stopped abruptly** — rebound tachycardia, hypertension, and even ischemia can result. They are tapered."
+    },
+    {
+     "t": "\"Check your pulse before each dose and hold it if it's below 60.\"",
+     "r": "Beta-blockers slow heart rate, so clients are taught to **check the pulse and hold the dose for a rate below 60** (per parameters) and notify the provider."
+    },
+    {
+     "t": "\"Rise quickly from sitting to avoid getting dizzy.\"",
+     "r": "Beta-blockers can cause orthostatic hypotension; clients should rise **slowly**, not quickly."
+    },
+    {
+     "t": "\"You can stop taking it once your blood pressure is normal.\"",
+     "r": "The medication controls blood pressure only while taken; stopping it lets pressure climb back up."
+    }
+   ],
+   "correct": 1,
+   "tip": "Any drug ending in **\"-olol\"** is a beta-blocker: expect teaching about **checking the pulse, rising slowly, and never stopping abruptly.**",
+   "pearl": "\"**Beta blocks the beats**\" — it lowers",
+   "free": false,
+   "client_needs": "Pharmacological and Parenteral Therapies",
+   "scoring": "dichotomous",
+   "cjmm_step": "n/a",
+   "level": 2
+  },
+  {
+   "id": "pharmacology-0008",
+   "exam": "RN",
+   "cat": "Pharmacology",
+   "topic": "Opioid administration safety",
+   "difficulty": "Moderate",
+   "type": "mc",
+   "stem": "A client recovering from surgery received IV morphine 20 minutes ago. The nurse finds the client difficult to arouse with a respiratory rate of 7/min. Which action should the nurse take first?",
+   "opts": [
+    {
+     "t": "Administer the next scheduled dose of morphine.",
+     "r": "More opioid to a client in respiratory depression could stop breathing entirely."
+    },
+    {
+     "t": "Stimulate the client, support breathing, and prepare to give naloxone.",
+     "r": "A respiratory rate of 7/min with sedation signals **opioid-induced respiratory depression.** The nurse stimulates the client, supports ventilation/oxygenation, and prepares the antidote **naloxone (Narcan).**"
+    },
+    {
+     "t": "Place the client flat and darken the room to promote rest.",
+     "r": "Lying flat and reducing stimulation would worsen sedation and hypoventilation."
+    },
+    {
+     "t": "Wait 15 minutes and reassess the respiratory rate.",
+     "r": "Waiting during respiratory depression risks respiratory arrest."
+    }
+   ],
+   "correct": 1,
+   "tip": "A respiratory rate **below 12/min** after an opioid is the red flag. The antidote **naloxone** is the answer whenever opioid over-sedation is described.",
+   "pearl": "\"**N**aloxone **N**egates **N**arcotics.\" Watch the number: **RR < 12 = hold and reassess; RR ≤ 8 with sedation = act now.**",
+   "free": false,
+   "client_needs": "Pharmacological and Parenteral Therapies",
+   "scoring": "dichotomous",
+   "cjmm_step": "n/a",
+   "level": 3
+  }
+ ]
 }

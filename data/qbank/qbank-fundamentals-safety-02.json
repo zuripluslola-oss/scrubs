@@ -29,7 +29,11 @@
    ],
    "correct": 1,
    "tip": "ABCs first, then acute-over-chronic and unstable-over-stable. Low SpO₂ + confusion wins.",
-   "free": true
+   "free": true,
+   "client_needs": "Safety and Infection Control",
+   "scoring": "dichotomous",
+   "cjmm_step": "n/a",
+   "level": 3
   },
   {
    "id": "qb-fs-0102",
@@ -58,7 +62,11 @@
     }
    ],
    "correct": 1,
-   "tip": "Don't delegate assess, teach, evaluate, or the unstable client. UAP = stable, routine, standard tasks."
+   "tip": "Don't delegate assess, teach, evaluate, or the unstable client. UAP = stable, routine, standard tasks.",
+   "client_needs": "Safety and Infection Control",
+   "scoring": "dichotomous",
+   "cjmm_step": "n/a",
+   "level": 3
   },
   {
    "id": "qb-fs-0103",
@@ -87,7 +95,11 @@
     }
    ],
    "correct": 2,
-   "tip": "Airborne (\"My Chicken Hz TB\"): Measles, Chickenpox/varicella, Herpes zoster (disseminated), TB → N95 + negative-pressure room."
+   "tip": "Airborne (\"My Chicken Hz TB\"): Measles, Chickenpox/varicella, Herpes zoster (disseminated), TB → N95 + negative-pressure room.",
+   "client_needs": "Basic Care and Comfort",
+   "scoring": "dichotomous",
+   "cjmm_step": "n/a",
+   "level": 3
   },
   {
    "id": "qb-fs-0104",
@@ -116,7 +128,11 @@
     }
    ],
    "correct": 1,
-   "tip": "Fall prevention: low bed, call light reachable, non-skid footwear, clear path, scheduled toileting."
+   "tip": "Fall prevention: low bed, call light reachable, non-skid footwear, clear path, scheduled toileting.",
+   "client_needs": "Safety and Infection Control",
+   "scoring": "dichotomous",
+   "cjmm_step": "n/a",
+   "level": 2
   },
   {
    "id": "qb-fs-0105",
@@ -145,7 +161,11 @@
     }
    ],
    "correct": 1,
-   "tip": "X-ray is the gold standard for initial NG placement. pH testing helps for ongoing checks."
+   "tip": "X-ray is the gold standard for initial NG placement. pH testing helps for ongoing checks.",
+   "client_needs": "Basic Care and Comfort",
+   "scoring": "dichotomous",
+   "cjmm_step": "n/a",
+   "level": 4
   },
   {
    "id": "qb-fs-0106",
@@ -174,7 +194,11 @@
     }
    ],
    "correct": 1,
-   "tip": "Stage 1 = intact skin, non-blanchable redness. If it blanches, it's not a pressure injury yet."
+   "tip": "Stage 1 = intact skin, non-blanchable redness. If it blanches, it's not a pressure injury yet.",
+   "client_needs": "Basic Care and Comfort",
+   "scoring": "dichotomous",
+   "cjmm_step": "n/a",
+   "level": 3
   },
   {
    "id": "qb-fs-0107",
@@ -203,7 +227,11 @@
     }
    ],
    "correct": 1,
-   "tip": "After a med error: assess/protect the client → notify provider → incident report. Never hide it."
+   "tip": "After a med error: assess/protect the client → notify provider → incident report. Never hide it.",
+   "client_needs": "Safety and Infection Control",
+   "scoring": "dichotomous",
+   "cjmm_step": "n/a",
+   "level": 3
   },
   {
    "id": "qb-fs-0108",
@@ -232,7 +260,11 @@
     }
    ],
    "correct": 1,
-   "tip": "C. diff and norovirus → SOAP AND WATER (spores resist alcohol). Otherwise alcohol rub is fine."
+   "tip": "C. diff and norovirus → SOAP AND WATER (spores resist alcohol). Otherwise alcohol rub is fine.",
+   "client_needs": "Basic Care and Comfort",
+   "scoring": "dichotomous",
+   "cjmm_step": "n/a",
+   "level": 2
   },
   {
    "id": "qb-fs-0109",
@@ -261,7 +293,11 @@
     }
    ],
    "correct": 1,
-   "tip": "Restraints: least restrictive, time-limited order, secure to bed frame, quick-release, frequent checks."
+   "tip": "Restraints: least restrictive, time-limited order, secure to bed frame, quick-release, frequent checks.",
+   "client_needs": "Safety and Infection Control",
+   "scoring": "dichotomous",
+   "cjmm_step": "n/a",
+   "level": 4
   },
   {
    "id": "qb-fs-0110",
@@ -290,7 +326,11 @@
     }
    ],
    "correct": 1,
-   "tip": "Sterile field rules: 1-inch border = contaminated; below waist/table = contaminated; keep it in sight."
+   "tip": "Sterile field rules: 1-inch border = contaminated; below waist/table = contaminated; keep it in sight.",
+   "client_needs": "Basic Care and Comfort",
+   "scoring": "dichotomous",
+   "cjmm_step": "n/a",
+   "level": 3
   }
  ]
 }

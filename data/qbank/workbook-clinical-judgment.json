@@ -1,36 +1,40 @@
 {
-  "batch": "workbook-clinical-judgment",
-  "questions": [
+ "batch": "workbook-clinical-judgment",
+ "questions": [
+  {
+   "id": "clinical-judgment-0001",
+   "exam": "RN",
+   "cat": "Clinical Judgment",
+   "topic": "Recognizing early deterioration",
+   "difficulty": "Hard",
+   "type": "mc",
+   "stem": "A postoperative client's vital signs over three hours show a gradually rising heart rate (88 → 118/min), a rising respiratory rate (16 → 26/min), a falling blood pressure (122/78 → 100/60), and new restlessness. How should the nurse interpret these trends?",
+   "opts": [
     {
-      "id": "clinical-judgment-0001",
-      "exam": "RN",
-      "cat": "Clinical Judgment",
-      "topic": "Recognizing early deterioration",
-      "difficulty": "Hard",
-      "type": "mc",
-      "stem": "A postoperative client's vital signs over three hours show a gradually rising heart rate (88 → 118/min), a rising respiratory rate (16 → 26/min), a falling blood pressure (122/78 → 100/60), and new restlessness. How should the nurse interpret these trends?",
-      "opts": [
-        {
-          "t": "Expected postoperative recovery — continue routine monitoring.",
-          "r": "A steadily rising HR/RR with falling BP is **not** normal recovery — it points to a developing problem (bleeding, sepsis, shock)."
-        },
-        {
-          "t": "Early signs of clinical deterioration that warrant escalation.",
-          "r": "Reading the **trend**, not single numbers, reveals **early deterioration.** The nurse escalates — reassesses, notifies the provider or activates the **rapid response team** — before the client crashes."
-        },
-        {
-          "t": "Signs of adequate pain control taking effect.",
-          "r": "Effective pain control would not cause rising respiratory rate, tachycardia, and hypotension together."
-        },
-        {
-          "t": "Normal variation that requires no documentation.",
-          "r": "These changes are significant and must be documented and acted upon."
-        }
-      ],
-      "correct": 1,
-      "tip": "Next Gen NCLEX loves **trends over time.** Up-HR + up-RR + down-BP + new restlessness = **compensating shock** — recognize and **escalate early.**",
-      "pearl": "\"**The story is in the trend.**\" Restlessness and a climbing heart/resp rate are often the body's **first quiet alarm** before pressure ever drops far.",
-      "free": true
+     "t": "Expected postoperative recovery — continue routine monitoring.",
+     "r": "A steadily rising HR/RR with falling BP is **not** normal recovery — it points to a developing problem (bleeding, sepsis, shock)."
+    },
+    {
+     "t": "Early signs of clinical deterioration that warrant escalation.",
+     "r": "Reading the **trend**, not single numbers, reveals **early deterioration.** The nurse escalates — reassesses, notifies the provider or activates the **rapid response team** — before the client crashes."
+    },
+    {
+     "t": "Signs of adequate pain control taking effect.",
+     "r": "Effective pain control would not cause rising respiratory rate, tachycardia, and hypotension together."
+    },
+    {
+     "t": "Normal variation that requires no documentation.",
+     "r": "These changes are significant and must be documented and acted upon."
     }
-  ]
+   ],
+   "correct": 1,
+   "tip": "Next Gen NCLEX loves **trends over time.** Up-HR + up-RR + down-BP + new restlessness = **compensating shock** — recognize and **escalate early.**",
+   "pearl": "\"**The story is in the trend.**\" Restlessness and a climbing heart/resp rate are often the body's **first quiet alarm** before pressure ever drops far.",
+   "free": true,
+   "client_needs": "Management of Care",
+   "scoring": "dichotomous",
+   "cjmm_step": "n/a",
+   "level": 4
+  }
+ ]
 }

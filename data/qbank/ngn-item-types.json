@@ -1,131 +1,279 @@
 {
-  "batch": "ngn-item-types",
-  "questions": [
+ "batch": "ngn-item-types",
+ "questions": [
+  {
+   "id": "sata-0001",
+   "exam": "RN",
+   "cat": "Safety",
+   "topic": "Sepsis interventions",
+   "difficulty": "Hard",
+   "type": "sata",
+   "free": true,
+   "stem": "A client is suspected of having sepsis: temperature 39.2°C, heart rate 122/min, blood pressure 88/50 mm Hg, and a rising lactate. Which interventions should the nurse anticipate? **Select all that apply.**",
+   "opts": [
     {
-      "id": "sata-0001",
-      "exam": "RN",
-      "cat": "Safety",
-      "topic": "Sepsis interventions",
-      "difficulty": "Hard",
-      "type": "sata",
-      "free": true,
-      "stem": "A client is suspected of having sepsis: temperature 39.2°C, heart rate 122/min, blood pressure 88/50 mm Hg, and a rising lactate. Which interventions should the nurse anticipate? **Select all that apply.**",
-      "opts": [
-        {"t": "Obtain blood cultures before starting antibiotics.", "r": "Correct. Cultures are drawn before antibiotics so the causative organism can still be identified."},
-        {"t": "Administer broad-spectrum antibiotics promptly.", "r": "Correct. Early antibiotics (ideally within the first hour) are central to sepsis survival."},
-        {"t": "Begin IV fluid resuscitation for the hypotension.", "r": "Correct. Fluids treat the sepsis-induced hypotension and poor perfusion."},
-        {"t": "Withhold all fluids to avoid overload.", "r": "Incorrect. Withholding fluids in a hypotensive septic client worsens perfusion — the opposite of care."},
-        {"t": "Measure serum lactate and monitor urine output.", "r": "Correct. Lactate trends and urine output gauge perfusion and the response to treatment."}
-      ],
-      "correct": [0, 1, 2, 4],
-      "tip": "In SATA, weigh **each option as its own true/false.** One clearly harmful choice (“withhold fluids”) is almost always false.",
-      "pearl": "Sepsis hour-1 bundle: **Culture, Cover, Fluids, Lactate.**"
+     "t": "Obtain blood cultures before starting antibiotics.",
+     "r": "Correct. Cultures are drawn before antibiotics so the causative organism can still be identified."
     },
     {
-      "id": "sata-0002",
-      "exam": "RN",
-      "cat": "Pharmacology",
-      "topic": "Hyperkalemia actions",
-      "difficulty": "Moderate",
-      "type": "sata",
-      "free": true,
-      "stem": "A client's serum potassium is 6.8 mEq/L. Which actions are appropriate? **Select all that apply.**",
-      "opts": [
-        {"t": "Place the client on a cardiac monitor.", "r": "Correct. Hyperkalemia can cause life-threatening dysrhythmias — monitor the heart."},
-        {"t": "Hold all oral and IV potassium.", "r": "Correct. Adding potassium to a hyperkalemic client is dangerous."},
-        {"t": "Notify the provider.", "r": "Correct. A level of 6.8 with ECG risk needs prompt escalation."},
-        {"t": "Offer a banana for energy.", "r": "Incorrect. A banana **adds** potassium — exactly the wrong move."},
-        {"t": "Prepare to administer IV calcium gluconate.", "r": "Correct. Calcium protects the heart while other measures shift or remove potassium."}
-      ],
-      "correct": [0, 1, 2, 4],
-      "tip": "SATA is all-or-nothing here — the **banana** is the classic trap.",
-      "pearl": "Hyperkalemia: **Calcium protects** the heart, **insulin + D50 shifts** K into cells, **dialysis/kayexalate removes** it."
+     "t": "Administer broad-spectrum antibiotics promptly.",
+     "r": "Correct. Early antibiotics (ideally within the first hour) are central to sepsis survival."
     },
     {
-      "id": "matrix-0001",
-      "exam": "RN",
-      "cat": "Med-Surg",
-      "topic": "Post-op findings",
-      "difficulty": "Moderate",
-      "type": "matrix",
-      "free": true,
-      "stem": "For each post-operative finding, decide whether it is **expected** or **requires the nurse to act.**",
-      "cols": ["Expected", "Act / notify"],
-      "rows": [
-        {"t": "Temperature 38.0°C at 12 hours post-op", "correct": 0, "r": "**Expected.** A low-grade fever in the first 24–48 hours is a common inflammatory response to surgery."},
-        {"t": "Urine output 20 mL/hr for 2 hours", "correct": 1, "r": "**Act.** Below ~30 mL/hr (0.5 mL/kg/hr) signals poor perfusion or hypovolemia — investigate and notify."},
-        {"t": "Pain 4/10, steadily improving", "correct": 0, "r": "**Expected.** Pain that is present but trending down reflects normal recovery."},
-        {"t": "New confusion with heart rate 122/min", "correct": 1, "r": "**Act.** New confusion with tachycardia is an early deterioration sign (hypoxia, bleeding, sepsis) — escalate."},
-        {"t": "Incision pink, edges approximated", "correct": 0, "r": "**Expected.** Pink, well-approximated wound edges show normal healing."}
-      ],
-      "rationale": "Low urine output (20 mL/hr) and new confusion with tachycardia signal deterioration — **act.** A mild temp, improving pain, and a clean, approximated incision are **expected** post-op findings.",
-      "tip": "Matrix items: judge **each row independently** — is this expected, or does it need action?",
-      "pearl": "Trend beats a single number: new confusion + rising HR + falling urine = the body's early alarm."
+     "t": "Begin IV fluid resuscitation for the hypotension.",
+     "r": "Correct. Fluids treat the sepsis-induced hypotension and poor perfusion."
     },
     {
-      "id": "matrix-0002",
-      "exam": "RN",
-      "cat": "Med-Surg",
-      "topic": "Critical lab values",
-      "difficulty": "Moderate",
-      "type": "matrix",
-      "free": true,
-      "stem": "For each laboratory value, decide whether it is **within normal limits** or a **critical value to report.**",
-      "cols": ["Normal", "Critical — report"],
-      "rows": [
-        {"t": "Potassium 6.8 mEq/L", "correct": 1, "r": "**Critical.** Above 5.0 mEq/L; hyperkalemia risks lethal dysrhythmias — report."},
-        {"t": "Sodium 139 mEq/L", "correct": 0, "r": "**Normal.** Within the 135–145 mEq/L range."},
-        {"t": "Glucose 45 mg/dL", "correct": 1, "r": "**Critical.** Below 70 mg/dL is hypoglycemia — treat and report."},
-        {"t": "Hemoglobin 13 g/dL", "correct": 0, "r": "**Normal.** Within the ~12–17 g/dL range."},
-        {"t": "Platelets 40,000/µL", "correct": 1, "r": "**Critical.** Below 50,000/µL sharply raises bleeding risk — report."}
-      ],
-      "rationale": "Critical: potassium 6.8 (>5.0), glucose 45 (<70), platelets 40k (<50k). Normal: sodium 139 (135–145) and hemoglobin 13 (about 12–17).",
-      "tip": "Know your normal ranges cold — the matrix rewards fast recognition of what's out of range.",
-      "pearl": "Potassium **3.5–5.0**, sodium **135–145**, glucose **70–110** fasting — the ranges the test leans on most."
+     "t": "Withhold all fluids to avoid overload.",
+     "r": "Incorrect. Withholding fluids in a hypotensive septic client worsens perfusion — the opposite of care."
     },
     {
-      "id": "bowtie-0001",
-      "exam": "RN",
-      "cat": "Clinical Judgment",
-      "topic": "Hypovolemic shock",
-      "difficulty": "Hard",
-      "type": "bowtie",
-      "free": true,
-      "stem": "A client is 1 day post-op after abdominal surgery and reports increasing thirst and dizziness. Assessment: heart rate 124/min, blood pressure 92/58 mm Hg, urine output 15 mL over 2 hours, and a saturated abdominal dressing with bright-red drainage. Complete the diagram — choose the condition, the 2 actions to take, and the 2 findings to monitor.",
-      "condition": {
-        "prompt": "Condition",
-        "options": [
-          {"t": "Hypovolemic shock", "r": "**Correct.** Tachycardia, hypotension, very low urine output, thirst, and active bright-red bleeding all point to blood/volume loss."},
-          {"t": "Fluid volume overload", "r": "Incorrect. Overload shows high BP, crackles, and edema — not bleeding with low output."},
-          {"t": "Allergic reaction", "r": "Incorrect. That would show hives, swelling, and wheezing."},
-          {"t": "Normal post-op fluid shift", "r": "Incorrect. A saturated bloody dressing with unstable vitals is not a normal shift."}
-        ],
-        "correct": 0
-      },
-      "actions": {
-        "prompt": "Actions to take (choose 2)",
-        "pick": 2,
-        "options": [
-          {"t": "Apply firm pressure to the bleeding site", "r": "**Correct.** Direct pressure is the immediate step to control the external bleeding."},
-          {"t": "Increase IV fluids and notify the surgeon", "r": "**Correct.** Restore circulating volume and escalate to the surgeon urgently."},
-          {"t": "Give the next dose of pain medication", "r": "Incorrect. Opioids can further lower BP and ignore the hemorrhage."},
-          {"t": "Slow the IV fluids to prevent overload", "r": "Incorrect. Slowing fluids worsens hypovolemic shock."}
-        ],
-        "correct": [0, 1]
-      },
-      "parameters": {
-        "prompt": "Findings to monitor (choose 2)",
-        "pick": 2,
-        "options": [
-          {"t": "Blood pressure", "r": "**Correct.** BP tracks perfusion and the response to fluid resuscitation."},
-          {"t": "Urine output", "r": "**Correct.** Output is a sensitive marker of perfusion and volume status."},
-          {"t": "Serum sodium", "r": "Incorrect. Not the priority monitor during acute hemorrhage."},
-          {"t": "Deep tendon reflexes", "r": "Incorrect. Reflexes aren't the key marker of shock here."}
-        ],
-        "correct": [0, 1]
-      },
-      "tip": "Bow-tie tests the whole loop: **recognize** the condition → decide what to **do** → decide what to **watch.**",
-      "pearl": "Shock = fast pulse, low pressure, low urine, cool & thirsty. Hypovolemic: **stop the loss, replace the volume.**"
+     "t": "Measure serum lactate and monitor urine output.",
+     "r": "Correct. Lactate trends and urine output gauge perfusion and the response to treatment."
     }
-  ]
+   ],
+   "correct": [
+    0,
+    1,
+    2,
+    4
+   ],
+   "tip": "In SATA, weigh **each option as its own true/false.** One clearly harmful choice (“withhold fluids”) is almost always false.",
+   "pearl": "Sepsis hour-1 bundle: **Culture, Cover, Fluids, Lactate.**",
+   "client_needs": "Safety and Infection Control",
+   "scoring": "dichotomous",
+   "cjmm_step": "n/a",
+   "level": 4
+  },
+  {
+   "id": "sata-0002",
+   "exam": "RN",
+   "cat": "Pharmacology",
+   "topic": "Hyperkalemia actions",
+   "difficulty": "Moderate",
+   "type": "sata",
+   "free": true,
+   "stem": "A client's serum potassium is 6.8 mEq/L. Which actions are appropriate? **Select all that apply.**",
+   "opts": [
+    {
+     "t": "Place the client on a cardiac monitor.",
+     "r": "Correct. Hyperkalemia can cause life-threatening dysrhythmias — monitor the heart."
+    },
+    {
+     "t": "Hold all oral and IV potassium.",
+     "r": "Correct. Adding potassium to a hyperkalemic client is dangerous."
+    },
+    {
+     "t": "Notify the provider.",
+     "r": "Correct. A level of 6.8 with ECG risk needs prompt escalation."
+    },
+    {
+     "t": "Offer a banana for energy.",
+     "r": "Incorrect. A banana **adds** potassium — exactly the wrong move."
+    },
+    {
+     "t": "Prepare to administer IV calcium gluconate.",
+     "r": "Correct. Calcium protects the heart while other measures shift or remove potassium."
+    }
+   ],
+   "correct": [
+    0,
+    1,
+    2,
+    4
+   ],
+   "tip": "SATA is all-or-nothing here — the **banana** is the classic trap.",
+   "pearl": "Hyperkalemia: **Calcium protects** the heart, **insulin + D50 shifts** K into cells, **dialysis/kayexalate removes** it.",
+   "client_needs": "Pharmacological and Parenteral Therapies",
+   "scoring": "dichotomous",
+   "cjmm_step": "n/a",
+   "level": 3
+  },
+  {
+   "id": "matrix-0001",
+   "exam": "RN",
+   "cat": "Med-Surg",
+   "topic": "Post-op findings",
+   "difficulty": "Moderate",
+   "type": "matrix",
+   "free": true,
+   "stem": "For each post-operative finding, decide whether it is **expected** or **requires the nurse to act.**",
+   "cols": [
+    "Expected",
+    "Act / notify"
+   ],
+   "rows": [
+    {
+     "t": "Temperature 38.0°C at 12 hours post-op",
+     "correct": 0,
+     "r": "**Expected.** A low-grade fever in the first 24–48 hours is a common inflammatory response to surgery."
+    },
+    {
+     "t": "Urine output 20 mL/hr for 2 hours",
+     "correct": 1,
+     "r": "**Act.** Below ~30 mL/hr (0.5 mL/kg/hr) signals poor perfusion or hypovolemia — investigate and notify."
+    },
+    {
+     "t": "Pain 4/10, steadily improving",
+     "correct": 0,
+     "r": "**Expected.** Pain that is present but trending down reflects normal recovery."
+    },
+    {
+     "t": "New confusion with heart rate 122/min",
+     "correct": 1,
+     "r": "**Act.** New confusion with tachycardia is an early deterioration sign (hypoxia, bleeding, sepsis) — escalate."
+    },
+    {
+     "t": "Incision pink, edges approximated",
+     "correct": 0,
+     "r": "**Expected.** Pink, well-approximated wound edges show normal healing."
+    }
+   ],
+   "rationale": "Low urine output (20 mL/hr) and new confusion with tachycardia signal deterioration — **act.** A mild temp, improving pain, and a clean, approximated incision are **expected** post-op findings.",
+   "tip": "Matrix items: judge **each row independently** — is this expected, or does it need action?",
+   "pearl": "Trend beats a single number: new confusion + rising HR + falling urine = the body's early alarm.",
+   "client_needs": "Physiological Adaptation",
+   "scoring": "dichotomous",
+   "cjmm_step": "n/a",
+   "level": 3
+  },
+  {
+   "id": "matrix-0002",
+   "exam": "RN",
+   "cat": "Med-Surg",
+   "topic": "Critical lab values",
+   "difficulty": "Moderate",
+   "type": "matrix",
+   "free": true,
+   "stem": "For each laboratory value, decide whether it is **within normal limits** or a **critical value to report.**",
+   "cols": [
+    "Normal",
+    "Critical — report"
+   ],
+   "rows": [
+    {
+     "t": "Potassium 6.8 mEq/L",
+     "correct": 1,
+     "r": "**Critical.** Above 5.0 mEq/L; hyperkalemia risks lethal dysrhythmias — report."
+    },
+    {
+     "t": "Sodium 139 mEq/L",
+     "correct": 0,
+     "r": "**Normal.** Within the 135–145 mEq/L range."
+    },
+    {
+     "t": "Glucose 45 mg/dL",
+     "correct": 1,
+     "r": "**Critical.** Below 70 mg/dL is hypoglycemia — treat and report."
+    },
+    {
+     "t": "Hemoglobin 13 g/dL",
+     "correct": 0,
+     "r": "**Normal.** Within the ~12–17 g/dL range."
+    },
+    {
+     "t": "Platelets 40,000/µL",
+     "correct": 1,
+     "r": "**Critical.** Below 50,000/µL sharply raises bleeding risk — report."
+    }
+   ],
+   "rationale": "Critical: potassium 6.8 (>5.0), glucose 45 (<70), platelets 40k (<50k). Normal: sodium 139 (135–145) and hemoglobin 13 (about 12–17).",
+   "tip": "Know your normal ranges cold — the matrix rewards fast recognition of what's out of range.",
+   "pearl": "Potassium **3.5–5.0**, sodium **135–145**, glucose **70–110** fasting — the ranges the test leans on most.",
+   "client_needs": "Physiological Adaptation",
+   "scoring": "dichotomous",
+   "cjmm_step": "n/a",
+   "level": 3
+  },
+  {
+   "id": "bowtie-0001",
+   "exam": "RN",
+   "cat": "Clinical Judgment",
+   "topic": "Hypovolemic shock",
+   "difficulty": "Hard",
+   "type": "bowtie",
+   "free": true,
+   "stem": "A client is 1 day post-op after abdominal surgery and reports increasing thirst and dizziness. Assessment: heart rate 124/min, blood pressure 92/58 mm Hg, urine output 15 mL over 2 hours, and a saturated abdominal dressing with bright-red drainage. Complete the diagram — choose the condition, the 2 actions to take, and the 2 findings to monitor.",
+   "condition": {
+    "prompt": "Condition",
+    "options": [
+     {
+      "t": "Hypovolemic shock",
+      "r": "**Correct.** Tachycardia, hypotension, very low urine output, thirst, and active bright-red bleeding all point to blood/volume loss."
+     },
+     {
+      "t": "Fluid volume overload",
+      "r": "Incorrect. Overload shows high BP, crackles, and edema — not bleeding with low output."
+     },
+     {
+      "t": "Allergic reaction",
+      "r": "Incorrect. That would show hives, swelling, and wheezing."
+     },
+     {
+      "t": "Normal post-op fluid shift",
+      "r": "Incorrect. A saturated bloody dressing with unstable vitals is not a normal shift."
+     }
+    ],
+    "correct": 0
+   },
+   "actions": {
+    "prompt": "Actions to take (choose 2)",
+    "pick": 2,
+    "options": [
+     {
+      "t": "Apply firm pressure to the bleeding site",
+      "r": "**Correct.** Direct pressure is the immediate step to control the external bleeding."
+     },
+     {
+      "t": "Increase IV fluids and notify the surgeon",
+      "r": "**Correct.** Restore circulating volume and escalate to the surgeon urgently."
+     },
+     {
+      "t": "Give the next dose of pain medication",
+      "r": "Incorrect. Opioids can further lower BP and ignore the hemorrhage."
+     },
+     {
+      "t": "Slow the IV fluids to prevent overload",
+      "r": "Incorrect. Slowing fluids worsens hypovolemic shock."
+     }
+    ],
+    "correct": [
+     0,
+     1
+    ]
+   },
+   "parameters": {
+    "prompt": "Findings to monitor (choose 2)",
+    "pick": 2,
+    "options": [
+     {
+      "t": "Blood pressure",
+      "r": "**Correct.** BP tracks perfusion and the response to fluid resuscitation."
+     },
+     {
+      "t": "Urine output",
+      "r": "**Correct.** Output is a sensitive marker of perfusion and volume status."
+     },
+     {
+      "t": "Serum sodium",
+      "r": "Incorrect. Not the priority monitor during acute hemorrhage."
+     },
+     {
+      "t": "Deep tendon reflexes",
+      "r": "Incorrect. Reflexes aren't the key marker of shock here."
+     }
+    ],
+    "correct": [
+     0,
+     1
+    ]
+   },
+   "tip": "Bow-tie tests the whole loop: **recognize** the condition → decide what to **do** → decide what to **watch.**",
+   "pearl": "Shock = fast pulse, low pressure, low urine, cool & thirsty. Hypovolemic: **stop the loss, replace the volume.**",
+   "client_needs": "Management of Care",
+   "scoring": "partial_credit",
+   "cjmm_step": "Take Actions",
+   "level": 4
+  }
+ ]
 }
