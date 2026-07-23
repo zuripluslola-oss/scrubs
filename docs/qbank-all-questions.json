@@ -1,6 +1,6 @@
 {
  "title": "MLSCLEX — full question bank export",
- "count": 171,
+ "count": 187,
  "questions": [
   {
    "id": "moc-0001",
@@ -5820,6 +5820,677 @@
     "pharmacology",
     "prenursing-pharmacology"
    ]
+  },
+  {
+   "id": "sic-0001",
+   "exam": "RN",
+   "exams": [
+    "RN",
+    "PN"
+   ],
+   "cat": "Safety",
+   "client_needs": "Safety and Infection Control",
+   "topic": "Airborne precautions",
+   "difficulty": "Moderate",
+   "level": 3,
+   "type": "mc",
+   "cjmm_step": "n/a",
+   "scoring": "dichotomous",
+   "stem": "A client is admitted with suspected active pulmonary tuberculosis. Which precaution should the nurse implement?",
+   "opts": [
+    {
+     "t": "Airborne precautions with an N95 respirator and a negative-pressure room",
+     "r": "Correct. TB spreads by airborne droplet nuclei, requiring an N95 and a negative-pressure (AIIR) room."
+    },
+    {
+     "t": "Droplet precautions with a surgical mask",
+     "r": "Droplet precautions are insufficient for airborne TB."
+    },
+    {
+     "t": "Contact precautions with a gown and gloves",
+     "r": "Contact precautions address surface spread, not airborne."
+    },
+    {
+     "t": "Standard precautions only",
+     "r": "Standard precautions alone do not contain airborne TB."
+    }
+   ],
+   "correct": 0,
+   "tracks": [
+    "nclex",
+    "fundamentals"
+   ],
+   "tip": "Airborne (\"My Chicken Hz TB\"): Measles, Chickenpox/varicella, Herpes zoster (disseminated), TB → N95 + negative-pressure room."
+  },
+  {
+   "id": "sic-0002",
+   "exam": "RN",
+   "exams": [
+    "RN",
+    "PN"
+   ],
+   "cat": "Safety",
+   "client_needs": "Safety and Infection Control",
+   "topic": "Droplet precautions",
+   "difficulty": "Moderate",
+   "level": 3,
+   "type": "mc",
+   "cjmm_step": "n/a",
+   "scoring": "dichotomous",
+   "stem": "Which client requires droplet precautions?",
+   "opts": [
+    {
+     "t": "A client with bacterial meningitis (Neisseria meningitidis)",
+     "r": "Correct. Meningococcal meningitis spreads by respiratory droplets — droplet precautions with a surgical mask and private room."
+    },
+    {
+     "t": "A client with active tuberculosis",
+     "r": "TB requires airborne, not droplet, precautions."
+    },
+    {
+     "t": "A client colonized with MRSA in a wound",
+     "r": "MRSA requires contact precautions."
+    },
+    {
+     "t": "A client with Clostridioides difficile",
+     "r": "C. diff requires contact precautions with soap-and-water hand hygiene."
+    }
+   ],
+   "correct": 0,
+   "tracks": [
+    "nclex",
+    "fundamentals"
+   ],
+   "tip": "Droplet (surgical mask, ~6 ft): influenza, pertussis, meningitis, mumps, rubella."
+  },
+  {
+   "id": "sic-0003",
+   "exam": "RN",
+   "exams": [
+    "RN",
+    "PN"
+   ],
+   "cat": "Safety",
+   "client_needs": "Safety and Infection Control",
+   "topic": "Contact precautions",
+   "difficulty": "Easy",
+   "level": 2,
+   "type": "mc",
+   "cjmm_step": "n/a",
+   "scoring": "dichotomous",
+   "stem": "A client has a wound infected with methicillin-resistant Staphylococcus aureus (MRSA). Which personal protective equipment is required to provide direct care?",
+   "opts": [
+    {
+     "t": "Gown and gloves",
+     "r": "Correct. MRSA requires contact precautions — gown and gloves for direct contact."
+    },
+    {
+     "t": "N95 respirator only",
+     "r": "An N95 is for airborne diseases, not MRSA."
+    },
+    {
+     "t": "Surgical mask and goggles only",
+     "r": "Droplet/splash gear is not the requirement for contact spread."
+    },
+    {
+     "t": "No PPE beyond hand hygiene",
+     "r": "MRSA requires contact PPE, not hand hygiene alone."
+    }
+   ],
+   "correct": 0,
+   "tracks": [
+    "nclex",
+    "fundamentals",
+    "wound-care"
+   ],
+   "tip": "Contact precautions (gown + gloves): MRSA, VRE, C. diff, RSV, scabies, draining wounds."
+  },
+  {
+   "id": "sic-0004",
+   "exam": "RN",
+   "exams": [
+    "RN",
+    "PN"
+   ],
+   "cat": "Safety",
+   "client_needs": "Safety and Infection Control",
+   "topic": "C. difficile hand hygiene",
+   "difficulty": "Moderate",
+   "level": 3,
+   "type": "mc",
+   "cjmm_step": "n/a",
+   "scoring": "dichotomous",
+   "stem": "After caring for a client with Clostridioides difficile, which hand-hygiene method must the nurse use?",
+   "opts": [
+    {
+     "t": "Wash with soap and water",
+     "r": "Correct. C. diff spores are not killed by alcohol; hands must be washed with soap and water."
+    },
+    {
+     "t": "Alcohol-based hand rub",
+     "r": "Alcohol does not destroy C. diff spores."
+    },
+    {
+     "t": "Hand sanitizer wipes",
+     "r": "Alcohol wipes are ineffective against spores."
+    },
+    {
+     "t": "Donning a second pair of gloves",
+     "r": "Gloves do not replace hand washing after spore-forming organisms."
+    }
+   ],
+   "correct": 0,
+   "tracks": [
+    "nclex",
+    "fundamentals"
+   ],
+   "tip": "C. diff and norovirus (spores) → SOAP AND WATER, not alcohol rub."
+  },
+  {
+   "id": "sic-0005",
+   "exam": "RN",
+   "exams": [
+    "RN",
+    "PN"
+   ],
+   "cat": "Safety",
+   "client_needs": "Safety and Infection Control",
+   "topic": "Doffing PPE",
+   "difficulty": "Hard",
+   "level": 4,
+   "type": "mc",
+   "cjmm_step": "n/a",
+   "scoring": "dichotomous",
+   "stem": "The nurse is removing personal protective equipment after client care. Which item should be removed first?",
+   "opts": [
+    {
+     "t": "Gloves",
+     "r": "Correct. Gloves are the most contaminated and are removed first when doffing PPE."
+    },
+    {
+     "t": "Gown",
+     "r": "The gown is removed after gloves."
+    },
+    {
+     "t": "Mask or respirator",
+     "r": "The mask is removed last, after leaving the room."
+    },
+    {
+     "t": "Goggles or face shield",
+     "r": "Eye protection is removed after the gloves."
+    }
+   ],
+   "correct": 0,
+   "tracks": [
+    "nclex",
+    "fundamentals"
+   ],
+   "tip": "Doffing order (most→least contaminated): gloves → goggles → gown → mask (mask last, outside the room)."
+  },
+  {
+   "id": "sic-0006",
+   "exam": "RN",
+   "exams": [
+    "RN",
+    "PN"
+   ],
+   "cat": "Fundamentals",
+   "client_needs": "Safety and Infection Control",
+   "topic": "Sterile field",
+   "difficulty": "Moderate",
+   "level": 3,
+   "type": "mc",
+   "cjmm_step": "n/a",
+   "scoring": "dichotomous",
+   "stem": "While maintaining a sterile field, which action by the nurse breaks sterile technique?",
+   "opts": [
+    {
+     "t": "Turning their back on the sterile field",
+     "r": "Correct. Turning away from the field means it can no longer be observed and is considered contaminated."
+    },
+    {
+     "t": "Holding sterile items above waist level",
+     "r": "Keeping items above the waist and in view maintains sterility."
+    },
+    {
+     "t": "Considering the outer 1-inch border unsterile",
+     "r": "Treating the 1-inch border as unsterile is correct practice."
+    },
+    {
+     "t": "Facing the sterile field at all times",
+     "r": "Facing the field maintains sterility."
+    }
+   ],
+   "correct": 0,
+   "tracks": [
+    "nclex",
+    "fundamentals",
+    "perioperative"
+   ],
+   "tip": "Sterile field: keep it in sight and above the waist; 1-inch border and anything below waist = contaminated."
+  },
+  {
+   "id": "sic-0007",
+   "exam": "RN",
+   "exams": [
+    "RN",
+    "PN"
+   ],
+   "cat": "Safety",
+   "client_needs": "Safety and Infection Control",
+   "topic": "Neutropenic precautions",
+   "difficulty": "Hard",
+   "level": 4,
+   "type": "mc",
+   "cjmm_step": "n/a",
+   "scoring": "dichotomous",
+   "stem": "A client receiving chemotherapy has an absolute neutrophil count of 400/mm3. Which intervention is most appropriate?",
+   "opts": [
+    {
+     "t": "Institute neutropenic (protective) precautions and avoid fresh flowers and raw produce",
+     "r": "Correct. Severe neutropenia requires protective isolation to reduce infection exposure, including no fresh flowers/raw foods."
+    },
+    {
+     "t": "Place the client on airborne precautions",
+     "r": "Protective precautions guard the client, not others; airborne isolation is not indicated."
+    },
+    {
+     "t": "Encourage visits from anyone, including those with colds",
+     "r": "Ill visitors must be screened out to protect the immunocompromised client."
+    },
+    {
+     "t": "Take a rectal temperature every 4 hours",
+     "r": "Rectal temperatures/suppositories are avoided to prevent mucosal injury and infection."
+    }
+   ],
+   "correct": 0,
+   "tracks": [
+    "nclex",
+    "oncology",
+    "fundamentals"
+   ],
+   "tip": "Neutropenia = PROTECT the client: private room, screen visitors, no fresh flowers/raw foods, no rectal routes."
+  },
+  {
+   "id": "sic-0008",
+   "exam": "RN",
+   "exams": [
+    "RN",
+    "PN"
+   ],
+   "cat": "Safety",
+   "client_needs": "Safety and Infection Control",
+   "topic": "Sharps safety",
+   "difficulty": "Easy",
+   "level": 2,
+   "type": "mc",
+   "cjmm_step": "n/a",
+   "scoring": "dichotomous",
+   "stem": "Which action by the nurse demonstrates correct sharps safety after giving an injection?",
+   "opts": [
+    {
+     "t": "Dispose of the needle uncapped in a puncture-resistant sharps container",
+     "r": "Correct. Needles go directly, uncapped, into a puncture-resistant container to prevent injury."
+    },
+    {
+     "t": "Recap the needle using two hands before disposal",
+     "r": "Recapping — especially two-handed — is a leading cause of needlesticks."
+    },
+    {
+     "t": "Place the needle on the bedside table temporarily",
+     "r": "Leaving sharps out risks injury to others."
+    },
+    {
+     "t": "Bend the needle before discarding it",
+     "r": "Bending needles increases exposure risk."
+    }
+   ],
+   "correct": 0,
+   "tracks": [
+    "nclex",
+    "fundamentals"
+   ],
+   "tip": "Never recap needles; drop uncapped into the sharps container. Use safety devices."
+  },
+  {
+   "id": "sic-0009",
+   "exam": "RN",
+   "exams": [
+    "RN",
+    "PN"
+   ],
+   "cat": "Safety",
+   "client_needs": "Safety and Infection Control",
+   "topic": "Needlestick exposure",
+   "difficulty": "Moderate",
+   "level": 3,
+   "type": "mc",
+   "cjmm_step": "n/a",
+   "scoring": "dichotomous",
+   "stem": "A nurse sustains a needlestick injury from a used needle. What is the first action the nurse should take?",
+   "opts": [
+    {
+     "t": "Wash the site immediately with soap and water",
+     "r": "Correct. The first step is to wash the exposed site with soap and water, then report and follow the exposure protocol."
+    },
+    {
+     "t": "Apply a tourniquet above the site",
+     "r": "A tourniquet is not indicated and is not the first step."
+    },
+    {
+     "t": "Squeeze the site to force out blood vigorously",
+     "r": "Vigorous squeezing is not recommended and can damage tissue."
+    },
+    {
+     "t": "Wait until the end of the shift to report it",
+     "r": "Exposures must be reported and evaluated immediately for prophylaxis timing."
+    }
+   ],
+   "correct": 0,
+   "tracks": [
+    "nclex",
+    "fundamentals",
+    "emergency"
+   ],
+   "tip": "Needlestick: wash with soap & water first → report immediately → follow post-exposure protocol."
+  },
+  {
+   "id": "sic-0010",
+   "exam": "RN",
+   "exams": [
+    "RN",
+    "PN"
+   ],
+   "cat": "Safety",
+   "client_needs": "Safety and Infection Control",
+   "topic": "Client identification",
+   "difficulty": "Easy",
+   "level": 2,
+   "type": "mc",
+   "cjmm_step": "n/a",
+   "scoring": "dichotomous",
+   "stem": "Before administering a medication, how should the nurse correctly identify the client?",
+   "opts": [
+    {
+     "t": "Use two client identifiers, such as name and date of birth",
+     "r": "Correct. At least two identifiers (e.g., name and DOB) confirmed against the record are required."
+    },
+    {
+     "t": "Confirm the room and bed number",
+     "r": "Room/bed numbers change and are not reliable identifiers."
+    },
+    {
+     "t": "Call the client's first name and proceed if they respond",
+     "r": "A single name response is not a safe identifier."
+    },
+    {
+     "t": "Ask another nurse to point out the client",
+     "r": "Relying on a pointer is not an approved identification method."
+    }
+   ],
+   "correct": 0,
+   "tracks": [
+    "nclex",
+    "fundamentals"
+   ],
+   "tip": "Always verify TWO identifiers (name + DOB or MRN) — never the room number."
+  },
+  {
+   "id": "sic-0011",
+   "exam": "RN",
+   "exams": [
+    "RN",
+    "PN"
+   ],
+   "cat": "Safety",
+   "client_needs": "Safety and Infection Control",
+   "topic": "Medication error prevention",
+   "difficulty": "Moderate",
+   "level": 3,
+   "type": "mc",
+   "cjmm_step": "n/a",
+   "scoring": "dichotomous",
+   "stem": "Which action best prevents a medication administration error with a high-alert drug such as IV insulin?",
+   "opts": [
+    {
+     "t": "Have a second nurse independently verify the dose and pump settings",
+     "r": "Correct. Independent double-checks on high-alert medications reduce serious dosing errors."
+    },
+    {
+     "t": "Prepare several clients' doses at once to save time",
+     "r": "Batch preparation increases the risk of mix-ups."
+    },
+    {
+     "t": "Rely on memory for the client's usual dose",
+     "r": "Memory is not a safe substitute for verifying the order."
+    },
+    {
+     "t": "Document the dose before confirming the order",
+     "r": "Documenting before verification can propagate an error."
+    }
+   ],
+   "correct": 0,
+   "tracks": [
+    "nclex",
+    "fundamentals"
+   ],
+   "tip": "High-alert meds (insulin, heparin, opioids, concentrated electrolytes) = independent double-check."
+  },
+  {
+   "id": "sic-0012",
+   "exam": "RN",
+   "exams": [
+    "RN",
+    "PN"
+   ],
+   "cat": "Safety",
+   "client_needs": "Safety and Infection Control",
+   "topic": "Fire safety (RACE)",
+   "difficulty": "Easy",
+   "level": 2,
+   "type": "mc",
+   "cjmm_step": "n/a",
+   "scoring": "dichotomous",
+   "stem": "A fire breaks out in a client's room. Using the RACE protocol, what is the nurse's first action?",
+   "opts": [
+    {
+     "t": "Rescue anyone in immediate danger",
+     "r": "Correct. RACE begins with Rescue — move anyone in immediate danger to safety first."
+    },
+    {
+     "t": "Activate the fire alarm",
+     "r": "Alarm is the second step (A), after rescuing those in danger."
+    },
+    {
+     "t": "Confine the fire by closing doors",
+     "r": "Confine is the third step (C)."
+    },
+    {
+     "t": "Extinguish the fire if it is small",
+     "r": "Extinguish is the final step (E)."
+    }
+   ],
+   "correct": 0,
+   "tracks": [
+    "nclex",
+    "fundamentals"
+   ],
+   "tip": "RACE: Rescue → Alarm → Confine → Extinguish. (Extinguisher: PASS.)"
+  },
+  {
+   "id": "sic-0013",
+   "exam": "RN",
+   "exams": [
+    "RN",
+    "PN"
+   ],
+   "cat": "Pediatrics",
+   "client_needs": "Safety and Infection Control",
+   "topic": "Isolation cohorting (varicella)",
+   "difficulty": "Moderate",
+   "level": 3,
+   "type": "mc",
+   "cjmm_step": "n/a",
+   "scoring": "dichotomous",
+   "stem": "A child is admitted with varicella (chickenpox). Which room assignment is appropriate?",
+   "opts": [
+    {
+     "t": "A negative-pressure isolation room on airborne precautions",
+     "r": "Correct. Varicella requires airborne (and contact) precautions in a negative-pressure room."
+    },
+    {
+     "t": "A shared room with a post-operative child",
+     "r": "Sharing with a susceptible child risks transmission."
+    },
+    {
+     "t": "A standard room with droplet precautions only",
+     "r": "Varicella is airborne, not droplet."
+    },
+    {
+     "t": "A room next to the pediatric oncology unit",
+     "r": "Placing a contagious child near immunocompromised clients is unsafe."
+    }
+   ],
+   "correct": 0,
+   "tracks": [
+    "nclex",
+    "pediatrics",
+    "fundamentals"
+   ],
+   "tip": "Varicella/measles = airborne + negative pressure. Keep away from immunocompromised clients."
+  },
+  {
+   "id": "sic-0014",
+   "exam": "RN",
+   "exams": [
+    "RN",
+    "PN"
+   ],
+   "cat": "Safety",
+   "client_needs": "Safety and Infection Control",
+   "topic": "Latex allergy",
+   "difficulty": "Moderate",
+   "level": 3,
+   "type": "mc",
+   "cjmm_step": "n/a",
+   "scoring": "dichotomous",
+   "stem": "A client reports a latex allergy. Which nursing action is most appropriate?",
+   "opts": [
+    {
+     "t": "Use latex-free gloves and equipment for all care",
+     "r": "Correct. A latex-free environment prevents an allergic or anaphylactic reaction."
+    },
+    {
+     "t": "Use latex gloves but change them frequently",
+     "r": "Any latex contact can trigger a reaction."
+    },
+    {
+     "t": "Premedicate with an antihistamine and use latex products",
+     "r": "Avoidance, not premedication, is the safe approach."
+    },
+    {
+     "t": "Only avoid latex during invasive procedures",
+     "r": "Latex must be avoided in all care, not just procedures."
+    }
+   ],
+   "correct": 0,
+   "tracks": [
+    "nclex",
+    "fundamentals",
+    "perioperative"
+   ],
+   "tip": "Latex allergy = latex-free everything; cross-reacts with banana, avocado, kiwi."
+  },
+  {
+   "id": "sic-0015",
+   "exam": "RN",
+   "exams": [
+    "RN",
+    "PN"
+   ],
+   "cat": "Safety",
+   "client_needs": "Safety and Infection Control",
+   "topic": "Standard precautions SATA",
+   "difficulty": "Moderate",
+   "level": 3,
+   "type": "sata",
+   "cjmm_step": "n/a",
+   "scoring": "dichotomous",
+   "stem": "Which practices are part of standard precautions used with ALL clients? Select all that apply.",
+   "opts": [
+    {
+     "t": "Perform hand hygiene before and after client contact",
+     "r": "Correct. Hand hygiene is the foundation of standard precautions for every client."
+    },
+    {
+     "t": "Wear gloves when contact with blood or body fluids is anticipated",
+     "r": "Correct. Gloves are used whenever exposure to body fluids is possible."
+    },
+    {
+     "t": "Dispose of sharps in a puncture-resistant container",
+     "r": "Correct. Safe sharps disposal is a standard precaution."
+    },
+    {
+     "t": "Place every client in a private negative-pressure room",
+     "r": "Incorrect. Negative-pressure rooms are only for airborne precautions, not all clients."
+    },
+    {
+     "t": "Recap all used needles for safety",
+     "r": "Incorrect. Needles are never recapped."
+    }
+   ],
+   "correct": [
+    0,
+    1,
+    2
+   ],
+   "tracks": [
+    "nclex",
+    "fundamentals"
+   ],
+   "tip": "Standard precautions apply to EVERYONE: hand hygiene, PPE as needed, safe sharps, respiratory etiquette."
+  },
+  {
+   "id": "sic-0016",
+   "exam": "RN",
+   "exams": [
+    "RN",
+    "PN"
+   ],
+   "cat": "Safety",
+   "client_needs": "Safety and Infection Control",
+   "topic": "Surgical asepsis setup",
+   "difficulty": "Hard",
+   "level": 4,
+   "type": "mc",
+   "cjmm_step": "n/a",
+   "scoring": "dichotomous",
+   "stem": "A nurse is opening a sterile package to set up a field. Which technique is correct?",
+   "opts": [
+    {
+     "t": "Open the first flap away from the body, then the sides, then toward the body last",
+     "r": "Correct. Opening the far flap first and the near flap last avoids reaching over the sterile field."
+    },
+    {
+     "t": "Open the flap closest to the body first",
+     "r": "Opening the near flap first forces reaching across the field, contaminating it."
+    },
+    {
+     "t": "Reach across the sterile field to arrange items",
+     "r": "Reaching over a sterile field contaminates it."
+    },
+    {
+     "t": "Place sterile items on the very edge of the field",
+     "r": "The outer 1-inch border is considered contaminated."
+    }
+   ],
+   "correct": 0,
+   "tracks": [
+    "nclex",
+    "perioperative",
+    "fundamentals"
+   ],
+   "tip": "Open sterile wraps: farthest flap first, nearest flap last; never reach over the field."
   },
   {
    "id": "clinical-judgment-0001",
