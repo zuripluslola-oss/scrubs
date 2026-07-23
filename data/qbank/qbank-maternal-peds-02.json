@@ -32,7 +32,16 @@
    "client_needs": "Health Promotion and Maintenance",
    "scoring": "dichotomous",
    "cjmm_step": "n/a",
-   "level": 4
+   "level": 4,
+   "exams": [
+    "RN",
+    "PN"
+   ],
+   "tracks": [
+    "nclex",
+    "maternal-newborn",
+    "labor-delivery"
+   ]
   },
   {
    "id": "qb-mp-0102",
@@ -65,7 +74,16 @@
    "client_needs": "Health Promotion and Maintenance",
    "scoring": "dichotomous",
    "cjmm_step": "n/a",
-   "level": 4
+   "level": 4,
+   "exams": [
+    "RN",
+    "PN"
+   ],
+   "tracks": [
+    "nclex",
+    "maternal-newborn",
+    "labor-delivery"
+   ]
   },
   {
    "id": "qb-mp-0103",
@@ -98,7 +116,16 @@
    "client_needs": "Health Promotion and Maintenance",
    "scoring": "dichotomous",
    "cjmm_step": "n/a",
-   "level": 4
+   "level": 4,
+   "exams": [
+    "RN",
+    "PN"
+   ],
+   "tracks": [
+    "nclex",
+    "maternal-newborn",
+    "labor-delivery"
+   ]
   },
   {
    "id": "qb-mp-0104",
@@ -131,7 +158,16 @@
    "client_needs": "Health Promotion and Maintenance",
    "scoring": "dichotomous",
    "cjmm_step": "n/a",
-   "level": 3
+   "level": 3,
+   "exams": [
+    "RN",
+    "PN"
+   ],
+   "tracks": [
+    "nclex",
+    "maternal-newborn",
+    "labor-delivery"
+   ]
   },
   {
    "id": "qb-mp-0105",
@@ -164,7 +200,15 @@
    "client_needs": "Health Promotion and Maintenance",
    "scoring": "dichotomous",
    "cjmm_step": "n/a",
-   "level": 4
+   "level": 4,
+   "exams": [
+    "RN",
+    "PN"
+   ],
+   "tracks": [
+    "nclex",
+    "pediatrics"
+   ]
   },
   {
    "id": "qb-mp-0106",
@@ -197,7 +241,15 @@
    "client_needs": "Health Promotion and Maintenance",
    "scoring": "dichotomous",
    "cjmm_step": "n/a",
-   "level": 3
+   "level": 3,
+   "exams": [
+    "RN",
+    "PN"
+   ],
+   "tracks": [
+    "nclex",
+    "pediatrics"
+   ]
   },
   {
    "id": "qb-mp-0107",
@@ -230,7 +282,15 @@
    "client_needs": "Health Promotion and Maintenance",
    "scoring": "dichotomous",
    "cjmm_step": "n/a",
-   "level": 2
+   "level": 2,
+   "exams": [
+    "RN",
+    "PN"
+   ],
+   "tracks": [
+    "nclex",
+    "pediatrics"
+   ]
   },
   {
    "id": "qb-mp-0108",
@@ -263,7 +323,15 @@
    "client_needs": "Health Promotion and Maintenance",
    "scoring": "dichotomous",
    "cjmm_step": "n/a",
-   "level": 3
+   "level": 3,
+   "exams": [
+    "RN",
+    "PN"
+   ],
+   "tracks": [
+    "nclex",
+    "pediatrics"
+   ]
   },
   {
    "id": "qb-mp-0109",
@@ -296,7 +364,15 @@
    "client_needs": "Health Promotion and Maintenance",
    "scoring": "dichotomous",
    "cjmm_step": "n/a",
-   "level": 3
+   "level": 3,
+   "exams": [
+    "RN",
+    "PN"
+   ],
+   "tracks": [
+    "nclex",
+    "pediatrics"
+   ]
   },
   {
    "id": "qb-mp-0110",
@@ -329,7 +405,16 @@
    "client_needs": "Health Promotion and Maintenance",
    "scoring": "dichotomous",
    "cjmm_step": "n/a",
-   "level": 2
+   "level": 2,
+   "exams": [
+    "RN",
+    "PN"
+   ],
+   "tracks": [
+    "nclex",
+    "maternal-newborn",
+    "labor-delivery"
+   ]
   }
  ]
 }

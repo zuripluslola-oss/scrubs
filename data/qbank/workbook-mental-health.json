@@ -34,7 +34,15 @@
    "client_needs": "Psychosocial Integrity",
    "scoring": "dichotomous",
    "cjmm_step": "n/a",
-   "level": 3
+   "level": 3,
+   "exams": [
+    "RN",
+    "PN"
+   ],
+   "tracks": [
+    "nclex",
+    "psychiatric"
+   ]
   },
   {
    "id": "mental-health-0002",
@@ -69,7 +77,15 @@
    "client_needs": "Psychosocial Integrity",
    "scoring": "dichotomous",
    "cjmm_step": "n/a",
-   "level": 3
+   "level": 3,
+   "exams": [
+    "RN",
+    "PN"
+   ],
+   "tracks": [
+    "nclex",
+    "psychiatric"
+   ]
   },
   {
    "id": "mental-health-0003",
@@ -104,7 +120,15 @@
    "client_needs": "Psychosocial Integrity",
    "scoring": "dichotomous",
    "cjmm_step": "n/a",
-   "level": 4
+   "level": 4,
+   "exams": [
+    "RN",
+    "PN"
+   ],
+   "tracks": [
+    "nclex",
+    "psychiatric"
+   ]
   },
   {
    "id": "mental-health-0004",
@@ -139,7 +163,15 @@
    "client_needs": "Psychosocial Integrity",
    "scoring": "dichotomous",
    "cjmm_step": "n/a",
-   "level": 3
+   "level": 3,
+   "exams": [
+    "RN",
+    "PN"
+   ],
+   "tracks": [
+    "nclex",
+    "psychiatric"
+   ]
   },
   {
    "id": "mental-health-0005",
@@ -174,7 +206,15 @@
    "client_needs": "Psychosocial Integrity",
    "scoring": "dichotomous",
    "cjmm_step": "n/a",
-   "level": 2
+   "level": 2,
+   "exams": [
+    "RN",
+    "PN"
+   ],
+   "tracks": [
+    "nclex",
+    "psychiatric"
+   ]
   }
  ]
 }

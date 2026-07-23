@@ -40,7 +40,15 @@
    "client_needs": "Physiological Adaptation",
    "scoring": "dichotomous",
    "cjmm_step": "n/a",
-   "level": 4
+   "level": 4,
+   "exams": [
+    "RN",
+    "PN"
+   ],
+   "tracks": [
+    "nclex",
+    "med-surg"
+   ]
   },
   {
    "id": "qb-ngn-0202",
@@ -82,7 +90,15 @@
    "client_needs": "Safety and Infection Control",
    "scoring": "dichotomous",
    "cjmm_step": "n/a",
-   "level": 4
+   "level": 4,
+   "exams": [
+    "RN",
+    "PN"
+   ],
+   "tracks": [
+    "nclex",
+    "fundamentals"
+   ]
   },
   {
    "id": "qb-ngn-0203",
@@ -123,7 +139,16 @@
    "client_needs": "Pharmacological and Parenteral Therapies",
    "scoring": "dichotomous",
    "cjmm_step": "n/a",
-   "level": 3
+   "level": 3,
+   "exams": [
+    "RN",
+    "PN"
+   ],
+   "tracks": [
+    "nclex",
+    "pharmacology",
+    "prenursing-pharmacology"
+   ]
   },
   {
    "id": "qb-ngn-0204",
@@ -168,7 +193,15 @@
    "client_needs": "Physiological Adaptation",
    "scoring": "dichotomous",
    "cjmm_step": "n/a",
-   "level": 4
+   "level": 4,
+   "exams": [
+    "RN",
+    "PN"
+   ],
+   "tracks": [
+    "nclex",
+    "med-surg"
+   ]
   },
   {
    "id": "qb-ngn-0205",
@@ -252,7 +285,15 @@
    "client_needs": "Physiological Adaptation",
    "scoring": "partial_credit",
    "cjmm_step": "Take Actions",
-   "level": 4
+   "level": 4,
+   "exams": [
+    "RN",
+    "PN"
+   ],
+   "tracks": [
+    "nclex",
+    "med-surg"
+   ]
   }
  ]
 }

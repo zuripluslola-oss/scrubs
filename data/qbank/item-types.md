@@ -21,6 +21,24 @@ straight into `data/qbank/*.json` with zero conversion. Extends `schema.md`.
 | `tip` | one-line strategy |
 | `pearl` | optional memory trick |
 | `free` | optional bool — show in the free sample |
+| `exams` | array — which exams this item serves: `["RN"]`, `["PN"]`, or `["RN","PN"]`. Handles RN/PN overlap. |
+| `tracks` | array of course slugs this item belongs to (e.g. `["nclex","med-surg","critical-care"]` or `["prenursing-anatomy"]`). A question can be in many courses at once — this is how overlap works. |
+
+## One bank, many courses (the tag model)
+There is **one** question pool, not a separate bank per course. Every "course"
+— NCLEX-RN, NCLEX-PN, a specialty (Critical Care, ER, L&D…), or a prenursing
+subject (Anatomy, Pharmacology) — is just a **filtered view** of the pool by
+`exams` + `tracks`. So a single cardiac-dysrhythmia item tagged
+`exams:["RN","PN"], tracks:["nclex","med-surg","critical-care","progressive-care"]`
+serves five courses with zero duplication. Overlap is a feature.
+
+Course slug taxonomy: `nclex`, plus the 22 specialty slugs
+(`med-surg, emergency, critical-care, pediatrics, labor-delivery, neonatal,
+oncology, cardiac, perioperative, pacu, psychiatric, geriatrics, home-health,
+hospice, rehabilitation, dialysis, wound-care, ambulatory, school,
+occupational, long-term-care, progressive-care`), plus prenursing/prereq
+tracks (`prenursing-anatomy, prenursing-pharmacology, prenursing-microbiology,
+fundamentals, dosage-calc`).
 
 **Every option / target / cell / blank carries its own rationale** (right AND wrong).
 

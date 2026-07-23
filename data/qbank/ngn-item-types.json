@@ -43,7 +43,15 @@
    "client_needs": "Safety and Infection Control",
    "scoring": "dichotomous",
    "cjmm_step": "n/a",
-   "level": 4
+   "level": 4,
+   "exams": [
+    "RN",
+    "PN"
+   ],
+   "tracks": [
+    "nclex",
+    "fundamentals"
+   ]
   },
   {
    "id": "sata-0002",
@@ -87,7 +95,16 @@
    "client_needs": "Pharmacological and Parenteral Therapies",
    "scoring": "dichotomous",
    "cjmm_step": "n/a",
-   "level": 3
+   "level": 3,
+   "exams": [
+    "RN",
+    "PN"
+   ],
+   "tracks": [
+    "nclex",
+    "pharmacology",
+    "prenursing-pharmacology"
+   ]
   },
   {
    "id": "matrix-0001",
@@ -135,7 +152,15 @@
    "client_needs": "Physiological Adaptation",
    "scoring": "dichotomous",
    "cjmm_step": "n/a",
-   "level": 3
+   "level": 3,
+   "exams": [
+    "RN",
+    "PN"
+   ],
+   "tracks": [
+    "nclex",
+    "med-surg"
+   ]
   },
   {
    "id": "matrix-0002",
@@ -183,7 +208,15 @@
    "client_needs": "Physiological Adaptation",
    "scoring": "dichotomous",
    "cjmm_step": "n/a",
-   "level": 3
+   "level": 3,
+   "exams": [
+    "RN",
+    "PN"
+   ],
+   "tracks": [
+    "nclex",
+    "med-surg"
+   ]
   },
   {
    "id": "bowtie-0001",
@@ -273,7 +306,14 @@
    "client_needs": "Management of Care",
    "scoring": "partial_credit",
    "cjmm_step": "Take Actions",
-   "level": 4
+   "level": 4,
+   "exams": [
+    "RN",
+    "PN"
+   ],
+   "tracks": [
+    "nclex"
+   ]
   }
  ]
 }

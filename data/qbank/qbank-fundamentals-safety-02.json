@@ -33,7 +33,15 @@
    "client_needs": "Safety and Infection Control",
    "scoring": "dichotomous",
    "cjmm_step": "n/a",
-   "level": 3
+   "level": 3,
+   "exams": [
+    "RN",
+    "PN"
+   ],
+   "tracks": [
+    "nclex",
+    "fundamentals"
+   ]
   },
   {
    "id": "qb-fs-0102",
@@ -66,7 +74,15 @@
    "client_needs": "Safety and Infection Control",
    "scoring": "dichotomous",
    "cjmm_step": "n/a",
-   "level": 3
+   "level": 3,
+   "exams": [
+    "RN",
+    "PN"
+   ],
+   "tracks": [
+    "nclex",
+    "fundamentals"
+   ]
   },
   {
    "id": "qb-fs-0103",
@@ -99,7 +115,15 @@
    "client_needs": "Basic Care and Comfort",
    "scoring": "dichotomous",
    "cjmm_step": "n/a",
-   "level": 3
+   "level": 3,
+   "exams": [
+    "RN",
+    "PN"
+   ],
+   "tracks": [
+    "nclex",
+    "fundamentals"
+   ]
   },
   {
    "id": "qb-fs-0104",
@@ -132,7 +156,15 @@
    "client_needs": "Safety and Infection Control",
    "scoring": "dichotomous",
    "cjmm_step": "n/a",
-   "level": 2
+   "level": 2,
+   "exams": [
+    "RN",
+    "PN"
+   ],
+   "tracks": [
+    "nclex",
+    "fundamentals"
+   ]
   },
   {
    "id": "qb-fs-0105",
@@ -165,7 +197,15 @@
    "client_needs": "Basic Care and Comfort",
    "scoring": "dichotomous",
    "cjmm_step": "n/a",
-   "level": 4
+   "level": 4,
+   "exams": [
+    "RN",
+    "PN"
+   ],
+   "tracks": [
+    "nclex",
+    "fundamentals"
+   ]
   },
   {
    "id": "qb-fs-0106",
@@ -198,7 +238,15 @@
    "client_needs": "Basic Care and Comfort",
    "scoring": "dichotomous",
    "cjmm_step": "n/a",
-   "level": 3
+   "level": 3,
+   "exams": [
+    "RN",
+    "PN"
+   ],
+   "tracks": [
+    "nclex",
+    "fundamentals"
+   ]
   },
   {
    "id": "qb-fs-0107",
@@ -231,7 +279,15 @@
    "client_needs": "Safety and Infection Control",
    "scoring": "dichotomous",
    "cjmm_step": "n/a",
-   "level": 3
+   "level": 3,
+   "exams": [
+    "RN",
+    "PN"
+   ],
+   "tracks": [
+    "nclex",
+    "fundamentals"
+   ]
   },
   {
    "id": "qb-fs-0108",
@@ -264,7 +320,15 @@
    "client_needs": "Basic Care and Comfort",
    "scoring": "dichotomous",
    "cjmm_step": "n/a",
-   "level": 2
+   "level": 2,
+   "exams": [
+    "RN",
+    "PN"
+   ],
+   "tracks": [
+    "nclex",
+    "fundamentals"
+   ]
   },
   {
    "id": "qb-fs-0109",
@@ -297,7 +361,15 @@
    "client_needs": "Safety and Infection Control",
    "scoring": "dichotomous",
    "cjmm_step": "n/a",
-   "level": 4
+   "level": 4,
+   "exams": [
+    "RN",
+    "PN"
+   ],
+   "tracks": [
+    "nclex",
+    "fundamentals"
+   ]
   },
   {
    "id": "qb-fs-0110",
@@ -330,7 +402,15 @@
    "client_needs": "Basic Care and Comfort",
    "scoring": "dichotomous",
    "cjmm_step": "n/a",
-   "level": 3
+   "level": 3,
+   "exams": [
+    "RN",
+    "PN"
+   ],
+   "tracks": [
+    "nclex",
+    "fundamentals"
+   ]
   }
  ]
 }

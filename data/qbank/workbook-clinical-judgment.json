@@ -34,7 +34,14 @@
    "client_needs": "Management of Care",
    "scoring": "dichotomous",
    "cjmm_step": "n/a",
-   "level": 4
+   "level": 4,
+   "exams": [
+    "RN",
+    "PN"
+   ],
+   "tracks": [
+    "nclex"
+   ]
   }
  ]
 }

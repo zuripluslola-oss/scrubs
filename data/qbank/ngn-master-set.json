@@ -33,7 +33,16 @@
      "r": "Nitroglycerin degrades in light; it must stay in its original dark glass bottle."
     }
    ],
-   "correct": 0
+   "correct": 0,
+   "exams": [
+    "RN",
+    "PN"
+   ],
+   "tracks": [
+    "nclex",
+    "pharmacology",
+    "prenursing-pharmacology"
+   ]
   },
   {
    "id": "ms-sata-0001",
@@ -74,6 +83,14 @@
     0,
     1,
     3
+   ],
+   "exams": [
+    "RN",
+    "PN"
+   ],
+   "tracks": [
+    "nclex",
+    "fundamentals"
    ]
   },
   {
@@ -116,6 +133,14 @@
     0,
     1,
     2
+   ],
+   "exams": [
+    "RN",
+    "PN"
+   ],
+   "tracks": [
+    "nclex",
+    "med-surg"
    ]
   },
   {
@@ -170,7 +195,16 @@
     "1": "Requires follow-up",
     "2": "Expected",
     "3": "Requires follow-up"
-   }
+   },
+   "exams": [
+    "RN",
+    "PN"
+   ],
+   "tracks": [
+    "nclex",
+    "maternal-newborn",
+    "labor-delivery"
+   ]
   },
   {
    "id": "ms-fib-0001",
@@ -193,7 +227,16 @@
      8
     ]
    },
-   "r": "25,000 units ÷ 250 mL = 100 units/mL. 800 units/hr ÷ 100 units/mL = 8 mL/hr."
+   "r": "25,000 units ÷ 250 mL = 100 units/mL. 800 units/hr ÷ 100 units/mL = 8 mL/hr.",
+   "exams": [
+    "RN",
+    "PN"
+   ],
+   "tracks": [
+    "nclex",
+    "pharmacology",
+    "prenursing-pharmacology"
+   ]
   },
   {
    "id": "ms-ord-0001",
@@ -229,6 +272,14 @@
      "t": "Put on gloves",
      "r": "Gloves go on last, pulled over the gown cuffs."
     }
+   ],
+   "exams": [
+    "RN",
+    "PN"
+   ],
+   "tracks": [
+    "nclex",
+    "fundamentals"
    ]
   },
   {
@@ -269,6 +320,14 @@
      "correct": false,
      "r": "This overlies the liver, not the apex of the heart."
     }
+   ],
+   "exams": [
+    "RN",
+    "PN"
+   ],
+   "tracks": [
+    "nclex",
+    "fundamentals"
    ]
   },
   {
@@ -308,7 +367,15 @@
      "r": "A finding of early/warm shock, but the hemodynamic instability is the priority."
     }
    ],
-   "correct": 0
+   "correct": 0,
+   "exams": [
+    "RN",
+    "PN"
+   ],
+   "tracks": [
+    "nclex",
+    "med-surg"
+   ]
   },
   {
    "id": "ms-gra-0001",
@@ -341,7 +408,15 @@
      "r": "This is asystole, not V-fib."
     }
    ],
-   "correct": 0
+   "correct": 0,
+   "exams": [
+    "RN",
+    "PN"
+   ],
+   "tracks": [
+    "nclex",
+    "med-surg"
+   ]
   },
   {
    "id": "ms-aud-0001",
@@ -374,7 +449,15 @@
      "r": "Crackles are adventitious — not normal breath sounds."
     }
    ],
-   "correct": 0
+   "correct": 0,
+   "exams": [
+    "RN",
+    "PN"
+   ],
+   "tracks": [
+    "nclex",
+    "med-surg"
+   ]
   },
   {
    "id": "ms-tab-0001",
@@ -431,7 +514,15 @@
      "r": "250 mL over 8 hr (~31 mL/hr) is at the low end and warrants monitoring."
     }
    ],
-   "correct": 0
+   "correct": 0,
+   "exams": [
+    "RN",
+    "PN"
+   ],
+   "tracks": [
+    "nclex",
+    "fundamentals"
+   ]
   },
   {
    "id": "ms-bow-0001",
@@ -515,7 +606,15 @@
      0,
      1
     ]
-   }
+   },
+   "exams": [
+    "RN",
+    "PN"
+   ],
+   "tracks": [
+    "nclex",
+    "med-surg"
+   ]
   },
   {
    "id": "ms-trn-0001",
@@ -586,7 +685,15 @@
      "r": "Sedation would lower HR/RR, not raise them."
     }
    ],
-   "correct": 0
+   "correct": 0,
+   "exams": [
+    "RN",
+    "PN"
+   ],
+   "tracks": [
+    "nclex",
+    "med-surg"
+   ]
   },
   {
    "id": "ms-mtx-0001",
@@ -626,6 +733,14 @@
      "correct": 0,
      "r": "Low BP with compensatory tachycardia points to deficit."
     }
+   ],
+   "exams": [
+    "RN",
+    "PN"
+   ],
+   "tracks": [
+    "nclex",
+    "med-surg"
    ]
   },
   {
@@ -670,6 +785,15 @@
      ],
      "r": "Heparin is given IV or subcutaneously, not orally."
     }
+   ],
+   "exams": [
+    "RN",
+    "PN"
+   ],
+   "tracks": [
+    "nclex",
+    "pharmacology",
+    "prenursing-pharmacology"
    ]
   },
   {
@@ -741,6 +865,14 @@
      ],
      "correct": 2
     }
+   ],
+   "exams": [
+    "RN",
+    "PN"
+   ],
+   "tracks": [
+    "nclex",
+    "med-surg"
    ]
   },
   {
@@ -792,6 +924,14 @@
      ],
      "correct": 0
     }
+   ],
+   "exams": [
+    "RN",
+    "PN"
+   ],
+   "tracks": [
+    "nclex",
+    "med-surg"
    ]
   },
   {
@@ -843,6 +983,14 @@
      ],
      "correct": 0
     }
+   ],
+   "exams": [
+    "RN",
+    "PN"
+   ],
+   "tracks": [
+    "nclex",
+    "med-surg"
    ]
   },
   {
@@ -884,6 +1032,14 @@
      "r": "Requires follow-up — possible DVT.",
      "correct": true
     }
+   ],
+   "exams": [
+    "RN",
+    "PN"
+   ],
+   "tracks": [
+    "nclex",
+    "med-surg"
    ]
   },
   {
@@ -964,6 +1120,14 @@
       }
      ]
     }
+   ],
+   "exams": [
+    "RN",
+    "PN"
+   ],
+   "tracks": [
+    "nclex",
+    "med-surg"
    ]
   },
   {
@@ -1230,6 +1394,14 @@
      ],
      "correct": 0
     }
+   ],
+   "exams": [
+    "RN",
+    "PN"
+   ],
+   "tracks": [
+    "nclex",
+    "med-surg"
    ]
   }
  ]

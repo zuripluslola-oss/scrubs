@@ -34,7 +34,15 @@
    "client_needs": "Basic Care and Comfort",
    "scoring": "dichotomous",
    "cjmm_step": "n/a",
-   "level": 2
+   "level": 2,
+   "exams": [
+    "RN",
+    "PN"
+   ],
+   "tracks": [
+    "nclex",
+    "fundamentals"
+   ]
   },
   {
    "id": "fundamentals-0002",
@@ -69,7 +77,15 @@
    "client_needs": "Basic Care and Comfort",
    "scoring": "dichotomous",
    "cjmm_step": "n/a",
-   "level": 3
+   "level": 3,
+   "exams": [
+    "RN",
+    "PN"
+   ],
+   "tracks": [
+    "nclex",
+    "fundamentals"
+   ]
   },
   {
    "id": "fundamentals-0003",
@@ -104,7 +120,15 @@
    "client_needs": "Basic Care and Comfort",
    "scoring": "dichotomous",
    "cjmm_step": "n/a",
-   "level": 3
+   "level": 3,
+   "exams": [
+    "RN",
+    "PN"
+   ],
+   "tracks": [
+    "nclex",
+    "fundamentals"
+   ]
   },
   {
    "id": "fundamentals-0004",
@@ -139,7 +163,15 @@
    "client_needs": "Basic Care and Comfort",
    "scoring": "dichotomous",
    "cjmm_step": "n/a",
-   "level": 2
+   "level": 2,
+   "exams": [
+    "RN",
+    "PN"
+   ],
+   "tracks": [
+    "nclex",
+    "fundamentals"
+   ]
   },
   {
    "id": "fundamentals-0005",
@@ -174,7 +206,15 @@
    "client_needs": "Basic Care and Comfort",
    "scoring": "dichotomous",
    "cjmm_step": "n/a",
-   "level": 3
+   "level": 3,
+   "exams": [
+    "RN",
+    "PN"
+   ],
+   "tracks": [
+    "nclex",
+    "fundamentals"
+   ]
   },
   {
    "id": "fundamentals-0006",
@@ -209,7 +249,15 @@
    "client_needs": "Basic Care and Comfort",
    "scoring": "dichotomous",
    "cjmm_step": "n/a",
-   "level": 3
+   "level": 3,
+   "exams": [
+    "RN",
+    "PN"
+   ],
+   "tracks": [
+    "nclex",
+    "fundamentals"
+   ]
   }
  ]
 }

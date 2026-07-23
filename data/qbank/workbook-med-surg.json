@@ -34,7 +34,15 @@
    "client_needs": "Physiological Adaptation",
    "scoring": "dichotomous",
    "cjmm_step": "n/a",
-   "level": 3
+   "level": 3,
+   "exams": [
+    "RN",
+    "PN"
+   ],
+   "tracks": [
+    "nclex",
+    "med-surg"
+   ]
   },
   {
    "id": "med-surg-0002",
@@ -69,7 +77,15 @@
    "client_needs": "Physiological Adaptation",
    "scoring": "dichotomous",
    "cjmm_step": "n/a",
-   "level": 4
+   "level": 4,
+   "exams": [
+    "RN",
+    "PN"
+   ],
+   "tracks": [
+    "nclex",
+    "med-surg"
+   ]
   },
   {
    "id": "med-surg-0003",
@@ -104,7 +120,15 @@
    "client_needs": "Physiological Adaptation",
    "scoring": "dichotomous",
    "cjmm_step": "n/a",
-   "level": 2
+   "level": 2,
+   "exams": [
+    "RN",
+    "PN"
+   ],
+   "tracks": [
+    "nclex",
+    "med-surg"
+   ]
   },
   {
    "id": "med-surg-0004",
@@ -139,7 +163,15 @@
    "client_needs": "Physiological Adaptation",
    "scoring": "dichotomous",
    "cjmm_step": "n/a",
-   "level": 4
+   "level": 4,
+   "exams": [
+    "RN",
+    "PN"
+   ],
+   "tracks": [
+    "nclex",
+    "med-surg"
+   ]
   },
   {
    "id": "med-surg-0005",
@@ -174,7 +206,15 @@
    "client_needs": "Physiological Adaptation",
    "scoring": "dichotomous",
    "cjmm_step": "n/a",
-   "level": 4
+   "level": 4,
+   "exams": [
+    "RN",
+    "PN"
+   ],
+   "tracks": [
+    "nclex",
+    "med-surg"
+   ]
   },
   {
    "id": "med-surg-0006",
@@ -209,7 +249,15 @@
    "client_needs": "Physiological Adaptation",
    "scoring": "dichotomous",
    "cjmm_step": "n/a",
-   "level": 3
+   "level": 3,
+   "exams": [
+    "RN",
+    "PN"
+   ],
+   "tracks": [
+    "nclex",
+    "med-surg"
+   ]
   },
   {
    "id": "med-surg-0007",
@@ -244,7 +292,15 @@
    "client_needs": "Physiological Adaptation",
    "scoring": "dichotomous",
    "cjmm_step": "n/a",
-   "level": 3
+   "level": 3,
+   "exams": [
+    "RN",
+    "PN"
+   ],
+   "tracks": [
+    "nclex",
+    "med-surg"
+   ]
   },
   {
    "id": "med-surg-0008",
@@ -279,7 +335,15 @@
    "client_needs": "Physiological Adaptation",
    "scoring": "dichotomous",
    "cjmm_step": "n/a",
-   "level": 3
+   "level": 3,
+   "exams": [
+    "RN",
+    "PN"
+   ],
+   "tracks": [
+    "nclex",
+    "med-surg"
+   ]
   },
   {
    "id": "med-surg-0009",
@@ -314,7 +378,15 @@
    "client_needs": "Physiological Adaptation",
    "scoring": "dichotomous",
    "cjmm_step": "n/a",
-   "level": 3
+   "level": 3,
+   "exams": [
+    "RN",
+    "PN"
+   ],
+   "tracks": [
+    "nclex",
+    "med-surg"
+   ]
   },
   {
    "id": "med-surg-0010",
@@ -349,7 +421,15 @@
    "client_needs": "Physiological Adaptation",
    "scoring": "dichotomous",
    "cjmm_step": "n/a",
-   "level": 4
+   "level": 4,
+   "exams": [
+    "RN",
+    "PN"
+   ],
+   "tracks": [
+    "nclex",
+    "med-surg"
+   ]
   },
   {
    "id": "med-surg-0011",
@@ -384,7 +464,15 @@
    "client_needs": "Physiological Adaptation",
    "scoring": "dichotomous",
    "cjmm_step": "n/a",
-   "level": 4
+   "level": 4,
+   "exams": [
+    "RN",
+    "PN"
+   ],
+   "tracks": [
+    "nclex",
+    "med-surg"
+   ]
   },
   {
    "id": "med-surg-0012",
@@ -419,7 +507,15 @@
    "client_needs": "Physiological Adaptation",
    "scoring": "dichotomous",
    "cjmm_step": "n/a",
-   "level": 3
+   "level": 3,
+   "exams": [
+    "RN",
+    "PN"
+   ],
+   "tracks": [
+    "nclex",
+    "med-surg"
+   ]
   }
  ]
 }

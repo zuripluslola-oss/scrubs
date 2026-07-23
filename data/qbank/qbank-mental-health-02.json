@@ -32,7 +32,15 @@
    "client_needs": "Psychosocial Integrity",
    "scoring": "dichotomous",
    "cjmm_step": "n/a",
-   "level": 3
+   "level": 3,
+   "exams": [
+    "RN",
+    "PN"
+   ],
+   "tracks": [
+    "nclex",
+    "psychiatric"
+   ]
   },
   {
    "id": "qb-mh-0102",
@@ -65,7 +73,15 @@
    "client_needs": "Psychosocial Integrity",
    "scoring": "dichotomous",
    "cjmm_step": "n/a",
-   "level": 4
+   "level": 4,
+   "exams": [
+    "RN",
+    "PN"
+   ],
+   "tracks": [
+    "nclex",
+    "psychiatric"
+   ]
   },
   {
    "id": "qb-mh-0103",
@@ -98,7 +114,15 @@
    "client_needs": "Psychosocial Integrity",
    "scoring": "dichotomous",
    "cjmm_step": "n/a",
-   "level": 4
+   "level": 4,
+   "exams": [
+    "RN",
+    "PN"
+   ],
+   "tracks": [
+    "nclex",
+    "psychiatric"
+   ]
   },
   {
    "id": "qb-mh-0104",
@@ -131,7 +155,15 @@
    "client_needs": "Psychosocial Integrity",
    "scoring": "dichotomous",
    "cjmm_step": "n/a",
-   "level": 4
+   "level": 4,
+   "exams": [
+    "RN",
+    "PN"
+   ],
+   "tracks": [
+    "nclex",
+    "psychiatric"
+   ]
   },
   {
    "id": "qb-mh-0105",
@@ -164,7 +196,15 @@
    "client_needs": "Psychosocial Integrity",
    "scoring": "dichotomous",
    "cjmm_step": "n/a",
-   "level": 4
+   "level": 4,
+   "exams": [
+    "RN",
+    "PN"
+   ],
+   "tracks": [
+    "nclex",
+    "psychiatric"
+   ]
   },
   {
    "id": "qb-mh-0106",
@@ -197,7 +237,15 @@
    "client_needs": "Psychosocial Integrity",
    "scoring": "dichotomous",
    "cjmm_step": "n/a",
-   "level": 3
+   "level": 3,
+   "exams": [
+    "RN",
+    "PN"
+   ],
+   "tracks": [
+    "nclex",
+    "psychiatric"
+   ]
   },
   {
    "id": "qb-mh-0107",
@@ -230,7 +278,15 @@
    "client_needs": "Psychosocial Integrity",
    "scoring": "dichotomous",
    "cjmm_step": "n/a",
-   "level": 3
+   "level": 3,
+   "exams": [
+    "RN",
+    "PN"
+   ],
+   "tracks": [
+    "nclex",
+    "psychiatric"
+   ]
   },
   {
    "id": "qb-mh-0108",
@@ -263,7 +319,15 @@
    "client_needs": "Psychosocial Integrity",
    "scoring": "dichotomous",
    "cjmm_step": "n/a",
-   "level": 3
+   "level": 3,
+   "exams": [
+    "RN",
+    "PN"
+   ],
+   "tracks": [
+    "nclex",
+    "psychiatric"
+   ]
   }
  ]
 }
