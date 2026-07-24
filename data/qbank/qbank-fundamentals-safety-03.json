@@ -1,0 +1,115 @@
+{
+  "batch": "fundamentals-safety-03",
+  "questions": [
+    {
+      "id": "qb-fs-0111", "exam": "RN", "cat": "Fundamentals", "topic": "Incentive spirometry", "difficulty": "Moderate", "type": "mc",
+      "stem": "A nurse is teaching a client how to use an incentive spirometer after abdominal surgery. Which client action shows correct understanding?",
+      "opts": [
+        {"t": "Exhale forcefully into the mouthpiece 10 times each hour.", "r": "The client inhales through an incentive spirometer; forceful exhalation does not expand the lungs."},
+        {"t": "Sit upright, seal the lips around the mouthpiece, and inhale slowly until the marker rises.", "r": "Correct. Upright positioning and a slow, sustained inhalation promote alveolar expansion and help prevent postoperative atelectasis."},
+        {"t": "Use the spirometer only when shortness of breath occurs.", "r": "The device is used regularly while awake as prescribed, not only after symptoms develop."},
+        {"t": "Breathe rapidly through the mouthpiece to raise the marker quickly.", "r": "Rapid inhalation is less effective; a slow, deep breath is needed to promote sustained lung expansion."}
+      ],
+      "correct": 1, "tip": "Incentive spirometer = sit up, inhale slowly and deeply, hold briefly, then repeat regularly while awake.", "pearl": "Slow and steady raises the spirometer and opens alveoli.", "client_needs": "Basic Care and Comfort", "scoring": "dichotomous", "cjmm_step": "Take Actions", "level": 3, "exams": ["RN", "PN"], "tracks": ["nclex", "fundamentals"]
+    },
+    {
+      "id": "qb-fs-0112", "exam": "RN", "cat": "Fundamentals", "topic": "Urinary catheter care", "difficulty": "Moderate", "type": "mc",
+      "stem": "Which action by the nurse is most effective for preventing a catheter-associated urinary tract infection in a client with an indwelling urinary catheter?",
+      "opts": [
+        {"t": "Disconnect the drainage tubing daily to clean the connection.", "r": "Disconnecting tubing breaks the closed system and increases infection risk."},
+        {"t": "Keep the drainage bag below bladder level and maintain a closed drainage system.", "r": "Correct. Dependent drainage and an intact closed system reduce backflow and contamination."},
+        {"t": "Irrigate the catheter every shift with sterile saline.", "r": "Routine irrigation is not indicated and can introduce organisms; it is done only for a specific order or indication."},
+        {"t": "Apply antibiotic ointment to the urinary meatus with every shift assessment.", "r": "Routine antibiotic ointment is not a CAUTI-prevention measure and can contribute to irritation or resistance."}
+      ],
+      "correct": 1, "tip": "CAUTI prevention: use a catheter only when necessary, keep a closed system, keep the bag below the bladder, and remove it as soon as possible.", "client_needs": "Safety and Infection Control", "scoring": "dichotomous", "cjmm_step": "Take Actions", "level": 3, "exams": ["RN", "PN"], "tracks": ["nclex", "fundamentals"]
+    },
+    {
+      "id": "qb-fs-0113", "exam": "RN", "cat": "Fundamentals", "topic": "Jackson-Pratt drain", "difficulty": "Moderate", "type": "mc",
+      "stem": "A nurse empties a Jackson-Pratt drain after abdominal surgery. Which action is correct after measuring the drainage?",
+      "opts": [
+        {"t": "Compress the bulb before replacing the plug to reestablish suction.", "r": "Correct. Compressing the bulb before closing it creates the gentle suction needed for the drain to function."},
+        {"t": "Leave the bulb expanded so the drainage can flow by gravity.", "r": "An expanded bulb does not provide the prescribed closed-suction drainage."},
+        {"t": "Clamp the tubing tightly between emptying episodes.", "r": "Routine clamping can obstruct drainage and is not performed unless specifically prescribed."},
+        {"t": "Place the drain on the bed above the insertion site.", "r": "The drain is kept below the insertion site to promote drainage and prevent backflow."}
+      ],
+      "correct": 0, "tip": "JP drain: empty, measure, compress, recap, and keep below the insertion site.", "client_needs": "Basic Care and Comfort", "scoring": "dichotomous", "cjmm_step": "Take Actions", "level": 3, "exams": ["RN", "PN"], "tracks": ["nclex", "fundamentals"]
+    },
+    {
+      "id": "qb-fs-0114", "exam": "RN", "cat": "Fundamentals", "topic": "Enteral medication administration", "difficulty": "Hard", "type": "mc",
+      "stem": "A client receives medications through a feeding tube and has continuous enteral feeding prescribed. Which action should the nurse take when administering the medications?",
+      "opts": [
+        {"t": "Crush all medications together and mix them into the feeding formula.", "r": "Mixing medications with formula risks tube occlusion, drug interactions, and inaccurate dosing; medications are given separately."},
+        {"t": "Verify that each medication is safe to crush, administer medications separately, and flush the tube between medications.", "r": "Correct. The nurse verifies formulation safety, administers one medication at a time, and flushes as prescribed to maintain patency and prevent interactions."},
+        {"t": "Add the medications directly to the drainage bag so they infuse slowly.", "r": "A drainage bag is not used to administer medications and this would be unsafe."},
+        {"t": "Skip all water flushes to avoid fluid overload.", "r": "Flushes are essential for patency and medication delivery; fluid restriction requires an individualized plan, not omission of prescribed flushes."}
+      ],
+      "correct": 1, "tip": "Never crush enteric-coated or extended-release medications. Give tube medications one at a time with ordered flushes.", "client_needs": "Pharmacological and Parenteral Therapies", "scoring": "dichotomous", "cjmm_step": "Take Actions", "level": 4, "exams": ["RN", "PN"], "tracks": ["nclex", "fundamentals", "pharmacology"]
+    },
+    {
+      "id": "qb-fs-0115", "exam": "RN", "cat": "Fundamentals", "topic": "Hearing impairment communication", "difficulty": "Easy", "type": "mc",
+      "stem": "Which action should the nurse take when communicating with a client who has a hearing aid and moderate hearing loss?",
+      "opts": [
+        {"t": "Stand behind the client and speak loudly into the affected ear.", "r": "Speaking from behind prevents the client from using facial cues or lip reading and may startle the client."},
+        {"t": "Face the client, reduce background noise, and speak clearly at a normal pace.", "r": "Correct. Direct visual contact, reduced noise, and clear normal-paced speech support communication without distorting words."},
+        {"t": "Use complex medical terms so the client can focus on key words.", "r": "Simple, direct language supports understanding; jargon adds confusion."},
+        {"t": "Remove the hearing aid before teaching to prevent distraction.", "r": "The nurse should verify that the hearing aid is present, working, and in place unless removal is needed for care."}
+      ],
+      "correct": 1, "tip": "For hearing loss: face the client, speak clearly, lower background noise, and confirm understanding.", "client_needs": "Psychosocial Integrity", "scoring": "dichotomous", "cjmm_step": "Take Actions", "level": 2, "exams": ["RN", "PN"], "tracks": ["nclex", "fundamentals"]
+    },
+    {
+      "id": "qb-fs-0116", "exam": "RN", "cat": "Safety", "topic": "Orthostatic hypotension", "difficulty": "Moderate", "type": "mc",
+      "stem": "An older adult taking an antihypertensive reports dizziness when rising from bed. Which instruction should the nurse give first?",
+      "opts": [
+        {"t": "Stand quickly to help the blood pressure adjust faster.", "r": "Rapid position changes can worsen orthostatic hypotension and increase fall risk."},
+        {"t": "Sit at the bedside with the feet dangling before standing.", "r": "Correct. Changing positions gradually allows assessment for dizziness and reduces the risk of a fall from orthostatic hypotension."},
+        {"t": "Avoid all fluids until the dizziness resolves.", "r": "Dehydration can worsen orthostatic symptoms; fluid guidance depends on the client's condition and prescription."},
+        {"t": "Walk without assistance to build tolerance.", "r": "The client should request assistance until safety and stability with ambulation are established."}
+      ],
+      "correct": 1, "tip": "Orthostatic safety: lie to sit, pause, dangle, stand with help, then reassess for dizziness.", "client_needs": "Safety and Infection Control", "scoring": "dichotomous", "cjmm_step": "Take Actions", "level": 3, "exams": ["RN", "PN"], "tracks": ["nclex", "fundamentals"]
+    },
+    {
+      "id": "qb-fs-0117", "exam": "RN", "cat": "Safety", "topic": "Blood transfusion reaction", "difficulty": "Hard", "type": "mc",
+      "stem": "Fifteen minutes after packed red blood cells are started, a client reports chills and low back pain. Which action should the nurse take first?",
+      "opts": [
+        {"t": "Slow the transfusion and reassess the client in 15 minutes.", "r": "Continuing a suspected transfusion reaction, even at a slower rate, can worsen a life-threatening event."},
+        {"t": "Stop the transfusion and keep the IV line open with normal saline using new tubing.", "r": "Correct. The nurse stops the blood immediately, maintains venous access with normal saline using new tubing, assesses the client, and then follows the reaction protocol."},
+        {"t": "Administer acetaminophen and continue the transfusion.", "r": "Medication may be prescribed after evaluation, but the transfusion must be stopped first."},
+        {"t": "Discard the blood bag and tubing before notifying the provider.", "r": "The blood bag and tubing are retained and sent according to policy for investigation; they are not discarded."}
+      ],
+      "correct": 1, "tip": "Suspected transfusion reaction: stop blood, keep vein open with normal saline using new tubing, assess, notify, and follow policy.", "client_needs": "Reduction of Risk Potential", "scoring": "dichotomous", "cjmm_step": "Take Actions", "level": 4, "exams": ["RN", "PN"], "tracks": ["nclex", "fundamentals", "med-surg"]
+    },
+    {
+      "id": "qb-fs-0118", "exam": "RN", "cat": "Fundamentals", "topic": "Enema administration", "difficulty": "Moderate", "type": "mc",
+      "stem": "While receiving a cleansing enema, a client reports severe cramping and asks the nurse to stop. Which action should the nurse take?",
+      "opts": [
+        {"t": "Increase the flow rate so the procedure ends faster.", "r": "Increasing the flow can intensify cramping and cause injury."},
+        {"t": "Temporarily clamp the tubing and encourage slow deep breathing.", "r": "Correct. Temporarily stopping the flow can reduce cramping; the nurse then reassesses and resumes more slowly if tolerated."},
+        {"t": "Remove the tubing immediately and document that the client refused treatment.", "r": "Severe or persistent symptoms require stopping and assessment, but brief cramping can often be managed by temporarily reducing the flow."},
+        {"t": "Place the client supine and elevate the legs.", "r": "The left lateral position supports enema flow; supine positioning with elevated legs does not relieve the issue."}
+      ],
+      "correct": 1, "tip": "For enema cramping, slow or briefly stop the flow; do not force the solution.", "client_needs": "Basic Care and Comfort", "scoring": "dichotomous", "cjmm_step": "Take Actions", "level": 3, "exams": ["RN", "PN"], "tracks": ["nclex", "fundamentals"]
+    },
+    {
+      "id": "qb-fs-0119", "exam": "RN", "cat": "Fundamentals", "topic": "Ostomy assessment", "difficulty": "Moderate", "type": "mc",
+      "stem": "A nurse assesses a new colostomy 24 hours after surgery. Which finding should the nurse report immediately?",
+      "opts": [
+        {"t": "A stoma that is moist and beefy red.", "r": "A moist, red to pink stoma is an expected finding that indicates perfusion."},
+        {"t": "Mild edema of the stoma.", "r": "Some swelling is common during the early postoperative period."},
+        {"t": "A stoma that is dusky purple and dry.", "r": "Correct. A dusky, purple, or black stoma may indicate impaired perfusion or ischemia and requires immediate assessment and notification."},
+        {"t": "Small amount of serosanguineous drainage on the pouching system.", "r": "A small amount of early postoperative drainage can be expected; the nurse monitors the amount and character."}
+      ],
+      "correct": 2, "tip": "A healthy stoma is moist and red/pink. Dusky, pale, blue, purple, or black means impaired perfusion.", "client_needs": "Reduction of Risk Potential", "scoring": "dichotomous", "cjmm_step": "Recognize Cues", "level": 3, "exams": ["RN", "PN"], "tracks": ["nclex", "fundamentals", "med-surg"]
+    },
+    {
+      "id": "qb-fs-0120", "exam": "RN", "cat": "Fundamentals", "topic": "Postoperative positioning", "difficulty": "Moderate", "type": "mc",
+      "stem": "A client has just returned from a thyroidectomy and is awake. Which position is most appropriate for the nurse to use?",
+      "opts": [
+        {"t": "Supine with the neck extended on a small pillow.", "r": "Neck extension can increase tension at the operative site and is avoided."},
+        {"t": "Semi-Fowler position with the head and neck supported in neutral alignment.", "r": "Correct. Semi-Fowler positioning reduces neck edema and supports breathing while neutral alignment avoids strain on the incision."},
+        {"t": "Trendelenburg position with the head below the heart.", "r": "Trendelenburg can worsen upper-airway edema and is not appropriate after thyroid surgery."},
+        {"t": "Prone position with the head turned to one side.", "r": "Prone positioning places pressure and strain near the surgical area and is not indicated."}
+      ],
+      "correct": 1, "tip": "After thyroidectomy, elevate the head of bed and support the head and neck in neutral alignment.", "client_needs": "Basic Care and Comfort", "scoring": "dichotomous", "cjmm_step": "Take Actions", "level": 3, "exams": ["RN", "PN"], "tracks": ["nclex", "fundamentals", "med-surg"]
+    }
+  ]
+}
