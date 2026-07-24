@@ -1,0 +1,522 @@
+{
+ "batch": "core-01",
+ "conditions": [
+  {
+   "id": "heart-failure",
+   "title": "Heart Failure",
+   "category": "Cardiac",
+   "icon": "heartbeat",
+   "definition": "The heart can no longer pump enough blood to meet the body's needs.",
+   "causes": [
+    "Coronary artery disease / prior MI",
+    "Chronic hypertension",
+    "Valve disease",
+    "Cardiomyopathy",
+    "Diabetes"
+   ],
+   "patho": [
+    "The heart muscle weakens or stiffens",
+    "Cardiac output drops",
+    "The body compensates: RAAS activates, sodium and water are retained, the heart enlarges and beats faster",
+    "Over time the compensation fails",
+    "Blood backs up behind the failing side of the heart"
+   ],
+   "signs": [
+    {
+     "s": "Left HF: crackles, dyspnea, orthopnea, pink frothy sputum",
+     "why": "Blood backs up into the lungs (Left = Lungs)"
+    },
+    {
+     "s": "Right HF: JVD, peripheral edema, ascites, weight gain",
+     "why": "Blood backs up into the systemic veins (Right = Rest of body)"
+    },
+    {
+     "s": "Fatigue and activity intolerance",
+     "why": "Low cardiac output means less oxygen to tissues"
+    }
+   ],
+   "diagnostics": [
+    "BNP elevated",
+    "Echocardiogram (ejection fraction)",
+    "Chest X-ray shows congestion"
+   ],
+   "complications": [
+    "Pulmonary edema",
+    "Cardiogenic shock",
+    "Dysrhythmias"
+   ],
+   "treatment": [
+    "Diuretics, ACE inhibitors/ARBs, beta-blockers",
+    "Low-sodium diet and daily weights",
+    "Oxygen; semi-Fowler's positioning"
+   ],
+   "carelink": "heart-failure"
+  },
+  {
+   "id": "myocardial-infarction",
+   "title": "Myocardial Infarction (MI)",
+   "category": "Cardiac",
+   "icon": "heartbeat",
+   "definition": "Death of heart muscle caused by a sudden loss of coronary blood flow.",
+   "causes": [
+    "Atherosclerosis with plaque rupture",
+    "Coronary thrombus (clot)",
+    "Coronary artery spasm"
+   ],
+   "patho": [
+    "A plaque ruptures in a coronary artery",
+    "A clot forms and blocks blood flow",
+    "The heart muscle beyond the blockage becomes ischemic (starved of oxygen)",
+    "If flow isn't restored within minutes to hours, those cells die (infarct)"
+   ],
+   "signs": [
+    {
+     "s": "Crushing chest pain radiating to the arm/jaw",
+     "why": "Ischemic myocardium releases pain signals"
+    },
+    {
+     "s": "Diaphoresis, nausea, anxiety",
+     "why": "Sympathetic 'fight or flight' response"
+    },
+    {
+     "s": "Dyspnea",
+     "why": "The failing pump backs blood into the lungs"
+    },
+    {
+     "s": "Atypical/silent symptoms in women & older adults",
+     "why": "Blunted or different pain perception"
+    }
+   ],
+   "diagnostics": [
+    "Troponin elevated (rises 3–4 hr, peaks ~24 hr)",
+    "ECG: ST elevation/depression, T-wave changes"
+   ],
+   "complications": [
+    "Lethal dysrhythmias",
+    "Heart failure / cardiogenic shock",
+    "Papillary muscle rupture"
+   ],
+   "treatment": [
+    "MONA (Morphine, Oxygen, Nitroglycerin, Aspirin)",
+    "Reperfusion: PCI or thrombolytics",
+    "Beta-blockers, statins, antiplatelets"
+   ],
+   "carelink": "myocardial-infarction"
+  },
+  {
+   "id": "copd",
+   "title": "COPD",
+   "category": "Respiratory",
+   "icon": "lungs",
+   "definition": "Chronic, progressive airflow limitation from chronic bronchitis and/or emphysema.",
+   "causes": [
+    "Smoking (the leading cause)",
+    "Long-term air pollutant/occupational exposure",
+    "Alpha-1 antitrypsin deficiency"
+   ],
+   "patho": [
+    "Chronic airway irritation causes inflammation and excess mucus (bronchitis) and destroys alveolar walls (emphysema)",
+    "Airways narrow and alveoli lose their elastic recoil",
+    "Air becomes trapped and can't be fully exhaled",
+    "Gas exchange fails → CO₂ is retained and oxygen falls"
+   ],
+   "signs": [
+    {
+     "s": "Dyspnea and prolonged expiration",
+     "why": "Air trapping makes exhaling hard"
+    },
+    {
+     "s": "Chronic productive cough",
+     "why": "Excess mucus from chronic bronchitis"
+    },
+    {
+     "s": "Barrel chest",
+     "why": "Chronic air trapping enlarges the chest"
+    },
+    {
+     "s": "Pursed-lip breathing",
+     "why": "The client instinctively keeps airways open longer"
+    }
+   ],
+   "diagnostics": [
+    "Spirometry: reduced FEV1/FVC",
+    "ABG: chronic respiratory acidosis",
+    "Chest X-ray: hyperinflation"
+   ],
+   "complications": [
+    "Respiratory failure",
+    "Cor pulmonale (right-sided heart failure)",
+    "Frequent pneumonia"
+   ],
+   "treatment": [
+    "Bronchodilators and inhaled corticosteroids",
+    "Oxygen to a target of 88–92%",
+    "Pulmonary rehab, smoking cessation, vaccines"
+   ],
+   "carelink": "copd"
+  },
+  {
+   "id": "pneumonia",
+   "title": "Pneumonia",
+   "category": "Respiratory",
+   "icon": "lungs",
+   "definition": "Infection and inflammation of the lung tissue, filling alveoli with fluid and pus.",
+   "causes": [
+    "Bacteria (e.g. Streptococcus pneumoniae)",
+    "Viruses",
+    "Aspiration",
+    "Risk: elderly, immobile, immunocompromised"
+   ],
+   "patho": [
+    "A pathogen reaches the alveoli",
+    "The immune system triggers inflammation",
+    "Alveoli fill with exudate and pus (consolidation)",
+    "Gas exchange across the alveoli is impaired"
+   ],
+   "signs": [
+    {
+     "s": "Fever, chills, productive cough",
+     "why": "Immune response to infection"
+    },
+    {
+     "s": "Crackles and dullness over the affected lobe",
+     "why": "Fluid-filled, consolidated alveoli"
+    },
+    {
+     "s": "Dyspnea, tachypnea, hypoxia",
+     "why": "Impaired gas exchange"
+    },
+    {
+     "s": "Confusion in older adults",
+     "why": "Hypoxia and infection affect the brain"
+    }
+   ],
+   "diagnostics": [
+    "Chest X-ray: infiltrate/consolidation",
+    "Sputum culture",
+    "Elevated WBC"
+   ],
+   "complications": [
+    "Sepsis",
+    "Respiratory failure",
+    "Pleural effusion / empyema"
+   ],
+   "treatment": [
+    "Antibiotics (bacterial); antivirals as indicated",
+    "Oxygen, fluids, antipyretics",
+    "Incentive spirometry, positioning, rest"
+   ],
+   "carelink": "pneumonia"
+  },
+  {
+   "id": "diabetes",
+   "title": "Diabetes Mellitus",
+   "category": "Endocrine",
+   "icon": "drop",
+   "definition": "Chronic high blood glucose from lack of insulin (Type 1) or insulin resistance (Type 2).",
+   "causes": [
+    "Type 1: autoimmune destruction of pancreatic beta cells",
+    "Type 2: insulin resistance + relative deficiency (obesity, genetics)"
+   ],
+   "patho": [
+    "Insulin is absent or ineffective",
+    "Glucose can't move from the blood into the cells",
+    "Blood glucose rises (hyperglycemia) while the cells starve",
+    "High blood glucose spills into the urine and drags water with it (osmotic diuresis)"
+   ],
+   "signs": [
+    {
+     "s": "Polyuria (excessive urination)",
+     "why": "Glucose in the urine pulls water out osmotically"
+    },
+    {
+     "s": "Polydipsia (excessive thirst)",
+     "why": "The body is dehydrated from fluid loss"
+    },
+    {
+     "s": "Polyphagia (excessive hunger)",
+     "why": "Cells are starved of glucose despite high blood levels"
+    },
+    {
+     "s": "Fatigue, blurred vision, slow wound healing",
+     "why": "Cells lack fuel; high glucose damages vessels/nerves"
+    }
+   ],
+   "diagnostics": [
+    "Fasting glucose ≥126 mg/dL",
+    "A1c ≥6.5%",
+    "Random glucose ≥200 with symptoms"
+   ],
+   "complications": [
+    "Acute: DKA (Type 1) or HHS (Type 2)",
+    "Chronic: neuropathy, nephropathy, retinopathy, heart disease"
+   ],
+   "treatment": [
+    "Insulin and/or oral agents",
+    "Diet, exercise, glucose monitoring",
+    "Education and self-management"
+   ],
+   "carelink": "diabetes"
+  },
+  {
+   "id": "dka",
+   "title": "Diabetic Ketoacidosis (DKA)",
+   "category": "Endocrine",
+   "icon": "drop",
+   "definition": "A life-threatening complication of diabetes: severe hyperglycemia with ketosis and acidosis.",
+   "causes": [
+    "Missed insulin doses",
+    "Illness or infection (increases insulin needs)",
+    "New Type 1 diagnosis"
+   ],
+   "patho": [
+    "Without insulin, cells can't use glucose for energy",
+    "The body breaks down fat instead, producing ketones (acids)",
+    "Ketones build up → metabolic acidosis",
+    "Meanwhile hyperglycemia causes osmotic diuresis → dehydration and electrolyte loss"
+   ],
+   "signs": [
+    {
+     "s": "Kussmaul respirations (deep, rapid)",
+     "why": "The lungs blow off CO₂ to compensate for the acidosis"
+    },
+    {
+     "s": "Fruity-smelling breath",
+     "why": "Ketones (acetone) are exhaled"
+    },
+    {
+     "s": "Polyuria, polydipsia, dehydration",
+     "why": "Osmotic diuresis from hyperglycemia"
+    },
+    {
+     "s": "Nausea, abdominal pain, altered LOC",
+     "why": "Acidosis and dehydration affect GI and brain"
+    }
+   ],
+   "diagnostics": [
+    "Glucose >250 mg/dL",
+    "Ketones present (blood/urine)",
+    "pH <7.3, low bicarbonate, high anion gap"
+   ],
+   "complications": [
+    "Hypovolemic shock",
+    "Hypokalemia (as insulin drives K⁺ into cells)",
+    "Cerebral edema"
+   ],
+   "treatment": [
+    "IV fluids FIRST",
+    "Then a regular insulin infusion",
+    "Replace potassium; monitor glucose, K⁺, and pH"
+   ]
+  },
+  {
+   "id": "ckd",
+   "title": "Chronic Kidney Disease",
+   "category": "Renal",
+   "icon": "drop",
+   "definition": "Progressive, irreversible loss of kidney function over months to years.",
+   "causes": [
+    "Diabetes (the #1 cause)",
+    "Hypertension (#2)",
+    "Chronic glomerulonephritis"
+   ],
+   "patho": [
+    "Nephrons are progressively and permanently damaged",
+    "The glomerular filtration rate (GFR) falls",
+    "The kidneys can no longer clear wastes, balance fluid/electrolytes, make erythropoietin, or activate vitamin D",
+    "Wastes accumulate (uremia); fluid and electrolytes build up"
+   ],
+   "signs": [
+    {
+     "s": "Edema and hypertension",
+     "why": "The kidneys can't excrete sodium and water"
+    },
+    {
+     "s": "Fatigue and pallor",
+     "why": "Low erythropoietin → anemia"
+    },
+    {
+     "s": "Nausea, itching, confusion",
+     "why": "Uremia — waste products accumulate in the blood"
+    },
+    {
+     "s": "Hyperkalemia",
+     "why": "Failing kidneys can't excrete potassium"
+    }
+   ],
+   "diagnostics": [
+    "Elevated BUN and creatinine",
+    "Decreased GFR",
+    "Hyperkalemia, hyperphosphatemia, anemia"
+   ],
+   "complications": [
+    "Hyperkalemia (cardiac arrest)",
+    "Fluid overload / pulmonary edema",
+    "Renal bone disease"
+   ],
+   "treatment": [
+    "Control blood pressure and glucose",
+    "Renal diet: limit protein, potassium, phosphorus, sodium, fluid",
+    "Phosphate binders, erythropoietin, dialysis or transplant"
+   ],
+   "carelink": "ckd"
+  },
+  {
+   "id": "sepsis",
+   "title": "Sepsis",
+   "category": "Infection Control",
+   "icon": "shield",
+   "definition": "Life-threatening organ dysfunction from the body's dysregulated response to infection.",
+   "causes": [
+    "Any infection (pneumonia, UTI, wound, IV line)",
+    "Risk: elderly, immunocompromised, invasive devices"
+   ],
+   "patho": [
+    "An infection triggers a massive, body-wide inflammatory response",
+    "Widespread vasodilation and leaky capillaries develop",
+    "Blood pressure and tissue perfusion drop",
+    "Cells become hypoxic → organ dysfunction; unchecked, it becomes septic shock"
+   ],
+   "signs": [
+    {
+     "s": "Fever or hypothermia, tachycardia, tachypnea",
+     "why": "Systemic inflammatory response"
+    },
+    {
+     "s": "Warm, flushed skin early → cool and mottled late",
+     "why": "Vasodilation first, then failing perfusion"
+    },
+    {
+     "s": "New confusion and decreased urine output",
+     "why": "Poor perfusion to the brain and kidneys"
+    },
+    {
+     "s": "Rising lactate and hypotension",
+     "why": "Tissues switch to anaerobic metabolism; distributive shock"
+    }
+   ],
+   "diagnostics": [
+    "Elevated WBC",
+    "Elevated lactate",
+    "Positive blood cultures; hypotension"
+   ],
+   "complications": [
+    "Septic shock",
+    "Multi-organ failure",
+    "DIC (disseminated intravascular coagulation)"
+   ],
+   "treatment": [
+    "Cultures THEN broad-spectrum antibiotics within 1 hour",
+    "Aggressive IV fluid resuscitation",
+    "Vasopressors if needed; source control; monitor lactate"
+   ],
+   "carelink": "infection-sepsis"
+  },
+  {
+   "id": "stroke",
+   "title": "Stroke (CVA)",
+   "category": "Neuro",
+   "icon": "sheet",
+   "definition": "Interruption of blood flow to part of the brain, causing neuron death.",
+   "causes": [
+    "Ischemic (≈87%): clot or atherosclerosis; emboli from atrial fibrillation",
+    "Hemorrhagic: hypertension or a ruptured aneurysm"
+   ],
+   "patho": [
+    "Blood flow to an area of brain is blocked (ischemic) or a vessel ruptures (hemorrhagic)",
+    "Neurons in that area are deprived of oxygen and glucose",
+    "Brain cells begin to die within minutes",
+    "The functions that region controlled are lost"
+   ],
+   "signs": [
+    {
+     "s": "Sudden facial droop, arm weakness, slurred speech (FAST)",
+     "why": "The affected brain region can't control those functions"
+    },
+    {
+     "s": "Hemiparesis and aphasia",
+     "why": "Motor and language centers are damaged"
+    },
+    {
+     "s": "Severe 'worst-ever' headache (hemorrhagic)",
+     "why": "Bleeding raises intracranial pressure"
+    },
+    {
+     "s": "Difficulty swallowing",
+     "why": "Cranial nerve/brainstem involvement → aspiration risk"
+    }
+   ],
+   "diagnostics": [
+    "CT scan FIRST (rules out bleed before any clot-buster)",
+    "MRI for detail"
+   ],
+   "complications": [
+    "Aspiration pneumonia",
+    "Increased intracranial pressure",
+    "Permanent neurologic deficits"
+   ],
+   "treatment": [
+    "Ischemic: tPA within the window (only if CT shows no bleed), then antiplatelets",
+    "Hemorrhagic: control BP/ICP, possible surgery",
+    "Swallow screen; PT/OT/speech rehab"
+   ],
+   "carelink": "stroke"
+  },
+  {
+   "id": "cirrhosis",
+   "title": "Cirrhosis",
+   "category": "Gastrointestinal",
+   "icon": "drop",
+   "definition": "Irreversible scarring (fibrosis) of the liver that replaces healthy tissue.",
+   "causes": [
+    "Chronic alcohol use",
+    "Hepatitis B or C",
+    "Non-alcoholic fatty liver disease"
+   ],
+   "patho": [
+    "Chronic liver injury causes ongoing inflammation",
+    "Healthy liver tissue is replaced by scar tissue (fibrosis)",
+    "Scarring blocks blood flow through the liver → portal hypertension",
+    "The liver can no longer detoxify, make proteins/clotting factors, or process bilirubin"
+   ],
+   "signs": [
+    {
+     "s": "Jaundice",
+     "why": "The liver can't process bilirubin"
+    },
+    {
+     "s": "Ascites and edema",
+     "why": "Low albumin + portal hypertension push fluid into the abdomen"
+    },
+    {
+     "s": "Easy bruising and bleeding",
+     "why": "The liver can't make clotting factors"
+    },
+    {
+     "s": "Confusion and asterixis (flapping tremor)",
+     "why": "Ammonia builds up → hepatic encephalopathy"
+    },
+    {
+     "s": "Esophageal varices",
+     "why": "Portal hypertension backs up into esophageal veins"
+    }
+   ],
+   "diagnostics": [
+    "Elevated AST/ALT, bilirubin, and ammonia",
+    "Low albumin; prolonged PT/INR",
+    "Ultrasound or biopsy"
+   ],
+   "complications": [
+    "Variceal hemorrhage",
+    "Hepatic encephalopathy",
+    "Hepatorenal syndrome"
+   ],
+   "treatment": [
+    "Stop alcohol / treat the cause",
+    "Low sodium + diuretics and paracentesis for ascites",
+    "Lactulose for ammonia; beta-blockers for varices; bleeding precautions"
+   ],
+   "carelink": "cirrhosis"
+  }
+ ]
+}

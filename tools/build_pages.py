@@ -120,6 +120,7 @@ def chrome(fname, title, desc, body, active=""):
           <li><a href="cheatsheets.html">Cheat Sheets <small>ABGs, antidotes, diets &amp; more</small></a></li>
           <li><a href="lab-values.html">Lab Values <small>All 65 &middot; what high &amp; low mean</small></a></li>
           <li><a href="mnemonics.html">Mnemonics <small>MONA, VEAL CHOP, SLUDGE &amp; more</small></a></li>
+          <li><a href="patho.html">Patho <small>Disease mechanisms made visual</small></a></li>
           <li><a href="care-plans.html">Care Plans <small>Diagnoses, interventions &amp; rationales</small></a></li>
           <li><a href="study-plan.html">Study Plan Calendar <small>Your day-by-day plan to test day</small></a></li>
           <li><a href="nclex-guide.html">Free Study Guide <small>How to pass &middot; for nurses, by nurses</small></a></li>
@@ -185,6 +186,7 @@ def chrome(fname, title, desc, body, active=""):
           <li><a href="cheatsheets.html">Cheat Sheets</a></li>
           <li><a href="lab-values.html">Lab Values</a></li>
           <li><a href="mnemonics.html">Mnemonics</a></li>
+          <li><a href="patho.html">Patho</a></li>
           <li><a href="care-plans.html">Care Plans</a></li>
           <li><a href="study-plan.html">Study Plan Calendar</a></li>
           <li><a href="nclex-guide.html">Free Study Guide</a></li>
@@ -2499,6 +2501,66 @@ MNEMS_BODY = f"""  <div class="page-hero">
 PAGES["mnemonics.html"] = ("Nursing Mnemonics &mdash; MONA, VEAL CHOP, SLUDGE &amp; More | Must Love Scrubs",
     "A searchable library of high-yield nursing mnemonics with letter-by-letter breakdowns and visual cues — MONA, VEAL CHOP, SLUDGE, FAST, ADPIE, SIG E CAPS, and more.",
     MNEMS_BODY, "courses")
+
+# ---------------------------------------------------------------- PATHO (pathophysiology charts)
+
+def _load_patho():
+    import glob as _glob
+    out, seen = [], set()
+    for path in sorted(_glob.glob(os.path.join(ROOT, 'data', 'patho', '*.json'))):
+        data = _json.load(open(path, encoding='utf-8'))
+        for c in data.get('conditions', []):
+            if not c.get('title') or not c.get('patho'): continue
+            if c.get('id') in seen: continue
+            seen.add(c['id']); out.append(c)
+    return out
+
+PATHO = _load_patho()
+PATHO_JSON = _json.dumps(PATHO, ensure_ascii=False).replace('<', '\\u003c').replace('>', '\\u003e').replace('&', '\\u0026')
+PATHO_CATS = []
+for _c in PATHO:
+    if _c['category'] not in PATHO_CATS:
+        PATHO_CATS.append(_c['category'])
+PATHO_CATS.sort()
+
+def patho_cat_chips():
+    out = ['<button class="pt-chip on" data-cat="All">All</button>']
+    for c in PATHO_CATS:
+        out.append(f'<button class="pt-chip" data-cat="{c}">{c}</button>')
+    return "".join(out)
+
+PATHO_BODY = f"""  <div class="page-hero">
+    <div class="wrap inner">
+      <span class="lesson-label" style="color:var(--gold-400);">Patho</span>
+      <h1 style="margin-top:0.6rem;">Understand the <span class="em">why</span>.</h1>
+      <p>Pathophysiology made visual &mdash; each disease as a chain from cause to mechanism to the exact signs it produces (and <b>why</b>), then diagnostics, complications, and treatment. Stop memorizing lists; see how it all connects. Linked to the matching care plan.</p>
+    </div>
+  </div>
+
+  <section style="background:var(--bg);">
+    <div class="wrap">
+      <div class="patho" data-pt-total="{len(PATHO)}">
+        <script type="application/json" data-patho>{PATHO_JSON}</script>
+        <div class="pt-tools fade-up">
+          <div class="pt-search">
+            {I['search']}
+            <input type="search" placeholder="Search a disease or system&hellip;" aria-label="Search pathophysiology" data-pt-search>
+          </div>
+        </div>
+        <div class="pt-chips fade-up" data-pt-chips>{patho_cat_chips()}</div>
+        <p class="pt-count fade-up"><b data-pt-count>{len(PATHO)}</b> conditions &middot; growing weekly</p>
+        <div class="pt-grid fade-up" data-pt-grid></div>
+        <div class="pt-empty" data-pt-empty hidden><p><b>No match yet.</b> Tell us what to add at hello@mustlovescrubs.com.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <script src="js/patho.js"></script>
+"""
+
+PAGES["patho.html"] = ("Pathophysiology Made Visual &mdash; Disease Mechanisms for Nurses | Must Love Scrubs",
+    "Nursing pathophysiology explained simply: each disease as a chain from cause to mechanism to signs (and why), plus diagnostics, complications, and treatment. Heart failure, MI, COPD, diabetes, sepsis, stroke, and more.",
+    PATHO_BODY, "courses")
 
 # ---------------------------------------------------------------- STUDY CALENDAR (the conductor)
 

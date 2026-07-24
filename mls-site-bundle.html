@@ -1035,6 +1035,49 @@ section { padding-block: clamp(3.6rem, 9vw, 6.5rem); position: relative; }
 .mn-explain { font-size: 0.83rem; color: var(--ink-60); margin-top: 0.8rem; background: rgba(255,194,61,0.1); border-left: 3px solid var(--gold-400); border-radius: 8px; padding: 0.6rem 0.8rem; }
 .mn-empty { text-align: center; padding: 2rem; color: var(--ink-60); }
 
+/* ===== Patho ===== */
+.pt-tools { display: flex; gap: 0.8rem; flex-wrap: wrap; align-items: center; }
+.pt-search { flex: 1; min-width: 220px; display: flex; align-items: center; gap: 0.6rem; background: var(--card); border: 1px solid rgba(30,18,51,0.14); border-radius: 14px; padding: 0.7rem 1rem; box-shadow: var(--shadow-1); }
+.pt-search svg { width: 20px; height: 20px; color: var(--ink-40); flex-shrink: 0; }
+.pt-search input { border: none; background: transparent; font: inherit; color: var(--ink); width: 100%; outline: none; }
+.pt-chips { display: flex; gap: 0.5rem; flex-wrap: wrap; margin-top: 1rem; }
+.pt-chip { border: 1px solid rgba(30,18,51,0.14); background: var(--card); color: var(--ink-60); padding: 0.45rem 0.9rem; border-radius: 999px; font: inherit; font-size: 0.8rem; font-weight: 700; cursor: pointer; }
+.pt-chip.on { background: var(--ink); color: #fff; border-color: var(--ink); }
+.pt-count { font-size: 0.85rem; color: var(--ink-40); margin: 0.9rem 0; }
+.pt-count b { color: var(--coral-600); }
+
+.pt-grid { display: grid; gap: 0.7rem; grid-template-columns: 1fr; }
+.pt-card { background: var(--card); border: 1px solid rgba(30,18,51,0.09); border-radius: var(--radius); box-shadow: var(--shadow-1); overflow: hidden; }
+.pt-head { width: 100%; display: flex; align-items: center; gap: 0.7rem; padding: 1rem 1.1rem; background: transparent; border: none; cursor: pointer; font: inherit; text-align: left; }
+.pt-ic { width: 40px; height: 40px; border-radius: 12px; flex-shrink: 0; display: grid; place-items: center; color: #fff; background: linear-gradient(150deg, var(--coral-500), var(--coral-600)); }
+.pt-ic svg { width: 21px; height: 21px; }
+.pt-head-txt { display: flex; flex-direction: column; flex: 1; min-width: 0; }
+.pt-head-txt b { font-size: 1.05rem; }
+.pt-head-txt small { font-size: 0.78rem; color: var(--ink-60); }
+.pt-cat-tag { font-size: 0.66rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.04em; color: var(--teal-600); background: rgba(42,212,196,0.12); padding: 0.2rem 0.5rem; border-radius: 999px; flex-shrink: 0; }
+.pt-caret { color: var(--ink-40); transition: transform 0.2s ease; flex-shrink: 0; }
+.pt-card.open .pt-caret { transform: rotate(180deg); }
+.pt-body { display: none; padding: 0 1.1rem 1.1rem; }
+.pt-card.open .pt-body { display: block; }
+.pt-block { margin-top: 1rem; }
+.pt-lbl { display: block; font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--teal-600); font-weight: 800; margin-bottom: 0.4rem; }
+.pt-list { list-style: none; display: flex; flex-direction: column; gap: 0.2rem; }
+.pt-list li { font-size: 0.86rem; padding-left: 0.9rem; position: relative; }
+.pt-list li::before { content: '·'; position: absolute; left: 0.1rem; color: var(--coral-500); font-weight: 800; }
+.pt-flow { display: flex; flex-direction: column; align-items: stretch; }
+.pt-step { display: flex; gap: 0.6rem; align-items: flex-start; background: linear-gradient(150deg, rgba(139,92,255,0.06), rgba(42,212,196,0.06)); border-radius: 10px; padding: 0.6rem 0.8rem; }
+.pt-step-n { flex-shrink: 0; width: 1.5rem; height: 1.5rem; border-radius: 50%; background: var(--coral-500); color: #fff; font-weight: 800; font-size: 0.78rem; display: grid; place-items: center; }
+.pt-step p { font-size: 0.86rem; }
+.pt-arrow { text-align: center; color: var(--coral-500); font-weight: 800; line-height: 1; padding: 0.15rem 0; }
+.pt-signs { display: grid; gap: 0.4rem; grid-template-columns: 1fr; }
+@media (min-width: 560px) { .pt-signs { grid-template-columns: 1fr 1fr; } }
+.pt-sign { background: rgba(30,18,51,0.03); border-radius: 8px; padding: 0.5rem 0.7rem; }
+.pt-sign b { display: block; font-size: 0.85rem; }
+.pt-sign span { font-size: 0.8rem; color: var(--ink-60); }
+.pt-cplink { margin-top: 1.1rem; font-size: 0.82rem; padding: 0.5rem 1rem; }
+.pt-empty { text-align: center; padding: 2rem; color: var(--ink-60); }
+@media print { .pt-tools, .pt-chips, .pt-count { display: none !important; } .pt-body { display: block !important; } .pt-caret { display: none; } }
+
 /* courses page wide cards */
 .two-up { display: grid; gap: 1rem; grid-template-columns: 1fr; }
 @media (min-width: 720px) { .two-up { grid-template-columns: repeat(2, 1fr); } }
@@ -2007,6 +2050,7 @@ body.mls-paid .gate { display: none; }
           <li><a href="cheatsheets.html">Cheat Sheets <small>ABGs, antidotes, diets &amp; more</small></a></li>
           <li><a href="lab-values.html">Lab Values <small>All 65 &middot; what high &amp; low mean</small></a></li>
           <li><a href="mnemonics.html">Mnemonics <small>MONA, VEAL CHOP, SLUDGE &amp; more</small></a></li>
+          <li><a href="patho.html">Patho <small>Disease mechanisms made visual</small></a></li>
           <li><a href="care-plans.html">Care Plans <small>Diagnoses, interventions &amp; rationales</small></a></li>
           <li><a href="study-plan.html">Study Plan Calendar <small>Your day-by-day plan to test day</small></a></li>
           <li><a href="nclex-guide.html">Free Study Guide <small>How to pass &middot; for nurses, by nurses</small></a></li>
@@ -5202,6 +5246,34 @@ body.mls-paid .gate { display: none; }
   </main>
 
 </div>
+<div class="mls-route" data-route="patho.html" hidden>
+  <div class="page-hero">
+    <div class="wrap inner">
+      <span class="lesson-label" style="color:var(--gold-400);">Patho</span>
+      <h1 style="margin-top:0.6rem;">Understand the <span class="em">why</span>.</h1>
+      <p>Pathophysiology made visual &mdash; each disease as a chain from cause to mechanism to the exact signs it produces (and <b>why</b>), then diagnostics, complications, and treatment. Stop memorizing lists; see how it all connects. Linked to the matching care plan.</p>
+    </div>
+  </div>
+
+  <section style="background:var(--bg);">
+    <div class="wrap">
+      <div class="patho" data-pt-total="10">
+        <script type="application/json" data-patho>[{"id": "heart-failure", "title": "Heart Failure", "category": "Cardiac", "icon": "heartbeat", "definition": "The heart can no longer pump enough blood to meet the body's needs.", "causes": ["Coronary artery disease / prior MI", "Chronic hypertension", "Valve disease", "Cardiomyopathy", "Diabetes"], "patho": ["The heart muscle weakens or stiffens", "Cardiac output drops", "The body compensates: RAAS activates, sodium and water are retained, the heart enlarges and beats faster", "Over time the compensation fails", "Blood backs up behind the failing side of the heart"], "signs": [{"s": "Left HF: crackles, dyspnea, orthopnea, pink frothy sputum", "why": "Blood backs up into the lungs (Left = Lungs)"}, {"s": "Right HF: JVD, peripheral edema, ascites, weight gain", "why": "Blood backs up into the systemic veins (Right = Rest of body)"}, {"s": "Fatigue and activity intolerance", "why": "Low cardiac output means less oxygen to tissues"}], "diagnostics": ["BNP elevated", "Echocardiogram (ejection fraction)", "Chest X-ray shows congestion"], "complications": ["Pulmonary edema", "Cardiogenic shock", "Dysrhythmias"], "treatment": ["Diuretics, ACE inhibitors/ARBs, beta-blockers", "Low-sodium diet and daily weights", "Oxygen; semi-Fowler's positioning"], "carelink": "heart-failure"}, {"id": "myocardial-infarction", "title": "Myocardial Infarction (MI)", "category": "Cardiac", "icon": "heartbeat", "definition": "Death of heart muscle caused by a sudden loss of coronary blood flow.", "causes": ["Atherosclerosis with plaque rupture", "Coronary thrombus (clot)", "Coronary artery spasm"], "patho": ["A plaque ruptures in a coronary artery", "A clot forms and blocks blood flow", "The heart muscle beyond the blockage becomes ischemic (starved of oxygen)", "If flow isn't restored within minutes to hours, those cells die (infarct)"], "signs": [{"s": "Crushing chest pain radiating to the arm/jaw", "why": "Ischemic myocardium releases pain signals"}, {"s": "Diaphoresis, nausea, anxiety", "why": "Sympathetic 'fight or flight' response"}, {"s": "Dyspnea", "why": "The failing pump backs blood into the lungs"}, {"s": "Atypical/silent symptoms in women \u0026 older adults", "why": "Blunted or different pain perception"}], "diagnostics": ["Troponin elevated (rises 3–4 hr, peaks ~24 hr)", "ECG: ST elevation/depression, T-wave changes"], "complications": ["Lethal dysrhythmias", "Heart failure / cardiogenic shock", "Papillary muscle rupture"], "treatment": ["MONA (Morphine, Oxygen, Nitroglycerin, Aspirin)", "Reperfusion: PCI or thrombolytics", "Beta-blockers, statins, antiplatelets"], "carelink": "myocardial-infarction"}, {"id": "copd", "title": "COPD", "category": "Respiratory", "icon": "lungs", "definition": "Chronic, progressive airflow limitation from chronic bronchitis and/or emphysema.", "causes": ["Smoking (the leading cause)", "Long-term air pollutant/occupational exposure", "Alpha-1 antitrypsin deficiency"], "patho": ["Chronic airway irritation causes inflammation and excess mucus (bronchitis) and destroys alveolar walls (emphysema)", "Airways narrow and alveoli lose their elastic recoil", "Air becomes trapped and can't be fully exhaled", "Gas exchange fails → CO₂ is retained and oxygen falls"], "signs": [{"s": "Dyspnea and prolonged expiration", "why": "Air trapping makes exhaling hard"}, {"s": "Chronic productive cough", "why": "Excess mucus from chronic bronchitis"}, {"s": "Barrel chest", "why": "Chronic air trapping enlarges the chest"}, {"s": "Pursed-lip breathing", "why": "The client instinctively keeps airways open longer"}], "diagnostics": ["Spirometry: reduced FEV1/FVC", "ABG: chronic respiratory acidosis", "Chest X-ray: hyperinflation"], "complications": ["Respiratory failure", "Cor pulmonale (right-sided heart failure)", "Frequent pneumonia"], "treatment": ["Bronchodilators and inhaled corticosteroids", "Oxygen to a target of 88–92%", "Pulmonary rehab, smoking cessation, vaccines"], "carelink": "copd"}, {"id": "pneumonia", "title": "Pneumonia", "category": "Respiratory", "icon": "lungs", "definition": "Infection and inflammation of the lung tissue, filling alveoli with fluid and pus.", "causes": ["Bacteria (e.g. Streptococcus pneumoniae)", "Viruses", "Aspiration", "Risk: elderly, immobile, immunocompromised"], "patho": ["A pathogen reaches the alveoli", "The immune system triggers inflammation", "Alveoli fill with exudate and pus (consolidation)", "Gas exchange across the alveoli is impaired"], "signs": [{"s": "Fever, chills, productive cough", "why": "Immune response to infection"}, {"s": "Crackles and dullness over the affected lobe", "why": "Fluid-filled, consolidated alveoli"}, {"s": "Dyspnea, tachypnea, hypoxia", "why": "Impaired gas exchange"}, {"s": "Confusion in older adults", "why": "Hypoxia and infection affect the brain"}], "diagnostics": ["Chest X-ray: infiltrate/consolidation", "Sputum culture", "Elevated WBC"], "complications": ["Sepsis", "Respiratory failure", "Pleural effusion / empyema"], "treatment": ["Antibiotics (bacterial); antivirals as indicated", "Oxygen, fluids, antipyretics", "Incentive spirometry, positioning, rest"], "carelink": "pneumonia"}, {"id": "diabetes", "title": "Diabetes Mellitus", "category": "Endocrine", "icon": "drop", "definition": "Chronic high blood glucose from lack of insulin (Type 1) or insulin resistance (Type 2).", "causes": ["Type 1: autoimmune destruction of pancreatic beta cells", "Type 2: insulin resistance + relative deficiency (obesity, genetics)"], "patho": ["Insulin is absent or ineffective", "Glucose can't move from the blood into the cells", "Blood glucose rises (hyperglycemia) while the cells starve", "High blood glucose spills into the urine and drags water with it (osmotic diuresis)"], "signs": [{"s": "Polyuria (excessive urination)", "why": "Glucose in the urine pulls water out osmotically"}, {"s": "Polydipsia (excessive thirst)", "why": "The body is dehydrated from fluid loss"}, {"s": "Polyphagia (excessive hunger)", "why": "Cells are starved of glucose despite high blood levels"}, {"s": "Fatigue, blurred vision, slow wound healing", "why": "Cells lack fuel; high glucose damages vessels/nerves"}], "diagnostics": ["Fasting glucose ≥126 mg/dL", "A1c ≥6.5%", "Random glucose ≥200 with symptoms"], "complications": ["Acute: DKA (Type 1) or HHS (Type 2)", "Chronic: neuropathy, nephropathy, retinopathy, heart disease"], "treatment": ["Insulin and/or oral agents", "Diet, exercise, glucose monitoring", "Education and self-management"], "carelink": "diabetes"}, {"id": "dka", "title": "Diabetic Ketoacidosis (DKA)", "category": "Endocrine", "icon": "drop", "definition": "A life-threatening complication of diabetes: severe hyperglycemia with ketosis and acidosis.", "causes": ["Missed insulin doses", "Illness or infection (increases insulin needs)", "New Type 1 diagnosis"], "patho": ["Without insulin, cells can't use glucose for energy", "The body breaks down fat instead, producing ketones (acids)", "Ketones build up → metabolic acidosis", "Meanwhile hyperglycemia causes osmotic diuresis → dehydration and electrolyte loss"], "signs": [{"s": "Kussmaul respirations (deep, rapid)", "why": "The lungs blow off CO₂ to compensate for the acidosis"}, {"s": "Fruity-smelling breath", "why": "Ketones (acetone) are exhaled"}, {"s": "Polyuria, polydipsia, dehydration", "why": "Osmotic diuresis from hyperglycemia"}, {"s": "Nausea, abdominal pain, altered LOC", "why": "Acidosis and dehydration affect GI and brain"}], "diagnostics": ["Glucose \u003e250 mg/dL", "Ketones present (blood/urine)", "pH \u003c7.3, low bicarbonate, high anion gap"], "complications": ["Hypovolemic shock", "Hypokalemia (as insulin drives K⁺ into cells)", "Cerebral edema"], "treatment": ["IV fluids FIRST", "Then a regular insulin infusion", "Replace potassium; monitor glucose, K⁺, and pH"]}, {"id": "ckd", "title": "Chronic Kidney Disease", "category": "Renal", "icon": "drop", "definition": "Progressive, irreversible loss of kidney function over months to years.", "causes": ["Diabetes (the #1 cause)", "Hypertension (#2)", "Chronic glomerulonephritis"], "patho": ["Nephrons are progressively and permanently damaged", "The glomerular filtration rate (GFR) falls", "The kidneys can no longer clear wastes, balance fluid/electrolytes, make erythropoietin, or activate vitamin D", "Wastes accumulate (uremia); fluid and electrolytes build up"], "signs": [{"s": "Edema and hypertension", "why": "The kidneys can't excrete sodium and water"}, {"s": "Fatigue and pallor", "why": "Low erythropoietin → anemia"}, {"s": "Nausea, itching, confusion", "why": "Uremia — waste products accumulate in the blood"}, {"s": "Hyperkalemia", "why": "Failing kidneys can't excrete potassium"}], "diagnostics": ["Elevated BUN and creatinine", "Decreased GFR", "Hyperkalemia, hyperphosphatemia, anemia"], "complications": ["Hyperkalemia (cardiac arrest)", "Fluid overload / pulmonary edema", "Renal bone disease"], "treatment": ["Control blood pressure and glucose", "Renal diet: limit protein, potassium, phosphorus, sodium, fluid", "Phosphate binders, erythropoietin, dialysis or transplant"], "carelink": "ckd"}, {"id": "sepsis", "title": "Sepsis", "category": "Infection Control", "icon": "shield", "definition": "Life-threatening organ dysfunction from the body's dysregulated response to infection.", "causes": ["Any infection (pneumonia, UTI, wound, IV line)", "Risk: elderly, immunocompromised, invasive devices"], "patho": ["An infection triggers a massive, body-wide inflammatory response", "Widespread vasodilation and leaky capillaries develop", "Blood pressure and tissue perfusion drop", "Cells become hypoxic → organ dysfunction; unchecked, it becomes septic shock"], "signs": [{"s": "Fever or hypothermia, tachycardia, tachypnea", "why": "Systemic inflammatory response"}, {"s": "Warm, flushed skin early → cool and mottled late", "why": "Vasodilation first, then failing perfusion"}, {"s": "New confusion and decreased urine output", "why": "Poor perfusion to the brain and kidneys"}, {"s": "Rising lactate and hypotension", "why": "Tissues switch to anaerobic metabolism; distributive shock"}], "diagnostics": ["Elevated WBC", "Elevated lactate", "Positive blood cultures; hypotension"], "complications": ["Septic shock", "Multi-organ failure", "DIC (disseminated intravascular coagulation)"], "treatment": ["Cultures THEN broad-spectrum antibiotics within 1 hour", "Aggressive IV fluid resuscitation", "Vasopressors if needed; source control; monitor lactate"], "carelink": "infection-sepsis"}, {"id": "stroke", "title": "Stroke (CVA)", "category": "Neuro", "icon": "sheet", "definition": "Interruption of blood flow to part of the brain, causing neuron death.", "causes": ["Ischemic (≈87%): clot or atherosclerosis; emboli from atrial fibrillation", "Hemorrhagic: hypertension or a ruptured aneurysm"], "patho": ["Blood flow to an area of brain is blocked (ischemic) or a vessel ruptures (hemorrhagic)", "Neurons in that area are deprived of oxygen and glucose", "Brain cells begin to die within minutes", "The functions that region controlled are lost"], "signs": [{"s": "Sudden facial droop, arm weakness, slurred speech (FAST)", "why": "The affected brain region can't control those functions"}, {"s": "Hemiparesis and aphasia", "why": "Motor and language centers are damaged"}, {"s": "Severe 'worst-ever' headache (hemorrhagic)", "why": "Bleeding raises intracranial pressure"}, {"s": "Difficulty swallowing", "why": "Cranial nerve/brainstem involvement → aspiration risk"}], "diagnostics": ["CT scan FIRST (rules out bleed before any clot-buster)", "MRI for detail"], "complications": ["Aspiration pneumonia", "Increased intracranial pressure", "Permanent neurologic deficits"], "treatment": ["Ischemic: tPA within the window (only if CT shows no bleed), then antiplatelets", "Hemorrhagic: control BP/ICP, possible surgery", "Swallow screen; PT/OT/speech rehab"], "carelink": "stroke"}, {"id": "cirrhosis", "title": "Cirrhosis", "category": "Gastrointestinal", "icon": "drop", "definition": "Irreversible scarring (fibrosis) of the liver that replaces healthy tissue.", "causes": ["Chronic alcohol use", "Hepatitis B or C", "Non-alcoholic fatty liver disease"], "patho": ["Chronic liver injury causes ongoing inflammation", "Healthy liver tissue is replaced by scar tissue (fibrosis)", "Scarring blocks blood flow through the liver → portal hypertension", "The liver can no longer detoxify, make proteins/clotting factors, or process bilirubin"], "signs": [{"s": "Jaundice", "why": "The liver can't process bilirubin"}, {"s": "Ascites and edema", "why": "Low albumin + portal hypertension push fluid into the abdomen"}, {"s": "Easy bruising and bleeding", "why": "The liver can't make clotting factors"}, {"s": "Confusion and asterixis (flapping tremor)", "why": "Ammonia builds up → hepatic encephalopathy"}, {"s": "Esophageal varices", "why": "Portal hypertension backs up into esophageal veins"}], "diagnostics": ["Elevated AST/ALT, bilirubin, and ammonia", "Low albumin; prolonged PT/INR", "Ultrasound or biopsy"], "complications": ["Variceal hemorrhage", "Hepatic encephalopathy", "Hepatorenal syndrome"], "treatment": ["Stop alcohol / treat the cause", "Low sodium + diuretics and paracentesis for ascites", "Lactulose for ammonia; beta-blockers for varices; bleeding precautions"], "carelink": "cirrhosis"}]</script>
+        <div class="pt-tools fade-up">
+          <div class="pt-search">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+            <input type="search" placeholder="Search a disease or system&hellip;" aria-label="Search pathophysiology" data-pt-search>
+          </div>
+        </div>
+        <div class="pt-chips fade-up" data-pt-chips><button class="pt-chip on" data-cat="All">All</button><button class="pt-chip" data-cat="Cardiac">Cardiac</button><button class="pt-chip" data-cat="Endocrine">Endocrine</button><button class="pt-chip" data-cat="Gastrointestinal">Gastrointestinal</button><button class="pt-chip" data-cat="Infection Control">Infection Control</button><button class="pt-chip" data-cat="Neuro">Neuro</button><button class="pt-chip" data-cat="Renal">Renal</button><button class="pt-chip" data-cat="Respiratory">Respiratory</button></div>
+        <p class="pt-count fade-up"><b data-pt-count>10</b> conditions &middot; growing weekly</p>
+        <div class="pt-grid fade-up" data-pt-grid></div>
+        <div class="pt-empty" data-pt-empty hidden><p><b>No match yet.</b> Tell us what to add at hello@mustlovescrubs.com.</p></div>
+      </div>
+    </div>
+  </section>
+
+</div>
 <div class="mls-route" data-route="privacy.html" hidden>
   <div class="page-hero">
     <div class="wrap inner">
@@ -7935,6 +8007,7 @@ body.mls-paid .gate { display: none; }
           <li><a href="cheatsheets.html">Cheat Sheets</a></li>
           <li><a href="lab-values.html">Lab Values</a></li>
           <li><a href="mnemonics.html">Mnemonics</a></li>
+          <li><a href="patho.html">Patho</a></li>
           <li><a href="care-plans.html">Care Plans</a></li>
           <li><a href="study-plan.html">Study Plan Calendar</a></li>
           <li><a href="nclex-guide.html">Free Study Guide</a></li>
@@ -10153,6 +10226,105 @@ body.mls-paid .gate { display: none; }
   chipsWrap.querySelectorAll('.mn-chip').forEach(function (c) {
     c.addEventListener('click', function () {
       chipsWrap.querySelectorAll('.mn-chip').forEach(function (x) { x.classList.remove('on'); });
+      c.classList.add('on'); cat = c.getAttribute('data-cat'); render();
+    });
+  });
+  searchInp.addEventListener('input', function () { q = searchInp.value; render(); });
+
+  render();
+})();
+
+
+/* ===== patho.js ===== */
+/* Must Love Scrubs — Patho (pathophysiology).
+   Searchable, filterable disease library. Each condition expands into a chain:
+   definition, causes, the pathophysiology mechanism (flow), signs WITH why,
+   diagnostics, complications, and treatment — linked to its care plan. Demo. */
+
+(function () {
+  'use strict';
+  var root = document.querySelector('.patho');
+  if (!root) return;
+
+  var ICON = {
+    heartbeat: 'M3 12h4l2-5 3 9 2-5h4',
+    lungs: 'M12 4v9M12 9c0 5-1.5 8-4.5 8C5 17 4 15 4 12c0-2 .5-4 2-5.5M12 9c0 5 1.5 8 4.5 8 2.5 0 3.5-2 3.5-5 0-2-.5-4-2-5.5',
+    drop: 'M12 3s6 6.5 6 11a6 6 0 0 1-12 0c0-4.5 6-11 6-11z',
+    shield: 'M12 3l8 3v6c0 4.5-3.2 7.6-8 9-4.8-1.4-8-4.5-8-9V6z',
+    sheet: 'M6 2h9l5 5v15H6zM14 2v6h6M9 13h7M9 17h7'
+  };
+  function svg(name) {
+    var d = ICON[name] || ICON.sheet;
+    return '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">' +
+      d.split('M').filter(Boolean).map(function (p) { return '<path d="M' + p + '"/>'; }).join('') + '</svg>';
+  }
+
+  var ALL = JSON.parse(root.querySelector('script[data-patho]').textContent);
+  var grid = root.querySelector('[data-pt-grid]');
+  var chipsWrap = root.querySelector('[data-pt-chips]');
+  var searchInp = root.querySelector('[data-pt-search]');
+  var countEl = root.querySelector('[data-pt-count]');
+  var emptyEl = root.querySelector('[data-pt-empty]');
+
+  var cat = 'All', q = '';
+  function esc(s) { return String(s == null ? '' : s); }
+  function ul(arr) { return '<ul class="pt-list">' + (arr || []).map(function (x) { return '<li>' + esc(x) + '</li>'; }).join('') + '</ul>'; }
+
+  function match(c, qq) {
+    if (!qq) return true;
+    var hay = c.title + ' ' + c.category + ' ' + c.definition + ' ' + (c.causes || []).join(' ') + ' ' +
+      (c.patho || []).join(' ') + ' ' + (c.signs || []).map(function (s) { return s.s; }).join(' ');
+    return hay.toLowerCase().indexOf(qq) >= 0;
+  }
+  function filtered() {
+    var qq = q.trim().toLowerCase();
+    return ALL.filter(function (c) {
+      if (cat !== 'All' && c.category !== cat) return false;
+      return match(c, qq);
+    });
+  }
+
+  function condHTML(c) {
+    var flow = (c.patho || []).map(function (step, i) {
+      return '<div class="pt-step"><span class="pt-step-n">' + (i + 1) + '</span><p>' + esc(step) + '</p></div>';
+    }).join('<div class="pt-arrow">↓</div>');
+    var signs = (c.signs || []).map(function (s) {
+      return '<div class="pt-sign"><b>' + esc(s.s) + '</b><span>' + esc(s.why) + '</span></div>';
+    }).join('');
+    var carelink = c.carelink ? '<a class="btn btn-line pt-cplink" href="care-plans.html">See the care plan &rarr;</a>' : '';
+    return '<div class="pt-card">' +
+      '<button class="pt-head"><span class="pt-ic">' + svg(c.icon) + '</span>' +
+      '<span class="pt-head-txt"><b>' + esc(c.title) + '</b><small>' + esc(c.definition) + '</small></span>' +
+      '<span class="pt-cat-tag">' + esc(c.category) + '</span><span class="pt-caret">▾</span></button>' +
+      '<div class="pt-body">' +
+        '<div class="pt-block"><span class="pt-lbl">Causes / risk factors</span>' + ul(c.causes) + '</div>' +
+        '<div class="pt-block"><span class="pt-lbl">How it happens (pathophysiology)</span><div class="pt-flow">' + flow + '</div></div>' +
+        '<div class="pt-block"><span class="pt-lbl">Signs &amp; symptoms — and why</span><div class="pt-signs">' + signs + '</div></div>' +
+        '<div class="pt-block"><span class="pt-lbl">Diagnostics</span>' + ul(c.diagnostics) + '</div>' +
+        '<div class="pt-block"><span class="pt-lbl">Complications</span>' + ul(c.complications) + '</div>' +
+        '<div class="pt-block"><span class="pt-lbl">Treatment</span>' + ul(c.treatment) + '</div>' +
+        carelink +
+      '</div></div>';
+  }
+
+  function render() {
+    var qq = q.trim().toLowerCase();
+    var items = filtered();
+    countEl.textContent = items.length;
+    emptyEl.hidden = items.length > 0;
+    grid.innerHTML = items.map(condHTML).join('');
+    grid.querySelectorAll('.pt-card').forEach(function (card) {
+      card.querySelector('.pt-head').addEventListener('click', function (e) {
+        if (e.target.closest('.pt-cplink')) return;
+        card.classList.toggle('open');
+      });
+      if (qq) card.classList.add('open');
+    });
+  }
+
+  chipsWrap.querySelectorAll('.pt-chip').forEach(function (c) {
+    c.addEventListener('click', function () {
+      chipsWrap.querySelectorAll('.pt-chip').forEach(function (x) { x.classList.remove('on'); });
       c.classList.add('on'); cat = c.getAttribute('data-cat'); render();
     });
   });
