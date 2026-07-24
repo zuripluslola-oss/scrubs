@@ -709,6 +709,22 @@ section { padding-block: clamp(3.6rem, 9vw, 6.5rem); position: relative; }
 .pc-len { display: inline-flex; gap: 0.2rem; background: var(--bg); border-radius: var(--pill); padding: 0.25rem; }
 .pc-len button { border: none; background: transparent; color: var(--ink-60); font-weight: 800; font-size: 0.82rem; padding: 0.45rem 0.9rem; border-radius: var(--pill); cursor: pointer; }
 .pc-len button.on { background: var(--coral-500); color: #fff; }
+.pc-intro { font-size: 0.9rem; color: var(--ink-60); margin-bottom: 1.1rem; }
+.pc-grid { display: flex; flex-wrap: wrap; gap: 1rem 1.4rem; align-items: flex-end; }
+.pc-grid label { font-size: 0.72rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.06em; color: var(--ink-60); display: grid; gap: 0.4rem; }
+.pc-grid input[type="date"] { border: 1.5px solid rgba(30,18,51,0.16); border-radius: 12px; padding: 0.6rem 0.8rem; font-size: 0.95rem; font-family: inherit; }
+.pc-grid .seg, .pc-len { display: inline-flex; gap: 0.2rem; background: var(--bg); border-radius: var(--pill); padding: 0.25rem; }
+.pc-grid .seg button { border: none; background: transparent; color: var(--ink-60); font-weight: 800; font-size: 0.82rem; padding: 0.45rem 0.9rem; border-radius: var(--pill); cursor: pointer; }
+.pc-grid .seg button.on { background: var(--coral-500); color: #fff; }
+.pc-block { margin-top: 1.2rem; }
+.pc-q { display: block; font-size: 0.74rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.05em; color: var(--ink-60); margin-bottom: 0.5rem; }
+.pc-q small { text-transform: none; letter-spacing: 0; font-weight: 600; color: var(--ink-40); }
+.pc-specs, .pc-days { display: flex; gap: 0.4rem; flex-wrap: wrap; }
+.pc-specs button, .pc-days button { border: 1px solid rgba(30,18,51,0.16); background: var(--card); color: var(--ink-60); padding: 0.45rem 0.85rem; border-radius: 999px; font: inherit; font-size: 0.82rem; font-weight: 700; cursor: pointer; }
+.pc-days button { min-width: 2.9rem; }
+.pc-specs button.on, .pc-days button.on { background: var(--coral-500); color: #fff; border-color: var(--coral-500); }
+.pc-hours .seg { display: inline-flex; }
+.cal-head-sum { font-size: 0.82rem; font-weight: 700; color: var(--teal-600); margin-bottom: 0.7rem; }
 .pc-meta { display: flex; flex-wrap: wrap; gap: 1.2rem; align-items: center; margin-top: 1.2rem; }
 .plan-progress { flex: 1; min-width: 160px; height: 8px; background: rgba(30,18,51,0.08); border-radius: var(--pill); overflow: hidden; }
 .plan-progress i { display: block; height: 100%; background: linear-gradient(90deg, var(--coral-500), var(--teal-400)); transition: width 0.4s; }

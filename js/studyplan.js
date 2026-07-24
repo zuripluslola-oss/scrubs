@@ -1,31 +1,26 @@
-/* Must Love Scrubs — Study Plan Calendar (the conductor).
-   Builds a day-by-day plan from proven learning science: spaced repetition,
-   active recall, interleaving. Each day schedules real activities (read,
-   flashcards, review, pop quiz, case study, mnemonic game, review test,
-   readiness exam) that link to the actual tools. Demo state via localStorage. */
+/* Must Love Scrubs — Study Plan Calendar (the conductor), now personalized.
+   Tell it: exam (RN/PN), plan length, up to 2 specialties, which days you can
+   study, and time per day. It builds a schedule AROUND your life and runs
+   reading, flashcards, spaced review, pop quizzes, case studies, mnemonic
+   games, weekly tests, and readiness exams — the same adaptive engine (spaced
+   repetition, active recall, interleaving) as the CAT. Demo via localStorage. */
 
 (function () {
   'use strict';
   var root = document.querySelector('[data-planner]');
   if (!root) return;
 
-  var TOPICS = [
-    { t: 'Pharmacology', link: 'flashcards.html' },
-    { t: 'Lab Values', link: 'flashcards.html' },
-    { t: 'Cardiovascular', link: 'flashcards.html' },
-    { t: 'Respiratory', link: 'flashcards.html' },
-    { t: 'Endocrine', link: 'flashcards.html' },
-    { t: 'Fundamentals & Safety', link: 'flashcards.html' },
-    { t: 'Maternal / Newborn', link: 'flashcards.html' },
-    { t: 'Pediatrics', link: 'flashcards.html' },
-    { t: 'Critical Care / ICU', link: 'flashcards.html' },
-    { t: 'Emergency / ER', link: 'flashcards.html' },
-    { t: 'Mental Health', link: 'flashcards.html' },
-    { t: 'Med-Surg', link: 'flashcards.html' }
-  ];
+  var CORE = ['Pharmacology', 'Lab Values', 'Cardiovascular', 'Respiratory', 'Endocrine',
+    'Fundamentals & Safety', 'Maternal / Newborn', 'Pediatrics', 'Mental Health', 'Med-Surg',
+    'Management of Care', 'Reduction of Risk'];
   var WEEKS = { 1: 4, 2: 8, 3: 13, 6: 26 };
+  var HOURS_ACTS = { '30m': 2, '1h': 3, '2h': 4, '3h': 6 };
 
   var lenWrap = root.querySelector('[data-plan-len]');
+  var examWrap = root.querySelector('[data-plan-exam]');
+  var specsWrap = root.querySelector('[data-plan-specs]');
+  var daysWrap = root.querySelector('[data-plan-days]');
+  var hoursWrap = root.querySelector('[data-plan-hours]');
   var startInp = root.querySelector('[data-plan-start]');
   var goBtn = root.querySelector('[data-plan-go]');
   var cal = root.querySelector('[data-plan-cal]');
@@ -33,12 +28,28 @@
   var streakEl = root.querySelector('[data-plan-streak]'), bar = root.querySelector('[data-plan-bar]');
   var modal = document.querySelector('[data-plan-modal]'), modalBody = document.querySelector('[data-plan-modal-body]');
 
-  var len = 2, days = [], done = {};
-  try { var saved = JSON.parse(localStorage.getItem('mlsPlan')) || {}; done = saved.done || {}; if (saved.len) len = saved.len; if (saved.start) startInp.value = saved.start; } catch (e) {}
+  var len = 2, exam = 'RN', specs = [], availDays = [1, 2, 3, 4, 5, 6], hours = '1h';
+  var days = [], done = {};
+  try {
+    var saved = JSON.parse(localStorage.getItem('mlsPlan')) || {};
+    done = saved.done || {};
+    if (saved.len) len = saved.len;
+    if (saved.exam) exam = saved.exam;
+    if (Array.isArray(saved.specs)) specs = saved.specs;
+    if (Array.isArray(saved.availDays)) availDays = saved.availDays;
+    if (saved.hours) hours = saved.hours;
+    if (saved.start) startInp.value = saved.start;
+  } catch (e) {}
   if (!startInp.value) startInp.value = new Date().toISOString().slice(0, 10);
-  lenWrap.querySelectorAll('button').forEach(function (b) { b.classList.toggle('on', +b.getAttribute('data-len') === len); });
 
-  function save() { try { localStorage.setItem('mlsPlan', JSON.stringify({ len: len, start: startInp.value, done: done })); } catch (e) {} }
+  function setSeg(wrap, attr, val) { if (!wrap) return; wrap.querySelectorAll('button').forEach(function (b) { b.classList.toggle('on', b.getAttribute(attr) === String(val)); }); }
+  setSeg(lenWrap, 'data-len', len);
+  setSeg(examWrap, 'data-exam', exam);
+  setSeg(hoursWrap, 'data-hours', hours);
+  if (specsWrap) specsWrap.querySelectorAll('button').forEach(function (b) { b.classList.toggle('on', specs.indexOf(b.getAttribute('data-spec')) >= 0); });
+  if (daysWrap) daysWrap.querySelectorAll('button').forEach(function (b) { b.classList.toggle('on', availDays.indexOf(+b.getAttribute('data-day')) >= 0); });
+
+  function save() { try { localStorage.setItem('mlsPlan', JSON.stringify({ len: len, exam: exam, specs: specs, availDays: availDays, hours: hours, start: startInp.value, done: done })); } catch (e) {} }
   function key(d) { return d.toISOString().slice(0, 10); }
   function addDays(d, n) { var x = new Date(d); x.setDate(x.getDate() + n); return x; }
   function fmt(d) { return d.toLocaleDateString(undefined, { weekday: 'long', month: 'long', day: 'numeric' }); }
@@ -48,54 +59,71 @@
     cards:  { c: 'cards',  label: 'Flashcards', link: 'flashcards.html' },
     review: { c: 'review', label: 'Review', link: 'flashcards.html' },
     quiz:   { c: 'quiz',   label: 'Pop quiz', link: 'tests.html' },
-    case:   { c: 'case',   label: 'Case study', link: 'nclex-complete.html' },
+    case:   { c: 'case',   label: 'Case study', link: 'tests.html' },
     game:   { c: 'game',   label: 'Mnemonic game', link: 'flashcards.html' },
     test:   { c: 'test',   label: 'Review test', link: 'tests.html' },
     exam:   { c: 'exam',   label: 'Readiness exam', link: 'tests.html' }
   };
+  function mk(type, topic, detail, link) { var a = A[type]; return { c: a.c, label: a.label, topic: topic, detail: detail, link: link || a.link }; }
+
+  function topicPool() {
+    var pool = CORE.slice();
+    // weight chosen specialties by adding them twice so they recur more often
+    specs.forEach(function (s) { pool.push(s); pool.push(s); });
+    return pool;
+  }
 
   function build() {
     var start = new Date(startInp.value + 'T00:00:00');
     var total = WEEKS[len] * 7;
+    var pool = topicPool();
+    var target = HOURS_ACTS[hours] || 3;
+    var avail = availDays.length ? availDays : [1, 2, 3, 4, 5, 6];
+    var maxDay = Math.max.apply(null, avail);
     days = [];
     var studyIdx = 0;
     for (var i = 0; i < total; i++) {
       var d = addDays(start, i), dow = d.getDay();
       var day = { date: d, key: key(d), acts: [], rest: false, milestone: false };
-      if (dow === 0) { day.rest = true; day.acts = [{ c: 'rest', label: 'Rest & recharge', link: null, detail: 'Recovery matters — sleep consolidates memory. Optional: 10 min light flashcard review.' }]; }
-      else {
-        var focus = TOPICS[studyIdx % TOPICS.length];
-        day.focus = focus.t;
-        day.acts.push(mk('read', focus.t, 'Read the ' + focus.t + ' overview — build the concept first.'));
-        day.acts.push(mk('cards', focus.t, 'New ' + focus.t + ' flashcards (active recall).', 'flashcards.html'));
-        if (studyIdx >= 3) { var rev = TOPICS[(studyIdx - 3) % TOPICS.length].t; day.acts.push(mk('review', rev, 'Spaced review: ' + rev + ' (you learned it a few days ago — revisit before you forget).', 'flashcards.html')); }
-        day.acts.push(mk('quiz', focus.t, '10-question pop quiz on ' + focus.t + ' — retrieve, don\'t reread.'));
-        if (dow === 2 || dow === 5) day.acts.push(mk('case', focus.t, 'Work a Next Gen case study — clinical judgment in action.'));
-        if (dow === 1 || dow === 4) day.acts.push(mk('game', focus.t, 'Mnemonic game (Match or Speed round) to lock in the memory tricks.'));
-        if (dow === 6) { day.acts.push(mk('test', 'This week', 'Weekly review test — mixed topics from the past week (interleaving).')); day.milestone = true; }
-        if (i > 0 && i % 14 === 0) { day.acts.push(mk('exam', 'Milestone', 'Full-length readiness exam — see your pass-chance and weakest areas.')); day.milestone = true; }
+      if (avail.indexOf(dow) < 0) {
+        day.rest = true;
+        day.acts = [{ c: 'rest', label: 'Day off', link: null, detail: 'A scheduled rest day — recovery consolidates memory. Optional: 10 min of light card review.' }];
+      } else {
+        var focus = pool[studyIdx % pool.length];
+        day.focus = focus;
+        // priority order so short days still cover the highest-yield work
+        var base = [];
+        base.push(mk('cards', focus, 'New ' + focus + ' flashcards — active recall, adaptive levels rise as you improve.'));
+        base.push(mk('quiz', focus, '10-question pop quiz on ' + focus + ' — retrieve, don\'t reread.'));
+        base.push(mk('read', focus, 'Read the ' + focus + ' overview — build the concept first.'));
+        if (studyIdx >= 3) { var rev = pool[(studyIdx - 3) % pool.length]; base.splice(2, 0, mk('review', rev, 'Spaced review: ' + rev + ' — revisit it right before you\'d forget.')); }
+        base.push((studyIdx % 2 === 0) ? mk('case', focus, 'Work a Next Gen case study — clinical judgment in action.') : mk('game', focus, 'Mnemonic game to lock in the memory tricks.'));
+        var acts = base.slice(0, Math.max(2, target));
+        // milestones always added (not trimmed)
+        if (dow === maxDay) { acts.push(mk('test', 'This week', 'Weekly review test — mixed topics from the week (interleaving).')); day.milestone = true; }
+        if (studyIdx > 0 && studyIdx % 14 === 0) { acts.push(mk('exam', 'Milestone', 'Full-length readiness exam — see your pass-chance and weakest areas.')); day.milestone = true; }
+        day.acts = acts;
         studyIdx++;
       }
       days.push(day);
     }
     save(); render();
   }
-  function mk(type, topic, detail, link) { var a = A[type]; return { c: a.c, label: a.label, topic: topic, detail: detail, link: link || a.link }; }
 
   function studyDayCount() { return days.filter(function (d) { return !d.rest; }).length; }
   function meta() {
     var total = studyDayCount();
     var completed = days.filter(function (d) { return !d.rest && done[d.key]; }).length;
-    doneEl.textContent = completed; totalEl.textContent = total;
-    bar.style.width = total ? Math.round(completed / total * 100) + '%' : '0%';
-    // streak: consecutive completed study days ending at the most recent completed
+    if (doneEl) doneEl.textContent = completed;
+    if (totalEl) totalEl.textContent = total;
+    if (bar) bar.style.width = total ? Math.round(completed / total * 100) + '%' : '0%';
     var s = 0; for (var i = days.length - 1; i >= 0; i--) { if (days[i].rest) continue; if (done[days[i].key]) s++; else if (s > 0) break; }
-    streakEl.textContent = s;
+    if (streakEl) streakEl.textContent = s;
   }
 
   function render() {
+    if (!days.length) return;
     var todayKey = key(new Date());
-    // pad to start on Sunday
     var first = days[0].date, pad = first.getDay();
     var cells = [];
     for (var p = 0; p < pad; p++) cells.push('<div class="cal-cell empty"></div>');
@@ -107,8 +135,10 @@
         (done[d.key] ? '<span class="cal-check">✓</span>' : '') +
         '<span class="cal-dots">' + chips + '</span></button>');
     });
-    var wk = ['Sun','Mon','Tue','Wed','Thu','Fri','Sat'].map(function (w) { return '<div class="cal-wd">' + w + '</div>'; }).join('');
-    cal.innerHTML = '<div class="cal-grid">' + wk + cells.join('') + '</div>';
+    var wk = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'].map(function (w) { return '<div class="cal-wd">' + w + '</div>'; }).join('');
+    cal.innerHTML = '<div class="cal-head-sum">' + exam.replace('RN', 'NCLEX-RN').replace('PN', 'NCLEX-PN') +
+      ' · ' + len + '-month plan' + (specs.length ? ' · ' + specs.join(' + ') : '') + ' · ' + hours + '/day</div>' +
+      '<div class="cal-grid">' + wk + cells.join('') + '</div>';
     cal.querySelectorAll('.cal-cell[data-idx]').forEach(function (b) { b.addEventListener('click', function () { openDay(days[+b.getAttribute('data-idx')]); }); });
     meta();
   }
@@ -130,7 +160,33 @@
   document.querySelector('[data-plan-close]').addEventListener('click', close);
   modal.addEventListener('click', function (e) { if (e.target === modal) close(); });
 
-  lenWrap.querySelectorAll('button').forEach(function (b) { b.addEventListener('click', function () { lenWrap.querySelectorAll('button').forEach(function (x) { x.classList.remove('on'); }); b.classList.add('on'); len = +b.getAttribute('data-len'); }); });
+  // ---- control wiring ----
+  function singleSeg(wrap, attr, set) {
+    if (!wrap) return;
+    wrap.querySelectorAll('button').forEach(function (b) {
+      b.addEventListener('click', function () {
+        wrap.querySelectorAll('button').forEach(function (x) { x.classList.remove('on'); });
+        b.classList.add('on'); set(b.getAttribute(attr));
+      });
+    });
+  }
+  singleSeg(lenWrap, 'data-len', function (v) { len = +v; });
+  singleSeg(examWrap, 'data-exam', function (v) { exam = v; });
+  singleSeg(hoursWrap, 'data-hours', function (v) { hours = v; });
+  if (specsWrap) specsWrap.querySelectorAll('button').forEach(function (b) {
+    b.addEventListener('click', function () {
+      var s = b.getAttribute('data-spec'), on = b.classList.contains('on');
+      if (on) { b.classList.remove('on'); specs = specs.filter(function (x) { return x !== s; }); }
+      else { if (specs.length >= 2) return; b.classList.add('on'); specs.push(s); }
+    });
+  });
+  if (daysWrap) daysWrap.querySelectorAll('button').forEach(function (b) {
+    b.addEventListener('click', function () {
+      var day = +b.getAttribute('data-day'), on = b.classList.contains('on');
+      if (on) { b.classList.remove('on'); availDays = availDays.filter(function (x) { return x !== day; }); }
+      else { b.classList.add('on'); availDays.push(day); }
+    });
+  });
   goBtn.addEventListener('click', build);
   build();
 })();

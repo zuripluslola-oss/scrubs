@@ -95,7 +95,7 @@
     <div class="wrap inner">
       <span class="lesson-label" style="color:var(--gold-400);">Study Plan</span>
       <h1 style="margin-top:0.6rem;">Your plan, run like a <span class="em">class</span>.</h1>
-      <p>Pick your test date and we build a day-by-day calendar that runs the whole system for you &mdash; reading, flashcards, case studies, pop quizzes, mnemonic games, and weekly review tests &mdash; on the learning science that makes it stick: spaced repetition, active recall, and interleaving.</p>
+      <p>Tell us what you're studying for (NCLEX-RN or PN), pick up to 2 specialties, and tell us your real schedule &mdash; the planner builds a day-by-day calendar around your life that runs reading, flashcards, case studies, pop quizzes, mnemonic games, and review tests on the learning science that makes it stick: spaced repetition, active recall, and interleaving.</p>
     </div>
   </div>
 
@@ -103,7 +103,14 @@
     <div class="wrap">
       <div class="planner" data-planner>
         <div class="plan-controls fade-up">
-          <div class="pc-row">
+          <p class="pc-intro">Answer a few quick questions and we build the whole plan around <b>your</b> schedule &mdash; then it runs cards, tests, and pop quizzes on the same adaptive engine as the CAT.</p>
+          <div class="pc-grid">
+            <label>I'm studying for
+              <div class="seg" data-plan-exam>
+                <button class="on" data-exam="RN">NCLEX-RN</button>
+                <button data-exam="PN">NCLEX-PN</button>
+              </div>
+            </label>
             <label>Plan length
               <div class="seg pc-len" data-plan-len>
                 <button data-len="1">1 mo</button>
@@ -113,8 +120,34 @@
               </div>
             </label>
             <label>Start date <input type="date" data-plan-start></label>
-            <button class="btn btn-coral" data-plan-go>Build my plan</button>
           </div>
+          <div class="pc-block">
+            <span class="pc-q">Add up to 2 specialties <small>(optional &mdash; woven into your plan)</small></span>
+            <div class="pc-specs" data-plan-specs>
+              <button data-spec="Med-Surg">Med-Surg</button>
+              <button data-spec="Critical Care">Critical Care / ICU</button>
+              <button data-spec="Emergency">Emergency / ER</button>
+              <button data-spec="Maternal / OB">Maternal / OB</button>
+              <button data-spec="Pediatrics">Pediatrics</button>
+              <button data-spec="Mental Health">Mental Health</button>
+            </div>
+          </div>
+          <div class="pc-block">
+            <span class="pc-q">Which days can you study?</span>
+            <div class="pc-days" data-plan-days>
+              <button data-day="0">Sun</button><button data-day="1">Mon</button><button data-day="2">Tue</button><button data-day="3">Wed</button><button data-day="4">Thu</button><button data-day="5">Fri</button><button data-day="6">Sat</button>
+            </div>
+          </div>
+          <div class="pc-block">
+            <span class="pc-q">Time per study day</span>
+            <div class="seg" data-plan-hours>
+              <button data-hours="30m">30 min</button>
+              <button class="on" data-hours="1h">1 hr</button>
+              <button data-hours="2h">2 hr</button>
+              <button data-hours="3h">3 hr+</button>
+            </div>
+          </div>
+          <button class="btn btn-coral" data-plan-go style="margin-top:0.4rem;">Build my plan</button>
           <div class="pc-meta">
             <span class="fc-stat">Days done <b data-plan-done>0</b></span>
             <span class="fc-stat">Total days <b data-plan-total>0</b></span>
