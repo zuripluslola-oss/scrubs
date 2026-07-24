@@ -1,0 +1,609 @@
+{
+ "batch": "core-01",
+ "labs": [
+  {
+   "id": "white-blood-cells",
+   "name": "White Blood Cells",
+   "abbr": "WBC",
+   "category": "CBC",
+   "range": "5,000–10,000 /mm³",
+   "high": "Infection, inflammation, leukemia",
+   "low": "Immunosuppression → infection risk (neutropenic precautions)"
+  },
+  {
+   "id": "red-blood-cells",
+   "name": "Red Blood Cells",
+   "abbr": "RBC",
+   "category": "CBC",
+   "range": "M 4.7–6.1, F 4.2–5.4 million/mm³",
+   "high": "Polycythemia, dehydration",
+   "low": "Anemia, blood loss"
+  },
+  {
+   "id": "hemoglobin",
+   "name": "Hemoglobin",
+   "abbr": "Hgb",
+   "category": "CBC",
+   "range": "M 14–18, F 12–16 g/dL",
+   "high": "Dehydration, polycythemia",
+   "low": "Anemia — may need transfusion",
+   "critical": "<7 g/dL"
+  },
+  {
+   "id": "hematocrit",
+   "name": "Hematocrit",
+   "abbr": "Hct",
+   "category": "CBC",
+   "range": "M 42–52%, F 37–47%",
+   "high": "Dehydration",
+   "low": "Anemia, fluid overload",
+   "note": "Roughly 3× the hemoglobin."
+  },
+  {
+   "id": "platelets",
+   "name": "Platelets",
+   "abbr": "Plt",
+   "category": "CBC",
+   "range": "150,000–400,000 /mm³",
+   "high": "Clot risk (thrombocytosis)",
+   "low": "Bleeding risk → bleeding precautions",
+   "critical": "<20,000"
+  },
+  {
+   "id": "mcv",
+   "name": "MCV",
+   "abbr": null,
+   "category": "CBC",
+   "range": "80–95 fL",
+   "high": "Macrocytic anemia (B12/folate)",
+   "low": "Microcytic anemia (iron deficiency)"
+  },
+  {
+   "id": "neutrophils",
+   "name": "Neutrophils",
+   "abbr": null,
+   "category": "CBC",
+   "range": "55–70%",
+   "high": "Acute bacterial infection",
+   "low": "Neutropenia (ANC <500 = severe risk)"
+  },
+  {
+   "id": "lymphocytes",
+   "name": "Lymphocytes",
+   "abbr": null,
+   "category": "CBC",
+   "range": "20–40%",
+   "high": "Viral infection",
+   "low": "Immunosuppression"
+  },
+  {
+   "id": "eosinophils",
+   "name": "Eosinophils",
+   "abbr": null,
+   "category": "CBC",
+   "range": "1–4%",
+   "high": "Allergy, parasites",
+   "low": "—"
+  },
+  {
+   "id": "esr",
+   "name": "ESR",
+   "abbr": "ESR",
+   "category": "CBC",
+   "range": "M <15, F <20 mm/hr",
+   "high": "Inflammation/infection (nonspecific)",
+   "low": "—"
+  },
+  {
+   "id": "reticulocytes",
+   "name": "Reticulocytes",
+   "abbr": null,
+   "category": "CBC",
+   "range": "0.5–2%",
+   "high": "Active RBC production (blood loss recovery)",
+   "low": "Bone marrow suppression"
+  },
+  {
+   "id": "sodium",
+   "name": "Sodium",
+   "abbr": "Na⁺",
+   "category": "Electrolytes",
+   "range": "135–145 mEq/L",
+   "high": "Dehydration, thirst, restlessness",
+   "low": "Confusion, seizures",
+   "critical": "<120 or >160"
+  },
+  {
+   "id": "potassium",
+   "name": "Potassium",
+   "abbr": "K⁺",
+   "category": "Electrolytes",
+   "range": "3.5–5.0 mEq/L",
+   "high": "Peaked T waves, dysrhythmias",
+   "low": "Flat T waves, weakness, dysrhythmias",
+   "critical": "<2.5 or >6.5"
+  },
+  {
+   "id": "chloride",
+   "name": "Chloride",
+   "abbr": "Cl⁻",
+   "category": "Electrolytes",
+   "range": "98–106 mEq/L",
+   "high": "Acidosis, dehydration",
+   "low": "Alkalosis, vomiting"
+  },
+  {
+   "id": "bicarbonate-co₂",
+   "name": "Bicarbonate (CO₂)",
+   "abbr": "HCO₃⁻",
+   "category": "Electrolytes",
+   "range": "22–26 mEq/L",
+   "high": "Metabolic alkalosis",
+   "low": "Metabolic acidosis"
+  },
+  {
+   "id": "calcium",
+   "name": "Calcium",
+   "abbr": "Ca²⁺",
+   "category": "Electrolytes",
+   "range": "9.0–10.5 mg/dL",
+   "high": "Weakness, kidney stones, constipation",
+   "low": "Tetany, Chvostek/Trousseau signs",
+   "critical": "<6 or >13"
+  },
+  {
+   "id": "magnesium",
+   "name": "Magnesium",
+   "abbr": "Mg²⁺",
+   "category": "Electrolytes",
+   "range": "1.5–2.5 mEq/L",
+   "high": "Lost reflexes, respiratory depression",
+   "low": "Tremor, hyperreflexia, torsades",
+   "critical": "<1 or >9"
+  },
+  {
+   "id": "phosphorus",
+   "name": "Phosphorus",
+   "abbr": "Phos",
+   "category": "Electrolytes",
+   "range": "3.0–4.5 mg/dL",
+   "high": "Renal failure (inverse to calcium)",
+   "low": "Malnutrition, refeeding"
+  },
+  {
+   "id": "anion-gap",
+   "name": "Anion Gap",
+   "abbr": null,
+   "category": "Electrolytes",
+   "range": "8–16 mEq/L",
+   "high": "Metabolic acidosis (DKA, lactic)",
+   "low": "—"
+  },
+  {
+   "id": "bun",
+   "name": "BUN",
+   "abbr": "BUN",
+   "category": "Renal",
+   "range": "10–20 mg/dL",
+   "high": "Dehydration, kidney injury, GI bleed",
+   "low": "Overhydration, liver disease"
+  },
+  {
+   "id": "creatinine",
+   "name": "Creatinine",
+   "abbr": "Cr",
+   "category": "Renal",
+   "range": "0.6–1.2 mg/dL",
+   "high": "Kidney injury (best indicator)",
+   "low": "Low muscle mass",
+   "note": "More specific for kidneys than BUN."
+  },
+  {
+   "id": "gfr",
+   "name": "GFR",
+   "abbr": "GFR",
+   "category": "Renal",
+   "range": ">90 mL/min",
+   "high": "—",
+   "low": "Declining kidney function (CKD staged by GFR)"
+  },
+  {
+   "id": "bun-creatinine-ratio",
+   "name": "BUN/Creatinine ratio",
+   "abbr": null,
+   "category": "Renal",
+   "range": "10:1–20:1",
+   "high": "Dehydration/prerenal",
+   "low": "—"
+  },
+  {
+   "id": "total-protein",
+   "name": "Total Protein",
+   "abbr": null,
+   "category": "Liver & Protein",
+   "range": "6.4–8.3 g/dL",
+   "high": "Dehydration",
+   "low": "Malnutrition, liver/kidney disease"
+  },
+  {
+   "id": "albumin",
+   "name": "Albumin",
+   "abbr": null,
+   "category": "Liver & Protein",
+   "range": "3.5–5.0 g/dL",
+   "high": "Dehydration",
+   "low": "Malnutrition, liver disease, edema",
+   "note": "Low albumin → third-spacing/edema."
+  },
+  {
+   "id": "total-bilirubin",
+   "name": "Total Bilirubin",
+   "abbr": null,
+   "category": "Liver & Protein",
+   "range": "0.3–1.0 mg/dL",
+   "high": "Jaundice, liver/biliary disease, hemolysis",
+   "low": "—"
+  },
+  {
+   "id": "ast",
+   "name": "AST",
+   "abbr": "AST",
+   "category": "Liver & Protein",
+   "range": "10–40 U/L",
+   "high": "Liver injury (also heart/muscle)",
+   "low": "—"
+  },
+  {
+   "id": "alt",
+   "name": "ALT",
+   "abbr": "ALT",
+   "category": "Liver & Protein",
+   "range": "7–56 U/L",
+   "high": "Liver injury (more liver-specific)",
+   "low": "—"
+  },
+  {
+   "id": "alkaline-phosphatase",
+   "name": "Alkaline Phosphatase",
+   "abbr": "ALP",
+   "category": "Liver & Protein",
+   "range": "44–147 U/L",
+   "high": "Biliary obstruction, bone disease",
+   "low": "—"
+  },
+  {
+   "id": "ammonia",
+   "name": "Ammonia",
+   "abbr": null,
+   "category": "Liver & Protein",
+   "range": "15–45 mcg/dL",
+   "high": "Hepatic encephalopathy (cirrhosis)",
+   "low": "—",
+   "note": "Treat elevated ammonia with lactulose."
+  },
+  {
+   "id": "pt",
+   "name": "PT",
+   "abbr": "PT",
+   "category": "Coagulation",
+   "range": "11–12.5 sec",
+   "high": "Bleeding risk, warfarin effect, liver disease",
+   "low": "—"
+  },
+  {
+   "id": "inr",
+   "name": "INR",
+   "abbr": "INR",
+   "category": "Coagulation",
+   "range": "0.8–1.1 (therapeutic 2–3)",
+   "high": "Bleeding risk (hold warfarin, give vitamin K)",
+   "low": "Clotting risk / subtherapeutic",
+   "critical": ">5"
+  },
+  {
+   "id": "aptt",
+   "name": "aPTT",
+   "abbr": "aPTT",
+   "category": "Coagulation",
+   "range": "30–40 sec (therapeutic 1.5–2×)",
+   "high": "Bleeding risk, heparin effect",
+   "low": "—"
+  },
+  {
+   "id": "d-dimer",
+   "name": "D-dimer",
+   "abbr": null,
+   "category": "Coagulation",
+   "range": "<0.5 mcg/mL",
+   "high": "Clot present (DVT, PE, DIC)",
+   "low": "—"
+  },
+  {
+   "id": "fibrinogen",
+   "name": "Fibrinogen",
+   "abbr": null,
+   "category": "Coagulation",
+   "range": "200–400 mg/dL",
+   "high": "Inflammation",
+   "low": "DIC, liver disease"
+  },
+  {
+   "id": "troponin",
+   "name": "Troponin",
+   "abbr": null,
+   "category": "Cardiac & Lipids",
+   "range": "<0.04 ng/mL",
+   "high": "Myocardial injury/MI (specific)",
+   "low": "—",
+   "note": "Rises 3–4 hr after MI, peaks ~24 hr."
+  },
+  {
+   "id": "ck-mb",
+   "name": "CK-MB",
+   "abbr": "CK-MB",
+   "category": "Cardiac & Lipids",
+   "range": "0–3 ng/mL",
+   "high": "Myocardial damage",
+   "low": "—"
+  },
+  {
+   "id": "bnp",
+   "name": "BNP",
+   "abbr": "BNP",
+   "category": "Cardiac & Lipids",
+   "range": "<100 pg/mL",
+   "high": "Heart failure",
+   "low": "—"
+  },
+  {
+   "id": "total-cholesterol",
+   "name": "Total Cholesterol",
+   "abbr": null,
+   "category": "Cardiac & Lipids",
+   "range": "<200 mg/dL",
+   "high": "Cardiovascular risk",
+   "low": "—"
+  },
+  {
+   "id": "ldl",
+   "name": "LDL",
+   "abbr": "LDL",
+   "category": "Cardiac & Lipids",
+   "range": "<100 mg/dL",
+   "high": "“Bad” cholesterol — CV risk",
+   "low": "—"
+  },
+  {
+   "id": "hdl",
+   "name": "HDL",
+   "abbr": "HDL",
+   "category": "Cardiac & Lipids",
+   "range": "M >40, F >50 mg/dL",
+   "high": "Protective (higher is better)",
+   "low": "Increased CV risk"
+  },
+  {
+   "id": "triglycerides",
+   "name": "Triglycerides",
+   "abbr": null,
+   "category": "Cardiac & Lipids",
+   "range": "<150 mg/dL",
+   "high": "CV risk, pancreatitis",
+   "low": "—"
+  },
+  {
+   "id": "fasting-glucose",
+   "name": "Fasting Glucose",
+   "abbr": null,
+   "category": "Endocrine & Glucose",
+   "range": "70–110 mg/dL",
+   "high": "Diabetes, stress, steroids",
+   "low": "Hypoglycemia (treat with 15 g carbs)",
+   "critical": "<40 or >400"
+  },
+  {
+   "id": "hemoglobin-a1c",
+   "name": "Hemoglobin A1c",
+   "abbr": "A1c",
+   "category": "Endocrine & Glucose",
+   "range": "<5.7% (diabetic goal <7%)",
+   "high": "Poor long-term glucose control",
+   "low": "—",
+   "note": "3-month average glucose."
+  },
+  {
+   "id": "tsh",
+   "name": "TSH",
+   "abbr": "TSH",
+   "category": "Endocrine & Glucose",
+   "range": "0.4–4.0 mIU/L",
+   "high": "Hypothyroidism (gland underactive)",
+   "low": "Hyperthyroidism",
+   "note": "TSH is inverse to thyroid activity."
+  },
+  {
+   "id": "free-t4",
+   "name": "Free T4",
+   "abbr": "T4",
+   "category": "Endocrine & Glucose",
+   "range": "0.8–1.8 ng/dL",
+   "high": "Hyperthyroidism",
+   "low": "Hypothyroidism"
+  },
+  {
+   "id": "cortisol-am",
+   "name": "Cortisol (AM)",
+   "abbr": null,
+   "category": "Endocrine & Glucose",
+   "range": "6–23 mcg/dL",
+   "high": "Cushing's syndrome",
+   "low": "Addison's disease"
+  },
+  {
+   "id": "ph",
+   "name": "pH",
+   "abbr": null,
+   "category": "Arterial Blood Gas",
+   "range": "7.35–7.45",
+   "high": "Alkalosis",
+   "low": "Acidosis",
+   "critical": "<7.2 or >7.6"
+  },
+  {
+   "id": "paco₂",
+   "name": "PaCO₂",
+   "abbr": "PaCO₂",
+   "category": "Arterial Blood Gas",
+   "range": "35–45 mmHg",
+   "high": "Respiratory acidosis (hypoventilation)",
+   "low": "Respiratory alkalosis (hyperventilation)"
+  },
+  {
+   "id": "pao₂",
+   "name": "PaO₂",
+   "abbr": "PaO₂",
+   "category": "Arterial Blood Gas",
+   "range": "80–100 mmHg",
+   "high": "Excess oxygen",
+   "low": "Hypoxemia"
+  },
+  {
+   "id": "sao₂",
+   "name": "SaO₂",
+   "abbr": "SaO₂",
+   "category": "Arterial Blood Gas",
+   "range": "95–100%",
+   "high": "—",
+   "low": "Hypoxemia"
+  },
+  {
+   "id": "digoxin",
+   "name": "Digoxin",
+   "abbr": null,
+   "category": "Therapeutic Drug Levels",
+   "range": "0.5–2 ng/mL",
+   "high": "Toxicity: nausea, yellow-green vision, dysrhythmias",
+   "low": "Subtherapeutic",
+   "critical": ">2"
+  },
+  {
+   "id": "lithium",
+   "name": "Lithium",
+   "abbr": null,
+   "category": "Therapeutic Drug Levels",
+   "range": "0.6–1.2 mEq/L",
+   "high": "Toxicity: tremor, GI upset, confusion",
+   "low": "Subtherapeutic",
+   "critical": ">1.5"
+  },
+  {
+   "id": "vancomycin-trough",
+   "name": "Vancomycin (trough)",
+   "abbr": null,
+   "category": "Therapeutic Drug Levels",
+   "range": "10–20 mcg/mL",
+   "high": "Nephrotoxicity/ototoxicity risk",
+   "low": "Subtherapeutic"
+  },
+  {
+   "id": "phenytoin",
+   "name": "Phenytoin",
+   "abbr": "Dilantin",
+   "category": "Therapeutic Drug Levels",
+   "range": "10–20 mcg/mL",
+   "high": "Toxicity: nystagmus, ataxia",
+   "low": "Breakthrough seizures"
+  },
+  {
+   "id": "theophylline",
+   "name": "Theophylline",
+   "abbr": null,
+   "category": "Therapeutic Drug Levels",
+   "range": "10–20 mcg/mL",
+   "high": "Toxicity: tachycardia, seizures",
+   "low": "Subtherapeutic"
+  },
+  {
+   "id": "acetaminophen",
+   "name": "Acetaminophen",
+   "abbr": null,
+   "category": "Therapeutic Drug Levels",
+   "range": "10–30 mcg/mL",
+   "high": "Hepatotoxic overdose (antidote: acetylcysteine)",
+   "low": "—"
+  },
+  {
+   "id": "urine-specific-gravity",
+   "name": "Urine Specific Gravity",
+   "abbr": null,
+   "category": "Urinalysis & Other",
+   "range": "1.005–1.030",
+   "high": "Concentrated urine (dehydration, SIADH)",
+   "low": "Dilute urine (overhydration, diabetes insipidus)"
+  },
+  {
+   "id": "urine-ph",
+   "name": "Urine pH",
+   "abbr": null,
+   "category": "Urinalysis & Other",
+   "range": "4.6–8.0",
+   "high": "Alkaline urine (UTI, alkalosis)",
+   "low": "Acidic urine"
+  },
+  {
+   "id": "lactate",
+   "name": "Lactate",
+   "abbr": null,
+   "category": "Urinalysis & Other",
+   "range": "0.5–2.2 mmol/L",
+   "high": "Poor tissue perfusion (sepsis, shock)",
+   "low": "—",
+   "note": "Rising lactate = worsening perfusion."
+  },
+  {
+   "id": "c-reactive-protein",
+   "name": "C-Reactive Protein",
+   "abbr": "CRP",
+   "category": "Urinalysis & Other",
+   "range": "<1.0 mg/dL",
+   "high": "Inflammation/infection",
+   "low": "—"
+  },
+  {
+   "id": "uric-acid",
+   "name": "Uric Acid",
+   "abbr": null,
+   "category": "Urinalysis & Other",
+   "range": "M 3.4–7.0, F 2.4–6.0 mg/dL",
+   "high": "Gout, tumor lysis",
+   "low": "—"
+  },
+  {
+   "id": "amylase",
+   "name": "Amylase",
+   "abbr": null,
+   "category": "Urinalysis & Other",
+   "range": "30–110 U/L",
+   "high": "Pancreatitis",
+   "low": "—"
+  },
+  {
+   "id": "lipase",
+   "name": "Lipase",
+   "abbr": null,
+   "category": "Urinalysis & Other",
+   "range": "0–160 U/L",
+   "high": "Pancreatitis (more specific)",
+   "low": "—"
+  },
+  {
+   "id": "ferritin",
+   "name": "Ferritin",
+   "abbr": null,
+   "category": "Urinalysis & Other",
+   "range": "M 12–300, F 12–150 ng/mL",
+   "high": "Iron overload, inflammation",
+   "low": "Iron-deficiency anemia"
+  }
+ ]
+}

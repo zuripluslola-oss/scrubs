@@ -966,6 +966,37 @@ section { padding-block: clamp(3.6rem, 9vw, 6.5rem); position: relative; }
 .cp-empty { text-align: center; padding: 2rem; color: var(--ink-60); }
 @media print { .cp-tools, .cp-chips, .cp-count { display: none !important; } .cp-body { display: block !important; } .cp-caret { display: none; } }
 
+/* ===== Lab Values ===== */
+.lv-tools { display: flex; gap: 0.8rem; flex-wrap: wrap; align-items: center; }
+.lv-search { flex: 1; min-width: 220px; display: flex; align-items: center; gap: 0.6rem; background: var(--card); border: 1px solid rgba(30,18,51,0.14); border-radius: 14px; padding: 0.7rem 1rem; box-shadow: var(--shadow-1); }
+.lv-search svg { width: 20px; height: 20px; color: var(--ink-40); flex-shrink: 0; }
+.lv-search input { border: none; background: transparent; font: inherit; color: var(--ink); width: 100%; outline: none; }
+.lv-chips { display: flex; gap: 0.5rem; flex-wrap: wrap; margin-top: 1rem; }
+.lv-chip { border: 1px solid rgba(30,18,51,0.14); background: var(--card); color: var(--ink-60); padding: 0.45rem 0.9rem; border-radius: 999px; font: inherit; font-size: 0.8rem; font-weight: 700; cursor: pointer; }
+.lv-chip.on { background: var(--ink); color: #fff; border-color: var(--ink); }
+.lv-count { font-size: 0.85rem; color: var(--ink-40); margin: 0.9rem 0; }
+.lv-count b { color: var(--coral-600); }
+
+.lv-panel { margin-bottom: 1.6rem; }
+.lv-panel-h { font-size: 0.95rem; color: var(--teal-600); text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 0.6rem; border-bottom: 2px solid rgba(42,212,196,0.2); padding-bottom: 0.3rem; }
+.lv-panel-h small { color: var(--ink-40); font-weight: 700; }
+.lv-lab { background: var(--card); border: 1px solid rgba(30,18,51,0.08); border-radius: 14px; padding: 0.9rem 1rem; box-shadow: var(--shadow-1); margin-bottom: 0.6rem; }
+.lv-lab-top { display: flex; align-items: baseline; flex-wrap: wrap; gap: 0.5rem; }
+.lv-name { font-size: 1rem; }
+.lv-abbr { font-size: 0.72rem; color: var(--ink-40); font-weight: 700; }
+.lv-range { margin-left: auto; font-weight: 800; color: var(--coral-600); white-space: nowrap; }
+.lv-crit { font-size: 0.68rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.03em; color: #a06b00; background: rgba(255,194,61,0.2); padding: 0.15rem 0.45rem; border-radius: 999px; }
+.lv-dirs { display: grid; gap: 0.5rem; grid-template-columns: 1fr; margin-top: 0.6rem; }
+@media (min-width: 560px) { .lv-dirs { grid-template-columns: 1fr 1fr; } }
+.lv-dir { border-radius: 10px; padding: 0.5rem 0.7rem; }
+.lv-dir span { font-size: 0.72rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.03em; }
+.lv-dir p { font-size: 0.83rem; margin-top: 0.15rem; }
+.lv-dir.up { background: rgba(255,120,90,0.1); } .lv-dir.up span { color: var(--coral-600); }
+.lv-dir.down { background: rgba(42,212,196,0.1); } .lv-dir.down span { color: var(--teal-600); }
+.lv-note { font-size: 0.8rem; color: var(--ink-60); margin-top: 0.5rem; font-style: italic; }
+.lv-empty { text-align: center; padding: 2rem; color: var(--ink-60); }
+@media print { .lv-tools, .lv-chips, .lv-count { display: none !important; } }
+
 /* courses page wide cards */
 .two-up { display: grid; gap: 1rem; grid-template-columns: 1fr; }
 @media (min-width: 720px) { .two-up { grid-template-columns: repeat(2, 1fr); } }

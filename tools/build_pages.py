@@ -117,7 +117,8 @@ def chrome(fname, title, desc, body, active=""):
           <li><a href="tests.html">Tests &amp; Exams <small>Pop quiz, mock NCLEX &amp; specialty exams</small></a></li>
           <li><a href="flashcards.html">Flashcards &amp; Games <small>Flip cards, quizzes, match &amp; speed rounds</small></a></li>
           <li><a href="drugs.html">Drug Cards <small>Pharmacology library &middot; drill by system</small></a></li>
-          <li><a href="cheatsheets.html">Cheat Sheets <small>Lab values, ABGs, antidotes &amp; more</small></a></li>
+          <li><a href="cheatsheets.html">Cheat Sheets <small>ABGs, antidotes, diets &amp; more</small></a></li>
+          <li><a href="lab-values.html">Lab Values <small>All 65 &middot; what high &amp; low mean</small></a></li>
           <li><a href="care-plans.html">Care Plans <small>Diagnoses, interventions &amp; rationales</small></a></li>
           <li><a href="study-plan.html">Study Plan Calendar <small>Your day-by-day plan to test day</small></a></li>
           <li><a href="nclex-guide.html">Free Study Guide <small>How to pass &middot; for nurses, by nurses</small></a></li>
@@ -181,6 +182,7 @@ def chrome(fname, title, desc, body, active=""):
           <li><a href="flashcards.html">Flashcards &amp; Games</a></li>
           <li><a href="drugs.html">Drug Cards</a></li>
           <li><a href="cheatsheets.html">Cheat Sheets</a></li>
+          <li><a href="lab-values.html">Lab Values</a></li>
           <li><a href="care-plans.html">Care Plans</a></li>
           <li><a href="study-plan.html">Study Plan Calendar</a></li>
           <li><a href="nclex-guide.html">Free Study Guide</a></li>
@@ -2376,6 +2378,65 @@ CAREPLANS_BODY = f"""  <div class="page-hero">
 PAGES["care-plans.html"] = ("Nursing Care Plans &mdash; Diagnoses, Interventions &amp; Rationales | Must Love Scrubs",
     "Free nursing care plans in full ADPIE format: nursing diagnosis, assessment, measurable outcomes, and interventions with rationales — heart failure, pneumonia, diabetes, COPD, pain, falls, skin integrity, and infection.",
     CAREPLANS_BODY, "courses")
+
+# ---------------------------------------------------------------- LAB VALUES (comprehensive reference — range + high + low)
+
+def _load_labvalues():
+    import glob as _glob
+    labs, seen = [], set()
+    for path in sorted(_glob.glob(os.path.join(ROOT, 'data', 'labvalues', '*.json'))):
+        data = _json.load(open(path, encoding='utf-8'))
+        for x in data.get('labs', []):
+            if not x.get('name') or not x.get('range'): continue
+            if x.get('id') in seen: continue
+            seen.add(x['id']); labs.append(x)
+    return labs
+
+LABS = _load_labvalues()
+LABS_JSON = _json.dumps(LABS, ensure_ascii=False).replace('<', '\\u003c').replace('>', '\\u003e').replace('&', '\\u0026')
+LAB_CATS = []
+for _x in LABS:
+    if _x['category'] not in LAB_CATS:
+        LAB_CATS.append(_x['category'])
+
+def lab_cat_chips():
+    out = ['<button class="lv-chip on" data-cat="All">All</button>']
+    for c in LAB_CATS:
+        out.append(f'<button class="lv-chip" data-cat="{c}">{c}</button>')
+    return "".join(out)
+
+LABS_BODY = f"""  <div class="page-hero">
+    <div class="wrap inner">
+      <span class="lesson-label" style="color:var(--gold-400);">Lab Values</span>
+      <h1 style="margin-top:0.6rem;">Every lab, and what it <span class="em">means</span>.</h1>
+      <p>All {len(LABS)} high-yield NCLEX lab values &mdash; not just the number, but what a <b>high</b> result means and what a <b>low</b> result means, plus the critical values that mean call the provider now. Search any lab, filter by panel.</p>
+    </div>
+  </div>
+
+  <section style="background:var(--bg);">
+    <div class="wrap">
+      <div class="labvalues" data-lv-total="{len(LABS)}">
+        <script type="application/json" data-labs>{LABS_JSON}</script>
+        <div class="lv-tools fade-up">
+          <div class="lv-search">
+            {I['search']}
+            <input type="search" placeholder="Search a lab (e.g. potassium, INR)&hellip;" aria-label="Search lab values" data-lv-search>
+          </div>
+        </div>
+        <div class="lv-chips fade-up" data-lv-chips>{lab_cat_chips()}</div>
+        <p class="lv-count fade-up"><b data-lv-count>{len(LABS)}</b> lab values &middot; {len(LAB_CATS)} panels</p>
+        <div class="lv-list fade-up" data-lv-list></div>
+        <div class="lv-empty" data-lv-empty hidden><p><b>No match yet.</b> Tell us what to add at hello@mustlovescrubs.com.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <script src="js/labvalues.js"></script>
+"""
+
+PAGES["lab-values.html"] = ("NCLEX Lab Values (All 65) &mdash; Normal Ranges, High &amp; Low Meaning | Must Love Scrubs",
+    "Every high-yield NCLEX lab value with its normal range, what a high result means, what a low result means, and critical values. Searchable, filterable nursing lab reference.",
+    LABS_BODY, "courses")
 
 # ---------------------------------------------------------------- STUDY CALENDAR (the conductor)
 
