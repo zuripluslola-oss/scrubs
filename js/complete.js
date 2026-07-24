@@ -19,8 +19,8 @@
 
     var PLANS = {
       1: { plan: '1-Month Plan', note: 'You have a strong base and a close test date — you mainly need reps and timing. The fast track keeps you sharp without dragging it out.' },
-      2: { plan: '2-Month Plan', note: 'Enough runway to fix weak areas without cramming — the sweet spot for most students, and where the Pass Guarantee kicks in.' },
-      3: { plan: '3-Month Plan', note: 'A gentler daily load with extra concept teaching up front — right if you work full-time or want to rebuild your fundamentals.' }
+      2: { plan: '3-Month Plan', note: 'Enough runway to fix weak areas without cramming — the sweet spot for most students, and where the Pass Guarantee kicks in.' },
+      3: { plan: '6-Month Plan', note: 'A gentler daily load with extra concept teaching up front — right if you work full-time or want to rebuild your fundamentals. Or own it forever with the Lifetime plan.' }
     };
 
     function show(i) {

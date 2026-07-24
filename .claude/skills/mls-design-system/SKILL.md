@@ -72,19 +72,19 @@ account), search, notifications, privacy (DRAFT), terms (DRAFT).
 
 ## Pricing (owner-locked structure; numbers editable — updated 2026-07)
 
-**NCLEX Complete = one subscription, FOUR durations (1/2/3/6 months). Esi is
-INCLUDED in every plan (no add-on).** Every plan unlocks the ENTIRE system —
+**NCLEX Complete = one subscription, FOUR options (1 / 3 / 6 months + Lifetime).
+Esi is INCLUDED in every plan (no add-on).** Every plan unlocks the ENTIRE system —
 question bank, 50 case studies, 4 readiness exams, strategy course, study
 schedules, tagging, analytics, the workbook, and Esi. Only the runway differs.
-Prices are **benchmarked to the real market** (Bootcamp ~$59–130, UWorld ~$250/90d,
-Kaplan $299–525, Archer $69–399, Hurst $159–339) and **shown discounted** (slashed
-anchor + "Save $X"). Esi's AI cost is ~$25/mo, so every tier clears cost + margin.
+Pricing is a **per-month ladder** (longer commitment = lower monthly rate), shown
+discounted (slashed anchor + "Save $X"). Esi's AI cost is ~$25/mo, so every tier
+clears cost + margin.
 
-- **1 Month — $59** (anchor $99, Save $40). $59/mo. Testing soon.
-- **2 Months — $99** (anchor $169, Save $70). $50/mo. *Most popular* (coral). Pass Guarantee.
-- **3 Months — $129** (anchor $219, Save $90). $43/mo. Pass Guarantee.
-- **6 Months — $199** (anchor $349, Save $150). $33/mo. *Best value* (teal). Pass Guarantee.
-- **Pass Guarantee** on 2/3/6-month plans: finish the program, full refund if you don't pass.
+- **1 Month — $65** (anchor $89, Save $24). $65/mo. Testing soon.
+- **3 Months — $165** (anchor $225, Save $60). $55/mo. *Most popular* (coral). Pass Guarantee.
+- **6 Months — $270** (anchor $399, Save $129). $45/mo. *Best value* (teal). Pass Guarantee.
+- **Lifetime — $450**, paid as **9 payments of $50** (anchor $699, Save $249). Own it forever, all future updates. *Own it forever* tag. Pass Guarantee.
+- **Pass Guarantee** on 3/6-month + Lifetime plans: finish the program, full refund if you don't pass.
 - Helper `pricing_tiers()` renders 4 cards; `TIERS` holds the data (`rec`, `feat`, `permo`). `nclex-complete.html` is the flagship page.
 - Specialty courses $49–$79 · Nurses Index download $4.99 (or points, free with any course).
 - Free account: free tier (NCLEX practice + 4 Scrub TV lessons + dictionary search), points, dashboard.

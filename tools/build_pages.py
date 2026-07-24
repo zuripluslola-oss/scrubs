@@ -111,7 +111,7 @@ def chrome(fname, title, desc, body, active=""):
       <div>
         <h4>Learn</h4>
         <ul class="mega-links">
-          <li><a href="nclex-complete.html">NCLEX Complete <small>The flagship &middot; plans from $59</small></a></li>
+          <li><a href="nclex-complete.html">NCLEX Complete <small>The flagship &middot; plans from $45/mo</small></a></li>
           <li><a href="nclex.html">Free NCLEX Prep <small>RN &amp; LPN &middot; every NGN item type</small></a></li>
           <li><a href="qbank.html">Question Bank <small>Practice with rationales &amp; answer stats</small></a></li>
           <li><a href="topics.html">Topic Hubs <small>Everything on one topic, in one place</small></a></li>
@@ -155,7 +155,7 @@ def chrome(fname, title, desc, body, active=""):
       <a class="mega-promo" href="nclex-complete.html">
         <span class="art">NCLEX</span>
         <b>NCLEX Complete</b>
-        <p>50 cases, 2,600+ questions, 4 readiness exams &amp; Esi — from $59.</p>
+        <p>50 cases, 2,600+ questions, 4 readiness exams &amp; Esi — from $45/mo.</p>
         <span class="btn btn-coral" style="padding:0.6rem 1.3rem; font-size:0.85rem;">See the plans</span>
       </a>
     </div>
@@ -312,18 +312,18 @@ def course_shelf():
 
 # -------- Subscription pricing (3 tiers, Esi included, duration-based) --------
 TIERS = [
-    {"dur": "1 Month", "sub": "of full access", "was": "$99", "now": "59", "permo": "$59/mo",
-     "save": "Save $40", "rec": "", "feat": False, "guar": False,
+    {"dur": "1 Month", "sub": "of full access", "was": "$89", "now": "65", "permo": "$65/mo",
+     "save": "Save $24", "rec": "", "feat": False, "guar": False,
      "blurb": "Testing soon and just need reps and a plan? Start here."},
-    {"dur": "2 Months", "sub": "of full access", "was": "$169", "now": "99", "permo": "$50/mo",
-     "save": "Save $70", "rec": "Most popular", "feat": True, "guar": True,
+    {"dur": "3 Months", "sub": "of full access", "was": "$225", "now": "165", "permo": "$55/mo &middot; $165 total",
+     "save": "Save $60", "rec": "Most popular", "feat": True, "guar": True,
      "blurb": "The timeline most students choose &mdash; room to fix every weak area."},
-    {"dur": "3 Months", "sub": "of full access", "was": "$219", "now": "129", "permo": "$43/mo",
-     "save": "Save $90", "rec": "", "feat": False, "guar": True,
-     "blurb": "Working full-time or rebuilding your foundation? This fits."},
-    {"dur": "6 Months", "sub": "of full access", "was": "$349", "now": "199", "permo": "$33/mo",
-     "save": "Save $150", "rec": "Best value", "feat": False, "guar": True,
-     "blurb": "The lowest price per month &mdash; go at your own pace, stress-free."},
+    {"dur": "6 Months", "sub": "of full access", "was": "$399", "now": "270", "permo": "$45/mo &middot; $270 total",
+     "save": "Save $129", "rec": "Best value", "feat": False, "guar": True,
+     "blurb": "The lowest monthly price &mdash; go at your own pace, stress-free."},
+    {"dur": "Lifetime", "sub": "yours forever", "was": "$699", "now": "450", "permo": "9 payments of $50 &middot; $450",
+     "save": "Save $249", "rec": "Own it forever", "feat": False, "guar": True,
+     "blurb": "Own it forever in 9 easy payments of $50 &mdash; every future update included."},
 ]
 TIER_FEATURES = [
     "2,600+ original NCLEX questions &mdash; RN &amp; PN",
@@ -571,8 +571,8 @@ INDEX_BODY = f"""  <main>
             <div class="chip-row"><span class="chip gold">FLAGSHIP</span><span class="chip teal">NGN READY</span><span class="chip">Esi compatible</span></div>
             <h3>NCLEX Complete</h3>
             <p>The full journey to test day: adaptive question banks, clinical-judgment case studies, mock exams in real test format, and analytics that show exactly where you're strong and where you're not.</p>
-            <div class="price-line"><span class="price">from $59</span><span class="per">Esi tutor included &middot; Pass Guarantee</span></div>
-            <div class="chip-row"><span class="chip gold">4 plans &rarr; 1, 2, 3 or 6 months &middot; everything unlocked</span></div>
+            <div class="price-line"><span class="price">from $45/mo</span><span class="per">Esi tutor included &middot; Pass Guarantee</span></div>
+            <div class="chip-row"><span class="chip gold">4 plans &rarr; 1, 3, 6 months or Lifetime &middot; everything unlocked</span></div>
             <a class="btn btn-coral" href="nclex-complete.html">Explore NCLEX Complete</a>
           </div>
         </div>
@@ -739,8 +739,8 @@ PAGES["courses.html"] = ("Courses — Must Love Scrubs",
           <div class="chip-row"><span class="chip gold">FLAGSHIP</span><span class="chip teal">NGN READY</span><span class="chip">Esi included</span></div>
           <h3>NCLEX Complete</h3>
           <p>Everything to test day: 50 case studies, 2,600+ questions, 4 readiness exams, timed mocks in real format, score analytics, and a visual progress map. Built on how memory actually works &mdash; spaced repetition and active recall, not cramming.</p>
-          <div class="price-line"><span class="price">from $59</span><span class="per">Esi tutor included &middot; Pass Guarantee</span></div>
-          <div class="chip-row"><span class="chip gold">4 plans &rarr; 1, 2, 3 or 6 months &middot; everything unlocked</span></div>
+          <div class="price-line"><span class="price">from $45/mo</span><span class="per">Esi tutor included &middot; Pass Guarantee</span></div>
+          <div class="chip-row"><span class="chip gold">4 plans &rarr; 1, 3, 6 months or Lifetime &middot; everything unlocked</span></div>
           <a class="btn btn-coral" href="nclex-complete.html">Explore NCLEX Complete</a>
         </div>
       </div>
@@ -821,8 +821,8 @@ PAGES["esi.html"] = ("Meet Esi — Your AI Tutor | Must Love Scrubs",
         <span class="eyebrow" style="color:var(--gold-400);">Included with every plan</span>
         <h2>Esi comes with your subscription.</h2>
         <p><b style="font-size:1.6rem;">$0 extra</b> &nbsp;&middot;&nbsp; included in every NCLEX Complete plan &middot; nothing to add on</p>
-        <p style="margin-top:0.6rem;color:var(--gold-400);font-weight:700;">Every plan &mdash; 1, 2, 3, or 6 months &mdash; unlocks Esi in full. Plans start at $59.</p>
-        <a class="btn btn-coral" href="nclex-complete.html">See the plans &mdash; from $59</a>
+        <p style="margin-top:0.6rem;color:var(--gold-400);font-weight:700;">Every plan &mdash; 1, 3, 6 months or Lifetime &mdash; unlocks Esi in full. Plans start at $45/mo.</p>
+        <a class="btn btn-coral" href="nclex-complete.html">See the plans &mdash; from $45/mo</a>
         <a class="btn btn-line" href="#" data-esi-subscribe style="margin-top:0.6rem;">Preview Esi unlocked (demo)</a>
         <div class="perks">
           <span>{I['check']} Unlimited tutoring sessions</span>
@@ -1451,7 +1451,7 @@ PREP_BODY = f"""  <div class="page-hero">
         </div>
         <div class="tier-col paid fade-up">
           <div class="tname">NCLEX Complete</div>
-          <div class="tprice">Plans from $59 &middot; Esi included</div>
+          <div class="tprice">Plans from $45/mo &middot; Esi included</div>
           <ul>
             <li>{I['check']} 2,600+ questions, <span class="track-word">RN</span> &amp; LPN tracks</li>
             <li>{I['check']} 50 case studies + 4 readiness exams</li>
@@ -1563,7 +1563,7 @@ PREP_BODY = f"""  <div class="page-hero">
         <div class="lock-ic">{I['lock']}</div>
         <h3>That's the free sample.</h3>
         <p>You've tried every item type. The full <span class="track-word">RN</span> bank has <b>2,600+ questions</b>, 50 case studies, 4 readiness exams, timed mocks, weak-area analytics, and Esi drilling exactly what you miss.</p>
-        <a class="btn btn-coral" href="#" data-unlock>Unlock NCLEX Complete &mdash; from $59 (demo)</a>
+        <a class="btn btn-coral" href="#" data-unlock>Unlock NCLEX Complete &mdash; from $45/mo (demo)</a>
         <a class="relock" href="#" data-unlock>Just let me feel the paid side &rarr;</a>
       </div>
 
@@ -1635,7 +1635,7 @@ COMPLETE_BODY = f"""  <div class="page-hero">
       <h1 style="margin-top:0.6rem;">Everything you need to pass. <span class="em">Nothing you don't.</span></h1>
       <p>Four ways to master the Next Gen NCLEX &mdash; case studies, a deep question bank, a strategy course, and full-length readiness exams that predict your pass chance &mdash; wrapped in a plan built around your test date. Esi, your AI tutor, comes with every plan.</p>
       <div class="hero-cta" style="margin-top:1.8rem;">
-        <a class="btn btn-coral" href="#pricing">See plans &mdash; from $59</a>
+        <a class="btn btn-coral" href="#pricing">See plans &mdash; from $45/mo</a>
         <a class="btn btn-ghost" href="nclex.html">Try the free practice</a>
       </div>
       <div class="chip-row" style="margin-top:1.4rem;justify-content:center;">
@@ -1727,7 +1727,7 @@ COMPLETE_BODY = f"""  <div class="page-hero">
         </div>
         <div class="sched hot fade-up">
           <span class="rec">Most students</span>
-          <div class="len">2 Months</div>
+          <div class="len">3 Months</div>
           <div class="hrs">~2 hrs/day &middot; 5 days/week</div>
           <ul>
             <li>{I['check']} The ideal timeline for most test-takers</li>
@@ -1738,7 +1738,7 @@ COMPLETE_BODY = f"""  <div class="page-hero">
         </div>
         <div class="sched fade-up">
           <span class="rec">Full-time workers</span>
-          <div class="len">3 Months</div>
+          <div class="len">6 Months</div>
           <div class="hrs">1&ndash;2 hrs/day &middot; 5 days/week</div>
           <ul>
             <li>{I['check']} Right if you work full-time or need to rebuild basics</li>
@@ -1749,7 +1749,7 @@ COMPLETE_BODY = f"""  <div class="page-hero">
         </div>
       </div>
 
-      <div class="section-head fade-up" style="margin-top:3rem;"><span class="eyebrow">Not sure?</span><h2>Which plan is <span class="hl">right for you?</span></h2><p>Answer three quick questions and we'll point you to the 1-, 2-, or 3-month plan.</p></div>
+      <div class="section-head fade-up" style="margin-top:3rem;"><span class="eyebrow">Not sure?</span><h2>Which plan is <span class="hl">right for you?</span></h2><p>Answer three quick questions and we'll point you to the 1-, 3-, or 6-month plan.</p></div>
       <div class="squiz fade-up" data-squiz>
         <div class="sq-progress"><i style="width:33%;"></i></div>
         <div class="q" data-step="1">
@@ -1757,8 +1757,8 @@ COMPLETE_BODY = f"""  <div class="page-hero">
           <h4>When is your NCLEX test date?</h4>
           <div class="opts">
             <button class="opt" data-score="1">In about a month or less</button>
-            <button class="opt" data-score="2">Roughly two months out</button>
-            <button class="opt" data-score="3">Three months or more &mdash; or not booked yet</button>
+            <button class="opt" data-score="2">A few months out</button>
+            <button class="opt" data-score="3">Six months out &mdash; or not booked yet</button>
           </div>
         </div>
         <div class="q" data-step="2">
@@ -1875,7 +1875,7 @@ COMPLETE_BODY = f"""  <div class="page-hero">
       {pricing_tiers("join.html")}
       <div class="guarantee fade-up">
         {I['shield']}
-        <div><b>NCLEX Pass Guarantee</b><p>On the 2-, 3-, and 6-month plans, finish the program and if you don't pass, you get a full refund. We built it to work &mdash; and we stand behind it.</p></div>
+        <div><b>NCLEX Pass Guarantee</b><p>On the 3-month, 6-month, and Lifetime plans, finish the program and if you don't pass, you get a full refund. We built it to work &mdash; and we stand behind it.</p></div>
       </div>
       <p style="text-align:center;margin-top:1.6rem;font-size:0.78rem;color:var(--ink-60);max-width:70ch;margin-left:auto;margin-right:auto;">NCLEX&reg; is a registered trademark of the National Council of State Boards of Nursing, Inc. Must Love Scrubs is not affiliated with or endorsed by NCSBN. All questions and materials are 100% original and created by our team. Educational content only &mdash; not medical advice.</p>
     </div>
@@ -1885,7 +1885,7 @@ COMPLETE_BODY = f"""  <div class="page-hero">
 """
 
 PAGES["nclex-complete.html"] = ("NCLEX Complete — The Flagship NCLEX Prep | Must Love Scrubs",
-    "NCLEX Complete: 50 Next Gen case studies, 2,600+ original questions, a strategy course, and 4 full-length readiness exams that predict your pass chance. Esi AI tutor included. Plans from $59.",
+    "NCLEX Complete: 50 Next Gen case studies, 2,600+ original questions, a strategy course, and 4 full-length readiness exams that predict your pass chance. Esi AI tutor included. Plans from $45/mo.",
     COMPLETE_BODY, "courses")
 
 # ---------------------------------------------------------------- QUESTION BANK (interactive, original content)
@@ -2029,7 +2029,7 @@ QBANK_BODY = f"""  <div class="page-hero">
           <div class="lock-ic">{I['lock']}</div>
           <h3>That’s the free sample.</h3>
           <p>You’ve seen how the bank works. The full <b>{QB_TOTAL}-question</b> bank &mdash; growing toward 2,600+, every NGN type, all clinical areas, with Esi drilling your misses &mdash; comes with any plan.</p>
-          <a class="btn btn-coral" href="nclex-complete.html#pricing">Unlock the full bank &mdash; from $59</a>
+          <a class="btn btn-coral" href="nclex-complete.html#pricing">Unlock the full bank &mdash; from $45/mo</a>
         </div>
       </div>
     </div>
@@ -2772,7 +2772,7 @@ GUIDE_TOPICS = [
     ("card", "How much does it cost?", "fees", "The exam fee, extra costs, and where prep fits your budget."),
     ("book", "What's on the test plan?", "testplan", "The categories every question is drawn from — and where to focus."),
     ("star", "When should I take it?", "when", "How to pick a test date that gives you enough runway."),
-    ("play", "How long should I study?", "study", "1, 2, 3, or 6 months — take the quiz and get a matched plan."),
+    ("play", "How long should I study?", "study", "1, 3, 6 months or Lifetime — take the quiz and get a matched plan."),
 ]
 
 def guide_cards():
@@ -2883,7 +2883,7 @@ GUIDE_BODY = f"""  <div class="page-hero">
       </div>
       <div class="guide-block fade-up" id="study">
         <h3>How long should I study?</h3>
-        <p>It depends on your foundation and your test date. As a rule of thumb: a <b>1-month</b> plan for strong students who mainly need reps, a <b>2-month</b> plan for most people, and a <b>3-month</b> plan if you work full-time or are rebuilding basics. Not sure? Take the 30-second quiz.</p>
+        <p>It depends on your foundation and your test date. As a rule of thumb: a <b>1-month</b> plan for strong students who mainly need reps, a <b>3-month</b> plan for most people, and a <b>6-month</b> plan if you work full-time or are rebuilding basics. Not sure? Take the 30-second quiz.</p>
         <div class="hero-cta" style="margin-top:0.6rem;">
           <a class="btn btn-coral" href="nclex-complete.html#pricing">Take the plan quiz &rarr;</a>
         </div>
@@ -2913,7 +2913,7 @@ GUIDE_BODY = f"""  <div class="page-hero">
       <div class="soon-band fade-up" style="margin-top:1.6rem;">
         <div>
           <h3>Ready to go all in?</h3>
-          <p>NCLEX Complete has the case studies, the question bank, the readiness exams, the schedule, and Esi &mdash; from $59.</p>
+          <p>NCLEX Complete has the case studies, the question bank, the readiness exams, the schedule, and Esi &mdash; from $45/mo.</p>
         </div>
         <a class="btn btn-coral" href="nclex-complete.html">Explore NCLEX Complete</a>
       </div>
