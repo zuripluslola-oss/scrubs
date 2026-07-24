@@ -1,0 +1,740 @@
+{
+ "batch": "core-03",
+ "sheets": [
+  {
+   "id": "cranial-nerves",
+   "title": "Cranial Nerves (I–XII)",
+   "category": "Reference",
+   "icon": "sheet",
+   "summary": "All twelve, their function, and whether they're sensory, motor, or both.",
+   "sections": [
+    {
+     "h": "I–VI",
+     "rows": [
+      {
+       "k": "I Olfactory",
+       "v": "Smell",
+       "note": "Sensory."
+      },
+      {
+       "k": "II Optic",
+       "v": "Vision",
+       "note": "Sensory."
+      },
+      {
+       "k": "III Oculomotor",
+       "v": "Most eye movement, pupil constriction",
+       "note": "Motor."
+      },
+      {
+       "k": "IV Trochlear",
+       "v": "Eye — down and in",
+       "note": "Motor."
+      },
+      {
+       "k": "V Trigeminal",
+       "v": "Face sensation, chewing",
+       "note": "Both."
+      },
+      {
+       "k": "VI Abducens",
+       "v": "Eye — lateral movement",
+       "note": "Motor."
+      }
+     ]
+    },
+    {
+     "h": "VII–XII",
+     "rows": [
+      {
+       "k": "VII Facial",
+       "v": "Facial expression, taste (anterior tongue)",
+       "note": "Both."
+      },
+      {
+       "k": "VIII Vestibulocochlear",
+       "v": "Hearing and balance",
+       "note": "Sensory."
+      },
+      {
+       "k": "IX Glossopharyngeal",
+       "v": "Swallowing, gag, taste (posterior)",
+       "note": "Both."
+      },
+      {
+       "k": "X Vagus",
+       "v": "Gag, swallow, parasympathetic to organs",
+       "note": "Both."
+      },
+      {
+       "k": "XI Accessory",
+       "v": "Shoulder shrug, head turn",
+       "note": "Motor."
+      },
+      {
+       "k": "XII Hypoglossal",
+       "v": "Tongue movement",
+       "note": "Motor."
+      }
+     ]
+    }
+   ],
+   "pearl": "Names: “On Old Olympus’ Towering Tops A Finn And German Viewed Some Hops.” Type: “Some Say Marry Money But My Brother Says Big Brains Matter Most” (S/M/B)."
+  },
+  {
+   "id": "therapeutic-diets",
+   "title": "Therapeutic Diets",
+   "category": "Nutrition",
+   "icon": "drop",
+   "summary": "Which diet goes with which condition.",
+   "sections": [
+    {
+     "h": "Texture / GI rest",
+     "rows": [
+      {
+       "k": "Clear liquid",
+       "v": "Broth, gelatin, apple juice, tea",
+       "note": "Pre/post-op, acute GI upset."
+      },
+      {
+       "k": "Full liquid",
+       "v": "Adds milk, cream soups, pudding",
+       "note": "Transition from clear."
+      },
+      {
+       "k": "Low residue / low fiber",
+       "v": "Limit whole grains, raw produce",
+       "note": "Acute diverticulitis, IBD flare, pre-colonoscopy."
+      },
+      {
+       "k": "High fiber",
+       "v": "Whole grains, fruits, vegetables",
+       "note": "Constipation, diverticulOSIS (not acute)."
+      }
+     ]
+    },
+    {
+     "h": "Condition-specific",
+     "rows": [
+      {
+       "k": "Renal (CKD)",
+       "v": "Limit protein, potassium, phosphorus, sodium, fluid",
+       "note": "Protects failing kidneys."
+      },
+      {
+       "k": "Cardiac / DASH",
+       "v": "Low sodium, low saturated fat",
+       "note": "Heart failure, hypertension."
+      },
+      {
+       "k": "Low purine",
+       "v": "Avoid organ meats, shellfish, alcohol",
+       "note": "Gout."
+      },
+      {
+       "k": "Gluten-free",
+       "v": "No wheat, barley, rye",
+       "note": "Celiac disease."
+      },
+      {
+       "k": "Consistent carbohydrate",
+       "v": "Steady carbs per meal",
+       "note": "Diabetes."
+      }
+     ]
+    }
+   ],
+   "pearl": "On a loop/thiazide diuretic → eat MORE potassium (bananas, oranges). On potassium-sparing or CKD → eat LESS."
+  },
+  {
+   "id": "defense-mechanisms",
+   "title": "Defense Mechanisms",
+   "category": "Mental Health",
+   "icon": "chat",
+   "summary": "The ego defenses and a quick example of each.",
+   "sections": [
+    {
+     "h": "Common",
+     "rows": [
+      {
+       "k": "Denial",
+       "v": "Refusing to accept reality",
+       "note": "“I don’t have a drinking problem.”"
+      },
+      {
+       "k": "Repression",
+       "v": "Unconsciously blocking memories",
+       "note": "Forgetting a traumatic event."
+      },
+      {
+       "k": "Regression",
+       "v": "Reverting to earlier behavior",
+       "note": "A hospitalized child wetting the bed."
+      },
+      {
+       "k": "Projection",
+       "v": "Attributing own feelings to others",
+       "note": "“You’re the one who’s angry, not me.”"
+      },
+      {
+       "k": "Displacement",
+       "v": "Redirecting feelings to a safer target",
+       "note": "Yelling at family after a bad day at work."
+      }
+     ]
+    },
+    {
+     "h": "Higher-level / other",
+     "rows": [
+      {
+       "k": "Rationalization",
+       "v": "Justifying with logical excuses",
+       "note": "“I failed because the test was unfair.”"
+      },
+      {
+       "k": "Sublimation",
+       "v": "Channeling urges into acceptable outlets",
+       "note": "Aggression → competitive sports (healthiest)."
+      },
+      {
+       "k": "Reaction formation",
+       "v": "Acting opposite to true feelings",
+       "note": "Being overly kind to someone you dislike."
+      },
+      {
+       "k": "Compensation",
+       "v": "Offsetting a weakness with a strength",
+       "note": "Poor athlete excels academically."
+      },
+      {
+       "k": "Undoing",
+       "v": "Trying to cancel out an act",
+       "note": "Buying a gift after an argument."
+      }
+     ]
+    }
+   ],
+   "pearl": "Sublimation is the healthiest/most mature defense. Denial is often the first response to loss."
+  },
+  {
+   "id": "prioritization",
+   "title": "Prioritization Frameworks",
+   "category": "Management",
+   "icon": "sheet",
+   "summary": "The rules for deciding who and what comes first.",
+   "sections": [
+    {
+     "h": "Order of frameworks",
+     "rows": [
+      {
+       "k": "1. ABCs",
+       "v": "Airway → Breathing → Circulation",
+       "note": "Always first; airway beats everything."
+      },
+      {
+       "k": "2. Maslow",
+       "v": "Physiological before psychosocial",
+       "note": "Oxygen/food/safety before self-esteem."
+      },
+      {
+       "k": "3. Safety / risk",
+       "v": "Prevent harm",
+       "note": "Falls, errors, infection."
+      },
+      {
+       "k": "4. Acute vs chronic",
+       "v": "Acute and unstable first",
+       "note": "New problems over long-standing ones."
+      }
+     ]
+    },
+    {
+     "h": "Decision cues",
+     "rows": [
+      {
+       "k": "Nursing process",
+       "v": "Assess before you act",
+       "note": "When unsure, the answer is often 'assess/gather more data.'"
+      },
+      {
+       "k": "Least restrictive",
+       "v": "Try the least restrictive option first",
+       "note": "Especially restraints and psych care."
+      },
+      {
+       "k": "Unstable over stable",
+       "v": "See the deteriorating client first",
+       "note": "Predictable/stable clients can wait."
+      }
+     ]
+    }
+   ],
+   "pearl": "If two clients both seem urgent, pick the one with the airway/breathing problem or the newest, most unstable change."
+  },
+  {
+   "id": "delegation",
+   "title": "Delegation & Scope of Practice",
+   "category": "Management",
+   "icon": "sheet",
+   "summary": "Who can safely do what — RN vs LPN/LVN vs UAP.",
+   "sections": [
+    {
+     "h": "Registered Nurse (RN) only",
+     "rows": [
+      {
+       "k": "Cannot delegate",
+       "v": "Assess, plan, evaluate, teach",
+       "note": "The nursing judgment steps stay with the RN."
+      },
+      {
+       "k": "Also RN",
+       "v": "Unstable clients, IV push meds, blood, initial care",
+       "note": "First assessment and care planning."
+      }
+     ]
+    },
+    {
+     "h": "LPN / LVN",
+     "rows": [
+      {
+       "k": "Can do",
+       "v": "Stable clients, many meds, reinforce teaching, monitoring, wound care",
+       "note": "Works under the RN."
+      },
+      {
+       "k": "Cannot",
+       "v": "Initial assessment, IV push (varies), care planning, unstable clients",
+       "note": "Scope varies by state."
+      }
+     ]
+    },
+    {
+     "h": "Unlicensed assistive personnel (UAP)",
+     "rows": [
+      {
+       "k": "Can do",
+       "v": "ADLs, hygiene, vitals (stable), I&O, ambulation, positioning, feeding",
+       "note": "Routine, standard, predictable tasks."
+      },
+      {
+       "k": "Cannot",
+       "v": "Assess, teach, evaluate, anything requiring judgment",
+       "note": ""
+      }
+     ]
+    }
+   ],
+   "pearl": "5 Rights of Delegation: right Task, Circumstance, Person, Direction/communication, Supervision. Never delegate assess/teach/evaluate/unstable."
+  },
+  {
+   "id": "critical-values",
+   "title": "Critical / Panic Lab Values",
+   "category": "Reference",
+   "icon": "flask",
+   "summary": "The values that mean 'call the provider now.'",
+   "sections": [
+    {
+     "h": "Electrolytes",
+     "rows": [
+      {
+       "k": "Potassium",
+       "v": "<2.5 or >6.5 mEq/L",
+       "note": "Cardiac dysrhythmias — highest priority."
+      },
+      {
+       "k": "Sodium",
+       "v": "<120 or >160 mEq/L",
+       "note": "Seizures, altered mental status."
+      },
+      {
+       "k": "Calcium",
+       "v": "<6 or >13 mg/dL",
+       "note": "Tetany or severe weakness."
+      },
+      {
+       "k": "Magnesium",
+       "v": "<1 or >9 mg/dL",
+       "note": "Reflex and cardiac changes."
+      }
+     ]
+    },
+    {
+     "h": "Other panics",
+     "rows": [
+      {
+       "k": "Glucose",
+       "v": "<40 or >400 mg/dL",
+       "note": "Coma risk both directions."
+      },
+      {
+       "k": "Platelets",
+       "v": "<20,000 /mm³",
+       "note": "Spontaneous bleeding."
+      },
+      {
+       "k": "Hemoglobin",
+       "v": "<7 g/dL",
+       "note": "May require transfusion."
+      },
+      {
+       "k": "INR",
+       "v": ">5",
+       "note": "High bleeding risk (hold warfarin, vitamin K)."
+      },
+      {
+       "k": "pH",
+       "v": "<7.2 or >7.6",
+       "note": "Severe acid-base disturbance."
+      }
+     ]
+    }
+   ],
+   "pearl": "Critical values require read-back and prompt provider notification — document who you told and when."
+  },
+  {
+   "id": "increased-icp",
+   "title": "Increased ICP & Neuro Checks",
+   "category": "Reference",
+   "icon": "sheet",
+   "summary": "Early vs late signs, the GCS, and positioning.",
+   "sections": [
+    {
+     "h": "Signs of rising ICP",
+     "rows": [
+      {
+       "k": "Earliest",
+       "v": "Decreasing level of consciousness, restlessness",
+       "note": "LOC change is the most sensitive early sign."
+      },
+      {
+       "k": "Late — Cushing's triad",
+       "v": "Bradycardia, widening pulse pressure, irregular respirations",
+       "note": "Ominous — impending herniation."
+      },
+      {
+       "k": "Also late",
+       "v": "Fixed/dilated pupils, posturing, vomiting",
+       "note": "Decorticate (flexion) → decerebrate (extension) = worse."
+      }
+     ]
+    },
+    {
+     "h": "Glasgow Coma Scale",
+     "rows": [
+      {
+       "k": "Components",
+       "v": "Eye (4) + Verbal (5) + Motor (6)",
+       "note": "Max 15."
+      },
+      {
+       "k": "≤8",
+       "v": "Coma — protect the airway (intubate)",
+       "note": "Lower = worse."
+      }
+     ]
+    },
+    {
+     "h": "Interventions",
+     "rows": [
+      {
+       "k": "Positioning",
+       "v": "HOB 30°, head midline",
+       "note": "Promotes venous drainage."
+      },
+      {
+       "k": "Avoid",
+       "v": "Neck flexion, Valsalva, suctioning >10 sec",
+       "note": "These spike ICP."
+      }
+     ]
+    }
+   ],
+   "pearl": "Early ICP = LOC change. Late ICP = Cushing's triad (opposite of shock: slow HR, wide pulse pressure)."
+  },
+  {
+   "id": "blood-transfusion",
+   "title": "Blood Transfusion",
+   "category": "Reference",
+   "icon": "drop",
+   "summary": "Compatibility, reactions, and safe administration.",
+   "sections": [
+    {
+     "h": "Compatibility",
+     "rows": [
+      {
+       "k": "O negative",
+       "v": "Universal donor",
+       "note": "Given in emergencies."
+      },
+      {
+       "k": "AB positive",
+       "v": "Universal recipient",
+       "note": "Can receive any type."
+      },
+      {
+       "k": "Rh",
+       "v": "Rh- clients get Rh- blood",
+       "note": "Rh+ can receive either."
+      }
+     ]
+    },
+    {
+     "h": "Reactions",
+     "rows": [
+      {
+       "k": "Acute hemolytic (ABO mismatch)",
+       "v": "Fever, chills, low back pain, dark urine",
+       "note": "STOP immediately; saline via new tubing; the most dangerous."
+      },
+      {
+       "k": "Febrile",
+       "v": "Fever, chills (most common)",
+       "note": "Stop; antipyretic."
+      },
+      {
+       "k": "Allergic",
+       "v": "Hives, itching → anaphylaxis",
+       "note": "Stop; antihistamine/epinephrine."
+      },
+      {
+       "k": "TACO (overload)",
+       "v": "Dyspnea, crackles, hypertension",
+       "note": "Slow/stop; diuretic; sit upright."
+      }
+     ]
+    },
+    {
+     "h": "Safe administration",
+     "rows": [
+      {
+       "k": "Verify",
+       "v": "Two nurses check client + unit",
+       "note": "Right blood, right client."
+      },
+      {
+       "k": "Tubing/fluid",
+       "v": "Y-tubing with 0.9% normal saline only",
+       "note": "Never with dextrose or LR."
+      },
+      {
+       "k": "Timing",
+       "v": "Stay the first 15 min; infuse within 4 hours",
+       "note": "Most reactions occur early."
+      }
+     ]
+    }
+   ],
+   "pearl": "Any transfusion reaction: STOP the blood first, keep the line open with saline (new tubing), then assess and notify."
+  },
+  {
+   "id": "burns",
+   "title": "Burns",
+   "category": "Reference",
+   "icon": "drop",
+   "summary": "Rule of nines, phases, and priorities.",
+   "sections": [
+    {
+     "h": "Rule of nines (adult %TBSA)",
+     "rows": [
+      {
+       "k": "Head & neck",
+       "v": "9%",
+       "note": "Front 4.5 + back 4.5."
+      },
+      {
+       "k": "Each arm",
+       "v": "9%",
+       "note": ""
+      },
+      {
+       "k": "Each leg",
+       "v": "18%",
+       "note": ""
+      },
+      {
+       "k": "Front torso",
+       "v": "18%",
+       "note": "Back torso 18%."
+      },
+      {
+       "k": "Perineum",
+       "v": "1%",
+       "note": ""
+      }
+     ]
+    },
+    {
+     "h": "Phases",
+     "rows": [
+      {
+       "k": "Emergent/resuscitative",
+       "v": "First 24–48 hr",
+       "note": "Fluid shifts OUT (hypovolemia); watch airway & fluids."
+      },
+      {
+       "k": "Acute",
+       "v": "Until wounds close",
+       "note": "Infection risk, nutrition, wound care."
+      },
+      {
+       "k": "Rehabilitative",
+       "v": "Recovery",
+       "note": "Mobility, scar management, psychosocial."
+      }
+     ]
+    },
+    {
+     "h": "Priorities & fluids",
+     "rows": [
+      {
+       "k": "Airway first",
+       "v": "Assess for inhalation injury",
+       "note": "Singed nasal hair, soot, hoarseness, facial burns."
+      },
+      {
+       "k": "Parkland formula",
+       "v": "4 mL × kg × %TBSA (LR)",
+       "note": "Half in the first 8 hr from time of injury."
+      }
+     ]
+    }
+   ],
+   "pearl": "Burn priority order: Airway → Fluids (LR) → Pain → Infection prevention. Inhalation injury kills fastest."
+  },
+  {
+   "id": "oxygen-devices",
+   "title": "Oxygen Delivery Devices",
+   "category": "Reference",
+   "icon": "lungs",
+   "summary": "Flow rates and the FiO₂ each device delivers.",
+   "sections": [
+    {
+     "h": "Low-flow",
+     "rows": [
+      {
+       "k": "Nasal cannula",
+       "v": "1–6 L/min → 24–44%",
+       "note": "Comfortable; humidify above 4 L."
+      },
+      {
+       "k": "Simple face mask",
+       "v": "6–10 L/min → 40–60%",
+       "note": "Minimum 6 L to flush CO₂."
+      },
+      {
+       "k": "Non-rebreather mask",
+       "v": "10–15 L/min → 60–90%+",
+       "note": "Highest without intubation; keep the reservoir bag inflated."
+      }
+     ]
+    },
+    {
+     "h": "High-flow / precise",
+     "rows": [
+      {
+       "k": "Venturi mask",
+       "v": "Precise 24–50%",
+       "note": "Best for COPD — exact, controlled FiO₂."
+      },
+      {
+       "k": "High-flow nasal cannula",
+       "v": "Up to 60 L/min",
+       "note": "Heated, humidified, high FiO₂."
+      }
+     ]
+    }
+   ],
+   "pearl": "COPD → Venturi mask (precise, controlled O₂). Emergency high need → non-rebreather (bag stays inflated)."
+  },
+  {
+   "id": "pressure-injury",
+   "title": "Pressure Injury Staging",
+   "category": "Fundamentals",
+   "icon": "sheet",
+   "summary": "How to stage a pressure injury correctly.",
+   "sections": [
+    {
+     "h": "Stages",
+     "rows": [
+      {
+       "k": "Stage 1",
+       "v": "Intact skin, non-blanchable redness",
+       "note": "If it blanches, it's not a pressure injury yet."
+      },
+      {
+       "k": "Stage 2",
+       "v": "Partial-thickness loss; shallow open ulcer or blister",
+       "note": "Pink/red wound bed, no slough."
+      },
+      {
+       "k": "Stage 3",
+       "v": "Full-thickness; subcutaneous FAT visible",
+       "note": "May have slough; no bone/muscle."
+      },
+      {
+       "k": "Stage 4",
+       "v": "Full-thickness; BONE, muscle, or tendon exposed",
+       "note": "Deepest."
+      }
+     ]
+    },
+    {
+     "h": "Cannot be numbered",
+     "rows": [
+      {
+       "k": "Unstageable",
+       "v": "Base covered by slough/eschar",
+       "note": "Can't see the depth until debrided."
+      },
+      {
+       "k": "Deep tissue injury",
+       "v": "Persistent maroon/purple intact skin or blood blister",
+       "note": "Damage below the surface."
+      }
+     ]
+    }
+   ],
+   "pearl": "Stage by what you SEE: fat = 3, bone = 4, covered = unstageable. Prevention: reposition q2h, keep skin dry."
+  },
+  {
+   "id": "acid-base-causes",
+   "title": "Acid-Base Causes",
+   "category": "Reference",
+   "icon": "lungs",
+   "summary": "What causes each of the four acid-base disturbances.",
+   "sections": [
+    {
+     "h": "Respiratory (lungs / CO₂)",
+     "rows": [
+      {
+       "k": "Respiratory acidosis",
+       "v": "Hypoventilation",
+       "note": "COPD, opioid overdose, sedation, chest trauma."
+      },
+      {
+       "k": "Respiratory alkalosis",
+       "v": "Hyperventilation",
+       "note": "Anxiety, pain, fever, early PE, high altitude."
+      }
+     ]
+    },
+    {
+     "h": "Metabolic (kidneys / HCO₃)",
+     "rows": [
+      {
+       "k": "Metabolic acidosis",
+       "v": "Acid gain or bicarb loss",
+       "note": "DKA, lactic acidosis/shock, diarrhea, renal failure."
+      },
+      {
+       "k": "Metabolic alkalosis",
+       "v": "Acid loss or bicarb gain",
+       "note": "Vomiting, NG suction, antacids, diuretics."
+      }
+     ]
+    }
+   ],
+   "pearl": "Vomiting → alkalosis (lose acid). Diarrhea → acidosis (lose bicarb). DKA → acidosis. Hyperventilating → alkalosis."
+  }
+ ]
+}
