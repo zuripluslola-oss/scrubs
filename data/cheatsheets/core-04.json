@@ -1,0 +1,610 @@
+{
+ "batch": "core-04",
+ "sheets": [
+  {
+   "id": "iv-fluids",
+   "title": "IV Fluids & Tonicity",
+   "category": "Reference",
+   "icon": "drop",
+   "summary": "Which fluid moves where — and when to use each.",
+   "sections": [
+    {
+     "h": "Isotonic (stays in the vessels)",
+     "rows": [
+      {
+       "k": "0.9% Normal Saline",
+       "v": "Isotonic",
+       "note": "Fluid resuscitation, blood loss, dehydration; only fluid with blood."
+      },
+      {
+       "k": "Lactated Ringer's (LR)",
+       "v": "Isotonic",
+       "note": "Surgery, burns; contains K⁺ — avoid in renal failure/hyperkalemia."
+      },
+      {
+       "k": "D5W (in the bag)",
+       "v": "Isotonic then hypotonic",
+       "note": "Becomes hypotonic once glucose is metabolized."
+      }
+     ]
+    },
+    {
+     "h": "Hypotonic (shifts INTO cells)",
+     "rows": [
+      {
+       "k": "0.45% NS (½ NS)",
+       "v": "Hypotonic",
+       "note": "Cellular dehydration, hypernatremia, DKA maintenance."
+      },
+      {
+       "k": "Caution",
+       "v": "—",
+       "note": "Can cause cerebral edema — avoid with increased ICP or head injury."
+      }
+     ]
+    },
+    {
+     "h": "Hypertonic (pulls fluid OUT of cells)",
+     "rows": [
+      {
+       "k": "3% NS, D10W, D5NS, D5LR",
+       "v": "Hypertonic",
+       "note": "Severe hyponatremia, cerebral edema."
+      },
+      {
+       "k": "Caution",
+       "v": "—",
+       "note": "Risk of fluid overload — give slowly, monitor lungs and sodium."
+      }
+     ]
+    }
+   ],
+   "pearl": "Iso stays, Hypo swells the cell, Hyper shrinks the cell. Never give hypotonic fluids with increased ICP."
+  },
+  {
+   "id": "thyroid",
+   "title": "Thyroid: Hypo vs Hyper",
+   "category": "Endocrine",
+   "icon": "heartbeat",
+   "summary": "Everything slows down vs. everything speeds up.",
+   "sections": [
+    {
+     "h": "Hypothyroidism (too little — SLOW)",
+     "rows": [
+      {
+       "k": "Signs",
+       "v": "Fatigue, weight gain, cold intolerance, bradycardia, constipation",
+       "note": "Dry skin, hair loss, depression."
+      },
+      {
+       "k": "Treatment",
+       "v": "Levothyroxine (lifelong, morning, empty stomach)",
+       "note": "Crisis: myxedema coma."
+      }
+     ]
+    },
+    {
+     "h": "Hyperthyroidism (too much — FAST)",
+     "rows": [
+      {
+       "k": "Signs",
+       "v": "Weight loss, heat intolerance, tachycardia, diarrhea, anxiety",
+       "note": "Graves': exophthalmos (bulging eyes)."
+      },
+      {
+       "k": "Treatment",
+       "v": "Methimazole/PTU, beta-blockers, radioactive iodine",
+       "note": "Crisis: thyroid storm (hyperthermia, tachycardia)."
+      }
+     ]
+    }
+   ],
+   "pearl": "Hypo = slow, cold, gain. Hyper = fast, hot, lose. Thyroid storm and myxedema coma are the emergencies."
+  },
+  {
+   "id": "adrenal",
+   "title": "Adrenal: Cushing's vs Addison's",
+   "category": "Endocrine",
+   "icon": "heartbeat",
+   "summary": "Too much cortisol vs. too little — mirror images.",
+   "sections": [
+    {
+     "h": "Cushing's (too MUCH cortisol)",
+     "rows": [
+      {
+       "k": "Appearance",
+       "v": "Moon face, buffalo hump, truncal obesity, striae",
+       "note": "Thin skin, easy bruising."
+      },
+      {
+       "k": "Labs",
+       "v": "High glucose, high sodium, LOW potassium, hypertension",
+       "note": "Immunosuppressed — infection risk."
+      }
+     ]
+    },
+    {
+     "h": "Addison's (too LITTLE cortisol/aldosterone)",
+     "rows": [
+      {
+       "k": "Appearance",
+       "v": "Weight loss, fatigue, bronze hyperpigmentation",
+       "note": "Salt craving."
+      },
+      {
+       "k": "Labs",
+       "v": "Low glucose, LOW sodium, HIGH potassium, hypotension",
+       "note": "Addisonian crisis: give IV steroids + saline."
+      }
+     ]
+    }
+   ],
+   "pearl": "Cushing's = Cushioned/excess (high everything but K⁺). Addison's = Absent (low everything but K⁺). Never stop steroids abruptly."
+  },
+  {
+   "id": "immunizations",
+   "title": "Immunizations & Live Vaccine Cautions",
+   "category": "Pediatrics",
+   "icon": "shield",
+   "summary": "The schedule highlights and who must avoid live vaccines.",
+   "sections": [
+    {
+     "h": "Live vaccines (caution!)",
+     "rows": [
+      {
+       "k": "Which",
+       "v": "MMR, varicella, rotavirus, intranasal flu, yellow fever",
+       "note": "Contain weakened live organisms."
+      },
+      {
+       "k": "Avoid in",
+       "v": "Pregnancy and immunocompromised clients",
+       "note": "Can cause disease in these groups."
+      }
+     ]
+    },
+    {
+     "h": "Schedule highlights",
+     "rows": [
+      {
+       "k": "Birth",
+       "v": "Hepatitis B (1st dose)",
+       "note": ""
+      },
+      {
+       "k": "2, 4, 6 months",
+       "v": "DTaP, IPV, Hib, PCV, rotavirus",
+       "note": "Primary infant series."
+      },
+      {
+       "k": "12–15 months",
+       "v": "MMR, varicella, Hib/PCV boosters",
+       "note": "First live vaccines given here."
+      },
+      {
+       "k": "Adolescent",
+       "v": "Tdap, HPV, meningococcal",
+       "note": "Annual influenza for everyone ≥6 mo."
+      }
+     ]
+    }
+   ],
+   "pearl": "Hold vaccines for moderate/severe illness (a mild cold is fine). Live vaccines: not in pregnancy or immunocompromise."
+  },
+  {
+   "id": "toxicities",
+   "title": "Toxicities & Overdose Signs",
+   "category": "Pharmacology",
+   "icon": "shield",
+   "summary": "Recognize the poisoning — and its antidote.",
+   "sections": [
+    {
+     "h": "Common overdoses",
+     "rows": [
+      {
+       "k": "Acetaminophen",
+       "v": "Liver failure (may be delayed)",
+       "note": "Antidote: acetylcysteine."
+      },
+      {
+       "k": "Salicylate (aspirin)",
+       "v": "Tinnitus, hyperventilation, metabolic acidosis",
+       "note": "Supportive; alkalinize urine."
+      },
+      {
+       "k": "Opioid",
+       "v": "Pinpoint pupils, respiratory depression",
+       "note": "Antidote: naloxone."
+      },
+      {
+       "k": "Digoxin",
+       "v": "Nausea, yellow-green vision, dysrhythmias",
+       "note": "Antidote: digoxin immune Fab."
+      }
+     ]
+    },
+    {
+     "h": "Toxidromes",
+     "rows": [
+      {
+       "k": "Anticholinergic",
+       "v": "Hot, dry, red, delirious, dilated pupils",
+       "note": "“Mad as a hatter, dry as a bone.”"
+      },
+      {
+       "k": "Cholinergic (organophosphate)",
+       "v": "SLUDGE: salivation, lacrimation, urination, defecation, GI, emesis",
+       "note": "Antidote: atropine."
+      },
+      {
+       "k": "Carbon monoxide",
+       "v": "Headache, cherry-red skin, confusion",
+       "note": "Give 100% oxygen; pulse ox reads falsely normal."
+      }
+     ]
+    }
+   ],
+   "pearl": "If a stem gives a classic toxidrome + a drug level, the answer is stop exposure and give the specific antidote."
+  },
+  {
+   "id": "wound-drains",
+   "title": "Wound Care & Surgical Drains",
+   "category": "Fundamentals",
+   "icon": "drop",
+   "summary": "Drain types, healing, and dressing choices.",
+   "sections": [
+    {
+     "h": "Drains",
+     "rows": [
+      {
+       "k": "Jackson-Pratt (JP)",
+       "v": "Bulb, closed suction",
+       "note": "Compress the bulb to re-establish suction."
+      },
+      {
+       "k": "Hemovac",
+       "v": "Closed suction, larger volume",
+       "note": "Compress after emptying."
+      },
+      {
+       "k": "Penrose",
+       "v": "Open, passive drainage",
+       "note": "Drains onto a dressing; secured with a safety pin."
+      }
+     ]
+    },
+    {
+     "h": "Healing & dressings",
+     "rows": [
+      {
+       "k": "Primary intention",
+       "v": "Clean surgical edges approximated",
+       "note": "Fastest, least scar."
+      },
+      {
+       "k": "Secondary intention",
+       "v": "Open wound heals from the base up",
+       "note": "Pressure injuries, granulation."
+      },
+      {
+       "k": "Wet-to-dry",
+       "v": "Mechanical debridement",
+       "note": "Being phased out for gentler options."
+      },
+      {
+       "k": "Hydrocolloid / alginate",
+       "v": "Moist healing / high-exudate wounds",
+       "note": "Match the dressing to the drainage."
+      }
+     ]
+    }
+   ],
+   "pearl": "Empty and measure closed drains; report a sudden increase or a change to bright-red bleeding."
+  },
+  {
+   "id": "preeclampsia",
+   "title": "Preeclampsia & Maternal Danger Signs",
+   "category": "Maternity",
+   "icon": "drop",
+   "summary": "The hypertensive disorders of pregnancy and when to act.",
+   "sections": [
+    {
+     "h": "Spectrum",
+     "rows": [
+      {
+       "k": "Gestational HTN",
+       "v": "BP ≥140/90 after 20 weeks",
+       "note": "No proteinuria."
+      },
+      {
+       "k": "Preeclampsia",
+       "v": "HTN + proteinuria",
+       "note": "Severe features: BP ≥160/110, headache, visual changes, RUQ pain."
+      },
+      {
+       "k": "Eclampsia",
+       "v": "Preeclampsia + seizures",
+       "note": "Obstetric emergency."
+      },
+      {
+       "k": "HELLP",
+       "v": "Hemolysis, Elevated Liver enzymes, Low Platelets",
+       "note": "Life-threatening variant."
+      }
+     ]
+    },
+    {
+     "h": "Management",
+     "rows": [
+      {
+       "k": "Magnesium sulfate",
+       "v": "Seizure prophylaxis",
+       "note": "Toxicity: lost reflexes, RR <12, low urine output."
+      },
+      {
+       "k": "Mag antidote",
+       "v": "Calcium gluconate",
+       "note": "Keep at the bedside."
+      },
+      {
+       "k": "Danger signs to report",
+       "v": "Severe headache, visual changes, epigastric/RUQ pain, ↓fetal movement, bleeding",
+       "note": "Teach the client to call immediately."
+      }
+     ]
+    }
+   ],
+   "pearl": "Preeclampsia teaching: report headache, visual changes, and epigastric pain — these signal worsening/seizure risk."
+  },
+  {
+   "id": "mh-med-classes",
+   "title": "Mental Health Medication Classes",
+   "category": "Mental Health",
+   "icon": "flask",
+   "summary": "The psych drug classes and their signature warnings.",
+   "sections": [
+    {
+     "h": "Antidepressants",
+     "rows": [
+      {
+       "k": "SSRIs (sertraline)",
+       "v": "2–6 weeks to work",
+       "note": "Serotonin syndrome; ↑suicide risk early."
+      },
+      {
+       "k": "TCAs (amitriptyline)",
+       "v": "Anticholinergic effects",
+       "note": "Cardiotoxic and lethal in overdose."
+      },
+      {
+       "k": "MAOIs (phenelzine)",
+       "v": "Avoid tyramine foods (aged cheese, wine)",
+       "note": "Tyramine → hypertensive crisis."
+      }
+     ]
+    },
+    {
+     "h": "Antipsychotics & stabilizers",
+     "rows": [
+      {
+       "k": "Typical (haloperidol)",
+       "v": "EPS, tardive dyskinesia",
+       "note": "NMS: high fever + rigidity = emergency."
+      },
+      {
+       "k": "Atypical (clozapine)",
+       "v": "Metabolic effects",
+       "note": "Clozapine → agranulocytosis; monitor WBC."
+      },
+      {
+       "k": "Lithium",
+       "v": "Mood stabilizer",
+       "note": "Level 0.6–1.2; steady salt/fluids."
+      },
+      {
+       "k": "Benzodiazepines (lorazepam)",
+       "v": "Short-term anxiety/withdrawal",
+       "note": "Dependence; respiratory depression."
+      }
+     ]
+    }
+   ],
+   "pearl": "MAOIs + tyramine = hypertensive crisis. Clozapine = watch WBC (agranulocytosis). SSRIs take weeks."
+  },
+  {
+   "id": "pain-management",
+   "title": "Pain Management",
+   "category": "Fundamentals",
+   "icon": "sheet",
+   "summary": "Assessing and treating pain across ages.",
+   "sections": [
+    {
+     "h": "Pain scales",
+     "rows": [
+      {
+       "k": "Numeric 0–10",
+       "v": "Adults who can self-report",
+       "note": "Pain is what the client says it is."
+      },
+      {
+       "k": "Wong-Baker FACES",
+       "v": "Children ~3+ and nonverbal",
+       "note": "Faces from smiling to crying."
+      },
+      {
+       "k": "FLACC",
+       "v": "Infants/young children",
+       "note": "Face, Legs, Activity, Cry, Consolability."
+      },
+      {
+       "k": "PAINAD",
+       "v": "Advanced dementia",
+       "note": "Behavioral observation."
+      }
+     ]
+    },
+    {
+     "h": "Treatment principles",
+     "rows": [
+      {
+       "k": "WHO ladder",
+       "v": "Non-opioid → weak opioid → strong opioid",
+       "note": "Step up as needed."
+      },
+      {
+       "k": "Around-the-clock",
+       "v": "Scheduled dosing for constant pain",
+       "note": "Plus breakthrough doses."
+      },
+      {
+       "k": "Opioid safety",
+       "v": "Assess RR (hold <12), prevent constipation",
+       "note": "Keep naloxone available."
+      }
+     ]
+    }
+   ],
+   "pearl": "Pain is subjective — believe the client's report. Assess respiratory rate BEFORE giving an opioid."
+  },
+  {
+   "id": "respiratory-conditions",
+   "title": "Respiratory Conditions Compared",
+   "category": "Reference",
+   "icon": "lungs",
+   "summary": "Telling the common respiratory problems apart.",
+   "sections": [
+    {
+     "h": "Obstructive",
+     "rows": [
+      {
+       "k": "Asthma",
+       "v": "Reversible bronchospasm, wheezing",
+       "note": "Albuterol (rescue) + inhaled steroid (controller)."
+      },
+      {
+       "k": "COPD",
+       "v": "Chronic, barrel chest, dyspnea",
+       "note": "Target SpO₂ 88–92%; avoid high-flow O₂."
+      }
+     ]
+    },
+    {
+     "h": "Acute",
+     "rows": [
+      {
+       "k": "Pneumonia",
+       "v": "Fever, productive cough, crackles, consolidation",
+       "note": "Antibiotics; incentive spirometry."
+      },
+      {
+       "k": "Pulmonary embolism",
+       "v": "Sudden dyspnea, pleuritic pain, tachycardia, hypoxia",
+       "note": "Anticoagulate; O₂; prevent with mobility."
+      },
+      {
+       "k": "Pneumothorax",
+       "v": "Absent breath sounds; tension → tracheal deviation",
+       "note": "Chest tube; tension = emergency needle decompression."
+      }
+     ]
+    }
+   ],
+   "pearl": "COPD → keep SpO₂ 88–92% (don't over-oxygenate). Sudden dyspnea + pleuritic chest pain + tachycardia → think PE."
+  },
+  {
+   "id": "seizure-care",
+   "title": "Seizure Care & Precautions",
+   "category": "Fundamentals",
+   "icon": "sheet",
+   "summary": "What to do during a seizure and how to keep the client safe.",
+   "sections": [
+    {
+     "h": "During a seizure",
+     "rows": [
+      {
+       "k": "Protect",
+       "v": "Ease to the floor, side-lying, protect the head",
+       "note": "Turn to the side to prevent aspiration."
+      },
+      {
+       "k": "Do NOT",
+       "v": "Put anything in the mouth or restrain the client",
+       "note": "You can't 'swallow the tongue.'"
+      },
+      {
+       "k": "Observe",
+       "v": "Time it, note the activity, stay with the client",
+       "note": "Have suction and oxygen ready."
+      }
+     ]
+    },
+    {
+     "h": "Precautions & emergencies",
+     "rows": [
+      {
+       "k": "Seizure precautions",
+       "v": "Padded rails, bed low, suction/O₂ at bedside, IV access",
+       "note": "For at-risk clients."
+      },
+      {
+       "k": "Status epilepticus",
+       "v": "Seizure >5 min or repeated without recovery",
+       "note": "Emergency: IV lorazepam."
+      },
+      {
+       "k": "After (postictal)",
+       "v": "Confusion, fatigue",
+       "note": "Reorient; assess for injury."
+      }
+     ]
+    }
+   ],
+   "pearl": "During a seizure: side-lying, protect the head, time it — never restrain or put anything in the mouth."
+  },
+  {
+   "id": "anticoagulants",
+   "title": "Anticoagulants & Antiplatelets",
+   "category": "Pharmacology",
+   "icon": "flask",
+   "summary": "Monitoring and reversal for the blood thinners.",
+   "sections": [
+    {
+     "h": "Anticoagulants",
+     "rows": [
+      {
+       "k": "Heparin (IV/SC)",
+       "v": "Monitor aPTT",
+       "note": "Antidote: protamine; watch platelets (HIT)."
+      },
+      {
+       "k": "Warfarin (PO)",
+       "v": "Monitor INR (goal 2–3)",
+       "note": "Antidote: vitamin K; keep vitamin-K foods consistent."
+      },
+      {
+       "k": "Enoxaparin (LMWH, SC)",
+       "v": "No routine monitoring",
+       "note": "Don't expel the air bubble; rotate sites."
+      },
+      {
+       "k": "DOACs (apixaban, dabigatran)",
+       "v": "Minimal monitoring",
+       "note": "Reversal: andexanet / idarucizumab."
+      }
+     ]
+    },
+    {
+     "h": "Antiplatelets",
+     "rows": [
+      {
+       "k": "Aspirin, clopidogrel",
+       "v": "Prevent clot formation",
+       "note": "Bleeding risk; hold before some procedures."
+      }
+     ]
+    }
+   ],
+   "pearl": "Heparin = aPTT + protamine. Warfarin = INR + vitamin K. All: bleeding precautions (soft brush, no IM, fall safety)."
+  }
+ ]
+}
