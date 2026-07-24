@@ -2034,3 +2034,35 @@ body.mls-paid .gate { display: none; }
   .hero-layer { transform: none !important; }
   * { transition-duration: 0.01ms !important; }
 }
+
+/* Clinical light-mode refresh: shared across every generated page. */
+:root {
+  --indigo-950: #10314a;
+  --indigo-900: #17496a;
+  --indigo-700: #2f7196;
+  --indigo-100: #e7f1f6;
+  --coral-500: #0e8b8c;
+  --coral-600: #087173;
+  --coral-100: #dff5f3;
+  --teal-400: #46c9bd;
+  --teal-600: #159b91;
+  --teal-100: #d7f5f0;
+  --gold-400: #e4ad45;
+  --gold-600: #af7620;
+  --gold-100: #fff4dd;
+  --bg: #f5fafb;
+  --ink: #143247;
+  --ink-60: rgba(20,50,71,.6);
+  --ink-40: rgba(20,50,71,.4);
+  --sage-300: #8fd3cb;
+}
+.ticker-esi { background:#e9f8f7; color:var(--indigo-950); border-bottom:1px solid rgba(21,155,145,.18); }
+.ticker-courses { background:var(--indigo-950); color:#f6fbfc; }
+.ticker-track em { color:var(--coral-600); }
+.ticker-courses .ticker-track em { color:var(--teal-400); }
+.site-header { background:rgba(255,255,255,.93); }
+.hero { background:linear-gradient(145deg,#f8fdfd 0%,#e8f7f6 54%,#dceef4 100%); }
+.hero h1 { color:var(--ink); }
+.hero .lede,.hero-note { color:var(--ink-60); }
+.hero .btn-ghost { border-color:rgba(20,50,71,.22); color:var(--ink); }
+.hero .btn-ghost:hover { background:rgba(21,155,145,.08); }

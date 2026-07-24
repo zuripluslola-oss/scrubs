@@ -65,6 +65,15 @@ TICKER_COURSES = "".join(
     '<span>&#9733; Pharmacology &middot; Med-Surg &middot; Peds &middot; Mental Health &amp; more</span>'
     for _ in range(2))
 
+TICKER_ESI = ''.join(
+    '<span>&#10022; <a href="esi.html">Meet <em>Esi</em> &mdash; your 24/7 clinical study tutor</a></span>'
+    '<span>&#10022; <a href="esi.html">Personalized help, navigation, and calm confidence when you need it</a></span>'
+    '<span>&#10022; <a href="esi.html">Included with MLSCLEX access</a></span>' for _ in range(2))
+TICKER_COURSES = ''.join(
+    '<span>&#9733; <a href="nclex-complete.html"><em>MLSCLEX</em> &mdash; adaptive testing for the exam that matters</a></span>'
+    '<span>&#9733; <a href="nclex-complete.html">3-day free trial &middot; original questions &middot; personalized plan</a></span>'
+    '<span>&#9733; <a href="nclex-complete.html">Learn weak areas. Practice smarter. Know when you are ready.</a></span>' for _ in range(2))
+
 def chrome(fname, title, desc, body, active=""):
     def cur(name):
         return ' aria-current="page"' if name == active else ""
@@ -79,7 +88,7 @@ def chrome(fname, title, desc, body, active=""):
 </head>
 <body>
 
-  <div class="tickers" aria-hidden="true">
+  <div class="tickers" aria-label="Featured products">
     <div class="ticker ticker-esi"><div class="ticker-track">{TICKER_ESI}</div></div>
     <div class="ticker ticker-courses"><div class="ticker-track">{TICKER_COURSES}</div></div>
   </div>
@@ -509,14 +518,14 @@ INDEX_BODY = f"""  <main>
       </div>
       <div class="wrap hero-grid">
         <div>
-          <span class="flag">{I['star']} FREE NCLEX PRACTICE &mdash; NO CARD NEEDED</span>
-          <h1>Train for the nurse you're <span class="hl on-dark">becoming</span>.</h1>
-          <p class="lede">Free NCLEX practice, audio scenes that teach like a great preceptor, and Esi &mdash; the AI tutor that makes it stick. This is the ecosystem of nursing.</p>
+          <span class="flag">{I['star']} 3-DAY FREE TRIAL &mdash; NO CARD NEEDED</span>
+          <h1>Your clinical <span class="hl">command center</span>.</h1>
+          <p class="lede">Must Love Scrubs brings original NCLEX practice, MLSCLEX adaptive testing, a personalized plan, and Esi &mdash; your AI tutor &mdash; into one calm, clinical system.</p>
           <div class="hero-cta">
-            <a class="btn btn-coral" href="course-lab-values.html">Try a free lesson</a>
-            <a class="btn btn-ghost" href="courses.html">See all courses</a>
+            <a class="btn btn-coral" href="join.html">Start your free trial</a>
+            <a class="btn btn-ghost" href="nclex-complete.html">Explore MLSCLEX</a>
           </div>
-          <p class="hero-note">Free practice &middot; 10 points a day &middot; no card required</p>
+          <p class="hero-note">3-day trial &middot; cancel anytime &middot; pass-promise eligible plans</p>
         </div>
         <div class="hero-visual fade-up">
           <div class="scene">{HERO_SCENE}</div>
