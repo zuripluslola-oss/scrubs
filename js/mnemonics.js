@@ -33,12 +33,16 @@
     var rows = m.letters.map(function (x) {
       return '<div class="mn-row"><span class="mn-l">' + esc(x.l) + '</span><span class="mn-m">' + esc(x.m) + '</span></div>';
     }).join('');
-    var visual = m.emoji ? '<div class="mn-visual" title="Visual cue">' + esc(m.emoji) + '</div>' : '';
+    var picmonic = (m.emoji || m.scene) ?
+      '<div class="mn-picmonic">' +
+        (m.emoji ? '<div class="mn-visual">' + esc(m.emoji) + '</div>' : '') +
+        (m.scene ? '<p class="mn-scene"><b>🖼 Picture it:</b> ' + esc(m.scene) + '</p>' : '') +
+      '</div>' : '';
     return '<div class="mn-card">' +
       '<div class="mn-head">' +
         '<div class="mn-head-txt"><b class="mn-title">' + esc(m.title) + '</b><small>' + esc(m.for) + '</small></div>' +
         '<span class="mn-cat-tag">' + esc(m.category) + '</span>' +
-      '</div>' + visual +
+      '</div>' + picmonic +
       '<div class="mn-rows">' + rows + '</div>' +
       (m.explain ? '<p class="mn-explain">' + esc(m.explain) + '</p>' : '') +
       '</div>';

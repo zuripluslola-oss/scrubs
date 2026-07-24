@@ -1,0 +1,615 @@
+{
+ "batch": "core-02",
+ "mnemonics": [
+  {
+   "id": "abcde",
+   "title": "ABCDE",
+   "for": "Trauma primary survey / priority order",
+   "category": "Assessment",
+   "letters": [
+    {
+     "l": "A",
+     "m": "Airway (protect the cervical spine)"
+    },
+    {
+     "l": "B",
+     "m": "Breathing"
+    },
+    {
+     "l": "C",
+     "m": "Circulation"
+    },
+    {
+     "l": "D",
+     "m": "Disability (neuro/LOC)"
+    },
+    {
+     "l": "E",
+     "m": "Exposure (undress & examine, prevent hypothermia)"
+    }
+   ],
+   "explain": "Always work down the alphabet — airway before breathing before circulation.",
+   "emoji": "🅰️ 🅱️ 🇨 🧠 🌡️",
+   "scene": "Picture alphabet blocks A-B-C-D-E stacked on a trauma stretcher — you can't reach D until A, B, and C are handled."
+  },
+  {
+   "id": "sbar",
+   "title": "SBAR",
+   "for": "Structured hand-off communication",
+   "category": "Fundamentals",
+   "letters": [
+    {
+     "l": "S",
+     "m": "Situation — why you're calling"
+    },
+    {
+     "l": "B",
+     "m": "Background — relevant history"
+    },
+    {
+     "l": "A",
+     "m": "Assessment — what you found"
+    },
+    {
+     "l": "R",
+     "m": "Recommendation — what you need"
+    }
+   ],
+   "explain": "The standard nurse-to-provider report format.",
+   "emoji": "🏃 🎽 ➡️ 🏃",
+   "scene": "Picture a relay race: you sprint up and hand off the SBAR baton to the next runner in four clean steps."
+  },
+  {
+   "id": "perrla",
+   "title": "PERRLA",
+   "for": "Normal pupil assessment",
+   "category": "Assessment",
+   "letters": [
+    {
+     "l": "P",
+     "m": "Pupils"
+    },
+    {
+     "l": "E",
+     "m": "Equal"
+    },
+    {
+     "l": "R",
+     "m": "Round"
+    },
+    {
+     "l": "R",
+     "m": "Reactive to"
+    },
+    {
+     "l": "L",
+     "m": "Light"
+    },
+    {
+     "l": "A",
+     "m": "and Accommodation"
+    }
+   ],
+   "explain": "Documented as 'PERRLA' when pupils are normal. Unequal/fixed pupils are a red flag.",
+   "emoji": "👁️ 🔦 👁️",
+   "scene": "Picture two matching flashlight beams hitting two round pupils that shrink together — perfectly equal."
+  },
+  {
+   "id": "avpu",
+   "title": "AVPU",
+   "for": "Quick level-of-consciousness scale",
+   "category": "Neuro",
+   "letters": [
+    {
+     "l": "A",
+     "m": "Alert"
+    },
+    {
+     "l": "V",
+     "m": "responds to Voice"
+    },
+    {
+     "l": "P",
+     "m": "responds to Pain"
+    },
+    {
+     "l": "U",
+     "m": "Unresponsive"
+    }
+   ],
+   "explain": "A fast responsiveness check; each step down is worse.",
+   "emoji": "😀 🗣️ 👊 😵",
+   "scene": "Picture a dimmer switch sliding from bright 'Alert' down to pitch-black 'Unresponsive.'"
+  },
+  {
+   "id": "sample",
+   "title": "SAMPLE",
+   "for": "Focused history in an emergency",
+   "category": "Assessment",
+   "letters": [
+    {
+     "l": "S",
+     "m": "Signs & symptoms"
+    },
+    {
+     "l": "A",
+     "m": "Allergies"
+    },
+    {
+     "l": "M",
+     "m": "Medications"
+    },
+    {
+     "l": "P",
+     "m": "Past medical history"
+    },
+    {
+     "l": "L",
+     "m": "Last oral intake"
+    },
+    {
+     "l": "E",
+     "m": "Events leading up"
+    }
+   ],
+   "explain": "A quick way to gather the essentials from a client or family.",
+   "emoji": "📋 💊 🍽️ ⏮️",
+   "scene": "Picture handing over a lab 'sample' tray that holds six vials — each one a piece of the client's story."
+  },
+  {
+   "id": "dig-fast",
+   "title": "DIG FAST",
+   "for": "Signs of a manic episode (bipolar)",
+   "category": "Mental Health",
+   "letters": [
+    {
+     "l": "D",
+     "m": "Distractibility"
+    },
+    {
+     "l": "I",
+     "m": "Irritability / Insomnia"
+    },
+    {
+     "l": "G",
+     "m": "Grandiosity"
+    },
+    {
+     "l": "F",
+     "m": "Flight of ideas"
+    },
+    {
+     "l": "A",
+     "m": "Activity increased"
+    },
+    {
+     "l": "S",
+     "m": "Speech pressured"
+    },
+    {
+     "l": "T",
+     "m": "Thoughtlessness (risky behavior)"
+    }
+   ],
+   "explain": "Three or more with elevated mood suggests mania; safety and nutrition are priorities.",
+   "emoji": "⛏️ 💨 💸 🗣️",
+   "scene": "Picture someone digging a hole FAST at 3 a.m. — sleepless, grandiose, and spending wildly. That's mania."
+  },
+  {
+   "id": "aeiou-tips",
+   "title": "AEIOU TIPS",
+   "for": "Causes of altered mental status",
+   "category": "Neuro",
+   "letters": [
+    {
+     "l": "A",
+     "m": "Alcohol"
+    },
+    {
+     "l": "E",
+     "m": "Epilepsy / Electrolytes"
+    },
+    {
+     "l": "I",
+     "m": "Insulin (hypo/hyperglycemia)"
+    },
+    {
+     "l": "O",
+     "m": "Overdose / Oxygen (hypoxia)"
+    },
+    {
+     "l": "U",
+     "m": "Uremia"
+    },
+    {
+     "l": "T",
+     "m": "Trauma / Temperature"
+    },
+    {
+     "l": "I",
+     "m": "Infection"
+    },
+    {
+     "l": "P",
+     "m": "Psychiatric / Poisoning"
+    },
+    {
+     "l": "S",
+     "m": "Stroke / Shock"
+    }
+   ],
+   "explain": "A broad checklist when a client is suddenly confused or unresponsive.",
+   "emoji": "🔤 💡 ❓ 🧠",
+   "scene": "Picture the vowels A-E-I-O-U tipping over a confused head — every letter a reason the brain went offline."
+  },
+  {
+   "id": "torch",
+   "title": "TORCH",
+   "for": "Congenital infections that cross the placenta",
+   "category": "Maternity",
+   "letters": [
+    {
+     "l": "T",
+     "m": "Toxoplasmosis"
+    },
+    {
+     "l": "O",
+     "m": "Other (syphilis, hepatitis, HIV)"
+    },
+    {
+     "l": "R",
+     "m": "Rubella"
+    },
+    {
+     "l": "C",
+     "m": "Cytomegalovirus (CMV)"
+    },
+    {
+     "l": "H",
+     "m": "Herpes simplex"
+    }
+   ],
+   "explain": "Infections that can harm the fetus; prevention and screening matter in pregnancy.",
+   "emoji": "🔦 🤰 🦠",
+   "scene": "Picture shining a TORCH on a pregnant belly to spot the infections hiding inside."
+  },
+  {
+   "id": "5-fs",
+   "title": "5 F's",
+   "for": "Risk factors for gallstones (cholelithiasis)",
+   "category": "Gastrointestinal",
+   "letters": [
+    {
+     "l": "F",
+     "m": "Female"
+    },
+    {
+     "l": "F",
+     "m": "Fat (obesity)"
+    },
+    {
+     "l": "F",
+     "m": "Forty (age)"
+    },
+    {
+     "l": "F",
+     "m": "Fertile (multiparous)"
+    },
+    {
+     "l": "F",
+     "m": "Fair (light-skinned)"
+    }
+   ],
+   "explain": "Classic risk profile for gallbladder disease.",
+   "emoji": "🚩 🚩 🚩 🚩 🚩",
+   "scene": "Picture five F-shaped flags planted on a gallbladder — the classic gallstone patient."
+  },
+  {
+   "id": "caution",
+   "title": "CAUTION",
+   "for": "Seven warning signs of cancer",
+   "category": "Oncology",
+   "letters": [
+    {
+     "l": "C",
+     "m": "Change in bowel or bladder habits"
+    },
+    {
+     "l": "A",
+     "m": "A sore that does not heal"
+    },
+    {
+     "l": "U",
+     "m": "Unusual bleeding or discharge"
+    },
+    {
+     "l": "T",
+     "m": "Thickening or a lump"
+    },
+    {
+     "l": "I",
+     "m": "Indigestion or difficulty swallowing"
+    },
+    {
+     "l": "O",
+     "m": "Obvious change in a wart or mole"
+    },
+    {
+     "l": "N",
+     "m": "Nagging cough or hoarseness"
+    }
+   ],
+   "explain": "Teach clients these as reasons to see a provider.",
+   "emoji": "⚠️ 🎗️",
+   "scene": "Picture a yellow CAUTION road sign — each letter a warning your body might flash."
+  },
+  {
+   "id": "reeda",
+   "title": "REEDA",
+   "for": "Assessing a wound or episiotomy for healing",
+   "category": "Maternity",
+   "letters": [
+    {
+     "l": "R",
+     "m": "Redness"
+    },
+    {
+     "l": "E",
+     "m": "Edema"
+    },
+    {
+     "l": "E",
+     "m": "Ecchymosis (bruising)"
+    },
+    {
+     "l": "D",
+     "m": "Discharge"
+    },
+    {
+     "l": "A",
+     "m": "Approximation (edges together)"
+    }
+   ],
+   "explain": "Increasing redness/discharge with edges pulling apart suggests infection or poor healing.",
+   "emoji": "🔴 🩹 🧵",
+   "scene": "Picture 'reading' a healing wound with a radar (REEDA-r) that scans for five signs."
+  },
+  {
+   "id": "bubble",
+   "title": "BUBBLE",
+   "for": "Postpartum head-to-toe assessment",
+   "category": "Maternity",
+   "letters": [
+    {
+     "l": "B",
+     "m": "Breasts"
+    },
+    {
+     "l": "U",
+     "m": "Uterus (fundus firm/midline)"
+    },
+    {
+     "l": "B",
+     "m": "Bladder"
+    },
+    {
+     "l": "B",
+     "m": "Bowel"
+    },
+    {
+     "l": "L",
+     "m": "Lochia"
+    },
+    {
+     "l": "E",
+     "m": "Episiotomy / Emotions"
+    }
+   ],
+   "explain": "The routine postpartum check; a boggy uterus or heavy lochia signals hemorrhage.",
+   "emoji": "🫧 🤱 🩸",
+   "scene": "Picture blowing soap BUBBLEs down a new mom from breasts to bottom — one bubble per system."
+  },
+  {
+   "id": "5-ws",
+   "title": "5 W's",
+   "for": "Timeline of post-operative fever causes",
+   "category": "Fundamentals",
+   "letters": [
+    {
+     "l": "Wind",
+     "m": "Atelectasis / pneumonia (days 1–2)"
+    },
+    {
+     "l": "Water",
+     "m": "Urinary tract infection (days 3–5)"
+    },
+    {
+     "l": "Wound",
+     "m": "Wound infection (days 5–7)"
+    },
+    {
+     "l": "Walking",
+     "m": "DVT / thrombophlebitis (day 5+)"
+    },
+    {
+     "l": "Wonder drugs",
+     "m": "Drug fever (any time)"
+    }
+   ],
+   "explain": "Match the day post-op to the likely source of a fever.",
+   "emoji": "🌬️ 💧 🩹 🚶 💊",
+   "scene": "Picture five W flags on a post-op calendar — as the days pass, the cause of fever moves down the list."
+  },
+  {
+   "id": "apgar",
+   "title": "APGAR",
+   "for": "Scoring a newborn at 1 and 5 minutes",
+   "category": "Maternity",
+   "letters": [
+    {
+     "l": "A",
+     "m": "Appearance (color)"
+    },
+    {
+     "l": "P",
+     "m": "Pulse (heart rate)"
+    },
+    {
+     "l": "G",
+     "m": "Grimace (reflex)"
+    },
+    {
+     "l": "A",
+     "m": "Activity (muscle tone)"
+    },
+    {
+     "l": "R",
+     "m": "Respiratory effort"
+    }
+   ],
+   "explain": "Each scored 0–2; 7–10 is good. Pulse is the most important sign.",
+   "emoji": "👶 ❤️ 😣 💪 🫁",
+   "scene": "Picture a newborn getting a report card with five grades — that's the APGAR score."
+  },
+  {
+   "id": "cats",
+   "title": "CATS",
+   "for": "Signs of hypocalcemia (low calcium)",
+   "category": "Endocrine",
+   "letters": [
+    {
+     "l": "C",
+     "m": "Convulsions"
+    },
+    {
+     "l": "A",
+     "m": "Arrhythmias"
+    },
+    {
+     "l": "T",
+     "m": "Tetany"
+    },
+    {
+     "l": "S",
+     "m": "Spasms & Stridor"
+    }
+   ],
+   "explain": "Low calcium causes neuromuscular excitability (Chvostek & Trousseau signs).",
+   "emoji": "🐱 ⚡ 😬",
+   "scene": "Picture jittery, twitchy CATS with muscle spasms — that's a body low on calcium."
+  },
+  {
+   "id": "hf-faces",
+   "title": "HF FACES",
+   "for": "Early warning signs of worsening heart failure",
+   "category": "Cardiac",
+   "letters": [
+    {
+     "l": "F",
+     "m": "Fatigue"
+    },
+    {
+     "l": "A",
+     "m": "Activities limited"
+    },
+    {
+     "l": "C",
+     "m": "Chest congestion / cough"
+    },
+    {
+     "l": "E",
+     "m": "Edema (ankles, weight gain)"
+    },
+    {
+     "l": "S",
+     "m": "Shortness of breath"
+    }
+   ],
+   "explain": "Teach clients to report these and to weigh daily.",
+   "emoji": "😮‍💨 🛋️ 🫁 🦶",
+   "scene": "Picture tired FACES gasping on the couch, ankles swollen — heart failure is slipping."
+  },
+  {
+   "id": "gtpal",
+   "title": "GTPAL",
+   "for": "Documenting a pregnancy history",
+   "category": "Maternity",
+   "letters": [
+    {
+     "l": "G",
+     "m": "Gravida — total pregnancies"
+    },
+    {
+     "l": "T",
+     "m": "Term births (≥37 wk)"
+    },
+    {
+     "l": "P",
+     "m": "Preterm births"
+    },
+    {
+     "l": "A",
+     "m": "Abortions / miscarriages"
+    },
+    {
+     "l": "L",
+     "m": "Living children"
+    }
+   ],
+   "explain": "A standardized shorthand for obstetric history.",
+   "emoji": "🤰 📖 👶",
+   "scene": "Picture a midwife's ledger with five tally columns — every pregnancy counted in GTPAL."
+  },
+  {
+   "id": "sad-persons",
+   "title": "SAD PERSONS",
+   "for": "Screening suicide risk factors",
+   "category": "Mental Health",
+   "letters": [
+    {
+     "l": "S",
+     "m": "Sex (male)"
+    },
+    {
+     "l": "A",
+     "m": "Age (very young or old)"
+    },
+    {
+     "l": "D",
+     "m": "Depression"
+    },
+    {
+     "l": "P",
+     "m": "Previous attempt"
+    },
+    {
+     "l": "E",
+     "m": "Ethanol/substance use"
+    },
+    {
+     "l": "R",
+     "m": "Rational thinking loss"
+    },
+    {
+     "l": "S",
+     "m": "Social supports lacking"
+    },
+    {
+     "l": "O",
+     "m": "Organized plan"
+    },
+    {
+     "l": "N",
+     "m": "No spouse"
+    },
+    {
+     "l": "S",
+     "m": "Sickness (chronic illness)"
+    }
+   ],
+   "explain": "More risk factors = higher risk. A specific plan plus means is high risk — ensure safety first.",
+   "emoji": "😔 ⚠️ 🆘",
+   "scene": "Picture a SAD PERSON standing alone in the rain — each risk factor another cloud overhead."
+  }
+ ]
+}

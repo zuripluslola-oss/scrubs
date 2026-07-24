@@ -25,7 +25,8 @@
     }
    ],
    "explain": "Give in the order Aspirin → Oxygen → Nitroglycerin → Morphine in practice, but 'MONA' is how you remember the four.",
-   "emoji": "💊 🫁 💥 🩸"
+   "emoji": "💊 🫁 💥 🩸",
+   "scene": "Picture a woman named MONA clutching her chest — she hands you Morphine, an Oxygen mask, a Nitro tablet, and an Aspirin."
   },
   {
    "id": "veal-chop",
@@ -51,7 +52,8 @@
     }
    ],
    "explain": "Line up VEAL over CHOP: each letter maps to its cause. Late = placental = stop oxytocin, reposition, O₂.",
-   "emoji": "🐄 🍫"
+   "emoji": "🐄 🍫",
+   "scene": "Picture a slab of VEAL stacked on a pork CHOP — each letter of VEAL drops straight onto its cause in CHOP."
   },
   {
    "id": "race",
@@ -77,7 +79,8 @@
     }
    ],
    "explain": "RACE is the order of actions in a fire. Pair it with PASS for using the extinguisher.",
-   "emoji": "🏃 🔔 🚪 🧯"
+   "emoji": "🏃 🔔 🚪 🧯",
+   "scene": "Picture a nurse running a RACE out of a smoke-filled room: Rescue, Alarm, Confine, Extinguish."
   },
   {
    "id": "pass",
@@ -103,7 +106,8 @@
     }
    ],
    "explain": "Aim at the BASE of the flames, not the top.",
-   "emoji": "🧯 🔥"
+   "emoji": "🧯 🔥",
+   "scene": "Picture your hands on an extinguisher — Pull, Aim at the base, Squeeze, Sweep."
   },
   {
    "id": "fast",
@@ -129,7 +133,8 @@
     }
    ],
    "explain": "Sudden onset of any of these = call for help immediately; time is brain.",
-   "emoji": "😐 💪 🗣 ⏰"
+   "emoji": "😐 💪 🗣 ⏰",
+   "scene": "Picture a clock ticking FAST above a drooping face and a weak arm — every second counts in a stroke."
   },
   {
    "id": "sludge",
@@ -163,7 +168,8 @@
     }
    ],
    "explain": "Cholinergic crisis = too much 'wet.' Antidote is atropine (dries secretions).",
-   "emoji": "💧 😢 🚽 💩 🤢"
+   "emoji": "💧 😢 🚽 💩 🤢",
+   "scene": "Picture a slug oozing wet slime everywhere — drooling, tearing, leaking — that's cholinergic SLUDGE."
   },
   {
    "id": "6-ps",
@@ -197,7 +203,8 @@
     }
    ],
    "explain": "Pain out of proportion + paresthesia are the earliest. Pulselessness/paralysis are late — an emergency.",
-   "emoji": "😖 👻 🚫 🫳 ❄️"
+   "emoji": "😖 👻 🚫 🫳 ❄️",
+   "scene": "Picture six frozen peas in a pale, painful pod — the 6 P's of a limb losing circulation."
   },
   {
    "id": "adpie",
@@ -227,7 +234,8 @@
     }
    ],
    "explain": "When a question asks what to do FIRST, the answer is usually Assess.",
-   "emoji": "🔍 🏷 🗓 🩺 ✅"
+   "emoji": "🔍 🏷 🗓 🩺 ✅",
+   "scene": "Picture a fresh PIE sliced into five pieces — Assess, Diagnose, Plan, Implement, Evaluate."
   },
   {
    "id": "sig-e-caps",
@@ -269,7 +277,8 @@
     }
    ],
    "explain": "Five or more for 2+ weeks suggests major depression. Always screen for the last S — suicide.",
-   "emoji": "😴 🚫 😔 🔋 🧠"
+   "emoji": "😴 🚫 😔 🔋 🧠",
+   "scene": "Picture a sad graduate in a CAP who can't sleep or eat — the SIG E CAPS of depression."
   },
   {
    "id": "cage",
@@ -295,7 +304,8 @@
     }
    ],
    "explain": "Two or more 'yes' answers is a positive screen warranting further assessment.",
-   "emoji": "🍺 ❓"
+   "emoji": "🍺 ❓",
+   "scene": "Picture a liquor bottle locked inside a CAGE — the four questions that unlock an alcohol problem."
   },
   {
    "id": "pqrst",
@@ -325,7 +335,8 @@
     }
    ],
    "explain": "A structured pain history. Pain is subjective — believe the client's report.",
-   "emoji": "📈 🔪 📍 🔟 ⏱"
+   "emoji": "📈 🔪 📍 🔟 ⏱",
+   "scene": "Picture an ECG's P-Q-R-S-T waves, each wave standing in for one part of the pain history."
   },
   {
    "id": "never-let-monkeys-eat-bananas",
@@ -355,7 +366,8 @@
     }
    ],
    "explain": "Neutrophils are the most abundant and the first responders to bacterial infection.",
-   "emoji": "🐵 🍌"
+   "emoji": "🐵 🍌",
+   "scene": "Picture monkeys lined up biggest to smallest eating bananas — Neutrophils down to Basophils."
   },
   {
    "id": "on-old-olympus-towering-tops",
@@ -381,7 +393,8 @@
     }
    ],
    "explain": "For sensory/motor/both, use: 'Some Say Marry Money But My Brother Says Big Brains Matter Most.'",
-   "emoji": "🏔 🧠"
+   "emoji": "🏔 🧠",
+   "scene": "Picture climbing Mount Olympus with twelve peaks — one cranial nerve per summit."
   },
   {
    "id": "5-rights",
@@ -411,7 +424,8 @@
     }
    ],
    "explain": "Some add Right documentation, reason, and response. Verify before every med.",
-   "emoji": "🙋 💊 ⚖️ 💉 🕐"
+   "emoji": "🙋 💊 ⚖️ 💉 🕐",
+   "scene": "Picture a raised hand, one finger per 'right' — patient, drug, dose, route, time."
   },
   {
    "id": "cushings-triad",
@@ -433,7 +447,8 @@
     }
    ],
    "explain": "The OPPOSITE of shock. It's a late, ominous sign of impending brain herniation.",
-   "emoji": "🧠 ⬆️ 💓"
+   "emoji": "🧠 ⬆️ 💓",
+   "scene": "Picture a cushion squeezing the brain: the pulse slows, the pressure widens, the breathing turns ragged."
   },
   {
    "id": "c-big-k-drop",
@@ -463,7 +478,8 @@
     }
    ],
    "explain": "Calcium first to stabilize the heart, then shift potassium in, then remove it from the body.",
-   "emoji": "🫀 ⬇️ 🔑"
+   "emoji": "🫀 ⬇️ 🔑",
+   "scene": "Picture a giant letter K falling — Calcium shields the heart, then you shift and drop the potassium."
   },
   {
    "id": "rice",
@@ -489,7 +505,8 @@
     }
    ],
    "explain": "Ice early to reduce swelling; heat is used later for chronic stiffness.",
-   "emoji": "🛌 🧊 🩹 ⬆️"
+   "emoji": "🛌 🧊 🩹 ⬆️",
+   "scene": "Picture a bowl of ice-cold RICE resting on a swollen ankle — Rest, Ice, Compression, Elevation."
   },
   {
    "id": "smart-goals",
@@ -519,7 +536,8 @@
     }
    ],
    "explain": "A good outcome is client-centered and measurable: 'Client will ambulate 50 ft by day 2.'",
-   "emoji": "🎯 📏 ✅ ⏳"
+   "emoji": "🎯 📏 ✅ ⏳",
+   "scene": "Picture a dart hitting the bullseye — a goal that's Specific, Measurable, Attainable, Realistic, Timed."
   },
   {
    "id": "cold-and-clammy-vs-hot-and-dry",
@@ -537,7 +555,8 @@
     }
    ],
    "explain": "Hypoglycemia comes on fast: shaky, sweaty, confused — treat with 15 g fast carbs.",
-   "emoji": "🥶 🍬 🥵 🍭"
+   "emoji": "🥶 🍬 🥵 🍭",
+   "scene": "Picture a shivering client grabbing candy, next to a hot, dry one — low sugar vs high sugar."
   },
   {
    "id": "air-=-mtv",
@@ -559,7 +578,8 @@
     }
    ],
    "explain": "Airborne = N95 respirator + negative-pressure room. Droplet and contact are separate.",
-   "emoji": "🦠 😷 🏠"
+   "emoji": "🦠 😷 🏠",
+   "scene": "Picture binge-watching MTV inside a sealed negative-pressure room — Measles, TB, Varicella need airborne isolation."
   },
   {
    "id": "clear-before-cloudy",
@@ -577,7 +597,8 @@
     }
    ],
    "explain": "Draw clear first so you never contaminate the vial of clear insulin with cloudy. Only regular insulin is given IV.",
-   "emoji": "🔅 ☁️ 💉"
+   "emoji": "🔅 ☁️ 💉",
+   "scene": "Picture a clear blue sky before the storm clouds roll in — draw clear insulin before cloudy."
   },
   {
    "id": "trousseau-and-chvostek",
@@ -595,7 +616,8 @@
     }
    ],
    "explain": "Both signal neuromuscular irritability from low calcium (watch after thyroidectomy).",
-   "emoji": "✋ 😬"
+   "emoji": "✋ 😬",
+   "scene": "Picture a BP cuff cramping a hand (Trousseau) while a tapped cheek twitches (Chvostek) — low calcium."
   }
  ]
 }
