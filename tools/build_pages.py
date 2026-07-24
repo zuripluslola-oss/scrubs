@@ -2137,7 +2137,43 @@ def _load_flashcards():
             cards.append(c)
     return cards
 
+def _flashcards_from_qbank():
+    """Turn every question-bank item into a study flashcard so the qbank and the
+    flashcards stay in sync — one source, tagged into the same course decks."""
+    def _plain(s):
+        return str(s or "").replace("**", "")
+    out = []
+    for q in QBANK:
+        t = q.get("type", "mc")
+        stem = _plain(q.get("stem"))
+        opts = q.get("opts") or []
+        if t == "mc":
+            if not (isinstance(q.get("correct"), int) and 0 <= q["correct"] < len(opts)): continue
+            ci = q["correct"]
+            back = _plain(opts[ci].get("t"))
+            rat = _plain(opts[ci].get("r"))
+        elif t == "sata":
+            cor = q.get("correct") or []
+            if not isinstance(cor, list) or not cor: continue
+            back = "Select all: " + "; ".join(_plain(opts[i].get("t")) for i in cor if i < len(opts))
+            rat = _plain(q.get("tip") or (opts[cor[0]].get("r") if cor and cor[0] < len(opts) else ""))
+        else:
+            continue  # non-flip types stay in the qbank/tests engines
+        if not stem or not back: continue
+        tip = _plain(q.get("tip"))
+        rationale = rat + (("  " + tip) if tip and tip not in rat else "")
+        out.append({
+            "id": "qbf-" + str(q.get("id", len(out))),
+            "kind": "qa", "deck": q.get("cat", "NCLEX Core"),
+            "topic": q.get("topic", ""), "difficulty": q.get("level", 3),
+            "front": stem, "back": back, "rationale": rationale,
+            "source": "qbank"})
+    return out
+
 FLASH = _load_flashcards()
+_FLASH_HANDMADE = len(FLASH)
+FLASH += _flashcards_from_qbank()      # every qbank question also becomes a card
+FLASH_FROM_QBANK = len(FLASH) - _FLASH_HANDMADE
 FLASH_JSON = _json.dumps(FLASH, ensure_ascii=False).replace('<', '\\u003c').replace('>', '\\u003e').replace('&', '\\u0026')
 FLASH_DECKS = []
 for _c in FLASH:
@@ -2154,7 +2190,7 @@ FLASH_BODY = f"""  <div class="page-hero">
     <div class="wrap inner">
       <span class="lesson-label" style="color:var(--gold-400);">Flashcards &amp; Games</span>
       <h1 style="margin-top:0.6rem;">Flip it. Play it. <span class="em">Remember it.</span></h1>
-      <p>Animated flashcards with a rationale on the back &mdash; then turn the same cards into quizzes, a match game, and a speed round. Adaptive levels (1&ndash;5) rise as you improve, exactly like the CAT engine. Works for NCLEX <b>and</b> specialty prep.</p>
+      <p>Animated flashcards with a rationale on the back &mdash; then turn the same cards into quizzes, a match game, and a speed round. <b>Every question in the bank is also a card here</b>, so your practice and your review stay in sync across every course. Adaptive levels (1&ndash;5) rise as you improve, exactly like the CAT engine.</p>
     </div>
   </div>
 
