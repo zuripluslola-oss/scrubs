@@ -2147,21 +2147,29 @@ def _flashcards_from_qbank():
         t = q.get("type", "mc")
         stem = _plain(q.get("stem"))
         opts = q.get("opts") or []
+        LET = "ABCDEFGH"
+        def all_rationales(correct_set):
+            # rationale for EVERY option — why the right one(s) are right and each wrong one is wrong
+            lines = []
+            for i, o in enumerate(opts):
+                mark = "✓" if i in correct_set else "✗"
+                lines.append(f"{mark} {LET[i]}. {_plain(o.get('t'))} — {_plain(o.get('r'))}")
+            return "<br>".join(lines)
         if t == "mc":
             if not (isinstance(q.get("correct"), int) and 0 <= q["correct"] < len(opts)): continue
             ci = q["correct"]
             back = _plain(opts[ci].get("t"))
-            rat = _plain(opts[ci].get("r"))
+            rat = all_rationales({ci})
         elif t == "sata":
             cor = q.get("correct") or []
             if not isinstance(cor, list) or not cor: continue
             back = "Select all: " + "; ".join(_plain(opts[i].get("t")) for i in cor if i < len(opts))
-            rat = _plain(q.get("tip") or (opts[cor[0]].get("r") if cor and cor[0] < len(opts) else ""))
+            rat = all_rationales(set(cor))
         else:
             continue  # non-flip types stay in the qbank/tests engines
         if not stem or not back: continue
         tip = _plain(q.get("tip"))
-        rationale = rat + (("  " + tip) if tip and tip not in rat else "")
+        rationale = rat + (("<br><br>\U0001F4DD " + tip) if tip else "")
         out.append({
             "id": "qbf-" + str(q.get("id", len(out))),
             "kind": "qa", "deck": q.get("cat", "NCLEX Core"),
