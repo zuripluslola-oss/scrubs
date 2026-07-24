@@ -1,0 +1,601 @@
+{
+ "batch": "core-01",
+ "mnemonics": [
+  {
+   "id": "mona",
+   "title": "MONA",
+   "for": "Immediate treatment for a myocardial infarction (MI)",
+   "category": "Cardiac",
+   "letters": [
+    {
+     "l": "M",
+     "m": "Morphine — relieves pain and reduces oxygen demand"
+    },
+    {
+     "l": "O",
+     "m": "Oxygen — if the client is hypoxic"
+    },
+    {
+     "l": "N",
+     "m": "Nitroglycerin — dilates coronary vessels"
+    },
+    {
+     "l": "A",
+     "m": "Aspirin — antiplatelet, chewed for fast absorption"
+    }
+   ],
+   "explain": "Give in the order Aspirin → Oxygen → Nitroglycerin → Morphine in practice, but 'MONA' is how you remember the four.",
+   "emoji": "💊 🫁 💥 🩸"
+  },
+  {
+   "id": "veal-chop",
+   "title": "VEAL CHOP",
+   "for": "Interpreting fetal heart rate decelerations",
+   "category": "Maternity",
+   "letters": [
+    {
+     "l": "V = C",
+     "m": "Variable decel → Cord compression"
+    },
+    {
+     "l": "E = H",
+     "m": "Early decel → Head compression (benign)"
+    },
+    {
+     "l": "A = O",
+     "m": "Accelerations → OK (reassuring)"
+    },
+    {
+     "l": "L = P",
+     "m": "Late decel → Placental insufficiency (act!)"
+    }
+   ],
+   "explain": "Line up VEAL over CHOP: each letter maps to its cause. Late = placental = stop oxytocin, reposition, O₂.",
+   "emoji": "🐄 🍫"
+  },
+  {
+   "id": "race",
+   "title": "RACE",
+   "for": "What to do when there is a fire",
+   "category": "Safety",
+   "letters": [
+    {
+     "l": "R",
+     "m": "Rescue anyone in immediate danger"
+    },
+    {
+     "l": "A",
+     "m": "Alarm — activate the fire alarm"
+    },
+    {
+     "l": "C",
+     "m": "Confine the fire (close doors)"
+    },
+    {
+     "l": "E",
+     "m": "Extinguish if small, or evacuate"
+    }
+   ],
+   "explain": "RACE is the order of actions in a fire. Pair it with PASS for using the extinguisher.",
+   "emoji": "🏃 🔔 🚪 🧯"
+  },
+  {
+   "id": "pass",
+   "title": "PASS",
+   "for": "How to use a fire extinguisher",
+   "category": "Safety",
+   "letters": [
+    {
+     "l": "P",
+     "m": "Pull the pin"
+    },
+    {
+     "l": "A",
+     "m": "Aim at the base of the fire"
+    },
+    {
+     "l": "S",
+     "m": "Squeeze the handle"
+    },
+    {
+     "l": "S",
+     "m": "Sweep side to side"
+    }
+   ],
+   "explain": "Aim at the BASE of the flames, not the top.",
+   "emoji": "🧯 🔥"
+  },
+  {
+   "id": "fast",
+   "title": "FAST",
+   "for": "Recognizing a stroke quickly",
+   "category": "Neuro",
+   "letters": [
+    {
+     "l": "F",
+     "m": "Face drooping"
+    },
+    {
+     "l": "A",
+     "m": "Arm weakness"
+    },
+    {
+     "l": "S",
+     "m": "Speech difficulty"
+    },
+    {
+     "l": "T",
+     "m": "Time to call 911"
+    }
+   ],
+   "explain": "Sudden onset of any of these = call for help immediately; time is brain.",
+   "emoji": "😐 💪 🗣 ⏰"
+  },
+  {
+   "id": "sludge",
+   "title": "SLUDGE",
+   "for": "Signs of cholinergic toxicity (e.g. organophosphates)",
+   "category": "Pharmacology",
+   "letters": [
+    {
+     "l": "S",
+     "m": "Salivation"
+    },
+    {
+     "l": "L",
+     "m": "Lacrimation (tearing)"
+    },
+    {
+     "l": "U",
+     "m": "Urination"
+    },
+    {
+     "l": "D",
+     "m": "Defecation"
+    },
+    {
+     "l": "G",
+     "m": "GI distress"
+    },
+    {
+     "l": "E",
+     "m": "Emesis"
+    }
+   ],
+   "explain": "Cholinergic crisis = too much 'wet.' Antidote is atropine (dries secretions).",
+   "emoji": "💧 😢 🚽 💩 🤢"
+  },
+  {
+   "id": "6-ps",
+   "title": "6 P's",
+   "for": "Signs of compartment syndrome / neurovascular compromise",
+   "category": "Musculoskeletal",
+   "letters": [
+    {
+     "l": "P",
+     "m": "Pain (out of proportion)"
+    },
+    {
+     "l": "P",
+     "m": "Pallor"
+    },
+    {
+     "l": "P",
+     "m": "Pulselessness"
+    },
+    {
+     "l": "P",
+     "m": "Paresthesia (numbness/tingling)"
+    },
+    {
+     "l": "P",
+     "m": "Paralysis"
+    },
+    {
+     "l": "P",
+     "m": "Poikilothermia (coolness)"
+    }
+   ],
+   "explain": "Pain out of proportion + paresthesia are the earliest. Pulselessness/paralysis are late — an emergency.",
+   "emoji": "😖 👻 🚫 🫳 ❄️"
+  },
+  {
+   "id": "adpie",
+   "title": "ADPIE",
+   "for": "The nursing process, in order",
+   "category": "Fundamentals",
+   "letters": [
+    {
+     "l": "A",
+     "m": "Assessment — gather data"
+    },
+    {
+     "l": "D",
+     "m": "Diagnosis — identify the problem"
+    },
+    {
+     "l": "P",
+     "m": "Planning — set goals/outcomes"
+    },
+    {
+     "l": "I",
+     "m": "Implementation — do the interventions"
+    },
+    {
+     "l": "E",
+     "m": "Evaluation — did it work?"
+    }
+   ],
+   "explain": "When a question asks what to do FIRST, the answer is usually Assess.",
+   "emoji": "🔍 🏷 🗓 🩺 ✅"
+  },
+  {
+   "id": "sig-e-caps",
+   "title": "SIG E CAPS",
+   "for": "Symptoms of major depression",
+   "category": "Mental Health",
+   "letters": [
+    {
+     "l": "S",
+     "m": "Sleep changes"
+    },
+    {
+     "l": "I",
+     "m": "Interest lost (anhedonia)"
+    },
+    {
+     "l": "G",
+     "m": "Guilt/worthlessness"
+    },
+    {
+     "l": "E",
+     "m": "Energy low"
+    },
+    {
+     "l": "C",
+     "m": "Concentration poor"
+    },
+    {
+     "l": "A",
+     "m": "Appetite changes"
+    },
+    {
+     "l": "P",
+     "m": "Psychomotor changes"
+    },
+    {
+     "l": "S",
+     "m": "Suicidal ideation"
+    }
+   ],
+   "explain": "Five or more for 2+ weeks suggests major depression. Always screen for the last S — suicide.",
+   "emoji": "😴 🚫 😔 🔋 🧠"
+  },
+  {
+   "id": "cage",
+   "title": "CAGE",
+   "for": "Quick screening for alcohol use disorder",
+   "category": "Mental Health",
+   "letters": [
+    {
+     "l": "C",
+     "m": "Cut down — felt you should?"
+    },
+    {
+     "l": "A",
+     "m": "Annoyed by others criticizing your drinking?"
+    },
+    {
+     "l": "G",
+     "m": "Guilty about drinking?"
+    },
+    {
+     "l": "E",
+     "m": "Eye-opener — a drink first thing in the morning?"
+    }
+   ],
+   "explain": "Two or more 'yes' answers is a positive screen warranting further assessment.",
+   "emoji": "🍺 ❓"
+  },
+  {
+   "id": "pqrst",
+   "title": "PQRST",
+   "for": "Assessing pain (or chest pain)",
+   "category": "Assessment",
+   "letters": [
+    {
+     "l": "P",
+     "m": "Provocation/Palliation — what makes it better/worse"
+    },
+    {
+     "l": "Q",
+     "m": "Quality — sharp, dull, crushing"
+    },
+    {
+     "l": "R",
+     "m": "Region/Radiation — where and does it spread"
+    },
+    {
+     "l": "S",
+     "m": "Severity — 0–10 scale"
+    },
+    {
+     "l": "T",
+     "m": "Timing — onset, duration, pattern"
+    }
+   ],
+   "explain": "A structured pain history. Pain is subjective — believe the client's report.",
+   "emoji": "📈 🔪 📍 🔟 ⏱"
+  },
+  {
+   "id": "never-let-monkeys-eat-bananas",
+   "title": "Never Let Monkeys Eat Bananas",
+   "for": "Order of WBC differential (most to least)",
+   "category": "Lab & Heme",
+   "letters": [
+    {
+     "l": "N",
+     "m": "Neutrophils (55–70%)"
+    },
+    {
+     "l": "L",
+     "m": "Lymphocytes (20–40%)"
+    },
+    {
+     "l": "M",
+     "m": "Monocytes (2–8%)"
+    },
+    {
+     "l": "E",
+     "m": "Eosinophils (1–4%)"
+    },
+    {
+     "l": "B",
+     "m": "Basophils (0.5–1%)"
+    }
+   ],
+   "explain": "Neutrophils are the most abundant and the first responders to bacterial infection.",
+   "emoji": "🐵 🍌"
+  },
+  {
+   "id": "on-old-olympus-towering-tops",
+   "title": "On Old Olympus' Towering Tops",
+   "for": "Names of the 12 cranial nerves (I–XII)",
+   "category": "Neuro",
+   "letters": [
+    {
+     "l": "O O O",
+     "m": "Olfactory, Optic, Oculomotor"
+    },
+    {
+     "l": "T T A",
+     "m": "Trochlear, Trigeminal, Abducens"
+    },
+    {
+     "l": "F A G",
+     "m": "Facial, Acoustic (vestibulocochlear), Glossopharyngeal"
+    },
+    {
+     "l": "V A H",
+     "m": "Vagus, Accessory, Hypoglossal"
+    }
+   ],
+   "explain": "For sensory/motor/both, use: 'Some Say Marry Money But My Brother Says Big Brains Matter Most.'",
+   "emoji": "🏔 🧠"
+  },
+  {
+   "id": "5-rights",
+   "title": "5 Rights",
+   "for": "Safe medication administration",
+   "category": "Safety",
+   "letters": [
+    {
+     "l": "1",
+     "m": "Right patient (two identifiers)"
+    },
+    {
+     "l": "2",
+     "m": "Right drug"
+    },
+    {
+     "l": "3",
+     "m": "Right dose"
+    },
+    {
+     "l": "4",
+     "m": "Right route"
+    },
+    {
+     "l": "5",
+     "m": "Right time"
+    }
+   ],
+   "explain": "Some add Right documentation, reason, and response. Verify before every med.",
+   "emoji": "🙋 💊 ⚖️ 💉 🕐"
+  },
+  {
+   "id": "cushings-triad",
+   "title": "Cushing's Triad",
+   "for": "Late signs of increased intracranial pressure (ICP)",
+   "category": "Neuro",
+   "letters": [
+    {
+     "l": "1",
+     "m": "Bradycardia (slow heart rate)"
+    },
+    {
+     "l": "2",
+     "m": "Widening pulse pressure (rising systolic)"
+    },
+    {
+     "l": "3",
+     "m": "Irregular respirations"
+    }
+   ],
+   "explain": "The OPPOSITE of shock. It's a late, ominous sign of impending brain herniation.",
+   "emoji": "🧠 ⬆️ 💓"
+  },
+  {
+   "id": "c-big-k-drop",
+   "title": "C BIG K Drop",
+   "for": "Emergency treatment of hyperkalemia",
+   "category": "Pharmacology",
+   "letters": [
+    {
+     "l": "C",
+     "m": "Calcium gluconate — protects the heart"
+    },
+    {
+     "l": "B",
+     "m": "Bicarbonate — shifts K⁺ into cells"
+    },
+    {
+     "l": "I + G",
+     "m": "Insulin + Glucose — shifts K⁺ into cells"
+    },
+    {
+     "l": "K",
+     "m": "Kayexalate — removes K⁺ via the gut"
+    },
+    {
+     "l": "Drop",
+     "m": "Dialysis/Diuretics — remove K⁺ from the body"
+    }
+   ],
+   "explain": "Calcium first to stabilize the heart, then shift potassium in, then remove it from the body.",
+   "emoji": "🫀 ⬇️ 🔑"
+  },
+  {
+   "id": "rice",
+   "title": "RICE",
+   "for": "First aid for a sprain or strain",
+   "category": "Musculoskeletal",
+   "letters": [
+    {
+     "l": "R",
+     "m": "Rest"
+    },
+    {
+     "l": "I",
+     "m": "Ice (first 24–48 hr)"
+    },
+    {
+     "l": "C",
+     "m": "Compression"
+    },
+    {
+     "l": "E",
+     "m": "Elevation"
+    }
+   ],
+   "explain": "Ice early to reduce swelling; heat is used later for chronic stiffness.",
+   "emoji": "🛌 🧊 🩹 ⬆️"
+  },
+  {
+   "id": "smart-goals",
+   "title": "SMART Goals",
+   "for": "Writing measurable client outcomes",
+   "category": "Fundamentals",
+   "letters": [
+    {
+     "l": "S",
+     "m": "Specific"
+    },
+    {
+     "l": "M",
+     "m": "Measurable"
+    },
+    {
+     "l": "A",
+     "m": "Attainable"
+    },
+    {
+     "l": "R",
+     "m": "Realistic"
+    },
+    {
+     "l": "T",
+     "m": "Timed"
+    }
+   ],
+   "explain": "A good outcome is client-centered and measurable: 'Client will ambulate 50 ft by day 2.'",
+   "emoji": "🎯 📏 ✅ ⏳"
+  },
+  {
+   "id": "cold-and-clammy-vs-hot-and-dry",
+   "title": "Cold & Clammy vs Hot & Dry",
+   "for": "Telling hypoglycemia from hyperglycemia",
+   "category": "Endocrine",
+   "letters": [
+    {
+     "l": "Cold & clammy",
+     "m": "→ need some candy (HYPOglycemia)"
+    },
+    {
+     "l": "Hot & dry",
+     "m": "→ sugar high (HYPERglycemia)"
+    }
+   ],
+   "explain": "Hypoglycemia comes on fast: shaky, sweaty, confused — treat with 15 g fast carbs.",
+   "emoji": "🥶 🍬 🥵 🍭"
+  },
+  {
+   "id": "air-=-mtv",
+   "title": "Air = MTV",
+   "for": "Diseases requiring airborne precautions",
+   "category": "Infection Control",
+   "letters": [
+    {
+     "l": "M",
+     "m": "Measles"
+    },
+    {
+     "l": "T",
+     "m": "Tuberculosis"
+    },
+    {
+     "l": "V",
+     "m": "Varicella (chickenpox) & disseminated zoster"
+    }
+   ],
+   "explain": "Airborne = N95 respirator + negative-pressure room. Droplet and contact are separate.",
+   "emoji": "🦠 😷 🏠"
+  },
+  {
+   "id": "clear-before-cloudy",
+   "title": "Clear Before Cloudy",
+   "for": "Order for mixing insulins in one syringe",
+   "category": "Pharmacology",
+   "letters": [
+    {
+     "l": "Clear",
+     "m": "Draw up the CLEAR (regular/rapid) insulin first"
+    },
+    {
+     "l": "Cloudy",
+     "m": "Then draw up the CLOUDY (NPH) insulin"
+    }
+   ],
+   "explain": "Draw clear first so you never contaminate the vial of clear insulin with cloudy. Only regular insulin is given IV.",
+   "emoji": "🔅 ☁️ 💉"
+  },
+  {
+   "id": "trousseau-and-chvostek",
+   "title": "Trousseau & Chvostek",
+   "for": "Signs of hypocalcemia (low calcium)",
+   "category": "Endocrine",
+   "letters": [
+    {
+     "l": "Trousseau",
+     "m": "Carpal spasm when a BP cuff is inflated"
+    },
+    {
+     "l": "Chvostek",
+     "m": "Facial twitch when the cheek is tapped"
+    }
+   ],
+   "explain": "Both signal neuromuscular irritability from low calcium (watch after thyroidectomy).",
+   "emoji": "✋ 😬"
+  }
+ ]
+}

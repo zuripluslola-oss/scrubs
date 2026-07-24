@@ -119,6 +119,7 @@ def chrome(fname, title, desc, body, active=""):
           <li><a href="drugs.html">Drug Cards <small>Pharmacology library &middot; drill by system</small></a></li>
           <li><a href="cheatsheets.html">Cheat Sheets <small>ABGs, antidotes, diets &amp; more</small></a></li>
           <li><a href="lab-values.html">Lab Values <small>All 65 &middot; what high &amp; low mean</small></a></li>
+          <li><a href="mnemonics.html">Mnemonics <small>MONA, VEAL CHOP, SLUDGE &amp; more</small></a></li>
           <li><a href="care-plans.html">Care Plans <small>Diagnoses, interventions &amp; rationales</small></a></li>
           <li><a href="study-plan.html">Study Plan Calendar <small>Your day-by-day plan to test day</small></a></li>
           <li><a href="nclex-guide.html">Free Study Guide <small>How to pass &middot; for nurses, by nurses</small></a></li>
@@ -183,6 +184,7 @@ def chrome(fname, title, desc, body, active=""):
           <li><a href="drugs.html">Drug Cards</a></li>
           <li><a href="cheatsheets.html">Cheat Sheets</a></li>
           <li><a href="lab-values.html">Lab Values</a></li>
+          <li><a href="mnemonics.html">Mnemonics</a></li>
           <li><a href="care-plans.html">Care Plans</a></li>
           <li><a href="study-plan.html">Study Plan Calendar</a></li>
           <li><a href="nclex-guide.html">Free Study Guide</a></li>
@@ -2437,6 +2439,66 @@ LABS_BODY = f"""  <div class="page-hero">
 PAGES["lab-values.html"] = ("NCLEX Lab Values (All 65) &mdash; Normal Ranges, High &amp; Low Meaning | Must Love Scrubs",
     "Every high-yield NCLEX lab value with its normal range, what a high result means, what a low result means, and critical values. Searchable, filterable nursing lab reference.",
     LABS_BODY, "courses")
+
+# ---------------------------------------------------------------- MNEMONICS (+ emoji picmonic visuals)
+
+def _load_mnemonics():
+    import glob as _glob
+    out, seen = [], set()
+    for path in sorted(_glob.glob(os.path.join(ROOT, 'data', 'mnemonics', '*.json'))):
+        data = _json.load(open(path, encoding='utf-8'))
+        for m in data.get('mnemonics', []):
+            if not m.get('title') or not m.get('letters'): continue
+            if m.get('id') in seen: continue
+            seen.add(m['id']); out.append(m)
+    return out
+
+MNEMS = _load_mnemonics()
+MNEMS_JSON = _json.dumps(MNEMS, ensure_ascii=False).replace('<', '\\u003c').replace('>', '\\u003e').replace('&', '\\u0026')
+MNEM_CATS = []
+for _m in MNEMS:
+    if _m['category'] not in MNEM_CATS:
+        MNEM_CATS.append(_m['category'])
+MNEM_CATS.sort()
+
+def mnem_cat_chips():
+    out = ['<button class="mn-chip on" data-cat="All">All</button>']
+    for c in MNEM_CATS:
+        out.append(f'<button class="mn-chip" data-cat="{c}">{c}</button>')
+    return "".join(out)
+
+MNEMS_BODY = f"""  <div class="page-hero">
+    <div class="wrap inner">
+      <span class="lesson-label" style="color:var(--gold-400);">Mnemonics</span>
+      <h1 style="margin-top:0.6rem;">Make it <span class="em">stick</span>.</h1>
+      <p>The memory tricks nurses swear by &mdash; MONA, VEAL CHOP, SLUDGE, FAST and more &mdash; each broken down letter by letter with a visual cue. Your brain remembers stories and pictures, not lists. Search any topic, filter by system.</p>
+    </div>
+  </div>
+
+  <section style="background:var(--bg);">
+    <div class="wrap">
+      <div class="mnemonics" data-mn-total="{len(MNEMS)}">
+        <script type="application/json" data-mnems>{MNEMS_JSON}</script>
+        <div class="mn-tools fade-up">
+          <div class="mn-search">
+            {I['search']}
+            <input type="search" placeholder="Search a mnemonic or topic&hellip;" aria-label="Search mnemonics" data-mn-search>
+          </div>
+        </div>
+        <div class="mn-chips fade-up" data-mn-chips>{mnem_cat_chips()}</div>
+        <p class="mn-count fade-up"><b data-mn-count>{len(MNEMS)}</b> mnemonics &middot; growing weekly</p>
+        <div class="mn-grid fade-up" data-mn-grid></div>
+        <div class="mn-empty" data-mn-empty hidden><p><b>No match yet.</b> Tell us what to add at hello@mustlovescrubs.com.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <script src="js/mnemonics.js"></script>
+"""
+
+PAGES["mnemonics.html"] = ("Nursing Mnemonics &mdash; MONA, VEAL CHOP, SLUDGE &amp; More | Must Love Scrubs",
+    "A searchable library of high-yield nursing mnemonics with letter-by-letter breakdowns and visual cues — MONA, VEAL CHOP, SLUDGE, FAST, ADPIE, SIG E CAPS, and more.",
+    MNEMS_BODY, "courses")
 
 # ---------------------------------------------------------------- STUDY CALENDAR (the conductor)
 
