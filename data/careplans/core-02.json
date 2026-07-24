@@ -1,0 +1,558 @@
+{
+ "batch": "core-02",
+ "plans": [
+  {
+   "id": "myocardial-infarction",
+   "title": "Myocardial Infarction (MI)",
+   "category": "Cardiac",
+   "icon": "heartbeat",
+   "summary": "Acute coronary syndrome — relieving pain and protecting the myocardium.",
+   "diagnoses": [
+    {
+     "dx": "Acute Pain",
+     "related": "related to myocardial ischemia from decreased coronary blood flow",
+     "aeb": "as evidenced by crushing chest pain radiating to the arm/jaw, diaphoresis, and anxiety",
+     "subjective": [
+      "Rates chest pain 9/10",
+      "States “it feels like an elephant on my chest.”"
+     ],
+     "objective": [
+      "Diaphoresis",
+      "ST changes on ECG",
+      "HR 110, BP 158/92"
+     ],
+     "outcomes": [
+      "Client reports chest pain relieved to ≤2/10 and shows no ECG signs of ongoing ischemia."
+     ],
+     "interventions": [
+      {
+       "i": "Assess pain and obtain a 12-lead ECG.",
+       "r": "Guides treatment and confirms ischemia/infarct location."
+      },
+      {
+       "i": "Administer aspirin, oxygen (if hypoxic), nitroglycerin, and morphine as ordered.",
+       "r": "MONA reduces clot burden, ischemia, and oxygen demand."
+      },
+      {
+       "i": "Maintain continuous cardiac monitoring.",
+       "r": "Detects lethal dysrhythmias early."
+      },
+      {
+       "i": "Provide rest and a calm environment.",
+       "r": "Lowers myocardial oxygen demand."
+      }
+     ],
+     "evaluation": "Chest pain relieved to 1/10; no new ST-segment changes; client resting comfortably."
+    },
+    {
+     "dx": "Decreased Cardiac Output",
+     "related": "related to impaired myocardial contractility",
+     "aeb": "as evidenced by dysrhythmias, hypotension, and fatigue",
+     "subjective": [
+      "Reports feeling weak and lightheaded"
+     ],
+     "objective": [
+      "Runs of PVCs",
+      "BP trending down"
+     ],
+     "outcomes": [
+      "Client maintains adequate cardiac output with stable vital signs and no lethal dysrhythmias."
+     ],
+     "interventions": [
+      {
+       "i": "Monitor vital signs, rhythm, and urine output.",
+       "r": "Reflects perfusion and cardiac function."
+      },
+      {
+       "i": "Administer beta-blockers and ACE inhibitors as prescribed.",
+       "r": "Reduce workload and remodeling."
+      },
+      {
+       "i": "Limit activity per orders.",
+       "r": "Prevents extension of the infarct."
+      }
+     ],
+     "evaluation": "Vital signs stable; no lethal dysrhythmias; adequate urine output maintained."
+    }
+   ]
+  },
+  {
+   "id": "stroke",
+   "title": "Stroke (CVA)",
+   "category": "Neuro",
+   "icon": "sheet",
+   "summary": "Mobility and swallowing safety after a cerebrovascular accident.",
+   "diagnoses": [
+    {
+     "dx": "Impaired Physical Mobility",
+     "related": "related to neuromuscular impairment from the stroke",
+     "aeb": "as evidenced by hemiparesis and decreased range of motion",
+     "subjective": [
+      "States one side feels weak"
+     ],
+     "objective": [
+      "Right-sided weakness",
+      "Unable to bear weight independently"
+     ],
+     "outcomes": [
+      "Client maintains joint function and skin integrity and participates in rehabilitation."
+     ],
+     "interventions": [
+      {
+       "i": "Perform range-of-motion exercises and reposition regularly.",
+       "r": "Prevents contractures and pressure injuries."
+      },
+      {
+       "i": "Collaborate with physical and occupational therapy.",
+       "r": "Restores function and independence."
+      },
+      {
+       "i": "Use safety measures and assistive devices.",
+       "r": "Prevents falls during recovery."
+      }
+     ],
+     "evaluation": "Client maintained full ROM without contractures and engaged in PT."
+    },
+    {
+     "dx": "Impaired Swallowing (Risk for Aspiration)",
+     "related": "related to neuromuscular deficit affecting the swallow reflex",
+     "aeb": "as evidenced by coughing with intake and a facial droop",
+     "subjective": [
+      "Coughs when drinking water"
+     ],
+     "objective": [
+      "Facial droop",
+      "Weak gag reflex"
+     ],
+     "outcomes": [
+      "Client swallows safely without signs of aspiration."
+     ],
+     "interventions": [
+      {
+       "i": "Keep NPO until a swallow screen is passed.",
+       "r": "Prevents aspiration after a stroke."
+      },
+      {
+       "i": "Position upright at 90° for meals and 30 min after.",
+       "r": "Uses gravity to protect the airway."
+      },
+      {
+       "i": "Provide prescribed thickened liquids/modified diet; keep suction ready.",
+       "r": "Reduces aspiration risk."
+      }
+     ],
+     "evaluation": "Client passed the swallow screen and tolerated a modified diet without aspiration."
+    }
+   ]
+  },
+  {
+   "id": "ckd",
+   "title": "Chronic Kidney Disease",
+   "category": "Renal",
+   "icon": "drop",
+   "summary": "Fluid balance and nutrition in declining kidney function.",
+   "diagnoses": [
+    {
+     "dx": "Excess Fluid Volume",
+     "related": "related to decreased glomerular filtration and sodium/water retention",
+     "aeb": "as evidenced by edema, hypertension, and rapid weight gain",
+     "subjective": [
+      "Reports swelling and shortness of breath"
+     ],
+     "objective": [
+      "Periorbital and peripheral edema",
+      "BP 168/96",
+      "Crackles"
+     ],
+     "outcomes": [
+      "Client achieves euvolemia with stable weight and clear lungs."
+     ],
+     "interventions": [
+      {
+       "i": "Monitor daily weight, I&O, and edema.",
+       "r": "Tracks fluid status and therapy response."
+      },
+      {
+       "i": "Enforce fluid and sodium restriction as ordered.",
+       "r": "Prevents further overload."
+      },
+      {
+       "i": "Monitor potassium and phosphorus.",
+       "r": "CKD causes hyperkalemia and hyperphosphatemia."
+      },
+      {
+       "i": "Prepare for/support dialysis as prescribed.",
+       "r": "Removes excess fluid and wastes."
+      }
+     ],
+     "evaluation": "Weight and blood pressure decreased toward baseline; lungs clear; potassium in range."
+    },
+    {
+     "dx": "Imbalanced Nutrition: Risk",
+     "related": "related to dietary restrictions, anorexia, and uremia",
+     "aeb": "(risk diagnosis — no defining characteristics required)",
+     "subjective": [
+      "States food “tastes metallic”"
+     ],
+     "objective": [
+      "Poor intake",
+      "Elevated phosphorus"
+     ],
+     "outcomes": [
+      "Client maintains adequate nutrition within renal dietary limits."
+     ],
+     "interventions": [
+      {
+       "i": "Provide a renal diet (limited protein, potassium, phosphorus, sodium).",
+       "r": "Reduces waste buildup and workload."
+      },
+      {
+       "i": "Give phosphate binders with meals.",
+       "r": "Binds dietary phosphorus."
+      },
+      {
+       "i": "Consult a renal dietitian.",
+       "r": "Individualizes the plan."
+      }
+     ],
+     "evaluation": "Client maintained weight and phosphorus improved with binder use."
+    }
+   ]
+  },
+  {
+   "id": "depression",
+   "title": "Major Depression",
+   "category": "Mental Health",
+   "icon": "chat",
+   "summary": "Safety and coping for major depressive disorder.",
+   "diagnoses": [
+    {
+     "dx": "Risk for Suicide",
+     "related": "related to hopelessness, depressed mood, and expressed worthlessness",
+     "aeb": "(risk diagnosis — safety is the priority)",
+     "subjective": [
+      "States “everyone would be better off without me.”"
+     ],
+     "objective": [
+      "Flat affect",
+      "Poor eye contact",
+      "Recent giving away of possessions"
+     ],
+     "outcomes": [
+      "Client remains safe and free from self-harm and verbalizes reasons for living."
+     ],
+     "interventions": [
+      {
+       "i": "Ask directly about suicidal ideation, plan, and means.",
+       "r": "Direct questioning does not increase risk and identifies danger."
+      },
+      {
+       "i": "Ensure a safe environment and appropriate observation (1:1 if indicated); remove means.",
+       "r": "Prevents self-harm — the priority."
+      },
+      {
+       "i": "Establish a therapeutic, nonjudgmental relationship.",
+       "r": "Builds trust and hope."
+      },
+      {
+       "i": "Administer antidepressants; monitor for increased energy early in treatment.",
+       "r": "Risk can rise as energy returns before mood lifts."
+      }
+     ],
+     "evaluation": "Client remained safe with no self-harm and identified supports and reasons for living."
+    },
+    {
+     "dx": "Hopelessness",
+     "related": "related to a perceived inability to change one's situation",
+     "aeb": "as evidenced by passive affect and verbalizations of despair",
+     "subjective": [
+      "States “nothing will ever get better.”"
+     ],
+     "objective": [
+      "Decreased participation in care"
+     ],
+     "outcomes": [
+      "Client verbalizes increased hope and participates in the plan of care."
+     ],
+     "interventions": [
+      {
+       "i": "Encourage expression of feelings and set small, achievable goals.",
+       "r": "Builds a sense of control and accomplishment."
+      },
+      {
+       "i": "Provide structure and positive reinforcement.",
+       "r": "Counters helplessness."
+      },
+      {
+       "i": "Involve support systems.",
+       "r": "Strengthens coping resources."
+      }
+     ],
+     "evaluation": "Client engaged in activities and expressed cautious optimism."
+    }
+   ]
+  },
+  {
+   "id": "postpartum-hemorrhage",
+   "title": "Postpartum Care (Hemorrhage Risk)",
+   "category": "Maternity",
+   "icon": "drop",
+   "summary": "Preventing and catching early postpartum hemorrhage.",
+   "diagnoses": [
+    {
+     "dx": "Risk for Bleeding (Postpartum Hemorrhage)",
+     "related": "related to uterine atony and birth trauma",
+     "aeb": "(risk diagnosis — no defining characteristics required)",
+     "subjective": [
+      "Reports feeling a large gush with position changes"
+     ],
+     "objective": [
+      "Boggy uterus on assessment",
+      "Recent prolonged labor"
+     ],
+     "outcomes": [
+      "Client maintains a firm, midline fundus with normal lochia and stable vital signs."
+     ],
+     "interventions": [
+      {
+       "i": "Assess fundal tone, height, and position frequently.",
+       "r": "A boggy uterus is the leading cause of early PPH."
+      },
+      {
+       "i": "Massage the fundus if boggy and ensure the bladder is empty.",
+       "r": "Stimulates contraction; a full bladder displaces the uterus."
+      },
+      {
+       "i": "Quantify lochia and monitor vital signs for shock.",
+       "r": "Detects hemorrhage early."
+      },
+      {
+       "i": "Administer oxytocics as prescribed.",
+       "r": "Promotes uterine contraction."
+      }
+     ],
+     "evaluation": "Fundus firm and midline; lochia within normal limits; vital signs stable."
+    },
+    {
+     "dx": "Risk for Infection",
+     "related": "related to birth trauma and invasive procedures",
+     "aeb": "(risk diagnosis — no defining characteristics required)",
+     "subjective": [
+      "Reports perineal discomfort"
+     ],
+     "objective": [
+      "Episiotomy present"
+     ],
+     "outcomes": [
+      "Client remains free of infection with normal temperature and healing tissues."
+     ],
+     "interventions": [
+      {
+       "i": "Teach perineal hygiene (front to back) and hand washing.",
+       "r": "Prevents contamination."
+      },
+      {
+       "i": "Monitor temperature and lochia for foul odor.",
+       "r": "Detects endometritis early."
+      },
+      {
+       "i": "Teach signs of infection to report.",
+       "r": "Promotes early follow-up."
+      }
+     ],
+     "evaluation": "Client remained afebrile with a clean, healing perineum."
+    }
+   ]
+  },
+  {
+   "id": "peds-asthma",
+   "title": "Pediatric Asthma",
+   "category": "Pediatrics",
+   "icon": "lungs",
+   "summary": "Managing an acute asthma exacerbation in a child and teaching the family.",
+   "diagnoses": [
+    {
+     "dx": "Ineffective Breathing Pattern",
+     "related": "related to bronchospasm and airway inflammation",
+     "aeb": "as evidenced by wheezing, retractions, and tachypnea",
+     "subjective": [
+      "Child says “I can’t catch my breath.”"
+     ],
+     "objective": [
+      "Expiratory wheezing",
+      "Intercostal retractions",
+      "SpO₂ 91%"
+     ],
+     "outcomes": [
+      "Child achieves an effective breathing pattern with clear breath sounds and SpO₂ ≥94%."
+     ],
+     "interventions": [
+      {
+       "i": "Position upright and provide calm reassurance.",
+       "r": "Eases work of breathing; anxiety worsens bronchospasm."
+      },
+      {
+       "i": "Administer a short-acting bronchodilator (albuterol), then corticosteroids as ordered.",
+       "r": "Bronchodilator opens airways first; steroids reduce inflammation."
+      },
+      {
+       "i": "Monitor respiratory status, SpO₂, and peak flow.",
+       "r": "Tracks response to therapy."
+      },
+      {
+       "i": "Provide oxygen as prescribed.",
+       "r": "Corrects hypoxemia."
+      }
+     ],
+     "evaluation": "Wheezing resolved; SpO₂ ≥94%; child breathing comfortably."
+    },
+    {
+     "dx": "Deficient Knowledge (Family)",
+     "related": "related to unfamiliarity with asthma management",
+     "aeb": "as evidenced by incorrect inhaler technique and unrecognized triggers",
+     "subjective": [
+      "Parent unsure when to use each inhaler"
+     ],
+     "objective": [
+      "Improper spacer use observed"
+     ],
+     "outcomes": [
+      "Family correctly demonstrates inhaler technique and states the asthma action plan."
+     ],
+     "interventions": [
+      {
+       "i": "Teach and verify inhaler and spacer technique.",
+       "r": "Ensures medication reaches the lungs."
+      },
+      {
+       "i": "Review trigger avoidance and the written asthma action plan.",
+       "r": "Prevents and guides response to attacks."
+      },
+      {
+       "i": "Teach when to seek emergency care.",
+       "r": "Prevents delays in severe attacks."
+      }
+     ],
+     "evaluation": "Family demonstrated correct technique and verbalized the action plan."
+    }
+   ]
+  },
+  {
+   "id": "anxiety",
+   "title": "Anxiety Disorder",
+   "category": "Mental Health",
+   "icon": "chat",
+   "summary": "Reducing anxiety and strengthening coping.",
+   "diagnoses": [
+    {
+     "dx": "Anxiety",
+     "related": "related to a perceived threat or situational crisis",
+     "aeb": "as evidenced by restlessness, tachycardia, and expressed apprehension",
+     "subjective": [
+      "States “I feel like something bad is going to happen.”"
+     ],
+     "objective": [
+      "Restlessness",
+      "HR 108",
+      "Difficulty concentrating"
+     ],
+     "outcomes": [
+      "Client reports reduced anxiety and demonstrates effective coping techniques."
+     ],
+     "interventions": [
+      {
+       "i": "Stay with the client and use a calm, reassuring approach.",
+       "r": "Presence and calm reduce escalation."
+      },
+      {
+       "i": "Reduce environmental stimuli.",
+       "r": "Overstimulation heightens anxiety."
+      },
+      {
+       "i": "Teach relaxation and deep-breathing techniques.",
+       "r": "Activates the parasympathetic response."
+      },
+      {
+       "i": "Administer anxiolytics as prescribed for severe anxiety.",
+       "r": "Provides short-term relief while coping skills develop."
+      }
+     ],
+     "evaluation": "Client's heart rate normalized and they used breathing techniques to self-calm."
+    }
+   ]
+  },
+  {
+   "id": "cirrhosis",
+   "title": "Cirrhosis",
+   "category": "Gastrointestinal",
+   "icon": "drop",
+   "summary": "Managing ascites and bleeding/encephalopathy risk in liver failure.",
+   "diagnoses": [
+    {
+     "dx": "Excess Fluid Volume (Ascites)",
+     "related": "related to portal hypertension and hypoalbuminemia",
+     "aeb": "as evidenced by ascites, peripheral edema, and weight gain",
+     "subjective": [
+      "Reports abdominal fullness and tight clothing"
+     ],
+     "objective": [
+      "Distended abdomen with increased girth",
+      "Peripheral edema"
+     ],
+     "outcomes": [
+      "Client achieves reduced ascites with decreasing abdominal girth and stable respiratory status."
+     ],
+     "interventions": [
+      {
+       "i": "Measure daily weight and abdominal girth.",
+       "r": "Tracks fluid accumulation."
+      },
+      {
+       "i": "Restrict sodium and fluids; administer diuretics (often spironolactone).",
+       "r": "Reduces fluid retention."
+      },
+      {
+       "i": "Administer albumin and prepare for paracentesis as ordered.",
+       "r": "Restores oncotic pressure/relieves severe ascites."
+      },
+      {
+       "i": "Position in semi-Fowler's.",
+       "r": "Eases breathing with a distended abdomen."
+      }
+     ],
+     "evaluation": "Abdominal girth decreased and breathing eased with therapy."
+    },
+    {
+     "dx": "Risk for Injury",
+     "related": "related to impaired clotting, esophageal varices, and hepatic encephalopathy",
+     "aeb": "(risk diagnosis — no defining characteristics required)",
+     "subjective": [
+      "Family reports the client seems confused"
+     ],
+     "objective": [
+      "Elevated ammonia",
+      "Asterixis (flapping tremor)"
+     ],
+     "outcomes": [
+      "Client remains free of injury with intact mentation and no active bleeding."
+     ],
+     "interventions": [
+      {
+       "i": "Monitor for GI bleeding; use a soft toothbrush and avoid trauma.",
+       "r": "Varices and clotting defects raise bleeding risk."
+      },
+      {
+       "i": "Administer lactulose and monitor level of consciousness.",
+       "r": "Lactulose lowers ammonia; LOC reflects encephalopathy."
+      },
+      {
+       "i": "Avoid hepatotoxic drugs and alcohol.",
+       "r": "Prevents further liver damage."
+      }
+     ],
+     "evaluation": "Client remained free of bleeding; ammonia decreased and mentation improved with lactulose."
+    }
+   ]
+  }
+ ]
+}
