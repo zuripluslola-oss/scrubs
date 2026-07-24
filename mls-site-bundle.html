@@ -930,6 +930,50 @@ section { padding-block: clamp(3.6rem, 9vw, 6.5rem); position: relative; }
 .cs-empty { text-align: center; padding: 2rem; color: var(--ink-60); }
 @media print { .site-header, .mega-nav, .ticker, .bottom-nav, .esi-fab, .feedback-fab, .tv-btn, .cs-tools, .cs-chips, .cs-count, .site-footer { display: none !important; } .cs-body { display: block !important; } .cs-caret { display: none; } }
 
+/* ===== Care Plans ===== */
+.cp-tools { display: flex; gap: 0.8rem; flex-wrap: wrap; align-items: center; }
+.cp-search { flex: 1; min-width: 220px; display: flex; align-items: center; gap: 0.6rem; background: var(--card); border: 1px solid rgba(30,18,51,0.14); border-radius: 14px; padding: 0.7rem 1rem; box-shadow: var(--shadow-1); }
+.cp-search svg { width: 20px; height: 20px; color: var(--ink-40); flex-shrink: 0; }
+.cp-search input { border: none; background: transparent; font: inherit; color: var(--ink); width: 100%; outline: none; }
+.cp-chips { display: flex; gap: 0.5rem; flex-wrap: wrap; margin-top: 1rem; }
+.cp-chip { border: 1px solid rgba(30,18,51,0.14); background: var(--card); color: var(--ink-60); padding: 0.45rem 0.9rem; border-radius: 999px; font: inherit; font-size: 0.8rem; font-weight: 700; cursor: pointer; }
+.cp-chip.on { background: var(--ink); color: #fff; border-color: var(--ink); }
+.cp-count { font-size: 0.85rem; color: var(--ink-40); margin: 0.9rem 0; }
+.cp-count b { color: var(--coral-600); }
+
+.cp-grid { display: grid; gap: 0.7rem; grid-template-columns: 1fr; }
+.cp-card { background: var(--card); border: 1px solid rgba(30,18,51,0.09); border-radius: var(--radius); box-shadow: var(--shadow-1); overflow: hidden; }
+.cp-head { width: 100%; display: flex; align-items: center; gap: 0.7rem; padding: 1rem 1.1rem; background: transparent; border: none; cursor: pointer; font: inherit; text-align: left; }
+.cp-ic { width: 40px; height: 40px; border-radius: 12px; flex-shrink: 0; display: grid; place-items: center; color: #fff; background: linear-gradient(150deg, var(--coral-500), var(--coral-600)); }
+.cp-ic svg { width: 21px; height: 21px; }
+.cp-head-txt { display: flex; flex-direction: column; flex: 1; min-width: 0; }
+.cp-head-txt b { font-size: 1.05rem; }
+.cp-head-txt small { font-size: 0.78rem; color: var(--ink-60); }
+.cp-dxn { font-size: 0.68rem; font-weight: 800; color: var(--teal-600); background: rgba(42,212,196,0.12); padding: 0.2rem 0.5rem; border-radius: 999px; flex-shrink: 0; }
+.cp-cat-tag { font-size: 0.66rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.04em; color: var(--coral-600); background: rgba(139,92,255,0.12); padding: 0.2rem 0.5rem; border-radius: 999px; flex-shrink: 0; }
+.cp-caret { color: var(--ink-40); transition: transform 0.2s ease; flex-shrink: 0; }
+.cp-card.open .cp-caret { transform: rotate(180deg); }
+.cp-body { display: none; padding: 0 1.1rem 1.1rem; }
+.cp-card.open .cp-body { display: block; }
+.cp-dx { border-top: 2px solid rgba(139,92,255,0.15); padding-top: 1rem; margin-top: 1rem; }
+.cp-dx-name { font-family: var(--font-display); font-weight: 800; font-size: 1.1rem; color: var(--coral-600); }
+.cp-dx-rel { font-size: 0.86rem; color: var(--ink-60); margin: 0.3rem 0 0.9rem; }
+.cp-block { margin-bottom: 0.9rem; }
+.cp-lbl { display: block; font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--teal-600); font-weight: 800; margin-bottom: 0.35rem; }
+.cp-list { list-style: none; display: flex; flex-direction: column; gap: 0.2rem; }
+.cp-list li { font-size: 0.86rem; padding-left: 0.9rem; position: relative; }
+.cp-list li::before { content: '·'; position: absolute; left: 0.1rem; color: var(--coral-500); font-weight: 800; }
+.cp-assess { display: grid; gap: 0.6rem; grid-template-columns: 1fr; }
+@media (min-width: 560px) { .cp-assess { grid-template-columns: 1fr 1fr; } }
+.cp-sub b { font-size: 0.78rem; }
+.cp-int { border-left: 3px solid var(--teal-400); padding: 0.4rem 0 0.4rem 0.7rem; margin-bottom: 0.5rem; }
+.cp-int-i { font-size: 0.88rem; font-weight: 600; }
+.cp-int-r { font-size: 0.82rem; color: var(--ink-60); margin-top: 0.15rem; }
+.cp-int-r b { color: var(--teal-600); }
+.cp-eval { font-size: 0.86rem; background: rgba(42,212,196,0.08); border-radius: 8px; padding: 0.6rem 0.8rem; }
+.cp-empty { text-align: center; padding: 2rem; color: var(--ink-60); }
+@media print { .cp-tools, .cp-chips, .cp-count { display: none !important; } .cp-body { display: block !important; } .cp-caret { display: none; } }
+
 /* courses page wide cards */
 .two-up { display: grid; gap: 1rem; grid-template-columns: 1fr; }
 @media (min-width: 720px) { .two-up { grid-template-columns: repeat(2, 1fr); } }
@@ -1900,6 +1944,7 @@ body.mls-paid .gate { display: none; }
           <li><a href="flashcards.html">Flashcards &amp; Games <small>Flip cards, quizzes, match &amp; speed rounds</small></a></li>
           <li><a href="drugs.html">Drug Cards <small>Pharmacology library &middot; drill by system</small></a></li>
           <li><a href="cheatsheets.html">Cheat Sheets <small>Lab values, ABGs, antidotes &amp; more</small></a></li>
+          <li><a href="care-plans.html">Care Plans <small>Diagnoses, interventions &amp; rationales</small></a></li>
           <li><a href="study-plan.html">Study Plan Calendar <small>Your day-by-day plan to test day</small></a></li>
           <li><a href="nclex-guide.html">Free Study Guide <small>How to pass &middot; for nurses, by nurses</small></a></li>
           <li><a href="course-lab-values.html">Free NCLEX Practice <small>Start with a free audio scene</small></a></li>
@@ -2305,6 +2350,34 @@ body.mls-paid .gate { display: none; }
       <article class="tile fade-up"><span class="tag">Community</span><h3>Introducing Nurse Spotlight</h3><p>Why we're telling nurses' stories — and how to share yours. Coming soon.</p></article>
     </div>
   </main>
+
+</div>
+<div class="mls-route" data-route="care-plans.html" hidden>
+  <div class="page-hero">
+    <div class="wrap inner">
+      <span class="lesson-label" style="color:var(--gold-400);">Care Plans</span>
+      <h1 style="margin-top:0.6rem;">Care plans, <span class="em">done right</span>.</h1>
+      <p>Full nursing care plans in the format your instructor wants &mdash; nursing diagnosis, assessment data, measurable outcomes, and interventions with the <b>rationale</b> behind each one. Searchable, filterable, and built to teach the clinical judgment, not just fill a template.</p>
+    </div>
+  </div>
+
+  <section style="background:var(--bg);">
+    <div class="wrap">
+      <div class="careplans" data-cp-total="8">
+        <script type="application/json" data-careplans>[{"id": "heart-failure", "title": "Heart Failure", "category": "Cardiac", "icon": "heartbeat", "summary": "Decreased cardiac output and fluid overload in chronic heart failure.", "diagnoses": [{"dx": "Decreased Cardiac Output", "related": "related to altered myocardial contractility and increased preload/afterload", "aeb": "as evidenced by dyspnea, fatigue, crackles, an S3 heart sound, and reduced activity tolerance", "subjective": ["Reports shortness of breath with exertion", "States “I feel exhausted all the time.”"], "objective": ["Bilateral crackles", "2+ pitting edema", "JVD", "SpO₂ 90% on room air", "2 kg weight gain in 3 days"], "outcomes": ["Client maintains adequate cardiac output as evidenced by clear lungs, SpO₂ \u003e94%, and stable vital signs.", "Client tolerates activity without excessive dyspnea by discharge."], "interventions": [{"i": "Monitor vital signs, heart rhythm, and oxygen saturation.", "r": "Detects decompensation and dysrhythmias early."}, {"i": "Weigh the client daily at the same time.", "r": "A 2–3 lb gain in a day signals fluid retention."}, {"i": "Administer diuretics, ACE inhibitors, and beta-blockers as prescribed.", "r": "Reduce preload/afterload and improve output."}, {"i": "Position in semi- to high-Fowler's.", "r": "Eases breathing and reduces venous return to the heart."}, {"i": "Provide rest periods between activities.", "r": "Lowers myocardial oxygen demand."}], "evaluation": "Client maintained SpO₂ \u003e94% with clear lung sounds and stable weight; tolerated ambulation without severe dyspnea."}, {"dx": "Excess Fluid Volume", "related": "related to compromised regulatory mechanisms (reduced renal perfusion activating RAAS)", "aeb": "as evidenced by edema, rapid weight gain, crackles, and jugular venous distention", "subjective": ["Reports swelling in the legs and rings feeling tight"], "objective": ["Dependent edema", "Weight gain", "Crackles", "Elevated BP"], "outcomes": ["Client achieves balanced intake and output and returns toward baseline weight."], "interventions": [{"i": "Monitor strict intake and output.", "r": "Quantifies fluid balance and diuretic effectiveness."}, {"i": "Restrict sodium and fluids as ordered.", "r": "Reduces fluid retention and cardiac workload."}, {"i": "Monitor electrolytes, especially potassium.", "r": "Diuretics can cause hypokalemia."}, {"i": "Elevate edematous extremities.", "r": "Promotes venous return and reduces swelling."}], "evaluation": "Client's intake and output balanced; weight decreased 2 kg; edema reduced to trace."}]}, {"id": "pneumonia", "title": "Pneumonia", "category": "Respiratory", "icon": "lungs", "summary": "Airway clearance and gas exchange problems from pulmonary infection.", "diagnoses": [{"dx": "Ineffective Airway Clearance", "related": "related to excessive tracheobronchial secretions and inflammation", "aeb": "as evidenced by a productive cough, adventitious lung sounds, and dyspnea", "subjective": ["Reports a cough with thick yellow sputum"], "objective": ["Coarse crackles", "Tachypnea", "Use of accessory muscles"], "outcomes": ["Client maintains a patent airway with clear or clearing breath sounds and effective cough."], "interventions": [{"i": "Encourage coughing and deep breathing; use incentive spirometry.", "r": "Mobilizes secretions and expands alveoli."}, {"i": "Increase fluid intake unless contraindicated.", "r": "Thins secretions for easier expectoration."}, {"i": "Position in semi-Fowler's and reposition frequently.", "r": "Optimizes ventilation and drainage."}, {"i": "Administer antibiotics and expectorants as prescribed.", "r": "Treats infection and loosens secretions."}, {"i": "Suction as needed.", "r": "Clears secretions the client cannot expel."}], "evaluation": "Breath sounds clearing; client demonstrates an effective cough and expectorates secretions."}, {"dx": "Impaired Gas Exchange", "related": "related to alveolar-capillary membrane changes from infection", "aeb": "as evidenced by hypoxemia, dyspnea, and altered ABGs", "subjective": ["Reports feeling short of breath"], "objective": ["SpO₂ 89%", "Restlessness", "Tachypnea"], "outcomes": ["Client maintains SpO₂ ≥94% and shows no signs of hypoxia."], "interventions": [{"i": "Monitor SpO₂ and ABGs.", "r": "Tracks oxygenation and the response to therapy."}, {"i": "Administer oxygen as prescribed.", "r": "Corrects hypoxemia."}, {"i": "Assess level of consciousness.", "r": "Restlessness/confusion is an early sign of hypoxia."}], "evaluation": "Client maintained SpO₂ ≥94% and remained alert and oriented."}]}, {"id": "diabetes", "title": "Diabetes Mellitus", "category": "Endocrine", "icon": "drop", "summary": "Glucose stability and self-management education for diabetes.", "diagnoses": [{"dx": "Risk for Unstable Blood Glucose", "related": "related to insufficient insulin, dietary intake, and knowledge deficit", "aeb": "(risk diagnosis — no defining characteristics required)", "subjective": ["States uncertainty about how to adjust insulin"], "objective": ["Blood glucose 310 mg/dL", "Recent A1c 9.2%"], "outcomes": ["Client maintains blood glucose within the prescribed target range."], "interventions": [{"i": "Monitor blood glucose as ordered.", "r": "Guides insulin dosing and detects highs/lows."}, {"i": "Administer insulin/oral agents as prescribed.", "r": "Controls blood glucose."}, {"i": "Teach signs of hypo- and hyperglycemia and the Rule of 15.", "r": "Enables early self-treatment."}, {"i": "Reinforce consistent carbohydrate intake and activity.", "r": "Stabilizes glucose."}, {"i": "Teach sick-day management.", "r": "Illness raises glucose and insulin needs."}], "evaluation": "Blood glucose trended into target range; client verbalized signs of hypo/hyperglycemia."}, {"dx": "Deficient Knowledge", "related": "related to a new diagnosis and unfamiliarity with self-care", "aeb": "as evidenced by questions and inaccurate return demonstration", "subjective": ["Asks how to give an injection", "States “I don’t know what I can eat.”"], "objective": ["Incorrect glucometer technique observed"], "outcomes": ["Client correctly demonstrates glucose monitoring and insulin administration before discharge."], "interventions": [{"i": "Teach and have the client demonstrate glucose monitoring and insulin injection.", "r": "Return demonstration confirms learning."}, {"i": "Teach foot care and daily inspection.", "r": "Prevents neuropathy/ulcer complications."}, {"i": "Review when to call the provider.", "r": "Promotes timely intervention."}], "evaluation": "Client demonstrated correct technique and verbalized foot-care and follow-up instructions."}]}, {"id": "copd", "title": "COPD", "category": "Respiratory", "icon": "lungs", "summary": "Gas exchange and activity tolerance in chronic obstructive pulmonary disease.", "diagnoses": [{"dx": "Impaired Gas Exchange", "related": "related to airflow limitation and air trapping", "aeb": "as evidenced by dyspnea, abnormal ABGs, and decreased SpO₂", "subjective": ["Reports breathlessness with minimal exertion"], "objective": ["Barrel chest", "Prolonged expiration", "SpO₂ 89%"], "outcomes": ["Client maintains SpO₂ within the individualized target (often 88–92%)."], "interventions": [{"i": "Administer oxygen to the prescribed target (often 88–92%).", "r": "Corrects hypoxemia without blunting the hypoxic drive."}, {"i": "Teach pursed-lip breathing and tripod positioning.", "r": "Prolongs expiration and reduces air trapping."}, {"i": "Administer bronchodilators/inhaled steroids as prescribed.", "r": "Open airways and reduce inflammation."}, {"i": "Support smoking cessation.", "r": "Slows disease progression."}], "evaluation": "Client maintained SpO₂ 88–92% and used pursed-lip breathing effectively."}, {"dx": "Activity Intolerance", "related": "related to an imbalance between oxygen supply and demand", "aeb": "as evidenced by exertional dyspnea and fatigue", "subjective": ["Reports needing to rest after walking a short distance"], "objective": ["Desaturation with activity", "Increased work of breathing"], "outcomes": ["Client performs ADLs with decreased dyspnea using energy-conservation techniques."], "interventions": [{"i": "Pace activities with rest periods.", "r": "Balances oxygen supply and demand."}, {"i": "Teach energy-conservation techniques.", "r": "Reduces oxygen consumption."}, {"i": "Encourage pulmonary rehabilitation.", "r": "Improves endurance over time."}], "evaluation": "Client completed ADLs with rest periods and reduced dyspnea."}]}, {"id": "acute-pain", "title": "Acute Pain (Post-op)", "category": "Fundamentals", "icon": "sheet", "summary": "Managing acute surgical pain safely and effectively.", "diagnoses": [{"dx": "Acute Pain", "related": "related to tissue trauma from a surgical incision", "aeb": "as evidenced by a pain report of 8/10, guarding, grimacing, and elevated heart rate and blood pressure", "subjective": ["Rates pain 8/10", "States pain worsens with movement"], "objective": ["Guarding the incision", "Grimacing", "HR 104, BP 152/88"], "outcomes": ["Client reports pain ≤3/10 and participates in recovery activities without respiratory depression."], "interventions": [{"i": "Assess pain (location, quality, intensity) regularly with a scale.", "r": "Pain is subjective; consistent assessment guides treatment."}, {"i": "Administer analgesics before pain becomes severe.", "r": "Preventing peaks controls pain with lower doses."}, {"i": "Assess respiratory rate before giving opioids; hold if \u003c12.", "r": "Opioids cause respiratory depression."}, {"i": "Use nonpharmacologic measures (positioning, ice, distraction).", "r": "Augments analgesia."}, {"i": "Initiate a bowel regimen with opioids.", "r": "Prevents opioid-induced constipation."}, {"i": "Reassess pain after intervention.", "r": "Confirms effectiveness."}], "evaluation": "Client rated pain ≤3/10, ambulated as ordered, and maintained a respiratory rate ≥12."}]}, {"id": "risk-falls", "title": "Risk for Falls", "category": "Fundamentals", "icon": "sheet", "summary": "Preventing falls in a high-risk hospitalized client.", "diagnoses": [{"dx": "Risk for Falls", "related": "related to advanced age, impaired mobility, and medications causing orthostasis/sedation", "aeb": "(risk diagnosis — no defining characteristics required)", "subjective": ["Reports feeling dizzy when standing"], "objective": ["Unsteady gait", "On antihypertensives and a sedative", "History of a prior fall"], "outcomes": ["Client remains free of falls throughout hospitalization."], "interventions": [{"i": "Complete a fall-risk assessment and flag the client.", "r": "Identifies and communicates risk."}, {"i": "Keep the bed in the lowest position with the call light in reach.", "r": "Reduces injury and the need to get up alone."}, {"i": "Provide non-skid footwear and a clear, uncluttered path.", "r": "Prevents slips and trips."}, {"i": "Offer scheduled toileting.", "r": "Reduces urgent, unassisted trips to the bathroom."}, {"i": "Assist with ambulation and change positions slowly.", "r": "Prevents orthostatic falls."}], "evaluation": "Client remained free of falls; used the call light for assistance."}]}, {"id": "impaired-skin", "title": "Impaired Skin Integrity (Pressure Injury)", "category": "Fundamentals", "icon": "sheet", "summary": "Healing and preventing pressure injuries.", "diagnoses": [{"dx": "Impaired Skin Integrity", "related": "related to prolonged pressure over a bony prominence and immobility", "aeb": "as evidenced by a stage 2 sacral pressure injury", "subjective": ["Reports being unable to reposition independently"], "objective": ["Stage 2 sacral ulcer with a pink wound bed", "Limited mobility"], "outcomes": ["Client's pressure injury shows evidence of healing with no new areas of breakdown."], "interventions": [{"i": "Reposition at least every 2 hours.", "r": "Relieves pressure and restores perfusion."}, {"i": "Use a pressure-redistribution surface.", "r": "Reduces interface pressure."}, {"i": "Keep skin clean and dry; manage moisture.", "r": "Moisture and friction worsen breakdown."}, {"i": "Assess skin and stage the wound each shift.", "r": "Tracks healing or deterioration."}, {"i": "Optimize nutrition and protein/fluid intake.", "r": "Supports tissue repair."}], "evaluation": "Wound bed showed granulation with no new breakdown; skin remained intact elsewhere."}]}, {"id": "infection-sepsis", "title": "Infection / Sepsis Risk", "category": "Infection Control", "icon": "shield", "summary": "Preventing and recognizing infection in an at-risk client.", "diagnoses": [{"dx": "Risk for Infection", "related": "related to invasive lines, surgical wounds, and compromised defenses", "aeb": "(risk diagnosis — no defining characteristics required)", "subjective": ["States understanding of the importance of hand hygiene"], "objective": ["Central venous catheter in place", "WBC trending up"], "outcomes": ["Client remains free of infection as evidenced by normothermia and a normal white blood cell count."], "interventions": [{"i": "Perform hand hygiene and use aseptic technique for all invasive care.", "r": "The single most effective way to prevent infection."}, {"i": "Monitor temperature, WBC, and the appearance of lines/wounds.", "r": "Detects infection early."}, {"i": "Obtain cultures before starting antibiotics, then give antibiotics on time.", "r": "Preserves culture accuracy and treats promptly."}, {"i": "Assess for early sepsis (fever, tachycardia, tachypnea, confusion, rising lactate).", "r": "Enables rapid escalation."}, {"i": "Teach the client signs of infection to report.", "r": "Promotes early detection after discharge."}], "evaluation": "Client remained afebrile with a normal WBC and no signs of local or systemic infection."}]}]</script>
+        <div class="cp-tools fade-up">
+          <div class="cp-search">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+            <input type="search" placeholder="Search a condition or diagnosis&hellip;" aria-label="Search care plans" data-cp-search>
+          </div>
+        </div>
+        <div class="cp-chips fade-up" data-cp-chips><button class="cp-chip on" data-cat="All">All</button><button class="cp-chip" data-cat="Cardiac">Cardiac</button><button class="cp-chip" data-cat="Endocrine">Endocrine</button><button class="cp-chip" data-cat="Fundamentals">Fundamentals</button><button class="cp-chip" data-cat="Infection Control">Infection Control</button><button class="cp-chip" data-cat="Respiratory">Respiratory</button></div>
+        <p class="cp-count fade-up"><b data-cp-count>8</b> care plans &middot; 12 nursing diagnoses &middot; growing weekly</p>
+        <div class="cp-grid fade-up" data-cp-grid></div>
+        <div class="cp-empty" data-cp-empty hidden><p><b>No match yet.</b> Tell us what to add at hello@mustlovescrubs.com.</p></div>
+      </div>
+    </div>
+  </section>
 
 </div>
 <div class="mls-route" data-route="careers.html" hidden>
@@ -7741,6 +7814,7 @@ body.mls-paid .gate { display: none; }
           <li><a href="flashcards.html">Flashcards &amp; Games</a></li>
           <li><a href="drugs.html">Drug Cards</a></li>
           <li><a href="cheatsheets.html">Cheat Sheets</a></li>
+          <li><a href="care-plans.html">Care Plans</a></li>
           <li><a href="study-plan.html">Study Plan Calendar</a></li>
           <li><a href="nclex-guide.html">Free Study Guide</a></li>
           <li><a href="specialties.html">Specialty Prep</a></li>
@@ -9712,6 +9786,108 @@ body.mls-paid .gate { display: none; }
   chipsWrap.querySelectorAll('.cs-chip').forEach(function (c) {
     c.addEventListener('click', function () {
       chipsWrap.querySelectorAll('.cs-chip').forEach(function (x) { x.classList.remove('on'); });
+      c.classList.add('on'); cat = c.getAttribute('data-cat'); render();
+    });
+  });
+  searchInp.addEventListener('input', function () { q = searchInp.value; render(); });
+
+  render();
+})();
+
+
+/* ===== careplans.js ===== */
+/* Must Love Scrubs — Care Plans.
+   Searchable, filterable library of nursing care plans in ADPIE format:
+   nursing diagnosis, assessment data, outcomes, interventions with rationales,
+   and evaluation. Demo (static content). */
+
+(function () {
+  'use strict';
+  var root = document.querySelector('.careplans');
+  if (!root) return;
+
+  var ICON = {
+    heartbeat: 'M3 12h4l2-5 3 9 2-5h4',
+    lungs: 'M12 4v9M12 9c0 5-1.5 8-4.5 8C5 17 4 15 4 12c0-2 .5-4 2-5.5M12 9c0 5 1.5 8 4.5 8 2.5 0 3.5-2 3.5-5 0-2-.5-4-2-5.5',
+    drop: 'M12 3s6 6.5 6 11a6 6 0 0 1-12 0c0-4.5 6-11 6-11z',
+    shield: 'M12 3l8 3v6c0 4.5-3.2 7.6-8 9-4.8-1.4-8-4.5-8-9V6z',
+    sheet: 'M6 2h9l5 5v15H6zM14 2v6h6M9 13h7M9 17h7'
+  };
+  function svg(name) {
+    var d = ICON[name] || ICON.sheet;
+    return '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">' +
+      d.split('M').filter(Boolean).map(function (p) { return '<path d="M' + p + '"/>'; }).join('') + '</svg>';
+  }
+
+  var ALL = JSON.parse(root.querySelector('script[data-careplans]').textContent);
+  var grid = root.querySelector('[data-cp-grid]');
+  var chipsWrap = root.querySelector('[data-cp-chips]');
+  var searchInp = root.querySelector('[data-cp-search]');
+  var countEl = root.querySelector('[data-cp-count]');
+  var emptyEl = root.querySelector('[data-cp-empty]');
+
+  var cat = 'All', q = '';
+  function esc(s) { return String(s == null ? '' : s); }
+  function ul(arr) { return '<ul class="cp-list">' + (arr || []).map(function (x) { return '<li>' + esc(x) + '</li>'; }).join('') + '</ul>'; }
+
+  function plansMatch(p, qq) {
+    if (!qq) return true;
+    if ((p.title + ' ' + p.category + ' ' + (p.summary || '')).toLowerCase().indexOf(qq) >= 0) return true;
+    return (p.diagnoses || []).some(function (d) {
+      return (d.dx + ' ' + d.related + ' ' + d.aeb).toLowerCase().indexOf(qq) >= 0;
+    });
+  }
+
+  function filtered() {
+    var qq = q.trim().toLowerCase();
+    return ALL.filter(function (p) {
+      if (cat !== 'All' && p.category !== cat) return false;
+      return plansMatch(p, qq);
+    });
+  }
+
+  function dxHTML(d) {
+    var interventions = (d.interventions || []).map(function (x) {
+      return '<div class="cp-int"><div class="cp-int-i">' + esc(x.i) + '</div><div class="cp-int-r"><b>Rationale:</b> ' + esc(x.r) + '</div></div>';
+    }).join('');
+    var subj = (d.subjective && d.subjective.length) ? '<div class="cp-sub"><b>Subjective</b>' + ul(d.subjective) + '</div>' : '';
+    var obj = (d.objective && d.objective.length) ? '<div class="cp-sub"><b>Objective</b>' + ul(d.objective) + '</div>' : '';
+    return '<div class="cp-dx">' +
+      '<div class="cp-dx-name">' + esc(d.dx) + '</div>' +
+      '<p class="cp-dx-rel">' + esc(d.related) + '<br><i>' + esc(d.aeb) + '</i></p>' +
+      '<div class="cp-block"><span class="cp-lbl">Assessment</span><div class="cp-assess">' + subj + obj + '</div></div>' +
+      '<div class="cp-block"><span class="cp-lbl">Expected outcomes</span>' + ul(d.outcomes) + '</div>' +
+      '<div class="cp-block"><span class="cp-lbl">Interventions &amp; rationales</span>' + interventions + '</div>' +
+      '<div class="cp-block"><span class="cp-lbl">Evaluation</span><p class="cp-eval">' + esc(d.evaluation) + '</p></div>' +
+      '</div>';
+  }
+
+  function planHTML(p) {
+    var dxs = p.diagnoses.map(dxHTML).join('');
+    var dxCount = p.diagnoses.length;
+    return '<div class="cp-card">' +
+      '<button class="cp-head"><span class="cp-ic">' + svg(p.icon) + '</span>' +
+      '<span class="cp-head-txt"><b>' + esc(p.title) + '</b><small>' + esc(p.summary) + '</small></span>' +
+      '<span class="cp-dxn">' + dxCount + ' dx</span><span class="cp-cat-tag">' + esc(p.category) + '</span>' +
+      '<span class="cp-caret">▾</span></button>' +
+      '<div class="cp-body">' + dxs + '</div></div>';
+  }
+
+  function render() {
+    var qq = q.trim().toLowerCase();
+    var items = filtered();
+    countEl.textContent = items.length;
+    emptyEl.hidden = items.length > 0;
+    grid.innerHTML = items.map(planHTML).join('');
+    grid.querySelectorAll('.cp-card').forEach(function (card) {
+      card.querySelector('.cp-head').addEventListener('click', function () { card.classList.toggle('open'); });
+      if (qq) card.classList.add('open');
+    });
+  }
+
+  chipsWrap.querySelectorAll('.cp-chip').forEach(function (c) {
+    c.addEventListener('click', function () {
+      chipsWrap.querySelectorAll('.cp-chip').forEach(function (x) { x.classList.remove('on'); });
       c.classList.add('on'); cat = c.getAttribute('data-cat'); render();
     });
   });

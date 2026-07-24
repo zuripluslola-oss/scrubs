@@ -118,6 +118,7 @@ def chrome(fname, title, desc, body, active=""):
           <li><a href="flashcards.html">Flashcards &amp; Games <small>Flip cards, quizzes, match &amp; speed rounds</small></a></li>
           <li><a href="drugs.html">Drug Cards <small>Pharmacology library &middot; drill by system</small></a></li>
           <li><a href="cheatsheets.html">Cheat Sheets <small>Lab values, ABGs, antidotes &amp; more</small></a></li>
+          <li><a href="care-plans.html">Care Plans <small>Diagnoses, interventions &amp; rationales</small></a></li>
           <li><a href="study-plan.html">Study Plan Calendar <small>Your day-by-day plan to test day</small></a></li>
           <li><a href="nclex-guide.html">Free Study Guide <small>How to pass &middot; for nurses, by nurses</small></a></li>
           <li><a href="course-lab-values.html">Free NCLEX Practice <small>Start with a free audio scene</small></a></li>
@@ -180,6 +181,7 @@ def chrome(fname, title, desc, body, active=""):
           <li><a href="flashcards.html">Flashcards &amp; Games</a></li>
           <li><a href="drugs.html">Drug Cards</a></li>
           <li><a href="cheatsheets.html">Cheat Sheets</a></li>
+          <li><a href="care-plans.html">Care Plans</a></li>
           <li><a href="study-plan.html">Study Plan Calendar</a></li>
           <li><a href="nclex-guide.html">Free Study Guide</a></li>
           <li><a href="specialties.html">Specialty Prep</a></li>
@@ -2313,6 +2315,67 @@ CHEATS_BODY = f"""  <div class="page-hero">
 PAGES["cheatsheets.html"] = ("NCLEX Nursing Cheat Sheets &mdash; Lab Values, ABGs, Antidotes | Must Love Scrubs",
     "Free searchable nursing cheat sheets: lab values, ABGs, fluid & electrolytes, medication antidotes, isolation precautions, and vital signs by age. Printable clinical reference for students and nurses.",
     CHEATS_BODY, "courses")
+
+# ---------------------------------------------------------------- CARE PLANS (ADPIE library)
+
+def _load_careplans():
+    import glob as _glob
+    plans, seen = [], set()
+    for path in sorted(_glob.glob(os.path.join(ROOT, 'data', 'careplans', '*.json'))):
+        data = _json.load(open(path, encoding='utf-8'))
+        for p in data.get('plans', []):
+            if not p.get('title') or not p.get('diagnoses'): continue
+            if p.get('id') in seen: continue
+            seen.add(p['id']); plans.append(p)
+    return plans
+
+CAREPLANS = _load_careplans()
+CAREPLANS_JSON = _json.dumps(CAREPLANS, ensure_ascii=False).replace('<', '\\u003c').replace('>', '\\u003e').replace('&', '\\u0026')
+CP_DX_TOTAL = sum(len(p['diagnoses']) for p in CAREPLANS)
+CP_CATS = []
+for _p in CAREPLANS:
+    if _p['category'] not in CP_CATS:
+        CP_CATS.append(_p['category'])
+CP_CATS.sort()
+
+def cp_cat_chips():
+    out = ['<button class="cp-chip on" data-cat="All">All</button>']
+    for c in CP_CATS:
+        out.append(f'<button class="cp-chip" data-cat="{c}">{c}</button>')
+    return "".join(out)
+
+CAREPLANS_BODY = f"""  <div class="page-hero">
+    <div class="wrap inner">
+      <span class="lesson-label" style="color:var(--gold-400);">Care Plans</span>
+      <h1 style="margin-top:0.6rem;">Care plans, <span class="em">done right</span>.</h1>
+      <p>Full nursing care plans in the format your instructor wants &mdash; nursing diagnosis, assessment data, measurable outcomes, and interventions with the <b>rationale</b> behind each one. Searchable, filterable, and built to teach the clinical judgment, not just fill a template.</p>
+    </div>
+  </div>
+
+  <section style="background:var(--bg);">
+    <div class="wrap">
+      <div class="careplans" data-cp-total="{len(CAREPLANS)}">
+        <script type="application/json" data-careplans>{CAREPLANS_JSON}</script>
+        <div class="cp-tools fade-up">
+          <div class="cp-search">
+            {I['search']}
+            <input type="search" placeholder="Search a condition or diagnosis&hellip;" aria-label="Search care plans" data-cp-search>
+          </div>
+        </div>
+        <div class="cp-chips fade-up" data-cp-chips>{cp_cat_chips()}</div>
+        <p class="cp-count fade-up"><b data-cp-count>{len(CAREPLANS)}</b> care plans &middot; {CP_DX_TOTAL} nursing diagnoses &middot; growing weekly</p>
+        <div class="cp-grid fade-up" data-cp-grid></div>
+        <div class="cp-empty" data-cp-empty hidden><p><b>No match yet.</b> Tell us what to add at hello@mustlovescrubs.com.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <script src="js/careplans.js"></script>
+"""
+
+PAGES["care-plans.html"] = ("Nursing Care Plans &mdash; Diagnoses, Interventions &amp; Rationales | Must Love Scrubs",
+    "Free nursing care plans in full ADPIE format: nursing diagnosis, assessment, measurable outcomes, and interventions with rationales — heart failure, pneumonia, diabetes, COPD, pain, falls, skin integrity, and infection.",
+    CAREPLANS_BODY, "courses")
 
 # ---------------------------------------------------------------- STUDY CALENDAR (the conductor)
 
