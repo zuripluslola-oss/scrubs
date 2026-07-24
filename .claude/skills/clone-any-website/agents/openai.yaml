@@ -1,0 +1,4 @@
+interface:
+  display_name: "Clone Any Website"
+  short_description: "Pixel-accurate web cloning with media and 3D QA"
+  default_prompt: "Use $clone-any-website to rebuild this public website with faithful interactions, robust 3D/media handling, and deterministic visual QA."
