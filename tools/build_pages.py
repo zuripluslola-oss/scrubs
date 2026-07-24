@@ -114,6 +114,7 @@ def chrome(fname, title, desc, body, active=""):
           <li><a href="nclex-complete.html">NCLEX Complete <small>The flagship &middot; plans from $59</small></a></li>
           <li><a href="nclex.html">Free NCLEX Prep <small>RN &amp; LPN &middot; every NGN item type</small></a></li>
           <li><a href="qbank.html">Question Bank <small>Practice with rationales &amp; answer stats</small></a></li>
+          <li><a href="topics.html">Topic Hubs <small>Everything on one topic, in one place</small></a></li>
           <li><a href="tests.html">Tests &amp; Exams <small>Pop quiz, mock NCLEX &amp; specialty exams</small></a></li>
           <li><a href="flashcards.html">Flashcards &amp; Games <small>Flip cards, quizzes, match &amp; speed rounds</small></a></li>
           <li><a href="drugs.html">Drug Cards <small>Pharmacology library &middot; drill by system</small></a></li>
@@ -180,6 +181,7 @@ def chrome(fname, title, desc, body, active=""):
         <ul>
           <li><a href="nclex-complete.html">NCLEX Complete</a></li>
           <li><a href="qbank.html">Question Bank</a></li>
+          <li><a href="topics.html">Topic Hubs</a></li>
           <li><a href="tests.html">Tests &amp; Exams</a></li>
           <li><a href="flashcards.html">Flashcards &amp; Games</a></li>
           <li><a href="drugs.html">Drug Cards</a></li>
@@ -2605,6 +2607,65 @@ PATHO_BODY = f"""  <div class="page-hero">
 PAGES["patho.html"] = ("Pathophysiology Made Visual &mdash; Disease Mechanisms for Nurses | Must Love Scrubs",
     "Nursing pathophysiology explained simply: each disease as a chain from cause to mechanism to signs (and why), plus diagnostics, complications, and treatment. Heart failure, MI, COPD, diabetes, sepsis, stroke, and more.",
     PATHO_BODY, "courses")
+
+# ---------------------------------------------------------------- TOPIC HUBS (everything on one topic, in one place)
+
+def _load_topics():
+    import glob as _glob
+    out, seen = [], set()
+    for path in sorted(_glob.glob(os.path.join(ROOT, 'data', 'topics', '*.json'))):
+        data = _json.load(open(path, encoding='utf-8'))
+        for t in data.get('topics', []):
+            if not t.get('title') or t.get('id') in seen: continue
+            seen.add(t['id']); out.append(t)
+    return out
+
+TOPICS = _load_topics()
+TOPICS_JSON = _json.dumps(TOPICS, ensure_ascii=False).replace('<', '\\u003c').replace('>', '\\u003e').replace('&', '\\u0026')
+TOPIC_CATS = []
+for _t in TOPICS:
+    if _t['category'] not in TOPIC_CATS:
+        TOPIC_CATS.append(_t['category'])
+TOPIC_CATS.sort()
+
+def topic_cat_chips():
+    out = ['<button class="th-chip on" data-cat="All">All</button>']
+    for c in TOPIC_CATS:
+        out.append(f'<button class="th-chip" data-cat="{c}">{c}</button>')
+    return "".join(out)
+
+TOPICS_BODY = f"""  <div class="page-hero">
+    <div class="wrap inner">
+      <span class="lesson-label" style="color:var(--gold-400);">Topic Hubs</span>
+      <h1 style="margin-top:0.6rem;">Everything on a topic, <span class="em">in one place</span>.</h1>
+      <p>Pick a condition and see it all connected &mdash; the pathophysiology, the care plan, practice questions, its flashcard deck, the drugs, the labs, cheat sheets, and mnemonics. Learn it, apply it, practice it, review it &mdash; without hunting across the site.</p>
+    </div>
+  </div>
+
+  <section style="background:var(--bg);">
+    <div class="wrap">
+      <div class="topichubs" data-th-total="{len(TOPICS)}">
+        <script type="application/json" data-topics>{TOPICS_JSON}</script>
+        <div class="th-tools fade-up">
+          <div class="th-search">
+            {I['search']}
+            <input type="search" placeholder="Search a topic&hellip;" aria-label="Search topics" data-th-search>
+          </div>
+        </div>
+        <div class="th-chips fade-up" data-th-chips>{topic_cat_chips()}</div>
+        <p class="th-count fade-up"><b data-th-count>{len(TOPICS)}</b> topic hubs &middot; growing weekly</p>
+        <div class="th-grid fade-up" data-th-grid></div>
+        <div class="th-empty" data-th-empty hidden><p><b>No match yet.</b> Tell us what to add at hello@mustlovescrubs.com.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <script src="js/topics.js"></script>
+"""
+
+PAGES["topics.html"] = ("Topic Hubs &mdash; Everything on One Nursing Topic | Must Love Scrubs",
+    "Study a nursing topic with everything connected in one place: pathophysiology, care plan, questions, flashcards, drugs, labs, cheat sheets, and mnemonics — for heart failure, MI, COPD, diabetes, sepsis, stroke, and more.",
+    TOPICS_BODY, "courses")
 
 # ---------------------------------------------------------------- STUDY CALENDAR (the conductor)
 

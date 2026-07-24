@@ -1,0 +1,262 @@
+{
+ "batch": "core-01",
+ "topics": [
+  {
+   "id": "heart-failure",
+   "title": "Heart Failure",
+   "category": "Cardiac",
+   "icon": "heartbeat",
+   "summary": "The failing pump — from why it happens to how you care for it.",
+   "patho": true,
+   "careplan": true,
+   "deck": "Cardiovascular",
+   "practice": "Med-Surg",
+   "drugs": [
+    "furosemide",
+    "spironolactone",
+    "lisinopril",
+    "metoprolol",
+    "digoxin"
+   ],
+   "labs": [
+    "BNP",
+    "Potassium",
+    "Sodium"
+   ],
+   "cheatsheets": [
+    "Heart Failure: Left vs Right"
+   ],
+   "mnemonics": [
+    "HF FACES"
+   ]
+  },
+  {
+   "id": "myocardial-infarction",
+   "title": "Myocardial Infarction (MI)",
+   "category": "Cardiac",
+   "icon": "heartbeat",
+   "summary": "Blocked coronary blood flow — recognize it, treat it, protect the muscle.",
+   "patho": true,
+   "careplan": true,
+   "deck": "Cardiovascular",
+   "practice": "Med-Surg",
+   "drugs": [
+    "nitroglycerin",
+    "morphine",
+    "atorvastatin",
+    "metoprolol",
+    "heparin"
+   ],
+   "labs": [
+    "Troponin",
+    "CK-MB"
+   ],
+   "cheatsheets": [
+    "Common Dysrhythmias"
+   ],
+   "mnemonics": [
+    "MONA"
+   ]
+  },
+  {
+   "id": "copd",
+   "title": "COPD",
+   "category": "Respiratory",
+   "icon": "lungs",
+   "summary": "Chronic airflow limitation — oxygen targets, breathing techniques, and meds.",
+   "patho": true,
+   "careplan": true,
+   "deck": "Respiratory",
+   "practice": "Respiratory",
+   "drugs": [
+    "albuterol",
+    "ipratropium",
+    "fluticasone",
+    "prednisone"
+   ],
+   "labs": [
+    "pH",
+    "PaCO₂",
+    "PaO₂"
+   ],
+   "cheatsheets": [
+    "Oxygen Delivery Devices",
+    "Arterial Blood Gases (ABGs)"
+   ],
+   "mnemonics": []
+  },
+  {
+   "id": "pneumonia",
+   "title": "Pneumonia",
+   "category": "Respiratory",
+   "icon": "lungs",
+   "summary": "Lung infection — airway clearance, gas exchange, and antibiotics.",
+   "patho": true,
+   "careplan": true,
+   "deck": "Respiratory",
+   "practice": "Respiratory",
+   "drugs": [
+    "vancomycin"
+   ],
+   "labs": [
+    "White Blood Cells"
+   ],
+   "cheatsheets": [
+    "Isolation Precautions"
+   ],
+   "mnemonics": []
+  },
+  {
+   "id": "diabetes",
+   "title": "Diabetes Mellitus",
+   "category": "Endocrine",
+   "icon": "drop",
+   "summary": "High blood glucose — insulin timing, self-care, and the emergencies.",
+   "patho": true,
+   "careplan": true,
+   "deck": "Endocrine",
+   "practice": "Pharmacology",
+   "drugs": [
+    "regular insulin",
+    "NPH insulin",
+    "metformin"
+   ],
+   "labs": [
+    "Fasting Glucose",
+    "Hemoglobin A1c",
+    "Potassium"
+   ],
+   "cheatsheets": [
+    "Insulin Types (Onset / Peak / Duration)",
+    "Diabetic Emergencies"
+   ],
+   "mnemonics": [
+    "Cold & Clammy vs Hot & Dry"
+   ]
+  },
+  {
+   "id": "dka",
+   "title": "Diabetic Ketoacidosis (DKA)",
+   "category": "Endocrine",
+   "icon": "drop",
+   "summary": "The Type 1 emergency — fluids first, then insulin, then potassium.",
+   "patho": true,
+   "careplan": false,
+   "deck": "Endocrine",
+   "practice": "Endocrine",
+   "drugs": [
+    "regular insulin"
+   ],
+   "labs": [
+    "Fasting Glucose",
+    "Potassium",
+    "pH",
+    "Bicarbonate (CO₂)"
+   ],
+   "cheatsheets": [
+    "Diabetic Emergencies",
+    "Arterial Blood Gases (ABGs)"
+   ],
+   "mnemonics": []
+  },
+  {
+   "id": "ckd",
+   "title": "Chronic Kidney Disease",
+   "category": "Renal",
+   "icon": "drop",
+   "summary": "Failing kidneys — fluid balance, electrolytes, and diet.",
+   "patho": true,
+   "careplan": true,
+   "deck": "Renal",
+   "practice": "Med-Surg",
+   "drugs": [
+    "furosemide",
+    "spironolactone"
+   ],
+   "labs": [
+    "BUN",
+    "Creatinine",
+    "GFR",
+    "Potassium",
+    "Phosphorus"
+   ],
+   "cheatsheets": [
+    "Fluid & Electrolyte Imbalances"
+   ],
+   "mnemonics": [
+    "C BIG K Drop"
+   ]
+  },
+  {
+   "id": "sepsis",
+   "title": "Sepsis",
+   "category": "Infection Control",
+   "icon": "shield",
+   "summary": "Infection gone systemic — early recognition and the first-hour bundle.",
+   "patho": true,
+   "careplan": true,
+   "deck": "Med-Surg",
+   "practice": "Safety",
+   "drugs": [
+    "vancomycin"
+   ],
+   "labs": [
+    "Lactate",
+    "White Blood Cells"
+   ],
+   "cheatsheets": [
+    "Isolation Precautions"
+   ],
+   "mnemonics": []
+  },
+  {
+   "id": "stroke",
+   "title": "Stroke (CVA)",
+   "category": "Neuro",
+   "icon": "sheet",
+   "summary": "Interrupted brain blood flow — FAST recognition, tPA window, and rehab.",
+   "patho": true,
+   "careplan": true,
+   "deck": "Med-Surg",
+   "practice": "Med-Surg",
+   "drugs": [
+    "warfarin",
+    "heparin",
+    "atorvastatin"
+   ],
+   "labs": [
+    "INR"
+   ],
+   "cheatsheets": [],
+   "mnemonics": [
+    "FAST"
+   ]
+  },
+  {
+   "id": "cirrhosis",
+   "title": "Cirrhosis",
+   "category": "Gastrointestinal",
+   "icon": "drop",
+   "summary": "Scarred liver — ascites, bleeding, and encephalopathy.",
+   "patho": true,
+   "careplan": true,
+   "deck": "Med-Surg",
+   "practice": "Med-Surg",
+   "drugs": [
+    "spironolactone",
+    "furosemide"
+   ],
+   "labs": [
+    "AST",
+    "ALT",
+    "Ammonia",
+    "Albumin",
+    "INR"
+   ],
+   "cheatsheets": [
+    "Lab Values"
+   ],
+   "mnemonics": []
+  }
+ ]
+}

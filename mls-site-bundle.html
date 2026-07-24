@@ -1078,6 +1078,41 @@ section { padding-block: clamp(3.6rem, 9vw, 6.5rem); position: relative; }
 .pt-empty { text-align: center; padding: 2rem; color: var(--ink-60); }
 @media print { .pt-tools, .pt-chips, .pt-count { display: none !important; } .pt-body { display: block !important; } .pt-caret { display: none; } }
 
+/* ===== Topic Hubs ===== */
+.th-tools { display: flex; gap: 0.8rem; flex-wrap: wrap; align-items: center; }
+.th-search { flex: 1; min-width: 220px; display: flex; align-items: center; gap: 0.6rem; background: var(--card); border: 1px solid rgba(30,18,51,0.14); border-radius: 14px; padding: 0.7rem 1rem; box-shadow: var(--shadow-1); }
+.th-search svg { width: 20px; height: 20px; color: var(--ink-40); flex-shrink: 0; }
+.th-search input { border: none; background: transparent; font: inherit; color: var(--ink); width: 100%; outline: none; }
+.th-chips { display: flex; gap: 0.5rem; flex-wrap: wrap; margin-top: 1rem; }
+.th-chip { border: 1px solid rgba(30,18,51,0.14); background: var(--card); color: var(--ink-60); padding: 0.45rem 0.9rem; border-radius: 999px; font: inherit; font-size: 0.8rem; font-weight: 700; cursor: pointer; }
+.th-chip.on { background: var(--ink); color: #fff; border-color: var(--ink); }
+.th-count { font-size: 0.85rem; color: var(--ink-40); margin: 0.9rem 0; }
+.th-count b { color: var(--coral-600); }
+
+.th-grid { display: grid; gap: 0.7rem; grid-template-columns: 1fr; }
+@media (min-width: 760px) { .th-grid { grid-template-columns: repeat(2, 1fr); align-items: start; } }
+.th-card { background: var(--card); border: 1px solid rgba(30,18,51,0.09); border-radius: var(--radius); box-shadow: var(--shadow-1); overflow: hidden; }
+.th-head { width: 100%; display: flex; align-items: center; gap: 0.7rem; padding: 1rem 1.1rem; background: transparent; border: none; cursor: pointer; font: inherit; text-align: left; }
+.th-ic { width: 42px; height: 42px; border-radius: 12px; flex-shrink: 0; display: grid; place-items: center; color: #fff; background: linear-gradient(150deg, var(--coral-500), var(--teal-600)); }
+.th-ic svg { width: 22px; height: 22px; }
+.th-head-txt { display: flex; flex-direction: column; flex: 1; min-width: 0; }
+.th-head-txt b { font-size: 1.1rem; }
+.th-head-txt small { font-size: 0.78rem; color: var(--ink-60); }
+.th-cat-tag { font-size: 0.66rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.04em; color: var(--teal-600); background: rgba(42,212,196,0.12); padding: 0.2rem 0.5rem; border-radius: 999px; flex-shrink: 0; }
+.th-caret { color: var(--ink-40); transition: transform 0.2s ease; flex-shrink: 0; }
+.th-card.open .th-caret { transform: rotate(180deg); }
+.th-body { display: none; padding: 0 1.1rem 1.1rem; }
+.th-card.open .th-body { display: block; }
+.th-sec { margin-top: 0.9rem; }
+.th-lbl { display: block; font-size: 0.74rem; text-transform: uppercase; letter-spacing: 0.04em; color: var(--ink-40); font-weight: 800; margin-bottom: 0.4rem; }
+.th-links { display: flex; gap: 0.5rem; flex-wrap: wrap; }
+.th-go { font-size: 0.8rem; padding: 0.45rem 0.9rem; }
+.th-refrow { display: flex; gap: 0.4rem; flex-wrap: wrap; align-items: center; margin-bottom: 0.4rem; }
+.th-refrow span { font-size: 0.78rem; color: var(--ink-60); font-weight: 700; min-width: 5.5rem; }
+.th-ref { font-size: 0.78rem; text-decoration: none; color: var(--coral-600); background: rgba(139,92,255,0.08); border: 1px solid rgba(139,92,255,0.18); padding: 0.25rem 0.6rem; border-radius: 999px; }
+.th-ref:hover { background: rgba(139,92,255,0.16); }
+.th-empty { text-align: center; padding: 2rem; color: var(--ink-60); }
+
 /* courses page wide cards */
 .two-up { display: grid; gap: 1rem; grid-template-columns: 1fr; }
 @media (min-width: 720px) { .two-up { grid-template-columns: repeat(2, 1fr); } }
@@ -2047,6 +2082,7 @@ body.mls-paid .gate { display: none; }
           <li><a href="nclex-complete.html">NCLEX Complete <small>The flagship &middot; plans from $59</small></a></li>
           <li><a href="nclex.html">Free NCLEX Prep <small>RN &amp; LPN &middot; every NGN item type</small></a></li>
           <li><a href="qbank.html">Question Bank <small>Practice with rationales &amp; answer stats</small></a></li>
+          <li><a href="topics.html">Topic Hubs <small>Everything on one topic, in one place</small></a></li>
           <li><a href="tests.html">Tests &amp; Exams <small>Pop quiz, mock NCLEX &amp; specialty exams</small></a></li>
           <li><a href="flashcards.html">Flashcards &amp; Games <small>Flip cards, quizzes, match &amp; speed rounds</small></a></li>
           <li><a href="drugs.html">Drug Cards <small>Pharmacology library &middot; drill by system</small></a></li>
@@ -8285,6 +8321,34 @@ body.mls-paid .gate { display: none; }
   </section>
 
 </div>
+<div class="mls-route" data-route="topics.html" hidden>
+  <div class="page-hero">
+    <div class="wrap inner">
+      <span class="lesson-label" style="color:var(--gold-400);">Topic Hubs</span>
+      <h1 style="margin-top:0.6rem;">Everything on a topic, <span class="em">in one place</span>.</h1>
+      <p>Pick a condition and see it all connected &mdash; the pathophysiology, the care plan, practice questions, its flashcard deck, the drugs, the labs, cheat sheets, and mnemonics. Learn it, apply it, practice it, review it &mdash; without hunting across the site.</p>
+    </div>
+  </div>
+
+  <section style="background:var(--bg);">
+    <div class="wrap">
+      <div class="topichubs" data-th-total="10">
+        <script type="application/json" data-topics>[{"id": "heart-failure", "title": "Heart Failure", "category": "Cardiac", "icon": "heartbeat", "summary": "The failing pump — from why it happens to how you care for it.", "patho": true, "careplan": true, "deck": "Cardiovascular", "practice": "Med-Surg", "drugs": ["furosemide", "spironolactone", "lisinopril", "metoprolol", "digoxin"], "labs": ["BNP", "Potassium", "Sodium"], "cheatsheets": ["Heart Failure: Left vs Right"], "mnemonics": ["HF FACES"]}, {"id": "myocardial-infarction", "title": "Myocardial Infarction (MI)", "category": "Cardiac", "icon": "heartbeat", "summary": "Blocked coronary blood flow — recognize it, treat it, protect the muscle.", "patho": true, "careplan": true, "deck": "Cardiovascular", "practice": "Med-Surg", "drugs": ["nitroglycerin", "morphine", "atorvastatin", "metoprolol", "heparin"], "labs": ["Troponin", "CK-MB"], "cheatsheets": ["Common Dysrhythmias"], "mnemonics": ["MONA"]}, {"id": "copd", "title": "COPD", "category": "Respiratory", "icon": "lungs", "summary": "Chronic airflow limitation — oxygen targets, breathing techniques, and meds.", "patho": true, "careplan": true, "deck": "Respiratory", "practice": "Respiratory", "drugs": ["albuterol", "ipratropium", "fluticasone", "prednisone"], "labs": ["pH", "PaCO₂", "PaO₂"], "cheatsheets": ["Oxygen Delivery Devices", "Arterial Blood Gases (ABGs)"], "mnemonics": []}, {"id": "pneumonia", "title": "Pneumonia", "category": "Respiratory", "icon": "lungs", "summary": "Lung infection — airway clearance, gas exchange, and antibiotics.", "patho": true, "careplan": true, "deck": "Respiratory", "practice": "Respiratory", "drugs": ["vancomycin"], "labs": ["White Blood Cells"], "cheatsheets": ["Isolation Precautions"], "mnemonics": []}, {"id": "diabetes", "title": "Diabetes Mellitus", "category": "Endocrine", "icon": "drop", "summary": "High blood glucose — insulin timing, self-care, and the emergencies.", "patho": true, "careplan": true, "deck": "Endocrine", "practice": "Pharmacology", "drugs": ["regular insulin", "NPH insulin", "metformin"], "labs": ["Fasting Glucose", "Hemoglobin A1c", "Potassium"], "cheatsheets": ["Insulin Types (Onset / Peak / Duration)", "Diabetic Emergencies"], "mnemonics": ["Cold \u0026 Clammy vs Hot \u0026 Dry"]}, {"id": "dka", "title": "Diabetic Ketoacidosis (DKA)", "category": "Endocrine", "icon": "drop", "summary": "The Type 1 emergency — fluids first, then insulin, then potassium.", "patho": true, "careplan": false, "deck": "Endocrine", "practice": "Endocrine", "drugs": ["regular insulin"], "labs": ["Fasting Glucose", "Potassium", "pH", "Bicarbonate (CO₂)"], "cheatsheets": ["Diabetic Emergencies", "Arterial Blood Gases (ABGs)"], "mnemonics": []}, {"id": "ckd", "title": "Chronic Kidney Disease", "category": "Renal", "icon": "drop", "summary": "Failing kidneys — fluid balance, electrolytes, and diet.", "patho": true, "careplan": true, "deck": "Renal", "practice": "Med-Surg", "drugs": ["furosemide", "spironolactone"], "labs": ["BUN", "Creatinine", "GFR", "Potassium", "Phosphorus"], "cheatsheets": ["Fluid \u0026 Electrolyte Imbalances"], "mnemonics": ["C BIG K Drop"]}, {"id": "sepsis", "title": "Sepsis", "category": "Infection Control", "icon": "shield", "summary": "Infection gone systemic — early recognition and the first-hour bundle.", "patho": true, "careplan": true, "deck": "Med-Surg", "practice": "Safety", "drugs": ["vancomycin"], "labs": ["Lactate", "White Blood Cells"], "cheatsheets": ["Isolation Precautions"], "mnemonics": []}, {"id": "stroke", "title": "Stroke (CVA)", "category": "Neuro", "icon": "sheet", "summary": "Interrupted brain blood flow — FAST recognition, tPA window, and rehab.", "patho": true, "careplan": true, "deck": "Med-Surg", "practice": "Med-Surg", "drugs": ["warfarin", "heparin", "atorvastatin"], "labs": ["INR"], "cheatsheets": [], "mnemonics": ["FAST"]}, {"id": "cirrhosis", "title": "Cirrhosis", "category": "Gastrointestinal", "icon": "drop", "summary": "Scarred liver — ascites, bleeding, and encephalopathy.", "patho": true, "careplan": true, "deck": "Med-Surg", "practice": "Med-Surg", "drugs": ["spironolactone", "furosemide"], "labs": ["AST", "ALT", "Ammonia", "Albumin", "INR"], "cheatsheets": ["Lab Values"], "mnemonics": []}]</script>
+        <div class="th-tools fade-up">
+          <div class="th-search">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+            <input type="search" placeholder="Search a topic&hellip;" aria-label="Search topics" data-th-search>
+          </div>
+        </div>
+        <div class="th-chips fade-up" data-th-chips><button class="th-chip on" data-cat="All">All</button><button class="th-chip" data-cat="Cardiac">Cardiac</button><button class="th-chip" data-cat="Endocrine">Endocrine</button><button class="th-chip" data-cat="Gastrointestinal">Gastrointestinal</button><button class="th-chip" data-cat="Infection Control">Infection Control</button><button class="th-chip" data-cat="Neuro">Neuro</button><button class="th-chip" data-cat="Renal">Renal</button><button class="th-chip" data-cat="Respiratory">Respiratory</button></div>
+        <p class="th-count fade-up"><b data-th-count>10</b> topic hubs &middot; growing weekly</p>
+        <div class="th-grid fade-up" data-th-grid></div>
+        <div class="th-empty" data-th-empty hidden><p><b>No match yet.</b> Tell us what to add at hello@mustlovescrubs.com.</p></div>
+      </div>
+    </div>
+  </section>
+
+</div>
 </div>
 
   <footer class="site-footer">
@@ -8305,6 +8369,7 @@ body.mls-paid .gate { display: none; }
         <ul>
           <li><a href="nclex-complete.html">NCLEX Complete</a></li>
           <li><a href="qbank.html">Question Bank</a></li>
+          <li><a href="topics.html">Topic Hubs</a></li>
           <li><a href="tests.html">Tests &amp; Exams</a></li>
           <li><a href="flashcards.html">Flashcards &amp; Games</a></li>
           <li><a href="drugs.html">Drug Cards</a></li>
@@ -10629,6 +10694,109 @@ body.mls-paid .gate { display: none; }
   chipsWrap.querySelectorAll('.pt-chip').forEach(function (c) {
     c.addEventListener('click', function () {
       chipsWrap.querySelectorAll('.pt-chip').forEach(function (x) { x.classList.remove('on'); });
+      c.classList.add('on'); cat = c.getAttribute('data-cat'); render();
+    });
+  });
+  searchInp.addEventListener('input', function () { q = searchInp.value; render(); });
+
+  render();
+})();
+
+
+/* ===== topics.js ===== */
+/* Must Love Scrubs — Topic Hubs.
+   Each topic gathers every related resource in labeled sections (Learn it,
+   Apply it, Practice, Review, Reference) so a student sees everything on one
+   topic in one place. Links to the tool pages; reference items are named. */
+
+(function () {
+  'use strict';
+  var root = document.querySelector('.topichubs');
+  if (!root) return;
+
+  var ICON = {
+    heartbeat: 'M3 12h4l2-5 3 9 2-5h4',
+    lungs: 'M12 4v9M12 9c0 5-1.5 8-4.5 8C5 17 4 15 4 12c0-2 .5-4 2-5.5M12 9c0 5 1.5 8 4.5 8 2.5 0 3.5-2 3.5-5 0-2-.5-4-2-5.5',
+    drop: 'M12 3s6 6.5 6 11a6 6 0 0 1-12 0c0-4.5 6-11 6-11z',
+    shield: 'M12 3l8 3v6c0 4.5-3.2 7.6-8 9-4.8-1.4-8-4.5-8-9V6z',
+    sheet: 'M6 2h9l5 5v15H6zM14 2v6h6M9 13h7M9 17h7'
+  };
+  function svg(name) {
+    var d = ICON[name] || ICON.sheet;
+    return '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">' +
+      d.split('M').filter(Boolean).map(function (p) { return '<path d="M' + p + '"/>'; }).join('') + '</svg>';
+  }
+
+  var ALL = JSON.parse(root.querySelector('script[data-topics]').textContent);
+  var grid = root.querySelector('[data-th-grid]');
+  var chipsWrap = root.querySelector('[data-th-chips]');
+  var searchInp = root.querySelector('[data-th-search]');
+  var countEl = root.querySelector('[data-th-count]');
+  var emptyEl = root.querySelector('[data-th-empty]');
+
+  var cat = 'All', q = '';
+  function esc(s) { return String(s == null ? '' : s); }
+  function chips(items, href) {
+    return (items || []).map(function (x) {
+      return '<a class="th-ref" href="' + href + '">' + esc(x) + '</a>';
+    }).join('');
+  }
+
+  function filtered() {
+    var qq = q.trim().toLowerCase();
+    return ALL.filter(function (t) {
+      if (cat !== 'All' && t.category !== cat) return false;
+      if (!qq) return true;
+      return (t.title + ' ' + t.category + ' ' + t.summary + ' ' + (t.drugs || []).join(' ')).toLowerCase().indexOf(qq) >= 0;
+    });
+  }
+
+  function section(label, inner) {
+    if (!inner) return '';
+    return '<div class="th-sec"><span class="th-lbl">' + label + '</span><div class="th-links">' + inner + '</div></div>';
+  }
+
+  function topicHTML(t) {
+    var learn = t.patho ? '<a class="btn btn-line th-go" href="patho.html">Pathophysiology &rarr;</a>' : '';
+    var apply = t.careplan ? '<a class="btn btn-line th-go" href="care-plans.html">Care plan &rarr;</a>' : '';
+    var practice = '<a class="btn btn-coral th-go" href="tests.html">Take a test &rarr;</a><a class="btn btn-line th-go" href="qbank.html">Question bank &rarr;</a>';
+    var review = '<a class="btn btn-line th-go" href="flashcards.html">Flashcards' + (t.deck ? ' · ' + esc(t.deck) : '') + ' &rarr;</a>';
+    var ref =
+      (t.drugs && t.drugs.length ? '<div class="th-refrow"><span>Drugs:</span>' + chips(t.drugs, 'drugs.html') + '</div>' : '') +
+      (t.labs && t.labs.length ? '<div class="th-refrow"><span>Labs:</span>' + chips(t.labs, 'lab-values.html') + '</div>' : '') +
+      (t.cheatsheets && t.cheatsheets.length ? '<div class="th-refrow"><span>Cheat sheets:</span>' + chips(t.cheatsheets, 'cheatsheets.html') + '</div>' : '') +
+      (t.mnemonics && t.mnemonics.length ? '<div class="th-refrow"><span>Mnemonics:</span>' + chips(t.mnemonics, 'mnemonics.html') + '</div>' : '');
+    return '<div class="th-card">' +
+      '<button class="th-head"><span class="th-ic">' + svg(t.icon) + '</span>' +
+      '<span class="th-head-txt"><b>' + esc(t.title) + '</b><small>' + esc(t.summary) + '</small></span>' +
+      '<span class="th-cat-tag">' + esc(t.category) + '</span><span class="th-caret">▾</span></button>' +
+      '<div class="th-body">' +
+        section('📖 Learn it', learn) +
+        section('🩺 Apply it', apply) +
+        section('✍️ Practice', practice) +
+        section('🔁 Review', review) +
+        (ref ? '<div class="th-sec"><span class="th-lbl">📚 Reference</span>' + ref + '</div>' : '') +
+      '</div></div>';
+  }
+
+  function render() {
+    var qq = q.trim().toLowerCase();
+    var items = filtered();
+    countEl.textContent = items.length;
+    emptyEl.hidden = items.length > 0;
+    grid.innerHTML = items.map(topicHTML).join('');
+    grid.querySelectorAll('.th-card').forEach(function (card) {
+      card.querySelector('.th-head').addEventListener('click', function (e) {
+        if (e.target.closest('a')) return;
+        card.classList.toggle('open');
+      });
+      if (qq) card.classList.add('open');
+    });
+  }
+
+  chipsWrap.querySelectorAll('.th-chip').forEach(function (c) {
+    c.addEventListener('click', function () {
+      chipsWrap.querySelectorAll('.th-chip').forEach(function (x) { x.classList.remove('on'); });
       c.classList.add('on'); cat = c.getAttribute('data-cat'); render();
     });
   });
