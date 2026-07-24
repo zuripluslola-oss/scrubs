@@ -3017,13 +3017,16 @@ def dict_cards():
         abbr = g(e, "Abbreviation / Expansion")
         rel = g(e, "Related Terms")
         kw = (g(e, "Search Keywords") + " " + term + " " + defn + " " + cat).lower().replace('"', "")
+        example = g(e, "Real-World Example")
         abbr_html = f'<span class="term-abbr">{abbr}</span>' if abbr else ""
         rel_html = f'<span class="term-rel">Related: {rel}</span>' if rel else ""
+        ex_html = f'<div class="term-ex"><b>{I["star"]} On the floor.</b> {example}</div>' if example else ""
         hi = ' data-hi="1"' if e.get("NCLEX Relevance") == "High" else ""
         out.append(f"""<div class="term-card" data-cat="{grp}" data-search="{_esc(kw)}"{hi}>
           <div class="term-top"><span class="term">{term}</span><span class="term-cat">{cat}</span></div>
           {abbr_html}
           <p>{defn}</p>
+          {ex_html}
           {rel_html}
         </div>""")
     return "".join(out)
