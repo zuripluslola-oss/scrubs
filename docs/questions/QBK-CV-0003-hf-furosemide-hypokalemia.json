@@ -1,0 +1,58 @@
+{
+  "question_id": "QBK-CV-0003",
+  "uuid": "acc03ca5-cee9-4154-888b-a3136450adbf",
+  "version": 1,
+  "status": "Draft",
+  "author": "AI Editorial Team (Esi)",
+  "reviewed_by": "",
+  "last_updated": "2026-07-24",
+  "exam": "RN",
+  "question_type": "Multiple Choice",
+  "difficulty": "Medium",
+  "difficulty_score": 0.55,
+  "estimated_cat_level": 3,
+  "discrimination": null,
+  "client_needs_category": "Pharmacological Therapies",
+  "body_system": "Cardiovascular",
+  "topic": "Heart Failure",
+  "subtopic": "Pharmacology - Furosemide",
+  "blooms_level": "Analysis",
+  "clinical_judgment_measurement_model": "Analyze Cues",
+  "key_learning_objective": "Recognize the electrolyte abnormality to monitor for with furosemide.",
+  "educational_objective_id": "CV-HF-003",
+  "case_id": null,
+  "exhibits": [],
+  "nki_module": "DIS-CARD-0001",
+  "estimated_average_time_seconds": 60,
+  "question_stem": "A client with heart failure is receiving furosemide. The nurse should monitor for which electrolyte imbalance?",
+  "options": {
+    "A": "Hyperkalemia",
+    "B": "Hypokalemia",
+    "C": "Hypernatremia",
+    "D": "Hypercalcemia"
+  },
+  "correct_answer": "B",
+  "rationales": {
+    "A": "Loop diuretics increase potassium excretion, causing low - not high - potassium. Hyperkalemia is a concern with potassium-sparing agents such as spironolactone.",
+    "B": "Correct. Furosemide is a loop diuretic that promotes renal excretion of potassium, placing the client at risk for hypokalemia (muscle weakness, cramps, dysrhythmias).",
+    "C": "Furosemide promotes sodium loss, so hyponatremia is more likely than hypernatremia.",
+    "D": "Loop diuretics increase calcium excretion, tending toward hypocalcemia."
+  },
+  "key_takeaway": "Loop diuretics wash out K+. Monitor potassium and watch for hypokalemic dysrhythmias.",
+  "nclex_test_taking_tip": "Match the diuretic to the electrolyte: loop/thiazide lower K+, potassium-sparing raise it.",
+  "memory_trick": "LOOP = you LOSE potassium.",
+  "clinical_pearls": [
+    "Hypokalemia potentiates digoxin toxicity - a common HF combo risk.",
+    "Teach potassium-rich foods or expect a K+ supplement."
+  ],
+  "references": [
+    "Loop diuretic pharmacology"
+  ],
+  "keywords": [
+    "furosemide",
+    "loop diuretic",
+    "hypokalemia",
+    "potassium",
+    "heart failure"
+  ]
+}

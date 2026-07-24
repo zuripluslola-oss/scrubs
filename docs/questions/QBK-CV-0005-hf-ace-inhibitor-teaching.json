@@ -1,0 +1,58 @@
+{
+  "question_id": "QBK-CV-0005",
+  "uuid": "6d02bc80-6279-4833-bd92-5a543d607f9b",
+  "version": 1,
+  "status": "Draft",
+  "author": "AI Editorial Team (Esi)",
+  "reviewed_by": "",
+  "last_updated": "2026-07-24",
+  "exam": "RN",
+  "question_type": "Multiple Choice",
+  "difficulty": "Easy",
+  "difficulty_score": 0.45,
+  "estimated_cat_level": 3,
+  "discrimination": null,
+  "client_needs_category": "Pharmacological Therapies",
+  "body_system": "Cardiovascular",
+  "topic": "Heart Failure",
+  "subtopic": "Pharmacology - ACE Inhibitor",
+  "blooms_level": "Application",
+  "clinical_judgment_measurement_model": "Evaluate Outcomes",
+  "key_learning_objective": "Identify incorrect self-care teaching for a client on lisinopril.",
+  "educational_objective_id": "CV-HF-005",
+  "case_id": null,
+  "exhibits": [],
+  "nki_module": "DIS-CARD-0001",
+  "estimated_average_time_seconds": 60,
+  "question_stem": "A client with heart failure is prescribed lisinopril. Which client statement indicates a need for further teaching?",
+  "options": {
+    "A": "\"A dry, nagging cough can be a side effect of this medication.\"",
+    "B": "\"I will use a salt substitute to lower my sodium intake.\"",
+    "C": "\"I will change positions slowly to avoid dizziness.\"",
+    "D": "\"I will report any swelling of my lips or tongue right away.\""
+  },
+  "correct_answer": "B",
+  "rationales": {
+    "A": "Correct understanding. A persistent dry cough is a well-known ACE inhibitor side effect.",
+    "B": "Needs teaching (correct answer). Salt substitutes are high in potassium; combined with an ACE inhibitor they raise the risk of hyperkalemia and should be avoided.",
+    "C": "Correct understanding. ACE inhibitors can cause orthostatic hypotension; slow position changes are appropriate.",
+    "D": "Correct understanding. Lip/tongue swelling suggests angioedema, a medical emergency that must be reported immediately."
+  },
+  "key_takeaway": "ACE inhibitors raise potassium - avoid salt substitutes. Watch for cough and angioedema.",
+  "nclex_test_taking_tip": "On 'needs further teaching' items, hunt for the one wrong/unsafe statement.",
+  "memory_trick": "ACE = raises potassium; salt substitutes ARE potassium - a bad mix.",
+  "clinical_pearls": [
+    "Angioedema is life-threatening - stop the drug and get help.",
+    "ACE cough is dry and non-productive; may prompt a switch to an ARB."
+  ],
+  "references": [
+    "ACE inhibitor patient education"
+  ],
+  "keywords": [
+    "lisinopril",
+    "ACE inhibitor",
+    "hyperkalemia",
+    "angioedema",
+    "salt substitute"
+  ]
+}

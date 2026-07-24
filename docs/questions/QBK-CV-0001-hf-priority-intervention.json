@@ -1,0 +1,58 @@
+{
+  "question_id": "QBK-CV-0001",
+  "uuid": "ad11b7af-bc30-4483-94ba-ea36725ef235",
+  "version": 1,
+  "status": "Draft",
+  "author": "AI Editorial Team (Esi)",
+  "reviewed_by": "",
+  "last_updated": "2026-07-24",
+  "exam": "RN",
+  "question_type": "Multiple Choice",
+  "difficulty": "Medium",
+  "difficulty_score": 0.55,
+  "estimated_cat_level": 4,
+  "discrimination": null,
+  "client_needs_category": "Reduction of Risk Potential",
+  "body_system": "Cardiovascular",
+  "topic": "Heart Failure",
+  "subtopic": "Prioritization",
+  "blooms_level": "Analysis",
+  "clinical_judgment_measurement_model": "Analyze Cues",
+  "key_learning_objective": "Identify the assessment finding in a heart failure client that requires immediate nursing intervention.",
+  "educational_objective_id": "CV-HF-001",
+  "case_id": null,
+  "exhibits": [],
+  "nki_module": "DIS-CARD-0001",
+  "estimated_average_time_seconds": 60,
+  "question_stem": "A nurse is caring for a client with heart failure. Which finding requires immediate intervention?",
+  "options": {
+    "A": "Weight gain of 1 lb (0.45 kg) over one week",
+    "B": "Oxygen saturation of 88% with bilateral crackles",
+    "C": "Mild ankle edema at the end of the day",
+    "D": "Fatigue after activity"
+  },
+  "correct_answer": "B",
+  "rationales": {
+    "A": "A 1 lb gain over a full week is minor; the concerning threshold is a rapid gain of 2-3 lb in 24 hours or ~5 lb in a week.",
+    "B": "Correct. Heart failure can progress to pulmonary edema. Hypoxia (SpO2 88%) with crackles indicates impaired gas exchange and demands immediate action (elevate HOB, oxygen, notify provider).",
+    "C": "Dependent edema at day's end is an expected chronic finding, not an emergency.",
+    "D": "Activity intolerance is common in heart failure and is not an acute priority over hypoxia."
+  },
+  "key_takeaway": "Airway/oxygenation problems outrank chronic fluid findings. Low SpO2 + crackles = act now.",
+  "nclex_test_taking_tip": "Use the ABCs. A breathing/oxygenation problem outranks chronic, expected fluid findings every time.",
+  "memory_trick": "Crackles + low sat = call it acute. Chronic edema can wait.",
+  "clinical_pearls": [
+    "SpO2 <90% with crackles suggests pulmonary edema.",
+    "High-Fowler's position is a fast, independent first action."
+  ],
+  "references": [
+    "NCLEX Physiological Adaptation; ABC/Maslow prioritization"
+  ],
+  "keywords": [
+    "heart failure",
+    "pulmonary edema",
+    "hypoxia",
+    "prioritization",
+    "crackles"
+  ]
+}

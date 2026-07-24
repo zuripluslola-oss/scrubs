@@ -1,0 +1,57 @@
+{
+  "question_id": "QBK-CV-0007",
+  "uuid": "a83591df-88a1-46fb-ab69-94b3cc3482d7",
+  "version": 1,
+  "status": "Draft",
+  "author": "AI Editorial Team (Esi)",
+  "reviewed_by": "",
+  "last_updated": "2026-07-24",
+  "exam": "RN",
+  "question_type": "Multiple Choice",
+  "difficulty": "Easy",
+  "difficulty_score": 0.45,
+  "estimated_cat_level": 3,
+  "discrimination": null,
+  "client_needs_category": "Physiological Adaptation",
+  "body_system": "Cardiovascular",
+  "topic": "Heart Failure",
+  "subtopic": "Acute Dyspnea Priority",
+  "blooms_level": "Application",
+  "clinical_judgment_measurement_model": "Take Action",
+  "key_learning_objective": "Select the priority action for a HF client who becomes acutely short of breath.",
+  "educational_objective_id": "CV-HF-007",
+  "case_id": null,
+  "exhibits": [],
+  "nki_module": "DIS-CARD-0001",
+  "estimated_average_time_seconds": 50,
+  "question_stem": "A client with heart failure suddenly becomes short of breath while lying in bed. What is the nurse's priority action?",
+  "options": {
+    "A": "Place the client in high-Fowler's position",
+    "B": "Draw a stat BNP level",
+    "C": "Restrict the client's oral fluids",
+    "D": "Obtain a 12-lead ECG"
+  },
+  "correct_answer": "A",
+  "rationales": {
+    "A": "Correct. Positioning the client upright (high-Fowler's) immediately reduces venous return and improves lung expansion and oxygenation - a rapid, independent nursing action.",
+    "B": "A BNP aids diagnosis but does not relieve the acute distress and is not the first action.",
+    "C": "Fluid restriction is a longer-term measure and does not address the immediate breathing problem.",
+    "D": "An ECG may be needed but does not take priority over relieving the client's respiratory distress."
+  },
+  "key_takeaway": "For acute dyspnea, position first (high-Fowler's) - an immediate action that improves oxygenation.",
+  "nclex_test_taking_tip": "When choices mix actions and tests, the independent action that helps NOW usually wins.",
+  "memory_trick": "Can't breathe? Sit them up first.",
+  "clinical_pearls": [
+    "High-Fowler's plus legs dependent reduces preload.",
+    "Positioning buys time while oxygen and meds are readied."
+  ],
+  "references": [
+    "Priority nursing actions - acute pulmonary congestion"
+  ],
+  "keywords": [
+    "heart failure",
+    "dyspnea",
+    "high-Fowler's",
+    "priority action"
+  ]
+}

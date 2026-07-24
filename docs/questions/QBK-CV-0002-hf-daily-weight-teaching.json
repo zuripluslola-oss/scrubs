@@ -1,0 +1,57 @@
+{
+  "question_id": "QBK-CV-0002",
+  "uuid": "edcfcef9-d0c3-4f71-93cc-64c9f8362fe9",
+  "version": 1,
+  "status": "Draft",
+  "author": "AI Editorial Team (Esi)",
+  "reviewed_by": "",
+  "last_updated": "2026-07-24",
+  "exam": "RN",
+  "question_type": "Multiple Choice",
+  "difficulty": "Easy",
+  "difficulty_score": 0.35,
+  "estimated_cat_level": 2,
+  "discrimination": null,
+  "client_needs_category": "Health Promotion & Maintenance",
+  "body_system": "Cardiovascular",
+  "topic": "Heart Failure",
+  "subtopic": "Patient Education",
+  "blooms_level": "Application",
+  "clinical_judgment_measurement_model": "Take Action",
+  "key_learning_objective": "Teach the daily-weight parameter that warrants notifying the provider.",
+  "educational_objective_id": "CV-HF-002",
+  "case_id": null,
+  "exhibits": [],
+  "nki_module": "DIS-CARD-0001",
+  "estimated_average_time_seconds": 45,
+  "question_stem": "A nurse is teaching a client with heart failure about daily weight monitoring. Which statement indicates correct understanding?",
+  "options": {
+    "A": "\"I will call my provider if I gain 2 to 3 pounds in a single day.\"",
+    "B": "\"I should weigh myself only when I feel short of breath.\"",
+    "C": "\"A weight loss of 1 pound each day is a warning sign.\"",
+    "D": "\"I will weigh myself after dinner each evening.\""
+  },
+  "correct_answer": "A",
+  "rationales": {
+    "A": "Correct. A rapid gain of 2-3 lb (0.9-1.4 kg) in 24 hours, or ~5 lb in a week, signals fluid retention and worsening heart failure and should be reported.",
+    "B": "Weight should be measured daily, not only when symptomatic, to catch fluid retention early.",
+    "C": "Gradual weight loss with therapy is expected; sudden gain is the warning sign.",
+    "D": "Weigh at the same time each day, ideally in the morning after voiding, before eating, in similar clothing."
+  },
+  "key_takeaway": "Same time, same scale, every morning. Report 2-3 lb/day or 5 lb/week gain.",
+  "nclex_test_taking_tip": "For self-management teaching, the best answer names a specific, actionable threshold.",
+  "memory_trick": "2-3 in a day, 5 in a week - make the call.",
+  "clinical_pearls": [
+    "Sudden weight gain reflects fluid, not fat.",
+    "Standardize the weigh-in: AM, post-void, same clothing."
+  ],
+  "references": [
+    "AHA heart failure self-management education"
+  ],
+  "keywords": [
+    "heart failure",
+    "daily weight",
+    "fluid retention",
+    "patient teaching"
+  ]
+}

@@ -1,0 +1,65 @@
+{
+  "question_id": "QBK-CV-0004",
+  "uuid": "2615b4a1-ae1e-48aa-b324-49c2f5a809f7",
+  "version": 1,
+  "status": "Draft",
+  "author": "AI Editorial Team (Esi)",
+  "reviewed_by": "",
+  "last_updated": "2026-07-24",
+  "exam": "RN",
+  "question_type": "Select All That Apply (SATA)",
+  "difficulty": "Easy",
+  "difficulty_score": 0.4,
+  "estimated_cat_level": 3,
+  "discrimination": null,
+  "client_needs_category": "Physiological Adaptation",
+  "body_system": "Cardiovascular",
+  "topic": "Heart Failure",
+  "subtopic": "Left vs Right-Sided HF",
+  "blooms_level": "Comprehension",
+  "clinical_judgment_measurement_model": "Recognize Cues",
+  "key_learning_objective": "Distinguish clinical manifestations of left-sided heart failure.",
+  "educational_objective_id": "CV-HF-004",
+  "case_id": null,
+  "exhibits": [],
+  "nki_module": "DIS-CARD-0001",
+  "estimated_average_time_seconds": 75,
+  "question_stem": "A nurse is assessing a client with left-sided heart failure. Which findings does the nurse expect? Select all that apply.",
+  "options": {
+    "A": "Bilateral crackles",
+    "B": "Dyspnea and orthopnea",
+    "C": "Jugular vein distention",
+    "D": "Frothy, blood-tinged sputum",
+    "E": "Peripheral (ankle) edema",
+    "F": "Ascites"
+  },
+  "correct_answer": [
+    "A",
+    "B",
+    "D"
+  ],
+  "rationales": {
+    "A": "Correct. Left-sided failure backs blood into the lungs, producing pulmonary congestion and crackles.",
+    "B": "Correct. Pulmonary congestion causes dyspnea and orthopnea (LEFT = Lungs).",
+    "C": "JVD is a systemic congestion sign of right-sided failure.",
+    "D": "Correct. Frothy, pink/blood-tinged sputum reflects pulmonary edema from left-sided failure.",
+    "E": "Peripheral edema is a right-sided (systemic) finding.",
+    "F": "Ascites results from systemic venous congestion in right-sided failure."
+  },
+  "key_takeaway": "LEFT = Lungs (crackles, dyspnea, frothy sputum). RIGHT = Rest of body (edema, JVD, ascites).",
+  "nclex_test_taking_tip": "Sort each finding by mechanism: lung congestion = left, systemic congestion = right.",
+  "memory_trick": "LEFT = Lungs, RIGHT = Rest of body.",
+  "clinical_pearls": [
+    "Frothy pink sputum signals acute pulmonary edema - a red flag.",
+    "Orthopnea: ask how many pillows they sleep on."
+  ],
+  "references": [
+    "Left vs right heart failure pathophysiology"
+  ],
+  "keywords": [
+    "left-sided heart failure",
+    "pulmonary edema",
+    "crackles",
+    "orthopnea"
+  ]
+}

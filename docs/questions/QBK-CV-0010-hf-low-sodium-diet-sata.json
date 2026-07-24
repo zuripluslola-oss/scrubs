@@ -1,0 +1,65 @@
+{
+  "question_id": "QBK-CV-0010",
+  "uuid": "a915c756-6f68-43b6-8826-e360a0f4c564",
+  "version": 1,
+  "status": "Draft",
+  "author": "AI Editorial Team (Esi)",
+  "reviewed_by": "",
+  "last_updated": "2026-07-24",
+  "exam": "RN",
+  "question_type": "Select All That Apply (SATA)",
+  "difficulty": "Easy",
+  "difficulty_score": 0.4,
+  "estimated_cat_level": 3,
+  "discrimination": null,
+  "client_needs_category": "Health Promotion & Maintenance",
+  "body_system": "Cardiovascular",
+  "topic": "Heart Failure",
+  "subtopic": "Nutrition / Discharge Teaching",
+  "blooms_level": "Application",
+  "clinical_judgment_measurement_model": "Generate Solutions",
+  "key_learning_objective": "Select appropriate low-sodium food choices for a client with heart failure.",
+  "educational_objective_id": "CV-HF-010",
+  "case_id": null,
+  "exhibits": [],
+  "nki_module": "DIS-CARD-0001",
+  "estimated_average_time_seconds": 75,
+  "question_stem": "A nurse is teaching a client with heart failure about a low-sodium diet. Which food choices indicate the client understands the teaching? Select all that apply.",
+  "options": {
+    "A": "Fresh grilled chicken breast",
+    "B": "Canned soup",
+    "C": "Fresh steamed vegetables",
+    "D": "Deli/processed lunch meat",
+    "E": "Fresh fruit",
+    "F": "Pickled vegetables"
+  },
+  "correct_answer": [
+    "A",
+    "C",
+    "E"
+  ],
+  "rationales": {
+    "A": "Correct. Fresh, unprocessed meats are naturally low in sodium.",
+    "B": "Canned soups are typically very high in sodium.",
+    "C": "Correct. Fresh vegetables without added salt are low-sodium choices.",
+    "D": "Processed/deli meats are high in sodium preservatives.",
+    "E": "Correct. Fresh fruit is naturally low in sodium.",
+    "F": "Pickled and brined foods are high in sodium."
+  },
+  "key_takeaway": "Fresh = low sodium; canned, processed, cured, and pickled = high sodium.",
+  "nclex_test_taking_tip": "For low-sodium diets, 'fresh and unprocessed' is almost always the safe pick.",
+  "memory_trick": "If it comes in a can or a package, assume it's salty.",
+  "clinical_pearls": [
+    "Typical HF target is ~2 g sodium/day.",
+    "Teach label reading: sodium per serving and servings per container."
+  ],
+  "references": [
+    "Low-sodium (2 g Na) diet teaching"
+  ],
+  "keywords": [
+    "low-sodium diet",
+    "heart failure",
+    "patient teaching",
+    "nutrition"
+  ]
+}

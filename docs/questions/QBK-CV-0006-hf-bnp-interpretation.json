@@ -1,0 +1,58 @@
+{
+  "question_id": "QBK-CV-0006",
+  "uuid": "d2160bb3-177f-4c2d-b504-08e62b557d0e",
+  "version": 1,
+  "status": "Draft",
+  "author": "AI Editorial Team (Esi)",
+  "reviewed_by": "",
+  "last_updated": "2026-07-24",
+  "exam": "RN",
+  "question_type": "Multiple Choice",
+  "difficulty": "Medium",
+  "difficulty_score": 0.55,
+  "estimated_cat_level": 3,
+  "discrimination": null,
+  "client_needs_category": "Reduction of Risk Potential",
+  "body_system": "Cardiovascular",
+  "topic": "Heart Failure",
+  "subtopic": "Labs - BNP",
+  "blooms_level": "Analysis",
+  "clinical_judgment_measurement_model": "Analyze Cues",
+  "key_learning_objective": "Interpret an elevated BNP in the context of heart failure.",
+  "educational_objective_id": "CV-HF-006",
+  "case_id": null,
+  "exhibits": [],
+  "nki_module": "DIS-CARD-0001",
+  "estimated_average_time_seconds": 60,
+  "question_stem": "A client is admitted with dyspnea. The B-type natriuretic peptide (BNP) is 1,200 pg/mL. The nurse interprets this result as:",
+  "options": {
+    "A": "Within normal limits, ruling out a cardiac cause",
+    "B": "Consistent with fluid overload from heart failure",
+    "C": "An indication of acute myocardial infarction",
+    "D": "A sign of dehydration"
+  },
+  "correct_answer": "B",
+  "rationales": {
+    "A": "Normal BNP is generally < 100 pg/mL; 1,200 pg/mL is markedly elevated.",
+    "B": "Correct. BNP is released when ventricles are stretched by volume/pressure overload; a high value supports heart failure with fluid overload as the cause of the dyspnea.",
+    "C": "Troponin, not BNP, is the marker for myocardial injury/MI.",
+    "D": "Dehydration reduces ventricular stretch and would not elevate BNP."
+  },
+  "key_takeaway": "BNP rises with ventricular stretch. High BNP + dyspnea points to heart failure, not MI (that's troponin).",
+  "nclex_test_taking_tip": "Anchor each cardiac lab to its meaning: BNP = stretch/volume, troponin = muscle injury.",
+  "memory_trick": "BNP = Big Nasty Pressure on the ventricle.",
+  "clinical_pearls": [
+    "BNP helps distinguish cardiac from pulmonary causes of dyspnea.",
+    "Trending BNP can track response to diuresis."
+  ],
+  "references": [
+    "BNP diagnostic thresholds"
+  ],
+  "keywords": [
+    "BNP",
+    "heart failure",
+    "dyspnea",
+    "troponin",
+    "fluid overload"
+  ]
+}
